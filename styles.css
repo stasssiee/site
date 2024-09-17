@@ -17,7 +17,7 @@ background-color:lightgreen;
 text-decoration: underline;
 }
 a:visited{
-color:blue
+color:blue;
 background-color:lightgreen;
 text-decoration: underline;
 }
@@ -31,7 +31,7 @@ height:750px;
 }
 table, th, td {
 color:white;
-text-size:300%;
+font-size:300%;
 border:5px solid black;
 border-collapse:collapse;
 border-style:groove;
@@ -47,7 +47,7 @@ background-color: green
 ul {
 list-style-type: none;
 margin: 0;
-padding; 0;
+padding: 0;
 overflow: hidden;
 background-color: #333333;
 }
