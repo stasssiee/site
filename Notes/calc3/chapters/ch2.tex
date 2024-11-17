@@ -1,0 +1,175 @@
+\documentclass[../calc3.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Vector-Valued Functions}
+\section{Vector-Valued Functions}
+A vector valued function has the form $\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle$.
+
+A set of parametric equations $x=x(t), y=y(t), z=z(t)$ can describe a curve in space.
+
+It can also be viewed as a vector function where each variable varies with respect to an independent variable $t$. 
+
+A point $(x(t),y(t),z(t))$ on the curve is the head of the vector $\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle$.
+
+We can consider the vector-valued function of the form: 
+\[\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle\]
+or
+\[f(t)\textbf{i}+g(t)\textbf{j}+h(t)\textbf{k}\]
+where $f,g,h$ are defined on some interval $a$ to $b$.
+
+The positive orientation of a curve is the direction the curve  is generated as the parameter increases.
+
+\begin{example}
+    Find the domain of $\textbf{r}(t)=\frac{4}{\sqrt{1-t}}\textbf{i}+\frac{2}{t+3}\textbf{j}$
+    \smallbreak
+    The domain is the largest set of values of $t$ on which both $f$ and $g$ are defined.
+    \smallbreak
+    The first component has $1-t>0$, therefore the domain is $(-\infty,1)$.
+    \smallbreak
+    The second component's domain is $(-\infty,-3)\cup(-3,\infty)$.
+    \smallbreak
+    We now find the intersection which is $(-\infty,-3)\cup(-3,1)$ 
+\end{example}
+
+\begin{definition}
+    A vector valued function \textbf{r} approaches the limit \textbf{L} as $t$ approaches $a$, 
+    written \[\lim_{t\to a}\textbf{r}(t)=\textbf{L}\], provided \[\lim_{t\to a}|\textbf{r}(t)-\textbf{L}|=0\]
+\end{definition}
+
+A function $\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle$ is continuous at $\textbf{a}$ 
+provided $\lim_{t\to a}\textbf{r}(t)=\textbf{r}(a)$.
+
+\section{Calculus of Vector-Valued Functions}
+We can define the derivative of a vector-valued function as:
+\[\textbf{r}'(t)=\lim_{\Delta t\to 0}\frac{\textbf{r}(t+\Delta t)-\textbf{r}(t)}{\Delta t}\]
+
+The result of the derivative is a vector-valued function.
+
+Geometrically, as $\Delta t\rightarrow 0$, $\frac{\Delta \textbf{r}}{\Delta t}\rightarrow \textbf{r'}(t)$, 
+which is a tangent vector at point $P$.
+
+Much like single variable calculus, we can simply use the power rule as we know, rather than the limit definition.
+
+The unit tangent vector for a particular value $t$ is:
+\[\textbf{T}(t)=\frac{\textbf{r}'(t)}{|\textbf{r}'(t)|}\]
+
+A vector-valued function is smooth if it is differentiable and the derivative is not equal to $\langle 0,0,0\rangle$.
+
+We can also integrate vector-valued functions. The rules remain the same as in single 
+variable calculus, just breaking it into three vector components.
+
+\section{Motion in Space}
+The derivative of the position vector function is the velocity vector function. 
+
+The speed of a scalar function is 
+\[|v(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}\]
+
+Acceleration is the derivative of the velocity vector function.
+
+Straight-line motion has a uniform velocity. Given:
+\[\textbf{r}(t)=\langle x_0+at,y_0+bt,z_0+ct\rangle\]
+the velocity $\textbf{v}(t) = \langle a,b,c\rangle$
+
+Circular motion has constant $|r(t)|$. We let $\textbf{r}(t)=\langle A\cos t, A\sin t\rangle$.
+
+$\textbf{r}(t)$ describes a circular trajectory counter-clockwise around a circle with radius $A$ and center at the origin.
+
+We have:
+\[|\textbf{r}(t)|=\sqrt{(A\cos t)^2+(A\sin t)^2}=A\]
+and
+\[\textbf{v}(t)=\langle -A\sin t, A\cos t\rangle\]
+as well as
+\[\textbf{a}(t)=\langle -A\cos t, -A\sin t\rangle=-\textbf{r}(t)\]
+
+Also there are some important properties - the position and acceleration vectors are both 
+orthogonal to the velocity vector as seen:
+\begin{itemize}
+    \item $\textbf{r}(t)\cdot\textbf{v}(t)=-A^2\cos t\sin t+A^2\sin t \cos t = 0$
+    \item $\textbf{a}(t)\cdot\textbf{v}(t)=A^2\sin t\cos t-A^2\cos t\sin t = 0$
+\end{itemize}
+
+Let $\textbf{r}$ describe a path on which $|\textbf{r}|$ is constant.
+
+We can show that $\textbf{r}\cdot\textbf{v}=0$, showing that the position and velocity vectors are always orthogonal.
+
+For two-dimensional motion in a gravitational field:
+
+The gravitational force is $\textbf{F}=\langle 0, -mg\rangle$.
+
+Therefore: $\textbf{F}=m\textbf{a}(t)=\langle 0,-mg\rangle$.
+
+This shows that $\textbf{a}(t)=\langle 0,-g\rangle$.
+
+We can summarize this:
+
+The velocity of the object is 
+\[\textbf{v}(t)=\langle x'(t),y'(t)\rangle =\langle u_0,-gt+v_0\rangle\]
+where $\textbf{v}(0)=\langle u_0,v_0\rangle$ and $\textbf{r}(0)=\langle x_0,y_0\rangle$.
+
+The position is:
+\[\textbf{r}(t)=\langle x(t),y(t)\rangle=\langle u_0t+x_0,-\frac{1}{2}gt^2+v_0t+y_0\rangle\] 
+
+\section{Length of Curves}
+We know the arc length of a parametric equation is:
+\[L=\int_a^b\sqrt{f'(t)^2+g'(t)^2}\mathrm{d}t\]
+
+Now we can consider this equation in three dimensions.
+
+The arc length of a parametrized curve is:
+\[L=\int_a^b\sqrt{f'(t)^2+g'(t)^2+h'(t)^2}\mathrm{d}t=\int_a^b|\textbf{r}'(t)|\mathrm{d}t\] 
+
+To find the arc length of a curve given $\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle$ for $t\geq a$, we have:
+\[s(t)=\int_a^t\sqrt{(f'(u))^2+(g'(u))^2+(h'(u))^2}\mathrm{d}u=\int_a^t |\textbf{v}(u)|\mathrm{d}u\] 
+
+Suppose $|\textbf{v}(t)| = 1$, then we have $t-a$. This shows the parameter $t$ corresponds to arc length.
+
+\section{Curvature and Normal Vectors}
+Curvature will be a measure of how fast a curve $\textbf{r}(t)$ turns at a point.
+
+Recall the unit tangent vector:
+\[\textbf{T}(t)=\frac{\textbf{r}'(t)}{|\textbf{r}'(t)|}\]    
+
+The curvature is 
+\[\kappa(s) = \left|\frac{\mathrm{d}\textbf{T}}{\mathrm{d}s}\right|\] 
+where $s$ denotes arc length, and $\textbf{T}$ denotes the tangent vector.
+
+Lines have zero curvature.
+
+We can write the curvature in terms of arclength:
+\[\kappa(t)=\frac{1}{|\textbf{v}|}\left|\frac{\mathrm{d}\textbf{T}}{\mathrm{d}t}\right|\frac{|\textbf{T}'(t)|}{|\textbf{r}'(t)|}\]
+
+Circles have constant curvature of $\frac{1}{R}$.
+
+An alternative curvature formula is used for trajectories of moving objects in three-space:
+\[\kappa = \frac{|\textbf{v}\times\textbf{a}|}{|\textbf{v}|^3}\] 
+where $\textbf{v}=\textbf{r'}$ is the velocity and $\textbf{a}=\textbf{v'}$ is the acceleration.
+
+The principal unit normal vector will determine the direction in which the curve turns. 
+
+The principal unit normal vector at point $P$ on the curve at which $kappa\neq 0$ is:
+\[\textbf{N}(s)=\frac{\mathrm{d}\textbf{T}/\mathrm{d}s}{|\mathrm{d}\textbf{T}/\mathrm{d}s|}=\frac{1}{\kappa}
+\frac{\mathrm{d}\textbf{T}}{\mathrm{d}s}\] 
+
+For other parameters $t$, we use the equivalent formula:
+\[\textbf{N}(s)=\frac{\mathrm{d}\textbf{T}/\mathrm{d}t}{|\mathrm{d}\textbf{T}/\mathrm{d}t|}\] 
+
+There are two ways to change the velocity of an object or accelerate - to change its speed or its direction of motion.
+
+The acceleration vector of an object moving in space along a smooth curve has the following representation of its 
+tangential component $a_T$ (in the direction of $\textbf{T}$) and its normal component $a_N$ (in the direction of $\textbf{N}$):
+\[\textbf{a}=a_N\textbf{N}+a_T\textbf{T}\]
+where $a_N=\kappa |\textbf{v}|^2=\frac{|\textbf{v}\times\textbf{a}}{|\textbf{v}|}$ and $a_T=\frac{\mathrm{d}^2s}{\mathrm{d}t^2}$.
+
+Alternatively $\textbf{a}\cdot\textbf{N}=a_N$ and $\textbf{a}\cdot\textbf{T}=a_T$.
+
+If we have the unit tangent and principal unit vectors $\textbf{T}$ and $\textbf{N}$. 
+The unit binormal vector at each point in the curve is:
+\[ \textbf{B}=\textbf{T}\times\textbf{N}\] 
+and the torsion is:
+\[\tau = -\frac{\mathrm{d}\textbf{B}}{\mathrm{d}s}\cdot\textbf{N}\]
+
+The binormal vector is orthogonal to both $\textbf{T}$ and $\textbf{N}$.
+
+$|\tau|=\left|\frac{\mathrm{d}\textbf{B}}{\mathrm{d}s}\right|$ and the torsion gives the rate 
+at which the curve moves out of the osculating plane formed by $\textbf{T}$ and $\textbf{N}$.
+\end{document}

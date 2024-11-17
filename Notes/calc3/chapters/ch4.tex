@@ -1,0 +1,293 @@
+\documentclass[../calc3.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Multiple Integration}
+\section{Double Integrals over Rectangular Regions}
+\begin{definition}
+    A function $f$ defined on a rectangular region $R$ in the $xy$-plane is integrable 
+    on $R$ if \[\lim_{\Delta \to 0} \sum^n_{k=1}f\left(x_k^*,y_k^*\right)\Delta A_k\] exists for all partitions 
+    of $R$ and for all choices of $\left(x_k^*,y_k^*\right)$ within those partitions.
+    The limit is the double integral of $f$ over $R$, which we write
+    \[\iint_R f(x,y)\mathrm{d}A=\lim_{\Delta \to 0}\sum_{k=1}^n f\left(x_k^*, y_k^*\right)\Delta A_k\]
+\end{definition}
+
+We usually use Fubini's theorem.
+\begin{theorem}
+    Let $f$ be continuous on the rectangular region $R={(x,y): a\leq x\leq b, c\leq y\leq d}$.
+    The double integral of $f$ over $R$ may be evaluated by either of two iterated integrals:
+    \[\iint_R f(x,y)\mathrm{d}A=\int_c^d\int_a^b f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\int_c^d f(x,y)\mathrm{d}y\mathrm{d}x\]
+\end{theorem}
+
+\begin{definition}
+    The average value of an integrable function $f$ over a region $R$ is
+    \[\bar{f}=\frac{1}{\text{area of } R}\iint_R f(x,y)\mathrm{d}A\]
+\end{definition}
+
+The average height of $f(x,y)$ is $\frac{1}{Area(R)}$(Volume under $f(x,y$)).
+\section{Double Integrals over General Regions}
+In order to do a double integral over a general integral:
+\begin{itemize}
+    \item Divide the plane into rectangles.
+    \item In each rectangle $R_k$ inside $R$, choose a point $(x_k^*, y_k^*)$.
+    \item Let $\Delta A_k = \text{area}(R_k)$, calculate $\sum_{k=1}^n f(x_k^*,y_k^*)\Delta A_k$
+    \item Take the limit as $\Delta \rightarrow 0$, where $\Delta$ is the maximum length of diagonal of $R_k$.
+\end{itemize}
+
+We get 
+\[\iint_R f(x,y)\mathrm{d}A = \lim_{\Delta \to 0}\sum_{k=1}^n f(x_k^*, y_k^*)\Delta A_k\]
+
+Given the graph of a surface $z=f(x,y)$ for $(x,y)$ in a planar region $R$ where $f(x,y)\geq 0$ for all $(x,y)$
+in $R$, the volume of the solid bounded by the surface $z=f(x,y)$ and the set $R$ in the $xy$-plane is given by 
+\[\text{Volume} = \iint_R f(x,y)\mathrm{d}A\]
+
+If $R$ can be described as $a\leq x \leq b$ and $g(x)\leq y \leq h(x)$ then 
+\[\iint_R f(x,y)\mathrm{d}A = \int^a_b\int_{g(x)}^{h(x)}f(x,y)\mathrm{d}y\mathrm{d}x\]
+
+If $R$ can be described as $g(y)\leq x \leq h(y)$ and $c\leq y \leq d$ then
+\[\iint_R f(x,y)\mathrm{d}A= \int_c^d\int_{g(y)}^{h(y)}f(x,y)\mathrm{d}x\mathrm{d}y\]
+
+To evaluate a $\mathrm{d}y\mathrm{d}x$ double integral of the form 
+\[\int_a^b\int_{g(x)}^{f(x)} f(x,y)\mathrm{d}y\mathrm{d}\]
+\begin{enumerate}
+    \item Integrate $f(x,y)$ with respect to $y$.
+    \item Substitute $y=h(x)$, $y=g(x)$ and subtract, resulting in a function of $x$ (call it $A(x)$).
+    \item Evaluate the integral of the resulting function 
+    \[\int_a^b A(x)\mathrm{d}x\]
+\end{enumerate}
+
+To evaluate a $\mathrm{d}x \mathrm{d}y$ double integral of the form 
+\[\int_c^d \int_{g(y)}^{h(y)} f(x,y)\mathrm{d}x\mathrm{d}\]
+\begin{enumerate}
+    \item Integrate $f(x,y)$ with respect to $x$.
+    \item Substitute $x=h(y)$, $x=g(y)$ and subtract, resulting in a function of $y$ (call it $A(y)$).
+    \item Evaluate the integral of the resulting function 
+    \[\int_c^d A(y)\mathrm{d}y\]
+\end{enumerate}
+
+\begin{definition} 
+    Let $R$ be a region in the $xy$-plane. Then 
+    \[\text{area of }R = \iint_R \mathrm{d}A\]
+\end{definition}
+
+\section{Double Integrals in Polar Coordinates}
+A cartesian rectangle can be described as:
+\[R={(x,y) : a\leq x\leq b, c\leq y\leq d}\]
+
+A polar rectangle is:
+\[R={(r, \theta) : a\leq r\leq b, \alpha \leq \theta \leq \beta}\]
+
+Approximation to polar double integral:
+Given $f(x,y) = f(r\cos \theta, r\sin\theta)$
+
+If we let $\Delta A_k$ be the area of the $k$th polar rectangle, then the approximation is
+\[\sum^n_{k=1}f(r^*_k\cos\theta_k^*, r_k^*\sin\theta_k^*)\Delta A_k\]
+
+Which can be written as:
+\[\iint_R f(x,y)\mathrm{d}A = \lim_{\Delta \to 0}\sum^n_{k=1}f(r_k^*\cos\theta_k^*, r_k^*\sin\theta_k^*)\Delta A_k\]
+
+Over polar rectangles we have:
+\[\iint_R f(x,y)\mathrm{d}A = \int^{\beta}_{\alpha}\int^b_a f(r\cos\theta, r\sin\theta)r\mathrm{d}r\mathrm{d}\theta\] 
+\[R={(r,\theta) : a\leq r\leq b, \alpha\leq \theta\leq \beta}\]
+
+\begin{theorem}
+    Let $f$ be continuous on the region $R$ in the $xy$-plane expressed in polar coordinates as 
+    \[R = {(r,\theta): 0\leq g(\theta) \leq r  \leq h(\theta), \alpha \leq \theta \leq \beta}\]
+    where $0<\beta - \alpha \leq 2\pi$. Then 
+    \[\iint_R f(x,y)\mathrm{d}A = \int^{\beta}_{\alpha}\int^b_a f(r\cos\theta, r\sin\theta)r\mathrm{d}r\mathrm{d}\theta\] 
+
+\end{theorem}
+
+
+\section{Triple Integrals}
+Consider $f(x,y,z)$ defined on $D$.
+\begin{itemize}
+    \item Divide region containing $D$ into rectangular boxes, numbered $k=1,2,\dots,n$.
+    \item Let $\Delta V_k$ be the volume of the $k$th box.
+    \item For each $k$, choose a point $(x^*_k, y^*_k, z^*_k)$ in the $k$th box.
+    
+    Approximation = $\sum^n_{k=1}f(x^*_k,y^*_k,z^*_k)\Delta V_k$.
+    \item Set $\Delta$ = maximum length of a diagonal of a box.
+\end{itemize}
+
+\[\iiint_D f(x,y,z)\mathrm{d}V=\lim_{\Delta \to 0}\sum^n_{k=1}f(x_k^*,y_k^*,z_k^*)\Delta V_k\]
+
+Two applications of triple integrals:
+
+1.
+\[\iiint_D 1\mathrm{d}V = \text{Volume}(D)\]
+
+2. If $\rho(x,y,z)$ represents the density of a solid at any point $(x,y,z)$ of a solid then 
+\[\iiint_D \rho(x,y,z)\mathrm{d}V = \text{mass}(D)\]
+
+Possible orders for integration:
+\begin{enumerate}
+    \item $\mathrm{d}x\mathrm{d}y\mathrm{d}z$
+    \item $\mathrm{d}x\mathrm{d}z\mathrm{d}y$
+    \item $\mathrm{d}y\mathrm{d}x\mathrm{d}z$
+    \item $\mathrm{d}y\mathrm{d}z\mathrm{d}x$
+    \item $\mathrm{d}z\mathrm{d}x\mathrm{d}y$
+    \item $\mathrm{d}z\mathrm{d}y\mathrm{d}x$
+\end{enumerate}
+
+Let's consider the $\mathrm{d}z\mathrm{d}y\mathrm{d}x$ order.
+\begin{theorem}
+    Let $f$ be continuous over the region 
+    \[D = {(x,y,z): a\leq x\leq b, g(x)\leq y\leq h(x), G(x,y)\leq z\leq H(x,y)}\],
+    where $g$, $h$, $G$, and $H$ are continuous functions. Then $f$ is integrable over $D$ and the 
+    triple integral is evaluated as the iterated integral 
+    \[\iiint_D f(x,y,z)\mathrm{d}V = \int^b_a \int^{h(x)}_{g(x)}\int^{H(x,y)}_{G(x,y)}f(x,y,z)\mathrm{d}z\mathrm{d}y\mathrm{d}x\]
+\end{theorem}
+
+\section{Triple Integrals in Cylindrical and Spherical Coordinates}
+A point $P$ in three-dimensional space can be described in cylindrical coordinates $P(r,\theta, z)$.
+\begin{itemize}
+    \item $P^*$ is the projection of $P$ into the $xy$-plane.
+    \item $(r,\theta)$ is the polar coordinates of $P^*$.
+    \item $(r,\theta,z)$ is the cylindrical coordinates of $P$.
+\end{itemize}
+
+We can transform from Rectangular to cylindrical:
+\[r^2=x^2+y^2 \qquad tan\theta = y/x \qquad z = z\] 
+To convert from cylindrical to rectangular: 
+\[x = r\cos\theta \qquad y = r\sin\theta \qquad z = z\]
+
+Approximate volume given a cylindrical point: $(r_k^*, \theta_k^*, z_k^*)$ and 
+rectangular point: $(x_k^*, y_k^*, z_k^*)$, the approximate volume is $\Delta V_k = r^*_k\Delta r\Delta \theta\Delta z$.
+\[\iiint_D f(x,y,z)\mathrm{d}V = \lim_{\Delta \to 0}\sum^n_{k+1}f(r_k^*\cos\theta_k^*, r_k^*\sin\theta_k^*, z_k^*)r_k^*\Delta r\Delta\theta \Delta z\]
+
+\begin{theorem}
+    Let $f$ be continuous over the region $D$, expressed in cylindrical coordinates as 
+    \[D={(r,\theta,z):0\leq g(\theta)\leq r\leq h(\theta), \alpha\leq\theta\leq\beta, G(x,y)\leq z\leq H(x,y)}\]
+    Then $f$ is integrable over $D$, and the triple integral of $f$ over $D$ is 
+    \[\iiint_D f(x,y,z)\mathrm{d}V = \int_{\alpha}^{\beta}\int_{g(\theta)}^{h(\theta)}\int_{G(r\cos\theta, r\sin\theta)}^{H(r\cos\theta, r\sin\theta)}f(r\cos\theta,r\sin\theta,z)\mathrm{d}zr\mathrm{d}r\mathrm{d}\theta\]
+\end{theorem}
+
+In a triple integral in spherical coordinates, the coordinate is described as $P(\rho,\phi,\theta)$.
+\begin{itemize}
+    \item $\rho$ is the distance from the origin to $P$.
+    \item $\phi$ is the angle between the positive $z$-axis and the line from the origin to $P$.
+    \item $\theta$ is the same angle as in cylindrical coordinates; measures rotation around the $z$-axis relative to $x$-axis.
+\end{itemize}
+
+Some relations:
+\begin{itemize}
+    \item $x^2+y^2=r^2$.
+    \item $\tan\theta = \frac{y}{x}$.
+    \item $x=r\cos\theta$.
+    \item $y=r\sin\theta$.
+    \item $x^2+y^2+z^2=\rho^2$.
+    \item $r=\rho\sin\phi$.
+    \item $z=\rho\cos\phi$.
+    \item $\tan\phi = \frac{r}{z}$.
+    \item $x=\rho\sin\phi\cos\theta$.
+    \item $y=\rho\sin\phi\sin\theta$.
+\end{itemize}
+
+Given the spherical coordinate $(\rho_k^*,\phi_k^*,\theta_k^*)$ and the rectangular coordinate $(x_k^*,y_k^*,z_k^*)$.
+
+The approximate volume of would be $\Delta V_k=\rho_p^{*2}\sin\phi_k^* \Delta\rho\Delta\phi\Delta\theta$.
+\[\iiint_D f(x,y,z)\mathrm{d}V = \lim_{\Delta\to 0}\sum^n_{k=1}f(\rho_k^*\sin\phi_k^*\cos\theta_k^*,\rho_k^*\sin\phi_k^*\sin\theta_k^*,\rho_k^*\cos\phi_k^*)\rho_k^{*2}\sin\phi_k^*\Delta\rho\Delta\phi\Delta\theta\]
+
+\begin{theorem}
+    Let $f$ be continuous over the region $D$, expressed in spherical coordinates as 
+    \[D={(\rho,\phi,\theta):0\leq g(\phi,\theta)\leq \rho\leq h(\phi,\theta),a\leq\phi\leq b,\alpha\leq \theta\leq \beta}\]
+    Then $f$ is integrable over $D$ and the triple integral of $f$ over $D$ is
+    \[\iiint_D f(x,y,z)\mathrm{d}V = \int_{\alpha}^{\beta}\int_a^b\int_{g(\phi,\theta)}^{h(\phi,\theta)}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\phi)\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta\]
+\end{theorem}
+
+\section{Integrals for Mass Calculations}
+If masses $m_1,m_2,\dots,m_n$ are arranged on the $x$-axis at coordinates $x_1,x_2,\dots,x_n$
+respectively the masses will be balanced about the point $\bar{x}$ if 
+\[\sum_{k=1}^n m_k(x_k-\bar{x})=0\implies \bar{x}=\frac{\sum^n_{k=1}m_k x_k}{\sum^n_{k=1}m_k}\]
+
+We can obtain the center of mass in 1 dimension as 
+\[\bar{x}=\frac{\int_a^b x\rho(x)\mathrm{d}x}{\int_a^b\rho(x)\mathrm{d}x}\]
+\pagebreak
+\begin{definition}
+    Let $\rho$ be a integrable density function on the interval $[a,b]$ (which represents a thin rod or wire). 
+    The center of mass is located on the point $\bar{x}=\frac{M}{m}$, where the total moment $M$ and mass $m$ are 
+    \[M=\int_a^b x\rho(x)\mathrm{d}x\qquad m = \int_a^b \rho(x)\mathrm{d}x\]
+\end{definition}
+
+\begin{definition}
+    Let $\rho$ be an integrable area density function defined over a closed bounded region $R$ in 
+    $\mathbb{R}^2$. The coordinates of the center of mass of the object represented by $R$ are 
+    \[\bar{x}=\frac{M_y}{m}=\frac{1}{m}\iint_R x\rho(x,y)\mathrm{d}A \qquad \bar{y}=\frac{M_x}{m}=\frac{1}{m}\iint_R y\rho(x,y)\mathrm{d}A\]
+    where $m = \iint_R \rho(x,y)\mathrm{d}A$ is the mass, and $M_y$ and $M_x$ are the moments with respect to the $y$-axis and $x$-axis, 
+    respectively. If $\rho$ is constant, the center of mass is called the centroid and is independent of the density.
+\end{definition}
+\[M_y = \iint_R x\rho(x,y)\mathrm{d}A \qquad M_x = \iint_R y\rho(x,y)\mathrm{d}A\]
+
+\begin{definition}
+    Let $\rho$ be an integrable density function on a closed bounded region $D$ in $\mathbb{R}^3$. The 
+    coordinates of the center of mass of the region are 
+    \begin{align*}
+        \bar{x}=\frac{M_{yz}}{m}=\frac{1}{m}\iiint_D x\rho(x,y,z)\mathrm{d}V \quad \bar{y}=\frac{M_{xz}}{m}=\frac{1}{m}\iiint_D y\rho(x,y,z)\mathrm{d}V \\
+        \bar{z}=\frac{M_{xy}}{m}=\frac{1}{m}\iiint_D z\rho(x,y,z)\mathrm{d}V
+    \end{align*}
+\end{definition}
+\[M_{yz}=\iiint_D x\rho(x,y,z)\mathrm{d}V \quad M_{xz}=\iiint_D y\rho(x,y,z)\mathrm{d}V \quad M_{xy}=\iiint z\rho(x,y,z)\mathrm{d}V\]
+
+
+\section{Change of Variables in Multiple Integrals}
+We have substitution in single integrals as:
+\[\int_a^b f(u(x))\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}x = \int^{u(b)}_{u(a)}f(u)\mathrm{d}u\]
+
+For double integrals, we could use polar coordiantes using the following we know:
+\begin{itemize}
+    \item $x=r\cos\theta$
+    \item $y=r\sin\theta$
+    \item $r^2=x^2+y^2$
+    \item $\tan\theta =\frac{y}{x}$.
+    \item $\mathrm{d}A\rightarrow r\mathrm{d}r\mathrm{d}\theta$
+\end{itemize}
+\pagebreak
+\begin{definition}
+    A transformation $T$ from a region $S$ to a region $R$ is one-to-one on $S$ if 
+    $T(P)=T(Q)$ only when $P=Q$, where $P$ and $Q$ are points in $S$.
+\end{definition}
+
+\begin{definition}
+    Given a transformation $T:x=g(u,v), y=h(u,v)$, where $g$ and $h$ are differentiable 
+    on a region of the $uv$-plane, the Jacobian determinant (or Jacobian) of $T$ is 
+    \begin{align*}
+        J(u,v)=\frac{\partial(x,y)}{\partial(u,v)}=
+        \begin{vmatrix}
+            \frac{\partial x}{\partial y} & \frac{\partial x}{\partial v}\\
+            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+        \end{vmatrix}
+        = \frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}
+    \end{align*}
+\end{definition}
+\begin{theorem}
+    Let $T:x=g(u,v), y=h(u,v)$ be a transformation that maps a closed bounded region $S$ in the $uv$-plane 
+    to a region $R$ in the $xy$-plane. Assume $T$ is one-to-one on the interior of $S$ and $g$ and $h$ 
+    have continuous first partial derivatives there. If $f$ is continuous on $R$, then 
+    \[\iint_R f(x,y)\mathrm{d}A = \iint_S f(g(u,v),h(u,v)) \mid J(u,v) \mid \mathrm{d}A\]
+\end{theorem}
+
+\begin{definition}
+    Given a transformation $T:x=g(u,v,w), y=h(u,v,w)$, and $z=p(u,v,w)$, where $g$, $h$, 
+    and $p$ are differentiable on a region of $uvw$-space, the Jacobian determinant (or Jacobian) of $T$ is 
+    \begin{align*}
+J(u,v,w)=\frac{\partial(x,y,z)}{\partial(u,v,w)} = 
+\begin{vmatrix}
+    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w}\\
+    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w}\\
+    \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
+\end{vmatrix}
+    \end{align*}
+\end{definition}
+
+We can express $J(u,v,w) = \frac{\partial x}{\partial u}\frac{\partial y}{\partial v}\frac{\partial z}{\partial w}+\frac{\partial x}{\partial v}\frac{\partial y}{\partial w}\frac{\partial z}{\partial u}+\frac{\partial x}{\partial w}\frac{\partial y}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial w}\frac{\partial y}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial u}\frac{\partial y}{\partial w}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}\frac{\partial z}{\partial w}-\frac{\partial x}{\partial w}\frac{\partial y}{\partial v}\frac{\partial z}{\partial u}$
+
+\begin{theorem}
+    Let $T:x=g(u,v,w), y=h(u,v,w)$, and $z=p(u,v,w)$ be a transformation that maps a closed 
+    bounded region $S$ in $uvw$-space to a region $D=T(S)$ in $xyz$-space. Assume $T$ is one-to-one 
+    on the interior of $S$ and $g$, $h$, and $p$ have continuous first partial derivatives there. 
+    If $f$ is continuous on $D$, then 
+    \[\iiint_D f(x,y,z)\mathrm{d}V = \iiint_S f(g(u,v,w),h(u,v,w),p(u,v,w,))\mid J(u,v,w)\mid \mathrm{d}V\]
+\end{theorem}
+
+
+\end{document}

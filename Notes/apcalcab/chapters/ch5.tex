@@ -1,0 +1,130 @@
+\documentclass[../abcalc.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Analytical Applications of Differentiation}
+\section{Extrema on an Interval}
+\begin{definition}
+    Let $f$ be defined on an interval $I$ containing $c$.
+    \begin{enumerate}
+        \item $f(c)$ is the minimum of $f$ on $I$ if $f(c)\leq f(x)$ for all $x$ in $I$.
+        \item $f(c)$ is the maximum of $f$ on $I$ if $f(c)\geq f(x)$ for all $x$ in $I$.
+    \end{enumerate}
+    The minimum and maximum of a function on an interval are the extreme values or extrema of the function on the interval. The minimum 
+    and maximum of a function on an interval are also caleld the absolute minimum and absolute maximum, or the global minimum and global maximum, on the interval.
+\end{definition}
+\begin{definition}
+    \begin{enumerate}
+        \item If there is an open interval containing $c$ on which $f(c)$ is a maximum, then $(c,f(c))$ is called a relative maximum of $f$, 
+        or you can say that $f$ has a relative maximum at $(c,f(c))$.
+        \item If there is an open interval containing $c$ on which $f(c)$ is a minimum, then $(c,f(c))$ is called a relative minimum of $f$, 
+        or you can say that $f$ has a relative minimum at $(c,f(c))$.
+    \end{enumerate}
+    The relative maximum and relative minimum points are sometimes called local maximum and local minimum points, respectively.
+\end{definition}
+
+\begin{definition}
+    Let $f$ be defined at $c$. If $f'(c)=0$ or if $f$ is not differentiable at $c$, then $c$ is a critical number of $f$ and the point $(c,f(c))$ is a critical point of $f$.
+\end{definition}
+
+Relative extrema occur only at critical numbers.
+
+\begin{theorem}
+    If $f$ is continuous on a closed interval $[a,b]$, then $f$ attains an absolute maximum value $f(c)$ or an absolute minimum value $f(d)$ 
+    for some numbers $c$ and $d$ in $[a,b]$.
+\end{theorem}
+
+To find the extrema of a continuous function $f$ on a closed interval $[a,b]$ use the following steps:
+\begin{enumerate}
+    \item Find $f'(x)$ and the critical numbers of $f$ in $[a,b]$.
+    \item Evaluate $f$ at each critical number in $(a,b)$.
+    \item Evaluate $f$ at each endpoint in $[a,b]$.
+    \item The least of these values is the minimum. The greatest is the maximum.
+\end{enumerate}
+
+Problem 1: Find the absolute maximums and minimums of $f$ on the given closed interval, and state where these values occur.
+
+$f(x) = \sin^2 x + \cos x \quad [0,2\pi]$.
+\section{1st Derivative Test}
+\begin{itemize}
+    \item When the function is increasing, the derivative is positive.
+    \item When the function is decreasing, the derivative is negative.
+    \item When the function changes from increasing to decreasing (or vice versa), the derivative is zero or undefined.
+\end{itemize}
+
+The first derivative test:
+\begin{enumerate}
+    \item Find the critical points.
+    \item Draw a number line with those critical points.
+    \item Identify the intervals to consider.
+    \item Choose a test value in each interval.
+    \item Plug the test value into the derivative to find the sign.
+    \item Make conclusions about the function and relative extrema.
+\end{enumerate}
+
+When a function changes concavity that is called a point of inflection. A point of inflection occurs whenever the second derivative is zero or undefined.
+
+Problem 1: Find the interval(s) where the function $f(x)=\frac{1}{2}x-\sin x$ is increasing and decreasing and the interval(s) where the function is concave up and down and has point(s) of inflection on the interval $[0,2\pi]$.
+\section{2nd Derivative Test}
+\begin{itemize}
+    \item If the function has horizontal tangent ($f'=0$) and is concave up $(f''>0)$, then the function has a relative minimum at that $x$-value.
+    \item If the function has horizontal tangent ($f'=0$) and is concave down $(f''<0)$, then the function has a relative maximum at that $x$-value.
+\end{itemize}
+
+The second derivative test:
+\begin{enumerate}
+    \item Find the possible point(s) of inflection.
+    \item Draw a number line with those point(s) of inflection.
+    \item Identify the intervals to consider.
+    \item Choose a test value in each interval.
+    \item Plug the test value into the second derivative to find the sign.
+    \item Make conclusions about the function and point(s) of inflection.
+\end{enumerate}
+
+Problem 1: Find the interval in which $f'(x)=x \ln x$ is concave down given that the domain of this function $f$ is $x>0$.
+\section{Mean Value Theorem and Rolle's Theorem}
+\begin{theorem}
+    Rolle's Theorem: Let $f$ be continuous on the closed interval $[a,b]$ and differentiable in the open interval $(a,b)$.
+    If $f(a) = f(b)$, then there is at least one number in $c$ in $(a,b)$ such that $f'(c)=0$.
+\end{theorem}
+\begin{theorem}
+    Mean Value Theorem: If $f$ is continuous on the closed interval $[a,b]$ and differentiable on the open interval $(a,b)$, then there exists 
+    a number $c$ in $(a,b)$ such that 
+    \[f'(c)=\frac{f(b)-f(a)}{b-a}\]
+\end{theorem}
+
+Problem 1: Let $f$ be a twice-differentiable function such that $f(2)=5$ and $f(5)=2$. Let $g$ be the function given by $g(x)=f(f(x))$.
+\begin{itemize}
+    \item Explain why there must be a value $c$ for $2<c<5$ such that $g'(c)=1$.
+    \item Show that $g'(2)=g'(5)$. Use this result to explain why there must be a value $k$ for $2<k<5$ such that $g''(k)=0$.
+\end{itemize}
+\section{Optimization}
+Optimization is the process of finding the ``optimal'' value of a quantity. Optimal values are often either the maximum or minimum values of a certain functino.
+\begin{enumerate}
+    \item Determine what you are trying to maximize of minimize.
+    \item Determine what your answer must look like.
+    \item Draw a visual if possible.
+    \item Write the equation you must maximize or minimize.
+    \item Use information from the problem to get the equation from \#4 in terms of one variable.
+    \item Take the derivative of the new equation from \#5.
+    \item Set the derivative equal to zero to identify critical values.
+    \item Choose the critical value that is also the particular extreme value you need from \#1 and justify your choice.
+    \item Answer the question identified in \#2.
+\end{enumerate}
+Problem 1: What point on the graph $y=\sqrt{x}$ is closest to $(5,0)$?
+
+Problem 2: A manufacturer wants to design an open box having a square base and a surface area of 108 square inches. What dimensions 
+will produce a box with maximum volume?
+
+Problem 3: A power station is on onside of a river that is 1/2 mile wide, and a factory is 6 miles downstream on the other side. It costs 
+\$60,000 per mile to run power lines over land and \$85,000 per mile to run them underwater. FInd the most economical path for the transmission 
+line from the power station to the factory.
+\section{Sketching Graphs and Their Derivatives}
+Problem 1: Sketch the graph of a function $f$ with the given characteristics
+\begin{itemize}
+    \item $f(2)=f(4)=0$
+    \item $f'(x)>0$ if $x<3$
+    \item $f'(3)$ does not exist
+    \item $f'(x)<0$ if $x>3$
+    \item $f''(x)>0, x\neq 3$
+\end{itemize}
+\end{document}

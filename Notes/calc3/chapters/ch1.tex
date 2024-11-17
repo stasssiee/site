@@ -1,0 +1,251 @@
+\documentclass[../calc3.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Vectors and the Geometry of Space}
+\section{Vectors in the Plane}
+Vectors are quantities with both magnitude and direction. The vector who's tail is at point 
+P and head at point Q is denoted as $\overrightarrow{PQ}$.
+
+Two vectors, \textbf{u} and \textbf{v} are equal if they have equal length and point 
+in the same direction. They do not necessarily have to be in the same location.
+
+Scalar multiplication happens when a $c$ is multiplied to vector \textbf{v}. If $c<0$, then 
+vector cv and v will point in opposite directions, otherwise they will point in the same direction. 
+Two vectors are parallel if they are scalar multiples of each other.
+
+If you place the tail of a vector \textbf{v} at the head of another vector \textbf{u}, the sum 
+\textbf{u+v} is the vector that extends from the tail of \textbf{u} to the head of \textbf{v}.
+
+The vector difference \textbf{u-v} is defined as \textbf{u+(-v)}.
+
+In order to do calculations with vectors, we must introduce a cartesian plane. Angle brackets 
+$\langle{a,b}\rangle$ show the components of a vector.
+
+The magnitude of a vector is simply its length. Given points $P(x_1,y_1)$ and $Q(x_1,y_1)$, 
+the magnitude of the vector $\vec{PQ}=\langle{x_2-x_1,y_2-y_1}\rangle$ is denoted as $|\vec{PQ}|$, is equal to:
+    \[|\vec{PQ}|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\]
+
+We can also now do vector addition with components. Given two vectors \textbf{u} and \textbf{v}, the vector sum is:
+    \[\textbf{u}+\textbf{v}=\langle{u_1+v_1,u_2+v_2}\rangle\]
+
+
+For a scalar $c$ and a vector \textbf{u}, the scalar multiple is $c$\textbf{u}. i.e $|c\textbf{u}|=|c||\textbf{u}|$
+
+A unit vector is any vector with length 1. \textbf{i} is a unit vector in the x-direction and \textbf{j} is a 
+unit vector in the y-direction. 
+\begin{example}
+Determine the necessary air speed and heading that a pilot must maintain in order to 
+fly her commercial jet north at a speed of 480 mi/hr relative to the ground in a crosswind that is 
+blowing 60$\deg$ south of east at 20 mi/hr.
+
+Let $\vec{p}$ be the velocity vector we are trying to find. 
+
+We have ground vector $\langle0,480\rangle$ and a crosswind vector $\langle10,-10\sqrt{3}\rangle$. 
+Note we got the x-component and the y-component of the crosswind vector from the formula: 
+$\vec{v}=\langle a\cos\theta, b\cos\theta\rangle$
+
+We can find the vector $\vec{p}$ from adding this vector to the crosswind vector resulting in: 
+$\vec{p}=\vec{g}-\vec{c} = \langle-10,480+10\sqrt{3}\rangle$. 
+
+The magnitude of this vector is the speed and is equal to 497.2 mi/hr roughly.
+\end{example}
+
+\section{Vectors in Three Dimensions}
+We can create a z-axis to create a three dimensional system.
+
+The $xyz$-plane is divided into octants and has 3 planes, the $xy$-plane, the $xz$-plane, and the $yz$-plane. 
+
+We can also extend the distance formula to 3 dimensions. It is similar to the distance 
+formula in two dimensions, with the z-component added, essentially:
+\[|PQ|=\sqrt{|PR|^2+|RQ|^2}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}\]
+
+The midpoint formula works the same way:
+\[\text{Midpoint}=\left(\frac{x_1+x_2}{2}+\frac{y_1+y_2}{2}+\frac{z_1+z_2}{2}\right)\]
+
+The normal form of the circle equation is: 
+\[(x-h)^2+(y-k)^2=r^2\]
+
+For a disk we have 
+\[(x-h)^2+(y-k)^2\leq r^2\]
+
+We can generalize this to a sphere. A sphere centered at $(a,b,c)$ with radius $r$ is the set of points satisfying:
+\[(x-a)^2+(y-b)^2+(z-c)^2=r^2\]
+
+A ball centered at $(a,b,c)$ with radius $r$ is the set of points satisfying:
+\[(x-a)^2+(y-b)^2+(z-c)^2\leq r^2\]
+
+\begin{example}
+Find an equation of the sphere passing through $P(-4,2,3)$ and $Q(0,2,7)$ with its center at the midpoint of $PQ$.
+
+We can find the midpoint from the midpoint formula and it is equal to $(-2,2,5)$. 
+
+The radius can be found through the distance formula and is equal to $\sqrt{8}$.
+
+The equation is $(x+2)^2+(y-2)^2+(z-5)^2=8$
+\end{example}
+
+All the vector operations from two-dimensions work in three-dimensions. 
+\begin{example}
+A model airplane is flying horizontally due east at 10 mi/hr when it encounters a horizontal 
+crosswind blowing south at 5 mi/hr and an updraft blowing vertically upward at 5 mi/hr. 
+\begin{itemize}
+    \item Find the position vector that represents the velocity of the plane relative to the ground.
+    \item Find the speed of the plane relative to the ground.
+\end{itemize}
+The velocity vector of the model plane $\vec{p}$ is equal to $\langle 10,0,0 \rangle$
+
+The velocity vector of the horizontal crosswind $\vec{w}$ is equal to $\langle 0,-5,0\rangle$
+
+The velocity vector of the updraft $\vec{u}$ is $\langle 0,0,5\rangle$
+
+Adding the three vectors results in the speed: $\langle 10,-5,5\rangle$
+
+The magnitude of this is roughly 12.25.
+\end{example}
+
+\section{Dot Products}
+\begin{definition}
+    Given two nonzero vectors \textbf{u} and \textbf{v} in two or three dimensions, the dot product is
+    \[\textbf{u}\cdot\textbf{v}=|\textbf{u}||\textbf{v}|\cos \theta\]
+\end{definition}
+
+The dot product is 0 when $\theta=\frac{\pi}{2}$, negative when $\theta>\frac{\pi}{2}$ and positive when $\theta<\frac{\pi}{2}$.
+
+Two vectors are parallel if and only if \textbf{u}$\cdot$\textbf{v}=$\pm|\textbf{u}||\textbf{v}|$ 
+
+When the dot product is zero, we call $\vec{u}$ and $\vec{v}$ orthogonal.
+\begin{theorem}[Dot Product]
+    Given two vectors $\textbf{u}=\langle u_1, u_2, u_3 \rangle$ and $\textbf{v}=\langle v_1, v_2, v_3 \rangle$,
+    \[\textbf{u}\cdot\textbf{v}=u_1v_1+u_2v_2+u_3v_3\]
+\end{theorem}
+
+We now apply the dot product to vector projections.
+\begin{definition}
+    The orthogonal projection of \textbf{u} on \textbf{v}, denoted proj$_{\textbf{v}}\textbf{u}$ is:
+    \[\text{proj}_{\textbf{v}}\textbf{u}=|\textbf{u}|\cos\theta\left(\frac{\textbf{v}}{|\textbf{v}|}\right)\]
+
+    The orthogonal projections can also be computed with the formulas:
+    \[\text{proj}_{\textbf{v}}\textbf{u}=\text{scal}_{\textbf{v}}\textbf{u}\left(\frac{\textbf{v}}{|\textbf{v}|}\right)=
+    \left(\frac{\textbf{u}\cdot\textbf{v}}{\textbf{v}\cdot\textbf{v}}\right)\textbf{v}\]
+    
+    where the scalar component of \textbf{u} in the direction of \textbf{v} is 
+    \[\text{scal}_{\textbf{v}}\textbf{u}=|\textbf{u}|\cos\theta = \frac{\textbf{u}\cdot\textbf{v}}{|\textbf{v}|}\]
+\end{definition}
+
+\section{Cross Products}
+\begin{definition}
+    Given two vectors $\textbf{u}$ and $\textbf{v}$ in $\mathbb{R}^3$, the cross product $\textbf{u}\times\textbf{v}$ 
+    is a vector with magnitude
+        \[|\textbf{u}\times\textbf{v}|=|\textbf{u}||\textbf{v}|\sin\theta\]
+\end{definition}
+
+Note that $\vec{u}\times\vec{v}=-(\vec{v}\times\vec{u})$
+
+There are some useful properties of the cross product.
+\begin{itemize}
+    \item The cross product $\textbf{u}\times\textbf{v}$ is orthogonal to both $\vec{u}$ and $\vec{v}$
+    \item The cross product is zero when $\sin(\theta)=0$.
+    \item Two vectors are parallel if the cross product between them is zero.
+\end{itemize}
+
+We define the determinant of a $2\times 2$ array
+$\begin{vmatrix}
+a & b\\
+c & d   
+\end{vmatrix}$
+as $ad-bc$.
+
+For a matrix $\begin{vmatrix}
+a & b & c\\
+u_1 & u_2 & u_3\\
+v_1 & v_2 & v_3
+\end{vmatrix}$
+
+the determinant is $a\begin{vmatrix}
+    u_2 & u_3\\
+    v_2 & v_3
+\end{vmatrix}-b\begin{vmatrix}
+    u_1 & u_3\\
+    v_1 & v_3
+\end{vmatrix}
++c\begin{vmatrix}
+    u_1 & u_2\\
+    v_1 & v_2
+\end{vmatrix}$ 
+or:
+\[a(u_2v_3-u_3v_2)-b(u_1v_3-u_3v_1)+c(u_1v_2-u_2v_1)\]
+
+\section{Lines and Planes in Space}
+Recall that in two dimensions, we needed a point and a slope to write an equation for a line.
+
+We can write an equation in three dimensions as well.
+
+A vector equation of a line passing through the point $P_0(x_0,y_0,z_0)$ in the direction of vector 
+$\textbf{v}=\langle a,b,c \rangle$ is $\textbf{r}=\textbf{r}_0+t\textbf{v}$ or:
+\[\langle x,y,z \rangle = \langle x_0,y_0,z_0 \rangle + t\langle a,b,c \rangle\]
+
+The corresponding parametric equations of the line also are:
+\[x=x_0+at, y=y_0+bt, z=z_0+ct\]
+
+The general equation of a plane in $\mathrm{R}^3$ with the plane passing through 
+$P_0(x_0,y_0,z_0)$ with vector $\textbf{v}=\langle a,b,c\rangle$ is described by:
+\[a(x-x_0)+b(y-y_0)+c(z-z_0)=0\]
+or 
+\[ax+by+cz=d\] where $d=ax_0+by_0+cz_0$.
+
+\section{Cylinders and Quadric Surfaces}
+A cylinder is a surface that is parallel to a line.
+
+A trace of a surface is the set of points at which the surface intersects a plane that is 
+parallel to one of the coordinate planes. The traces in the coordinate planes are called the 
+$xy$-trace, the $yz$-trace, and the $xz$-trace.
+
+To sketch quadric surfaces:
+\begin{itemize}
+    \item Determine the points where the surface intersects the coordinate axes. 
+    \item Finding traces of the surface helps visualize the surface
+    \item Sketch at least two traces in parallel planes
+\end{itemize}
+
+\begin{example}
+    For:
+    \begin{align*}
+        \frac{x^2}{9}+\frac{y^2}{16}+\frac{z^2}{25}=1
+    \end{align*}
+    We set certain variables to zero to find the $x$-intercept to be $\pm 3$, the $y$-intercept 
+    to be $\pm 4$ and the $z$-intercept to be $\pm 5$.
+
+    We can also find the traces:
+    \begin{itemize}
+        \item $xy$: $\frac{x^2}{9}+\frac{y^2}{16}=1$
+        \item $xz$: $\frac{x^2}{9}+\frac{z^2}{25}=1$
+        \item $yz$: $\frac{y^2}{16}+\frac{z^2}{25}=1$
+    \end{itemize}
+
+    The resulting shape is a ellipsoid.
+\end{example}
+
+In general the equation of an ellipsoid is:
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\]
+In this all traces are ellipses.
+
+For an elliptic cone the equation is:
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z^2}{c^2}\]
+Traces with $z = z_0 \neq 0$ are ellipses. Traces with $x=x_0$ or $y=y_0$ are hyperbolas or intersecting lines.
+
+For an elliptic paraboloid the equation is:
+\[z=\frac{x^2}{a^2}+\frac{y^2}{b^2}\]
+Traces with $z=z_0>0$ are ellipses. Traces with $x=x_0$ or $y=y_0$ are parabolas.
+
+For a hyperbolic paraboloid:
+\[z=\frac{x^2}{a^2}-\frac{y^2}{b^2}\]
+Traces with $z=z_0\neq 0$ are hyperbolas. Traces with $x=x_0$ or $y=y_0$ are parabolas.
+
+For a hyperboloid of one sheet:
+\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1\]
+Traces with $z=z_0$ are ellipses for all $z_0$. Traces with $x=x_0$ or $y=y_0$ are hyperbolas.
+
+For a hyperboloid of two sheets:
+\[-\frac{x^2}{a^2}-\frac{y^2}{b^2}+\frac{z^2}{c^2}=1\]
+Traces with $z=z_0$ with $|z_0|>|c|$ are ellipses. Traces with $x=x_0$ and $y=y_0$ are hyperbolas.
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[../stats.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Probability, Random Variables, and Probability Distributions}
+\section{Basic Probability and Simulations}
+\begin{itemize}
+    \item Outcomes are governed by change, but in many repetitions, a pattern emerges.
+    \item Sample space: all of the possible outcomes.
+    \item Event: a specific desired outcome or set of outcomes.
+    \item Notation: probability of Event A $\rightarrow$ P(A).
+    \item Range of probabilities: probability of event is between 0 and 1.
+    \item Sum of probabilities: probability of whole sample is 1.
+\end{itemize}
+
+Theoretical probability is what should happen given the sample space: \# of desired outcomes/total \# outcomes.
+
+Empirical probability is when you are performing a simulation or experiment, it is what does happen given the trials: \# successes/\# trials.
+
+The law of large numbers states that simulated probabilities tend to get closer to the true probability as the number of trials increases. 
+
+The notation for the probability that an event does not occur is $P(A^C)$. The probabiliy an event does not occur is $P(A^C)=1-P(A)$.
+\begin{itemize}
+    \item The idea of probability is that randomness is predictable in the long run.
+    \item Probability does not allow us to make short run predictions.
+    \item Probability tells us random behavior events out in the long run.
+    \item Future outcomes are not affected by past behavior.
+\end{itemize}
+
+The imitation of chance behavior, based on a model that accurately reflects the situation, is called a simulation. Simulations are usually 
+done with a table of random digits, random number generator, dice, deck of cards, spinner, etc.
+
+Four principles of simulation:
+\begin{itemize}
+    \item State: identify the probability calculation.
+    \item Plan: Describe how to use your chance process.
+    \item Do: Perform the simulation 
+    \item Conclude: use the results of your simulation to answer the question.
+\end{itemize}
+\section{The Addition Rule}
+\begin{itemize}
+    \item When two events have no outcomes in common, we refer to them as mutually exclusive events.
+    \item P(A and B) = 0
+    \item P(A or B) = P(A)+P(B)
+\end{itemize}
+
+If A and B are any two events resulting from some chance process, then
+\begin{center}
+    P(A or B) = P(A) + P(B) - P(A and B)
+\end{center}
+Notice how if A and B are mutually exclusive, P(A and B) = 0 and P(A or B) = P(A) + P(B).
+
+
+\section{Venn Diagrams and the Multiplication Rule}
+\begin{itemize}
+    \item We can represent events with a Venn diagram - a display of potential probabilities.
+    \item The box around the Venn diagram represents the total sample space where P(S) = 1.
+    \item The circles themselves represent the probability of each event.
+\end{itemize}
+
+Union: $\cup$ is the probability that either occurs.
+
+Intersection: $\cap$ is the probability both will occur.
+
+\begin{itemize}
+    \item Two events are independent if they do not influence one another.
+    \item The occurrence of one has no effect on the occurrence of the other.
+    \item If A and B are independent events, then the probability that both A and B occur is found using the multiplication rule:
+    \begin{center}
+        P(A and B) = P(A $\cup$ B) = P(A)$\cdot$P(B)
+    \end{center}
+\end{itemize}
+
+\begin{itemize}
+    \item Two events are dependent if they influence one another.
+    \item The occurrence of one affects the occurrence of the other.
+    \item If A and B are dependent events, then the probability that both A and B occur is found using:
+    \begin{center}
+        P(A and B) = P(A $\cup$ B) = P(A)$\cdot$P(B$|$A)
+    \end{center}
+    \item Where P(B$|$A) is the probability B ``given'' that A has occurred.
+    \item The conditional probability of an event is the probability that one event will happen, if it is known that another event has happened.
+\end{itemize}
+
+\section{Conditional Probability and Tree Diagrams}
+\begin{itemize}
+    \item If A and B are dependent events, then the probability that both A and B occur is found using 
+    P(A$\cup$B)=P(A)$\cdot$P(B$|$A) where P(B$|$A) is the probability of B ``given'' that A has already occurred.
+    \item The conditional probability of an event is the probability that one event will happen, if it is known that another event has happened.
+    \item We can rearrange the multiplication rule a little and get a formula for conditional probability.
+    \begin{center}
+        P(B|A)=$\frac{\text{P(A$\cup$ B)}}{\text{P(A)}}$
+    \end{center}
+\end{itemize}
+\begin{itemize}
+    \item If we draw two cards with replacement, we know that those events are independent.
+    \item If we draw two cards without replacement, we know that those events are dependent.
+    Using the following formula we can prove independence:
+    \begin{center}
+        P(A$\cup$B) = P(A)$\cdot$P(B) or P(A) = P(A$|$B)
+    \end{center}
+\end{itemize}
+\section{Discrete and Continuous Random Variables}
+
+\end{document}

@@ -1,0 +1,441 @@
+\documentclass[../chem.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Applications of Thermodynamics}
+\section{Introduction to Entropy \& Absolute Energy and Entropy Change}
+AP Topic: 9.1, 9.2
+
+Remember enthalpy, H, the heat content of a system? One might assume that a reaction with a negative $\Delta$H would always proceed since the products 
+have a lower enthalpy than the reactants and are more stable. However, this is not necessarily so. If a reaction has a very high energy of activation then it 
+will not occur and is described as kinetically stable or under kinetic control. In these circumstances it is possible that a reaction that one might predict as being highly likely, produces little or no products.
+
+Similarly, one might assume that a reaction with a positive $\Delta$H will never proceed since the products have a higher enthalpy than the reactants and are less stable. However, some endothermic reactions do proceed.
+
+The degree of disorder or dispersal of energy in a reaction is caleld the entropy and is given the symbol, S.
+
+Entropy is closely related to probability. The key concept is that the more ways a particular state can be achieved, the greater the likelihood 
+of finding that state. In English...nature spontaneously proceeds toward the states that have the highest probability of existing.
+
+A pure, perfect crystal at 0 K is assigned an absolute entropy = 0, that is to say it is completely `organized' or completely `ordered'. 
+The absolute entropies of substances in the real world are measured relative to that, and as such all have values that are greater than zero. 
+The state, temperature, number of particles and volumes of gases are all important factors in entropy, and we find thatl
+\begin{center}
+    \begin{itemize}
+        \item absolute entropy of solids $<$ absolute entropy of liquids $<<<$ absolute entropy of gases
+        \item absolute entropy of a small number of particles is less than the absolute entropy of a large number of similar particles 
+        \item absolute entropies of gases with smaller volumes are less than the absolute entropies of gases with larger volumes, since the ones with larger volumes have more space to be disordered in
+        \item entropy increases with increasing temp since particles can move around more and are more dispersed 
+    \end{itemize}
+\end{center}
+
+A couple of other hints for predicting the entropy of a system based on physical evidence:
+\begin{itemize}
+    \item The greater the dispersal of matter and/or energy in a system, the larger the entropy.
+    \item When a pure solid or liquid dissolves in a solvent, the entropy of the substance increases. (Carbonates are an exception.)
+    \item When a gas molecule escapes from a solvent, the entropy increases.
+    \item Entropy generally increases with increasing molecular complexity since there are more moving electrons.
+\end{itemize}
+
+In short, $\Delta$S is positive when dispersal/disorder increases and $\Delta$S is negative when dispersal/disorder decreases.
+
+The change in entropy ($\Delta$S$^{\circ}$) in a reaction can be calculated from tables of standard values by subtracting the sum of the absolute values 
+of the entropy of the reactants from the sum of the absolute entropies of the produts. Units of entropy are usually J/(mol$_{\text{rxn}}\cdot$K)
+\begin{center}
+    $\Delta$S$^{\circ}_{\text{REACTION}}$=$\sum$S$^{\circ}_{\text{PRODUCTS}}-\sum$S$^{\circ}_{\text{REACTANTS}}$
+\end{center}
+
+The zeroth law of thermodynamics: If substance A is in thermal equilibrium with substance B and substance B is in thermal equilibrium, then A is also in thermal equilibrium with substance C.
+
+The first law of thermodynamics: Energy can never be created nor destroyed. Therefore, the energy of the universe is constant. 
+
+The second law of thermodynamics: the universe is constantly increasing the dispersal of matter and energy. In order words, disorder always increases.
+
+The third law of thermodynamics: the the entropy of a perfect crystal at 0 K is zero. There are not a lot of perfect crystals out there, so 
+entropy values are rarely ever zero. This means the absolute entropy of a substance can then be determined at any temperature higher than zero K.
+
+Phase changes occur at constant temperature and represent a system which is also in equilibrium.
+\begin{center}
+    $\Delta$S$^{\circ}$ = $\frac{\text{heat transferred}}{\text{temperature at which change occurs}} = \frac{q}{T}=\frac{-\Delta H}{T}$
+\end{center}
+\begin{itemize}
+    \item where the heat supplied or evolved is divided by temperature in Kelvin
+    \item The actual significance of whether the phase change is endothermic or exothermic is really dependent on the temperature at which the process occurs.
+\end{itemize}
+
+Usually chemists are concerned with calculating the entropy change for a system. However, it is possible to calculate the entropy change of the surroundings using the previous equation.
+
+There is also the following relationship:
+\begin{center}
+    $\Delta$S$_{\text{universe}}$ = $\Delta$S$_{\text{system}}$ + $\Delta$S$_{\text{surroundings}}$
+\end{center}
+
+Whether a reaction will occur spontaneously may be determined by looking at the $\Delta$S of the universe.
+\begin{itemize}
+    \item If $\Delta$S$_{\text{universe}}$ is positive, then the reaction is thermodynamically favorable.
+    \item If $\Delta$S$_{\text{universe}}$ is negative, then the reaction is not thermodynamically favorable.
+\end{itemize}
+\section{Gibbs Free Energy and Thermodynamic Favorability \& Thermodynamic and Kinetic Control}
+AP Topic: 9.3, 9.4
+
+Luckily, chemists can get around having to determine the entropy change of the universe by defining and using a new thermodynamic quantity 
+called Gibbs free energy. Enthalpy and entropy are brought together in the Gibbs-Helmholtz free energy equation, where all values refer to the system of interest.
+\begin{center}
+    $\Delta$G$^{\circ}$ = $\Delta$H$^{\circ}$-T$\Delta$S$^{\circ}$
+\end{center}
+
+Notes:
+\begin{enumerate}
+    \item In order to apply this equation, all reactants and products in an equilibrium mixture must be present and in their standard states. A temperature should be stated.
+    \item Entropy values tend to be given in units that involve J, whereas enthalpy values tend to be given in units that involve kJ. Therefore, it is very important to remember that a conversion of one unit to match the other is often required.
+\end{enumerate}
+
+The calculation of $\Delta$G is what ultimately decides whether a reaction is thermodynamically favored or not. All thermodynamically favored 
+chemical reactions have a value for $\Delta$G$^{\circ}$ that is negative. 
+
+We can summarize the possible sign combinations of $\Delta$H$^{\circ}$, $\Delta$S$^{\circ}$ and $\Delta$G$^{\circ}$.
+\begin{itemize}
+    \item H: positive, S: positive, G: negative at high temperatures and positive at low temperatures 
+    \item H: positive, S: negative, G: always positive 
+    \item H: negative, S: positive, G: always negative 
+    \item H: negative, S: negative, G: negative at low temperatures and positive at high temperatures
+\end{itemize}
+
+A value for the change in standard Gibbs free energy in a reaction can also be calculated in much the same manner as $\Delta$H$^{\circ}$ and $\Delta$S$^{\circ}$, by using the following:
+\begin{center}
+    $\Delta$G$^{\circ}$ = $\sum$G$^{\circ}_{\text{f PRODUCTS}}$ - $\sum$G$^{\circ}_{\text{f REACTANTS}}$
+\end{center}
+
+If $\Delta$G$^{\circ}$ is positive then the reaction is not thermodynamically favored, and if $\Delta$G$^{\circ}$ = 0, then the reaction is favored equally 
+in both the forward and backward directions. Both $\Delta$H$_{\text{f}}^{\circ}$ and $\Delta$G$_{\text{f}}^{\circ}$ = 0 for elements in their standard state and both beat units of kJ mol$^{-1}$.
+You must look up S$^{\circ}$ values rather than them being zero as well. Only a perfect diamond at absolute zero has a S$^{\circ}$ value of 0.
+
+Yet another method for determining $\Delta$G$^{\circ}$ for a ``new'' reaction is to use Hess's Law of Summation. It works exactly the same as in enthalpy calculations;
+arrange a series of chemical equations for which you know the $\Delta$G$^{\circ}_{\text{rxn}}$ to obtain the ``goal equation''. If you need to reverse an equation,
+then you change the sign of $\Delta$G$^{\circ}_{\text{rxn}}$ and cross off common moles of substances as you sum the equations to deliver the goal equation. 
+If you double an equation to obtain the goal, double the value of $\Delta$G$^{\circ}_{\text{rxn}}$; if you halve a reaction, halve the value of $\Delta$G$^{\circ}_{\text{rxn}}$ for that reaction, etc.
+\section{Coupled Reactions}
+AP Topic: 9.6
+
+A reaction with a positive $\Delta$G$^{\circ}$ can be forced to occur by applying energy from an external source. Three such examples will be considered here.
+\begin{enumerate}
+    \item Using electricity in the process of electrolysis.
+    \item Using light to overcome a highly endothermic ionization energy.
+    \item The coupling of a thermodynamically unfavorable reaction to a favorable one where intermediates are common throughout a series of reactions, and taken together the reactions combine to form an overall reaction with a favorable, negative $\Delta$G$^{\circ}$.
+\end{enumerate}
+
+The process of combining non-thermodynamically favored and thermodynamically favored reactions to produce an overall thermodynamically favored reaction is called coupling.
+\section{Free Energy and Equilibrium}
+AP Topic: 9.5
+
+Using the given temperature and equilibrium constant, K, for a reaction:
+\begin{center}
+    $\Delta$G$^{\circ}$ = -RT ln K 
+\end{center}
+Remember two things:
+\begin{enumerate}
+    \item That K has a range of magnitudes that is massive, from incredibly tiny numbers to incredibly massive numbers, but K will always be positive.
+    \item That $\Delta$G$^{\circ}$ has a range of magnitude that tends to be more narrow than those of K, but that $\Delta$G$^{\circ}$ can be either positive or negative.
+\end{enumerate}
+
+Large magnitude negative values for $\Delta$G$^{\circ}$ will lead to large magnitude values for K. Large values of K show that reactions are thermodynmically favored, with many products compared to reactants at equilibrium.
+
+When the value of $\Delta$G$^{\circ}$ is close to zero that will lead to values for K that are close to 1. Such values of K show that reactions are close to having 
+reactants and products equally favored at equilibrium.
+
+Large magnitude positive values for $\Delta$G$^{\circ}$ will lea to small magnitude values for K. Small values of K show that reactions are thermodynamically unfavored, with many reactants compared to products at equilibrium.
+
+We have see earlier how $\Delta$G$^{\circ}$ can be influenced by temperature, but there is one more thing to consider. $\Delta$G$^{\circ}$ also assumes 
+standard conditions of 1 atm for gases and 1 M for solutions. This means that when conditions differ from those standard values, a new $\Delta$G value applies.
+In some cases, not only does the magnitude of $\Delta$G change, but the sign will change too, causing a previously non-favored reaction to become favorable, and vice-versa.
+There is an equation which allows the calculation of such things, namely 
+\begin{center}
+    $\Delta$G = $\Delta$G$^{\circ}$ + RT ln Q 
+\end{center}
+
+You should understand that initial conditions, outside of standard ones, might cause a favored reaction to actually produce very few products, and non-favored one to actually produce products.
+
+Also note that it is not true to assume that if $\Delta$G is large and negative, the process must proceed at a measurable rate.
+\section{Galvanic (Voltaic) and Electrolytic Cells}
+AP Topic: 9.7
+
+Electrochemistry is the study of the interchange of chemical and electrical energy. Electrochemistry involves two main types of electrochemical cells:
+\begin{itemize}
+    \item Galvanic (voltaic) cells - which are thermodynamically favorable chemical reactions 
+    \item Electrolytic cells - which are thermodynamically unfavorable and require an external electron source
+\end{itemize}
+
+When a metal is placed in a solution containing its own ions, a reversible reaction is set up. 
+
+So, whenever, an element is placed in contact with a solution containing its own ions, an electric charge will develop on the metal or, 
+in the case of a non-metal, on the inert conductor placed in solution. The charge is called the electrode potential and the system is called a half-cell.
+The sign and size of the charge will depend on the relative ability of the element to lose or gain electrons when compared to the hydrogen half-cell.
+In order to make meaningful comparisons it is necessary to stipulate a set of standard conditions under which the electrode potential of a given half-cell is measured.
+
+The Standard Electrode Reduction Potentials of a hallf-cell, E$^{\circ}$, is defined as the electrode potential of a half-cell, measured relative 
+to a standard hydrogen electrode, which has a value of 0.00 V, under standard conditions of 298 K, gases at a pressure of 1.0 atm, and solutions at concentrations of 1.0 M.
+
+The practical use of the hydrogen half-cell for determining E$^{\circ}$ values suffers from at least two problems.
+\begin{itemize}
+    \item It is difficult and time consuming to set up the hydrogen half-cell.
+    \item It is fragile and non-portable.
+\end{itemize}
+
+These electrode potentials can be tabulated to show the relative tendency for each species to gain electrons. The more positive values can be thought 
+of as being more likely to gain negative electrons, and the more negative values can be thought of as being more likely to lose negative electrons.
+
+Note that the Standard Reduction Potential table can also be used as an activity series. Metals having less positive reduction potentials are more active and will replace metals with more positive potentials.
+
+Species that appear at the top of the series gain electrons most readily and therefore have the most positive E$^{\circ}$ values, are easily reduced and are the best oxidizing agents.
+
+Species that appear at the bottom of the series lose electrons most readily and therefore have the most negative E$^{\circ}$ values, are easily oxidized and are the best reducing agents.
+
+A galvanic or voltaic cell is the apparatus for generating electrical energy from a spontaneous oxidation-reduction or redox reaction. Oxidation is loss of electrons;
+reduction is gain of electrons. Connecting two half-cells that have different electrode potentials forms a galvanic cell. A salt bridge connects the two half-cells.
+
+Parts of a Galvanic/Voltaic Cell:
+\begin{itemize}
+    \item Anode - the electrode where the oxidation occurs. After a period of time, the anode may appear to be smaller as it falls into solution.
+    \item Cathode - electrode where reduction occurs. After a period of time, it may appear larger, due to ions from solution plating onto it.
+    \item Inert electrodes - used when a gas is involved or ion to ion involved; made of Pt or graphite.
+    \item Salt bridge - used to maintain electrical neutrality; usually in a U-shaped tube filled with agar that has a neutral salt dissolved into 
+    it before it gels, or the bridge may be replaced with a pourous disk/cup. The salt bridge could also be made from a piece of filter paper soaked in a suitable ionic solution, often KCl (aq) or 
+    KNO$_3$(aq). The ionic soultion used in the salt bridge must not interfere with the two half cells. The salt bridge allows the transfer of ions 
+    to each electrode. Ions will flow from the salt bridge into the electrode solutions in order to balance the charge.
+    \item Wire - transfers electrons from the anode to the cathode; connected to the voltmeter.
+    \item Voltmeter - measures the cell potential in volts. Note: 1 V = 1 J/C. Also note that some energy is lost as heat which keeps the voltmeter 
+    reading a tad lower than the actual or calculated voltage. Digital voltmeters have less resistance, or you could ue a potentiometer to eliminate error 
+    introduced by resistance.
+\end{itemize}
+
+A kind of shorthand for representing galvanic cells exists, called a cell diagram, where 
+\begin{center}
+    anode metal | anode ion || cathode ion | cathode metal
+\end{center}
+
+Line notation has a number of standard features;
+\begin{itemize}
+    \item The oxidized species is placed on the left hand side - this is the anode 
+    \item The reduced species is placed on the right hand side - this is the cathode 
+    \item The vertical line represents the phase boundary present in each electrode
+    \item The double vertical line represents the salt bridge connecting the two electrodes
+    \item Different species in the same phase are separated by a comma 
+    \item The presence of an inert conductor may also be shown inside parentheses.
+\end{itemize}
+
+The EMF or E$^{\circ}_{\text{cell}}$ is the voltage measured when no current is being drawn from the cell and is determined using a high 
+resistance voltmeter. E$^{\circ}_{\text{cell}}$ can be calculated with the following steps:
+\begin{enumerate}
+    \item Decide which element is being oxidized or reduced using the table of reduction potentials. Once again, the metal with the more positive reduction potential gets to be reduced. So, it stands to reason that the other metal is oxidized.
+    \item Write both equations as is from the chart with their associated voltages.
+    \item Reverse the equation that will be oxidized and change the sign of its voltage. This is now E$^{\circ}_{\text{oxidation}}$ not E$^{\circ}_{\text{reduction}}$.
+    \item Balance the two half reactions by making the number of electrons cancel. Do not multiply voltage values. A volt is equivalent to a joule/coulomb, which is a ratio. Doubling the numerator and denominator of a ratio does not change the overall value of the ratio.
+    \item Add the two half reactions and the voltages together to determine the cell potential.
+\end{enumerate}
+\begin{center}
+    E$^{\circ}_{\text{cell}}$ = E$^{\circ}_{\text{oxidation}}$ + E$^{\circ}_{\text{reduction}}$
+\end{center}
+
+Batteries are galvanic cells that can be connected in series. The cell potentials add together to give a total voltage.
+
+Electrolysis is the process in which electrical energy is used to force a non-spontaneous redox reaction to occur, so in that respect 
+it is the exact opposite of an voltaic/galvanic cell (battery). It is extremely important to draw a distinction between galvanic/voltaic discussed 
+prior to this section, and electrolysis cells discussed in this section. Important differences between a voltaic cell and an electrolytic cell:
+\begin{itemize}
+    \item A voltaic cell is thermodynamically favorable and an electrolytic cell is not and thus is forced to occur by using an electron pump or battery or any type of DC power source.
+    \item A voltaic cell is separated into two half cells to generated electricity; an electrolytic cell occurs in a single container 
+    \item A voltaic cell is a battery; an electrolytic cell needs a battery 
+    \item Anode as oxidation and cathode as reduction still apply but the polarity of the electrodes is reversed. The cathode is negative and the anode is positive. However the electrons still flow from the anode to the cathode.
+    \item An electrolytic cell usually uses inert electrodes.
+\end{itemize}
+
+When water is present, you'll need to figure out if the ions from the salt are reacting or the water is reacting. You can always look at a standard 
+reduction potential table to determine this, but as a rule of thumb:
+\begin{itemize}
+    \item No alkali or alkaline earth metals will be reduced in an aqueous solution.
+    \item No polyatomic ions will be oxidized in an aqueous solution.
+\end{itemize}
+
+Electrolytic cells are used to produce pure forms of elements from mined ores, which includes purifying copper for use in wiring, producing aluminum from the Hall-Heroult process, and 
+separating sodium and chlorine using a Downs cell.
+
+Electrolytic cells are also used for electroplating, which applies a thin layer of an expensive metal to a less expensive metal for structural 
+or cosmetic reasons. Pure gold is 24 carat and very soft; a 24-carat gold ring would bend easily, so a stronger structure metal can be electroplated 
+with gold to produce a sturdy version of a gold ring. If you see a car with a chrome bumper, it has been electroplated.
+
+Nature has a way of returning metals to their natural states, which is often their ore. We call this process corrosion. It involves the oxidation 
+of the metal, which causes it to lose its structural integrity and attractiveness. This is particularly troublesome when structural steel corrodes. 
+The main component of steel is iron; about 20\% of the iron and steel produced annually is used to replace rusted metal. Thin oxide coatings are 
+often applied to protect the base metals from oxidizing. Another method to combat corrosion is called cathode protection, whereby a ``sacrifical anode'' 
+piece of metal is applied, such as a bar of titanium attrached to the hull of a ship. The Ti in salt water then acts as the anode and is oxidized 
+instead of the steel hull, extending the life of the vessel.
+
+Electrolysis is also used to recover metals through the passage of a direct electric current through an ionic substance that is either molten or 
+dissolved in a suitable solvent, resulting in chemical reactions at the electrodes and separation of materials.
+\section{Cell Potential and Free Energy}
+AP Topic: 9.8
+
+It is time to combine thermodynamics and electrochemistry, along with a bit of physics.
+\begin{itemize}
+    \item The work that can be accomplished when electrons are transferred through a wire depends on the ``push'' or emf which is defined in terms of a potential difference between two points in the circuit.
+    \begin{center}
+        emf[V] = $\epsilon$ = $\frac{\text{work[J]}}{\text{charge[C]}}$
+    \end{center}
+    \item Thus one joule of work is produced when one coulomb of charge is transferred between two points in the circuit that differ by a potential of one volt.
+    \begin{itemize}
+        \item If work flows out of the system, it is assigned a negative sign.
+        \item When a cell produces a current, the cell potential is positive and the current can be used to do work; therefore $\epsilon$ and work have opposite signs.
+        \begin{itemize}
+            \item Faraday, F - the charge on one mole of electrons = 96,485 coulombs.
+            \item q = \# of moles of electrons $\times$ F
+        \end{itemize}
+        \item For a process carried out at constant temperatures and pressure, $w_{\text{max}}$ is equal to $\Delta$G. Therefore the relationship between Gibbs Free Energy and the E$^{\circ}$ is summarized by the expression.
+    \end{itemize}
+\end{itemize}
+\begin{center}
+    $\Delta$G$^{\circ}$ = -nFE$^{\circ}$
+\end{center}
+
+Where F = Faraday constant = 96485 J V$^{-1}$ mol$^{-1}$, and n = number of moles of electrons transferred. Coupling this with the expression,
+\begin{center}
+    $\Delta$G$^{\circ}$ = -RTlnK
+\end{center}
+We can derive
+\begin{center}
+    E$^{\circ}$ = $\frac{\text{RT}}{\text{nF}}$lnK 
+\end{center}
+At a temperature of 298 K, and substituting for R and F, the expression can be simplified to 
+\begin{center}
+    E$^{\circ}$ = $\frac{0.0257}{\text{n}}$lnK 
+\end{center}
+
+Analyzing the possible combinations for K, E, and G, we can see 
+\begin{itemize}
+    \item When K$>$1, E is positive, and G is negative - At equilibrium, products favored, thermodynamically favored in forward direction 
+    \item When K = 1, E is 0, and G is 0 - At equilibrium, reactants and products approximately equally favored 
+    \item When K$<$1, E is negative, and G is positive - At equilibrium, reactants favored, thermodynamically favored in backward direction.
+\end{itemize}
+
+Avoid the misconception that if $\Delta$G$>$0, the proecess cannot occur. External sources of energy can be used to drive change in these cases.
+\section{Cell Potential Under Nonstandard Conditions}
+AP Topic: 9.9
+
+All of the calculations we have seen so far assume that conditions are ``standard''. When conditions are not ``standard'', different voltages than 
+those predicted by the standard reduction potentials will be generated in cells. In order to make qualitative predictions about the changes that these 
+non-standard condutions cause, there are two ways to make a valid prediction; in order to make a quantitative prediction, there is only one way.
+\begin{enumerate}
+    \item Using only the reaction quotient, Q.
+    
+    A ratio of product concentrations to reactant concentrations at any point in a reaction is called the reaction quotient.
+
+    In addition to concentrations of solutions, partial pressures of gases must also be included in Q, but any pure solids or liquids are not included.
+    Under standard conditions, all concentrations are 1.0 M and all gas pressures are 1 atm, so by necessity Q = 1. Under circumstances where the ratio of the 
+    concentrations and partial pressures computes to something other than 1, we must have non-standard conditions. 
+
+    What do values of Q$\neq$ 1 mean for the cell voltage? Qualitatively we can think of Q thus; 
+    \begin{itemize}
+        \item When Q = 1, the potential difference between the two half-cells causes electrons to flow from one to the other, and this the driving force for the reaction.
+        Under these ``standard'' conditions, the cell voltage is described as having the ``standard'' value and can be calculated with standard reduction potentials.
+        \item When Q$<$1, relatively large concentrations of reactants and/or relatively small concentrations of products are present. This combination increases the driving force for the reaction, and the cell voltage is found to be greater than the standard value.
+        \item When Q$>$1, relatively large concentrations of products and/or relatively small concentrations of reactants are present. This combination decreases the driving force for reaction, and the cell voltage is found to be less than the standard value.
+    \end{itemize}
+
+    \item Using the reaction quotient and comparing it to the equilibrium constant 
+    
+    Batteries eventually `die', that is to say, the redox reaction in a cell is continually making its way toward a voltage of zero. In batteries, a voltage of zero corresponds 
+    to the equilibrium position. When the equilibrium has been achieved, a ratio of product concentrations to reactant concentrations is called the equilibrium constant. 
+
+    Note Q can be calculated at any point during the reaction, and K is onl calculated once equilibrium has been established. In redox reactions, the 
+    ``end'' will be achieved when large amounts of products have been produced, and very few reactants are left. At this point, the voltage in the cell is zero. Since 
+    at the beginning of the reaction Q = 1 and voltage is standard, then 
+    \begin{itemize}
+        \item any change in conditions that makes Q larger than 1 means that we are closer to K, closer to equilibrium, and closer to a voltage of zero
+        \item any change in conditions that makes Q smaller than 1 means that we are further from K, further from equilibrium, and further from a voltage of zero
+    \end{itemize} 
+\end{enumerate}
+The Nernst equation is used to calculate the actual voltage in a non-standard cell. Commonly it takes one of two forms.
+\begin{center}
+    E$_{\text{cell}}$ = E$^{\circ}$ - $\left(\frac{\text{RT}}{\text{nF}}\right)$lnQ
+
+    E$_{\text{cell}}$ = $E^{\circ}$ - $\left(\frac{0.0592}{\text{n}}\right)$logQ
+\end{center}
+
+The first version is used if both the temperature and concentrations/partial pressures are nonstandard. The second version can only be used 
+if only the concentration/partial pressures have changed, but the temperature is still standard.
+\begin{itemize}
+    \item When Q = 1 the voltage is standard.
+    \item When Q$<$1, the voltage is larger than under standard conditions.
+    \item When Q$>$1, the voltage is smaller than under standard conditions.
+\end{itemize}
+
+A concentration cell is set up when each half-cell has the same metal electrode present, but the solutions of the metal ions are of differing concentrations.
+With such a concentration difference, electrons flow from the half-cell with the lower ion concentration, to the half-cell with the higher 
+ion concentration. Since electrons are flowing, there is a current and a cell is set up.
+
+The electrons flow to the cell with the higher concentration of metal ions, where reduction takes place, and in the process the ion concentration 
+is lowered since the ions are converted to the solid metal. Since the lower concentration half-cell is losing electrons, the metal electrode in that cell dissolves, 
+producing more metal ions, and the ion concentration is increased.
+
+With the ion concentration increasing in the lower concentration half-cell, and decreasing the higher concentration half-cell, eventually 
+the two cells will reach a point where the concentration of metal ions is the same in each half-cell, and the electrons will no longer flow. An 
+equilibrium has been established. In short, in concentration cells, electrons always flow in order to make (and until), the concentrations of the two 
+half-cells have a potential difference of zero. Such cells generally produce quite small voltages and calculations can only be carried out with the use 
+of Nernst Equation.
+\section{Electrolysis and Faraday's Law}
+AP Topic: 9.10
+
+The amount of a substance produced in an electrolytic cell can be calculated using Faraday's law. Faraday's law states that the amount 
+of a substance being oxidized or reduced at each electrode during electrolysis is directly proportional to the amount of electricity 
+that passes through the cell. One method to calculate the number of Faradays passed in the electrolysis is by using these expressions;
+
+Firstly, calculate the amount of charge in coulombs that has been passed.
+\begin{center}
+    q = lt 
+\end{center}
+Where q is the amount of charge, l is the current in amps, and t is the time in seconds.
+
+Secondly, convert couloumbs to Faradays.
+\begin{center}
+    Number of Faradays = Charge in couloumbs $\times$ $\frac{1\text{ Faraday}}{96485 \text{Coulombs}}$
+\end{center}
+
+Then, use the stoichiometry of the electrode process to determine the mass of product formed at the electrode, remembering that a process
+that produces one mole of product by the transfer of one mole of electrons will require one Faraday to product that one mole, and that a process that produces 
+one mole of product by the transfer of two moles of electrons will require two Faradays to produce that one mole, etc., as described as Faraday's constant, F.
+\begin{center}
+    F = 96485 coulombs per mole of electrons 
+\end{center}
+Luckily, a balanced redox half reaction gives the moles of electrons per mole of substance and molar mass gives the number of grams per mole. 
+
+When the number of Faradays is less than the required stoichiometric amount demanded by the half-reaction, a ratio should be applied.
+
+\section*{Problems}
+\begin{enumerate}
+    \item Which has a greater entropy - a flexible soft metal or a rigid solid?
+    \item Calculate the thermodynamic boiling point of H$_2$O(l) $\rightarrow$ H$_2$O (g) given that 
+    \begin{center}
+        $\Delta H_{vap} = +44$ kJ/mol$_{rxn}$ $\qquad$ $\Delta S_{vap} = 118.8$J/(K$\cdot$mol$_{rxn}$)
+    \end{center}
+    \item For the reaction 2CO(g) + O$_2$(g) $\rightarrow$ 2CO$_2$(g), the $\Delta G^{\circ}$ for the reaction is -257.2 kJ/mol$_{rxn}$. Calculate the equilibrium constant at 25$^{\circ}$C.
+    \item Using a standard reduction potentials table, write cell diagrams for the combination of electrodes for Fe$^{2+}$/Fe$^{3+}$ and hydrogen.
+    \item A galvanic cell is based on the reaction 
+    \begin{center}
+        MnO$_4^-$(aq) + H$^+$(aq) + ClO$_3^-$ $\rightarrow$ ClO$_4^-$(aq) + Mn$^{2+}$(aq) + H$_2$O(l)
+    \end{center}
+    Give the balanced cell reaction and calculate E$^{\circ}$ for the cell.
+    \item Calculate the cell voltage for the galvanic cell that would utilize silver metal and involve iron(II) ion and iron (III) ion. Draw a diagram of the galvanic cell for the reaction and label completely.
+    \item Explain whether the following reaction is thermodynamically favorable.
+    \begin{center}
+        Cu$^{2+}$(aq) + Fe(s) $\rightarrow$ Cu(s) + Fe$^{2+}$(aq)
+    \end{center}
+    \item Using the table of standard reduction potentials, predict whether 1 M HNO$_3$ will dissolve gold metal to form a 1 M Au$^{3+}$ solution.
+    \item If the reaction Zn(s) + Cu$^{2+}$(aq) $\rightarrow$ Cu(s) + Zn$^{2+}$(aq) is carried out using solutions that are 5.0 M Zn$^{2+}$ and 0.3 M Cu$^{2+}$ at 298 K, predict the effect on the voltage of the cell, when compared to the voltage generated under standard conditions.
+    \item For the oxidation-reduction reaction 
+    \begin{center}
+        S$_4$O$_6^{-2}$(aq) + Cr$^{2+}$(aq) $\rightarrow$ Cr$^{3+}$(aq) + S$_2$O$_3^{-2}$(aq)
+    \end{center}
+    Balance the redox reaction and calculate $E^{\circ}$ and K at 25$^{\circ}$C.
+    \item How long must a current of 5.00 A be applied to a solution of Ag$^+$ to produce 10.5 g silver metal?
+    \item An acidic solution contains the ions Ce$^{4+}$, VO$_2^+$ and Fe$^{3+}$. Give the order of oxidizing ability of these species and predict which one will be reduced at the cathode of an electrolytic cell at the lowest voltage.
+\end{enumerate}
+
+\end{document}

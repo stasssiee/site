@@ -1,0 +1,156 @@
+\documentclass[../em.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Conductors and Capacitors}
+\section{Electrostatics with Conductors}
+An ideal conductor is a material in which electrons are able to move freely.
+
+When a conductor is in electrostatic equilibrium, mutual repulsion of excess 
+charge carriers results in those charge carriers residing entirely on the surface of the conductor.
+\begin{itemize}
+    \item In a conductor with a negative net charge, excess electrons reside on the surface of the conductor.
+    \item In a conductor with a positive net charge, the surface becomes deficient in electrons and can be modeled as if positive charge carriers reside on the surface of the conductor.
+\end{itemize}
+
+Excess charges will move to the surface of a conductor to create a state of electrostatic equilibrium within the conductor.
+\begin{itemize}
+    \item At electrostatic equilibrium, the electroc potential of the surface is the same everywhere and the conductor becomes an equipotential surface.
+\end{itemize}
+
+Recall there is no electric field inside of a conductor.
+
+The charge density on the surface is greater where there are points or edges compared to planar areas.
+
+Electrostatic shielding is the process of an area with a closed conducting shell to 
+create a region inside the conductor that is far from external electric fields.
+
+\begin{example}
+    A solid, uncharged conducting sphere of radius 3a contains a hollowed spherical region of radius a.
+    A point charge +Q is placed at the common center of the spheres. Taking V = 0 as r approaches infinity,
+    the potential at position r = 3a from the center of the sphere is:
+
+    We start with (treat as a point charge)
+    \[V=\frac{kq}{r}\]
+    and end up getting 
+    \[V=\frac{k[Q]}{3a}\]
+    which is equal to 
+    \[V=\frac{kQ}{3a}\]  
+\end{example}
+\section{Redistribution of Charge between Conductors}
+When conductors are in electrical contact, charges will be redistributed such that the surfaces of each conductor are at the same electric potential.
+
+Ground is an idealized reference point that has zero electric potential and can absorb an 
+infinite amount of charge without changing its electric potential. Charge can be induced by a conductor by grounding the conductor is the presence of an external electric field.
+\begin{example}
+    Charge is placed on two conducting spheres that are very far apart and connected by a long thin wire. 
+    The radius of the smaller sphere is 5 cm and that of the larger sphere is 12 cm. The electric field at the 
+    surface of the larger sphere is 358 kV/m. Find the surface charge density on each sphere.
+
+    We start with electric field:
+    \[E = \frac{kQ}{R^2}\] 
+    \[Q = \frac{ER^2}{k}=\frac{(358\times 10^3 \text{V/m})}{(0.12\text{m})^2}{9\times 10^9}= 5.78\times 10^{-8}\text{C}\]
+
+    We know that $V_1 = V_2$, so 
+    \[\frac{kQ_1}{R_1}=\frac{kQ_2}{R_2}\] 
+    Rearranging for $Q_2$:
+    \[Q_2=\frac{R_2}{R_1}Q_1 = \frac{5}{12}(5.78\times10^{-7})=2.4\times10^{-7}\text{C}\]
+
+    Now we can find the surface charge on each sphere. 
+    \[\sigma_1=\frac{Q_1}{A_1} \quad \sigma_2 = \frac{Q_2}{A_2}\]
+
+    So \[\sigma_1 = 3.2\times 10^{-6} C/m^2\]
+    and \[\sigma_2 = 7.6\times 10^{-6} C/m^2\] 
+\end{example}
+
+
+\section{Capacitors}
+A parallel-plate capacitor consists of two separated parallel conducting surfaces 
+that can hold equal amounts of charge with opposite signs.
+
+Capacitance relates the magnitude of the charge stored on each plate to the electric 
+potential difference created by the separation of those charges.
+\[C = Q/\Delta V\] 
+Unit = Farads
+\[C = \frac{\kappa \epsilon_0 A}{d}\]
+
+The electric field between the two charged plates with uniformly distributed 
+electric charge is constant in both magnitude and direction, except nera the edges of the plates.
+\[E = \frac{Q}{\epsilon_0 A} = \sigma/\epsilon_0\]
+
+The electric potential stored in a capacitor is equal to the work done by an external force 
+to separate that amount of charge on the capacitor.
+\[U_c \frac{1}{2}Q\Delta V = \frac{1}{2}C(\Delta V)^2 = \frac{1}{2}\frac{Q^2}{C}\]
+
+\begin{example}
+    A capacitor with circular paralell plates of radius R that are separated by a distance d 
+    has a capacitance of C. What would the capacitance be if the plates has radius 2R and 
+    were separated by a distance d/2?
+
+    \begin{align*}
+        C_0 = \frac{\epsilon_0 A}{d}\\ 
+        C_0 = \frac{\epsilon_0\pi r^2}{d}=\frac{\epsilon_0 \pi R^2}{d}\\
+    \end{align*}
+    \begin{align*}
+        C = \frac{\epsilon_0 A}{d}\\
+        C = \frac{\epsilon_0 \pi r^2}{d}\\
+        C = \frac{\epsilon_0 \pi (2R)^2}{d/2} = \frac{8\epsilon_0\pi R^2}{d}
+    \end{align*}
+\end{example}
+
+
+\section{Dielectrics}
+In a dielectric material, electric charges are not as free to move as they are in a conductor.
+
+The material becomes polarized in the presence of an external electric field.
+
+The dielectric constant of a material relates the electric permittivity of that material to the permittivity of free space.
+\[\kappa = \epsilon/\epsilon_0\]
+
+For a dielectric, 
+\[\int \vec{E}\cdot \mathrm{d}\vec{A} = \frac{Q}{\kappa \epsilon_0}=EA \]
+
+The electric field created by a polarized dielectric is opposite in direction to the external field.
+
+The electric field between the plates of an isolated parallel-plate capacitor decreases when a 
+dielectric is placed between the plates.
+\[\kappa = E_0/E\]
+
+The insertion of a dielectric into the capacitor may change the capacitance of the capacitor.
+\[C = \kappa C_0 = \frac{\kappa \epsilon_0 A}{d}\]
+
+\begin{example}
+    A capacitor consists of two conducting, coaxial, cylindrical shells of radius a and b, respectively,
+    and length L $>>$ b. The space between the cylinder is filled with oil that has a dielectric constant $\kappa$.
+    Initially both cylinders are uncharged, but then a battery is used to charge the capacitor, leaving charge +Q 
+    on the inner cylinder and -Q on the outer cylinder. Let r be the radial distance from the axis of the capacitor.
+    Determine.
+    \begin{itemize}
+        \item The electric field from a to b.
+        \item The electric potential from a to b.
+        \item The capacitance of the capacitor.
+    \end{itemize}
+
+    a.
+    \begin{align*}
+        \int \vec{E}\mathrm{d}\vec{A}=\frac{Q}{\epsilon}\\ 
+        EA = \frac{Q}{\kappa\epsilon_0}\\
+        E = \frac{Q}{2\kappa \pi\epsilon_0 L r}
+    \end{align*} 
+
+    b.
+    \begin{align*}
+        V = -\int_a^b \vec{E}\cdot\mathrm{d}\vec{r}\\
+        V = \int^a_b \left(\frac{Q}{2\kappa\epsilon_0 \pi L}\frac{1}{r}\right)\cdot \mathrm{d}r\\
+        V = \frac{Q}{2\kappa\epsilon_0\pi L}\int_b^a \frac{1}{r}\mathrm{d}r\\
+        V = \frac{Q}{2\kappa\epsilon_0\pi L}[\ln r]^a_b \\
+        V = \frac{Q}{2\kappa\epsilon_0\pi L}ln\left[\frac{b}{a}\right]
+    \end{align*}
+
+    c.
+    \begin{align*}
+        C = \frac{Q}{V}\\
+        C = \frac{2\kappa \epsilon_0 \pi L}{\ln b/a}
+    \end{align*}
+
+\end{example}
+\end{document}

@@ -1,0 +1,124 @@
+\documentclass[../abcalc.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Integration and Accumulation of Change}
+\section{Left and Right Riemann Sums}
+Problem 1: Let $f(x)=x^2+x$. Consider the region bounded by the graph of $f$, the $x$-axis and the line $x=2$. Divide the interval $[0,2]$ 
+into 4 equal subintervals.
+\begin{itemize}
+    \item Obtain an estimate for the region using a right Riemann sum. Is this an over or underestimate. Why?
+    \item Obtain an estimate for the region using a left Riemann sum. Is this an over or underestimate. Why?
+\end{itemize}
+\section{Midpoint Sums}
+Problem 1: Given the function $f(x)=x^2+1$, estimate the area bounded by the graph of the curve and the $x$-axis on $[0,2]$ by using a 
+midpoint Riemann sum with $n=2$ equal subintervals.
+\section{Trapezoidal Sums}
+You jump out of an airplane. Before your parachute opens, you fall faster and faster, but your acceleration decreases as you fall because 
+of air resistance. 
+The following data gives you acceleration in m/sec$^2$ after $t$ seconds.
+\begin{itemize}
+    \item Time: 0, Acceleration: 9.81
+    \item Time: 2, Acceleration: 8.03
+    \item Time: 4, Acceleration: 6.53
+    \item Time: 6, Acceleration: 5.38
+    \item Time: 8, Acceleration: 4.41
+    \item Time: 10, Acceleration: 3.61
+\end{itemize}
+Use the trapezoid method with 5 subintervals of equal length to estimate your speed after ten seconds. Is this an underestimate of overestimate? Why?
+\section{Definite Integrals}
+The notation of a definite integral is $\int_a^b f(x)\mathrm{d}x$.
+
+The defintion of a definite integral is the exact area between a curve $f(x)$ and the $x$-axis on an interval $(a,b)$.
+
+Properties of definite integrals:
+\begin{itemize}
+    \item Zero Integral: $\int_a^a f(x)\mathrm{d}x = 0$
+    \item Negation: $\int_b^a f(x)\mathrm{d}x = -\int_a^b f(x)\mathrm{d}x$
+    \item Multiply by a constant: $\int_a^b kf(x)\mathrm{d}x = k\int_a^b f(x)\mathrm{d}x$
+    \item Decomposition: $\int_a^c f(x)\mathrm{d}x = \int_a^b f(x)\mathrm{d}x + \int_b^c f(x)\mathrm{d}x$
+    \item Addition and Subtraction: $\int_a^b f(x)\pm g(x)=\int_a^b f(x)\pm \int_a^b g(x)$
+\end{itemize}
+
+Problem 1: Given $\int_{-2}^1 f(x)\mathrm{d}x = 4 \quad \int_1^5 f(x)\mathrm{d}x=-3 \quad \int_{-2}^1 g(x)\mathrm{d}x=8$, find $\int_{-2}^1 [f(x)+2g(x)]\mathrm{d}x$.
+\section{Fundamental Theorem of Calculus}
+The basic rule of integration is $\int x^n\mathrm{d}x=\frac{x^{n+1}}{n+1}+C$.
+
+Indefinite integral: $\int f'(x)\mathrm{d}x = f(x)+C$
+
+\begin{theorem}
+    If a function $f'$ is continuous on the closed interval $[a,b]$ and $f$ is an antiderivative of $f'$ on the interval $[a,b]$, then 
+    \[\int^a_b f'(x)\mathrm{d}x = f(x)|^b_a = f(b)-f(a)\]
+\end{theorem}
+
+Problem 1: Evaluate the definite integral $\int_0^3 |x-2|\mathrm{d}x$.
+\section{Antiderivatives and Specific Solutions}
+Memorize the following integrals:
+\begin{itemize}
+    \item $\int \frac{1}{x}\mathrm{d}x = |\ln x| + C$
+    \item $\int e^x \mathrm{d}x = e^x + C$
+    \item $\int \cos x \mathrm{d}x = \sin x + C$
+    \item $\int \sin x \mathrm{d}x = -\cos x + C$
+\end{itemize}
+
+Problem 1: Find $y$, if $y'' = \cos x$ and $y'\left(\frac{\pi}{2}\right) = 2$ and $y\left(\frac{\pi}{2}\right)=3\pi$.
+
+Problem 2: A particle moves along the $x$-axis with an acceleration of $a(t)=12t-4$. The particle's velocity is 18 centimeters per second at 
+$t=2$. The initial position of the particle is 8 cm. What is the position of the particle at $t=3$?
+
+Problem 3: Evaluate $\int \frac{1-\sin^2 x}{\cos x}\mathrm{d}x$.
+\section{2nd Fundamental Theorem of Calculus}
+\begin{theorem}
+    If $f(x)=\int_a^b f'(t)\mathrm{d}t$, $f$ is a continuous function, and $g$, $h$ are differentiable functions, then 
+    \[f'(x)=f(b)\cdot b' - f(a)\cdot a'\]
+    Break down: 
+    \begin{itemize}
+        \item Plug in the top bound and multiply by the derivative of the top bound 
+        \item Plug in the bottom bound and multiply by the derivative of the bottom bound
+        \item Derivative of an Integral = \#1 - \#2 
+    \end{itemize}
+
+    Use this theorem if you have an integral with a variable on at least one bound or are taking the derivative of an integral.
+\end{theorem}
+
+Problem 1: Find $f'(x): f(x)=\int_1^{4x}h(t)\mathrm{d}t$
+
+Problem 2: Take the derivative with respect to $x$: $\int_{-x}^x 5t\mathrm{d}t$
+\section{Trigonometric Integrals}
+Trig Integrals:
+\begin{itemize}
+    \item $\int \cos x\mathrm{d}x = \sin x + C$
+    \item $\int -\sin x\mathrm{d}x = \cos x + C$
+    \item $\int \sec x\tan x\mathrm{d}x = \sec x + C$
+    \item $\int -\csc x\cot x\mathrm{d}x = \csc x + C$
+    \item $\int \sec^2 x \mathrm{d}x = \tan x + C$
+    \item $\int -\csc^2 x\mathrm{d}x = \cot x + C$
+\end{itemize}
+
+Problem 1: $\int^0_{-\pi/16} \sec 4x \tan 4x \mathrm{d}x$
+
+Problem 2: $\int \frac{20x^3}{\sqrt{1-25x^8}}\mathrm{d}x$
+\section{Integration with U-Substitution}
+\begin{itemize}
+    \item Find the outside function and the inside function. The outside function should be the derivative of the inside.
+    \item Set $u$ equal to the inside function.
+    \item Find $\frac{\mathrm{d}u}{\mathrm{d}x}$. This is the derivative of $u$ with respect to $x$.
+    \item Solve for $\mathrm{d}u$ Make sure this matches the outside function $+\mathrm{d}x$.
+    \item Substitute the $u$ variables into the integral for the $x$ variables.
+    \item Integrate.
+    \item Substitute $x$ back into the answer.
+\end{itemize}
+
+Problem 1: $\int x(1+2x^2)^2\mathrm{d}x$
+
+Problem 2: $\int \tan^4 x\sec^2 x\mathrm{d}x$
+
+Problem 3: $\int \frac{\csc^2 x}{\cot x}\mathrm{d}x$
+\section{Definite Integrals with U Substitution}
+Problem 1: $\int_0^1 \frac{x}{x^2+1}^3 \mathrm{d}x$
+
+Problem 2: $\int_1^e \frac{\ln x}{x}\mathrm{d}x$
+\section{Complex U Substitution}
+Problem 1: $\int (x+1)\sqrt{2-x}\mathrm{d}x$
+
+Problem 2: $\int x^2 \sqrt{1-x}\mathrm{d}x$
+\end{document}

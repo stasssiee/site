@@ -1,0 +1,324 @@
+\documentclass[../calc3.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Functions of Several Variables}
+\section{Graphs and Level Curves}
+\begin{definition}
+A function $z=f(x,y)$ assigns to each point $(x,y)$ in a set $D$ in $\mathbb{R}^2$ a unique
+real number $z$ in a subset of $\mathbb{R}$. The set $D$ is the domain of $f$. The range of $f$
+is the set of all real numbers $z$ that are assumed as the points $(x,y)$ vary over the domain.    
+\end{definition}
+
+\begin{example}
+    Find the domain of 
+    \[f(x,y)=\frac{1}{\sqrt{x^2+y^2-25}}\]
+
+    Note that the denominator cannot be zero or is negative. 
+
+    Therefore, the domain is $D = {(x,y): x^2+y^2>25}$. 
+\end{example}
+
+\begin{definition}
+    For a function of two variables $f(x,y)$ a level curve is the set of points
+    $(x,y)$ in the $xy$-plane where $f(x,y)$ is equal to a constant $z_0$.
+\end{definition}
+
+We can extend our defintions to functions of more than two variables.
+
+\begin{definition}
+    For a function of three variables $f(x,y,z)$ a level surface is the set of points
+    $(x,y,z)$ in $xyz$-space where $f(x,y,z)$ is equal to a constant $w_0$.
+\end{definition}
+
+We can describe level surfaces as well.
+
+\section{Limits and Continuity}
+We can write the limit of two variables as:
+\[ \lim_{{(x,y)}\to{(a,b)}}f(x,y)=\lim_{P\to P_0}f(x,y)=L\]
+
+There are some laws of limits.
+\begin{theorem}
+    Let $a,b$, and $c$ be real numbers.
+
+    \begin{itemize}
+        \item Constant function $f(x,y) = c$:
+        \[\lim_{(x,y)\to(a,b)}c=c\]
+        \item Linear function $f(x,y) = x$:
+        \[\lim_{(x,y)\to(a,b)}x=a\]
+        \item Linear function $f(x,y) = y$:
+        \[\lim_{(x,y)\to(a,b)}y=b\]
+    \end{itemize}
+\end{theorem}
+
+If we let the limit of a function $f(x,y)=L$ and the limit of a function $g(x,y) = M$, we can see:
+\begin{itemize}
+    \item The sum of the limits is $L+M$.
+    \item The difference of the limits is $L-M$.
+    \item If we multiply a function by a constant $c$, the limit is $cL$.
+    \item The product of the limits is $LM$.
+    \item The difference of the limits is $\frac{L}{M}$.
+    \item Putting a limit to a power $n$ is $L^n$.
+\end{itemize}
+
+\begin{definition}
+    Let $R$ be a region in $\mathbb{R}^2$. An interior point $P$ of $R$ lies entirely within $R$, which
+    means it is possible to find a disk centered at $P$ that contains only points of $R$.
+
+    A boundary point $Q$ of $R$ lies on the edge of $R$ in the sense that every disk centered at $Q$
+    contains at least one point in $R$ and at least one point not in $R$.
+\end{definition}
+
+\begin{definition}
+    A region is open if it consists entirely of interior points. A region is closed if it contains all its boundary points.
+\end{definition}
+
+The two-path test for nonexistence of limits:
+
+If $f(x,y)$ approaches the two different values as $(x,y)$ approaches $(a,b)$ along two different paths in the domain of $f$,
+then the limit does not exist.
+
+\begin{definition}
+    The function $f$ is continuous at the point $(a,b)$ provided:
+    \begin{itemize}
+        \item $f$ is defined at $(a,b)$.
+        \item The limit for $f$ exists.
+        \item The two quantities must be equal.
+    \end{itemize}
+    
+\end{definition}
+
+\section{Partial Derivatives}
+The idea of a partial derivative is to differentiate $f$ with respect to one variable, treating the other variable as a constant.
+\begin{definition}
+    The partial derivative of $f$ with respect to $x$ at the point $(a,b)$ is:
+    \[f_x(a,b)=\lim_{h\to 0}\frac{f(a+h,b)-f(a,b)}{h}\]
+    The partial derivative of $f$ with respect to $y$ at the point $(a,b)$ is:
+    \[f_y(a,b)=\lim_{h\to 0}\frac{f(a+h)-f(a,b)}{h}\]
+    provided these limits exist.
+
+    The notation for these are:
+    \[f_x = \frac{\partial f}{\partial x} \qquad f_y=\frac{\partial f}{\partial y}\]
+\end{definition}
+
+We can first partially differentiate $f$ with respect to $x$ and then with respect to $x$ denoted as:
+\[\frac{\partial^2f}{\partial x^2}\]
+
+We can do it first with respect to $x$ and then with respect to $y$ denoted as:
+\[\frac{\partial^2f}{\partial y \partial x}\]
+
+We can also differentiate with respect to $y$ and then with respect to $x$:
+\[\frac{\partial^2f}{\partial x \partial y}\]
+
+Lastly, we can differentiate with respect to $y$ twice:
+\[\frac{\partial^2f}{\partial y^2}\]
+
+\begin{theorem}[Equality of Mixed Partial Derivatives]
+    Assume $f$ is defined on an open set $D$ of $\mathbb{R}^2$, and that $f_{xy}$
+    and $f_{yx}$ are continuous throughout $D$. Then $f_{xy}=f_{yx}$ at all points of $D$. 
+\end{theorem}
+
+\section{The Chain Rule}
+\begin{theorem}
+    Let $z$ be a differentiable function on $x$ and $y$ on its domain, where $x$ and $y$ are differentiable functions
+    of $t$ on an interval $I$. Then
+    \[\frac{\mathrm{d}z}{\mathrm{d}t}=\frac{\partial{z}}{\partial{x}}\frac{\mathrm{d}x}{\mathrm{d}t}+\frac{\partial z}{\partial y}\frac{\mathrm{d}y}{\mathrm{d}t}\]
+\end{theorem}
+
+Let's suppose that we have a function $w=f(x,y,z)$ where $x,y,z$ depend on $t$.
+
+Then we have:
+\[\frac{\mathrm{d}w}{\mathrm{d}t}=\frac{\partial w}{\partial x}\frac{\mathrm{d}x}{\mathrm{d}t}+\frac{\partial w}{\partial y}\frac{\mathrm{d}y}{\mathrm{d}t}+\frac{\partial w}{\partial z}\frac{\mathrm{d}z}{\mathrm{d}t}\]
+
+\begin{theorem}
+    Let $z$ be a differentiable function of $x$ and $y$, where $x$ and $y$ are differentiable functions of $s$ and $t$. Then
+    \[\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial s}\]
+    and
+    \[\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}\]
+\end{theorem}
+
+\begin{theorem}
+    Let $F$ be differentiable on its domain and suppose $F(x,y) = 0$ defines $y$ as a 
+    differentiable function of $x$. Provided $F_y\neq 0$,
+    \[\frac{\mathrm{d}y}{\mathrm{d}x}=-\frac{F_x}{F_y}\]
+\end{theorem}
+
+\section{Directional Derivatives and the Gradient}
+Suppose we have the function $f(x,y)$.
+
+$f_x(x,y)$ measures the rate of change in the direction of positive $x$-axis and 
+$f_y(x,y)$ measures the rate of change in the direction of positive $y$-axis.
+
+\begin{definition}
+    Let $f$ be differentiable at $(a,b)$ and let $\textbf{u}=\langle u_1, u_2\rangle$ be a unit vector 
+    in the $xy$-plane. The directional derivative of $f$ at $(a,b)$ in the direction of $u$ is 
+    \[D_{\textbf{u}}f(a,b)=\lim_{h\to 0}\frac{f(a+hu_1,b+hu_2)-f(a,b)}{h}\] 
+    provided the limit exists.
+\end{definition}
+
+The directional derivative $D_{\textbf{u}}f(a,b)$ measures the rate of change of $f$ 
+at the point $(a,b)$ in the direction of $\textbf{u}$.
+
+\begin{theorem}
+    Let $f$ be differentiable at $(a,b)$ and let $\textbf{u} = \langle u_1, u_2\rangle$ be a unit vector 
+    in the $xy$-plane. The directional derivative of $f$ at $(a,b)$ in the direction of $u$ is 
+    \[D_{\textbf{u}}f(a,b)=\langle f_x(a,b),f_y(a,b)\rangle\cdot \langle u_1,u_2\rangle\]
+\end{theorem}
+
+\begin{definition}
+    Let $f$ be differentiable at the point $(x,y)$. The gradient of $f$ at $(x,y)$ is the vector-valued function 
+    \[\nabla f(x,y)=\langle f_x(x,y),f_y(x,y)\rangle = f_x(x,y)\textbf{i}+f_y(x,y)\textbf{j}\]
+\end{definition}
+
+The applications of this are:
+
+Directional derivatives: $D_{\textbf{u}}f(a,b)=\nabla f(a,b)\cdot\textbf{u}$
+
+The gradient gives the direction of maximum increase of a function.
+
+Gradient is normal to level curves.
+
+\begin{theorem}
+    Let $f$ be differentiable at $(a,b)$ with $\nabla (a,b)\neq 0$.
+
+    $f$ has its maximum rate of increase at $(a,b)$ in the direction of the gradient $\nabla f(a,b)$.
+    The rate of change in this direction is $|\nabla f(a,b)|$. (This will be maximized if $\theta = 0$.)
+
+    $f$ has its maximum rate of decrease at $(a,b)$ in the direction of $-\nabla f(a,b)$. 
+    The rate of change in this direction is $-|\nabla f(a,b)|$. (This will be minimized if $\theta = \pi$.)
+
+    The directional derivative is zero in any direction orthogonal to $\nabla f(a,b)$.
+\end{theorem}
+
+\begin{theorem}
+    Given a function $f$ differentiable at $(a,b)$, the line tangent to the level curve of $f$ at $(a,b)$ 
+    is orthogonal to the gradient $\nabla f(a,b)$, provided $\nabla f(a,b)\neq 0$.
+\end{theorem}
+
+We can now consider gradients of functions of three variables.
+
+\begin{theorem}
+    Let $f$ be differentiable at $(a,b,c)$ and let $\textbf{u}=\langle u_1, u_2, u_3 \rangle$ be a unit vector. The 
+    directional derivative of $f$ at $(a,b,c)$ in the direction of $\textbf{u}$ is 
+    \begin{align*}
+        D_{\textbf{u}}f(a,b,c)=\nabla(a,b,c)\cdot\textbf{u}\\
+        =\langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c)\rangle\cdot\langle u_1, u_2, u_3\rangle
+    \end{align*}
+
+    Assuming $\nabla f(a,b,c)\neq 0$, the gradient in three dimensions has the following properties.
+
+    $f$ has its maximum rate of increase at $(a,b,c)$ in the direction of the gradient 
+    $\nabla f(a,b,c)$, and the rate of change in this direction is $|\nabla f(a,b,c)|$.
+
+    $f$ has its maximum rate of decrease at $(a,b,c)$ in the direction of 
+    $-\nabla f(a,b,c)$, and the rate of change in this direction is $-|\nabla f(a,b,c)|$.
+
+    The directional derivative is zero in any direction orthogonal to $\nabla f(a,b,c)$.
+\end{theorem}
+
+\section{Tangent Planes and Linear Approximation}
+\begin{definition}
+    Let $F$ be differentiable at the point $P_0(a,b,c)$ with $\nabla F(a,b,c)\neq 0$. The plane 
+    tangent to the surface $F(x,y,z)=0$ at $P_0$, called the tangent plane, is the plane 
+    passing through $P_0$ orthogonal to $\nabla F(a,b,c)$. An equation of the tangent plane is
+    \[F_x(a,b,c)(x-a)+F_y(a,b,c)(y-b)+F_z(a,b,c)(z-c)=0\]
+\end{definition}
+
+\begin{definition}
+    Let $f$ be differentiable at the point $(a,b)$. An equation of the plane tangent to the 
+    surface $z=f(x,y)$ at the point $(a,b,f(a,b))$ is 
+    \[z=f_x(a,b)(x-a)+f_y(a,b)(y-b)+f(a,b)\] 
+\end{definition}
+
+One of the main applications of tangent planes is linear approximation for a function near a point.
+
+\begin{definition}
+    Let $f$ be differentiable at $(a,b)$. The linear approximation to the surface
+    $z=f(x,y)$ at the point $(a,b,f(a,b))$ is the tangent plane at that point, given by the equation 
+    \[L(x,y)=f_x(a,b)(x-a)+f_y(a,b)(y-b)+f(a,b)\]
+
+    For a function of three variables, the linear approximation to $w=f(x,y,z)$ at the 
+    point $(a,b,c,f(a,b,c))$ is given by 
+    \[L(x,y,z)=f_x(a,b,c)(x-a)+f_y(a,b,c)(y-b)+f_z(a,b,c)(z-c)+f(a,b,c)\]
+\end{definition}
+
+The idea for linear approximations of functions gives the defintion of the differential. 
+\begin{definition}
+    Let $f$ be differentiable at the point $(x,y)$. The change in $z=f(x,y)$ as the 
+    independent variables change from $(x,y)$ to $(x+\mathrm{d}x, y+\mathrm{d}y)$ is denoted $\Delta z$ and is 
+    approximated by the differential $\mathrm{d}z$.
+    \[ \Delta z \approx \mathrm{d}z = f_x(x,y)\mathrm{d}x+f_y(x,y)\mathrm{d}y\] 
+\end{definition}
+
+Note that $\Delta z$ is the change in $f$ on the surface and is equal to $f(x,y)-f(a,b)$.
+
+Note that $\mathrm{d}z$ is the change in $l$ on the tangent plane and is equal to $L(x,y)-f(a,b)$.
+\section{Maximum/Minimum Problems}
+\begin{definition}
+    Suppose $(a,b)$ is a point in a region $R$ on which $f(x,y)$ is defined. If
+    $f(x,y) \leq f(a,b)$ for all $(x,y)$ in the domain of $f$ and in some open disk centered 
+    at $(a,b)$, then $f(a,b)$ is a local maximum value of $f$. If $f(x,y)\geq f(a,b)$ for all 
+    $(x,y)$ in the domain of $f$ and in some open disk centered at $(a,b)$, then $f(a,b)$ is 
+    a local minimum value of $f$. Local maximum and local minimum values are also cllaed local extreme values 
+    or local extrema.
+\end{definition}
+
+\begin{theorem}
+    If $f$ has a local maximum or minimum value at $(a,b)$ and the partial derivatives $f_x$ 
+    and $f_y$ exist at $(a,b)$, then $f_x(a,b) = f_y(a,b)=0$.
+\end{theorem}
+
+\begin{definition}
+    An interior point $(a,b)$ in the domain of $f$ is a critical point of $f$ is either:
+    \begin{itemize}
+        \item $f_x(a,b)=f_y(a,b)=0$ or 
+        \item at least one of the partial derivatives $f_x$ and $f_y$ does not exist at $(a,b)$.
+    \end{itemize}
+\end{definition}
+
+\begin{theorem}
+    Suppose the second partial derivatives of $f$ are continuous throughout an 
+    open disk centered at the point $(a,b)$, where $f_x(a,b) = f_y(a,b) =0$. Let 
+    $D(x,y)=f_{xx}(x,y)f_{yy}(x,y)-(f_{xy}(x,y))^2$.
+
+    \begin{itemize}
+        \item If $D(a,b)>0$ and $f_{xx}(a,b)<0$, then $f$ has a local maximum value at $(a,b)$.
+        \item If $D(a,b)>0$ and $f_{xx}(a,b)>0$, then $f$ has a local minimum value at $(a,b)$.
+        \item If $D(a,b)<0$, then $f$ has a saddle point at $(a,b)$.
+        \item If $D(a,b)=0$, then the test is inconclusive.
+    \end{itemize}
+\end{theorem}
+
+\begin{definition}
+    Let $f$ be defined on a set $R$ in $\mathbb{R}^2$ containing the point $(a,b)$. If $f(a,b)\geq f(x,y)$
+    for every $(x,y)$ in $R$, then $f(a,b)$ is an absolute maximum value of $f$ on $R$. 
+    If $f(a,b)\leq f(x,y)$ for every $(x,y)$ in $R$, then $f(a,b)$ is an absolute minimum value of $f$ on $R$.
+\end{definition}
+
+We can describe the procedure for finding the absolute maximum/minimum values on closed bounded sets:
+
+Let $f$ be continuous on a closed bounded set $R$ in $\mathbb{R}^2$. To find the absolute maximum and minimum values of $f$ on $R$:
+\begin{itemize}
+    \item Determine the values of $f$ at all critical points in $R$.
+    \item Find the maximum and minimum values of $f$ on the boudnary of $R$.
+    \item The greatest function value found in the previous steps is the absolute maximum value of $f$ on $R$, and the least 
+    function value found is the absolute minimum value of $f$ on $R$.
+\end{itemize}
+\section{Lagrange Multipliers}
+The goal is to maximize (or minimize) a function $f(x,y)$ subject to the 
+constraint $g(x,y) = 0$.
+
+To find find absolute extrema on closed and bounded constraint curves using Lagrange Multipliers:
+
+Let the objective function $f$ and the constraint function $g$ be differentiable on a region of 
+$\mathbb{R}^2$ with $\nabla g(x,y)\neq 0$ on the curve $g(x,y)=0$. To locate the absolute 
+maximum and minimum values of $f$ subject to the constraint $g(x,y)=0$, carry out the following steps:
+
+1. Find the values of $x$, $y$, and $\lambda$ (if they exist) that satisfy the equations
+\[\nabla f(x,y) = \lambda \nabla g(x,y)\qquad \text{and} \qquad g(x,y)=0\]
+
+2. Evalute $f$ at the values $(x,y)$ found in Step 1 and at the endpoints of the constraint curve (if they exist).
+Select the largest and smallest corresponding function values. These values are the absolute maximum and minimum values 
+of $f$ subject to the constraint. 
+
+(This section is kinda annoying, I don't like the amount of steps each question has) Basically, I hate optimization.
+\end{document}

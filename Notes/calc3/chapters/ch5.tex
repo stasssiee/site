@@ -1,0 +1,320 @@
+\documentclass[../calc3.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Vector Calculus}
+\section{Vector Fields}
+\begin{definition}
+    Let $f$ and $g$ be defined on a region $R$ of $\mathbb{R}^2$.
+    A vector field in $\mathbb{R}^2$ is a function $\textbf{F}$ that assigns to each 
+    point $(x,y)$ in $R$ a vector $\textbf{F}(x,y)$ where 
+    \[\textbf{F}(x,y) = f(x,y)\textbf{i}+g(x,y)\textbf{j}\]
+    \begin{center}
+    or
+    \end{center}
+    \[F(x,y)=\langle f(x,y), g(x,y) \rangle \]
+    The vector field $\textbf{R}$ is continuous or differentiable on $R$ is $f$ 
+    and $g$ are continuous or differentiable on $R$.
+
+    Note: A vector field is both a vector valued function and a function of several variables. 
+\end{definition}
+
+\begin{definition}
+    Let $f$, $g$, and $h$ be defined on a region $D$ of $\mathbb{R}^3$. A vector field in $\mathbb{R}^3$ is a function 
+    \textbf{F} that assigns to each point $(x,y,z)$ in $D$ a vector \textbf{F}$(x,y,z)$ where 
+    \[\textbf{F}(x,y,z)=f(x,y,z)\textbf{i}+g(x,y,z)\textbf{j}+h(x,y,z)\textbf{k}\]
+    \begin{center}
+        or
+    \end{center}
+    \[\textbf{F}(x,y,z)=\langle f(x,y,z), g(x,y,z), h(x,y,z)\rangle \]
+
+    The vector field \textbf{F} is continuous or differentiable on $D$ is $f$, $g$, and $h$ are continuous or differentiable on $D$.
+\end{definition}
+
+\begin{definition}[Radial Vector Field in $\mathbb{R}^2$]
+    Let \textbf{r} = $\langle x,y\rangle$ and $p$ is any real number, then 
+    \[\textbf{F}(x,y)=\frac{\textbf{r}}{|\textbf{r}|^p}=\frac{\langle x,y \rangle}{|\textbf{r}|^p}\]
+    is a radial vector field.
+\end{definition}
+\pagebreak 
+\begin{definition}
+    Let $\varphi$ be a differentiable region of $\mathbb{R}^2$ or $\mathbb{R}^3$. The vector field \textbf{F}$=\nabla \varphi$ is a gradient field 
+    and the function $\varphi$ is a potential function for \textbf{F}.
+
+    Recall $\nabla \varphi = \langle \varphi_x, \varphi_y \rangle$ or $\langle \varphi_x, \varphi_y, \varphi_z\rangle$ 
+    and that the vector field \textbf{F} $=\nabla_{\varphi}$ is orthogonal to the level curves of $\varphi$ at $(x,y)$.
+
+    In $\mathbb{R}^3$ the gradient field will be orthogonal to level surfaces of $\varphi$.    
+\end{definition}
+
+\begin{definition}
+    Let $\varphi$ be a potential function for a vector field in \textbf{F} in $\mathbb{R}^2$. That is, \textbf{F}$=\nabla_{\varphi}$.
+
+    The level curves of a potential function are called equipotential curves.
+
+    Also, the vector field may be visualized by drawing continuous flow curves or streamlines 
+    that are everywhere orthogonal to the equipotential curves.
+
+    These ideas can be extended to $\mathbb{R}^3$ in which case we will have equipotential surfaces.
+\end{definition}
+
+\section{Line Integrals}
+\begin{definition}
+    Suppose the scalar-valued function $f$ is defined on the region containing the smooth curve 
+    $C$ given by \textbf{r}$(t)=\langle x(t),y(t) \rangle$, for $a\leq t\leq b$.
+
+    The line integral of $f$ over $C$ is 
+    \[\int_C f(x(t),y(t))\mathrm{d} = \lim_{\Delta \to 0} \sum^n_{k=1}f(x(t^*_k),y(t_k^*))\Delta s_k\]
+    provided this limit exists over all partitions of $[a,b]$.
+
+    If $f>0$ then the line integral computes the area of the ``curtain'' under $f$ and over $C$.
+\end{definition}
+Scalar line integrals are independent of the orientation and parameterization of the curve $C$.
+
+Evaluting Scalar Line integrals in $\mathbb{R}^2$.
+\[\int_C f\mathrm{d}s\]
+What is $\mathrm{d}s$?
+
+Let $C$ be given by \textbf{r}$(t)=\langle x(t),y(t) \rangle$ for $a\leq t\leq b$.
+
+Recall: The length of the curve $C$ over $[a,t]$ is given by $s(t)=\int_a^t |\textbf{r}'(u)|\mathrm{d}u$.
+
+By differentiating both sides, $s'(t)=|\textbf{r}'(t)|$.\\
+Thus, $\mathrm{d}s = s'(t)\mathrm{d}t = |\textbf{r}'(t)|$.
+\pagebreak
+\begin{theorem}
+    Let $f$ be continuous on a region containing a smooth curve $C$: $\textbf{r}(t)=\langle x(t),y(t)\rangle$, for $a\leq t\leq b$. Then 
+    \[\int_C f\mathrm{d}s = \int_a^b f(x(t),y(t))|\textbf{r}'(t)|\mathrm{d}t = \int_a^b f(x(t),y(t))\sqrt{((x'(t))^2+(y'(t))^2)}\mathrm{d}t\]
+\end{theorem}
+
+\begin{theorem}
+    Let $f$ be continuous on a region containing a smooth curve $C$: $\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle$, for $a\leq t\leq b$. Then 
+    \begin{align*}
+        \int_C f\mathrm{d}s = \int_a^b f(x(t),y(t),z(t))|\textbf{r}'(t)|\mathrm{d}t \\
+        =\int_a^b f(x(t),y(t),z(t))\sqrt{(x'(t))^2+(y'(t))^2+(z'(t))^2}\mathrm{d}t
+    \end{align*}
+\end{theorem}
+
+\begin{definition}[Line Integral of a Vector Field]
+    Let \textbf{F} be a vector field that is continuous on a region containing a smooth oriented curve 
+    $C$ parametrized by arc length. Let \textbf{T} be the unit tangent vector at each point of $C$ 
+    consistent with the orientation. The line integral of \textbf{F} over $C$ is 
+    \[\int_C \textbf{F}\cdot\textbf{T}\mathrm{d}s\]
+    Observations
+    \begin{itemize}
+        \item \textbf{F}$\cdot$\textbf{T}=$|$\textbf{f}$|$$|$\textbf{T}$|$$\cos\theta = |\textbf{F}|\cos\theta$ 
+        \item The line integral adds up these components 
+        \item The orientation of the curve matters! $\int_{-C}\textbf{F}\cdot\textbf{T}\mathrm{d}s = -\int_C \textbf{f}\cdot\textbf{T}\mathrm{d}s$
+    \end{itemize}
+\end{definition}
+
+Evaluating The Line Integral of a Vector Field 
+\[\int_C \textbf{F}\cdot\textbf{T}\mathrm{d}s = \int_a^b \textbf{F}\cdot \frac{\textbf{r}'(t)}{|\textbf{r}'(t)|}|\textbf{r}'(t)|\mathrm{d}t = \int_a^b \textbf{F}\cdot\textbf{r}'(t)\mathrm{d}t\]
+
+Different Forms of Line Integrals of Vector Fields: Given \textbf{F} = $\langle f,g,h \rangle$ and $C$ with parameterization $\textbf{r}(t) = \langle x(t), y(t), z(t)\rangle$ for $a \leq t \leq b$:
+\begin{align*}
+    \int_C \textbf{F}\cdot \textbf{T}\mathrm{d}s = \int_a^b \textbf{F}\cdot\textbf{r}'(t)\mathrm{d}t = \int_a^b (f(t)x'(t)+g(t)y'(t)+h(t)z'(t))\mathrm{d}t\\
+    =\int_C (f\mathrm{d}x+g\mathrm{d}y+h\mathrm{d}z)\\
+    =\int_C \textbf{F}\cdot\mathrm{d}\textbf{r}
+\end{align*}
+This works similarly for vector fields in $\mathbb{R}^2$.
+
+\begin{definition}
+    Let $\textbf{F}$ be a continuous force field in a region $D$ of $\mathbb{R}^3$. Let 
+    \[C:\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle \text{for} a\leq t \leq b\]
+    be a smooth curve in $D$ with a unit tangent vector $\textbf{T}$ consistent with the orientation.
+
+    The work done (by the force field) in moving an object along $C$ in the positive direction is 
+    \[W = \int_C \textbf{F}\cdot \textbf{T}\mathrm{d}s = \int_a^b \textbf{F}\cdot \textbf{r}'(t)\mathrm{d}t\]
+    \begin{itemize}
+        \item $\textbf{F}\cdot\textbf{T} = |\textbf{F}|\cos\theta$ is the tangential component of \textbf{F} along $C$ (in direction of the motion).
+        \item The vector line integral sums the work done at each point along $C$.
+    \end{itemize}
+\end{definition}
+
+\begin{definition}
+    Definition: Circulation
+
+    Let $\textbf{F}$ be a continuous vector field on a region $R$ of $\mathbb{R}^2$, and let $C$ be a closed 
+    smooth oriented curve in $R$. The circulation of $\textbf{F}$ on $C$ is $\int_C \textbf{F}\cdot\textbf{T}\mathrm{d}s$, where 
+    $\textbf{T}$ is the unit vector tangent to $C$ consistent with the orientation.
+
+    A curve $C$ in $\mathbb{R}^2$ is closed if its initial and terminal points are the same.
+
+    Circulation is a measure of how much of the vector field points in the direction of $C$.
+\end{definition}
+
+\begin{definition}
+    Definition: Flux 
+
+    Let $\textbf{F}$ be a continuous vector field on a region $R$ of $\mathbb{R}^2$, and let $C$ be a closed smooth oriented curve in $R$.
+    The flux of the vector field $\textbf{F}$ across $C$ is $\int_C \textbf{F}\cdot\textbf{n}\mathrm{d}s$, where $\textbf{n}=\textbf{T}\times\textbf{k}$ is the 
+    unit normal vector and $\textbf{T}$ is the vector tangent to $C$ consistent with the orientation.
+
+    Flux is a measure of how much the vector field points orthogonally to $C$.
+
+    In practice, use $\textbf{n}=\textbf{T}\times\textbf{k}$ and $\mathrm{d}s=|\textbf{r}'(t)|\mathrm{d}t$.
+
+    Given $\textbf{F}=\langle f,g\rangle$ and $C:\textbf{r}(t)=\langle x(t), y(t)\rangle$ for $a\leq t\leq b$, then 
+    \begin{align*}
+        \int_C \textbf{F}\cdot\textbf{n}\mathrm{d}s=\int_a^b (f(t)y'(t)-g(t)x'(t))\mathrm{d}t\\
+        =\int_C f\mathrm{d}y-g\mathrm{d}x
+    \end{align*}
+\end{definition}
+
+\section{Conservative Vector Fields}
+\begin{definition}[Simple and Closed Curves]
+    Suppose a curve $C$ (in $\mathbb{R}^2$ or $\mathbb{R}^3$) is described parametrically by $\textbf{r}(t)$, where $a\leq t\leq b$.
+    \begin{itemize}
+        \item Then $C$ is a simple curve if $\textbf{r}(t_1)\neq \textbf{r}(t_2)$ for all $t_1$ and $t_2$, with $a<t_1<t_2<b$; that is, $C$ never intersects itself between its endpoints.
+        \item The curve $C$ is closed if $\textbf{r}(a)=\textbf{r}(b)$; that is, the initial and terminal points of $C$ are the same.
+    \end{itemize}
+\end{definition}
+
+\begin{definition}[Connected and Simply Connected Regions]
+    \begin{itemize}
+        \item An open region $R$ in $\mathbb{R}^2$ (or $D$ in $\mathbb{R}^3$) is connected if it is possible to connect any two points in $R$ by a continuous curve lying in $R$. (Think: $R$ is in one piece)
+        \item An open region $R$ is simply connected if every closed simple curve in $R$ can be deformed and contracted to a point in $R$. (Think: $R$ has no holes.)
+    \end{itemize}
+    Recall that all points of an open set are interior points. An open set does not contain any of its boundary points.
+\end{definition}
+
+\begin{definition}[Conservative Vector Fields]
+    A vector field $\textbf{F}$ is said to be conservative on a region (in $\mathbb{R}^2$ or $\mathbb{R}^3$) if there exists a 
+    scalar function $\varphi$ such that $\textbf{F} = \nabla\varphi$ on that region.
+
+    Recall that when $\textbf{F}=\nabla\varphi$, the function $\varphi$ is a potential function for $\textbf{F}$.
+
+    Note: any function of the form $\varphi(x,y)=xy+C$ would be a potential function for $\textbf{F}$.
+\end{definition}
+
+\begin{definition}[Test for Conservative Vector Fields]
+    Suppose $\textbf{F}=\langle f,g\rangle$ has continuous first partial derivatives on a connected and simply connected region $D$ in $\mathbb{R}^2$.
+
+    If $\textbf{F}$ is conservative $\implies$ there is a function $\varphi$ such that $\textbf{F}=\nabla \varphi$.
+    \begin{center}
+        $\implies$(1)$f=\varphi_x$ \qquad and \qquad (2) $g=\varphi_y$.
+    \end{center}
+    Now by taking partial derivatives,
+    \begin{center}
+        $f_y=\varphi_{xy}$ \qquad and \qquad $g_x = \varphi_{yx}$.
+    \end{center}
+    By equality of mixed partial derivatives, 
+    \begin{center}
+        $\varphi_{xy}=\varphi_yx$.
+    \end{center}
+    Thus we can conclude, $f_y=g_x$.
+
+    The other direction is also true. That is, if $f_y=g_x$ then $\textbf{F}$ is conservative.
+
+    This provides us with a test for a conservative vector field in two dimensions, which can be 
+    extended to the following test for vector fields in three dimensions.
+\end{definition}
+
+\begin{theorem}[Test for Conservative Vector Fields]
+    Let $\textbf{F}=\langle f,g,h\rangle$ be a vector field defined on a connected and simply connected region $D$ in 
+    $\mathbb{R}^3$, where $f$, $g$, and $h$ have continuous first partial derivatives on $D$.
+
+    Then $\textbf{F}$ is a conservative vector field on $D$ if and only if 
+    \begin{center}
+        $\frac{\partial f}{\partial y}=\frac{\partial g}{\partial x}, \qquad \frac{\partial f}{\partial z}=\frac{\partial h}{\partial x}$ \qquad and \qquad $\frac{\partial g}{\partial z}=\frac{\partial h}{\partial y}$. 
+    \end{center}
+    For vector fields in $\mathbb{R}^2$, we have the single condition $\frac{\partial f}{\partial y}=\frac{\partial g}{\partial x}$.
+\end{theorem}
+
+\begin{theorem}[Fundamental Theorem for Line Integrals]
+    Let $R$ be a region in $\mathbb{R}^2$ or $\mathbb{R}^3$ and let $\varphi$ be a differentiable potential function defined on $R$.
+    If $\textbf{F}=\nabla\varphi$ (which means that $\textbf{F}$ is conservative), then 
+    \[\int_C \textbf{F}\cdot\textbf{T}\mathrm{d}s=\int_C \textbf{F}\cdot \mathrm{d}\textbf{r}=\varphi(B)-\varphi(A)\]
+    for all points $A$ and $B$ in $R$ and all piecewise-smooth oriented curves $C$ in $R$ from $A$ to $B$.
+\end{theorem}
+
+Why? Let $\textbf{r}(t)$ be any parameterization of $C$ for $a\leq t\leq b$ and one can use the chain rule to show that $\frac{\mathrm{d}\varphi}{\mathrm{d}t}=\textbf{F}\cdot\textbf{r}'(t)$. This, 
+\[\int_C \textbf{F}\cdot\mathrm{d}\textbf{r}=\int_a^b \textbf{F}\cdot\textbf{r}'(t)\mathrm{d}t = \int_a^b \frac{\mathrm{d}\varphi}{\mathrm{d}t}\mathrm{d}t = \varphi(B)-\varphi(A)\]
+
+Interpretation: If $\textbf{F}$ is a conservative vector field, then the value of a line integral of $\textbf{F}$ depends only on the endpoints of the path!
+
+\begin{definition}[Path Independence]
+    Let $\textbf{F}$ be a continuous vector field with domain $R$. If 
+    \[\int_{C_1}\textbf{F}\cdot\mathrm{d}\textbf{r}=\int_{C_2}\textbf{F}\mathrm{d}\textbf{r}\]
+    for all piecewise-smooth curves $C_1$ and $C_2$ in $R$ with the same initial and terminal points, then the line integral is 
+    independent of path.
+\end{definition}
+
+\begin{theorem}
+    Let $\textbf{F}$ be a continuous vector field on an open connected region $R$ in $\mathbb{R}^2$. If 
+    \[\int_C \textbf{F}\cdot\mathrm{d}\textbf{r}\]
+    is independent of path, then $\textbf{F}$ is conservative; that is, there exists a potential function $\varphi$ such that $\textbf{F}=\nabla\varphi$ on $R$.
+\end{theorem}
+
+\textbf{Line Integrals on Closed Curves}
+Notation: We will ues $\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}$ to denote a line integral over a closed curve $C$.
+
+\begin{theorem}
+    Let $R$ be an open connected region in $\mathbb{R}^2$ or $\mathbb{R}^3$. Then $\textbf{F}$ is a conservative vector field on $R$ 
+    if an only if $\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}=0$ on all simple closed piecewise-smooth oriented 
+    curves $C$ in $R$. 
+\end{theorem}
+
+Why?\\
+\textbf{F} is a conservative $\implies \oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}=\varphi(B)-\varphi(A)=\varphi(A)-\varphi(A)=0$\\
+$\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}=0 \implies 0 = \int_{C_1}\textbf{F}\cdot\mathrm{d}\textbf{r}+\int_{C_2}\textbf{F}\cdot\mathrm{d}\textbf{r}$\\
+$\implies \int_{C_1}\textbf{F}\cdot\mathrm{d}\textbf{r}=-\int_{C_2}\textbf{F}\cdot\mathrm{d}\textbf{r}=\int_{-C_2}\textbf{F}\cdot\mathrm{d}\textbf{r}$
+
+\section{Green's Theorem}
+\begin{theorem}[Green's Theorem - Circulation Form]
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region 
+    $R$ in the plane. Assume $\textbf{F}=\langle f,g\rangle$ where $f$ and $g$ have continuous first partial derivatives in $R$. Then 
+    \[\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}=\oint_C f\mathrm{d}x+g\mathrm{d}y=\iint_R \left(\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}\right)\mathrm{d}A\]
+
+    Green's Theorem relates the circulation on $C$ to a double integral over the region $R$.
+
+    If needed: $\oint_{-C}\textbf{F}\cdot\mathrm{d}\textbf{r}=-\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}$
+\end{theorem}
+
+\begin{definition}[Two-Dimensional Curl]
+    The two-dimensional curl of the vector field $\textbf{F}=\langle f,g \rangle$ is 
+    \[\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}\]
+    If the curl is zero throughout a regio, the vector field is irrotational throughout that region.
+\end{definition}
+
+Recall: If $\textbf{F}=\langle f,g\rangle$ is conservative then $f_y = g_x$
+
+Thus, $g_x-f_y=0$ and the curl of $\textbf{F}$ is zero.
+
+Under the conditions of Green's Theorem: $\oint_C \textbf{F}\cdot\mathrm{d}\textbf{r}=\iint_R \left(\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}\right)\mathrm{d}A=0$.
+
+Circulation integrals of conservative vector fields are always zero!
+
+\begin{theorem}[Area of a Plane Region by Line Integrals]
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region $R$ in the plane.
+
+    Then the area of $R$ is given by:
+    \[\oint_C x\mathrm{d}y = -\oint_C y\mathrm{d}x = \frac{1}{2}\oint_C (x\mathrm{d}y-y\mathrm{d}x)\]
+\end{theorem}
+
+\begin{theorem}[Green's Theorem - Flux Form]
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region $R$ in the plane.
+    Assume $\textbf{F}=\langle f,g\rangle$ where $f$ and $g$ have continuous first partial derivatives in $R$. Then 
+    \[\oint_C \textbf{F}\cdot\textbf{n}\mathrm{d}s=\oint_C f\mathrm{d}y-g\mathrm{d}x=\iint_R \left(\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}\right)\mathrm{d}A\]
+\end{theorem}
+Interpretation: 
+\begin{itemize}
+    \item Green's theorem says that the net divergence throughout the region $R$ equals the flux across the boundary of $R$.
+\end{itemize}
+
+\begin{definition}[Two-Dimensional Divergence]
+    The two-dimensional divergence of the vector field $\textbf{F}=\langle f,g\rangle$ is 
+    \[\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}\]
+    If the divergence is zero throughout a region, the vector field is source free throughout that region.
+\end{definition}
+
+The outward flux of a source free vector field is always zero!
+
+
+
+\section{Divergence and Curl}
+\section{Surface Integrals}
+\section{Stokes' Theorem}
+\section{Divergence Theorem}
+
+\end{document}

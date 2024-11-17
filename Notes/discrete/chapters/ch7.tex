@@ -1,0 +1,28 @@
+\documentclass[../discrete.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Discrete Probability}
+An experiment is a procedure that yields one of a given set of possible outcomes. 
+The sample space of the experiment is the set of possible outcomes. An event is a subset of the sample space.
+Laplace's definition of the probability of an event with finitely many possible outcomes will now be stated.
+
+\begin{definition}
+    If $S$ is a finite nonempty sample space of equally likely outcomes, and $E$ is an event, 
+    that is, a subset of $S$, then the probability of $E$ is $p(E)=\frac{\mid E \mid}{\mid S \mid}$.
+\end{definition}
+The probability of an event can never be negative or more than one!
+
+We can use counting techniques to find the probability of events derived from other events.
+\begin{theorem}
+    Let $E$ be an event in a sample space of $S$. The probability of the event $\overline{E}=S-E$, the complementary event of $E$, is given by 
+    \[p(\overline{E})=1-p(E)\]
+\end{theorem}
+
+We can also find the probability of the union of two events.
+\begin{theorem}
+    Let $E_1$ and $E_2$ be events in the sample space $S$. Then 
+    \[p(E_1\cup E_2)=p(E_1)+p(E_2)-p(E_1\cap E_2)\]
+\end{theorem}
+
+
+\end{document}

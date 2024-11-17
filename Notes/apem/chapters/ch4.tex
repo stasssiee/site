@@ -1,0 +1,43 @@
+\documentclass[../em.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Electric Circuits}
+\section{Electric Current}
+Current is the rate at which charge passes through a cross-sectional area of a wire.
+\[I=\mathrm{d}q/\mathrm{d}t \implies q = \int I \mathrm{d}t\]
+Current within a conductor consists charge carriers traveling through the conductor with an average drift velocity.
+\[I=nqv_D A\]
+Electric charge moves in a circuit in response to an electron potential difference, sometimes referred to as electromotive force, or emf ($\epsilon$)
+
+Current density if the flow of charge per unit area.
+\[I=\int{\vec{J}\cdot\mathrm{d}\vec{A}} \implies I = JA\]
+Current density is related to the motion of the charge carriers within a conductor and is a vector quantity.
+\[J=nqv_D\]
+A potential difference across a conductor creates an electric field within the conductor that is proportional to the resistivity and the current density.
+\[\vec{E}=\rho \vec{J}\]
+If a function of current density is given, the total current can be determined by integrating the density over the area.
+\[I=\int \vec{J(r)}\cdot\mathrm{d}\vec{A}\]gg6
+Although current is a scalr quantity, it does have direction.
+\begin{itemize}
+    \item The direction of conventional current is chosen to be the direction in which positive charge would move.
+    \item In common circuits, the current is actually due to the movement of electrons.
+\end{itemize}
+
+\begin{example}
+    A long conducting cylinder has radius $R$, and carries a current to the left. The current density varies with distance 
+    $r$ from the cylinder's central axis according to the equation $J=kr^2$, where $r\leq R$ and $k$ is a positive constant. Derive an expression
+    for the total current in the cylinder.
+
+    \begin{align*}
+        I=\int\vec{J}(r)\cdot\mathrm{d}\vec{A} \\
+        = \int (kr^2)(2\pi r\mathrm{d}r)
+        = \frac{\pi k}{2}R^4
+    \end{align*}
+\end{example}
+
+\section{Simple Circuits}
+\section{Ohm's Law and Electrical Power}
+\section{Compound Direct Current Circuits}
+\section{Kirchoff's Rules}
+\section{Resistor-Capacitor (RC) Circuits}
+\end{document}
