@@ -3,6 +3,46 @@
 \begin{document}
 \chapter{Advanced Counting Techniques}
 \section{Applications of Recurrence Relations}
+Ok so theres a lot of examples for recurrence relations yknow.
+
+Algorithm 1: Dynamic Programming Algorithm for Scheduling Talks
+
+\textbf{procedure} Maximum Attendees ($s_1,s_2,\dots,s_n$: start times of talks;\\ 
+$e_1,e_2,\dots,e_n$: and times of talks; $w_1,w_2,\dots,w_n$: number of attendees to talks)\\
+sort talks by end time and relabel so that $e_1\leq e_2\leq \cdots\leq e_n$\\
+\textbf{for} j := 1 \textbf{to} n \\
+\textbf{if} no job i with $i<j$ is compatible with job j \\
+$p(j)=0$\\
+\textbf{else} $p(j)$ := max{$i-i<j$ and job i is compatible with job j}\\
+$T(0)$ := 0\\
+\textbf{for} j := 1 \textbf{to} n \\
+$T(j)$ := max($w_j+T(p(j)), T(j-1))$\\
+\textbf{return} $T(n)$ {$T(n)$ is the maximum number of attendees}
+
+This algorithm determiens the maximum number of attendees that can be achieved by a schedule of talks, but we do not 
+find a schedule that achieves this maximum. To find talks we need to schedule, we use the fact htat talk j belongs to an optimal 
+solution for the first j talks if and only if $w_j+T(p(j))\geq T(j-1)$. 
 \section{Inclusion-Exclusion}
+How many elements are in the union of two finite sets? We showed previously that 
+\[\mid A \cup B \mid = \mid A \mid + \mid B \mid - \mid A \cap B \mid\]
+
+In the union of three sets we can say that 
+\[\mid A \cup B \cup C\mid = \mid A \mid + \mid B \mid + \mid C \mid - \mid A \cap \mid - \mid A \cap C\mid + \mid A \cap B \cap C \mid\]
+
+Using this we can define and prove the inclusion-exclusion principle for $n$ sets, where $n$ is a positive integer. 
+This principle tells us that we can count the elements in a union of $n$ sets by adding the number of elements in the sets, then 
+subtracting the sum of the number of elements in all intersections of two of these sets, then adding the number of elements in all intersections of three of these sets, 
+and so on, until we reach the number of elements in the intersection of all the sets. It is added when there is an odd number of sets and added when there is an even number of sets.
+
+\begin{theorem}[The Principle of Inclusion-Exclusion]
+    Let $A_1,A_2,\dots,A_n$ be finite sets. Then 
+    \begin{align*}
+        |A_1 \cup A_2 \cup \cdots A_n| = \sum_{1\leq i\leq n}|A_i|-\sum_{1\leq i< j\leq n}|A_i\cap A_j|\\
+        + \sum_{1\leq i<j<k\leq n}|A_i\cap A_j\cap A_k|-\cdots+(-1)^{n+1}|A_1\cap A_2 \cap \cdots \cap A_n|
+    \end{align*}
+\end{theorem}
+
+The inclusion-exclusion principle gives a formula for the number of elements in the union of $n$ sets for every positive integer $n$. There are terms in this formula for the number 
+of elements in the intersection of every nonempty set of the collection of the $n$ sets. Hence, there are $2^n-1$ terms in this formula.
 
 \end{document}

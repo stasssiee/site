@@ -19,11 +19,13 @@
 \usepackage[hang,flushmargin]{footmisc}		% remove footnote indentation
 \usepackage[hyperfootnotes=false,
 					hidelinks]{hyperref}	% create clickable table of contents
+\usepackage{cancel}
 
 \newcommand{\tarc}{\mbox{\large$\frown$}}
 \newcommand{\arc}[1]{\stackrel{\tarc}{#1}}
 %\newcommand{\degree}{^{\circ}}
 \newcommand{\blank}{\_\_\_\_\_\_}
+
 \DeclareMathOperator\cis{cis}
 \DeclareMathOperator\Arg{Arg}
 
@@ -46,6 +48,7 @@
 \newcommand{\Q}{\mathbb{Q}}			% fancy Q
 \newcommand{\Z}{\mathbb{Z}}			% fancy Z
 \newcommand{\N}{\mathbb{N}}			% fancy N
+\newcommand{\dd}{\mathrm{d}}
 \newcommand{\from}{\leftarrow}
 \newcommand{\qed}{$\square$}
 % endregion
@@ -123,6 +126,11 @@
 	\begin{mdframed}[]\relax
 }{\end{mdframed}}
 
+\newenvironment{exercise}[1][]{
+	\mdfproof{black!15}
+	\textit{Exercise. }
+}
+
 \newenvironment{proof}[1][]{
 	\mdfproof{black!15}
 	\begin{mdframed}[]\relax
@@ -131,7 +139,7 @@
 \newenvironment{claim}[1][]{
 	\mdfproof{black!15}
 	\begin{mdframed}[]\relax
-\textit{Claim. }}{\qed \end{mdframed}}
+\textit{Claim. }}{\end{mdframed}}
 
 \newenvironment{example}[1][]{
 	\mdfnontheo{Example}{#1}{yellow!40}

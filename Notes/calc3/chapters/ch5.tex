@@ -313,7 +313,152 @@ The outward flux of a source free vector field is always zero!
 
 
 \section{Divergence and Curl}
+\begin{definition}[Divergence]
+    The divergence of a vector field $\textbf{F}=\langle f,g,h\rangle$ that is differentiable on a region of $\mathbb{R}^3$ is 
+    \[\text{div} \textbf{F} =\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}+\frac{\partial h}{\partial z}\]
+
+    If div $\textbf{F}=0$, the vector field is source free. 
+
+    Divergence measures the expansion or contraction of the vector field at each point.
+
+    Del operator: $\nabla = \left\langle\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right\rangle$
+
+    Alternation notation: $\nabla \cdot \textbf{F} = \left\langle\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right\rangle \cdot \langle f,g,h\rangle = \frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}+\frac{\partial h}{\partial z} = \text{div} \textbf{F}$
+\end{definition}
+
+\begin{theorem}[Divergence of Radial Vector Fields]
+    For a real number, $p$, the divergence of the radial vector field 
+    \[\textbf{F}=\frac{\textbf{r}}{|\textbf{r}|^p}=\frac{\langle x,y,z\rangle}{(x^2+y^2+z^2)^{p/2}} \qquad \text{ is } \qquad \nabla \cdot \textbf{F} = \frac{3-p}{|\textbf{r}|^p}\]
+\end{theorem}
+
+\begin{definition}[Curl]
+    The curl of a vector field $\textbf{F} = \langle f,g,h \rangle$ that is differentiable in a region of $\mathbb{R}^3$ is 
+    \[\text{curl}\textbf{F} = \left(\frac{\partial h}{\partial y}-\frac{\partial g}{\partial z}\right)\textbf{i} + \left(\frac{\partial f}{\partial z}-\frac{\partial h}{\partial x}\right)\textbf{j}+\left(\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}\right)\textbf{k}\]
+
+    Curl is a measure of rotation within a vector field at each point. 
+
+    We can express the curl as a cross product:
+
+    curl $\textbf{F} = \nabla \times \textbf{F} = \begin{vmatrix}
+        \textbf{i} & \textbf{j} & \textbf{k} \\
+        \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+        f & g & h
+    \end{vmatrix}$
+
+    If curl $\textbf{F = 0}$, the vector field is irrotational.
+\end{definition}
+
+The $\textbf{k}$-component of the curl (or the two-dimensional curl) gives the rotation of the vector field in the $xy$-plane at a point. 
+
+The other components of the curl give similar information about the rotation of the vector field.
+
+\begin{theorem}[Curl of a Conservative Vector Field]
+    Suppose $\textbf{F}$ is a conservative vector field on an open region $D$ of $\mathbb{R}^3$. Let $\textbf{F}=\nabla\varphi$, where $\varphi$ 
+    is a potential function with continuous second partial derivatives on $D$.
+
+    Then curl $\textbf{F=0}$ and $F$ is irrotational.
+\end{theorem}
+
+\begin{theorem}[Divergence of the Curl]
+    Suppose $\textbf{F}=\langle f,g,h\rangle$, where $f$, $g$, and $h$ have continuous second partial derivatives, then 
+    \begin{center}
+        div curl $\textbf{F} = 0$.
+    \end{center}
+
+    That is, the divergence of the curl is zero.
+
+    Note: If $\textbf{F}$ is a vector field in $\mathbb{R}^3$ then div $\textbf{F}$ is a scalar valued function and not a vector field. Hence, curl div $\textbf{F}$ is not defined.
+\end{theorem}
+
+General Rotation Field:
+
+$\textbf{F}=\textbf{a}\times\textbf{r}=\langle a_1,a_2,a_3 \rangle \times \langle x,y,z \rangle$.
+\begin{itemize}
+    \item The vector $\textbf{a}$ is the axis of rotation for the vector field $\textbf{F}$.
+    \item The length of the curl of $\textbf{F}$, $|\nabla \times \textbf{F}| = 2|\textbf{a}|$.
+    \item The divergence of the vector field $\textbf{F}$ is zero, or $\textbf{F}$ is source free.
+\end{itemize}
+
+
+
 \section{Surface Integrals}
+Recall a curve in $\mathbb{R}^2$ is defined parametrically by $\textbf{r}(t)=\langle x(t), y(t)\rangle$, for $a\leq t\leq b$.
+
+For a surface in $\mathbb{R}^3$ we'll need two parameters and three dependent variables:
+\[\textbf{r}(u,v)=\langle x(u,v), y(u,v), z(u,v)\rangle\]
+
+A cylinder with radius $a>0$ and height $h>0$ can be described parametrically as $\textbf{r}(u,v)=\langle a\cos u, a\sin u, v\rangle$ where $0\leq u\leq 2\pi$ and $0\leq v\leq h$.
+
+A cone with radius $a>0$ and height $h>0$ can be described parametrically as $\textbf{r}(u,v)\left\langle \frac{av}{h}\cos u, \frac{av}{h} \sin u , v \right\rangle$ where $0\leq u\leq 2\pi$ and $0\leq v\leq h$.
+
+A sphere with radius $a>0$ can be described parametrically as $\textbf{r}(u,v)=\langle a\sin u\cos v, a\sin u \sin v, a\cos u\rangle$, where $0\leq u\leq \pi$ and $0\leq v\leq 2\pi$.
+
+For an explicitly defined surface:
+\[z=g(x,y) \text{ on } R={(x,y): a\leq x\leq b, c\leq y\leq d}\]
+can be parametrically described:
+\[\textbf{u,v}=\langle u,v,g(u,v)\rangle\]
+where $a\leq u\leq b$ and $c\leq v\leq d$.
+
+Now we will develop the surface integral of a scalar-valued function $f$ defined on a smooth parametrized surface $S$.
+\[\iint_S f(x,y,z)\dd S\]
+Applications:
+\begin{itemize}
+    \item Compute the surface area of $S$.
+    \item Compute the mass of a thin sheet described by the surface $S$ with mass density function $f$.
+    \item Compute the average value of $f$ over the surface $S$.
+\end{itemize}
+
+\begin{definition}[Surface Integrals of Scalar-Valued Functions]
+    Let $f$ be a continuous scalar-valued function on a smooth surface $S$ given parametrically by 
+    $\textbf{r}(u,v)=\langle x(u,v), y(u,v), z(u,v)\rangle$, where $u$ and $v$ vary over the rectangle 
+    $R={(u,v):a\leq u\leq b, c\leq v\leq d}$. Assume also that the tangent vectors
+    \[ \textbf{t}_u = \frac{\partial \textbf{r}}{\partial u} = \left\langle \frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}, \frac{\partial z}{\partial u}\right\rangle \qquad \text{ and } \qquad \textbf{t}_v = \frac{\partial\textbf{r}}{\partial v}=\left\langle\frac{\partial x}{\partial v},\frac{\partial y}{\partial v},\frac{\partial z}{\partial v} \right\rangle\]
+    are continuous on $R$ and the normal vector $\textbf{t}_u \times \textbf{t}_v$ is nonzero on $R$.
+
+    The surface integral of $f$ over $S$ is 
+    \[\iint_S f(x,y,z)\dd S = \iint_R f(x(u,v), y(u,v), z(u,v))|\textbf{t}_u\times \textbf{t}_v|\dd A\]
+    If $f(x,y,z)=1$, this integral equals the surface area of $S$.
+\end{definition}
+
+\begin{theorem}[Evaluation of Surface Integrals of Scalar-Valued Functions on Explicitly Defined Surfaces]
+    Let $f$ be a continuous scalar-valued function on a smooth surface $S$ given parametrically by 
+    $z=g(x,y)$, for $(x,y)$ in a region $R$. The surface integral of $f$ over $S$ is 
+    \[\iint_S f(x,y,z)\dd S = \iint_R f(x,y,g(x,y))\sqrt{z_x^2 + z_y^2 + 1}\dd A\]
+    
+    If $f(x,y,z)=1$, the surface integral equals the area of the surface.
+\end{theorem}
+
+Orientable Surfaces: To be orientable, a surface must have a choice of normal vectors that varies continuously over the surface. (The surface is two-sided.)
+
+If a surface encloses a region then we will choose normal vectors to point in the outward direction. For other surfaces, we must specify the direction of the normal vector.
+
+\begin{definition}
+    Flux Integrals: Consider a continuous vector field $\textbf{F}=\langle f,g,h\rangle$. Let $S$ be a smooth oriented surface with unit normal vector $\textbf{n}$.
+
+    The flux integral 
+    \[ \iint_S \textbf{F}\cdot \textbf{n}\dd S\]
+    computes the net flux of the vector field across the surface.
+
+    $\textbf{F}\cdot\textbf{n}=|\textbf{F}||\textbf{n}|\cos\theta = |\textbf{F}|\cos\theta$.
+
+    The flux integral adds up the components of the vector field $\textbf{F}$ normal to the surface.
+\end{definition}
+
+\begin{definition}[Surface Integral of a Vector Field]
+    Suppose $\textbf{F} = \langle f,g,h\rangle$ is a continuous vector field on a region of $\mathbb{R}^3$ containing a smooth 
+    oriented surface $S$. If $S$ is defined parametrically as $\textbf{u,v}=\langle x(u,v), y(u,v), z(u,v)\rangle$, for $(u,v)$ in a region $R$, then 
+    
+    \[\iint_S \textbf{F}\cdot\textbf{n}\dd S = \iint_R \textbf{F}\cdot(\textbf{t}_u\times\textbf{t}_v)\dd A\]
+
+    where $\textbf{t}_u = \frac{\partial \textbf{r}}{\partial u} = \left\langle \frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}, \frac{\partial z}{\partial u}\right\rangle \qquad \text{ and } \qquad \textbf{t}_v = \frac{\partial\textbf{r}}{\partial v}=\left\langle\frac{\partial x}{\partial v},\frac{\partial y}{\partial v},\frac{\partial z}{\partial v} \right\rangle$
+    are continuous on $R$, and the normal vector $\textbf{t}_u\times\textbf{t}_v$ is nonzero on $R$, and the direction of the normal vector is consistent with the orientation of $S$.
+\end{definition}
+
+\begin{definition}[Surface Integral of a Vector Field]
+    If $S$ is defined in the form $z=w(x,y)$ for $(x,y)$ in a region $R$, then 
+    \[\iint_S \textbf{F}\cdot \textbf{n}\dd S = \iint_R \textbf{F}\cdot(\textbf{t}_u\times \textbf{t}_v)\dd A = \iint_R (-fz_x-gz_y+h)\dd A\]
+
+\end{definition}
 \section{Stokes' Theorem}
 \section{Divergence Theorem}
 

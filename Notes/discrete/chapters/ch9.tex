@@ -2,5 +2,53 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Relations}
+The most direct way to express a relationship between elements of two sets is to use ordered 
+pairs made up of two related elements. For this reason, sets of ordered pairs are called binary relations.
+
+\begin{definition}
+    Let $A$ and $B$ be sets. A binary relation from $A$ to $B$ is a subset of $A\times B$.
+\end{definition}
+
+In other words, a binary relation from $A$ to $B$ is a set $R$ of ordered pairs, where the first element 
+of each ordered pair comes from $A$ and the second element comes from $B$. We use the notation $a$ $R$ $b$ to denote that 
+$(a,b)\in R$ and a $a$ $\cancel{R}$ $b$ to denote that $(a,b)\not\in R$. Moreover, when $(a,b)$ belongs to $R$, $a$ is said to be related to $b$ by $R$.
+
+Binary relations represent relationships between the elements of two sets. We will introduce $n$-ary relations,
+which express relationships among elements of more than two sets. 
+
+\begin{definition}
+    A relation on a set $A$ is a relation from $A$ to $A$.
+\end{definition}
+
+In other words, a relation on a set $A$ is a subset of $A\times A$.
+
+\begin{definition}
+    A relation $R$ on a set $A$ is called reflexive if $(a,a)\in R$ for every element $a\in A$.
+\end{definition}
+
+\begin{definition}
+    A relation $R$ is called symmetric if $(b,a)\in R$ whenever $(a,b)\in R$, for all $a,b\in A$. A relation $R$ on a set $A$ such that for all 
+    $a,b\in A$, if $(a,b)\in R$ and $(b,a)\in R$, then $a=b$ is called antisymmetric.
+\end{definition}
+
+\begin{definition}
+    A relation $R$ on a set $A$ is called transitive if whenever $(a,b)\in R$ and $(b,c)\in R$, then $(a,c)\in R$, for all $a,b,c\in A$.
+\end{definition}
+
+\begin{definition}
+    Let $R$ be a relation from a set $A$ to a set $B$ and $S$ a relation from $B$ to a set $C$. The composite of $R$ and $S$ is the relation 
+    consisting of ordered pairs $(a,c)$, where $a\in A$, $c\in C$, and for which there exists an element $b\in B$ such that 
+    $(a,b)\in R$ and $(b,c)\in S$. We denote the composite of $R$ and $S$ by $S\circ R$.
+\end{definition}
+
+\begin{definition}
+    Let $R$ be a relation on the set $A$. The powers $R^n. n=1,2,3,\dots$, are defined recursively by 
+    \[ R^1 = R \text{ and } R^{n+1}=R^n\circ R\]  
+\end{definition}
+\pagebreak 
+\begin{theorem}
+    The relation $R$ on a set $A$ is transitive if and only if 
+    \[R^n \subseteq R \text{ for } n=1,2,3,\dots\]
+\end{theorem}
 
 \end{document}

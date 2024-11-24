@@ -100,5 +100,60 @@ Intersection: $\cap$ is the probability both will occur.
     \end{center}
 \end{itemize}
 \section{Discrete and Continuous Random Variables}
+A random variable takes numerical values that describe the outcomes of some chance process. Random variables involve the same probability rules 
+we have already learned, but we will extend those rules to be able to model more events.
 
+A probability distribution tells us the value that our random variable can take and the probability associated with each value.
+
+Every probability distribution must satisfy each of the following requirements.
+\begin{enumerate}
+    \item There is a numerical random variable X, and each of the values of X has an associated probability with it.
+    \item The sum of all the probabilities in the distribution $\sum P(x)$ must equal 1.
+    \item $0\leq P(x)\leq 1$ for all probabilities in the distribution.
+\end{enumerate}
+
+A discrete random variable takes on a fixed set of possible values with whole number outcomes.
+\begin{itemize}
+    \item Random variables are usually capital letters.
+    \item Random variables can be discrete or continuous 
+    \item Random variables must be numeric in value 
+\end{itemize}
+The mean of a discrete random variable X, is the mean outcome for infinitely many trials.
+
+We think of this as the ``expected'' value because it is the average value we would expect to get if the trials could continue indefinitelyindefinitely.
+
+To find the mean, $\mu_x$, or expected value, $E(x)$, of a discrete random variable X, multiply each possible value by its probability, then add all the products.
+\[E(x)=\sum x_i\cdot p_i\]
+
+The standard deviation of a random variable X is a measure of how much the values of the variable typically vary from the expected value.
+\[\sigma_x^2 = Var(X)=\sum(x_i-\mu_x)^2\cdot p_i\]
+\[\sigma_x = \sqrt{\sum(x_i-\mu_x)^2\cdot p_i}\]
+
+\begin{itemize}
+    \item Continuous Random Variables take on all possible values in an interval of numbers. The probability distribution of X is described by a density curve.
+    \item The probability of any event is the area under the density curve and above, below, or between the values x that define the event.
+    \item Area under a density curve is always equal to 1.
+    \item The probability is on the y-axis in a distribution, so finding the area equates to finding the probability of getting an interval of numbers.
+    \item The probability at an event is 0 for a continuous random variable because the area under a point is 0.
+\end{itemize}
+
+Calculator: Mean and Standard Deviation from a Probability Distribution Table 
+\begin{itemize}
+    \item Enter outcomes into L1 and probabilities in L2 
+    \item Run 2nd - Vars - 1VarStats with List:L1 and FreqList:L2 
+    \item Mean will be represented by $\overline{x}$
+    \item Standard deviation will be represented by $\sigma_x$
+\end{itemize}
+
+\section{Combining Random Variables}
+If $X$ and $Y$ are two independent random variables:
+
+\[E(X+Y)=E(X)+E(Y)\]
+\[E(X-Y)=E(X)-E(Y)\]
+\[\sigma_{X+Y}=\sqrt{\sigma_x^2 + \sigma_y^2}\]
+\[\sigma_{X_Y}=\sqrt{\sigma_x^2 + \sigma_y^2}\]
+
+If $X$ is a random variable and $a$ and $b$ are both constants:
+\[E(a+bX)=a+bE(x)\]
+\[\sigma_{a+bX}=|b|E(x)\]
 \end{document}
