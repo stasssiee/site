@@ -2,5 +2,63 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Trees}
+\begin{definition}
+    A tree is a connected undirected graph with no simple circuits.
+\end{definition}
 
+Because any tree cannot have a simple circuit, a tree cannot contain multiple edges or loops. Therefore any tree must be a simple graph.
+
+Graphs containing no simple circuits that are not necessarily connected are called forests and have the property
+that each of their connected components is a tree.
+
+\begin{theorem}
+    An undirected graph is a tree if and only if there is a unique simple path between any two of its vertices.
+\end{theorem}
+
+In many applications of trees, a particular vertex of a tree is designated as a root.
+
+\begin{definition}
+    A rooted tree is a tree in which one vertex has been designated as the root and every edge is directed away from the root.
+\end{definition}
+
+If $v$ is a vertex in $T$ other than the root, the parent of $v$ is the unique vertex $u$ such that there is a directed edge from $u$ to $v$.
+When $u$ is the parent of $v$, $v$ is called a child of $u$. Vertices with the same parent are called siblings. The ancestors of a vertex 
+other than the root are the vertices in the path from the root to this vertex, excluding the vertex itself anf including the root.
+The descendants of vertex $v$ are those vertices that have $v$ as an ancestor. A vertex of a rooted tree is called a leaf 
+if it has no children. Vertices that have children are called internal vertices. The root is an internal vertex unless it is the only vertex in the graph, in which case it is a leaf.
+
+If $a$ is a vertex in a tree, the subtreet with $a$ as its root is the subgraph of the tree consisting of $a$ and its descendants and edges incident to these descendants.
+
+\begin{definition}
+    A rooted tree is called an m-ary tree if every internal vertex has no more than $m$ children. The tree is called a full m-ary tree if every 
+    internal vertex has exactly $m$ children. An m-ary tree with $m=2$ is called a binary tree.
+\end{definition}
+
+An ordered rooted tree is a rooted tree where the children of each internval vertex are ordered.
+
+\begin{theorem}
+    A tree with $n$ vertices has $n-1$ edges.
+\end{theorem}
+
+\begin{theorem}
+    A full m-ary tree with $i$ internal vertices contains $n=mi+1$ vertices.
+\end{theorem}
+
+\begin{theorem}
+    A full m-ary tree with 
+    \begin{itemize}
+        \item $n$ vertices has $i=(n-1)/m$ internal vertices and $l=[(m-1)n+1]/m$ leaves 
+        \item $i$ internal vertices has $n=mi+1$ vertices and $l=(m-1)i+1$ leaves, 
+        \item $l$ leaves has $n=(ml-1)/(m-1)$ vertices and $i=(l-1)/(m-1)$ internal vertices.
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}
+    There are at most $m^h$ leaves in an $m$-ary tree of height $h$.
+\end{theorem}
+
+\begin{corollary}
+    If an $m$-ary tree of height $h$ has $l$ leaves, then $h\geq \lceil \log_m l \rceil$. If the $m$-ary tree is full and balanced, 
+    then $h=\lceil \log_m l\rceil$.
+\end{corollary}
 \end{document}

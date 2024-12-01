@@ -460,6 +460,40 @@ If a surface encloses a region then we will choose normal vectors to point in th
 
 \end{definition}
 \section{Stokes' Theorem}
-\section{Divergence Theorem}
+\begin{theorem}[Stokes' Theorem]
+    Let $S$ be an oriented surface in $\mathbb{R}^3$ with a piecewise-smooth closed boundary $C$ whose orientation 
+    is consistent with that of $S$. Assume $\textbf{F}=\langle f,g,h \rangle$ is a vector field whose components have continuous first partial 
+    derivatives on $S$. Then 
+    \[\oint_C \textbf{F}\cdot \dd\textbf{r}=\iint_S (\nabla\times \textbf{F})\cdot\textbf{n}\dd S\]
+    where $\textbf{n}$ is the unit normal vector to $S$ determined by the orientation of $S$.
 
+    Stokes' Theorem says that the line integral around the boundary $C$ of the tangential component of $\textbf{F}$ is equal to the surface integral over 
+    $S$ of the normal component of the curl of $\textbf{F}$.
+
+    The right hand rule relates the orientations of $S$ and $C$ and determines the choice of normal vectors.
+
+    Stokes' Theorem is the three-dimensional version of the circulation form of Green's Theorem.
+\end{theorem}
+Note: If a closed curve $C$ is the boundary of two different smooth oriented surfaces $S_1$ and $S_2$ which both have orientation 
+consistent with that of $C$, then the integrals of $(\nabla \times \textbf{F})\cdot \textbf{n}$ on the two surfaces are equal.
+
+\section{Divergence Theorem}
+\begin{theorem}[Divergence Theorem]
+    Let \textbf{F} be a vector field whose components have continuous first partial derivatives in a connected and simply connected region $D$ in $\mathbb{R}^3$ enclosed 
+    by an oriented surface $S$. Then 
+    \[ \iint_S \textbf{F}\cdot\textbf{n}\dd S = \iiint_D \nabla \cdot \textbf{F}\dd V\]
+    where \textbf{n} is the outward unit normal vector to $S$.
+    
+    The Divergence Theorem says that the flux of $\textbf{F}$ across the boundary surface of $D$ is equal to the triple integral over the divergence of $\textbf{F}$ over $D$.
+\end{theorem}
+
+\begin{theorem}[Divergence Theorem for Hollow Regions]
+    Suppose the vector field $\textbf{F}$ satisfies the conditions of the Divergence Theorem on a region $D$ in $\mathbb{R}^3$ bounded by two oriented surfaces 
+    $S_1$ and $S_2$ where $S_1$ lies within $S_2$. Let $S$ be the entire boundary of $D (S=S_1 \cup S_2)$ and let $\textbf{n}_1$ and $\textbf{n}_2$ be the outward unit normal vectors for $S_1$ and $S_2$ respectively. Then 
+    \[\iiint_D \nabla \cdot \textbf{F} \dd V = \iint_S \textbf{F}\cdot\textbf{n}\dd S = \iint_{S_2} \textbf{F}\cdot\textbf{n}_2\dd S - \iint_{S_1}\textbf{F}\cdot\textbf{n}_1\dd S\]
+
+    This form ot the Divergence Theorem is applicable to vector fields that are not differentiable at the origin, as is the case with some important 
+    radial vector fields of the form:
+    \[\textbf{F}=\frac{\textbf{r}}{|\textbf{r}|^p}\]
+\end{theorem}
 \end{document}

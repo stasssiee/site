@@ -3,6 +3,105 @@
 \begin{document}
 \chapter{Graphs}
 \section{Graphs and Graph Models}
+\begin{definition}
+    A graph $G=(V,E)$ consists of $V$, a nonempty set of vertices (or nodes) and $E$, a set of edges.
+    Each edge has either one or two vertices associated with it, called its endpoints. An edge is said to connect its endpoints.
+\end{definition}
+
+The set of vertices $V$ of a graph $G$ may be infinite. A graph with an infinite vertex set or an infinite number of edges is called an infinite graph, and in comparison, a graph 
+with a finite vertex set and a finite edge set is called a finite graph. 
+
+A graph in which each edges connects two different vertices and where no two edges connect the same pair of vertices is called a simple graph.
+
+Graphs that have multiple edges connecting the same vertices are called multigraphs.
+
+\begin{definition}
+    A directed graph (or digraph) $(V,E)$ consists of a nonempty set of vertices $V$ and a set of directed edges (or arcs) $E$. Each directed edge is associated with an ordered pair of vertices.
+    The directed edge associated with the ordered pair $(u,v)$ is said to start at $u$ and end at $v$.
+\end{definition}
+
 \section{Graph Terminology and Special Types of Graphs}
+\begin{definition}
+    Two vertices $u$ and $v$ in an undirected graph $G$ are adjacent (or neighbors) in $G$ if 
+    $u$ and $v$ are endpoints of an edge $e$ of $G$. Such an edge $e$ is called incident with the vertices of 
+    $u$ and $v$ and $e$ is said to connect $u$ and $v$.
+\end{definition}
+
+\begin{definition}
+    The set of all neighbors of a vertex $v$ of $G=(V,E)$, denoted by $N(v)$, is called the 
+    neighborhood of $v$. If $A$ is a subset of $V$, we denote by $N(A)$ the set of all vertices in 
+    $G$ that are adjacent to at least one vertex in $A$. So, $N(A) = \cup_{v\in A}N(v)$.
+\end{definition}
+
+\begin{definition}
+    The degree of a vertex in an undirected graph is the number of edges incident with it, except that a loop at a vertex 
+    contributes twice to the degree of that vertex. The degree of the vertex $v$ is denoted by $\deg(v)$.
+\end{definition}
+
+A vertex of degree zero is called isolated. It follows that an isolated vertex is not adjacent to any vertex.
+
+A vertex is pendant if and only if it has degree one. Consequently, a pendant vertex is adjacent to exactly one vertex.
+\pagebreak
+\begin{theorem}[The Handshaking Theorem]
+    Let $G=(V,E)$ be an undirected graph with $m$ edges. Then 
+    \[ 2m = \sum_{v\in V}\deg(v) \]
+
+    (Note that this applies even if multiple edges and loops are present.)
+\end{theorem}
+
+\begin{theorem}
+    An undirected graph has an even number of vertices of odd degree.
+\end{theorem}
+
+\begin{definition}
+    When $(u,v)$ is an edge of the graph $G$ with directed edges, $u$ is said to be adjacent to $v$ and $v$ is said to be adjacent from $u$.
+    The vertex $u$ is called the initial vertex of $(u,v)$, and $v$ is called the terminal or end vertex of $(u,v)$. The initial 
+    vertex and terminal vertex of a loop are the same.
+\end{definition}
+
+\begin{definition}
+    In a graph with directed edges the in-degree of a vertex $v$, denoted by $\deg^- (v)$, is the number of edges with $v$ as their terminal vertex.
+    The out-degree of $v$, denoted by $\deg^+ (v)$, is the number of edges with $v$ as their initial vertex. 
+
+    (Note that a loop at a vertex contributes 1 to both the in-degree and the out-degree of this vertex.)
+\end{definition}
+
+\begin{theorem}
+    Let $G=(V,E)$ be a graph with directed edges. Then 
+    \[ \sum_{v\in V}\deg^- (v) = \sum_{v\in V} \deg^+ (v) = |E| \]
+\end{theorem}
+
+\begin{definition}
+    A simple graph $G$ is called bipartite if its vertex set $V$ can be partitioned into two disjoin sets $V_1$ and $V_2$ such that every edge 
+    in the graph connects a vertex in $V_1$ and a vertex in $V_2$ (so that no edge in $G$ connects either two vertices in $V_1$ or two vertices in $V_2$).
+    When this condition holds, we call the pair $(V_1,V_2)$ a bipartition of the vertex set $V$ of $G$.
+\end{definition}
+
+\begin{definition}
+    A simple graph is bipartite if and only if it is possible to assign one of two different colors to each vertex of the graph so that no two adjacent vertices are assigned the same color.
+\end{definition}
+
+\begin{theorem}[Hall's Marriage Theorem]
+    The bipartite graph $G=(V,E)$ with bipartition $(V_1,V_2)$ has a complete matching from 
+    $V_1$ to $V_2$ if and only if $|N(A)|\geq |A|$ for all subsets $A$ of $V_1$.    
+\end{theorem}
+\pagebreak
+\begin{definition}
+    A subgraph of a graph $G=(V,E)$ is a graph $H=(W,F)$, where $W \subseteq V$ and $F\subseteq E$. A graph 
+    $H$ of $G$ is a proper subsgraph of $G$ if $H\neq G$.
+\end{definition}
+
+\begin{definition}
+    Let $G=(V,E)$ be a simple graph. The subgraph induced by a subset $W$ of the vertex set $V$ is the graph $(W,F)$, where the edge set $F$ contains an edge in $E$ 
+    if and only if both endpoints of this edge are in $W$.
+\end{definition}
+
+\begin{definition}
+    The union of two simple graphs $G_1=(V_1,E_1)$ and $G_2=(V_2,E_2)$ is the simple graph with vertex set 
+    $V_1\cup V_2$ and edge set $E_1 \cup E_2$. The union of $G_1$ and $G_1$ is denoted by $G_1 \cup G_2$.
+\end{definition}
+
+
+
 
 \end{document}
