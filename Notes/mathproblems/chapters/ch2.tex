@@ -1,0 +1,228 @@
+\documentclass[../mathproblems.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{AIME}
+\section{2011-2020}
+\subsubsection*{2016 AIME I/1} 
+\textit{December 4, 2024}
+
+For $-1<r<1$, let $S(r)$ denote the sum of the geometric series \[12+12r+12r^2+12r^3+\cdots .\]Let $a$ between $-1$ and $1$ satisfy $S(a)S(-a)=2016$. Find $S(a)+S(-a)$.
+
+\textbf{Solution:}
+
+We can see that $S(a) = 12+12a+12a^2+12a^3+\dots = \frac{12}{1-a}$.
+
+We can also see that $S(-a)=12+12(-a)+12(-a)^2+12(-a)^3+\dots = \frac{12}{1+a}$.
+
+So, $\frac{12}{1-a}\cdot \frac{12}{1+a}=\frac{144}{(1-a)(1+a)} = 2016$.
+
+Now note that we are looking for $S(a)+S(-a) = \frac{12}{1-a}+\frac{12}{1+a}$. Simplifying this, we get $\frac{12(1+a)+12(1-a)}{(1-a)(1+a)} = \frac{24}{(1-a)(1+a)}$.
+
+This looks similar to the equation above that equals $2016$, and we can see all we have to do is divide the equation by $6$, so $\frac{\frac{144}{(1-a)(1+a)}}{6} = \frac{2016}{6} = \boxed{336}$.
+
+\noindent\hrulefill
+\subsubsection*{2015 AIME II/14} 
+\textit{November 18, 2024}
+
+Let $x$ and $y$ be real numbers satisfying $x^4y^5+y^4x^5=810$ and $x^3y^6+y^3x^6=945$. Evaluate $2x^3+(xy)^3+2y^3$.
+
+\textbf{Solution:}
+
+We let $a=xy$ and $b=x+y$.
+
+Factoring $x^4y^4+y^4x^5=810$ we get $(xy)^4(x+y)=810$ and substituting we get $(a^4)(b)=810$.
+
+Factoring the other takes a little more steps.
+
+When we factor $x^3y^6+y^3x^6$ we get $(xy)^3+(x^3+y^3)$.
+
+Note that $(x+y)^3=x^3+y^3+3xy(x+y) \implies b^3=x^3+y^3+3ab$, so $x^3+y^3 = b^3-3ab$.
+
+Therefore, factoring $x^3y^6+y^3x^6=945$ gets $(a^3)(b^3-3ab)=945$.
+
+Note we are also looking for the value of $2(x^3+y^3)+(xy)^3$ or $2(b^3-3ab)+a^3$ or $2b(b^2-3a)+a^3$.
+
+Dividing the two factored equations we get:
+\begin{align*} \frac{(a^3)(b^3-3ab)}{(a^4)(b)}=\frac{945}{810} \\ \frac{a^3b^3-3a^4b}{a^4b} = \frac{945}{810}\\ \frac{b^2}{a}-3 = \frac{945}{810}\\ \frac{b^2}{a}-3 = \frac{7}{6}\\ \frac{b^2}{a}= \frac{25}{6} \end{align*}
+Now for some manipulations.
+
+Solving for $a$ we get $a=\frac{6}{25}b^2$.
+
+I didn't know a better way to go from here, so I plugged it into the equation defined earlier, $(a^4)(b)=810$ to get
+$\left(\frac{6}{25}b^2\right)^4(b)=810$.
+
+After cheating with some desmos calculations this resulted in $\frac{1296}{390625}b^9=810$.
+
+Solving for $b$ we get $b^9 = \frac{890\cdot 390625}{1296}$
+
+Using some more online calculators for simplifying fractions, I got $b^9=\frac{1953125}{8}$. Now the cube root of $1953125$. Now $1953125$ looked like some power of $5$ so I assumed it was $5^9$ and desmos said it was correct! Happy Stasya!
+
+So $b^3 = \sqrt[3]{\frac{1953125}{8}} = \frac{125}{2}$.
+
+Now from earlier, there was the equation $a=\frac{6}{25}b^2$. We are looking for $a^3$ (we will look for $2b(b^2-3a)$ momentarily).
+
+So we can take what we know and plug it into $a^3$:
+
+\begin{align*} a^3 = \left(\frac{6}{25}b^2\right)^3 \\ = \frac{6^3}{25^3}b^6\\ = \frac{6^3}{25^3}b^3b^3\\ =\frac{6^3}{25^3}\frac{125}{2}\frac{125}{2} =\frac{6^3}{4} =54 \end{align*}We have found that $a^3 = 54$!
+
+Ok now we need to find out $2b(b^2-3a)$ to finish the problem.
+
+We can rewrite this as $2b^3-6ab$ to make this easier actually since we already know $b^3$.
+
+We know that $a^3=54$, so we can plug that into one of the first equations we defined at the top, $(a^4)(b)=810$.
+
+This results in $54ab=810$, so $ab=\frac{810}{54} = 15$.
+
+Now we only need to plug these values in: $2\left(\frac{125}{2}\right) - 6(15) = 125-90 = 35$.
+
+Adding $a^3 = 54$ with what I just found, we get $54+35 = \boxed{89}$.
+
+\noindent\hrulefill
+
+\subsubsection*{2012 AIME I/2}
+\textit{December 6, 2024}
+
+The terms of an arithmetic sequence add to $715$. The first term of the sequence is increased by $1$, the second term is increased by $3$, the third term is increased by $5$, and in general, the $k$th term is increased by the $k$th odd positive integer. The terms of the new sequence add to $836$. Find the sum of the first, last, and middle terms of the original sequence. 
+
+\textbf{Solution:}
+
+Let the arithmetic sequence be $a_1 + a_2 + a_3 + \dots + a_n = 715$.
+
+We also have $(a_1+1) + (a_2 + 3) + (a_3 + 5) + (a_n+(2n-1)) = 836$.
+
+Notice that the first arithmetic sequence is in the second arithmetic sequence. We can rewrite the second arithmetic sequence as 
+\[ (a_1 + a_2 + a_3 + \dots + a_n) + (1 + 3 + 5 + \dots + (2n-1))\]
+Which is also $715 + (1+3+5+\dots+(2n-1))=836$.
+
+Note that the sum $(1+3+5+\dots+(2n-1))=n^2$. Therefore we have $n^2 = 836-715 = 121$. We now have $n=11$.
+
+Now we are looking for the sum of $a_1+a_6+a_{11}$. We know that $a_6$ will be the average of $a_1$ and $a_{11}$, so from that we know that $a_1+a_{11} = 2a_6$.
+
+Now if we continue the average of $a_2$ and $a_{10}$ will also be $a_6$ so the sum of $a_2$ and $a_{10}$ is $2a_6$.
+
+If we continue this, we should see that the sum of $a_1 + a_2 + a_3 + \dots + a_{11} = 735$ will just be equivalent to $11a_6 = 735$. 
+
+Note that $a_1+a_{11}+a_6 = 2a_6 + a_6 = 3a_6$, so we can just multiply $735$ by $11a_6=735$ by $\frac{3}{11}$ to get $3a_6=715\left(\frac{3}{11}\right) = \boxed{195}$.
+
+\noindent\hrulefill
+
+\subsubsection*{2010 AIME I/9} 
+\textit{November 25, 2024}
+
+Let $(a,b,c)$ be a real solution of the system of equations $x^3 - xyz = 2$, $y^3 - xyz = 6$, $z^3 - xyz = 20$. The greatest possible value of $a^3 + b^3 + c^3$ can be written in the form $\frac {m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m + n$.
+
+\textbf{Solution:}
+
+Ok pretty much let $a=x$, $b=y$, and $c=z$.
+
+Then we have
+\[ a^3=2+abc \qquad b^3=6+abc \qquad c^3=20+abc \]
+Also adding these we have $a^3+b^3+c^3=28+3(abc)$.
+
+So we can like substitute $r=abc$ and then multiply the first rewritten equations above so:
+\begin{align*} a^3 = 2+r\\ b^3 = 6+r\\ c^3 = 20+r \end{align*}Multiplying these, we get
+$(abc)^3=r^3=(2+r)(6+r)(20+r)$.
+
+Ok now we can just expand:
+\begin{align*} r^3=(12+2r+6r+r^2)(20+r)\\ r^3=240+12r+160r+8r^2+20r^2+r^3\\ 0=240+12r+160r+8r^2+20r^2\\ 0=28r^2+172r+240\\ 0=7r^2+43r+60 \end{align*}The factors that multiply to $420$ that add up to $43$ are $28$ and $15$, so this can be factored to $(7r+15)(r+4)$.
+
+Therefore, $r=-\frac{15}{7}$ and $r=-4$.
+
+Above, we see that $a^3+b^3+c^3=28+3r$, so since both values of $r$ are negative, the negative number closer to 0 will maximize the value.
+
+Therefore, $r=-\frac{15}{7}$.
+
+Plugging this in, we get $a^3+b^3+c^3 = 28+3\left(-\frac{15}{7}\right)$.
+
+Expanding this, we get $\frac{151}{7}$, so $151+7=\boxed{158}$.
+
+\noindent\hrulefill
+\section{2000-2010}
+\subsubsection*{2007 AIME I/2} 
+\textit{November 29, 2024}
+
+A 100 foot long moving walkway moves at a constant rate of 6 feet per second. Al steps onto the start of the walkway and stands. Bob steps onto the start of the walkway two seconds later and strolls forward along the walkway at a constant rate of 4 feet per second. Two seconds after that, Cy reaches the start of the walkway and walks briskly forward beside the walkway at a constant rate of 8 feet per second. At a certain time, one of these three persons is exactly halfway between the other two. At that time, find the distance in feet between the start of the walkway and the middle person.
+
+\textbf{Solution:}
+
+Ah well Al ends up going 6 ft/sec, Cy goes 8 ft/sec and Bob ends up going 10 ft/sec.
+
+So like pretty early on, we can find that Al will end up somewhere in between Cy and Bob, eventually Al will fall behind, but at earlier times it can be assumed that Al will end up halfway between Cy and Bob.
+
+Therefore we have $\frac{8(t-4)+10(t-2)}{2} = 6t$.
+
+Solving for $t$ we get $8t-32+10t-20=12t$ and $6t=52$, so $t=\frac{52}{6}=\frac{26}{3}$.
+
+Substituting this into $6t$ for Al, we get $6\left(\frac{26}{3}\right) = \boxed{52}$.
+
+\noindent\hrulefill
+\subsubsection*{2006 AIME II/1} 
+\textit{October 25, 2024}
+
+In convex hexagon $ABCDEF$, all six sides are congruent, $\angle A$ and $\angle D$ are right angles, and $\angle B, \angle C, \angle E,$ and $\angle F$ are congruent. The area of the hexagonal region is $2116(\sqrt{2}+1).$ Find $AB$.
+
+\textbf{Solution:}
+
+When we draw the diagram, we get a 45-45-90 triangle with a rectangle and a 45-45-90 triangle again on the top of the rectangle.
+
+From this, we can find the area of the rectangle - so the area of the rectangle is $x(x\sqrt{2})$. The two 45-45-90 triangles create a square, so the area is $x^2$ so the area of convex hexagon is $x(x\sqrt{2})+x^2$. 
+
+Simplifying, we get $x^2(\sqrt{2}+1)$. From the given statement in the question, we can find that $x^2=2116$, so $x=\boxed{46}$. 
+
+\noindent\hrulefill
+\subsubsection*{2001 AIME I/3} 
+\textit{November 23, 2024}
+
+Find the sum of the roots, real and non-real, of the equation $x^{2001}+\left(\frac 12-x\right)^{2001}=0$, given that there are no multiple roots.
+
+\textbf{Solution:}
+
+Let $a=x-\frac{1}{4}$.
+
+Then we have
+\[ \left(\frac{1}{4}+a\right)^{2001} + \left(\frac{1}{4}-a\right)^{2001} = 0\]
+The binomial theorem states that $(a+b)^n = \sum_{k=0}^n \binom{n}{k} a^{n-k}b^k$
+
+Expanding both terms we get
+
+\[ \left(\frac{1}{4}+a\right)^{2001} = \sum_{k=0}^{2001} \binom{2001}{k}\left(\frac{1}{4}\right)^{2001-k}a^k\]and
+\[ \left(\frac{1}{4}-a\right)^{2001} = \sum_{k=0}^{2001} \binom{2001}{k}\left(\frac{1}{4}\right)^{2001-k}(-a)^k\]
+Adding these two together, we get
+\[ \sum_{k=0}^{2001} \binom{2001}{k}\left(\frac{1}{4}\right)^{2001-k} (a^k+(-a)^k)\]
+Note that $a^k+(-a)^k$ will be equal to zero when $k$ is an odd number, so only when $k$ is an even number will there be a non-zero value and that it will result in $2a^k$ given an even $k$.
+
+We therefore get:
+\[ 2\sum_{k=0}^{2001} \binom{2001}{k}\left(\frac{1}{4}\right)^{2001-k} a^k = 0\]
+Therefore the second term will have an odd power, and therefore a coefficient of $0$. Therefore by Vieta's, the sum of the roots will be $0$ divided by something, or $0$.
+
+Because the highest power will be $2000$, then there are $2000$ roots. Substituting back to the original equation, we can see that $a = x-\frac{1}{4}$. The sum of the roots of $x$ will be the sum of the roots of $a+2000\cdot\frac{1}{4}$ or $\boxed{500}$.
+
+\noindent\hrulefill
+\section{Before 2000}
+\subsubsection*{1991 AIME/1} 
+\textit{November 21, 2024}
+
+Find $x^2+y^2_{}$ if $x_{}^{}$ and $y_{}^{}$ are positive integers such that \begin{align*} xy+x+y&=71, \\ x^2y+xy^2&=880. \end{align*}
+
+\textbf{Solution:}
+
+Let $a=xy$ and $b=x+y$.
+
+By substituting these variables in, we get $a+b=71$ and $ab = 880$.
+
+We can solve for $a$ by rearranging $a+b = 71$ to $b=71-a$.
+
+Substituting this into the second equation, we get $a(71-a)=880$.
+
+This simplifies to $a^2-71a-880$.
+
+Factoring this, we get $(a-16)(a-55)$, so $a=16,55$.
+
+We can show that $a\neq 16$ because in this case, it would mean that $x+y=55$, and there are no two factors that add up to 55 and can multiply to 16.
+
+So, $a=55$ or $xy=55$, so $(x,y)$ is $(11,5)$ or $(5,11)$.
+
+Therefore, $5^2+11^2=\boxed{146}$.
+
+\noindent\hrulefill
+\end{document}

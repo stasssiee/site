@@ -156,4 +156,60 @@ If $X$ and $Y$ are two independent random variables:
 If $X$ is a random variable and $a$ and $b$ are both constants:
 \[E(a+bX)=a+bE(x)\]
 \[\sigma_{a+bX}=|b|E(x)\]
+
+\section{The Binomial Distribution}
+Requirements for a Bernoulli Trial:
+\begin{enumerate}
+    \item Two Possible Outcomes 
+    \item Probability of Success is the Same for Each Trial 
+    \item Trials are Independent 
+\end{enumerate}
+
+If we take a Bernoulli trial and then we are interested in the number of successes in a specific number of trials, we create a Binomial Probability Distribution.
+
+There are four requirements for a setting to follow the binomial probability distribution. As long as these four things are true, we can use the binomial probability model for calculating the probabilities.
+
+\begin{itemize}
+    \item BINARY: Each trial falls into one of two categories - we call them ``success'' or ``failure''. Success does not necessarily mean a positive outcome, but instead, the outcome we are looking for.
+    \item Independent Trials
+    \begin{itemize}
+        \item Each trial is independent of the next 
+        \item Reasonable assumption for coins, cards with replacement, spinners, rolling a die 
+        \item What about sampling without replacement, when it can't be avoided? This is where the ``10\% condition'' comes in. The 10\% condition says that if you are sampling from a large enough population, you can proceed with sampling without replacement as though the trials were independent.
+    \end{itemize}
+    \item Number of Trials is fixed: we are counting the number of successes from a set number of trials (called $n$)
+    \item Same probability: The probability of successes (called $p$) is the same for each trial 
+\end{itemize}
+
+If all four points are satisfied, you can compute the probability you get a certain number of successes in a specified number of trials:
+
+$n$ is the number of independent trials, $p$ is the probability of successes, and $x$ is the number of successes. 
+
+\[ P(X=x) = \binom{n}{x}p^x(1-p)^{n-x} \]
+where $\binom{n}{x}=nCx = \frac{n!}{x!(n-x)!}$
+
+The mean is $\mu_x = np$ and the standard deviation is $\sigma_x = \sqrt{np(1-p)}$.
+
+Distributions in your calculator often have ``pdf'' and ``cdf''.
+
+pdf is the probability distribution function and is used when trying to calculate $P(X=k)$ and cdf is the cumulative distribution function and is used when you are trying to calculate $P(X\leq k)$.
+
+Specifically for Binomial distributions we want 
+\begin{itemize}
+    \item 2nd - VARS - A: binompdf(trials, probability of success, k) for $P(X=k)$
+    \item 2nd - VARS - B: binomcdf(trials, probability of success, k) for $P(X\leq k)$
+\end{itemize}
+\section{The Geometric Distribution}
+WHen we perform many independent trials of the same chance process and are interested in the occurrence of the first success, a geometric setting arises.
+
+If $X$ has a geometric distribution with a probability of success $p$ on each trial and $x$ represents the trial that you get your first success, the probability that 
+$X$ equals $x$ is given by 
+\[ P(X=x) = (1-p)^{x-1}(p) \]
+
+Specifically for geometric distributions we want... 
+\begin{itemize}
+    \item 2nd - Vars - E: geometpdf(probability of success, k) for $P(X=x)$
+    \item 2nd - Vars - F: geometcdf(probability of success, k) for $P(X\leq x)$
+\end{itemize}
+For this distribution, $\mu_x = \frac{1}{p}$ and $\sigma_x = \frac{\sqrt{1-p}}{p}$
 \end{document}

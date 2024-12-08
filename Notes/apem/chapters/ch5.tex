@@ -3,7 +3,75 @@
 \begin{document}
 \chapter{Magnetic Fields and Electromagnetism}
 \section{Magnetic Fields}
+A magnetic field is a vector field that can be used to determine the magnetic force exerted 
+on moving electric charges, electric currents or magnetic materials.
+\begin{itemize}
+    \item Produced by magnetic dipoles or combinations of dipoles, but never by monopoles.
+    \item Magnetic dipoles have north and south polarity.
+\end{itemize}
+
+A magnetic field can be represented by using vector field maps.
+
+Magnetic field lines must form closed loops, as described by Gauss's law of magnetism.
+\begin{itemize}
+    \item Gauss's law of magnetism is Maxwell's second equation.
+    \item $\oint \vec{B} \cdot \dd\vec{A} = 0$
+\end{itemize}
+
+Magnetic dipoles results from the circular of rotational motion of electric charges.
+
+A magnetic dipole when placed in a magnetic field will align with the magnetic field.
+
+A material's composition influences its magnetic behavior in the presence of an external magnetic field.
+
+Magnetic permeability is a measurement of magnetization in a material in response to an external magnetic field.
+
+Free space has a constant value of magnetic permeability, known as the vacuum permeability, $\mu_0$, that appears in equations representing physical relationships.
+\[ \mu_0 = 4\pi \times 10^{-7} \text{T$\cdot$ m/A} \]
 \section{Magnetism and Moving Charges}
-\section{Magnetic Fields of Current-Carrying Wires and the Biot-Savart Law}
-\section{Ampère's Law}
+A single moving charged object produces a magnetic field.
+\begin{itemize}
+    \item It is dependent on the object's velocity and the distance between the point and the object.
+    \item The direction of the magnetic field is perpendicular to both the velocity and the position vector from the object. 
+    \begin{itemize}
+        \item Determined by using a right-hand rule.
+    \end{itemize}
+\end{itemize}
+
+A magnetic field will exert a force on a charged object within that field, with magnitude and direction that depend on the cross-product of the charge's velocity and the magnetic field.
+\[ F_B = q(\vec{V}\times \vec{B})=qvB\sin\theta \]
+
+In a region containing both a magnetic field and an electric field, a moving charged particle will experience independent forces from each field.
+
+The Hall effect describes the potential difference created in a conductor by an external magnetic field that has a component perpendicular to the direction of charges moving in the conductor.
+\section{Biot-Savart Law}
+The Biot-Savart law defines the magnitude and direction of a magnetic field created by an electric current.
+\[ \dd \vec{B} = \frac{\mu_0}{4\pi} \frac{I(\dd l\times \hat{r})}{r^2} \]
+
+The magnetic field vectors around a small segment of a current-carrying wire are tangent to concentric circles centered on that wire.
+
+The Biot-Savart Law can be used to derive the magnitudes and directions of magnetic fields around segments of current-carrying wires.
+\[ B_{loop} = \frac{\mu_0 I}{2R} \]
+
+A magnetic field will exert a force on a current-carrying wire.
+\[ F_B = \int I(\dd \vec{l}\times \vec{B}) = IlB\sin\theta \]
+
+\section{Ampere's Law}
+Ampere's law relates the magnitude of the magnetic field to the current enclosed by an imaginary path called an Amperian Loop.
+\[\oint \vec{B}\cdot \dd \vec{l} = \mu_0 I_{enc} \]
+
+Ampere's law can be used to determine the magnetic field near a long, straight current carrying wire.
+
+All solenoids are assumed to very long, with uniform magnetic fields inside the solenoids and negligible magnetic fields outside the solenoids.
+
+Ampere's law can be used to determine the magnetic field inside of a long solenoid.
+\[ B_{sol} = \mu_0 nI\]
+
+$n = \frac{\text{Turns}}{\text{Lenght}} = N/L$
+
+An Amperian loop is a closed path arround a current-carrying conductor.
+
+Ampere's law is the third of Maxwell's equations.
+\[ \oint \vec{B} \cdot \dd \vec{l} = \mu_0 I + \mu_0 \epsilon_0 \frac{\dd\varphi_E}{\dd t}\]
+
 \end{document}

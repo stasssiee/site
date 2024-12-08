@@ -1,0 +1,64 @@
+\documentclass[../mathproblems.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Other Computational Contests}
+\section{HMMT}
+\subsubsection*{2013 HMMT Algebra/4} 
+\textit{November 28, 2024}
+
+Determine all real values of $A$ for which there exist distinct complex numbers $x_1$, $x_2$ such that the following three equations hold:
+\begin{align*}x_1(x_1+1)&=A\\x_2(x_2+1)&=A\\x_1^4+3x_1^3+5x_1&=x_2^4+3x_2^3+5x_2.\end{align*}
+
+\textbf{Solution:}
+
+Ok I'm going to let $a=x_1$ and $b=x_2$ for this, because for the life of me I can't type underscores.
+
+So we can rewrite the given equations as
+\begin{align*} a^2+a = A\\ b^2+b = A\\ a^4+3a^3+5a-b^4-3b^3-5b = 0 \end{align*}
+Note that for the third equation I just subtracted stuff.
+
+So let's go factor that third equation
+\begin{align*} a^4-b^2+3a^3-3b^3+5a-5b\\ (a^2+b^2)(a^2-b^2)+3(a^3-b^3)+5(a-b)\\ (a^2+b^2)(a+b)(a-b)+3(a-b)(a^2+ab+b^2)+5(a-b)=0 \end{align*}
+Note that we can factor out $(a-b)$ from this, therefore we can get
+\[(a^2+b^2)(a+b)+3(a^2+ab+b^2)+5=0\]
+Now we can find out what $a+b$ is.
+
+We can make $a^2+a = b^2+b$, so we can get $a^2-b^2+a-b$ or $(a+b)(a-b)+(a-b)=0$. Similar to above where we factor $a-b$ out, we get $a+b+1=0$, or $a+b=-1$.
+
+Now substituting this back in, we can get
+\begin{align*} -(a^2+b^2)+3a^2+3ab+3b^2+5=0\\ -a^2-b^2+3a^2+3ab+3b^2+5=0\\ 2a^2+2b^2+3ab+5=0 \end{align*}
+Now using the above where $a+b=-1$, we can notice that we can actually find a way to write similar to the terms of the other equation we got. Multiplying both sides by $2$ and squaring, we can get $2(a+b)^2=2$. This is equal to $2=2a^2+2b^2+4ab$. So substituting some values in, we can get \[2-ab=2a^2+2b^2+3ab + 5\]. So we can rewrite this now as
+\[2-ab-(2a^2+2b^2+ab)\]Note that term in parenthesis is just equal to $-5$, so we get $2-ab+5 = 0$, therefore $ab=7$.
+
+Now we can find $A$ by just using the equations given originally.
+
+Adding both $a^2+a$ and $b^2+b$, we get $a^2+b^2+a+b=2A$.
+
+$a^2+b^2$ is equal to $(a+b)^2-2ab$, or $1-14 = -13$.
+
+Therefore, we get $-13-1=-14 = 2A$, or $A=\boxed{-7}$.
+
+\noindent\hrulefill
+\subsubsection*{2004 HMMT Algebra/4} 
+\textit{November 21, 2024}
+
+Find all real solutions to $x^4+(2-x)^4=34$.
+
+\textbf{Solution:}
+
+Note that $2-x$ and $x$ are symmetric around $1$, so substituting $x=t+1$, we can get $x=t+1$ and $2-x=1-t$.
+
+We can write $(1+t)^4+(1-t)^4=34$ as a result of this.
+
+Expanding, the two we get
+\begin{align*} (1+2t+t^2)^2+(1-2t+t^2)^2\\ (1+2t+t^2+2t+4t^2+2t^3+t^2+2t^3+4)+(1-2t+t^2-2t+4t^2-2t^3+t^2-2t^3+t^4)\\ 2t^4+12t^2=32\\ 2t^4+12t^2-32=0 \end{align*}
+Dividing by $2$, we get $t^4+6t^2-16=0$.
+
+Substituting $t^2=a$, we can rewrite this as $a^2+6a-16=0$.
+
+Factoring results in $a=-8$ and $a=2$. Since $t^2$ cannot be equal to $-8$, the only number for $a$ that works is $2$. Therefore, $t=\pm\sqrt{2}$.
+
+Substituting this back to the original substitution of $x=t+1$, we get the answer as $\boxed{1\pm\sqrt{2}}$.
+
+\noindent\hrulefill
+\end{document}

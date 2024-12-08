@@ -3,6 +3,7 @@
 \begin{document}
 \chapter{Proof}
 \subsection*{Introduction to Proof}
+\subsubsection*{Introduction to Proof}
 In this section we will working with these topics:
 \begin{itemize}
     \item Consequence and Equivalence
@@ -11,6 +12,8 @@ In this section we will working with these topics:
     \item Disproof by Counter-Example
     \item Proof by Contradiction
 \end{itemize}
+
+\subsubsection*{Introducing Consequence and Equivalence}
 
 When we look at consequence, we essentially say that ``$a$ implies $b$'', or:
 \[a\rightarrow b\]
@@ -34,9 +37,142 @@ Let's show a logical equivalence. Let $a$ be the statement $n^2$ is odd and $b$ 
 
 We know that when $n^2$ is odd, that $n$ is odd when we list out the odd squared numbers. We can see the converse is true as well in this statement since every time a number $n$ is squared, we are given an odd number, therefore:
 \[a\leftrightarrow b\]
-\subsection*{Proof by Exhaustion}
-\subsection*{Proof by Deduction}
-\subsection*{Disprove by Counter-Example}
-\subsection*{Proof by Contradiction}
 
+\subsubsection*{Consequence and Equivalence Examples}
+Let's give some examples where we determine whether one of the statements implies the other statement.
+
+Given that an object is a cube and an object has six faces. If an object is a cube, it definitely has six faces. Therefore, 
+The object is a cube $\implies$ The the object has six faces. The opposite is not true, because it can be a cuboid, for example.
+
+Given $x=29$ and $x>10$, then $x=29 \implies x>10$. The opposite is not true, since there are many more values where $x>10$.
+
+Given $x^3=x$ and $x=-1$. We need to find the solutions of $x^3=x$ first. By subtracting and obtaining $x^3-x=0$, we can factor this to $x(x^2-1)=0$. Then we have $x(x-1)(x+1)=0$, and the solution of this equation are $0,1$, and $-1$.
+Therefore $x^3=x$ does not imply $x=-1$. However, going the other way, $x=-1 \implies x^3=x$.
+
+Given $n$ is a positive integer greater than 1, we are given the statements that $n$ is a prime number and $n$ has exactly two factors.
+$n$ always has two factors if it is prime, then $n$ is a prime number $\implies$ $n$ has exactly two factors. If $n$ has exactly two factors, then it must be prime, so we can see that 
+$n$ has exactly two factors $\implies$ $n$ is a prime number, so $n$ is a prime number $\leftrightarrow$ $n$ has exactly two factors.
+\subsection*{Proof by Exhaustion}
+\subsubsection*{Introducing Proof by Exhaustion}
+Proof by Exhaustion is trying all possible variations to prove a statement is true.
+
+We are going to prove a conjecture, which is a statement that we believe to be correct but needs to be proved.
+
+The conjecture is ``97 is a prime number''. To show this, we need to show that 97 has two factors, 1 and itself.
+
+Let's try some numbers. 
+
+$97\div 2$ is 48.5, clearly 2 is not a factor of 97. $97\div 3$ is $32.\overline{3}$. Therefore, 3 is not a factor either.
+We wouldn't need to try 4 since 2 already isn't a factor. Let's try 5. $97\div 5$ is 19.4, so 5 is also not a factor of 97. We don't need to try 6 since 3 and 2 are both not factors of 97.
+Now we try 7. $97\div 7=13.85\dots$, so 7 is not a factor either. It's clear we are just working through all the prime numbers now.
+
+We don't need to go further than this because when we square root 97, we will get a number a little less than 10. Because the square root of 97 is a little less than 10, 
+when we go beyond 10, if we are to find any factor above 10, then there would have to have been a factor less than 10 to multiply with to make 97.
+
+In other words, because there were no factors below the square root of 97, this implies there are no factors larger than the square root of 97, indicating that 97 is a prime number.
+
+\subsubsection*{Proof by Exhaustion Examples}
+Let's do three examples.
+
+\begin{itemize}
+    \item No square number ends in an 8
+    
+    This problem looks at squaring each unit digit. If a number ends in a 1, the square one gets will end in a 1 as well.
+    If the number ends in a 2, and I square it, then this number will end with a 4. If the number ends with a 3, the number will end with a 9.
+    If the number ends with a 4, the squared number will end with a 6. If the number ends with a 5, the squared number will end with a 5. 
+    If the number ends with a 6, the squared number will end with a 6. If the number ends with a 7, the squared number will end with a 9.
+    If the number ends with a 8, the squared number will end with a 4. If the number ends with a 9, the squared number will end with a 1.
+    If the number ends with a 0, the squared number will end with up with a 0.
+    
+    As we can see, there are no numbers that can have a unit digit of 8.
+\end{itemize}
+
+\begin{itemize}
+    \item If $n$ is an integer and $2\leq n\leq 7$, then $A=n^2+2$ is not divisible by 4.
+    
+    To show this, lets consider all values of $n$. 
+
+    $\begin{array}{|c|c|c|}
+    \hline 
+    n & n^2+2 & \text{divisible by 4?} \\
+    \hline 
+    2 & 6 & \text{no} \\
+    3 & 11 & \text{no} \\
+    4 & 18 & \text{no} \\
+    5 & 27 & \text{no} \\ 
+    6 & 38 & \text{no} \\
+    7 & 51 & \text{no} \\
+    \hline
+    \end{array}$
+    
+    so in none of these cases, none of these values of $A$ are divisible by 4 and we have gone through every single part of this and show that this is never divisible by 4.
+\end{itemize}
+
+\begin{itemize}
+    \item Every integer that is a perfect cube is either a multiple of 9, is 1 more than a multiple of 9, or is 1 less than a multiple of 9.
+    
+    The first statement says that $n=3k$, that the number is a multiple of 3, or $n=3k-1$, one less than a multiple of three, or $n=3k-2$, a number is two less than a multiple of 3.
+
+    Let's start by cubing. $n^3=27k^3$. Because 27 is a multiple of 9, $k$ is an integer and $n^3$ is a multiple of 9. 
+
+    Let's look at $n=3k-1$. $n^3=27k^3-27k^2+9k-1$. If we factor a 9 out, we get $9(3k^3-3k^2+k)-1$. This is clearly 1 less than a multiple of 9.
+
+    Now let's look at $n=3k-2$. $n^3=27k^3-54k^2+36k-8$. If I write the 8 as a $-9+1$, we can factor out the $9$ and get $9(3k^3-6k^2+4k-1)+1$, or one more than a multiple of 9.
+\end{itemize}
+\subsection*{Proof by Deduction}
+\subsubsection*{Introduction Proof by Deduction}
+Proof by deduction is all about going through a logical sequence of arguments where you will start with something you know to be true, and subsequently, the next thing is true, etc, until the conjecture is true.
+
+Conjecture: ``The sum of any two consecutive odd numbers is a multiple of 4.''
+
+We can start with an odd number $2n+1$, since $2n$ is always an even number, so adding 1 will make it odd. If we are looking for the next consecutive odd number, then we can see this as $2n+3$.
+The conjecture talks about the sum of the consecutive odd numbers. Adding them together, we get $4n+4$, which factors to $4(n+1)$, which is always a multiple of 4.
+
+
+\subsubsection*{Proof by Deduction Example}
+\begin{example}
+    For any four consecutive integers, the difference between the prodcut of the last two and the product of the first two of these numbers is equal to their sum.
+
+    Let's first label four consecutive integers as $n, n+1, n+2, n+3$. We have to find the product of the last two and the product of the last two and to find the difference between the two things.
+
+    Therefore, we are finding $(n+2)(n+3)-n(n+1)$. Expanding this, we get $n^2+5n+6-n^2-n$. Simplifying, we get $4n+6$. 
+
+    Adding the consecutive integers, we have $n+n+1+n+2+n+3=4n+6$. We have shown that the difference between the products of the last two and the first two is the same as the sum of the four numbers.
+\end{example}
+\pagebreak
+\begin{example}
+    $k^3-k$ is divisible by 6 for all integers $k>1$.
+
+    First we can factor $k^3-k$ to $k(k^2-1)$. We can factor this further as $k(k-1)(k+1)$. Now if we write this in a slightly different order, as $(k-1)(k)(k+1)$. What we have here is the product of three consecutive integers. At least one of these integers therefore will be an even integer, so $k^3-k$ is divisible by 2.
+
+    Now because we have three consecutive integers, precisely one of them will be a multiple of 3 because since $k>1$, there will always be a number that is divisible by 3 when consecutively counting. Therefore $k^3-k$ is also divisible by 3.
+
+    Because $k^3-k$ is divisible by 2 and 3, then it is divisible by 6.
+\end{example}
+\subsection*{Disprove by Counter-Example}
+\subsubsection*{Introducing Disproof by Counter Example}
+Sometimes we are asked to find a single example where a conjecture fails.
+
+Let's start with the conjecture ``The value of $n^2+n+11$ is prime for all integers $n>0$''
+
+When $n=11$, we can see that $11^2+11+11$ which is equal to $11(13)$ which is evidently not prime.
+
+\subsubsection*{Disproof by Counter Example Examples}
+\begin{example}
+    If $x^2>x$, then $x>1$. 
+
+    When we plug in $x=-2$, we can see that $4>-2$, but $-2$ is not greater than 1.
+\end{example}
+
+\begin{example}
+    If $n$ is prime, then $n^2+n+1$ is prime.
+
+    When we plug in $n=7$, we get $n^2+n+1=57$, which is not prime, so this conjecture fails.
+\end{example}
+
+\begin{example}
+    The sum of $n$ consecutive integers is divisible by $n$ (where $n$ is a positive integer).
+
+    We can easily disprove this in one example. $1+2+3+4=10$, which is not divisible by 4.
+\end{example}
 \end{document}
