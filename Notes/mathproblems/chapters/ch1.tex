@@ -3,6 +3,27 @@
 \begin{document}
 \chapter{AMC/AHSME}
 \section{2011-}
+\subsubsection*{2020 AMC 12B/8}
+\textit{December 12, 2024}
+
+How many ordered pairs of integers $(x, y)$ satisfy the equation 
+
+\[x^{2020}+y^2=2y?\]
+
+\textbf{Solution:}
+
+By completing the square we get that $x^{2020}+(y-1)^2=1$.
+
+Observe that $x=\pm 1$ or $0$ for this to work, otherwise $(y-1)^2$ will be negative which is kind of hard to do. 
+
+Therefore, when $x=\pm 1$, we have $1+y^2=2y$, and this is equivalent when $y=1$, so we have $(-1,1)$ and $(1,1)$ as solutions.
+
+When $x=0$, we have that $y^2=2y$, which has two solutions, when $y=0$ or when $y=2$, so we have $(0,0)$ and $(0,2)$ as solutions.
+
+Therefore, there are $\boxed{4}$ pairs of integers that satisfy this equation.
+
+\noindent\hrulefill
+
 \subsubsection*{2019 AMC 12A/7} 
 \textit{November 28, 2024}
 
@@ -80,6 +101,30 @@ After we subtract $95$ from all the numbers, we get $563, 570, 577, 584$. The on
 The sum of the first five test scores will have to be divisible by $5$, so note that because of this, the only numbers you can subtract from $570$ that will result in a number that can be divisible by $5$ are $95$ and $100$. $95$ cannot be subtracted from this because note the condition in the question that states that each score has to be different, so the answer is $\boxed{100}$.
 
 \noindent\hrulefill
+
+\subsubsection*{2016 AMC 12A/7}
+\textit{December 10, 2024}
+
+Which of these describes the graph of $x^2(x+y+1)=y^2(x+y+1)$ ?
+
+$\textbf{(A)}\ \text{two parallel lines}\\ \textbf{(B)}\ \text{two intersecting lines}\\ \textbf{(C)}\ \text{three lines that all pass through a common point}\\ \textbf{(D)}\ \text{three lines that do not all pass through a common point}\\ \textbf{(E)}\ \text{a line and a parabola}$
+
+\textbf{Solution:}
+
+Case 1: $x+y+1=0$
+
+In this case, then they are equal, so $y=-x-1$.
+
+Case 2: $x+y+1\neq 0$
+
+In this case, we have $x^2=y^2$, so $y=\pm x$. 
+
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{vNAcilQ.png}
+\end{center}
+
+Therefore from this, we have $\boxed{\text{three lines that do not all pass through a common point}}$
+
 \subsubsection*{2014 AMC 12A/19}
 \textit{December 5, 2024}
 
@@ -205,6 +250,26 @@ x^2+y^2+2xy=x^2+y^2 \\
 From this we can see that $x=0$ or $y=0$, so the graphs will just be the $x$-axis and the $y$-axis which is $\boxed{\text{two lines}}$.
 
 \noindent\hrulefill
+
+\subsubsection*{2006 AMC 12B/8}
+\textit{December 9, 2024}
+
+The lines $ x = \frac 14y + a$ and $ y = \frac 14x + b$ intersect at the point $ (1,2)$. What is $ a + b$?
+
+\textbf{Solution:}
+
+Simply plug in $x$ and $y$ and we should get 
+\begin{align*}
+    1 = \frac{1}{2} + a \\
+    2 = \frac{1}{4} + b 
+\end{align*}
+
+Adding the two equations together, we get $3=\frac{3}{4}+a+b$, so $a+b = 3-\frac{3}{4} = \boxed{\frac{9}{4}}$.
+
+\noindent\hrulefill
+
+
+
 \subsubsection*{2005 AMC 12B/7} 
 \textit{December 4, 2024}
 
@@ -321,6 +386,22 @@ Substituting in $xy$, we get $6(x+y)+x+y = 6x+6y+x+y = 7x+7y = 63$ or $x+y=9$.
 Squaring both sides, we get $(x+y)^2 = x^2+y^2+2xy = 81$. Substituting in $xy$ once again, we get $x^2+y^2+2(6)=81$, so $x^2+y^2=81-12=69$.
 
 \noindent\hrulefill
+
+\subsubsection*{1963 AHSME/3}
+\textit{December 8, 2024}
+
+If the graphs of $2y+x+3=0$ and $3y+ax+2=0$ are to meet at right angles, the value of $a$ is:
+
+\textbf{Solution:}
+
+The dot product of two vectors must be $0$.
+
+So let the two vectors be $\langle 1,2 \rangle$ and $\langle a,3\rangle$. The dot product of these two vectors, $\langle 1,2\rangle \cdot \langle a,3\rangle = (1)(a) + 2(3) = a+6$. So, when $a+6=0$, the two vectors will be perpendicular, so solving for $a$, we get $a=\boxed{-6}$.
+
+\noindent\hrulefill
+
+
+
 \subsubsection*{1951 AHSME/50} 
 \textit{November 29, 2024}
 Tom, Dick and Harry started out on a $100$-mile journey. Tom and Harry went by automobile at the rate of $25$ mph, while Dick walked at the rate of $5$ mph. After a certain distance, Harry got off and walked on at $5$ mph, while Tom went back for Dick and got him to the destination at the same time that Harry arrived. The number of hours required for the trip was:

@@ -61,4 +61,34 @@ Factoring results in $a=-8$ and $a=2$. Since $t^2$ cannot be equal to $-8$, the 
 Substituting this back to the original substitution of $x=t+1$, we get the answer as $\boxed{1\pm\sqrt{2}}$.
 
 \noindent\hrulefill
+
+\section{Math Prize for Girls}
+\subsubsection*{2018 Math Prize for Girls/19}
+\textit{December 13, 2024}
+
+Consider the sum
+\[ S_n = \sum_{k = 1}^n \frac{1}{\sqrt{2k-1}} \, . \]Determine $\lfloor S_{4901} \rfloor$. Recall that if $x$ is a real number, then $\lfloor x \rfloor$ (the floor of $x$) is the greatest integer that is less than or equal to $x$.
+
+\textbf{Solution:}
+
+Just by plugging in $1$, we can see that $S_1 = 1$, but after this it is hard to add square roots.
+
+So, we can let $T_n = \sum_{k=2}^n \frac{1}{\sqrt{2k-1}}$ and we can see that $S_n = 1+T_n$.
+
+So now we can bound the solution by writing
+\[ \sqrt{2k-1} + \sqrt{2(k-1)-1} < 2\sqrt{2k-1} < \sqrt{2k-1}+\sqrt{2(k+1)-1} \]
+To put this in a form similar to the original equation, we can find the reciprocal of each. From this we get
+\[ \frac{1}{\sqrt{2k-1}+\sqrt{2(k-1)-1}} < \frac{1}{2\sqrt{2k-1}} < \frac{1}{\sqrt{2k-1}+\sqrt{2(k+1)-1}} \]
+Rationalising the denominator, we get that
+\[ \frac{\sqrt{2k-1}-\sqrt{2(k-1)-1}}{2} < \frac{1}{2\sqrt{2k-1}} < \frac{\sqrt{2(k+1)-1}-\sqrt{2k-1}}{2} \]
+So we are actually now finding that $T_{4901}$ is bounded between
+\[ \sum_{k=2}^{4901} \sqrt{2k-1}-\sqrt{2(k-1)-1} < T_{4901} < \sum_{k=2}^{4901} \sqrt{2(k+1)-1}-\sqrt{2k-1} \]
+We see that many terms actually cancel out on both sides of the inequality, so when we sum all the terms, the lower bound ends up being $\sqrt{9801}-1$. The square root of $9801$ is actually $99$, so this bound equals $98$.
+
+The other bound is $\sqrt{9803}-\sqrt{3}$. We can assume that $\sqrt{9803}$ is a little larger than $99$ and that the square root of $3$ is a little under $2$, so we can assume that it is around $97$.
+
+So, flooring $T_{4901}$, we should get $97$. So $S_{4901} = 1 + 97 = \boxed{98}$.
+
+\noindent\hrulefill
+
 \end{document}

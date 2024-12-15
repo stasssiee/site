@@ -79,6 +79,73 @@ Adding $a^3 = 54$ with what I just found, we get $54+35 = \boxed{89}$.
 
 \noindent\hrulefill
 
+\subsubsection*{2015 AIME I/10}
+\textit{December 8, 2024}
+
+Let $f(x)$ be a third-degree polynomial with real coefficients satisfying \[|f(1)|=|f(2)|=|f(3)|=|f(5)|=|f(6)|=|f(7)|=12.\] Find $|f(0)|$. 
+
+\textbf{Solution:}
+
+We have this graph:
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{GviFvqR.png}
+\end{center}
+
+From this, we see that for $3$ of these points $f(x)=12$ and the for the other three points we will have $f(x)=-12$.
+
+In the regions $A$, $B$, and $C$, each region has a point where $f(x)=12$ and $f(x)=-12$, and we can see from the visual that $f(1)=f(5)=f(6)=12$ and $f(2)=f(3)=f(7)=-12$.
+
+Now knowing that a cubic polynomial is in the form $f(x) = ax^3+bx^2+cx+d$, we can find what $f(0)$ is. Plugging in $0$, we find that $f(0)=d$. 
+
+We can now set up a system of equations from the knowledge we know above.
+\begin{align*}
+a+b+c+d=12\\
+8a+4b+2c+d=-12\\
+27a+9b+3c+d=-12\\
+125a+25b+5c+d=12\\
+216a+36b+6c+d=12\\
+343+49b+7c+d=-12
+\end{align*}
+
+Now since we have $4$ variables, we can just use the first four of these equations.
+
+Subtracting the first equation from the second equation we get $7a+3b+c=-24$. Let's call this equation $5$.
+
+Subtracting the first equation from the third equation we get $26a+8b+2c=-24$. Let's call this equation $6$.
+
+Subtracting the first equation from the fourth equation we get $124a+24b+4c=0$. Let's call this equation $7$.
+
+Now multiplying equation $5$ by $2$, we get $14a+6b+2c=-48$ and subtracting this from equation $6$, we get $6a+b=12$
+
+Multiplying equation $6$ by $2$, we get $52a+16b+4c=-48$ and subtracting this from equation $7$, we get $9a+b=6$.
+
+Now subtracting the two equations we just got, we can get $9a+b-(6a+b) = 3a = -6$, so $a=-2$.
+
+Now plugging this back into $6a+b$, we get $-12+b=12$, so $b=24$.
+
+Plugging $a$ and $b$ into equation $5$, we get $58+c=-24$. So $c=-82$.
+
+Plugging this back into the first original equation, we get $-2+24-82+d=12$ so $d=12+60=\boxed{72}$.
+
+\noindent\hrulefill
+
+\subsubsection*{2012 AIME II/2}
+\textit{December 12, 2024}
+
+Two geometric sequences $a_1, a_2, a_3, \ldots$ and $b_1, b_2, b_3, \ldots$ have the same common ratio, with $a_1 = 27$, $b_1=99$, and $a_{15}=b_{11}$. Find $a_9$. 
+
+\textbf{Solution:}
+
+We have the two sequences $27,a_2,a_3,\dots$ and $99,b_2,b_3,\dots$. 
+
+Since they have the same common ratio, we can just do $27r^{14} = 99r^{10}$, and we are looking for $27r^8$. 
+
+When we divide the two, we get that $27r^4 = 99$, so $r^4 = \frac{99}{27} = \frac{11}{3}$. 
+
+The answer is therefore $27\left(\frac{11}{3}\right)\left(\frac{11}{3}\right) = 3\cdot 121 = \boxed{363}$.
+
+\noindent\hrulefill
+
 \subsubsection*{2012 AIME I/2}
 \textit{December 6, 2024}
 
@@ -170,6 +237,30 @@ From this, we can find the area of the rectangle - so the area of the rectangle 
 Simplifying, we get $x^2(\sqrt{2}+1)$. From the given statement in the question, we can find that $x^2=2116$, so $x=\boxed{46}$. 
 
 \noindent\hrulefill
+
+\subsubsection*{2005 AIME II/3}
+\textit{December 12, 2024}
+
+An infinite geometric series has sum 2005. A new series, obtained by squaring each term of the original series, has 10 times the sum of the original series. The common ratio of the original series is $\frac mn$ where $m$ and $n$ are relatively prime integers. Find $m+n.$ 
+
+\textbf{Solution:}
+
+We let the first sequence be $a,ar,ar^2,\dots$ and the second sequence be $(a)^2, (ar)^2, (ar^2)^2,\dots$. The second sequence can be written as $a^2, a^2r^2, a^2r^4,\dots$ now.
+
+From this we can see that for the first sequence the sum is $\frac{a}{1-r}=2005$, and for the second sequence it is $\frac{a^2}{1-r^2}=2005\cdot 10 = 20050$.
+
+Now it is much easier to think about both of these in terms of just $r$, since that is what we are trying to find.
+
+We can actually simplify $\frac{a^2}{1-r^2}$ by substituting the sum of the first sequence. So we have ${a\cdot a}{(1+r)(1-r)}$. From this we can see we can substitute $2005$ in, so $\frac{2005a}{1+r} = 20050$. And now dividing, we get that $\frac{a}{1+r} = \frac{20050}{2005} = 10$.
+
+Now with these two equations we can set them equal to each other. First we have $a = 2005(1-r) = 2005-2005r$ from the first sequence and $a = 10(1+r) = 10+10r$ from the second sequence. 
+
+Setting these equal to each other we get that $2005-2005r=10+10r$ or $2015r = 1995$. Therefore $r=\frac{1995}{2015} = \frac{399}{403}$. The answer is therefore $399+403 = \boxed{802}$. 
+
+\noindent\hrulefill
+
+
+
 \subsubsection*{2001 AIME I/3} 
 \textit{November 23, 2024}
 
@@ -199,6 +290,48 @@ Because the highest power will be $2000$, then there are $2000$ roots. Substitut
 
 \noindent\hrulefill
 \section{Before 2000}
+\subsubsection*{1998 AIME/3}
+\textit{December 9, 2024}
+
+The graph of $y^2 + 2xy + 40|x|= 400$ partitions the plane into several regions. What is the area of the bounded region? 
+
+\textbf{Solution:}
+Isolating the $40|x|$ term, we get that $400-y^2-2xy = 40|x|$.
+
+Then we have two cases:
+
+Case 1:
+$40x = 400-y^2-2xy$
+
+Case 2:
+$40x = -400+y^2+2xy$
+
+In the first case - 
+\begin{align*}
+40x = 400-y^2-2xy\\
+40x+2xy = 400-y^2\\
+2x(20+y) = (20-y)(20+y)
+\end{align*}
+We can see that when $y=-20$, then the two equations are equal. When we cancel out the $(20+y)$ term, we can see that $2x=20-y$, or $y=-2x+20$.
+
+For the second case - 
+\begin{align*}
+40x = -400+y^2+2xy\\
+40x-2xy = -400+y^2\\
+-2x(y-20) = (y-20)(y+20)
+\end{align*}
+Here, we can see that $y=20$ will result in both equations being the same. When cancelling out the $(y-20)$ term, then we have $-2x=y+20$, so $y=-2x-20$.
+
+When we graph the 4 lines, we have the following graph
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{tjd4v81.png}
+\end{center}
+
+The height of this shape is $40$ and the base is $20$, so $40\cdot 20 = \boxed{800}$.
+
+\noindent\hrulefill
+
+
 \subsubsection*{1991 AIME/1} 
 \textit{November 21, 2024}
 
