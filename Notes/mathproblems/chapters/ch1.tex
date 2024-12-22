@@ -2,7 +2,28 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{AMC/AHSME}
-\section{2011-}
+\section{2011-2020}
+\subsubsection*{2020 AMC 12A/8}
+\textit{December 17, 2024}
+
+What is the median of the following list of $4040$ numbers$?$
+
+$$1, 2, 3, ..., 2020, 1^2, 2^2, 3^2, ..., 2020^2$$
+
+\textbf{Solution:}
+
+First, we notice that there are an even number of elements - indeed, $4040$ of them, to be precise. This means we must determine the average of the $2020$th and $2021$st elements.
+
+We know that the sequence $1^2, 2^2, \dots, 2020^2$ will contribute a certain number of elements than $2020$, so our task is to determine how many of these are smaller than $2020$.
+
+By testing a few values, we observe that $45^2 = 2025$, which tells us that only the squares up to $44^2$ need be considered.
+
+From this, it follows that $2020 - 44$ will correspond to the $2020$th element, as we are including $1^2, 2^2, \dots, 44^2$ in the list. Thus, the $2020$th element is $1976$, and similarly, the $2021$st element is $1977$. Therefore, the median is given by $\boxed{1976.5}$.
+
+\noindent\hrulefill
+
+
+
 \subsubsection*{2020 AMC 12B/8}
 \textit{December 12, 2024}
 
@@ -66,6 +87,48 @@ Case 3: median is $x$.
 This case is only for $6 <x <8$. We need for $\frac{35+x}{5}=x$. Simplifying this, we get $x=\frac{35}{4}$. This value is not less than $8$, so we banish this to the shadow realm!! Ok the answer is $\boxed{-5}$ btw.
 
 \noindent\hrulefill
+
+\subsubsection*{2018 AMC 12A/6}
+\textit{December 17, 2024}
+
+For positive integers $m$ and $n$ such that $m+10<n+1$, both the mean and the median of the set $\{m, m+4, m+10, n+1, n+2, 2n\}$ are equal to $n$. What is $m+n$?
+
+\textbf{Solution:}
+
+Since there are an even number of elements, the median is 
+\[ \frac{m+10+n+1}{2} = n \]
+Simplifying this, we have $n=11+m$, or $m=n-11$.
+
+When we plug this back and try to find the mean we will get that $\frac{n-11+n-11+4+n-11+10+n+1+n+2+2n}{6} = \frac{7n-16}{6} = n$.
+
+From this, we get that $7n-16 = 6n$ and that $n=16$.
+
+Plugging this back into $m=n-11$, we find that $m=16-11 = 5$. 
+
+Our answer now is $16+5 = \boxed{21}$.
+
+\noindent\hrulefill
+
+\subsubsection*{2018 AMC 12A/16}
+\textit{December 19, 2024}
+
+Which of the following describes the set of values of $a$ for which the curves $x^2+y^2=a^2$ and $y=x^2-a$ in the real $xy$-plane intersect at exactly $3$ points?
+
+$ \textbf{(A) }a=\frac14 \qquad \textbf{(B) }\frac14 < a < \frac12 \qquad \textbf{(C) }a>\frac14 \qquad \textbf{(D) }a=\frac12 \qquad \textbf{(E) }a>\frac12 \qquad $
+
+\textbf{Solution:}
+
+When we square $y=x^2-a$, we get $y^2=(x^2-a)(x^2-a) = x^4-2ax^2+a^2$. Since we also know that $y^2=a^2-x^2$, we can set them equal to each other.
+
+Now we have $x^4-2ax^2+a^2=a^2-x^2$. Simplifying we get that $x^4-2ax^2+x^2=0$.
+
+Factoring this we have $x^2(x^2-2a+1)$. From this we know that we can get three intersections, by getting $x=0$ first. The other two roots can be found from $x^2-2a+1$. From this we are looking for $a$ and we have $x^2-2a+1=0$. So solving for $a$ we have $x^2=2a-1$. We know that $2a-1$ has to be greater than $0$ because you cannot square root a negative. From $2a-1>0$, we can see that $a>\frac{1}{2}$ or $\boxed{ \textbf{(E)} }$.
+
+\noindent\hrulefill
+
+
+
+
 \subsubsection*{2018 AMC 12B/2} 
 \textit{November 28, 2024}
 
@@ -124,6 +187,41 @@ In this case, we have $x^2=y^2$, so $y=\pm x$.
 \end{center}
 
 Therefore from this, we have $\boxed{\text{three lines that do not all pass through a common point}}$
+
+\noindent\hrulefill
+
+\subsubsection*{2016 AMC 12B/18}
+\textit{December 21, 2024}
+
+What is the area of the region enclosed by the graph of the equation $x^2+y^2=|x|+|y|?$
+
+\textbf{Solution:}
+
+One can see the four cases from the absolute value first.
+
+These are 
+\begin{align*}
+x^2+y^2=x+y\\
+x^2+y^2=x-y\\
+x^2+y^2=-x+y\\
+x^2+y^2=-x-y
+\end{align*}
+
+Now by completing the square on each of these, we can see that there are four circles, each with radius of $\frac{\sqrt{2}}{2}$ and with a center of $\left(\pm \frac{1}{2}, \pm \frac{1}{2}\right)$.
+
+Now when we draw the diameters of all the circles, we can see that this makes a square. The diamater is $\sqrt{2}$, so the area of this square is $2$.
+
+We are left with the four semicircles now, we can just find the area of one of these semicircles and just multiply by $4$.
+
+The area of one of these is $\frac{1}{2}\pi \left(\frac{\sqrt{2}}{2}\right)^2 = \frac{1}{4}\pi$. Multiplying by $4$ we get that the areas of the semicircles combined is $\pi$.
+
+The area is $\boxed{\pi + 2}$.
+
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Z4sBqWJ.png}
+\end{center}
+
+\noindent\hrulefill
 
 \subsubsection*{2014 AMC 12A/19}
 \textit{December 5, 2024}
@@ -307,6 +405,27 @@ Case 2: One is positive, one is negative.
 Therefore, we have $1-x=x-2$. Solving we get $x=\boxed{\frac{3}{2}}$.
 
 \noindent\hrulefill
+
+\subsubsection*{2002 AMC 10A/21}
+\textit{December 18, 2024}
+
+The mean, median, unique mode, and range of a collection of eight integers are all equal to 8. The largest integer that can be an element of this collection is
+
+$ \textbf{(A)}\ 11 \qquad \textbf{(B)}\ 12 \qquad \textbf{(C)}\ 13 \qquad \textbf{(D)}\ 14 \qquad \textbf{(E)}\ 15$
+
+\textbf{Solution:}
+
+Let's write the list first as $a,b,c,8,8,d,e,f$. Since there are an even amount of numbers in the list, then the middle two will be $8$.
+
+Let's start by trying $15$, since it is the largest listed in the answer choices. We can write the mean of this as $\frac{a+b+c+8+8+d+e+f}{8} = 8$, or $a+b+c+d+e+f+16 = 64$. Since we know that $f=15$, then $a=15-8 = 7$. Now we have the list $7,b,c,8,8,d,e,15$. Plugging this into the mean we see that $b+c+d+e = 26$. For this to work, we would need at least one number less than $7$, so this would not work since the range has to be $8$.
+
+Now we can try $14$. Using the same setup as before we can see that we would end up with the list $6,b,c,8,8,d,e,14$. From this we can see that $b+c+d+e = 28$. Ok so there are four numbers now. Now if I assume that they are all $7$, it will work, but it wouldn't satisfy the mode being $8$. But we can see that $7+7+7+7 = 6+6+8+8$, and this satisfies the list, so the answer is $\boxed{14}$.
+
+\noindent\hrulefill
+
+
+
+
 \subsubsection*{2000 AMC 12/5} 
 \textit{December 2, 2024}
 

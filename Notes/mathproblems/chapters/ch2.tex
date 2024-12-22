@@ -259,6 +259,25 @@ Setting these equal to each other we get that $2005-2005r=10+10r$ or $2015r = 19
 
 \noindent\hrulefill
 
+\subsubsection*{2001 AIME I/2}
+\textit{December 17, 2024}
+
+A finite set $\mathcal{S}$ of distinct real numbers has the following properties: the mean of $\mathcal{S}\cup\{1\}$ is $13$ less than the mean of $\mathcal{S}$, and the mean of $\mathcal{S}\cup\{2001\}$ is $27$ more than the mean of $\mathcal{S}$. Find the mean of $\mathcal{S}$. 
+
+\textbf{Solution:}
+
+We can let the mean of $\mathcal{S}$ to be $x$ and the amount of elements originally in $\mathcal{S}$ to be $y$. 
+
+Then we have $\frac{xy+1}{y+1}=x-13$ and $\frac{xy+2001}{y+1} = x+27$. It would be really nice to get rid of the $x$ term, which we can do by subtracting!
+
+So now we have $\frac{xy+2001-(xy+1)}{y+1}=x+27-(x-13)$. Simplifying this, we get that $\frac{2000}{y+1} = 40$.
+
+We can now solve for $y$ pretty easily, this is $40y+40=2000$, so $40y=1960$ and dividing we get that $y=49$.
+
+Substituting this back into $\frac{xy+1}{y+1} = x-13$, we get that $\frac{49x+1}{50} = x-13$. Multiplying by $50$ we get that $49x+1 = 50(x-13) = 50x-650$. Solving for $x$ we get that $x = \boxed{651}$.
+
+\noindent\hrulefill
+
 
 
 \subsubsection*{2001 AIME I/3} 
@@ -358,4 +377,38 @@ So, $a=55$ or $xy=55$, so $(x,y)$ is $(11,5)$ or $(5,11)$.
 Therefore, $5^2+11^2=\boxed{146}$.
 
 \noindent\hrulefill
+
+\subsubsection*{1989 AIME/8}
+\textit{December 22, 2024}
+
+Assume that $x_1,x_2,\ldots,x_7$ are real numbers such that
+\[ \begin{array}{r} x_1+4x_2+9x_3+16x_4+25x_5+36x_6+49x_7=1\,\,\,\,\,\,\,\, \\ 4x_1+9x_2+16x_3+25x_4+36x_5+49x_6+64x_7=12\,\,\,\,\, \\ 9x_1+16x_2+25x_3+36x_4+49x_5+64x_6+81x_7=123. \\ \end{array} \]Find the value of \[16x_1+25x_2+36x_3+49x_4+64x_5+81x_6+100x_7.\]
+
+\textbf{Solution:}
+
+So just do systems stuff
+
+Subtracting the second equation and first equation you get 
+\[ 3x_1+5x_2+7x_3+9x_4+11x_5+13x_6+15x_7 = 11\]
+Subtracting the third equation and second equation you get 
+\[ 5x_1+7x_2+9x_3+11x_4+13x_5+15x_6+17x_7 = 111 \]
+
+Ok now subtract these two equations and you get 
+\[ 2(x_1+x_2+x_3+x_4+x_5+x_6+x_7) = 100 \]
+
+Cool!
+
+Now we can do the same thing with the value we are trying to find.
+
+Subtracting the fourth equation (the one starting with $16x_1$) with the third equation we get 
+\[ 7x_1+9x_2+11x_3+13x_4+15x_5+17x_6+19x_7 = x-123 \]
+
+Now subtracting this from the $5x_1+7x_2+9x_3+11x_4+13x_5+15x_6+17x_7 = 111$ equation, we get 
+\[ 2(x_1+x_2+x_3+x_4+x_5+x_6+x_7) = x-123-111\]
+
+Now we have $x-234 = 100$, so $x=\boxed{334}$.
+
+\noindent\hrulefill
+
+
 \end{document}
