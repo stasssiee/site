@@ -2,5 +2,44 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Sampling Distributions}
+\section{Sampling Distributions of Sample Proportions}
+As we begin to use sample data to draw conclusions about a larger population, we must be clear about whether a number describes a sample or a population.
+
+\textbf{Parameter: } is a number that describes some characteristic of a population 
+
+\textbf{Statistic: } is a number that describes some characteristic of a sample 
+
+\textbf{Unbiased Estimator: } a sample proportion or sample mean that is equal to the population proportion or population mean 
+
+$\hat{p}$ (sample proportion) estimates $p$ (population proportion)
+
+$\overline{x}$ (sample mean) estimates $\mu$ (population mean)
+
+$s_x$ (sample standard deviation) estimates $\sigma$ (population standard deviation)
+
+Rather than showing real repeated samples, imagine what would happen if we were to actually draw many samples. Now imagine what would happen if 
+we looked at the sample proportions for these samples. The histogram we'd get if we could see all the proportions from all possible samples is called the 
+sampling distribution of the sample proportions.
+\begin{itemize}
+    \item We would expect the histogram of the sample proportions to center at the true proportion, $p$, in the population.
+    \item The spread is calculated as standard deviation based on the true proportion, $p$, and the sample size, $n$. As the sample size gets larger the standard deviation will get smaller.
+    \item The shape of the histogram would be unimodal and symmetric.
+    \item More specifically, a normal model is just the right one for the histogram of sample proportions.
+\end{itemize}
+
+\textbf{Assumptions and Conditions}
+\begin{itemize}
+    \item Randomness: The sample should be a simple random sample of the population 
+    \item Independence (10\% Condition): The sample size, $n$, must be no larger than 10\$ of the population 
+    \item Normality (Large Counts Condition): The sample size has to be big enough so that both number of successes and number of failures are at least 10. We also refer to this as the Success/Fail Condition.
+\end{itemize}
+
+Provided that the sampled values are independent and the sample size is large enough, the sampling distribution of $p$ is modeled by a normal model with:
+
+Sample proportions: $\hat{p}=\frac{\#\text{successes}}{\text{sample size}}$
+
+Mean of sample proportions: $\mu_{\hat{p}}=p$
+
+Standard deviation of sample proportions: $\sigma_{\hat{p}}=\sqrt{\frac{p(1-p)}{n}}$
 
 \end{document}
