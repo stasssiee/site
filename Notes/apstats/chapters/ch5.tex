@@ -42,4 +42,50 @@ Mean of sample proportions: $\mu_{\hat{p}}=p$
 
 Standard deviation of sample proportions: $\sigma_{\hat{p}}=\sqrt{\frac{p(1-p)}{n}}$
 
+\section{Sampling Distributions of Sample Means}
+The sampling mean distribution notation:
+\begin{itemize}
+    \item Parameters: $\mu$ and $\sigma$
+    \item Statistics: $\bar{x}$ and $s$
+    \item Sampling Distribution Mean: $\mu_{\bar{x}}$
+    \item Sampling Distribution Standard Deviation: $\sigma_{\bar{x}}$
+\end{itemize}
+
+Conditions for sample means:
+\begin{itemize}
+    \item Random - As long as the sampling method is random, our mean is an unbiased estimator.
+    \item Independent - When sampling, we have to make sure the 10\% Condition is satisfied.
+    \item Normal - No longer checking Large Counts, instead we have the Central Limit Theorem. 
+\end{itemize}
+
+Central Limit Theorem: The central limit theorem (CLT) states that when the sample size is sufficiently large, a sampling distribution of the mean of random variable will be approximately normally distributed.
+
+The central limit theorem requires that the sample values are independent of each other and that $n$ is sufficiently large.
+
+Therefore, if the population distribution is normal, then so is the sampling distribution of $\bar{x}$. This is true no matter what the sample size of $n$ is.
+
+If the population distribution is not normal, the central limit theorem tells us that the sampling distribution of $\bar{x}$ will be approximately normal in most cases of $n\geq 30$.
+
+Summary:
+\begin{itemize}
+    \item Shape: approximately normal 
+    \item Center: $\mu_{\bar{x}} = \mu$
+    \item Spread: $\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}$
+\end{itemize}
+
+\section{Combining Sample Proportions and Sample Means}
+Sampling distribution of $\hat{p}_1-\hat{p}_2$, where $\hat{p}_1$ is the sample proportion from the first group and $\hat{p}_2$ is the sample proportion from the second group.
+
+If both samples were randomly selected from the population, then $\mu_{\hat{p}_1-\hat{p}_2}=p_1-p_2$.
+
+If both samples satisfy the 10\% condition, then $\sigma_{\hat{p}_1-\hat{p}_2}=\sqrt{\left(\frac{p_1(1-p_1)}{n_1}\right)+\left(\frac{p_2(1-p_2)}{n_2}\right)}$
+
+If both samples satisfy the success/fail condition, then the shape is approximately normal.
+
+Samplying distribution of $\bar{x}_1-\bar{x}_2$ where $\bar{x}_1$ is the sample mean from the first group and $\bar{x}_2$ is the sample mean from the second group:
+
+Same conditions apply for the center and spread, and remember that the central limit theorem rather than success/fail is used for shape.
+
+The center is $\mu_{\bar{x}_1-\bar{x}_2}=\mu_1-\mu_2$ and the spread is $\sigma_{\bar{x}_1-\bar{x}_2}=\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}$.
+
 \end{document}

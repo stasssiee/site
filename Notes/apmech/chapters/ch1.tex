@@ -3,9 +3,72 @@
 \begin{document}
 \chapter{Kinematics}
 \section{Scalars and Vectors}
-\section{Displacement, Velocity, and Acceleration}
-\section{Representing Motion}
-\section{Reference Frames and Relative Motion}
-\section{Motion in Two or Three Dimensions}
+Scalars are quantities described by magnitude only, vectors are quantities described by both magnitude and direction.
 
+Vectors can be visually modeled as arrows with appropriate direction and lengths proportional to their magnitudes.
+
+Vectors can be expressed in unit vector notation or as a magnitude and a direction.
+\begin{itemize}
+    \item Unit vector notation can be used to represent vectors as the sum of their constituent components in the x, y, and z directions, denoted by $\hat{i}, \hat{j}$ and $\hat{k}$.
+    \[ \vec{r} = A\hat{i}+B\hat{j}+C\hat{k}\]
+    \item The position vector of a point is given by $\vec{r}$ and the unit vector in the direction of the position vector is denoted $\hat{r}$.
+    \item A resultant vector is the vector sum of the addend vectors' components. 
+    \[ \vec{C}=\vec{A}+\vec{B}=(A_x+B_y)\hat{i}+(A_y+B_y)\hat{j} \]
+\end{itemize}
+
+In a given one-dimensional coordinate system, opposite directions are denoted by opposite signs.
+\section{Displacement, Velocity, and Acceleration}
+When using the object model, the size, shape and internal configuration are ignored.
+\begin{itemize}
+    \item The object may be treated as a single point with extensive properties such as mass and charge.
+\end{itemize}
+Displacement is the change in an object's position: $\Delta x = x-x_0$
+
+Averages of velocity and acceleration are calculated considering the initial and final states of an object over an interval of time.
+
+Average velocity is the displacement of an object divided by the interval of time in which that displacement occurs:
+\[ \vec{v}_{avg}=\frac{\Delta \vec{x}}{\Delta t}\]
+Average acceleration is the change in velocity divided by the interval of time in which that change in velocity occurs.
+\[ \vec{a}_{avg}=\frac{\Delta \vec{v}}{\Delta t}\]
+As the time interval used to calculate the average value of a quantity approaches zero, the average value of that quantity approaches the value of the quantity that is instant, called the instantaneous value.
+\begin{itemize}
+    \item $\vec{v} = \frac{\dd x}{\dd t}$
+    \item $\vec{a} = \frac{\dd v}{\dd t}$
+\end{itemize}
+
+Time dependent functions and instantaneous values of position, velocity and acceleration can be determined using differentiation and integration.
+
+\section{Representing Motion}
+Motion can be represented by motion diagrams, figures, graphs, equations and narrative descriptions.
+
+For constant acceleration, three kinematics equations can used to describe the instantaneous linear motion in one dimension:
+\begin{itemize}
+    \item $v=v_0 + at$
+    \item $x=x_0+v_0 t + \frac{1}{2}at^2$
+    \item $v^2=v_0^2+2a\Delta x$
+\end{itemize}
+
+Near the surface of the Earth, the vertical acceleration caused by the force of gravity is downward, constant and has a measured value of $g=9.8$ m/s$^2$ or $g=10$ m/s$^2$.
+
+Graphs of position, velocity and acceleration as functions of time can be used to find the relationships between those quantities.
+
+\section{Reference Frames and Relative Motion}
+The choice of reference frame will determine the direction and magnitude of quantities measured by an observer in that reference frame.
+
+Measurements from a given reference frame may be converted to measurements from another reference frame.
+
+The observed velocity of an object results from the combination of the object's velocity and the velocity of the observer's reference frame.
+\begin{itemize}
+    \item Combining the motion of an object and the motion of an observer in a given reference frame involves the addition or subtraction of vectors.
+    \item The acceleration of any object is the same as measured from all inertial reference frames.
+\end{itemize}
+
+\section{Motion in Two or Three Dimensions}
+Motion in two or three dimensions can be analyzed using one-dimensional kinematic relationships if the motion is separated into componenets.
+
+Velocity and acceleration may be different in each dimension and be nonuniform.
+
+Motion in one dimension may be changed without causing a change in the perpendicular dimension.
+
+Projectile motion is a special case of two-dimensional motion that has zero acceleration in one dimension and constant, nonzero acceleration in the second dimension.
 \end{document}

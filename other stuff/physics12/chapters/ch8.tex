@@ -1,0 +1,153 @@
+\documentclass[../physics12.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Thermal Energy and the Laws of Thermodynamics}
+\section{Formulas}
+Zeroth Law of Thermodynamics: Objects in equilibrium are at same temperature
+
+\begin{align*}
+    T_F = \frac{9}{5}T_C + 32; T=T_C + 273.15 \\ 
+    \Delta L = \alpha L_0\Delta T (\text{Thermal Expasion})\\
+    N_A = 6.02\times 10^{23} \text{particles/mole}\\
+    k_B = 1.3806 \times 10^{23} J/K \qquad R = 8.314 \text{J/mole/K}\\
+    PV = Nk_B T; \qquad PV = nRT (\text{Ideal Gas}, T \text{in Kelvin})\\
+    P = \frac{2}{3}\left(\frac{N}{V}\right)\frac{1}{2}m\overline{v^2}\\ 
+    \frac{1}{2}m\overline{v^2}=\frac{3}{2}k_B T \\
+    U = \frac{3}{2}nRT 
+\end{align*}
+$mc\Delta T = Q = nC\Delta T$ (Specific Heat)
+
+$mL = Q$ (Latent Heat)
+
+Second Law of Thermodynamics: Heat always flows spontaneously from hot to cold:
+
+Thermal Conductivity:
+\[\frac{Q}{t}=\frac{\kappa A(T_h-T_c)}{L}=\frac{A(T_h-T_c)}{\sum_i R_i}, R=\frac{L}{\kappa}\]
+
+First Law of Thermodynamics: Energy is conserved. $W$ is $-PV$(area)
+\[ \Delta U = U_f-U_i = Q+W \]
+
+Efficiency; $e=\frac{|W|}{|Q_h|}=\frac{|Q_h|-|Q_c|}{|Q_h|}=1-\frac{|Q_c|}{|Q_h|}$
+\[ e_C = 1-\frac{T_c}{T_h}\]
+\[ \text{COP} = \frac{|Q_c|}{|W|}=\frac{|Q_c|}{|Q_h|-|Q_c|}\leq \frac{T_c}{T_h-T_c} \]
+
+For a general process, $\Delta U = nC_V\Delta T$, $Q = \Delta U-W$, $W = PV \text{Area}$, $P-V = P(V)$.
+
+For an isobaric process, $\Delta U = nC_V\Delta T$, $Q = nC_P\Delta T$, $W=-P\Delta V$, $P-V$ has $P=$ const 
+
+For an adiabatic process, $\Delta U = nC_V\Delta T$, $Q=0$, $W=\Delta U$, $P-V$ has $PV^{\gamma}$ = const, where $\gamma = C_P/C_V$
+
+For an isovolumetric process, $\Delta U = nC_V\Delta T$, $Q=\Delta U$, $W=0$, and $P-V$ has $V$ = const 
+
+For an isothermal process, $\Delta U = 0$, $Q=-W$, $W=-nRT\ln\left(\frac{V_f}{V_i}\right)$, $P-V$ has $PV$ = const
+
+\section{Steel Track Expansion Problem}
+A steel railroad track has a length of 30 m when the temperature is $0\degree$ C.
+
+(a) What is the increase in the length of the rail on a hot day when the temperature is $40\degree$ C? The linear expansion coefficient of steel is $11\times 10^{-6}(\degree$ C)$^{-1}$. Answer in units of m.
+
+(b) Suppose the ends of the rail are rigidly clamped at $0\degree$ C to prevent expansion. Calculate the thermal stress in the rail if its temperature is raised to $40\degree$ C. Young's modulus for steel is $20\times 10^{10}$ N/m$^2$. Answer in units of N/m$^2$.
+
+\section{Mercury Thermometer Problem}
+A mercury thermometer is has a capillary tube with a diameter of 0.004 cm and a bulb with diameter of 0.25 cm.
+
+Neglecting the expansion of the glass, find the change in height of the mercury column for a temperature change of $30\degree$ C. The volume expansion 
+coefficient of mercury is $0.000182 (\degree$C)$^{-1}$. Answer in units of cm. 
+
+\section{Concrete Expansion Problem}
+Two concrete spans of a 250 m long bridge are placed end to end so that no room is allowed for expansion.
+
+If the temperature increases by $20\degree$ C, what is the height to which the spans rise when they buckle? Assume the thermal 
+coefficient of expansion is $1.2\times 10^{-5} (\degree$ C)$^{-1}$. Answer in units of m.
+
+\section{Molecule escaping Earth Problem}
+If it has enough kinetic energy, a molecule at the surface of the Earth can escape the Earth's gravitation. The acceleration of gravity is 
+9.8 m/s$^2$ and the Boltzmanns' constant is $1.38066 \times 10^{-23}$ J/K. 
+
+(a) Using energy conservation, determine the minimum kinetic energy needed to escape in terms of the mass of the molecule, $m$, the free-fall acceleration at the surface, $g$, and the radius of the Earth $R$.
+
+(b) Calculate the temperature for which the minimum escape energy is 10 times the average kinetic energy of an oxygen molecule. Answer in units of K.
+
+\section{Railroad Spike Problem}
+A 0.75 kg spike is hammered into a railroad tie. The initial speed of the spike is equal to 3.0 m/s.
+
+If the tie and spike together absorb 85 percent of the spike's initial kinetic energy as internal energy, calculate the increase in internal energy of the tie and spike. Answer in units of J.
+
+\section{Translational KE of Oxygen Problem}
+Find the total translational kinetic energy of 1 L of oxygen gas held at a temperature of $0\degree$ C and a pressure of 1 atm. Answer in units of J.
+
+\section{Pressure in a Tire Problem}
+An automobile tire having a temperature of $-5\degree$ C (a cold tire on a cold day) is filled to a gauge pressure of 20 lb/in$^2$.
+
+What would be the gauge pressure in the tire when its temperature rises to $20\degree$ C? For simplicity, assume that the 
+volume of the tire remains constant, that the air does not leak out and that the atmospheric pressure remains constant at 14.7 lb/in$^2$. Answer in units of lb/in$^2$.
+
+\section{Average KE of a Gas Molecule Problem}
+Boltzmann's constant is $1.38066\times 10^{-23}$ J/K and the universal gas constant is $8.31451$ J/K$\cdot$ mol.
+
+If 2 mol of a gas is confined to a 5 L vessel at a pressure of 8 atm, what is the average kinetic energy of a gas molecule? Answer in units of J.
+
+\section{Climbing to Work Off Cake Problem}
+A 75 kg weight-watcher wishes to climb a mountain to work off the equivalent of a large piece of chocolate cake rated at 500 (food) calories.
+
+How high must the person climb? The acceleration due to gravity is 9.8 m/s$^2$ and 1 food Calorie is $10^3$ calories. Answer in units of km.
+
+\section{Bullet Fired into Steel Problem}
+A 4.2 g lead bullet moving at 275 m/s strikes a steel plate and stops.
+
+If all its kinetic energy is converted to thermal energy and none leaves the bullet, what is its temperature change? Assume the specific heat of lead is 128 J/kg$\cdot\degree$ C. Answer in units of $\degree$ C.
+
+\section{Glass Thermometer in Hot Water Problem}
+A 300 g glass thermometer initially at $25\degree$ C is put into 200 cm$^3$ of hot water at $95\degree$ C. 
+
+Find the final temperature of the thermometer, assuming no heat flows to the surroundings. The specific heat of glass if 0.2 cal/g$\cdot\degree$ C and of water 1 cal/g$\cdot\degree$ C.
+
+\section{Water Freezing onto Ice Cube Problem}
+A 50 g ice cube at $-20\degree$ C is dropped into a container of water at $0\degree$ C.
+
+How much water freezes onto the ice? The specific heat of ice is 0.5 cal/g$\cdot\degree$ C and its heat of fusion is 80 cal/g. Answer in units of g.
+
+\section{Hot Ingot in Water Problem}
+A 0.05 kg ingot of metal is heated to 200$\degree$ C and then is dropped into a beaker containing 0.4 kg of water initially at $20\degree$ C.
+
+If the final equilibrium state of the mixed system is 22.4$\degree$ C, find the specific heat of the metal. The specific heat of water is 4186 J/kg $\cdot\degree$ C. Answer in units of J/kg$\cdot\degree$ C.
+
+\section{Brick Wall Conductivity Problem}
+The brick wall (of thermal conductivity 0.8 W/m$\cdot\degree$ C) of a building has dimensions of 4 m by 10 m and is 15 cm thick.
+
+How much heat flows through the wall in a 12 h period when the average inside and outside temperatures are, respectively, 20$\degree$ C and 5$\degree$ C? Answer in units of MJ.
+
+\section{Ice added to Tea Problem}
+One liter of water at 30$\degree$ C is used to make iced tea. 
+
+How much ice at 0$\degree$ C must be added to lower the temperature of the tea to 10$\degree$ C? The specific heat of water is 1 cal/g$\cdot\degree$ C and latent heat of ice is 79.7 cal/g. Answer in units of g.
+
+\section{Conductivity of Insulator Problem}
+A box with a total surface area os 1.2 m$^2$ and a wall thickness of 4 cm is made of an insulating material. A 10 W electric heater inside the box maintains 
+the inside temperature at 15$\degree$ C above the outside temperature. 
+
+Find the thermal conductivity of the insulating material. Answer in units of W/m$\cdot\degree$ C.
+
+\section{Tea in the Sun Problem}
+A jar of tea is placed in sunlight until it reaches an equilibrium temperature of 32$\degree$ C. In an attempt to cool the liquid, which has a mass of 180 g, 112 g of ice at 0.0$\degree$ C is added.
+
+At the time at which the temperature of the tea is 31.7$\degree$ C, find the mass of the remaining ice in the jar. The specific heat of water is 4186 J/kg$\cdot\degree$ C. Assume the specific heat capacity of the tea to be that of pure liquid water. Answer in units of g.
+
+\section{Three Liquids Problem}
+Three liquids are at temperatures of 10$\degree$ C, 20$\degree$ C, and 30$\degree$ C, respectively. Equal masses of the first two liquids are mixed, and the equilibrium temperature is 17$\degree$ C. Equal masses of the second and third are then mixed and the equilibrium temperature is 28$\degree$ C.
+
+Find the equilibrium temperature when equal masses of the first and third are mixed. Answer in units of $\degree$ C.
+
+\section{Ice in a Copper Cup Problem}
+A 40 g block of ice is cooled to -78$\degree$ C. It is added to 560 g of water in an 80 g copper calorimeter at a temperature of 25$\degree$ C. 
+
+Find the final temperature. The specific heat of copper is 387 J/kg$\cdot\degree$ C and of ice is 2090 J/kg$\cdot\degree$ C. The latent heat of fusion of water is $3.33\times 10^5$ J/kg 
+and its specific heat is 4186 J/kg$\cdot\degree$ C. Answer in units of $\degree$ C.
+
+\section{Refrigerator Power Problem}
+The interior of a refrigerator has a surface area of 4 m$^2$. It is insulated by a 3 cm thick material that has a thermal conductivity of 0.021 J/m$\cdot$ s $\cdot$ $\degree$ C. The ratio of the heat 
+extracted from the interior to the work done by the motor is 7.5\% of the theoretical maximum. The temperature of the room is 24$\degree$ C, and the temperature inside the refrigerator is 0$\degree$ C.
+
+Determine the power required to run the compressor.
+
+\end{document}
