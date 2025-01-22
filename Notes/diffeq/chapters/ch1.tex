@@ -3,6 +3,77 @@
 \begin{document}
 \chapter{Introduction to Differential Equations}
 \section{Background}
+In a variety of subject areas, mathematical models are developed to aid in understanding. These models often yield an equation that contains derivatives of an unknown function. Such an equation is called a differential equation.
+
+One example is free fall of a body. An object is released from a certain height above the ground and falls under the force of gravity. Newton's second law states that an object's mass times its acceleration equals the total force acting on it.
+\[ m\frac{\dd^2 h}{dt^2}=-mg \]
+
+We have $h(t)$ as position, $\frac{\dd h}{\dd t}$ as velocity and $\frac{\dd^2 h}{\dd t}$ as acceleration. The independent variable is $t$ and the dependent variable is $h$.
+
+$m\frac{\dd^2 h}{dt^2}=-mg$ is a differential equation and $h(t)$ is the unknown function that we are trying to find.
+
+From this we have $\frac{\dd^2 h}{\dd t^2} = -g$ and the integral of this is $\frac{\dd h}{\dd t} = -gt + C_1$. To find $h$ we integrate again and we get $h(t) = -\frac{gt^2}{2}+C_1t+C_2$.
+
+Another example is the decay of a radioactive substance. The rate of decay is proportional to the amount of radioactive substance present.
+\[ \frac{\dd A}{\dd t} = -kA, \qquad k>0 \]
+where $A$ is the unknown amount of radioactive substance present at time $t$ and $k$ Is the proportionality constant.
+
+We are looking for $A(t)$ that satisfies this equation. We can solve this from $\frac{1}{A}\dd A = k\dd t$ and integrating both sides we get that 
+$\ln |A| + C_1 = -kt+C_2$. We can rewrite this as $\ln|A| = -kt + C$. So, $e^{-kt+C}=A$.
+
+So $A(t)=e^{-kt}+e^C$, so $A(t)=Ce^{-kt}$. Remember $A$ is the dependent variable and $t$ is the independent variable.
+
+Notice that the solution of a differential equation is a function, not merely a number.
+
+When a mathematical model involves the rate of change of one variable with respect to another, a differential equation is apt to appear.
+
+\subsubsection*{Terminology}
+If an equation involves the derivative of one variable with respect to another, then the former is called a dependent variable and the latter an independent variable.
+
+In $\frac{\dd h}{\dd t}$, $h$ is dependent and $t$ is independent.
+
+A differential equation involving only ordinary derivatives with respect to a single independent variable is called an ordinary differential equation. A differential equation involving partial derivatives 
+with respect to more than one independent variable is a partial differential equation.
+
+For example we have $z=f(x,y)=4x^2+5xy$, so $\frac{\partial z}{\partial x} = 8x+5y$ and that is partial differentiation.
+
+The order of a differential equation is the order of the highest-order derivatives present in the equation.
+
+For example, $\frac{\dd^2 h}{dt^2}=-g$ has a order of 2.
+
+A linear differential equation is one in which the dependent variable $y$ and its derivatives appear in additive combinations of their first powers. A differential equation is linear if it has the format.
+\[ a_n(x)\frac{\dd^n y}{dx^n}+a_{n-1}(x)\frac{\dd^{n-1}y}{dx^{n-1}}+\dots + a_1(x)\frac{\dd y}{\dd x}+a_0(x)y=F(x)\]
+
+$2x+3y=7$ is linear, $2x^2+5xy+7y+8y = 1$ is second-degree. Nothing can have a second degree for this to be linear.
+
+You are just looking at the dependent variable and the derivatives and adding their powers.
+
+If an ordinary differential equation is not linear, we call it nonlinear.
+
+\begin{example}
+    For each differential equation, classify as ODE or PDE, linear or nonlinear, and indicate the dependent/independent variables and order.
+
+    (a) $\frac{\dd^2 x}{\dd t^2}+a\frac{\dd x}{\dd t}+kx =0$
+
+    Dependent is $x$, independent is $t$ and the order is 2. This is an ODE and linear.
+
+    (b) $\frac{\partial u}{\partial x} - \frac{\partial u}{\partial y}=x-2y$ 
+
+    The dependent variable is $u$ and the independent variables are $x,y$, so this is a PDE. The order is 1.
+
+    (c) $\frac{\dd^2 y}{\dd x^2}+y^3=0$
+
+    The dependent variable is $y$, the independent variable is $x$, the order is 2 and this is an ODE and this is nonlinear.
+
+    (d) $t^3 \frac{\dd x}{\dd t} = t^3+x$
+
+    Dependent is $x$, independent is $t$, order is 1, this is an ODE. We can rewrite this as $t^3\frac{\dd x}{\dd t}-1x=t^3$, and this matches the form of the linear equation so this is linear.
+
+    (e) $\frac{\dd^2 y}{\dd x^2} - y\frac{\dd y}{\dd x}=\cos x$
+
+    The dependent is $y$, the independent is $x$, the order is 2 and this is an ODE and this is nonlinear because of $y\frac{\dd y}{\dd x}$.
+\end{example}
+
 \section{Solutions and Initial Value Problems}
 \section{Direction Fields}
 \section{The Approximation Method of Euler}
