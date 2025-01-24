@@ -75,6 +75,107 @@ If an ordinary differential equation is not linear, we call it nonlinear.
 \end{example}
 
 \section{Solutions and Initial Value Problems}
+An $n$th-order ordinary differential equation is an equality relating the independent variable to the $n$th derivative (and usually lower-order derivatives as well) of the dependent variable.
+
+\begin{example}
+    Identify the order, independent and dependent variable.
+
+    (a) $x^2\frac{\dd^2 y}{\dd x^2} + x\frac{\dd y}{\dd x} + y =x^3$. Independent: $x$, dependent: $y$, order: 2
+
+    (b) $\sqrt{1-\left(\frac{\dd^2 y}{\dd t^2}\right)}-y=0$. Independent: $t$, dependent: $y$, order: 2
+
+    (c) $\frac{\dd^4 x}{\dd t^4}=xt$. Independent: $t$, dependent: $x$, order: 4. (This is also linear.)
+\end{example}
+
+A general form for an $n$th-order equation with $x$ independent, $y$ dependent can be expressed as 
+\[ F(x,y,\frac{\dd y}{\dd x},\dots,\frac{\dd^n y}{\dd x^n})=0 \]
+where $F$ is a function that depends on $x$, $y$, and the derivatives of $y$ up to order $n$. We assume the equations holds for all $x$ in an open interval $I$. In many cases, we can isolate the highest-order term and write the previous equation as 
+\[ \frac{\dd^n y}{\dd x^n} = f\left(x,y,\frac{\dd y}{\dd x},\dots,\frac{\dd^{n-1}y}{\dd x^{n-1}}\right)\]
+This is called the normal form.
+
+A function $\phi(x)$ that when substituted for $y$ in either the previous two equations satisfies the equation for all $x$ in the interval $I$ is called an explicit solution to the equation on $I$.
+
+\begin{example}
+    Show that $\phi(x)=x^2-x^{-1}$ is an explicit solution to the linear equation $\frac{\dd^2 y}{\dd x^2}-frac{2}{x^2}y=0$ but $\psi(x)=x^3$ is not.
+
+    So we have $y=x^2-x^{-1}$. The first derivative of this is $2x+1x^{-2}$. The second derivative is $y'' = 2-2x^{-3}$. If we plug in the values we end up getting from the derivatives, we get that 
+    $2-2x^{-3}-2x+2x^{-3} = 0$, so this is satisfied.
+
+    For the second part, the first derivative is $3x^2$ and the second derivative is $6x$. Plugging this in, we get $4x$ which is not $0$, so $\psi(x)$ is not a solution.
+\end{example}
+
+\begin{example}
+    Show that for any choice of the constants $c_1$ and $c_2$, the function $\phi(x)=c_1e^{-x}+c_2e^{2x}$ is an explicit solution to the linear equation $y''-y'-2y=0$.
+
+    We have that the first derivative is $-c_1e^{-x}+2c_2e^{2x}$ and the second derivative is $c_1e^{-x} + 4c_2e^{2x}$. When we plug this in, we find that this does satisfy the solution for the differential equation.
+\end{example}
+
+Methods for solving differential equations do not always yield an explicit solution for the equation. A solution may be defined implicitly.
+
+\begin{example}
+    Show that the relation $y^2-x^3+8=0$ implicitly defines a solution to the nonlinear equation $\frac{\dd y}{\dd x}=\frac{3x^2}{2y}$ on the interval $(2,\infty)$.
+
+    We have from the given that $y=\pm\sqrt{x^3-8}$. The derivative (of the positive version) of this is $\frac{3x^2}{2\sqrt{x^3-8}}$. This is the same and defined on the interval.
+\end{example}
+
+A relation $G(x,y) =0$ is said to be an implicit solution to the previous equation on the interval $I$ if it defines one or more explicit solutions on $I$.
+
+\begin{example}
+    Show that $x+y+e^{xy}=0$ is an implicit solution to the nonlinear equation $(1+xe^{xy})\frac{\dd y}{\dd x}+1+ye^{xy}=0$. 
+
+    Taking the derivative of both sides gets us that $1+\frac{\dd y}{\dd x}+e^{xy}\frac{\dd}{\dd x}(xy) =0$. This does simplify to what was given in the problem.
+\end{example}
+
+\begin{example}
+    Verify that for every constant $C$ the relation $4x^2-y^2=C$ is an implicit solution to $y\frac{\dd y}{\dd x}-4x=0$. Graph the solution curves for $C=0,\pm 1,\pm 4$.
+
+    The derivative of what is given is $8x-2y\frac{\dd y}{\dd x}=0$. This simplifies to what is given, so it is clearly an implicit solution. 
+
+    For $C=0$, the solution curves for this is $2x=y$ and $-2x=y$.
+
+    For $C=\pm 4$, the solution curves is given by a hyperbola $\frac{x^2}-\frac{y^2}{4}=1$. 
+\end{example}
+
+The collection of all solutions in the previous example is called a one-parameter family of solutions.
+
+In general, the methods for solving $n$th-order differential equations evoke $n$ arbitrary constants. We often can evalute these constants 
+if we are given $n$ initial values $y(x_0), y'(x_0),\dots, y^{(n-1)}(x_0)$.
+
+\begin{definition}
+    By an initial value problem for an $n$th-order differential equation 
+    \[ F(x,y,\frac{\dd y}{\dd x},\dots,\frac{\dd^n y}{\dd x^2}) =0 \]
+
+    we mean: Find a solution so the differential equation on an interval $I$ that satisfies at $x_0$ the $n$ initial conditions
+    \[ y(x_0)=y_0, \quad \frac{\dd y}{\dd x}(x_0)=y_1 \cdots \frac{\dd^{n-1}y}{\dd x^{n-1}}(x_0)=y_{n-1}\]
+    where $x_0\in I$ and $y_0, y_1, \dots, y_{n-1}$ are constants.
+\end{definition}
+
+\begin{example}
+    Show that $\phi(x)=\sin x-\cos x$ is a solution to the initial value problem 
+    \[ \frac{\dd^2 y}{\dd x^2}+y = 0; \qquad y(0)=-1 \qquad \frac{\dd y}{\dd x}(0)=1 \]
+
+    We have $y=\sin x-\cos x$, $y'=\cos x+\sin x$, and $y'' = -\sin x+\cos x$. These satisfy the conditions.
+\end{example}
+
+\begin{theorem}[Existence and Uniqueness of Solution]
+    Consider the initial value problem 
+    \[ \frac{\dd y}{\dd x}=f(x,y), \qquad y(x_0)=y_0 \]
+
+    If $f$ and $\partial f/\partial y$ are continuous functions in some rectangle 
+    \[ R = \{(x,y): a<x<b, c<y<d\} \]
+    that contains the point $(x_0,y_0)$, then the initial value problem has a unique solution $\phi(x)$ in some interval $x_0-\delta<x<x_0\delta$, where $\delta$ is a positive number.
+\end{theorem}
+
+\begin{example}
+    Does the theorem above imply the existence for this problem.
+
+    $3\frac{\dd y}{\dd x}=x^2-xy^3, \qquad y(1)=6$
+
+    The derivative exists for all $(x,y)$ and is continuous in all intervals containing $x=1$ and all rectangular regions containing $(1,6)$.
+
+    When we consider the partial derivatives, $\partial f/\partial y = -xy^2$, and this exists and is continuous for all rectangular regions in the $xy$ plane.
+\end{example}
+
 \section{Direction Fields}
 \section{The Approximation Method of Euler}
 
