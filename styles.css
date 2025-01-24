@@ -19,6 +19,7 @@ body {
   a {
     color: #4a90e2; /* Light blue */
     text-decoration: none;
+    background-color: #ececec;
   }
   
   a:hover {
