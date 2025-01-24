@@ -2,5 +2,23 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Inference for Categorical Data: Proportions}
+\section{Constructing a One Proportion z-Interval}
+Definition: A confidence interval for a population parameter is an interval of plausible values for that unknown parameter.
 
+It is constructed in such a way so that, with a chosen degree of confidence, the value of the parameter will be captured inside the interval.
+
+The chosen degree of confidence is called the confidence level. The confidence level gives information about how much ``confidence'' we will have in the method used to construct the interval.
+
+To create an interval of plausible values for a parameter, we need two components:
+\begin{itemize}
+    \item A point estimate is a single value used to estimate the population parameter such as a sample population.
+    \item A margin of error represents the maximum expected difference between the true population parameter and the sample estimate.
+\end{itemize}
+
+To calculate the interval you use the formula 
+\[ \hat{p}\pm z^*\cdot\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]
+
+where $\hat{p}$ is the point estimate, $z^*$ is the critical value and $z^*\cdot\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ is the margin of error.
+
+To calculate the critical value, you can use invNorm. Generally for a 90\% confidence interval, $z^*=1.64$, for a 95\% confidence interval, $z^*=1.96$ and for a 99\% confidence interval, $z^*=2.58$.
 \end{document}
