@@ -1,91 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recordings</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #69306d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #69306d;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #69306d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+<body>
+    <header>
+        <h1>Orchestra and Violin Recordings</h1>
+    </header>
+    <main>
+        <section>
+            <h2>2017-2024 String Orchestra</h2>
+            <p>December 2017</p>
+            <audio controls>
+                <source src="recordings/dec17.mp3" type="audio/mp3">
+            </audio>
+            <p>December 2019</p>
+            <audio controls>
+                <source src="recordings/dec19.mp3" type="audio/mp3">
+            </audio>
+        </section>
 
-<body style="background-color: #c08bbd">
-<h1>Orchestra and Violin</h1>
+        <section>
+            <h2>2021 String and Full Orchestra</h2>
+            <p>November 2021</p>
+            <audio controls>
+                <source src="recordings/nov2021.mp3" type="audio/mp3">
+            </audio>
+            <p>December 2021</p>
+            <audio controls>
+                <source src="recordings/2122region.mp3" type="audio/mp3">
+            </audio>
+        </section>
 
-<p>December 2017 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/dec17.mp3" type="audio/mp3">
-</audio>
-
-<p>December 2019 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/dec19.mp3" type = "audio/mp3">
-</audio>
-
-<p>November 2021 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/nov2021.mp3" type ="audio/mp3">
-</audio>
-
-<p>December 2021 Full Orchestra</p>
-<audio controls>
-    <source src = "recordings/2122region.mp3" type="audio/mp3">
-</audio>
-
-<p>February 2022 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/feb22.mp3" type = "audio/mp3">
-</audio>
-
-<p>May 2022 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/may22.mp3" type = "audio/mp3">
-</audio>
-
-<p>November 2022 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/nov22.mp3" type = "audio/mp3">
-</audio>
-
-<p>December 2022 Full Orchestra</p>
-<audio controls>
-    <source src = "recordings/dec22.mp3" type = "audio/mp3">
-</audio>
-
-<p>March 2023 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/mar23.mp3" type = "audio/mp3">
-</audio>
-
-<p>May 2023 Full Orchestra</p>
-<audio controls>
-    <source src = "recordings/may23.mp3" type = "audio/mp3">
-</audio>
-
-<p>November 2023 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/nov23.mp3" type = "audio/mp3">
-</audio>
-
-<p>December 2023 Full Orchestra</p>
-<audio controls>
-    <source src = "recordings/dec23.mp3" type = "audio/mp3">
-</audio>
-
-<p>February 2024 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/feb24.mp3" type = "audio/mp3">
-</audio>
-
-<p>May 2024 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/may24.mp3" type = "audio/mp3">
-</audio>
-
-<p>October 2024 String Orchestra</p>
-<audio controls>
-    <source src = "recordings/oct24.mp3" type = "audio/mp3">
-</audio>
-
-<p>December 2024 Full Orchestra</p>
-<audio controls>
-    <source src = "recordings/dec24.mp3" type = "audio/mp3">
-</audio>
-
+        <section>
+            <h2>2022-2024 Performances</h2>
+            <p>February 2022</p>
+            <audio controls>
+                <source src="recordings/feb22.mp3" type="audio/mp3">
+            </audio>
+            <p>December 2024</p>
+            <audio controls>
+                <source src="recordings/dec24.mp3" type="audio/mp3">
+            </audio>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Orchestra Recordings</p>
+    </footer>
 </body>
+</html>
