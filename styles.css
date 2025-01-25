@@ -1,9 +1,16 @@
 /* General Page Styles */
-body {
+
+
+  body {
     font-family: Arial, sans-serif;
-    background-color: #c08bbd; /* Light purple background */
-    color: #2c2c2c; /* Dark text for readability */
-    margin: 0;
+
+    display: flex;              /* Enables Flexbox for the body */
+    justify-content: center;    /* Centers content horizontally */
+    align-items: center;        /* Centers content vertically */
+    min-height: 100vh;          /* Ensures the body spans the full viewport height */
+    margin: 0;                  /* Removes default margin */
+    background-color:#c08bbd;  /* Background color for the page */
+    text-align: center;         /* Centers text inside the elements */
     padding: 0;
     line-height: 1.6;
   }
@@ -66,22 +73,22 @@ body {
   
   /* Content Sections */
   h2 {
-    color: #ffffff8e;
-    text-align: center;
-    margin-top: 30px;
-    display: table; 
-    padding:5px;
-    background-color: #2c2c2c;
- }
-  
-  p {
-    text-align: center;
-    margin: 0 10%;
-    color: #ffffff95;
-    display: table; 
-    padding:5px;
-    background-color: #2c2c2c;
+    color: #ffffff8e;            /* Semi-transparent white */
+    padding: 10px;               /* Adds padding around the text */
+    background-color: #2c2c2c;   /* Dark background for the header */
+    border-radius: 8px;          /* Smooth rounded corners */
+    max-width: 80%;              /* Constrains the header width */
+    margin-bottom: 20px;         /* Adds spacing below the header */
   }
+  
+ p {
+  color: #ffffff95;            /* Slightly more transparent white */
+  padding: 10px;               /* Adds padding around the text */
+  background-color: #2c2c2c;   /* Dark background for the paragraph */
+  border-radius: 8px;          /* Smooth rounded corners */
+  max-width: 80%;              /* Constrains the paragraph width */
+  line-height: 1.6;            /* Improves readability */
+}
   
   /* Lists */
   ul li a {
