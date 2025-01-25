@@ -66,15 +66,23 @@ body {
   
   /* Content Sections */
   h2 {
-    color: #ffffff7e;
+    color: #ffffff8e;
     text-align: center;
     margin-top: 30px;
+    display: table; 
+    margin: 0px auto 0px auto; 
+    padding:5px;
+    background-color: #2c2c2c;
  }
   
   p {
     text-align: justify;
     margin: 0 10%;
     color: #ffffff95;
+    display: table; 
+    margin: 0px auto 0px auto; 
+    padding:5px;
+    background-color: #2c2c2c;
   }
   
   /* Lists */
