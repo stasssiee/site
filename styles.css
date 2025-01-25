@@ -13,6 +13,7 @@ body {
     text-align: center;
     color: #ffffff;
     margin-top: 20px;
+    background-color: #ffffff;
   }
   
   /* Links */
@@ -69,11 +70,13 @@ body {
     color: #333333;
     text-align: center;
     margin-top: 30px;
+    background-color: #ffffff;
   }
   
   p {
     text-align: justify;
     margin: 0 10%;
+    background-color: #ffffff;
   }
   
   /* Lists */
