@@ -67,16 +67,15 @@ body {
   
   /* Content Sections */
   h2 {
-    color: #333333;
+    color: #ffffff;
     text-align: center;
     margin-top: 30px;
-    background-color: #ffffff;
-  }
+ }
   
   p {
     text-align: justify;
     margin: 0 10%;
-    background-color: #ffffff;
+    color: #ffffff;
   }
   
   /* Lists */
