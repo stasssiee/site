@@ -177,6 +177,75 @@ if we are given $n$ initial values $y(x_0), y'(x_0),\dots, y^{(n-1)}(x_0)$.
 \end{example}
 
 \section{Direction Fields}
+One technique useful in visualizing (graphing) the solutions to a first-order differential equation is to sketch the direction field for the equation. A first-order equation 
+\[ \frac{\dd y}{\dd x}=f(x,y)\]
+specifies a slope at each point in the $xy$-plane where $f$ is defined.
+
+\begin{definition}
+    A plot of short line segments drawn at various points in the $xy$-plane showing the slope of the solution curve htere is called a direction field for the differential equation.
+\end{definition}
+
+For example, consider the equation $\frac{\dd y}{\dd x} = x^2-y$. When we plug in the point $(1,0)$, the slope is $1$. When the point is $(0,1)$ the slope is $-1$. Notice the further right we get, the steeper the graph goes.
+When we look at this function, $f(x,y)=x^2-y$, so taking the partial of y results in $-1$ which is continuous so there is a solution curve at any point.
+
+Note that we are basically just drawing slope fields from AP Calculus BC.
+
+When we consider an equation $\frac{\dd y}{\dd x}=-\frac{y}{x}$, we have a unique solution when $x\neq 0$ because $f(x,y)$ is continuous if $x\neq 0$ and $\frac{\partial f}{\partial y}=-\frac{1}{x}$, so if $x\neq 0$, then there is a unique solution.
+
+\begin{example}
+    Consider the direction field for $\frac{\dd y}{\dd x}=3y^{2/3}$. Is there a unique solution passing through $(2,0)$?
+
+    $\frac{\partial f}{\partial y}=\frac{2}{\sqrt[3]{y}}$ is not continuous when $y=0$.
+\end{example}
+
+\begin{example}
+    The logistic equation of the population $p$ (in thousands) at time $t$ of a certain species is given by $\frac{\dd p}{\dd t}=p(2-p)$. Use its direction field to answer the following questions.
+
+    (a) If the initial population is $3000[p(0)=3]$, what can you say about the limiting population $\lim_{t\to \infty}p(t)$?
+
+    We start at the point $(0,3)$ and as the field approaches $p=2$, the rate of change becomes 0 so the limit is equal to 2.
+
+    (b) Can a population of 1000 ever decline to 500?
+
+    No 
+
+    (c) Can a population of 1000 ever increase to 3000.
+
+    No 
+\end{example}
+
+A differential equation $\frac{\dd y}{\dd t}=f(t,y)$ is autonomous if the independent variable $t$ does not appear explicitly: $\frac{\dd y}{\dd t}=f(y)$. An autonomous equation has the following properties
+\begin{itemize}
+    \item The slopes in the direction field are all identical among horizontal lines 
+    \item New solutions can be generated from old ones by time shifting [i.e., replacing $y(t)$ with $y(t-t_0)$]
+\end{itemize}
+
+The constant, or equilibrium, solutions $y(t)=c$ for autonomous equations are of particular interest. The equilibrium $y=c$ is called a stable equilibrium, or sink, if neighboring solutions are 
+attracted to it as $t\rightarrow \infty$. Equilibria that repel neighboring solutions, are known as sources; all other equilibria are called nodes. Sources and nodes are unstable equilibria. (Nodes are sometimes called semi stable).
+
+A phase line indicates the zeros and signs of $f(y)$ to describe the nature of the equilibrium solutions for an autonomous equation.
+
+\begin{example}
+    SKetch the phase line for $y'=-(y-1)(y-3)(y-5)^2$ and state the nature of its equilibria.
+
+    We have $y'=0$ and $y=1,3,5$. When $y=0$, then $y'<0$ that means that it is decreasing for values below 1. When we let $y=2$ then $y'>0$, so any value between 1 and 3 is increasing. When we put $y=4$, then $y'<0$ so any values between 3 and 5 are decreasing.
+    When $y=6$ then $y'<0$ so it is decreasing.
+
+    At $y=5$, above it is is attracting but repeling below, so it is semi-stable or a node. At $y=3$, it is stable or an attractor because it is approaching on both sides. At $y=1$, it is a repeller. 
+\end{example}
+
+Hand sketching the direction field for a differential equation is often tedious. Fortunately, several software programs are available for this task. When hand sketching is necessary, the method of isoclines can be helpful reducing the work.
+
+A isocline for the differential equation 
+\[ y'=f(x,y) \]
+is a set of points in the $xy$-plane where all the solutions have the same slope $\frac{\dd y}{\dd x}$; thus, it is a level curve for the function $f(x,y)$.
+
+\begin{example}
+    Find isocline curves of $y'=f(x,y) = x+y$ for a few select values of $c$. Use the isoclines to draw hash marks with slope $c$ along the isocline $f(x,y)=c$.
+
+    When $c=0, y'=0, x+y=0$ and $y=-x$. When $c=1, y'=1,x+y=1$ and $y=-x+1$. When $c=2,y'=2,x+y=2$ and $y=-x+2$.
+\end{example}
+
 \section{The Approximation Method of Euler}
 
 \end{document}
