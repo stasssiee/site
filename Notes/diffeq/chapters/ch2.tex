@@ -3,6 +3,37 @@
 \begin{document}
 \chapter{First-Order Differential Equations}
 \section{Separable Equations}
+\begin{definition}
+    If the right-hand side of the equation 
+    \[ \frac{\dd y}{\dd x}=f(x,y) \]
+    can be expressed as a function $g(x)$ that depends only on $x$ times a function $p(y)$ that depends only on $y$, then the differential equation is called separable.
+\end{definition}
+
+To solve the equation 
+\[ \frac{\dd y}{\dd x}=g(x)p(y) \]
+multiply by $\dd x$ and by $h(y)=1/p(y)$ to obtain 
+\[h(y)\dd y=g(x)\dd x \]
+Then integrate both sides and you end up getting $H(y)=G(x)+C$, where we have merged the two constants of integration into a single symbol $C$.
+The last equation gives an implicit solution to the differential equation.
+
+\begin{example}
+    Solve the nonlinear equation 
+    \[\frac{\dd y}{\dd x}=\frac{x-5}{y^2}\]
+
+    This can be rewritten as $y^2\dd y = (x-5)\dd x$. Integrating both sides results in $\frac{y^3}{3}=\frac{x^2}{2}-5x+C$.
+
+    To get the explicit form just solve for $y$, which is trivial.
+\end{example}
+
+\begin{example}
+    Solve the initial value problem 
+    \[ \frac{\dd y}{\dd x}=\frac{y-1}{x+3} \qquad y(-1)=0 \]
+
+    Doing Calc BC stuff gives us $y=1-\frac{1}{2}(x+3)$.
+\end{example}
+
+Be careful because you can be losing solutions. Ok bye!
+
 \section{Linear Equations}
 \section{Exact Equations}
 \section{Special Integrating Factors}
