@@ -21,4 +21,50 @@ To calculate the interval you use the formula
 where $\hat{p}$ is the point estimate, $z^*$ is the critical value and $z^*\cdot\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$ is the margin of error.
 
 To calculate the critical value, you can use invNorm. Generally for a 90\% confidence interval, $z^*=1.64$, for a 95\% confidence interval, $z^*=1.96$ and for a 99\% confidence interval, $z^*=2.58$.
+
+\section{Constructing a One Proportion z-Test}
+A significance test is another inference method that assesses evidence provided by data about a claim. Significance tests tell us if sample data gives us convincing evidence against a null hypothesis.
+\begin{itemize}
+    \item A null hypothesis ($H_0$) is the claim being assess in a significance test. Usually, the null hypothesis is a statement of ``no change from the expected value.''
+    \item An alternative hypothesis ($H_A$) proposes what we should conclude if we find the null hypothesis to be unlikely.
+\end{itemize}
+Hypotheses always refer to the population not the sample.
+
+A p-value is the probability of getting results as extreme or more extreme in the direction of the null hypothesis by random chance alone assuming the claim of the null hypothesis is true.
+\begin{itemize}
+    \item Small p-values give convincing evidence against the null hypothesis since the result we got is unlikely to occur.
+    \item Large p-values fail to give convincing evidence against the null hypothesis since the result we got is likely to occur.
+\end{itemize}
+The significance level $(\alpha)$ is a fixed value that we will regard as the decisive value that determines if the p-value is small or large.
+\begin{itemize}
+    \item Typically we choose $\alpha = 0.05$ which says we need data so strong that it would happen by chance less than 5\% of the time.
+\end{itemize}
+
+To construct a test follow the steps:
+\begin{itemize}
+    \item Define the parameter: $p=$ true proportion of $\{\text{parameter in context}\}$
+    \item State the hypotheses. (If you are not given a claimed proportion, we use a conservative estimate which is 0.50)
+    \item Check the Assumptions and Conditions 
+    \item Name the Inference method 
+    \item Calculate the test statistic
+    \item Obtain the p-value 
+    \item Make a decision 
+    \item Write your conclusion in context 
+\end{itemize}
+
+\section{Relating Confidence Intervals and Significance Tests}
+Margin of error is point estimate $\pm$ margin of error. 
+
+Increasing confidence level increases critical value and margin of error and gives a wider interval.
+
+Decreasing confidence level decreases critical value and margin of error and gives a narrower interval.
+
+Increasing sample size decreases standard error and decreases margin of error and gives a narrower interval.
+
+Decreasing sample size increased standard error, margin of error and gives a wider interval.
+
+Keep in mind that the margin of error in a confidence covers only accounts for sampling variability and does not account for bias in the sampling methods.
+
+
+
 \end{document}

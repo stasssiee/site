@@ -35,8 +35,253 @@ The last equation gives an implicit solution to the differential equation.
 Be careful because you can be losing solutions. Ok bye!
 
 \section{Linear Equations}
-\section{Exact Equations}
-\section{Special Integrating Factors}
-\section{Substitutions and Transformations}
+Remember a linear first-order equation is an equation that can be expressed in the form 
+\[ a_1(x)\frac{\dd y}{\dd x}+a_0 y=b(x) \]
+where $a_1(x)$, $a_0(x)$, and $b(x)$ depend only on the independent variable $x$, not on $y$.
 
+Method for solving linear equation:
+\begin{itemize}
+    \item Write the equation in the standard form 
+    \[ \frac{\dd y}{\dd x}+P(x)y=Q(x) \]
+    \item Calculate the integrating factor $\mu(x)$ by the formula 
+    \[ \mu(x)=\exp \left[\int P(x)\dd x \right] \]
+    \item Multiply the equation in standard form by $\mu(x)$ and, recalling that the left-hand side is just $\frac{\dd}{\dd x}[\mu(x)y]$, obtain 
+    \[ \mu(x)\frac{\dd y}{\dd x}+P(x)\mu(x)y=\mu(x)Q(x) \]
+    \[ \frac{\dd}{\dd x}[\mu(x)y]=\mu(x)Q(x)\]
+    \item Integrate the last equation and solve for $y$ by dividing by $\mu(x)$ to obtain.
+\end{itemize}
+
+\begin{example}
+    Find the general solution to 
+    \[ \frac{1}{x}{\dd y}{\dd x}-\frac{2y}{x^2}=x\cos x \qquad x>0 \]
+
+    We have $\frac{\dd y}{\dd x}-\frac{2}{x}y=x^2\cos x$.
+
+    The integrating factor $\mu(x)=e^{\int P(x)\dd x}$ which in this case is $e^{-2\int \frac{1}{x}\dd x}$ and this is equivalent to $\frac{1}{x^2}$.
+
+    Using this we can multiply through in standard form then we have $\frac{1}{x^2}\frac{\dd y}{\dd x}-\frac{2}{x^3}y=\cos x$.
+
+    The left side is just $\frac{\dd}{\dd x}\left(\frac{1}{x^2}\cdot\right) = \cos x$.
+
+    Integrating and solving for $y$ we get that $y=x^2\sin x+Cx^2$.
+\end{example}
+
+\begin{example}
+    For the initial value problem 
+    \[ y' + y = \sqrt{1+\cos^2 x}\qquad y(1)=4 \]
+    find the value of $y(2)$.
+
+    Our $P(x)$ is $1$ here, so $\mu = e^x$.
+
+    So the equation after multiplying through by it gives us that $\mu y' + \mu y = \mu \sqrt{1+\cos^2 x}$, or $e^xy'+e^xy=e^x\sqrt{1+\cos^2 x}$.
+
+    This is equivalent to basically $\frac{\dd}{\dd x}(e^xy)=e^x\sqrt{1+\cos^2 x}$.
+
+    This is $e^x y = \int e^x\sqrt{1+\cos^2 x}\dd x$.
+
+    Using a calculator $y(2)=2.127$.
+\end{example}
+
+\begin{theorem}[Existence and Uniqueness of Solution]
+    Suppose $P(x)$ and $Q(x)$ are continuous on an interval $(a,b)$ that contains the point $x_0$. Then for any choice of initial value $y_0$, there exists a unique solution $y(x)$ on $(a,b)$ to the initial value problem 
+    \[ \frac{\dd y}{\dd x}+P(x)y=Qx \qquad y(x_0)=y_0 \]
+    In fact the solution is given for a suitable value of $C$.
+\end{theorem}
+
+\section{Exact Equations}
+\begin{definition}[Exact Differential Form]
+    The differential form $M(x,y)\dd x + N(x,y)\dd y$ is said to be exact in a rectangle $R$ is there is a function $F(x,y)$ such that 
+    \[ \frac{\partial F}{\partial x}(x,y)=M(x,y) \qquad \text{and} \qquad \frac{\partial F}{\partial y}(x,y)=N(x,y)\]
+
+    for all $(x,y)$ in $R$. That is, the total differential of $F(x,y)$ satisfies 
+    \[ \dd F(x,y)=M(x,y)\dd x+N(x,y)\dd y \]
+    If $M(x,y)\dd x + N(x,y)\dd y$ is an exact differential form, then the equation 
+    \[ M(x,y)\dd x + N(x,y)\dd y =0 \]
+    is called an exact equation.
+\end{definition}
+
+\begin{theorem}[Test for Exactness]
+    Suppose the first partial derivatives of $M(x,y)$ and $N(x,y)$ are continuous in a rectangle $R$. Then 
+    \[ M(x,y)\dd x+ N(x,y)\dd y =0 \]
+    is an exact equation in $R$ if and only if the compatibility condition 
+    \[ \frac{\partial M}{\partial y}(x,y)=\frac{\partial N}{\partial x}(x,y) \]
+    holds for all $(x,y)$ in $R$.
+\end{theorem}
+
+\begin{example}
+    Solve the differential equation 
+    \[ \frac{\dd y}{\dd x}=-\frac{2xy^2+1}{2x^2y}\]
+
+    Ok so this is not separable or linear, so we use exactness.
+
+    \begin{align*}
+        \frac{\dd y}{\dd x}+\frac{2xy^2+1}{2x^2y}=0 \\ 
+        \dd y + \frac{2xy^2+1}{2x^2y}\dd x = 0\\
+        \frac{2xy^2+1}{2x^2y}\dd x + 1 \dd y = 0 \\ 
+    \end{align*}
+
+    This is the same form we want. 
+
+    Another form we can get is $(2xy^2+1)\dd x + 2x^2y\dd y =0$.
+
+    Another form we can get is $1\dd x+\frac{2x^2y}{2xy^2+1}\dd y =0$.
+
+    We are now looking for a $F(x,y)=c$ and we know this is true when $\frac{\partial m}{\partial y}=\frac{\partial n}{\partial x}$.
+
+    So the second one of these is probably the best, so we now have $m=2xy^2+1$ and $n=2x^2y$. 
+
+    Doing the partial of $m$ with respect to $y$ we get $4xy$ and the partial of $n$ with respect to $x$ is $4xy$ and these are the same.
+
+    Let $F(x,y)=x^2y^2+x=C$. The partial of this function with respect to $x$ is $2xy^2+1$ and the partial of this function with respect to $y$ is $2x^2y$ and this is the same as previous.
+\end{example}
+
+Method for Solving Exact Equations:
+\begin{itemize}
+    \item If $M\dd x+N\dd y =0$ is exact, then $\partial F/\partial x=M$. Integrate this last equation with respect to $x$ to get 
+    \[ F(x,y)=\int M(x,y)\dd x + g(y)\]
+    \item To determine $g(y)$, take the partial derivative with respect to $y$ of both sides of the aboev equation and substitute $N$ for $\partial F/\partial y$. We can now solve for $g'(y)$.
+    \item Integrate $g'(y)$ to obtain $g(y)$ up to a numerical constant. Substituting $g(y)$ into the equation from step 1 gives $F(x,y)$
+    \item The solution to $M\dd x+N\dd y = 0$ is given implicitly by 
+    \[ F(x,y)=C \]
+\end{itemize}
+(Alternatively, starting with $\partial F/\partial y=N$, the implicit solution can be foudn by first integrating with respect to $y$.)
+
+\begin{example}
+    Solve 
+    \[ (2xy-\sec^2 x)\dd x + (x^2+2y)\dd y = 0 \]
+
+    Let $m$ be the first term and $n$ be the second term, and the partial derivatives of these are the same, so they are exact.
+
+    Let $F(x,y)=\int 2xy-\sec^2 x \dd x$. When we integrate this, we get $yx^2-\tan x$. In this case, the constant is anything with $y$, so the integral is equivalent to 
+    $yx^2-\tan x + g(y)$.
+
+    Now we take the $\frac{\partial F}{\partial y} = x^2-0+g'(y)$. These two are $n$ so $x^2+2y=x^2+g'(y)$, so solving for $g(y)$ we get that this is equal to $y^2+C$.
+
+    So $F(x,y)=xy^2-\tan x + y^2 = C$.
+\end{example}
+
+\ex Solve $(1+e^xy+xe^xy)\dd x + (xe^x+2)\dd y = 0$.
+
+Solution: $x+xye^x+2y=C$.
+
+\begin{example}
+    Solve 
+    \[ (x+3x^3\sin y)\dd x+(x^4\cos y)\dd y = 0 \]
+
+    Doing the partials originally makes them not equal to each other.
+    
+    We can get this to exact form by multiplying through by $x^{-1}$. When we do this we get $(1+3x^2\sin y)\dd x+x^3\cos y \dd y = 0$ and the partials of these are the same.
+
+    $x^{-1}$ is called an integrating factor.
+
+    Integrating $m$ with respect to $x$, we get that $F(x,y)=\int 1+3x^2\sin y\dd x = x+\sin y\cdot x^3 + g(y)$.
+
+    Doing the partial of $F$ with respect to $y$, we get $\frac{\partial F}{\partial y}=x^3\cos y = 0 + x^3\cos y + g'(y)$, and this gets that $g(y)=C$.
+
+    So the answer is $x+x^3\sin y = C$.
+\end{example}
+
+\section{Special Integrating Factors}
+\begin{definition}
+    If the equation 
+    \[ M(x,y)\dd x + N(x,y)\dd y = 0\]
+    is not exact, but the equation 
+    \[ \mu(x,y)M(x,y)\dd x + \mu(x,y)N(x,y)\dd y = 0 \]
+    which results from multiplying the first equation by the function $\mu(x,y)$, is exact, then $\mu(x,y)$ is called an integrating factor of the first equation.
+\end{definition}
+
+\begin{theorem}[Special Integrating Factors]
+    If $(\partial M/\partial y-\partial N/\partial x)/N$ is continuous and depends only on $x$, then 
+    \[ \mu(x)=\exp \left[\int \left(\frac{\partial M/\partial y-\partial N/\partial x}{N}\right)\dd x\right] \]
+    is an integrating factor for an equation. If $(\partial N/\partial x - \partial M/\partial y)/M$ is continuous and depends only on $y$, then 
+    \[ \mu(y)=\exp \left[\int \left(\frac{\partial M/\partial x-\partial N/\partial y}{M}\right)\dd y\right] \]
+    is an integrating factor for the same equation.
+\end{theorem}
+
+Method for Finding Special Integrating Factors:
+
+If $M\dd x + N\dd y = 0$ is neither separable nor linear, compute $\partial M/\partial y$ and $\partial N/\partial x$. If $\partial M/\partial y = \partial N/\partial x$, then the equation is exact. If it is not exact, consider 
+\[ \frac{\partial M/\partial y-\partial N/\partial x}{N}\]
+If this is a function of just $x$, then an integrating factor is given by the formula above of $\mu(x)$. If not consider 
+\[ \frac{\partial N/\partial x - \partial M/\partial y}{M} \]
+If this is a function of just $y$< then an integrating factor is given by above of $\mu(y)$.
+
+\begin{example}
+    Solve $(2x^2+y)\dd x + (x^2y-x)\dd y = 0$
+
+    When we do the partials, we get that $1\neq 2xy-1$.
+
+    So lets look at $\frac{\partial m/\partial y - \partial n/\partial x}{N}$, which is $\frac{1-(2xy-1)}{x^2y-x} = \frac{-2}{x}$ which is just a function of $x$. So we have that $\mu = e^{\int -\frac{2}{x}\dd x}$, so we don't have to look at the one in terms of $y$.
+
+    Doing the integral of all this gives us that $e^{-2\ln x} = x^{-2}$. So when we multiply through by $x^{-2}$, we get that $(2+x^{-2}y) \dd x + (y-x^{-1})\dd y =0$.
+
+    The partials are equal to each other, so this equation is now exact.
+
+    Now we find $F(x,y)$ by integrating $m$, so $\int (2+x^{-2}y)\dd x = 2x+-x^{-1}y+g(y)=F(x)$
+
+    Now we differentiation with respect to $y$ so $\frac{\partial F}{\partial y}=y-x^{-1}=-x^{-1}+g'(y)$, so $g(y)=\frac{y^2}{2}$
+
+    The solution is therefore $2x-x^{-1}y+\frac{y^2}{2}=C$.
+\end{example}
+
+\section{Substitutions and Transformations}
+Substitution Procedure:
+\begin{itemize}
+    \item Identify the type of equation and determine the appropriate substitution or transformation 
+    \item Rewrite the original equation in terms of new variables 
+    \item Solve the transformed equation 
+    \item Express the solution in terms of the original variables 
+\end{itemize}
+
+\begin{definition}[Homogeneous Equation]
+    If the right-hand side of the equation
+    \[ \frac{\dd y}{\dd x} = f(x,y) \]
+    can be expressed as a function of the ratio $y/x$ alone, then we say the equation is homogeneous.
+\end{definition}
+
+To solve a homogeneous equation, use the substitution $v=\frac{y}{x}$; $\frac{\dd y}{\dd x} = v+x\frac{\dd v}{\dd x}$ to transform the equation into a separable equation.
+
+\begin{example}
+    Solve $(xy+y^2+x^2)\dd x - x^2\dd y = 0$.
+
+    Solving for $\frac{\dd y}{\dd x}$ we get that this is equal to $\frac{-x^2-y^2-xy}{-x^2}$ and this simplifies to $1+\left(\frac{y}{x}\right)^2 + \frac{y}{x}$.
+
+    This is equivalent to $v+x\frac{\dd v}{\dd x} = 1+v^2+v$. We end up getting that $\frac{\dd v}{\dd x}=\frac{v^2+1}{x}$ and this can be done by separation. The solution is $y=x\tan(\ln|x|+C)$ after solving.
+\end{example}
+
+To solve an equation of the form $\frac{\dd y}{\dd x}=G(ax+by)$, use the substitution $z=ax+by$ to transform the equation into a separable equation.
+\begin{example}
+    Solve $\frac{\dd y}{\dd x}=y-x-1+(x-y+2)^{-1}$
+
+    First we have $\frac{\dd y}{\dd x}=-(x-y)-1+(x-y+2)^{-1}$
+
+    So substituting with $z=x-y$, we have that $\frac{\dd z}=1-\frac{\dd z}{\dd x}$. Knowing this, the equation is equal to $1-\frac{\dd z}{\dd x}=-z-1+(z+2)^{-1}$. From this this simplifies to 
+    $\frac{\dd z}{\dd x}=z+2-(z+2)^{-1}$. 
+
+    So now we write this into a separable equation with $\frac{(z+2)\dd z}{(z+2)^2-1} = \dd x$.
+
+    Separating by parts and substituting gives $(x-y+2)^2=ce^{2x}+1$
+\end{example}
+
+\begin{definition}[Bernoulli Equation]
+    A first-order equation that can be written in the form 
+    \[ \frac{\dd y}{\dd x}+P(x)y=Q(x)y^n \]
+    where $P(x)$ and $Q(x)$ are continuous on the interval $(a,b)$ and $n$ is a real number, is called a Bernoulli equation.
+\end{definition}
+
+To solve a Bernoulli equation use the substitution $v=y^{1-n}$ to transform the equation into a linear equation.
+
+\begin{example}
+    Solve $\frac{\dd y}{\dd x}-5y=-\frac{5}{2}xy^3$.
+
+    From above, we have $v=y^{-2}$ and $\frac{\dd v}{\dd x}=-2y^{-3}\frac{\dd u}{\dd x}$ and $-\frac{1}{2}\frac{\dd v}{\dd x}=y^{-3}\frac{\dd y}{\dd x}$.
+
+    So multiplying through by $y^{-3}$ and substituting, we get that $-\frac{1}{2}\frac{\dd v}{\dd x}-5v=-\frac{5}{2}x$.
+
+    This is equal to $\frac{\dd v}{\dd x}+10v=5x$. The integrating factor here is $\mu = e^{\int P(x)\dd x}$, which is $e^{10x}$ in this case.
+
+    Multiplying through by $\mu$, we get that $e^{10x}\frac{\dd v}{\dd x}+10ve^{10x}=5xe^{10}x$ and the LHS should be equal to $\frac{\dd}{\dd x}(e^{10x}v)=5xe^{10x}$.
+
+    Using elementary integration techniques the answer is $y^{-2}=\frac{x}{2}-\frac{1}{20}+Ce^{-10x}$.
+\end{example}
 \end{document}
