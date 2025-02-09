@@ -180,8 +180,83 @@ Here's two more examples to try with the answer given.
 
 \textbf{Example 2: } $\sqrt{108}+\sqrt{72} = \sqrt{2}+\sqrt{3}+\sqrt{5}$
 
+\begin{example}
+    $\sqrt{3}(\sqrt{2}+5)$.
 
+    Expanding this, we get that $\sqrt{6}+5\sqrt{3}$. Note that if you can split up a surd, you can also do the reverse and multiply them back together.
+\end{example}
+
+\ex $6(\sqrt{3}+\sqrt{6})$
+
+\ex $\sqrt{5}(8-\sqrt{7})$
+
+\ex $\sqrt{6}(\sqrt{15}-2\sqrt{2})$
+
+\ex $\sqrt{12}(\sqrt{50}+3\sqrt{10})$
+
+\begin{example}
+    $(2+\sqrt{2})(3-\sqrt{5})$. This example is simliar to above, but with double brackets instead.
+
+    So using a technique of your choice, you should end up with $6-2\sqrt{5}+3\sqrt{2}-\sqrt{10}$.
+\end{example}
+
+\ex $(2-\sqrt{5})(2+\sqrt{5})$
+
+\ex $(3+\sqrt{2})(2+\sqrt{3})$
+
+\ex $(\sqrt{2}+1)(\sqrt{3}-\sqrt{5})$
+
+\ex $(2\sqrt{3}+3\sqrt{5})(2\sqrt{2}-5\sqrt{3})$
 \subsection*{Rationalising the Denominator}
+In general, we do not want a surd in the denominator of a fraction such as $\frac{1}{\sqrt{2}}$. We can use a technique known as rationalising the denominator. In order to do this, we want to multiply by $1 = \frac{\sqrt{2}}{\sqrt{2}}$. So when we multiply $\frac{1}{\sqrt{2}}$ by this, we get that the answer is $\sqrt{2}{2}$.
+
+\ex $\frac{2}{\sqrt{3}}$
+
+\ex $\frac{10}{\sqrt{5}}$
+
+\ex $\frac{9}{2\sqrt{3}}$
+
+\begin{example}
+    Let's try rationalising $\frac{1}{1+\sqrt{2}}$
+
+    For this, we must use the identity $x^2-y^2=(x-y)(x+y)$. If we multiply $(1+\sqrt{2})$ by $(1-\sqrt{2})$, we are able to rationalise the denominator in this case.
+
+    So multiplying by $\frac{1-\sqrt{2}}{1-\sqrt{2}}$ all the way simplifies to $-1+\sqrt{2}$, which is the rationalised form of what was given.
+\end{example}
+
+\ex $\frac{2}{\sqrt{2}+2}$
+
+\ex $\frac{3}{4-\sqrt{5}}$
+
+\ex $\frac{1+\sqrt{2}}{3-\sqrt{2}}$
+
+\ex $\frac{4+2\sqrt{3}}{3+3\sqrt{2}}$
+
+Challenge Problems 
+\begin{enumerate}
+    \item \begin{tikzpicture}
+        % Define points
+        \coordinate (B) at (0,0);
+        \coordinate (C) at (5,0);
+        \coordinate (A) at (2.5,3);
+        
+        % Draw triangle
+        \draw (B) -- (A) -- (C) -- cycle;
+        
+        % Label points
+        \node[above] at (A) {A};
+        \node[left] at (B) {B};
+        \node[right] at (C) {C};
+        
+        % Label side
+        \node[below] at ($(B)!0.5!(C)$) {$6\sqrt{2} - 2\sqrt{5}$};
+    \end{tikzpicture}
+    
+    $\triangle ABC$ has area $5$. Find the exact perpendicular height of the triangle.
+
+    \item Rationalise the denominator of $\frac{1}{\sqrt{2}+\sqrt{3}-\sqrt{5}}$
+\end{enumerate}
+
 \subsection*{Problem Solving}
 \section{Quadratics}
 \subsection*{The Difference of Two Squares}

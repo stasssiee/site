@@ -64,7 +64,59 @@ Increasing sample size decreases standard error and decreases margin of error an
 Decreasing sample size increased standard error, margin of error and gives a wider interval.
 
 Keep in mind that the margin of error in a confidence covers only accounts for sampling variability and does not account for bias in the sampling methods.
+\section{Inference for Comparing Two Population Proportions}
+To construct a two proportion z-interval,
+\begin{itemize}
+    \item Define the parameter. $p_1$ and $p_2$ are the true proportion of parameters in context for a population 
+    \item Check the assumptions and conditions (randomness, independence, and normality)
+    \item Name the inference method
+    \item Calculate the interval: $(\hat{p}_1-\hat{p}_2\pm z*\sqrt{\frac{\hat{p}_1(1-\hat{p}_1)}{n_1}+\frac{\hat{p}_1(1-\hat{p}_2)}{n_2}})$
+    \item Write the conclusion in context 
+\end{itemize}
 
+To construct a two proportion z-test,
+\begin{itemize}
+    \item Define the parameter
+    \item State the hypothesis - The null is $H_0: p_1=p_2$ and the altternate is $p_1<p_2,p_1>p_2$ or $p_1\neq p_2$
+    \item Check the assumptions and conditions 
+    \item Name the Inference Method 
+    \item Calculate the Test Statistic (z-score). The null hypothesis states that there is no difference between the two population proportions. If this is true, the observations really come from a single population.
+    \[ z = \frac{(\hat{p}_1-\hat{p}_2)-0}{\sqrt{\hat{p}_c(1-\hat{p}_c)\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}} \]
+    where $\hat{p}_c = \frac{x_1+x_2}{n_1+n_2}$, where $x$ is the number of successes and $n$ is sample size.
+    \item Obtain the p-value (using normalcdf)
+    \item Make a decision, if the p-value is less than $\alpha$ you reject the null otherwise you fail to reject 
+    \item State the conclusion in context 
+\end{itemize}
 
+\section{Errors \& Power}
+A Type I error occurs when 
+\begin{itemize}
+    \item Reject $H_0$ incorrectly 
+    \item The probability of a Type I error is equal to the significance level 
+    \item P(Type I error) = $\alpha$
+    \item Our significance level tells us what p-value is ``low enough''
+\end{itemize}
+
+A type II error occurs when 
+\begin{itemize}
+    \item Fail to reject $H_0$ incorrectly 
+    \item P(Type II Error) = $\beta$
+\end{itemize}
+
+Power 
+\begin{itemize}
+    \item Reject $H_0$ correctly 
+    \item The probability we reject the null correctly is 1 minus the probability we reject the null incorrectly
+    \item Power = $1-\beta$
+\end{itemize}
+
+Errors and their relationships 
+\begin{itemize}
+    \item Type I and Type II errors have an indirect relationship: as the probability of one increases, the probability of the other decreases 
+    \item Our Type I error is set with our significance level 
+    \item The higher our significance level is, the lower our probability of failing to reject becomes, which is why $\alpha$ and $\beta$ have an indirect relationship 
+    \item The higher our significance level, the more likely we will reject the null, which increases the likelihood we do that incorrectly (as well as correctly)
+    \item Therefore, Type I error and Power have a direct relationship: as the probability of Type I Error increases, the higher the Power of the test 
+\end{itemize}
 
 \end{document}

@@ -3,7 +3,76 @@
 \begin{document}
 \chapter{Mathematical Models and Numerical Methods Involving First-Order Equations}
 \section{Compartmental Analysis}
-\section{Numerical Methods: A Closer Look At Euler's Algorithm}
-\section{Higher-Order Numerical Methods: Taylor and Runge-Kutta}
+We assume that the growth rate is proportional to the population present. A mathematical model called the Malthusian, or exponential law of population growth, model is given by 
+\[ \frac{\dd p}{\dd t}=kp, \qquad p(0)=p_0 \]
+where $k>0$ is the proportionality constant of the growth rate and $p_0$ is the population at time $t=0$.
 
+\begin{example}
+    In 1790, the population of the United States was 3.93 million, and in 1890 it was 62.98 million. Assuming the Mathusian model, estimate the U.S. population as a function of time.
+
+    Let $t=0$ be year 1790. Using separation of variables and integration from $\frac{\dd p}{\dd t}=kp$, we get that $\ln P = kt + C$. Solving for $P$ we get that $e^{\ln P}=P=e^{kt+C}$, so this is equal to $P=Ce^{kt}$.
+
+    At $P(0)=3.93$, and using this we can find $k$. $3.93=Ce^0$, so $C=3.93$. So we have $P(t)=P_0e^{kt}$. We can now find $k$ by plugging in $P(100)=62.98$ from this, and solving for $k$, we get that $k\approx 0.027742$.
+
+    So $P(t)=3.93e^{.027742t}$
+\end{example}
+
+The Malthusian model considered only death by natural casues. Other factors such as premature deaths due to malnutrition, inadequate medical supplies, communicable diseases, violent crimes, etc involve a competition within the population. The logistic model is given by 
+\[ \frac{\dd p}{\dd t}=-Ap(p-p_1), \qquad p(0)=p_0 \]
+Note that this equilibrium has two equilibrium solutions $p(t)=p_1$ and $p(t)=0$.
+
+\begin{example}
+    Taking the population of 3.93 million as the initial population and given the 1840 and 1890 populations of 17.07 and 62.98 million respectively, use the logistic model to estimate the population at time $t$.
+
+    We have $P(50)=17.07$ and $P(100)=62.98$. Using a previously derived formula, $p(t)=\frac{p_0p_1}{p_0+(p_1-p_0)e^{-Ap_1t}}$, we get $17.07=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-50Ap_1}}$ and $62.98=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-100Ap_1}}$. 
+
+    The answers are that $p_1\approx 251.78$ and $A\approx 0.0001210$, so the logistic equation ended up being $p(t)=\frac{989.5}{3.93+247.85e^{-0.030463t}}$.
+\end{example}
+
+\begin{example}
+    Suppose a student carrying a flu virus returns to an isolated college campus of 1000 students. If it is assumed that the rate at which the virus spreads is proportional not only to the number $x$ of infected students 
+    but also to the number of students not infected, determine the number of infected students after 6 days if it is further observed that after 4 days, $x(4)=50$.
+
+    We are solving the initial value problem $\frac{\dd x}{\dd t}=kx(1000-x), x(0)=1$. Doing some stuff we get that $\ln \frac{x}{1000-x}=1000kt+C$.
+
+    After doing some more things we get that $x=\frac{1000Ce^{1000kt}}{1+Ce^{1000kt}}$ and from this we can get that $C=\frac{1}{999}$.
+
+    So the function is now $x(t)=\frac{\frac{1000}{999}e^{1000kt}}{1+\frac{1}{999}e^{1000kt}}$, so simplifying we get that $x(t)=\frac{1000}{999e^{-1000kt}+1}$.
+
+    Doing some plugging in stuff we get that $k\approx -.9906$, so after 6 days approximately 276 students are infected.
+\end{example}
+
+\section{Numerical Methods: A Closer Look At Euler's Algorithm}
+The numerical method defined by the formula 
+\[ y_{n+1}=y_n+h\frac{f(x_n,y_n)+f(x_{n+1}, y_{n+1}^*)}{2} \]
+where 
+\[ y_{n+1}^* = y_n + hf(x_n,y_n) \]
+is known as the improved Euler's method.
+
+The improved Euler's method is an example of a predictor-corrector method.
+
+It is recommended you use technology to find the answer.
+
+\section{Higher-Order Numerical Methods: Taylor and Runge-Kutta}
+We wish to obtain a numerical approximation of the solution $\phi(x)$ to the initial value problem 
+\[ y' = f(x,y), \qquad y(x_0)=y_0 \]
+To derive the Tayler methods, let $\phi_n(x)$ be the exact solution to the initial value problem 
+\[ \phi'_n(x)=f(x,\phi_n), \qquad \phi_n(\text{problem}x_n)=y_n \]
+The Taylor series for $\phi_n (x)$ about the point $x_n$ is 
+\[ \phi_n (x) = \phi_n(x_n)+h\phi'_n(x_n)+\frac{h}{2!}\phi''_n (x_n)+\dots \]
+where $h=x-x_n$. Since $\phi_n$ satisfies the initial value, we can write this series in the form 
+\[ \phi_n(x)=y_n+hf(x_n,y_n)+\frac{h^2}{2!}\phi''_n(x_n)+\dots \]
+
+\begin{example}
+    Determine the recursive formula for the Taylor method of order 2 for the initial value 
+    \[ y'=\sin(xy), y(0)=\pi \]
+
+    We know that $\phi_n''(x_n)=\frac{\partial f}{\partial x}(x_n,y_n)+\frac{\partial f}{\partial y}(x_n,y_n)\cdot \frac{\dd y}{\dd x}$.
+
+    So $\frac{\partial f}{\partial x}=\cos(xy)\cdot y$ and $\frac{\partial f}{\partial y}=\cos(xy)\cdot x$. 
+
+    Putting this all together we get that $\phi_n(x)=y_{n+1}=y_n+h\sin(x_ny_n)+\frac{h^2}{2}[y\cos(xy)+x\cos(xy)\cdot \sin(xy)]$.
+
+    Doing some magic, $x_{n+1}=x_n+h$ and $y_{n+1}=y_n+h\sin(x_ny_n)+\frac{h^2}{2}[y_n\cos(x_ny_n)+\frac{x_n}{2}\sin(2x_ny_n)]$. 
+\end{example}
 \end{document}
