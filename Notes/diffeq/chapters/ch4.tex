@@ -3,7 +3,119 @@
 \begin{document}
 \chapter{Linear Second-Order Equations}
 \section{Introduction: The Mass-Spring Oscillator}
+A damped mass-spring oscillator consists of a mass $m$ attached to a spring fixed at one end. Devise a differential equation that governs the motion of this oscillator, taking into account 
+the forces acting on it due to the spring elasticity, damping friction, and possible external influences.
+
+Newton's second law - force equals mass times acceleration ($F=ma$) - is the most commonly encountered differential equation. It is an ordinary differential equation of the second order 
+since acceleration is the second derivative of position ($y$) with respect to time ($a=\dd^2 y/\dd t^2$).
+
+If the spring is unstretched and the inertial mass $m$ is still, the system is at equilibrium. We stretch the coordinate $y$ of the mass by its displacement from the equilibrium position.
+
+When the mass $m$ is displaced from equilibrium, the spring is stretched or compressed and it exerts a force that resists the displacement. For most springs this force is directly proportional to the displacement $y$ 
+and is given by Hooke's law.
+\[ F_{\text{spring}}= -ky \]
+where the positive constant $k$ is known as the stiffness (spring constant) and the negative sign reflects the opposing nature of the force. Hooke's law is only valid for sufficiently small displacements.
+
+Usually all mechanical systems also experience friction. For vibrational motion this force is usually modeled accurately by a term proportional to velocity:
+\[ F_{\text{friction}}=-b\frac{\dd y}{\dd t}=-by' \]
+where $b\geq 0$ is the damping coefficient and the negative sign reflects the opposing nature of the force.
+
+The other forces on the oscillator are usually regarded as external to the system. Although they may be gravitational, electrical, or magnetic, commonly the most important external forces are transmitted 
+to the mass by shaking the supports holding the system. For now we refer to the combined external forces by a single known function $F_{\text{ext}}(t)$. Newton's law provides the differential equation for the mass-spring oscillator:
+\[ my''=-ky-by'+F_{\text{ext}}(t)\] or \[ my''+by'+ky=F_{\text{ext}}(t) \]
+
+\begin{example}
+    Verify that if $b=0$ and $F_{\text{ext}}=0$, that the above equation has a solution of the form $y(t)=\cos(\omega t)$ and the angular frequency $\omega$ increases with $k$ and decreases with $m$.
+
+    The differential equation is $my''+by'+ky=F_{\text{ext}}$ and that $my''+ky=0$.
+
+    Since we are given what $y(t)$ is, taking the derivative of the differential equation gives that $-m\omega^2\cos(\omega t)+k\cos(\omega t)=0$, and solving for $\omega$, we get that $\omega=\sqrt{\frac{k}{m}}$.
+
+    If $k$ increases, $\omega$ increases, and if $m$ increases, $\omega$ decreases.
+\end{example}
+
+\begin{example}
+    Verify that the exponentially damped sinusoid given by $y(t)=e^{-3t}\cos 4t$ is a solution to the above differential equation if $F_{\text{ext}}=0, m=1, k=25$, and $b=6$.
+
+    From the differential equation $my''+by'+ky=F_{\text{ext}}$, we can plug in stuff and we get that $y''+by'+25y=0$.
+
+    Since we are given $y(t)$ we can find the derivatives and substitute. What we are given is quite long, but essentially it cancels out to $0=0$, which means it is a solution to the system.
+\end{example}
+
+\ex Verify that the simple exponential function $y(t)=e^{-5t}$ is a solution to the above differential equation if $F_{\text{ext}}=0$, $m=1$, $k=25$, and $b=10$.
+
+Sometimes the external force will make the system look somewhat erratic. There are many real world examples where the external force must defintely be taken into account.
+
 \section{Homogeneous Linear Equations: The General Solution}
+A second-order constant-coefficient differential equation has the form 
+\[ ay''+by'+cy=f(t) \qquad (a\neq 0) \]
+A homogeneous second-order constant-coefficient differential equation is the special case with $f(t)=0$.
+\[ ay''+by'+cy=0 \qquad (a\neq 0) \]
+A solution of this equation has the form $y=e^{rt}$. The resulting equation $ar^2+br+c=0$ is called the auxiliary equation (or characteristic equation) associated with the homogeneous equation.
+
+\begin{example}
+    Find a pair of solutions to 
+    \[ y''+5y'-6y=0\]
+
+    Plugging in $y=e^{rt}$, we get that $e^{rt}(r^2+5r-6)$ after substituting. Solving the quadratic $r^2+5r-6 =0$, we get that $r=-6$ and $r=1$, which is $y=e^{-6t}$ and $y=e^t$.
+\end{example}
+
+Note that the zero function, $y(t)=0$ is always a solution to an equation above (figure this out later). In addition when we have a pair of solutions $y_1(t)$ and $y_2(t)$, we can construct an infinite number of other solutions by forming linear combinations:
+\[ y(t)=c_1y_1(t)+c_2y_2(t) \]
+for any choice of the constants $c_1$ and $c_2$. This is a two-paramter solution form since there are two unknown constants. To find a specific solution, two initial conditions are needed.
+
+\begin{example}
+    Solve the initial value problem 
+    \[ y''+2y'-y=0\qquad y(0)=0, \qquad y'(0)=-1 \]
+
+    Doing the default substitution, our auxiliary equation is $r^2+2r-1=0$. 
+
+    The solutions from this are $r=-1+\sqrt{2}$ and $r=-1-\sqrt{2}$. Remember $y=e^{rt}$. Using the initial conditions, we get that $c_1=-\frac{\sqrt{2}}{4}$ and $c_2=\frac{\sqrt{2}}{4}$.
+\end{example}
+
+\begin{theorem}
+    For any real numbers $a(\neq 0),b,c,t_0,Y_0$, and $Y_1$, there exists a unique soultion to the initial value problem. 
+    \[ ay''+by'+cy=0 \qquad y(t_0)=Y_0 \qquad y'(t_0)=y_1 \]
+    The solution is valid for all $t$ in $(-\infty,\infty)$
+\end{theorem}
+
+\begin{definition}
+    A pair of functions $y_1(t)$ and $y_2(t)$ is said to be linearly independent on the interval $t$ if and only if neither of them is a constant multiple of the other on all of $t$. We say that 
+    $y_1$ and $y_2$ are linearly dependent on $t$ if one of them is a constant multiple of the other on all of $t$.
+\end{definition}
+
+\begin{theorem}
+    If $y_1(t)$ and $y_2(t)$ are any two solutions to the differential equation that are linearly independent on $(-\infty,\infty)$, then unique constants $c_1$ and $c_2$ can always be found so that $c_1y_1(t)+c_2y_2(t)$ satisfies the initial value problem on $(-\infty,\infty)$.
+\end{theorem}
+
+\begin{definition}[Wronksian]
+    Suppose each of the functions $f_1(x),f_2(x),\dots f_n(x)$ possess at least $n-1$ derivatives. 
+    
+    The determinant \[
+        W(f_1, f_2, \dots, f_n) =
+        \begin{vmatrix}
+        f_1 & f_2 & \dots & f_n \\
+        f_1' & f_2' & \dots & f_n' \\
+        \vdots & \vdots & \ddots & \vdots \\
+        f_1^{(n-1)} & f_2^{(n-1)} & \dots & f_n^{(n-1)}
+        \end{vmatrix}
+        \]
+        is called the Wronksian of the functions.
+\end{definition}
+
+\begin{theorem}
+    Let $y_1,y_2,\dots,y_n$ be $n$ solutions of the homogeneous linear $n$th-order differential equation on an interval $I$. Then the set of solutions is linearly independent on $I$ 
+    if and only if $W(y_1,y_2,\dots,y_n)\neq 0$ for every $x$ in the interval.
+\end{theorem}
+
+Distinct real roots: If the auxiliary equation has distinct real roots $r_1$ and $r_2$, then both $y_1(t)=e^{rt}$ and $y_2(t)=e^{rt}$ are solutions to the above differential equation and $y(t)=e_1e^{rt}+e_2e^{rt}$ is a general solution.
+
+Repeated root: if the auxiliary equation has a repeated root $r$, then both $y_1(t)=e^{rt}$ and $y_2(t)=te^{rt}$ are solutions to the differential equation and $y(t)=e_1e^{rt}+e_2te^{rt}$ is a general solution.
+
+A homogeneous linear $n$th-order equation has a general solution of the form 
+\[ y(t)=c_1y_1(t)+c_2y_2(t)+\dots+c_ny_n(t) \]
+where the individual solutions $y_i(t)$ are linearly independent, i.e. no $y_i(t)$ is expressible as a linear combination of the others.
+
 \section{Auxiliary Equations with Complex Roots}
 \section{Nonhomogeneous Equations: the Method of Undetermined Coefficients}
 \section{The Superposition Principle and Undetermined Coefficients Revisited}

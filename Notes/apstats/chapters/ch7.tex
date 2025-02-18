@@ -2,5 +2,49 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Inference for Quantitative Data: Means}
+\section{Constructing a One Sample t-Interval}
+Sampling Distribution for Means:
+\begin{itemize}
+    \item Shape - normal population indicates a normal sampling distribution. $n<30$ then data needs to be stated as approximately normal. $n\geq 30$ satisfies Central Limit Theorem (CLT) which guarantees approximately normal 
+    \item Center - as long as you are taking a random sample or using random assignment, $\mu_{\overline{x}}=\mu$
+    \item When sampling, as long as 10\% condition is met, $\sigma_{\overline{x}}=\frac{\sigma}{\sqrt{x}}$
+\end{itemize}
+
+As long as the above conditions are met, the sampling distribution of $\overline{x}: \overline{X} \sim N\left(\mu,\frac{\sigma}{\sqrt{n}}\right)$
+
+When we do not know the population standard deivation (which we usually don't), we must estimate it from our sample using the sample standard deviation, $s$. However, when we do so, 
+the test statistic ($z$) that we previously used changes. The new test statistic is now called the t-statistic and has a new distribution associated with it.
+
+The new t-distribution is not exactly like the standard normal curve, but it is very close:
+\begin{itemize}
+    \item It it still centered at 0 
+    \item It is bell shaped 
+    \item Its spread is slightly greater than the standard normal distribution 
+    \item It has more area in the tails 
+\end{itemize}
+
+The special thing about t-distributions is the fact that it is a family of distributions. There is a unique density curve for each sample size (and the dependence on sample size is taken care of by degrees of freedom: $n-1$.)
+
+The tails on a t-distribution are ``fatter'' than a standard normal distribution. This is true because the small our sample size, the more variation we have, hence the fatter tails. The larger our sample size gets, the closer the t-distribution will have towards the standard normal distribution.
+
+Constructing a confidence interval
+\begin{itemize}
+    \item Define the parameter. $\mu$ = true mean of $\{$population parameter in context$\}$
+    \item Check the assumptions and conditions: 
+    \begin{itemize}
+        \item Random: The sample should be a random sample of the pouplation or random assignment in an experiment.
+        \item Independence (10\% Condition): The sample size, $n$, must be no longer than 10\% of the population.
+        \item Normality: THere are multiple ways to verify this condition.
+        \begin{itemize}
+            \item Stated in problem: It may be stated in the problem that the sampling distribution is approx. normal 
+            \item Central Limit Theorem: When $n$ is large, the sampling distribution of the sample means is approx. normal.
+            \item Visual representation: You are given a graphical representation (histogram or boxplot) that depicts a shape that is approximately normal. You may also be given data that you have to graph yourself (include a sketch). You are looking for no strong skew or outliers. 
+        \end{itemize}
+        \end{itemize}
+    \item Name the inference method: One Sample t-Interval 
+    \item Calculate the interval: point estimate $\pm$ margin of error: $\overline{x}\pm t^*_{n-1}\left(\frac{s}{\sqrt{n}}\right)$. Use 2nd-Vars-4:invT$()$ in the calculator to calculate the critical value.
+    \item Write your conclusion in context
+\end{itemize}
+You can determine the sample size from the formula $ME=t^*_{n-1}\left(\frac{s}{\sqrt{n}}\right)$.
 
 \end{document}

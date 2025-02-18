@@ -3,14 +3,117 @@
 \begin{document}
 \chapter{Force and Translational Dynamics}
 \section{Systems and Center of Mass}
+\begin{itemize}
+    \item System properties are determined by the interactions between objects within the system.
+    \item If the properties or interactions of the constituent objects within a system are not important in modeling the behavior of a macroscopic system, the system can itself be treated as a single object.
+    \item Systems may allow interactions between constituent parts of the system and the environment, which may result in the transfer of energy or mass.
+    \item For objects with symmetrical mass distributions, the center of mass is located on lines of symmetry.
+    \item The location of a system's center of mass along a given axis can be calculated using the equation:
+    \[ x_{cm}=\frac{\sum m_ix_i}{M}\] 
+    \item For a nonuniform solid that can be considered as a collection of differential masses, $\dd m$, the solid's center of mass can be calculated using 
+    \[ x_{cm}=\int x\dd m/M \]
+    \item A system can be modeled as a singular object that is located at the system's center of mass.
+\end{itemize}
+
 \section{Forces and Free-Body Diagrams}
+\begin{itemize}
+    \item Forces are vector quantitites that describe interactions between objects or systems.
+    \item Contact forces describe the interaction of an object or system touching another object or system.
+    \item Free-body diagrams (FBDs) are useful tools for visualizing forces exerted on a single object or system and for determining the equations that represent a physical situation.
+    \item The FBD of an object or system shows each of the forces exerted on the object or system by the environment.
+    \item Forces exerted on an object or system are represented as vector originating from the center of mass, such as a dot.
+    \item Choose a coordinate system such that one axis is parallel to the acceleration of the object or system.
+\end{itemize}
+
 \section{Newton's Third Law}
+Newton's third law describes the interaction of two objects or systems in terms of the paired forces that exerts on the other.
+\begin{center}
+    $\vec{F}_{\text{A on B}} = -\vec{F}_{\text{B on A}}$
+\end{center}
+Interactions between objects within a system do not influence the motion of a system's center of mass.
+
+Tension is the macroscopic net results of forces that infinitesimal segments of a string, cable, chain or similar systme exert on each other in response to an external force.
+\begin{itemize}
+    \item An ideal string has negligible mass and does not stretch when under tension.
+    \item The tension in an ideal string is the same at all points within the string.
+    \item In a string with nonneglibible mass, tension may not be the same at all points within the string.
+    \item An ideal pulley that has negligible mass and rotates about an axle through its center of mass with negligible friction.
+\end{itemize}
+
 \section{Newton's First Law}
+The net force on a system is the vector sum of all forces exerted on the system.
+
+Translational equilibrium is the configuration of forces that the net force exerted on a system is zero.
+\[ \sum F = 0 \]
+
+Newton's first law states that if the net force exerted on a system is zero, the velocity of that system will remain constant.
+
+Forces may be balanced in one dimension but unbalanced in another.
+
 \section{Newton's Second Law}
+Unbalanced forces are a configuration of forces such that the net force exerted on a system is not equal to zero.
+
+Newton's second law of motion states that the acceleration of a system's center of mass has a magnitude proportional to the magnitude of the net force exerted on the system and is in the same direction of the force.
+\[ \sum F = ma =0 \]
+
+The velocity of a system's center of mass will only change if a nonzero net external force is exerted on that system/
+
 \section{Gravitational Force}
+Newton's law of universal gravitation describes the gravitational force between two objects as directly proportional to each of their masses and inversely proportional to the square of the distance between their centers.
+\[ F_G = \frac{Gm_1m_2}{d^2} \]
+
+A field models the effects of a noncontact force exerted on an object at various positions in space.
+
+The magnitude of the gravitational field created by a system of mass $M$ at a point in space is equal to the ratio of the gravitational force exerted by the system on a test object of mass $m$ to the mass of the test object. 
+\[ \vec{g}=\frac{\vec{F}_g}{m} \]
+
+If a system is accelerating, the apparent weight of the system is not equal to the magnitude of the gravitational force exerted on the system.
+
+Newton's shell law theorem describes the net gravitational force exerted on an object by a uniform spherical shell of mass.
+
 \section{Kinetic and Static Friction}
+Kinetic friction occurs when two surfaces in contact move relative to each other.
+\begin{itemize}
+    \item It opposes the direction of motion.
+    \item The surface area of contact is not a factor.
+\end{itemize}
+
+The magnitude of the kinetic friction force exerted on an object is the product of the normal force the surface exerts on the object and the coefficient of kinetic friction.
+\[ f_k = \mu_k F_N \]
+
+Static friction may occur between the contacting surfaces of two objects that are not moving relative to each other.
+
+Static friction adopts the value and direction required to prevent an object from slipping or sliding on a surface.
+\[ f_s \leq \mu_s F_N \]
+
+The coefficient of static friction is typically greater than the coefficient of kinetic friction for a given pair of surfaces.
 \section{Spring Forces}
+An ideal spring has negligible mass and exerts a force that is proportional to the change in its length as measured from its relaxed length.
+
+The magnitude of the force exerted by an ideal spring on an object is given by Hooke's Law:
+\[ F_{sp}=-k\Delta x \] 
+
+The force exerted on an object by a spring is always directed toward the equilibrium position of the object-spring system.
+
+A collection of springs that exert forces on an object may behave as though they were a single spring with an equivalent spring constant.
+\begin{itemize}
+    \item Springs in series: $\frac{1}{k_{eff}}=\frac{1}{k_1}+\frac{1}{k_2}+\dots$
+    \item Springs in parallel: $k_{eff}=k_1+k_2+\dots$
+\end{itemize}
 \section{Resistive Forces}
+A resistive force is defined as a velocity-dependent force in the opposite direction of an object's velocity.
+\[ F_R=-kv [F_R=-bv^2] \]
+
+Applying Newton's second law to an object upon which a resistive force is exerted results in a differential equation for velocity.
+\begin{itemize}
+    \item The differential portion of a=the equation comes from substituting in $a=\frac{\dd v}{\dd t}$
+\end{itemize}
+
+Terminal velocity is defined as the maximum speed achieved by an object moving under the influence of a constant force and a resistive force that are exerted on the object in opposite directions.
+\begin{itemize}
+    \item For a falling object, this occurs when the air resistance equals the weight of the object.
+\end{itemize}
+
 \section{Circular Motion}
 
 \end{document}

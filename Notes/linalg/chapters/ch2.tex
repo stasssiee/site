@@ -3,6 +3,52 @@
 \begin{document}
 \chapter{Matrix Algebra}
 \section{Matrix Operations}
+Sums and Scalar Multiples of Matrices: if $A$ and $B$ are $m\times n$ matrices, $A+B$ is the $m\times n$ whose columns are the sums of the corresponding columns in $A$ and $B$, the scalar multiple $rA$ is the matrix whose columns are $r$ times the corresponding columns in $A$.
+
+\begin{theorem}
+    Matrix addition and scalar multiplication: Let $A$, $B$, and $C$ be matrices of the same size, and let $r$ and $s$ be scalars.
+    \begin{enumerate}
+        \item $A+B=B+A$
+        \item $(A+B)+C=A+(B+C)$
+        \item $A+0=A$
+        \item $r(A+B)=rA=rB$
+        \item $(r+s)A=rA=sA$
+        \item $r(sA)=(rs)A$
+    \end{enumerate}
+\end{theorem}
+
+Matrix Multiplication: if $A$ is an $m\times n$ matrix and $B$ is an $n\times p$ matrix with columns $\textbf{b}_1,\textbf{b}_2,\dots \textbf{b}_p$, then the product $AB$ is the $m\times p$ matrix 
+whose columns are $A\textbf{b}_1,A\textbf{b}_2,\dots,A\textbf{b}_p$, i.e, $AB=A[\textbf{b}_1 \textbf{b}_2 \dots \textbf{b}_p] = [A\textbf{b}_1 A\textbf{b}_2 \dots A\textbf{b}_p]$. 
+Matrix multiplication corresponds to composition of linear transformations.
+\begin{itemize}
+    \item An efficient Matrix Multpilcation: if the product $AB$ is defined, then the entry in row $i$ and column $j$ of $AB$ is the sum of the products of corresponding entries from row $i$ of $A$ and column $j$ of $B$. If $(AB)_{ij}$ denotes the $(i,j)$th entry in $AB$, and if $A$ is $m\times n$, then $(AB)_{ij}=a_{i1}b_{1j}+a_{i2}b_{2j}+\dots +a_{in}b_{nj}$.
+\end{itemize}
+
+Properties of Matrix Multpilcation: Let $A$ be $m\times n$ and let $B$, $C$ have sizes such that the sums and products are defined:
+\begin{enumerate}
+    \item $A(BC)=(AB)C$ associative law 
+    \item $A(B+C)=AB+AC$ left distributive law 
+    \item $(B+C)A=BA+CA$ right distributive law 
+    \item $r(AB)=(rA)B = A(rB)$ for any scalar $r$
+    \item $I_mA=A=AI_n$ Identity matrix for multiplication 
+\end{enumerate}
+\begin{itemize}
+    \item Matrix mutiplication is not commutative. In general $AB$ does not equal $BA$.
+    \item Cancellation laws do not hold for matrix multiplication.
+    \item If $AB=0$, you cannot conclude either $A=0$ or $B=0$.
+\end{itemize}
+Powers of a Matrix: If $A$ is $n\times n$ and $k$ is a positive integer, $A^k$ denote the product of $k$ copies of $A$.
+
+The Transpose of a Matrix: given an $m\times n$ matrix $A$, the transpose of $A$ is the $n\times m$ matrix whose columns are formed from the corresponding rows of $A$.
+\begin{theorem}[Transpose]
+    Let $A$, $B$ denote matrices whose sizes are appropriate for the following:
+    \begin{enumerate}
+        \item $(A^T)^T=A$
+        \item $(A+B)^T=A^T+B^T$
+        \item for any scalar $r$, $(rA)^T=r(A)^T$
+        \item $(AB)^T=B^TA^T$
+    \end{enumerate}
+\end{theorem}
 \section{The Inverse of a Matrix}
 \section{Characterizations of Invertible Matrices}
 \section{Matrix Factorizations}
