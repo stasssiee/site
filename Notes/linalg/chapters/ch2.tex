@@ -50,7 +50,72 @@ The Transpose of a Matrix: given an $m\times n$ matrix $A$, the transpose of $A$
     \end{enumerate}
 \end{theorem}
 \section{The Inverse of a Matrix}
+The Matrix Inverse is the matrix analogue of the multiplicative inverse of in real numbers. 
+\begin{itemize}
+    \item Invertible: an $n\times n$ matrix $A$ is said to be invertible if there is an $n\times n$ matrix $A^{-1}$ such that $A^{-1}A=AA^{-1}=I_n$. In this case $A^{-1}$ is said to be the unique inverse of $A$.
+\end{itemize}
+
+Notice: because matrix multipilcation is not commutative, both equations are needed.
+
+Singular Matrix: A matrix that is not invertible is a single matrix. An invertible matrix is nonsingular.
+
+\begin{theorem}
+    Inverse of a $2\times 2$: Let $A$ be the $2\times 2$ matrix shown. If $ab-dc$ is not zero, then $A$ is invertible with $A^{-1}$ as shown:
+    \[ A = \begin{bmatrix}
+        a & d \\
+        c & d
+    \end{bmatrix} \qquad A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}
+        d & -b \\ 
+        -c & a 
+    \end{bmatrix} \]
+\end{theorem}
+
+Determinant: det $A$ = $ad-bc$. The theorem says that a $2\times 2$ matrix is invertible iff det $A$ is not zero.
+
+\begin{theorem}
+    If $A$ is an invertible matrix, then for each $\textbf{b}$ in $\textbf{R}^n$, the equation $A\textbf{x}=\textbf{b}$ has a unique soultion $\textbf{x}=A^{-1}\textbf{b}$.
+\end{theorem}
+
+\begin{theorem}
+    \begin{enumerate}
+        \item If $A$ is an invertible matrix, then $A^{-1}$ is invertible and $(A^{-1})^{-1}=A$
+        \item If $A$ and $B$ are $n\times n$ invertible matrices, then so is $AB$ and $(AB)^{-1}=B^{-1}A^{-1}$. Generalization: the product of $n\times n$ invertible matrices is invertible, and the inverse is the product of the their inverse in the reverse order.
+        \item If $A$ is an invertible matrix, then so is $A^T$, and $(A^T)^{-1} = (A^{-1})^T$
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}
+    An $n\times n$ matrix is invertible iff it is row equivalent to $I_n$, and any sequence of elementary row operations that reduces $A$ to $I_n$ also transforms $I_n$ to $A^{-1}$.
+\end{theorem}
+
 \section{Characterizations of Invertible Matrices}
+The Invertible Matrix Theorem: let $A$ be an $n\times n$ matrix. Then the following statements are equivalent.
+\begin{itemize}
+    \item $A$ is an invertible matrix.
+    \item $A$ is row equivalent to the $n\times n$ identity matrix.
+    \item $A$ has $n$ pivot positions 
+    \item the equation $A\textbf{x}=\textbf{0}$ has only the trivial solution 
+    \item the columns of $A$ form a linearly independent set 
+    \item the linear transform $\textbf{x}\rightarrow A\textbf{x}$ is one-to-one 
+    \item the equation $A\textbf{x}=\textbf{b}$ has at least 1 soln for each $\textbf{b}$ in $\textbf{R}^n$
+    \item the columns of $A$ span $\textbf{R}^n$
+    \item the linear transformation $\textbf{x}\rightarrow A\textbf{x}$ maps $\textbf{R}^n$ onto $\textbf{R}^n$
+    \item there is an $n\times n$ matrix $C$ such that $CA=I$
+    \item there is an $n\times n$ matrix $D$ such that $AD=I$
+    \item $A^T$ is an invertible matrix 
+\end{itemize}
+Note that this only applies to square matrices.
+
+\begin{theorem}[Inverse Transformation]
+    Let $T:\textbf{R}^n\rightarrow \textbf{R}^n$ be a linear transformation and let $A$ be the standard matrix for $T$. Then $T$ is invertible if and only if $A$ is an invertible matrix.
+    In that case, the linear transformation $S$ given by $S(\textbf{x})=A^{-1}\textbf{x}$ is the unique solution satisfying $S(T(\textbf{x}))=\textbf{x}$ and $T(S(\textbf{x}))=\textbf{x}$ for all $\textbf{x}$ in $\textbf{R}^n$.
+\end{theorem}
+
+Recall that matrix multipilcation corresponds to composition of linear transformations. When a matrix $A$ is invertible, the equation $A^{-1}A\textbf{x}=\textbf{x}$ can be viewed as a statement 
+about linear transformations. A linear transformation $T:\textbf{R}^n\rightarrow \textbf{R}^n$ is said to be invertible if there exists a function $S:\textbf{R}^n\rightarrow \textbf{R}^n$ such that $S(T(\textbf{x}))=\textbf{x}$ and $T(S(\textbf{x}))=\textbf{x}$ for all $\textbf{x}$ in $\textbf{R}^n$.
+
+
+
 \section{Matrix Factorizations}
 
 
