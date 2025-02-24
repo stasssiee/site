@@ -117,7 +117,26 @@ about linear transformations. A linear transformation $T:\textbf{R}^n\rightarrow
 
 
 \section{Matrix Factorizations}
+A factorization of a matrix $A$ is an equation that expresses $A$ as a product of two or more matrices.
 
+Whereas matrix multiplication involves a synthesis of data (combining the effects of two or more linear transformations into a single matrix), matrix factorization is an analysis of data.
+
+The LU factorization:
+
+At first assume that $A$ is an $m\times n$ matrix that can be row reduced to echelon form, without row interchanges. Then $A$ can be written in the form $A=LU$, where $L$ is an $m\times m$ lower triangular matrix 
+with 1's on the diagonal and $U$ is an $m\times n$ echelon form of $A$.
+
+Suppose $A$ can be reduced to an echelon form $U$ using only row replacements that add a multiple of one row to another below it. In this case, there exist unit lower triangular elementary matrices, $E_1,\dots,E_p$ such that $E_p\cdots E_1A=U$.
+
+Then $A=(E_p\cdots E_1)^{-1}U=LU$ where $L=(E_p\cdots E_1)^{-1}$.
+
+It can be shown that products and inverses of unit lower triangular matrices are also unit lower triangular. Thus $L$ is unit lower triangular.
+
+Algorithm:
+\begin{itemize}
+    \item Reduce $A$ to an echelon form $U$ by a sequence of row replacement operations, if possible.
+    \item Place entries in $L$ such that the same sequence of row operations reduces $L$ to $I$.
+\end{itemize}
 
 
 \end{document}

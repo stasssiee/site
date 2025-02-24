@@ -212,7 +212,125 @@ To find a solution to the differential equation $ay''+by'+cy = Ct^me^{\alpha t}\
 \end{enumerate}
 
 \section{The Superposition Principle and Undetermined Coefficients Revisited}
+\begin{theorem}[Superposition Principle]
+    Let $y_1$ be a solution to the differential equation 
+    \[ ay''+by'+cy=f_1(t) \]
+    and $y_2$ is a solution to 
+    \[ ay''+by'+cy=f_2(t) \]
+    then for any constants $k_1$ and $k_2$, the function $k_1y_1+k_2y_2$ is a solution to the differential equation 
+    \[ ay''+by'+cy = k_1f_1(t)+k_2f_2(t) \]
+\end{theorem}
+
+\begin{example}
+    Find a particular solution to 
+    \[ y''+3y'+2y = 3t+10e^{3t}\]
+    The solution for equal to $3t$ is $y=\frac{3t}{2}-\frac{9}{4}$ and for $10e^{3t}$ is $y=\frac{e^{3t}}{2}$ so the solution is $y=\frac{3t}{2}-\frac{9}{4}+\frac{e^{3t}}{2}$.
+\end{example}
+
+\ex Find a particualr solution to $y''+3y'+2y=-9t+20e^{3t}$.
+
+General solution for Nonhomogeneous Differential Equations: Let $y_p$ be a particular solution to 
+\[ ay''+by'+cy = f(t) \]
+and $c_1y_1+c_2y_2$ be the general solution to the homogeneous equation 
+\[ ay''+by'+cy =0 \]
+Then the general solution to the nonhomogeneous equation is given by 
+\[ y(t)=y_p(t)+c_1y_1(t)+c_2y_2(t) \]
+
+\begin{theorem}
+    For any real numbers $a(\neq 0), b, c, t_0, Y_0$, and $Y_1$, suppose $y_p(t)$ is a particular solution to above in an interval $I$ containing $t_0$ and 
+    that $y_1(t)$ and $y_2(t)$ are linearly independent solutions to the associated homogeneous equation in $I$. Then there exists a unique solution in $I$ to the initial value problem.
+    \[ ay''+by'+cy = f(t) \qquad y(t_0)=Y_0 \qquad y'(t_0)= Y_1 \]
+\end{theorem}
+
+\begin{example}
+    Given that $y_p(t)=t^2$ is a particular solution to 
+    \[ y''-y=2-t^2 \]
+    Find a general solution and a solution satisfying $y(0)=1, y'(0)=0$.
+
+    Our general solution using the auxiliary equation is $y=c_1e^t+c_2e^{-t}$.
+
+    Our particular solution will be in $At^2+By+C$.
+
+    So $y=t^2+c_1e^t+c_2e^{-t}$. Solving for $c_1$ and $c_2$ by finding the derivative of this and using the initial conditions, the specific solution is $y=t^2+\frac{1}{2}e^t+\frac{1}{2}e^{-t}$.
+\end{example}
+
+\begin{example}
+    A mass-spring system is driven by a sinusodial external force $5\sin t + 5\cos t$. The mass equals 1, the spring constant equals 2, and the damping coefficient equals 2 (in appropriate units), so the motion is governed by the differential equation 
+    \[ y''+2y'+y=5\sin t+5\cos t \]
+
+    If the mass is initially located at $y(0)=1$, with a velocity $y'(0)=2$, find its equation of motion.
+
+    Finding the general solution to this we get that $y=c_1e^{-t}\cos t + c_2e^{-t}\sin t$. 
+    
+    From $y_p=A\sin t + B\cos t$, we should solve that 
+    \[y=3\sin t - \cos t + 2e^{-t}\cos t + e^{-t}\sin t\]
+\end{example}
+
+\begin{example}
+    Find a particular solution to 
+    \[ y''-y=8te^t+2e^t \]
+
+    The general solution for this is $y=c_1e^t+c_2e^{-t}$. $y_p$ is equal to $(At+B)e^t$. Doing some calculations should result in $y_p=(2t^2-t)e^t$. 
+\end{example}
+
+Method of Undetermined Coefficients (Revisited)
+
+To find a particular solution to the differential equation 
+\[ ay''+by'+cy=P_m(t)e^{rt} \]
+where $P_m(t)$ is a polynomial of degree $m$, use the form 
+\[ y_p(t)=t^s(A_mt^m+\dots +A_1t+A_0)e^{rt}\]
+if $r$ is not a root of the associated auxiliary equation, take $s=0$; ir $r$ is a simple root of the associated 
+auxiliary equation, take $s=1$; and if $r$ is a double root of the associated auxiliary equation, take $s=2$.
+
+To find a particular solution to the differential equation 
+\[ ay''+by'+cy=P_m(t)e^{\alpha t}\cos \beta t + Q_n(t)e^{\alpha t}\sin \beta t, \beta \neq 0 \]
+where $P_m(t)$ is a polynomial of degree $m$ and $Q_n(t)$ is a polynomial of degree $n$, use the form 
+$y_p(t)=t^s(A_kt^k+\dots+A_1t+A_0)e^{\alpha t}\cos \beta t + t^s(B_kt^k+\dots +B_1t+B_0)e^{\alpha t}\sin \beta t$, where $k$ is the larger of $m$ and $n$.
+If $\alpha + i\beta$ is not a root of the associated auxiliary equation, take $s=0$; if $\alpha + i\beta$ is a root of the associated auxiliary equation, take $s=1$.
+
+\ex Write down the form of a particular solution to the equation $y''+2y'+2y=5e^{-t}\sin t+5t^3e^{-t}\cos t$.
+
+\ex Write down the form of a particular solution to the equation $y'''+2y''+y'=5e^{-t}\sin t+3+7te^{-t}$.
+
 \section{Variation of Parameters}
+The Method of Undetermined Coefficients is a procedure for determining a particular solution when the equation has constant coefficients and the nonhomogeneous term is of a special type.
+
+Variation of Paramters is a more general method for finding a particular solution.
+
+Consider a linear second-order equation 
+\[ a_2(x)y'' + a_1(x)y'+a_0(x)y=g(x) \]
+in the standard form 
+\[ y''+P(x)y'+Q(x)y=f(x) \]
+Obtain the solution to the associated homogeneous equation 
+\[ y=c_1y_1(x)+c_2y_2(x)\]
+And replace the constants with functions 
+\[ y=u_1y_1(x)+u_2y_2(x)\]
+
+Substituting into the DE yields the system:
+\begin{align*}
+y_1u'_1+y_2u'_2=0 \\
+y'_1u'_1+y'_2u'_2 = f(x)
+\end{align*}
+
+By Cramer's Rule, the solution can be expressed in terms of determinants- 
+\[ u'_1=\frac{W_1}{W}=\frac{-y_2f(x)}{W} \qquad u'_2=\frac{W_2}{W}=\frac{y_1f(x)}{W} \]
+
+The functions $u_1$ and $u_2$ are found by integrating.
+
+A particular solution is $y_p=u_1y_1+u_2y_2$.
+
+\begin{example}
+    Find a general solution on $(-\frac{\pi}{2},\frac{\pi}{2})$ to $\frac{\dd^2 y}{\dd t^2}+y=\tan t$.
+
+    The standard form is $y''+y=\tan t$.
+
+    The solutions to the homogeneous equation is $r=\pm i$, so $\alpha = 0$ and $\beta = 1$, so $y_1=\cos t$ and $y_2=\sin t$.
+
+    Using what was previously introduced, we end up with $y=c_1\cos t + c_2\sin t - \cos t \ln|\sec t+\tan t|$
+\end{example}
+
+\ex Find a general solution on $(-\frac{\pi}{2},\frac{\pi}{2})$ to $\frac{\dd^2 y}{\dd t^2}+y=\tan t + 3t - 1$.
+
 \section{Variable-Coefficient Equations}
 
 \end{document}
