@@ -332,5 +332,102 @@ A particular solution is $y_p=u_1y_1+u_2y_2$.
 \ex Find a general solution on $(-\frac{\pi}{2},\frac{\pi}{2})$ to $\frac{\dd^2 y}{\dd t^2}+y=\tan t + 3t - 1$.
 
 \section{Variable-Coefficient Equations}
+We now consider equations with variable coefficients of the form 
+\[ a_2(t)y''+a_1(t)y'+a_0(t)y=f(t) \]
+Typically, the equation is divided by the nonzero coefficient $a_2(t)$ and is expressed in standard form 
+\[ y''(t)+p(t)y'+q(t)y(t)=g(t) \]
+
+\begin{theorem}
+    Suppose $p(t), q(t)$, and $g(t)$ are continuous on an interval $(a,b)$ that contains the point $t_0$. The, for any choice of the initial values $Y_0$ and $Y_1$, there exists a 
+    unique solution $y(t)$ on the same interval $(a,b)$ to the initial value problem 
+    \[ y''(t)+p(t)y'(t)+q(t)y(t)=g(t), \qquad y(t_0)=Y_0, \qquad y'(t_0)=Y_1 \]
+\end{theorem}
+
+\begin{example}
+    Determine the largest interval for which the above theorem ensures the existence and uniqueness of a solution to the initial value problem 
+    \[(t-3)y'' + y'+\sqrt{t}y = \ln t \qquad y(1)=3, \qquad y'(1)=-5 \]
+
+    First, let's put this into standard form. $y''+\frac{1}{t-3}y' + \frac{\sqrt{t}}{t-3}y=\frac{\ln t}{t-3}$.
+
+    From this we can see that this is only continuous from $(0,3)$.
+\end{example}
+
+\begin{definition}
+    A linear second-order equation that can be expressed in the form 
+    \[ at^2y''(t)+bty'(t)+cy=f(t) \]
+    where $a,b$, and $c$ are constants, is called a Cauchy-Euler, or equidimensional, equation.
+\end{definition}
+
+To solve a Cauchy-Euler equation, for $t>0$ look for solutions of the form 
+\[ y=t^r \]
+and substitute into the homogeneous form 
+\[ at^2y''(t)+bty'(t)+cy =0 \]
+the resulting equation $ar^2+(b-a)r+c=0$ is called the associated characteristic equation.
+
+\begin{example}
+    Find two linearly independent solutions to the equation 
+    \[ 3t^2y''+11ty'-3y=0 \qquad t>0 \]
+
+    The solutions are $y=t^r$ and plugging this into the equation results in $3r^2+8r-3$, which factors to $r=\frac{1}{3}$ and $r=-3$.
+
+    The solutions are $y=t^{1/3}$ and $y=t^{-3}$.
+\end{example}
+
+If the roots of the associated characteristic equation $r$ are equal, then independent solutions of the Cauchy-Euler equation on $(0, \infty)$ are given by 
+\[ y_1 = t^r \qquad \text{and} \qquad y^2 = t^r\ln t\]
+IF the roots are complex, $r=\alpha\pm\beta i$, then the independent solutions are given by 
+\[ y_1=t^a\cos(\beta \ln t) \qquad \text{and} \qquad y_2=t^{\alpha}\sin(\beta \ln t) \]
+
+\begin{example}
+    Find a pair of linearly independent solutions to the Cauchy-Euler equations for $t>0$.
+
+    $t^2y''+5ty'+5y=0$
+
+    Answer: $y_1=t^{-2}\cos (\ln t)$, $y_2=t^{-2}\sin(\ln t)$
+\end{example}
+
+\ex Do the same thing for $t^2y''+ty'=0$.
+
+\begin{lemma}
+    If $y_1(t)$ and $y_2(t)$ are any two solutions to the homogeneous differential equation 
+    \[ y''(t)+p(t)y'(t)+q(t)y(t) =0 \]
+    on an interval $I$ where the functions $p(t)$ and $q(t)$ are continuous and if the Wronksian is zero at any point $t$ of $I$, then $y_1$ and $y_2$ are linearly dependent on $I$.
+\end{lemma}
+
+\begin{theorem}
+    If $y_1(t)$ and $y_2(t)$ are any two solutions to the homogeneous differential equation that are linearly independent on an interval $I$ containing $t_0$, then unique constants $c_1$ and $c_2$ can always be found so that $c_1y_1(t)+c_2y_2(t)$ satisfies the initial
+    conditions $y(t_0)=Y_0$, $y'(t_0)=Y_1$ for any $Y_0$ and $Y_1$.
+\end{theorem}
+
+$y_h=c_1y_1+c_2y_2$ is called a general solution to the homogeneous differential equation $y''(t)+p(t)y'(t)+q(t)y(t)=0$ if $y_1$ and $y_2$ are linearly independent solutions on $I$.
+
+For the nonhomogeneous equation $y''(t)+p(t)y'(t)+q(t)y(t)=g(t)$ a general solution on $I$ is given by $y=y_p+y_h$ where $y_h=c_1y_1+c_2y_2$ is a general solution to the corresponding homogeneous equation on $I$ and $y_p$ is a particular solution on $I$.
+
+If linearly independent solutions to the homogeneous equation are known, $y_p$ can be determined by the variation of parameters method.
+
+\begin{theorem}
+    If $y_1$ and $y_2$ are two linearly independent solutions to the homogeneous equation on an interval $I$ where $p(t)$, $q(t)$, and $g(t)$ are continuous, then a particular solution is given by $y_p=u_1y_1+u_2y_2$, where $u_1$ and $u_2$ are determined up 
+    to a constant by the pair of equations, $y_1v'_1+y_2v'_2=0$, $y'_1v'_1+y'_2v'_2=g$, which have the solutions 
+    \[ v_1(t)=\int \frac{-g(t)y_2(t)}{W(y_1,y_2)(t)}\dd t \]
+    and 
+    \[ v_2(t)=\int \frac{g(t)y_1(t)}{W(y_1,y_2)(t)}\dd t \]
+    Note that the formulation above presumes that the differential equation has been put into standard form (that is divided by $a_2(t)$).
+\end{theorem}
+
+\begin{theorem}
+    Let $y_1(t)$ be a solution, not identically zero, to the homogeneous equation in an interval $I$. Then 
+    \[ y_2(t)=y_1(t)\int \frac{e^{-\int p(t) \dd t}}{y_1(t)^2} \dd t \]
+    is a second, linearly independent solution.
+\end{theorem}
+
+\begin{example}
+    Given that $y_1(t)=t$ is a solution to 
+    \[ y''-\frac{1}{t}y' + \frac{1}{t^2}y = 0 \]
+    use the Reduction of Order formula to determine a second linearly independent solution for $t>0$.
+
+    $y_2$ is equal to $t\int \frac{e^{\ln t}}{t^2} \dd t = t\ln t$ from the formula, so the general solution is $y=c_1t+c_2t\ln t$.
+\end{example}
+
+\ex The following equation arises in the mathematical modeling of reverse osmosis. \[ (\sin t)y'' - 2(\cos t)y' - (\sin t)y =0, \qquad 0<t<\pi \] Find a general solution.
 
 \end{document}
