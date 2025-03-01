@@ -2,6 +2,145 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Introduction to Systems}
+Apologies for no examples since I have really bad allergies as of writing this.
+
 \section{Differential Operators and the Elimination Method for Systems}
+$y'(t)= \frac{\dd y}{\dd t}=\frac{\dd}{\dd t}y$ is used to emphasize that the derivative of a function $y$ is the result of operation on the function $y$ with the differentiation operator 
+$\frac{\dd}{\dd t}$. Similarly $y''(t)=\frac{\dd^2 y}{\dd t^2}=\frac{\dd}{\dd t}\frac{\dd}{\dd t}y$. Commonly the symbol $D$ is used instead of $\frac{d}{\dd t}$.
+
+$y''+4y'+3y=0$ is represented by $(D^2+4D+3)[y]=0$.
+
+We use the convention that the operator ``product'' is a composition when it operates on functions.
+\ex Show that the operator $(D+1)(D+3)$ is the same as $D^2+4D+3$.
+
+\ex Show that $(D+3t)D$ is not the same as $D(D+3t)$.
+
+Because the ``algebra'' of differential operators follows the same rules as the algebra of polynomials, we can adapt the elimination method used to solve algebraic operations to solve any system of 
+linear differential equations with constant coefficients.
+
+\begin{example}
+    Solve the system 
+    \begin{align*}
+        x'(t)=3x(t)-4y(t)+1 \\
+        y'(t) = 4x(t)-7y(t)+10t
+    \end{align*}
+
+    First we can solve this by writing this in differential operator form:
+    \begin{align*}
+        (D-3)x+4y = 1\\
+        -4x + (D+7)y = 10t 
+    \end{align*}
+
+    By eliminating this using algebra, we get that $(D^2+4D-5)y=14-30t$ (this is essentially $y''+4y-5y=14-30t$).
+
+    The first step to solving this nonhomogeneous equation is to solve the homogeneous equation.
+
+    The homogeneous equation results in giving us that $y_h = c_1e^{-5t}+c_2e^t$. 
+
+    We can guess the particular solution as $y_p=At+B$, so $y'_p =A$ and $y''_p=0$. So we have that $0+4A-5(At+B)=14-30t$. From this, we have $4A-5B=14$ and $-5A=-30$, so $A=6$ and $B=2$.
+
+    So the general solution for $y$ is $y=C_1e^{-5t}+C_2e^t+6t+2$.
+
+    Now we need to find the function $x$.
+
+    We can find $x$ from elimination once again.
+
+    Using the same methods above, we have $x=k_1e^{-5t}+k_2e^t+8t+5$. 
+
+    We should only end up with two constants, so we need to find the relationship between the constants of $y$ and $x$.
+
+    So using the derivative of $x$ we get $-5k_1e^{-5t}+k_2e^t+8=3k_1e^{-5t}+3k_2e^t+24t+15-4C_1e^{-5t}-4C_2e^t-24t-8+1$.
+
+    Simplifying we get $-5k_1e^{-5t}-k_2e^t = (3k_1-4C_1)e^{-5t}+(3k_2-4C_2)e^t$. So we have that $-5k_1=3k_1-4C_1$ and $k_2=3k_2-4C_2$, so $C_1=2k_1$ and $C_2=\frac{1}{2}k_2$.
+
+    
+\end{example}
+
+To find a general solution for the system 
+\begin{align*}
+    L_1[x]+L_2[y]=f_1 \\
+    L_3[x]+L_4[y]=f_2    
+\end{align*}
+where $L_1$, $L_2$, $L_3$, and $L_4$ are polynomials in $D=\dd / \dd t$.
+\begin{itemize}
+    \item Make sure that the system is written in operator form.
+    \item Eliminate one of the variables, say, $y$, and solve the resulting equation for $x(t)$. If the system is degenerate, stop! A separate analysis is required to determine whether or not there are solutions.
+    \item (Shortcut) If possible, use the system to derive an equation that involves $y(t)$ but not its derivatives (Otherwise go to the next step). Substitute the found expression for $x(t)$ into this equation to get a formula for $y(t)$. The expressions for $x(t)$, $y(t)$ give the desired general solution.
+    \item Eliminate $x$ from the system and solve for $y(t)$. Solving for $y(t)$ gives more constants - in fact, twice as many as needed.
+    \item Remove the extra constants by substituting the expressions for $x(t)$ and $y(t)$ into one or both of the equations in the system. Write the expressions for $x(t)$ and $y(t)$ in terms of the remaining constants.
+\end{itemize}
+
+\begin{example}
+    Find a general solution to 
+    \begin{align*}
+        x''(t)+y'(t)-x(t)+y(t)=-1 \\ 
+        x'(t)+y'(t)-x(t)=t^2
+    \end{align*}
+
+    Subtracting the two, we get that $x''-x'+y=-1-t^2$.
+
+    We will now solve for $x$. In differential operator form we have $(D^2-1)x+(D+1)y=-1$ and $(D-1)x+Dy=t^2$.
+
+    Eliminating for $x$ gives the $x_h=C_1e^t+C_2te^t+C_3e^{-t}$.
+
+    The particular solution will be in the form $At^2+Bt+C$. The first derivative of this is $2At+B$ and the second derivative is $2A$.
+
+    Plugging this in gives us that $(D^2-2D+1)(D+1)x=-2t-t^2$. This is equal to $(D^3-D^2-D+1)x=-2t-t^2$.
+
+    This is $2-2A-2At-B+At^2+Bt+C=-2t-t^2$. From this we see that $A=-1, B=-4, C=-6$.
+
+    The particular solution $x_p=-t^2-4t-6$.
+
+    Now since we have $x=c_1e^t+C_2te^t+C_3e^{-t}-t^2-4t-6$, we can solve this for the $y$.
+
+    Plugging the general solution in gives us $y=-c_1e^t-c_2e^t-c_2e^t-c_2te^t-c_1e^{-t}+2+c_1e^t+c_2e^t+c_2te^t-c_3e^{-t}-2t-4-1-t^2$.
+
+    Simplifying this gives $y=-c_2e^t-2c_3e^{-t}-t^2-2t-3$.
+\end{example}
+
+
+
 \section{Solving Systems and Higher-Order Equations Numerically}
+If equations have variable coefficients, the solution process is limited. The solutions can be expressed as infinite series which can be very laborious (with the exception of the Cauchy-Euler equation).
+Fortunately all cases, constant and variable coefficient, nonlinear and higher order equations and systems can be addressed numerically.
+
+We will express differential equations as a system in normal form and used the basic Euler method for computer solution that can be ``vectorized'' to apply to such systems.
+
+A system of $m$ differential equations in the $m$ unknown functions $x_1(t),x_2(t),\dots,x_m(t)$ expressed as 
+\begin{align*}
+    x'_1(t)=f_1(t,x_1,x_2,\dots, x_m)\\
+    x'_2(t)=f_2(t,x_1,x_2,\dots,x_m)\\
+    \vdots \\ 
+    x'_m(t)=f_m(t,x_1,x_2,\dots,x_m)
+\end{align*}
+is said to be in normal form. It can be expressed in vector form as $x'=t(t,x)$.
+
+A single higher-order equation can always be converted to an equivalent system of first-order equations. To convert an $m$th-order differential equation 
+\[ y^{(m)}(t)=f(t,y,y',\dots,y^{(m-1)}) \]
+into a first-order system, introduce additional unknowns, the sequence of derivatives of $y$:
+\[ x_1(t)=y(t), x_2(t)=y'(t),\dots, x_m(t)=y^{(m-1)}(t) \]
+
+We obtain this system 
+\begin{align*}
+    x'_1(t)=y'(t)=x_2(t) \\
+    x'_2(t)=y''(t)=x_3(t) \\
+    \vdots \\
+    x'_{m-1}(t)=y^{(m-1)}(t)=x_m(t) \\
+    x'_m(t) = y^{(m)}(t)=f(t,x_1,x_2,\dots,x_m)
+\end{align*}
+
+\begin{example}
+    Convert the initial value problem 
+    \[ y''(t)+3ty'(t)+y(t)^2=\sin t \qquad y(0)=1, y'(0)=5 \]
+    into an initial value problem for a system in normal form.
+
+    We have $x_1=y, x'_1=y', x_2 = y'$ and $x'_2=y''$.
+
+    In normal form, we would have $y''=\sin t - 3ty'+y^2$ which is what $x'_2$ and $y''$ are equal to. Note that this ia function of $f(t,y,y')$.
+
+    We also have $x'_1=y'=x_2$ and we also know that $\sin t - 3tx_2+x_1^2 = x'_2$.
+
+    We now have a system where $x'_1=x_2, x'_2=\sin t - 3tx_2+x_1^2$ where we know $x_1(0)=1$ and $x_2(0)=5$.
+\end{example}
+
 \end{document}

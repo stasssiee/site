@@ -24,7 +24,55 @@ This theorem is helpful for computing determinants of a matrix that contains man
 \end{theorem}
 
 \section{Properties of Determinants}
-\section{Cramer's Rule, Volume, and Linear Transformations}
+``The secret of determinants lies in how they change when row operations are performed''
 
+\begin{theorem}
+    Let $A$ be a square matrix.
+
+    \begin{itemize}
+        \item A multiple of one row of $A$ is added to another row to produce a matrix $B$, then det $B$ = det $A$
+        \item if two rows of $A$ are interchanged to produce $B$ then det $B$ = -det $A$
+        \item if 1 row of $A$ is multiplied by $k$ to produce $B$, then det $B$ = $k$det $A$
+    \end{itemize}
+
+    we can use a strategy to reduce a matrix to echelon form and then use the fact that the determinant of a triangular matrix is the product of its diagonal entries.
+\end{theorem}
+
+\begin{theorem}
+    A square matrix $A$ is invertible if and only if det $A$ is not zero. If $A$ is an $n\times n$ matrix, then det $A^T$ = det $A$.
+\end{theorem}
+
+\begin{theorem}
+    If $A$ and $B$ are $n\times n$ matrices, then det $AB$ = (det $A$)(det $B$)
+\end{theorem}
+
+\section{Cramer's Rule, Volume, and Linear Transformations}
+Cramer's Rule: Cramers rule is needed for a variety of theoretical calculations. However the formula is inefficient for hand calculations except for $2\times 2$.
+
+For any $n\times n$ matrix $A$ and any $\textbf{b}$ in $\textbf{R}^n$ let $A_1(\textbf{b})$ be the matrix obtained from $A$ by replacing the ith column by $\textbf{b}$, $A_i(\textbf{b})= [\textbf{a}_1 \textbf{a}_2 \dots \textbf{a}_{i-1} \textbf{b} \textbf{a}_{i+1} \dots \textbf{a}_n]$
+
+\begin{theorem}
+    Let $A$ be an intertible invertible $n\times n$ matrix. For any $\textbf{b}$ in $\textbf{R}^n$, the unique solution $\textbf{x}$ of $A\textbf{x}=\textbf{b}$ has entries given by: $\textbf{x}_i$ = (det $A_i(\textbf{B})$/(det $A$)) $i=1,2,\dots,n$.
+\end{theorem}
+
+Application to engineering: A number of important engineering problems can be analyzed by Laplace transformations. This approach converts an appropriate system of linear differential equations into a 
+system of linear algebraic equations whose coefficient involve a parameter.
+
+Formula for $A^{-1}$: Cramer's Rule leads to a general formula for the inverse of an $n\times n$ matrix.
+\begin{theorem}
+    Let $A$ be an invertible $n\times n$ matrix. Then $A^{-1}$ is given by:
+    (Google This)
+\end{theorem}
+
+Determinants as Area of Volume
+\begin{theorem}
+    If $A$ is a $2\times 2$ matrix, the area of the parallelogram determined by the columns of $A$ is |det A|. If $A$ is a $3\times 3$ matrix, the volume of the paralellepiped determined by the columns is |det A|.
+\end{theorem}
+
+\begin{theorem}
+    Let $T:\textbf{R}^2 \rightarrow \textbf{R}^2$ be the linear the transformation obtained by a $2\times 2$ matrix $A$. If $S$ is a parallelogram in $\textbf{R}^2$ then the area of $T(S)$ is equal to |det A| times the area of $S$.
+
+    If $T$ is determined by a $3\times 3$ matrix $A$, and $S$ is a paralellepiped in $\textbf{R}^3$, then the volume of $T(S)$ is equal to the area of |det $A$| times the volume of $S$.
+\end{theorem}
 
 \end{document}
