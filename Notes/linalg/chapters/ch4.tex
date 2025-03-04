@@ -3,6 +3,43 @@
 \begin{document}
 \chapter{Vector Spaces}
 \section{Vector Spaces and Subspaces}
+A vector space is a nonempety set $V$ of objects, called vectors, on which are defined two operations called addition and scalar multiplication to the 10 axioms listed below. The axioms must hold for all vectors $\textbf{u}$, $\textbf{v}$, and $\textbf{w}$ in $V$ and for all scalars $a$ and $b$.
+
+Closure Properties:
+\begin{itemize}
+    \item $\textbf{u}+\textbf{v}$ is a vector in $V$
+    \item $a\textbf{v}$ is a vector in $V$
+\end{itemize}
+
+Properties of Addition:
+\begin{itemize}
+    \item commutative: $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$
+    \item associative: $\textbf{u}+(\textbf{v}+\textbf{w})=(\textbf{u}+\textbf{v})+\textbf{w}$
+    \item additive identity: there is a vector $\textbf{0}$ in $V$ such that $\textbf{v}+\textbf{0}=\textbf{v}$ for all $\textbf{v}$ in $V$
+    \item additive inverse: given a vector $\textbf{v}$ in $V$, there is a vector $-\textbf{v}$ such that $\textbf{v}+(-\textbf{v})=\textbf{0}$
+\end{itemize}
+
+Properties of Scalar Multiplication:
+\begin{itemize}
+    \item associative: $a(b\textbf{v})=(ab)\textbf{v}$
+    \item distributive: $a(\textbf{u}+\textbf{v})=a\textbf{u}+a\textbf{v}$
+    \item distributive: $(a+b)\textbf{v}=a\textbf{v}+b\textbf{v}$
+    \item multiplicative identity: $1\textbf{v}=\textbf{v}$ for all $\textbf{v}$ in $V$
+\end{itemize}
+
+A subspace of a vector space, $V$, is a subset $H$ of $V$ that has three properties:
+\begin{enumerate}
+    \item the zero vector of $V$ is $H$
+    \item $H$ is closed under vector addition 
+    \item $H$ is closed under scalar multiplication
+\end{enumerate}
+
+A subspace $H$ of $V$ itself is a vector space. The other properties of a vector space are ``inherited'' since $H$ is a subset of $V$.
+
+\begin{theorem}
+    If $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p$ are in a vector space $V$, then Span$\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ is a subspace of $V$.
+\end{theorem}
+
 \section{Null Spaces, Column Spaces, Row Spaces, and Linear Transformations}
 \section{Linearly Independent Sets; Bases}
 \section{Coordinate Systems}
