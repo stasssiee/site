@@ -229,9 +229,13 @@ a charged object to a much larger and approximately neutral system (such as the 
 \end{enumerate}
 Which actions, and in what order, could the student perform so that the sphere becomes negatively charged?
 
-\ex Two identical conducting spheres have different charges. One sphere has a charge of $+1$ nC, and the other sphere has a charge of $-3$ nC. The two spheres are brought into contact and then separated. What is the magnitude of charge that is transferred between the spheres, and what is the most accurate description of how to calculate the magnitude of the transferred charge?
+\ex Two identical conducting spheres have different charges. One sphere has a charge of $+1$ nC, and the other sphere has a charge of $-3$ nC. 
+The two spheres are brought into contact and then separated. What is the magnitude of charge that is transferred between the spheres? 
+Write an accurate description of how to calculate the magnitude of the transferred charge.
 
-\ex A positively charged glass rod if brought near but does not touch a metal sphere. A wire is then used to ground the sphere while the charged rod remains close to it. The grounding wire is disconnected and then the charged rod is moved away from the sphere. Which of the following describes the final net charge on the sphere and provides a correct explanation?
+\ex A positively charged glass rod if brought near but does not touch a metal sphere. 
+A wire is then used to ground the sphere while the charged rod remains close to it. The grounding wire is disconnected and then the charged 
+rod is moved away from the sphere. What is the final net charge on the sphere and provide an explanation.
 
 \section{Electric Fields}
 Electric fields may originate from charged particles.
@@ -327,51 +331,6 @@ At a point charge:
 \[E_{PC}=\frac{kQ}{r^2} \therefore E=\frac{1}{4\pi\epsilon_0}\int \frac{dQ}{r^2}\hat{r}\]
 
 \begin{example}
-    Find the electric field a distance $z$ above the midpoint of a straight line segment of 
-    length $L$ that carries a uniform line charge density $\lambda$.
-    
-    There will be two electric fields, therefore 
-    \[\vec{E_{\text{net}}}=\vec{E_1}+\vec{E_2}\].
-    
-    Therefore:
-    \[E_{1x}\hat{i}+E_{1z}\hat{k}+E_{2x}\hat(-\hat{i})+E_{2z}\hat{k}\] 
-    and the x-components cancel in this case and gives us:
-    \[E_{1z}\hat{k}+E_{2z}\hat{k}\]
-    
-    \begin{center}
-        \includegraphics[width=0.3\textwidth]{8.5.Class.PNG}
-    \end{center}
-
-    Now we use calculus:
-    \[\vec{E}_{\text{net}}=\int{\frac{k\cos \theta dQ}{r^2}}+\int{\frac{k\cos\theta dQ}{r^2}}=2\int{\frac{k\cos\theta dQ}{r^2}}\]
-    
-    Now we have: 
-    \[2\int{\frac{k\cos\theta\lambda dL}{r^2}}\]
-    Because we know
-    \[\cos\theta = \frac{z}{\sqrt{z^2+x^2}}, \text{we can plug that in for} \cos\theta\]
-    \begin{align*}
-        2\int{\frac{k\cos\theta\lambda dL}{r^2}}
-        \\
-        =2\int{k\lambda\left[\frac{z}{\sqrt{x^2+z^2}}\right]\frac{1}{(\sqrt{x^2+z^2})^2}dx}
-        \\=2k\lambda z\int_0^{L/2}{\frac{1}{(x^2+z^2)^{3/2}}dx}
-    \end{align*}
-    
-    When we integrate this we get:
-    \begin{align*}
-    E=2k\lambda z\left[\frac{x}{z^2\sqrt{x^2+z^2}}\right]^{L/2}_0
-    \\
-    =2k\lambda z\left[\frac{L/2}{z^2\sqrt{(L/2)^2+z^2}-0}\right]
-    \\
-    =\frac{2k\lambda z}{z^2}\left[\frac{L}{2\sqrt{\frac{L^2}{4}+z^2}}\right]
-    \\
-    =\frac{kQ}{Lz}\left[\frac{L}{\sqrt{L^2/4+z^2}}\right]
-    \\
-    =\frac{kQ}{z\sqrt{L^2/4+z^2}}
-    \end{align*}
-    and we are done.
-\end{example}
-
-\begin{example}
     Derive an expression for the electric field at the center of a ring of charge with radius $a$ a distance $P$ away from the center.
     \begin{center}
         \includegraphics[width=0.3\textwidth]{8.5.PNG}
@@ -424,7 +383,7 @@ The total electric flux passing through a surface is defined by the surface inte
     \end{align*} 
 \end{example}
 
-\ex A positive point charge is located at the center of a sphere of variable radius $r$. Draw a following graph that indicates the electric flux through the surface of the sphere as a function of its radius.
+\ex A positive point charge is located at the center of a sphere of variable radius $r$. Draw a graph that indicates the electric flux through the surface of the sphere as a function of its radius.
 
 \section{Gauss's Law}
 Gauss's law relates electric flux to a Gaussian surface to the charge enclosed by that surface:
