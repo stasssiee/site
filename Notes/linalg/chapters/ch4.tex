@@ -41,6 +41,32 @@ A subspace $H$ of $V$ itself is a vector space. The other properties of a vector
 \end{theorem}
 
 \section{Null Spaces, Column Spaces, Row Spaces, and Linear Transformations}
+The Null Space of a $m\times n$ matrix $A$, denoted Nul $A$, is the set of solutions of the homogeneous equation $A\textbf{x}=\textbf{0}$. In set notation: Nul $A$ = $\{\textbf{x}:\textbf{x}$ is in $\textbf{R}^n$ and $A\textbf{x}=\textbf{0}\}$.
+\begin{theorem}
+    The null space of an $m\times n$ matrix $A$ is a subspace of $\textbf{R}^n$. Equivalently, the set of all solutions to a system $A\textbf{x}=\textbf{0}$ of $m$ homogeneous linear equations in $n$ unknown is a subspace of $\textbf{R}^n$.
+\end{theorem}
+
+The Column Space of a $m\times n$ matrix $A$, denoted Col $A$, is the set of all linear combinations of the columns of $A$. If $A=[\textbf{a}_1,\textbf{a}_2,\dots, \textbf{a}_n]$ then Col $A$ = Span$\{\textbf{a}_1,\textbf{a}_2,\dots,\textbf{a}_n\}$.
+
+\begin{theorem}
+    The column space of a $m\times n$ matrix $A$ is a subspace of $\textbf{R}^m$.
+\end{theorem}
+
+The Row Space of an $m\times n$ matrix $A$, denoted Row $A$, is the set of all linear combinations of the row vectors. Each row has $n$ entries, so the Row $A$ is a subspace of $\textbf{R}^n$.
+
+The null and column space are related. They are very different: When $A$ Is not square, the column space and the null space exist entirely in different ``universes''. For an $m\times n$ matrix, the Column Space is in $m$-dimensional space, where the Null space is in $n$-dimensional space.
+
+Kernel and Range if a Linear Transformation
+\begin{itemize}
+    \item a Linear Transformation $T$ from a vector space $V$ to be vector space $W$ is a rule that assigns each vector $\textbf{x}$ in $V$ a unique vector $T(\textbf{x})$ in $W$ such that $T(\textbf{u}+\textbf{v})=T(\textbf{u})+T(\textbf{v})$ and 
+    $T(c\textbf{u})=cT(\textbf{u})$ for all $\textbf{u},\textbf{v}$ in $V$ and $c$ in $\textbf{R}$.
+    \item The Kernel of $T$ is the set of all $\textbf{u}$ in $V$ such that $T(\textbf{u})=\textbf{0}$ 
+    \item The Range of $T$ is the set of all vectors in $W$ of the form $T(\textbf{x})$ for some $\textbf{x}$ in $V$
+    \item The kernel and range of $T$ are subspaces of $V$
+\end{itemize}
+
+
+
 \section{Linearly Independent Sets; Bases}
 \section{Coordinate Systems}
 \section{The Dimension of a Vector Space}

@@ -3,52 +3,197 @@
 \begin{document}
 \chapter{Vectors and the Geometry of Space}
 \section{Vectors in the Plane}
-Vectors are quantities with both magnitude and direction. The vector who's tail is at point 
-P and head at point Q is denoted as $\overrightarrow{PQ}$.
+Vectors are quantities that have both length and direction. The vector whose tail is at the point $P$ and whose head is at the point $Q$ is denoted 
+$\vec{PQ}$. We also label vectors with single boldface characters such as $\textbf{u}$ and $\textbf{v}$.
 
-Two vectors, \textbf{u} and \textbf{v} are equal if they have equal length and point 
-in the same direction. They do not necessarily have to be in the same location.
+Two vectors are equal, written $\textbf{u}=\textbf{v}$ if they have equal length and point in the same direction. They do not necessarily need 
+to have the same location. Any two vectors with the same length and direction are equal.
 
-Scalar multiplication happens when a $c$ is multiplied to vector \textbf{v}. If $c<0$, then 
-vector cv and v will point in opposite directions, otherwise they will point in the same direction. 
-Two vectors are parallel if they are scalar multiples of each other.
+Not all quantites are represented by vectors. Quantities describes with a magnitude but without a direction, such as mass and temperature are called scalars.
 
-If you place the tail of a vector \textbf{v} at the head of another vector \textbf{u}, the sum 
-\textbf{u+v} is the vector that extends from the tail of \textbf{u} to the head of \textbf{v}.
+\subsection*{Scalar Multiplication}
+A scalar $c$ and a vector $\textbf{v}$ can be combined using scalar-vector multiplication. The resulting vector, denoted $c\textbf{v}$ is called a scalar multiple of $\textbf{v}$.
+The length of $c\textbf{v}$ is $|c|$ multiplied by the length of $\textbf{v}$. The vector $c\textbf{v}$ has the same direction as $\textbf{v}$ if $c>0$. If $c<0$, then $c\textbf{v}$ and $\textbf{v}$ point in opposite directions.
+If $c=0$, then the product is $\textbf{0}$ (the zero vector).
 
-The vector difference \textbf{u-v} is defined as \textbf{u+(-v)}.
+\begin{definition}[Scalar Multiples and Parallel Vectors]
+    Given a scalar $c$ and a vector $\textbf{v}$, the scalar multiple $c\textbf{v}$ is a vector whose length is $|c|$ multiplied by the length of $\textbf{v}$. If $c>0$, then $c\textbf{v}$ has the same direction as $\textbf{v}$. If $c<0$, then $c\textbf{v}$ and $\textbf{v}$ point in opposite directions.
+    Two vectors are parallel if they are scalar multiples of each other.    
+\end{definition}
 
-In order to do calculations with vectors, we must introduce a cartesian plane. Angle brackets 
-$\langle{a,b}\rangle$ show the components of a vector.
+Notice that $0\textbf{v}=\textbf{0}$ for all vectors $\textbf{v}$. It follows that the zero vector is parallel to all vectors.
 
-The magnitude of a vector is simply its length. Given points $P(x_1,y_1)$ and $Q(x_1,y_1)$, 
-the magnitude of the vector $\vec{PQ}=\langle{x_2-x_1,y_2-y_1}\rangle$ is denoted as $|\vec{PQ}|$, is equal to:
-    \[|\vec{PQ}|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\]
+\subsection*{Vector Addition and Subtraction}
+We can represent the sum of two vectors $\textbf{u}$ and $\textbf{v}$ geometrically using the parallelogram rule. The tails of $\textbf{u}$ and $\textbf{v}$ are connected to form adjacent sides of a parallelogram; 
+then the remaining two sides of the parallelogram are sketched. The sum $\textbf{u}+\textbf{v}$ is the vector that coincides with the diagonal of the parallelogram, beginning at the tails of $\textbf{u}$ and $\textbf{v}$.
 
-We can also now do vector addition with components. Given two vectors \textbf{u} and \textbf{v}, the vector sum is:
-    \[\textbf{u}+\textbf{v}=\langle{u_1+v_1,u_2+v_2}\rangle\]
+The difference $\textbf{u}-\textbf{v}$ is defined to be the sum $\textbf{u} + (-\textbf{v})$. 
 
+\subsection*{Vector Components}
+To do calculations with vectors, it is necessary to introduce a coordinate system. We will start by considering a vector $\textbf{v}$ whose tail is at the origin in the Cartesian plane and whose head is at the point $(v_1,v_2)$.
 
-For a scalar $c$ and a vector \textbf{u}, the scalar multiple is $c$\textbf{u}. i.e $|c\textbf{u}|=|c||\textbf{u}|$
+\begin{definition}[Position Vectors and Vector Components]
+    A vector $\textbf{v}$ with its tail at the origin and head at the point $(v_1,v_2)$ is called a position vector and is written $\langle v_1,v_2\rangle$.
+    The real numbers $v_1$ and $v_2$ are the $x$ and $y$ components of $\textbf{v}$, respectively. The Position vectors $\textbf{u}=\langle u_1,u_2\rangle$ and $\textbf{v}=\langle v_1,v_2\rangle$ are equal if and only if $u_1=v_1$ and $u_2=v_2$.
+\end{definition}
 
-A unit vector is any vector with length 1. \textbf{i} is a unit vector in the x-direction and \textbf{j} is a 
-unit vector in the y-direction. 
+There are infinitely many vectors equal to the position vector $\textbf{v}$, all with the same length and direction. It is important to abide by the convention that $\textbf{v}=\langle v_1,v_2\rangle$ refers to the position vector $\textbf{v}$ or to any other vector equal to $\textbf{v}$.
+
+Now consider the vector $\vec{PQ}$ equal to $\textbf{v}=\langle v_1,v_2\rangle$, but not in standard position, with its tail at the point $P(x_1,y_1)$ and its head at the point $Q(x_2,y_2)$. The $x$-component of $\vec{PQ}$ is the difference in the $x$-coordinates of $Q$ and $P$, or $x_2-x_1$. The $y$-component 
+of $\vec{PQ}$ is the difference in the $y$-coordinates, $y_2,y_1$. Therefore, $\vec{PQ}=\langle x_2-x_1,y_2-y_1\rangle = \langle v_1,v_2\rangle = \textbf{v}$.
+
+\subsection*{Magnitude}
+The magnitude of a vector is simpliy its length.
+
+\begin{definition}[Magnitude of a Vector]
+    Given the points $P(x_1,y_1)$ and $Q(x_2,y_2)$, the magnitude, or length, of $\vec{PQ}=\langle x_2,x_1,y_2-y_1\rangle$, denoted $|\vec{PQ}|$ is the distance between $P$ and $Q$:
+    \[ |\vec{PQ}| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \]
+    The magnitude of the position vector $\textbf{v}=\langle v_1,v_2\rangle$ is $|\textbf{v}|=\sqrt{v_1^2+v_2^2}$.
+\end{definition}
+
 \begin{example}
-Determine the necessary air speed and heading that a pilot must maintain in order to 
-fly her commercial jet north at a speed of 480 mi/hr relative to the ground in a crosswind that is 
-blowing 60$\deg$ south of east at 20 mi/hr.
+    Given the points $O(0,0), P(-3,4)$, and $Q(6,5)$, find the components and magnitude of the following vectors:
+    \begin{itemize}
+        \item a. $\vec{OP}$
+        \item b. $\vec{PQ}$
+    \end{itemize}
 
-Let $\vec{p}$ be the velocity vector we are trying to find. 
+    $|\vec{OP}|=\sqrt{(-3)^2+4^2}=5$
 
-We have ground vector $\langle0,480\rangle$ and a crosswind vector $\langle10,-10\sqrt{3}\rangle$. 
-Note we got the x-component and the y-component of the crosswind vector from the formula: 
-$\vec{v}=\langle a\cos\theta, b\cos\theta\rangle$
-
-We can find the vector $\vec{p}$ from adding this vector to the crosswind vector resulting in: 
-$\vec{p}=\vec{g}-\vec{c} = \langle-10,480+10\sqrt{3}\rangle$. 
-
-The magnitude of this vector is the speed and is equal to 497.2 mi/hr roughly.
+    $|\vec{PQ}|=\sqrt{9^2+1^2}=\sqrt{82}$
 \end{example}
+
+\subsection*{Vector Operations in Terms of Components}
+We now show how vector addition, vector subtraction, and scalar multiplication are performed using components. 
+Suppose $\textbf{u}=\langle u_1,u_2\rangle$ and $\textbf{v}=\langle v_1,v_2\rangle$. The vector sum $\textbf{u}$ and $\textbf{v}$ is 
+$\textbf{u}+\textbf{v}=\langle u_1+v_1,u_2+v_2\rangle$. The definition of a vector sum is conistent with the Parallelogram Rule given earlier.
+
+For a scalar $c$ and a vector $\textbf{u}$, the scalar multiple $c\textbf{u}$ is $c\textbf{u}=\langle cu_1,cu_2\rangle$; that is, the scalar $c$ multiplies each component of $\textbf{u}$. If $c>0$, $\textbf{u}$ and $c\textbf{u}$ have the same direction.
+If $c<0$, $\textbf{u}$ and $c\textbf{u}$ have opposite directions. In either case, $|c\textbf{u}|=|c||\textbf{u}|$.
+
+Notice that $\textbf{u}-\textbf{v}=\textbf{u}+(-\textbf{v})$, where $-\textbf{v}=\langle -v_1,-v_2\rangle$. Therefore the vector difference of 
+$\textbf{u}$ and $\textbf{v}$ is $\textbf{u}-\textbf{v}=\langle u_1-v_1,u_2,v_2\rangle$.
+
+\begin{definition}[Vector Operations in $\mathbb{R}^2$]
+    Suppose $c$ is a scalar, $\textbf{u}=\langle u_1,u_2\rangle$ and $\textbf{v}=\langle v_1,v_2\rangle$.
+    \[ \textbf{u}+\textbf{v}=\langle u_1+v_1,u_2+v_2\rangle \] 
+    \[ \textbf{u}-\textbf{v}=\langle u_1-v_1,u_2-v_2\rangle \]
+    \[ c\textbf{u}=\langle cu_1, cu_2\rangle \]
+\end{definition}
+\pagebreak
+\begin{example}
+    Let $\textbf{u}=\langle -1,2\rangle$ and $\textbf{v}=\langle 2,3\rangle$.
+    \begin{itemize}
+        \item a. Evaluate $|\textbf{u}+\textbf{v}|$
+        \item b. Simplify $2\textbf{u}-3\textbf{v}$
+        \item c. Find two vectors half as long as $\textbf{u}$ and parallel to $\textbf{u}$
+    \end{itemize}
+
+    a. Because $\textbf{u}+\textbf{v}=\langle 1,5\rangle$, the magnitude is $\sqrt{26}$.
+    
+    b. $2\textbf{u}-3\textbf{v}=\langle -2,4\rangle - \langle 6,9\rangle = \langle -8,-5\rangle$.
+
+    c. The vectors $\frac{1}{2}\textbf{u}=\langle -\frac{1}{2}, 1\rangle$ and $-\frac{1}{2}\textbf{u}=\langle \frac{1}{2},-1\rangle$ have half the length of $\textbf{u}$ and are parallel to $\textbf{u}$.
+\end{example}
+
+\subsection*{Unit Vectors}
+A unit vector is any vector with length 1. Two useful unit vectors are the coordiante unit vectors $\textbf{i}=\langle 1,0\rangle$ and $\textbf{j}=\langle 0,1\rangle$.
+These vectors are directed along the coordinate axes and enable us to express all vector in an alternative form.
+
+For example $\langle 3,4\rangle = 3\textbf{i}+4\textbf{j}$.
+
+In general, the vector $\textbf{v}=\langle v_1,v_2\rangle$ is also written as $v_1\textbf{i}+v_2\textbf{j}$.
+
+Given a nonzero vector $\textbf{v}$, we sometimes need to construct a new vector parallel to $\textbf{v}$ of a specified length. Dividing $\textbf{v}$ by its length, we obtain the vector $\textbf{u}=\frac{\textbf{v}}{|\textbf{v}|}$. Because $\textbf{u}$ is a 
+positive scalar multiple of $\textbf{v}$, it follows that $\textbf{u}$ has the same direction as $\textbf{v}$. Furthermore, $\textbf{u}$ is a unit vector because $|\textbf{u}|=\frac{|\textbf{v}|}{|\textbf{v}|}=1$. The vector $-\textbf{u}$ is also a unit vector with a direction opposite that of $\textbf{v}$.
+Therefore $\pm \frac{\textbf{v}}{|\textbf{v}|}$ are unit vectors parallel to $\textbf{v}$ that point in opposite directions.
+
+To construct a vector that points in the direction of $\textbf{v}$ and has a specified length $c>0$, we form the vector $\frac{c\textbf{v}}{|\textbf{v}|}$. It is a positive scalar multiple of $\textbf{v}$, so it points in the direction of $\textbf{v}$, and its length is 
+$\left| \frac{c\textbf{v}}{|\textbf{v}|}\right|=|c|\frac{|\textbf{v}|}{|\textbf{v}|}=c$. The vector $-\frac{c\textbf{v}}{|\textbf{v}|}$ points in the opposite direction and also has length $c$. With this construction, we can also write $\textbf{v}$ as the prodcut of its magnitude and a unit vector in the direction of $\textbf{v}$:
+\[ \textbf{v}=|\textbf{v}|\cdot \frac{\textbf{v}}{|\textbf{v}|} \]
+
+\begin{example}
+    Consider the points $P(1,-2)$ and $Q(6,10)$.
+    \begin{itemize}
+        \item a. Find $\vec{PQ}$ and two unit vectors parallel to $\vec{PQ}$.
+        \item b. Find two vectors of length 2 parallel to $\vec{PQ}$.
+        \item c. Express $\vec{PQ}$ as the product of its magnitude and a unit vector.
+    \end{itemize}
+
+    a. $\vec{PQ} = \langle 5,12\rangle$. The magnitude of this vector is $13$, so a unit vector parallel to $\vec{PQ}$ is $\frac{\vec{PQ}}{|\vec{PQ}|}=\frac{5}{13}\textbf{i}+\frac{5}{13}\textbf{j}$.
+    The unit vector parallel in the opposite direction is $\langle -\frac{5}{13},-\frac{12}{13}\rangle$.
+
+    b. To obtain two vectors of length $2$ that are parallel to $\vec{PQ}$, we multiply the unit vector $\frac{5}{13}\textbf{i}+\frac{5}{13}\textbf{j}$ by $\pm 2$.
+    This obtains $\frac{10}{13}\textbf{i}+\frac{24}{13}\textbf{j}$ and $-\frac{10}{13}\textbf{i}-\frac{24}{13}\textbf{j}$.
+
+    c. The unit vector $\langle \frac{5}{13},\frac{12}{13}\rangle$ points in the direction of $\vec{PQ}$, so we have $\vec{PQ}=|\vec{PQ}|\frac{\vec{PQ}}{|\vec{PQ}|}=13\langle \frac{5}{13},\frac{12}{13}\rangle$.
+\end{example}
+\subsection*{Properties of Vector Operations}
+When we stand back and look at vector operations, ten general properties emerge. 
+
+The following are the ten properties of vector operations:
+\begin{enumerate}
+    \item $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$
+    \item $(\textbf{u}+\textbf{v})+\textbf{w}=\textbf{u}+(\textbf{v}+\textbf{w})$
+    \item $\textbf{v}+\textbf{0}=\textbf{v}$
+    \item $\textbf{v}+(-\textbf{v})=\textbf{0}$
+    \item $c(\textbf{u}+\textbf{v})=c\textbf{u}+c\textbf{v}$
+    \item $(a+c)\textbf{v}=a\textbf{v}+c\textbf{v}$
+    \item $0\textbf{v}=\textbf{0}$
+    \item $c\textbf{0}=\textbf{0}$
+    \item $1\textbf{v}=\textbf{v}$
+    \item $a(c\textbf{v})=(ac)\textbf{v}$
+\end{enumerate}
+
+These properties allow us to solve vector equations.
+
+\subsection*{Applications of Vectors}
+Vectors have countless practical applications, particularly in the physical sciences and engineering. For now, we will present two common uses of vectors: to describe velocities and forces.
+
+Consider a motorboat crossing a river whose current is everywhere represented by the constant vector $\textbf{w}$; this means that $|\textbf{w}|$ is the speed of the moving water and 
+$\textbf{w}$ points in the direction of the moving water. Assume the vector $\textbf{v}_w$ is the sum $\textbf{v}_g=\textbf{v}_w+\textbf{w}$, which is the velocity of the boat that would be observed by someone on the shore.
+
+\begin{example}
+    Suppose the water in a river moves southwest ($45\degree$ west of south) at 4 mi/hr and a motorboat travels due east at 15 mi/hr relative to the shore. Determine the speed of the boat and its heading relative to the moving water.
+
+    Because the boat moves east at 15 mi/hr, the velocity relative to the shore is $\textbf{v}_g = \langle 15,0\rangle$. 
+
+    To obtain the components of $\textbf{w}$, observe that $|\textbf{w}|=4$ and since it is a 45-45-90 triangle, we can find that $|w_x|=|w_y|=2\sqrt{2}$.
+
+    Given the orientation of $\textbf{w}$, $\textbf{w}=\langle -2\sqrt{2},-2\sqrt{2}\rangle$. Because $\textbf{v}_g=\textbf{v}_w+\textbf{w}$, $\textbf{v}_w=\langle 15+2\sqrt{2}, 2\sqrt{2}\rangle$.
+
+    The magnitude of this is approximately 18, so the speed of the boat relative to the water is approximately 18 mi/hr.
+
+    The heading of the boat is given by the angle $\theta$ between $\textbf{v}_w$ and the positive $x$-axis. Therefore, $\theta = \tan^{-1}\left(\frac{2\sqrt{2}}{15+2\sqrt{2}}\right)\approx 9\degree$.
+
+    Therefore the heading of the boat is approximately $9\degree$ north of east, and its speed relative to the water is approximately 18 mi/hr.
+\end{example}
+
+Suppose a child pulls on the handle of a wagon at an angle of $\theta$ with the horizontal. The vector $\textbf{F}$ represents the force exerted on the wagon; it has a magnitude 
+$|\textbf{F}|$ and a direction given by $\theta$. We denote the horizontal and vertical components of $\textbf{F}$ as $F_x$ and $F_y$ respectively. 
+We see that $F_x=|\textbf{F}|\cos\theta, F_y=|\textbf{F}|\sin\theta$, and the force vector is $\textbf{F}=\langle |\textbf{F}|\cos\theta, |\textbf{F}|\sin\theta\rangle$.
+
+\begin{example}
+    A child pulls a wagon with a force of $|\textbf{F}| = 20$ lb at an angle of $\theta = 30\degree$ to the horizontal. Find the force vector $\textbf{F}$.
+
+    $\textbf{F}=\langle 20\cos 30\degree, 20\sin 30\degree\rangle = \langle 10\sqrt{3}, 10\rangle$.
+\end{example}
+
+\ex A 400-lb engine is suspended from two chains that form $60\degree$ angles with a horizontal ceiling. How much weight does each chain support?
+
+\ex If $\textbf{u}=\langle u_1,u_2\rangle$ and $\textbf{v}=\langle v_1,v_2\rangle$, how do you find $\textbf{u}+\textbf{v}$?
+
+\ex Find the vector $\textbf{v}$ that has a magnitude of 10 and a direction opposite that of the unit vector $\langle 3/5, -4/5\rangle$.
+
+\ex Find the position vector $\vec{OP}$ if $O$ is the origin and $P$ has polar coordinates $(8, 5\pi/6)$.
+
+\ex Determine the necessary air speed and heading that a pilot must maintain in order to fly her commercial jet north at a speed of 480 mi/hr relative to the ground in a crosswind that is blowing $60\degree$ south of east at 20 mi/hr.
+
+\ex For the points $A(3,4), B(6,10), C(a+2, b+5)$, and $D(b+4,a-2)$, find the values of $a$ and $b$ such that $\vec{AB}=\vec{CD}$.
+
+\ex An ant walks due east at a constant speed of 2 mi/hr on a sheet of paper that rests on a table. Suddenly, the sheet of paper starts moving southeast at $\sqrt{2}$ mi/hr. Describe the motion of the ant relative to the table.
+
+\ex Prove that $|c\textbf{v}|=|c||\textbf{v}|$, where $c$ is a scalar and $\textbf{v}$ is a vector.
 
 \section{Vectors in Three Dimensions}
 We can create a z-axis to create a three dimensional system.
@@ -103,7 +248,14 @@ Adding the three vectors results in the speed: $\langle 10,-5,5\rangle$
 The magnitude of this is roughly 12.25.
 \end{example}
 
+\ex A plane is flying horizontally due north in calm air at 300 mi/hr when it encounters a horizontal crosswind blowing southeast at 40 mi/hr and a downdraft blowing vertically downward at 30 mi/hr. 
+What are the resulting speed and direction of the plane relative to the ground?
+
+\ex Describe the set of poinst that satisfy the equation $x^2+y^2+z^2-2x+6y-8z=-1$.
+
 \section{Dot Products}
+The dot product is used to determine the angle between two vectors. It is also a tool for calculating projections - the measure of how much of a given vector lies in the direction of another vector.
+
 \begin{definition}
     Given two nonzero vectors \textbf{u} and \textbf{v} in two or three dimensions, the dot product is
     \[\textbf{u}\cdot\textbf{v}=|\textbf{u}||\textbf{v}|\cos \theta\]
@@ -131,6 +283,8 @@ We now apply the dot product to vector projections.
     where the scalar component of \textbf{u} in the direction of \textbf{v} is 
     \[\text{scal}_{\textbf{v}}\textbf{u}=|\textbf{u}|\cos\theta = \frac{\textbf{u}\cdot\textbf{v}}{|\textbf{v}|}\]
 \end{definition}
+
+
 
 \section{Cross Products}
 \begin{definition}
