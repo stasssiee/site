@@ -99,7 +99,26 @@ The basis if the smallest possible spanning set (because all vectors are linearl
 
 The basis is the largest possible linearly independent set that spans (an additional vector will make the set dependent)
 
+
+
 \section{Coordinate Systems}
+\begin{theorem}
+    Let $\mathcal{B}=\{\textbf{b}_1,\textbf{b}_2,\dots,\textbf{b}_n\}$ be a basis for a vector space $V$. Then for each $\textbf{x}$ in $V$, there exists a unique set of scalars $c_1,c_2,\dots, c_n$ such that $\textbf{x}=c_1\textbf{b}_1+c_2\textbf{b}_2+\dots+c_n\textbf{b}_n$.
+\end{theorem}
+Coordinates: suppose $\mathcal{B}=\{\textbf{b}_1,\textbf{b}_2,\dots,\textbf{b}_n\}$ be a basis for a vector space $V$. The coordaintes of $\textbf{x}$ relative to the basis $\mathcal{B}$ are the weights $c_1,c_2,\dots,c_n$ such that $\textbf{x}=c_1\textbf{b}_1+c_2\textbf{b}_2+\dots+c_n\textbf{b}_n$.
+
+The change of coordinates matrix, $P_{\mathcal{B}}=[\textbf{b}_1 \textbf{b}_2 \dots \textbf{b}_n]$ change coordinates from $\mathcal{B}$ to the standard basis in $\textbf{R}^n$.
+$P_{\mathcal{B}}^{-1}$ transforms $\textbf{x}$ to $[\textbf{x}]_{\mathcal{B}}$.
+
+\begin{theorem}
+    Let $\mathcal{B}=\{\textbf{b}_1,\textbf{b}_2,\dots,\textbf{b}_n\}$ be a basis for a vector space $V$. Then the coordinate mapping $\textbf{x} -> [\textbf{x}]_{\mathcal{B}}$ is a one-to-one, onto linear transformation from $V$ to $\textbf{R}^n$.
+\end{theorem}
+
+The coordinate mapping in this theorem is an important example of isomorphism from $V$ onto $\textbf{R}^n$. The notation and terminology for the two vector space may be different, but the two spaces are indistinguishable. Every vector space calculation in $V$ is accurately reproduced in $\textbf{R}^n$ and vice versa.
+
+
+
+
 \section{The Dimension of a Vector Space}
 \section{Change of Basis}
 
