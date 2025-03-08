@@ -68,6 +68,37 @@ Kernel and Range if a Linear Transformation
 
 
 \section{Linearly Independent Sets; Bases}
+A basis spans a vector space as ``efficiently'' as possible.
+\begin{itemize}
+    \item linearly independent: an indexed set of vectors $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ in $V$ is linearly independent if $c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_n\textbf{v}_n=\textbf{0}$ has only the trivial solution.
+    \item linearly dependent: an indexed set of vectors $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ in $V$ is linearly dependent if $c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_n\textbf{v}_n=\textbf{0}$ has a nontrivial solution 
+\end{itemize}
+
+\begin{theorem}
+    An indexed set of vectors $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ of 2 or more vectors with $\textbf{v}_1$ not zero, is linearly dependent if and only if some $\textbf{v}_j(j>1)$ is a linear combination of the preceding vectors 
+    $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_{j-1}$.
+
+    This definition is for general vectors where we may be unable to write the vectors as columns of a matrix $A$.
+\end{theorem}
+
+Basis: Let $H$ be a subspace of a vector space $V$. A set of vectors $\mathcal{B}$ in $V$ is a basis of $H$ if:
+\begin{enumerate}
+    \item $\mathcal{B}$ is a linearly independent set and 
+    \item the subspace spanned by $\mathcal{B}=H$ (or $H$ = span $\mathcal{B}$)
+\end{enumerate}
+
+\begin{theorem}
+    $S=\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ is a set in a vector space, and let $H$ = Span$\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$.
+    \begin{itemize}
+        \item if one of the vectors in $S$, say $\textbf{c}_k$, is a linear combination of the remaining vectors in $S$, then the set formed from $S$ by removing $\textbf{v}_k$ still spans $H$.
+        \item if $H$ is not equal to $\{\textbf{0}\}$, some subset of $S$ is a basis for $H$
+    \end{itemize}
+\end{theorem}
+
+The basis if the smallest possible spanning set (because all vectors are linearly independent)
+
+The basis is the largest possible linearly independent set that spans (an additional vector will make the set dependent)
+
 \section{Coordinate Systems}
 \section{The Dimension of a Vector Space}
 \section{Change of Basis}

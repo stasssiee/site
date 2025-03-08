@@ -2,5 +2,43 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Inference for Categorical Data: Chi-Square}
+\section{Chi Square Test for Goodness of Fit}
+A goodness-of-fit test is used to test the hypothesis that an observed frequency distribution fits to some claimed distribution.
 
+To measure the difference betwen the observed and expected counts, and to determine if the difference is significant, we will introduce a new test statistic, called the chi-square statistic:
+\[ \chi^2 = \sum \frac{(O-E)^2}{E} \]
+Where $O$ represents each observed count in the distribution and $E$ represents each corresponding expected cout.
+\begin{itemize}
+    \item The sampling distribution of the chi-square statistic is not a normal distribution.
+    \item It is a right-skewed distribution that allows only for positive values because the statistic cannot be negative.
+\end{itemize}
+
+When all the counts are at least 5, the sampling distribution of the $\chi^2$ statistic is close to a chi-square distribution with degrees of freedom (df) equal to the number of categories minus 1.
+\begin{itemize}
+    \item The chi-square distributions are a family of distributions that take only positive values and are skewed to the right.
+    \item A particular chi-square distribution is specified by giving its degrees of freedom.
+    \item The chi-square goodness-of-fit test uses the chi-square distribution with df = number of categories - 1
+\end{itemize}
+
+The null hypothesis in a chi-square goodness-of-fit test should stake a claim about the distribution of a single categorical variable in the population of interest.
+
+The alternative hypothesis in a chi-square goodness-of-fit test is that the categorical variable does not have the specified distribution, and is easily given in words.
+
+Conditions:
+\begin{itemize}
+    \item Random - the data came from a well-designed random sample or randomized experiment 
+    \item Independent - When sampling without replacement, the 10\% condition is met 
+    \item Large counts - All expected counts are at least 5 lets us say that the sampling distribution will follow a chi-squared distributions
+\end{itemize}
+
+When all conditions are met, the chi-squared goodness of fit test can be performed with the hypotheses:
+\begin{itemize}
+    \item $H_0$: the claimed distribution is correct
+    \item $H_a$: at least one proportion in the claimed distribution is incorrect
+\end{itemize}
+
+
+\section{Chi Square Test for Homogeneity}
+
+\section{Chi Square Test for Independence}
 \end{document}
