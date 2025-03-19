@@ -39,6 +39,38 @@ When all conditions are met, the chi-squared goodness of fit test can be perform
 
 
 \section{Chi Square Test for Homogeneity}
+The Chi Square Test for Homogeneity compares the distributions of one categorical variable across two or more populations to see if they are the same or different.
+
+To construct a chi-square test for Homogeneity:
+
+State the hypothesis:
+\begin{itemize}
+    \item $H_0$: There is no difference in the distribution of the categorical variable among two or more groups 
+    \item $H_A$: There is a difference in the distribution of the categorical variable among two or more groups 
+\end{itemize}
+
+Check the assumptions and conditions 
+\begin{itemize}
+    \item Randomness: The individuals whose counts are available for analysis should be a random sample of the population 
+    \item 10\% condition: The sample size, $n$, must be no larger than 10\% of the population 
+    \item Large Counts: We should expect to see at least 5 counts in each category of the categorical variable.
+\end{itemize}
+
+Name the inference method: Chi Square Test for Homogeneity
+
+Calculate the Test Statistics:
+\begin{itemize}
+    \item Observed Counts - Actual Frequencies of the variable from your sample 
+    \item Expected counts - projected frequencies of the variable if the null hypothesis is true. This is the row total times the column total divided by the table total.
+\end{itemize}
+
+Obtain the P-Value: 
+
+2nd-Vars-8:$\chi^2$cdfwith lower being $\chi^2$ and upper being $\infty$ and df is the number of rows - 1 times the number of columns - 1
+
+In a calculator, enter the observed values into matrix A, and enter the expected values into matrix B, which will population when you run the $\chi^2$ test. Then do stat-tests-c with observed in A and Expected in B.
+
+Make a decision then write the conclusion in context.
 
 \section{Chi Square Test for Independence}
 \end{document}
