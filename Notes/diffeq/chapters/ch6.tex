@@ -3,8 +3,427 @@
 \begin{document}
 \chapter{Theory of Higher-Order Linear Differential Equations}
 \section{Basic Theory of Linear Differential Equations}
-\section{Homogeneous Linear Equations with Constant Coefficients}
-\section{Undetermined Coefficients and the Annihilator Method}
-\section{Method Of Variation of Parameters}
+A linear differential equation of order $n$ is an equation that can be written in the form 
+\[ a_n(x)y^{(n)}(x)+a_{n-1}(x)y^{(n-1)}(x)+\dots + a_0(x)y(x)=b(x)\]
+where $a_0(x),a_1(x),\dots,a_n(x)$ and $b(x)$ depend on on $x$, not $y$. When $a_0,a_1,\dots,a_n$ are all constants, we say this equation has constant coefficients; otherwise 
+it has variable coefficients. If $b(x)=0$, this equation is called homogeneous; otherwwise it is nonhomogeneous. 
 
+We assume $a_0(x),a_1(x),\dots,a_n(x)$ and $b(x)$ are all continuous on an interval $I$ and $a_n(x)\neq 0$ on $I$.
+
+We can rewrite the equation in standard form 
+\[ y^{(n)}(x)+p_1(x)y^{(n-1)}(x)+\dots +p_n(x)y(x)=g(x)\]
+where the functions $p_1(x),\dots,p_n(x)$, and $g(x)$ are continuous on $I$.
+
+\begin{theorem}
+    Suppose $p_1(x)\dots p_n(x)$ and $g(x)$ are continuous on an interval $(a,b)$ that contains the point $x_0$. Then, for any choice of the initial values, $\gamma_0,\gamma_1,\dots,\gamma_{n-1}$, there exists a unique solution $y(x)$ on the whole interval $(a,b)$ to the initial value problem 
+    \[ y^{(n)}+p_1(x)y^{(n-1)}(x)+\dots+p_n(x)y(x)=g(x) \] 
+    \[ y(x_0)=\gamma_0, y'(x_0)=\gamma_1 \dots y^{(n-1)}(x_0)=\gamma_{n-1} \]
+\end{theorem}
+
+\begin{example}
+    For the initial value problem 
+    \begin{align*}
+        x(x-1)y'''-3xy''+6x^2y'-(\cos x)y=\sqrt{x+5} \\ 
+        y(x_0) = 1, \qquad y'(x_0)=0, \qquad y''(x_0)=7
+    \end{align*}
+    determine the values of $x_0$ and the intervals $(a,b)$ containing $x_0$ for which the above theorem guarantees the existence of a unique solution on $(a,b)$.
+
+    We know that $x\neq 0,1$ from $x(x-1)$.
+
+    In standard form this becomes $y'''-\frac{3x}{x(x-1)}y''+\frac{6x^2}{x(x-1)}y'-\frac{\cos x}{x(x-1)}y=\frac{\sqrt{x+5}}{x(x-1)}$.
+
+    These functions will be continuous when $x\neq 0$ and $x\neq 1$. We also know that $x\geq -5$ from the last term.
+
+    The intervals are $(-5,0)$, $(0,1)$ and $(1,\infty)$ in which all the $x_0$ can have an element from.
+\end{example}
+
+If we let the left-hand side of equation in the standard form define the differential operator $L$,
+\[ L[y]=\frac{\dd^n y}{\dd x^n}+p_1\frac{\dd^{n-1}y}{\dd x^{n-1}}+\dots +p_n y = (D^n+p_1D^{n-1}+\dots+p_n)[y] \]
+then the standard form equation can be expressed in the operator form 
+\[ L[y](x)=g(x) \]
+Keep in mind that $L$ is a linear operator - that is, it satisfies 
+\[ L[y_1+y_2+\dots+y_m]=L[y_1]+L[y_2]+\dots+L[y_m]\]
+\[ L[cy]=cL[y] \]
+where $c$ is any constant.
+
+\begin{definition}[Wronksian]
+    Let $f_1,\dots,f_n$ be any $n$ functions that are $(n-1)$ times differentiable.
+    
+    The function \[
+        W[f_1, f_2, \dots, f_n] =
+        \begin{vmatrix}
+        f_1 & f_2 & \dots & f_n \\
+        f_1' & f_2' & \dots & f_n' \\
+        \vdots & \vdots & \ddots & \vdots \\
+        f_1^{(n-1)} & f_2^{(n-1)} & \dots & f_n^{(n-1)}
+        \end{vmatrix}
+        \]
+        is called the Wronksian of $f_1,\dots f_n$.
+\end{definition}
+
+\begin{theorem}
+    Let $y_1,\dots y_n$ be $n$ solutions on $(a,b)$ of 
+    \[ y^{(n)}(x)+p_1(x)y^{(n-1)}(x)+\dots + p_n(x)y(x)=0 \]
+    where $p_1,\dots , p_n$ are continuous on $(a,b)$. If at some point $x_0$ in $(a,b)$ these solutions satisfy 
+    \[ W[y_1,\dots,y_n](x_0)\neq 0 \]
+    then every solution of the above equation on $(a,b)$ can be expressed in the form 
+    \[ y(x)=C_1y_1(x)+\dots + C_ny_n(x) \]
+    where $C_1,\dots,C_n$ are constants.
+\end{theorem}
+
+\begin{definition}[Linear Dependence of Functions]
+    The $M$ functions $f_1,f_2,\dots,f_m$ are said to be linearly dependent on an interval $I$ if at least one of them can be expressed as a linear combination of the others on $I$; equivalently, they are linearly dependent if there exist constants $c_1,c_2,\dots, c_m$, not all zero, such that 
+    \[c_1f_1(x)+c_2f_2(x)+\dots +c_mf_m(x)=0 \]
+    for all $x$ in $I$. Otherwise, they are said to be linearly independent on $I$.
+\end{definition}
+
+\begin{example}
+    Show that the functions $f_1(x)=e^x, f_2(x)=e^{-2x}$, and $f_3(x)=3e^x-2e^{-2x}$ are linearly dependent on $(-\infty,\infty)$.
+
+    We can see that $f_3=3f_1-2f_2$. We can see that $f_3$ is a linear combination of the other two functions.
+
+    We have a set of constants, not all zero that $c_1f_1+c_2f_2+c_3f_3=0$ from $3f_1-2f_2-1f_3$, so the set of $\{f_1,f_2,f_3\}$ is linearly dependent.
+
+    If you do the Wronksian of the functions: $W[f_1,f_2,f_3]$, we get 0 which eans that it is linearly dependent. The process of writing the Wronksian takes a lot of paper, so it is easier likely to do the $c_1f_1+c_2f_2+\dots +c_nf_n=0$ method.
+\end{example}
+
+To prove that functions $f_1,f_2,\dots, f_m$ are linearly independent, a convenient approach is to assume the equation defined in the linear dependence definition holds and show that this forces $c_1=c_2=\dots = c_m =0$. 
+
+\begin{example}
+    Show that the functions $f_1(x)=x, f_2(x)=x^2$, and $f_3(x)=1-2x^2$ are linearly independent on $(-\infty,\infty)$.
+
+    Assume $c_1f_1+c_2f_2+c_3f_3=0$. If we can show this, then we can show its independence.
+
+    From this we will get $c_1x+c_2x^2+c_3(1-2x^2)=0$.
+
+    If we let $x=0$, we get $c_3=0$.
+
+    If we let $x=1$, we get $c_1+c_2-c_3=0$ and if we let $x=-1$, we get $-c_1+c_2-c_3=0$. 
+
+    From this we see that $c_1+c_2=0$ and $-c_1+c_2=0$.
+
+    The functions are linearly independent when $c_1,c_2$ and $c_3$ are equal to 0, so $x$, $x^2$, and $1-2x^2$ are linearly independent.
+
+    There are other ways to do this as well.
+\end{example}
+
+\begin{theorem}
+    If $y_1,y_2,\dots,y_n$ are $n$ solutions to $y^{(n)}+p_1y^{(n-1)}+\dots + p_n y =0$ on the interval $(a,b)$, with $p_1,p_2,\dots,p_n$ continuous on $(a,b)$, then the following statements are equivalent 
+    \begin{enumerate}
+        \item $y_1,y_2,\dots,y_n$ are linearly dependent on $(a,b)$.
+        \item The Wronksian $W[y_1,y_2,\dots,y_n](x_0)$ is zero at some point $x_0$ in $(a,b)$.
+        \item The Wronksian $W[y_1,y_2,\dots,y_n](x)$ is identically zero on $(a,b)$.
+    \end{enumerate}
+
+    The contrapositives of these statements are also equivalent:
+    \begin{enumerate}
+        \item $y_1,y_2,\dots,y_n$ are linearly independent on $(a,b)$.
+        \item The Wronksian $W[y_1,y_2,\dots,y_n](x_0)$ is nonzero at some point $x_0$ in $(a,b)$.
+        \item The Wronksian $W[y_1,y_2,\dots,y_n](x)$ is never zero on $(a,b)$
+    \end{enumerate}
+
+    Whenever the last 3 are met, $\{y_1,y_2,\dots,y_n\}$ is called a fundamental solution set for linear independence theorem on $(a,b)$.
+\end{theorem}
+
+It is useful to keep in mind the following sets consist of functions that are linearly independencet on every open interval $(a,b)$:
+\[ \{1,x,x^2,\dots,x^n\} \]
+\[ \{1,\cos x,\sin x,\cos 2x, \sin 2x,\dots, \cos nx, \sin nx \} \]
+\[\{ e^{\alpha_1 x}, e^{\alpha_2 x},\dots, e^{\alpha_n x} \}\]
+where $\alpha_i$ are distinct constants.
+
+\begin{theorem}
+    Let $y_p(x)$ be a particular solution to the nonhomogeneous equation 
+    \[ y^{(n)}(x)+p_1(x)y^{(n-1)}(x)+\dots + p_n(x)y(x) = g(x) \]
+    on the interval $(a,b)$ with $p_1,p_2,\dots,p_n$ continuous on $(a,b)$, and let $\{y_1,\dots,y_n\}$ be a fundamental solution set for the corresponding homogeneous equation 
+    \[ y^{(n)}(x)+p_1(x)y^{(n-1)}(x)+\dots + p_n(x)y(x)=0 \]
+
+    Then every solution of the original nonhomogeneous equation on the interval $(a,b)$ can be expressed in the form 
+    \[ y(x) = y_p(x)+C_1y_1(x)+\dots + C_ny_n(x) \]
+\end{theorem}
+
+\begin{example}
+    Find a general solution on the interval $(-\infty,\infty)$ to 
+    \[ L[y]=y'''-2y''-y'+2y=2x^2-2x-4-24e^{-2x}\]
+    given that $y_{p_1}(x)=x^2$ is a particular solution to $L[y]=2x^2-2x-4, y_{p_2}(x)=e^{-2x}$ is a particular solution to $L[y]=-12e^{-12x}$, and that $y_1(x)=e^{-x},y_2(x)=e^x$, and $y_3(x)=e^{2x}$ are solutions to the corresponding homogeneous equation.
+
+    We know that $\{e^{-x},e^x,e^{2x}\}$ is a fundamental solution set for homogeneous equations so we have $C_1e^{-x}+C_2e^x+C_3e^{2x}$.
+
+    We know that $L[x^2]=2x^2-2x-4$ and $L[e^{-2x}]=-12e^{-2x}$. From the former, we have $L[2e^{-2x}]=-24e^{-2x}$.
+
+    We know that $L{y_p}=2x^2-2x-4-24e^{-2x}$. We also know that $L[x^2-2e^{-2x}]=L[x^2]-2L[e^{-2x}]=2x^2-2x-4-24e^{-2x}$.
+
+    The solution of the nonhomogeneous equation is $x^2-2e^{-2x}$.
+
+    The general solution is therefore $y(x)=x^2-2x^{-2x}+C_1e^{-2x}+C_2e^x+C_3e^{2x}$.
+\end{example}
+
+\section{Homogeneous Linear Equations with Constant Coefficients}
+Consider the homogeneous linear $n$th-order differential equation with constant coefficients 
+\[ a_ny^{(n)}(x)+a_{n-1}y^{(n-1)}(x)+\dots + a_1y'(x)+a_0y(x)=0 \]
+$e^{rx}$ is a solution to the equation, provided $r$ is a root of the auxiliary (or characteristic equation)
+\[ P(r)=a_nr^n+a_{n-1}r^{n-1}+\dots+a_0 =0 \]
+
+Distinct real roots: If the roots $r_1,r_2,\dots,r_n$ of the auxiliary equation are real and distinct, then the $n$ solutions to the first equation defined are 
+\[ y_1(x)=e^{r_1x},\quad y_2(x)=e^{r_2x} \quad, \dots , \quad, y_n(x) = e^{r_nx} \]
+
+\begin{example}
+    Find a general solution to 
+    \[ y'''-2y''-5y'+6y=0 \]
+
+    Using the auxiliary equation we get $r^3-2r^2-5r+6=0$ from this.
+
+    From algebra, we know that the possible roots are $\pm 1, \pm2, \pm3, \pm 6$.
+
+    Let's assume $r=1$ is a solution. From synthetic division, we see that $r=1$ is a root. Now we can see that $(r-1)(r^2-r-6)$ is a solution. 
+
+    Factoring this gives $(r-1)(r-3)(r+2)$.
+
+    The general solution is $y=C_1e^x+C_2e^{3x}+C_3e^{-2x}$.   
+\end{example}
+
+Looking at complex roots: If $\alpha + i\beta (\alpha,\beta$ real) is a complex root of the auxiliary equation, then so is its complex conjugate $\alpha - i\beta$.
+If we accept complex-valued functions as solutions, then both $e^{(\alpha+i\beta)x}$ and $e^{(\alpha-i\beta)x}$ are solutions to the original homogeneous linear equation.
+The real-valued functions (which are linearly independent) corresponding to the complex roots $\alpha \pm i\beta$ are 
+\[ e^{\alpha x}\cos(\beta x), e^{\alpha x}\sin(\beta x) \]
+
+\begin{example}
+    Find a general solution to 
+    \[ y'''+y''+3y'-5y=0 \]
+
+    The auxiliary equation is $r^3+r^2+3r-5$.
+
+    The possible roots are $\pm 1,\pm 5$.
+
+    We know that $1$ works from synthetic division and we get $(r-1)(r^2+2r+5)$.
+
+    From $r^2+2r+5$, we get that $-1\pm 2i$ are the roots of this.
+
+    We get $c_1e^x+c_2e^{-x}\cos 2x+c_3e^{-x}\sin 2x$.
+\end{example}
+
+If $r_1$ is a root of multiplicity $m$, then the $m$ linearly independent solutions are 
+\[ e^{r_1x}, \quad xe^{r_1x}, \quad x^2e^{r_1x},\dots ,x^{m-1}e^{r_1}x \]
+
+If $\alpha + i\beta$ is a repeated complex root of multiplicity $m$, then the $2m$ linearly independent real-valued solutions are 
+\[ e^{\alpha x}\cos(\beta x), xe^{\alpha x}\cos(\beta x),\dots, x^{m-1}e^{\alpha x}\cos(\beta x) \]
+\[ e^{\alpha x}\sin(\beta x), xe^{\alpha x}\sin(\beta x),\dots, x^{m-1}e^{\alpha x}\sin(\beta x) \]
+
+\begin{example}
+    Find a general solution to 
+    \[ y^{(4)}-y^{(3)}-3y''+5y'-2y =0 \]
+
+    The auxiliary equation is $r^4-r^3-3r^2+5r-2=0$.
+
+    The possible roots are $\pm 1,\pm 2$.
+
+    We know that $r=1$ works from plugging in. Using synthetic division, we get $(r-1)(r^3-3r+2)$. 
+
+    From the $r^3-3r+2$ term, we can factor this to $(r-1)(r^2+r-2)$.
+
+    The auxiliary equation ends up being $(r-1)^3(r+2)$.
+
+    The general solution ends up being $c_1e^x+C_2xe^x+C_3x^2e^x+C_4e^{-2x}$.
+\end{example}
+\pagebreak
+\begin{example}
+    Find a general solution to 
+    \[ y^{(4)}-8y^{(3)}+26y''-40y'+25y=9 \]
+
+    The auxiliary equation is $r^4-8r^3+26r^2-40r+25=0$.
+
+    Let's assume we are told that $r_1=2+i$ and $r_2=2-i$.
+
+    This means that $(r-(2+i))(r-(2-i)) = r^2-4r+5$ is a factor.
+
+    Dividing $r^4-8r^3+26r^2-40r+25$ from this gives us $r^2-4r+5$. 
+
+    We know the roots are $2+i, 2-i, 2+i, 2-i$.
+
+    Since $2+i$ and $2-i$ have multiplicity of two, then the solution is $y=C_1e^{2x}\cos x+C_2e^{2x}\sin x+C_3xe^{2x}\cos x+C_4xe^{2x}\sin x$.
+\end{example}
+
+\section{Undetermined Coefficients and the Annihilator Method}
+Previously we used the Method of Undetermined Coefficients to find a particular solution to a nonhomogeneous linear second-order constant coefficient equation 
+\[ L[y] = (aD^2+bD+c)[y] = f(x) \]
+when $f(x)$ had a particular form (a product of a polynomial, an exponential, and a sinusoid) by observing a solution form $y_p$ must resemble $f$. We also had to make accomodations when $y_p$ was a solution to the homogeneous equation $L[y]=0$.
+
+The annihilator method uses the observation that suitable types of nonhomogeneities $f(x)$ are themselves solutions to homogeneous differential equations with constant coefficients.
+\begin{enumerate}
+    \item Any nonhomogeneous term of the form $f(x)=e^{rx}$ satisfies $(D-r)[f] =0$
+    \item Any nonhomogeneous term of the form $f(x)=x^ke^{rx}$ satisfies $(D-r)^m[f]=0$ for $k=0,1,\dots,m-1$.
+    \item Any nonhomogeneous term of the form $f(x)=\cos \beta x$ or $\sin\beta x$ satisfies $(D^2+\beta^2)[f]=0$
+    \item Any nonhomogeneous term of the form $f(x)=x^ke^{\alpha x}\cos \beta x$ or $x^ke^{\alpha x}\sin \beta x$ satisfies $[(D-\alpha)^2+\beta^2]^m[f]=0$ for $k=0,1,\dots,m-1$.
+\end{enumerate}
+
+We have that $D^n$ annihilates polynomial of degree $n-r$.
+
+We have that $D-r$ annihilates $e^{rx}$.
+
+We have that $(D-r)^k$ annihilates $x^{k-1}e^{rx}$
+
+We have that $D^2-2\alpha D+(\alpha^2 +\beta^2)$ annihilates $e^{\alpha x}\cos \beta x, e^{\alpha x}\sin \beta x$.
+
+If have a power of $x^{k-1}$ to the above, then raise the above to the power of $k$ to annihilate this. If we just have $\cos \beta x$ or $\sin\beta x$, then the operator becomes $D^2+\beta ^2$.
+
+\begin{definition}
+    A linear differential operator $A$ is said to annihilate a function $f$ if 
+    \[ A[f](x)=0 \]
+    for all $x$. That is, $A$ annihilates $f$ if $f$ is a solution to the homogeneous linear differential equation above on $(-\infty,\infty)$.
+\end{definition}
+
+\begin{example}
+    Find a differential operator that annihilates 
+    \[ 6xe^{-4x}+5e^x\sin 2x \]
+
+    We know that $(D+4)^2$ will annihilate $6xe^{-4x}$. 
+
+    We saw that the form that annihilates the other part of the equation is $D^2-2\alpha D+(\alpha^2+\beta^2)$.
+
+    We know that $\alpha = 1$ and $\beta = 2$.
+
+    The operator that will annihilate that term is $D^2-2D+5$, so this term annihilates $5e^x\sin 2x$.
+
+    The sum will be annihilated by multiplying $(D+4)^2$ and $(D^2-2D+5)$.
+\end{example}
+
+\begin{example}
+    Find a general solution to 
+    \[ y''-y=xe^x+\sin x \]
+    \textbf{Method 1: Undetermined Coefficients} 
+
+    The homogeneous equation is $m^2-1$, so the solution to the homogeneous equation is $y_c=c_1e^x+c_2e^{-x}$
+
+    The form of the particular solution looks like $y_p=(Ax+B)e^x + C\sin x + D\cos x$.
+
+    Let's find the form of $xe^x$ first. 
+
+    We have that $y_p=(Ax+B)e^x$, then the derivative is $Ae^x+(Ax+B)e^x=Axe^x+(A+B)e^x$. The second derivative is $Ae^x+Axe^x+(A+B)e^x= Axe^x+(2A+B)e^x$.
+
+    Plugging this in gives $Axe^x+(2A+B)e^x-(Ax+B)e^x=xe^x$. We end up getting $2Ae^x=xe^x$.
+
+    Because of the overlap with the homogeneous equation, the particular solution is actually $y_p=x(Ax+B)e^x=(Ax^2+Bx)e^x$.
+
+    The first derivative of this is $(2Ax+B)e^x+(Ax^2+Bx)e^x = [Ax^2+(2A+B)x+B]e^x$. The second derivative is $(2Ax+2A+B)e^x+[Ax^2+(2A+B)x+B]e^x = [Ax^2+(4A+B)x+(2A+2B)]e^x$.
+
+    Plugging this in gives $[Ax^2+(4A+B)x+(2A+2B)]e^x-(Ax^2+Bx)e^x=xe^x$.
+
+    Simplifying this gives $4A=1$ and $2A+2B=0$. From this we get $A=1/4$ and $B=-1/4$.
+
+    The solution for $y_p=(1/4 x^2-1/4x)e^x=x(\frac{1}{4}x-\frac{1}{4})e^x$.
+
+    Now we need to solve the other part of $y_p$.
+
+    Doing derivatives and plugging in stuff we get $C=-1/2$ and $D=0$, so $y_p=x(\frac{1}{4}x-\frac{1}{4})e^x-\frac{1}{2}\sin x$.
+
+    Therefore $y = c_1e^x+c_2e^{-x}+x(-\frac{1}{4}x-\frac{1}{4})e^x-\frac{1}{2}\sin x$
+
+    \textbf{Method 2: Annihilator Method}
+    We know that $(D-1)^2$ annihilates $xe^x$.
+
+    We know that for $\sin x$ the form is $D^2-2\alpha D+(\alpha^2+\beta^2)$.
+
+    So $D^2+1$ annihilates $\sin x$.
+
+    $(D-1)^2(D^2+1)$ annihilates $xe^x+\sin x$.
+
+    Rewrite the equation using differential operator notation. We end up getting $(D^2-1)y=xe^x+\sin x$.
+
+    This gives $(D+1)(D-1)y=xe^x+\sin x$. Applying $(D-1)^2(D^2+1)$ to both sides, we get $(D+1)(D-1)^3(D^2+1)y=(D-1)^2(D+1)[xe^x+\sin x]$.
+
+    We get that $(D+1)(D-1)^3(D^2+1)y=0$.
+
+    We would have $y=c_1e^{-x}+c_2e^x+c_3xe^x+c_4x^2e^x+c_5\sin x+c_6\cos x$ as the general solution to the homogeneous equation. 
+
+    The particular solution is exactly what we got in the same form using the annihilator method.
+\end{example}
+
+Belpw for me later 
+\ex Find a general solution to $y'''-3y''+4y=xe^2x$ pls later anastasia come back 
+
+\section{Method Of Variation of Parameters}
+The method of undetermined coefficients and the annihilator method work only for linear equations with constant coefficients and when the nonhomogeneous term is a solution to some homogeneous linear equation with constant coefficients.
+The method of variation of parameters discussed in chapter 4 generalizes to higher-order linear equations with variable coefficients.
+
+Our goal is to find a solution to the standard form equation 
+\[ L[y](x) = g(x) \]
+where $L[y]=y^{(n)}+p_1y^{(n-1)}+\dots + p_n y$ and the coefficient functions $p_1,p_2,\dots,p_n$ as well as $g$ are continuous on $(a,b)$.
+
+A general solution to $L[y](x)=0$ is $y_h(x)=C_1y_1(x)+\dots+C_ny_n(x)$.
+
+In the method of variation of parameters, there exists a particular solution to the standard form equation of the form 
+\[ y_p(x)=v_1(x)y_1(x)+\dots + v_n(x)y_n(x) \]
+
+The functions $v'_1,v'_2,\dots,v'_n$ must satisfy the system 
+\begin{align*}
+y_1v'_1+ \cdots + y_nv'_n =0 \\
+\vdots \qquad \vdots \quad \vdots \quad \vdots \quad \vdots \\
+y_1^{(n-2)}v'_1+\cdots +y^{(n-2)}_nv'_n=0\\
+y_1^{(n-1)}v'_1+\cdots + y_n^{(n-1)}v'_n=g 
+\end{align*}
+
+Solving the system using Cramer's Rule, we find that $v'_k(x)=\frac{g(x)W_k(x)}{W[y_1,\dots,y_n](x)}$ where $k=1,\dots,n$. and where 
+$W_k(x)$ is the determinant of a matrix obtained from the Wronksian $W[y_1,\dots,y_n](x)$ by replacing the $k$th column by Col$[0,\dots,0,1]$.
+
+\begin{example}
+    Find a general solution to the Cauchy-Euler equation 
+    \[ x^3y'''+x^2y''-2xy'+2y=x^3\sin x, \qquad x>0 \]
+
+    From Cauchy Euler, we see that $y=x^r, y'=rx^{r-1}, y''=r(r-1)x^{r-2}, y'''=r(r-1)(r-2)x^{r-3}$.
+
+    Plugging this in the homogeneous equation gives $x^3\cdot r(r-1)(r-2)x^{r-3}+x^2r(r-1)x^{r-2}-2xrx^{r-1}+2x^r=0$.
+
+    This gives $x^r[r^3-3r^2+2r]+x^r[r^2-r]-2x^r[r]+2x^r=0$. Factoring this gives $x^r[r^3-3r^2+2r+r^2-r-2r+2]=0$.
+
+    Assuming $x\neq 0$, we get $r^3-2r^2-r+2=0$. Factoring this gives $(r-2)(r-1)(r+1)=0$.
+
+    The general solution to the homogeneous equation is $y=c_1x^2+c_2x^{-1}+c_3x$.
+
+    From above we see that $y_1=x^2,y_2x^{-1},y_3=x$.
+
+    The particular solution will be of the form $y_p=v_1x^2+v_2x^{-1}+v_3x$.
+
+    Starting with the Wronksian of $x^2,x^{-1},x$. 
+
+    Before, we get $g(x)=\frac{x^3\sin x}{x^3}=\sin x$. This comes from dividing the $x^3\sin x$ by the leading coefficient.
+
+    The next determinant for $v_1$ is the same as the original Wronksian above, but the first column has $0,0,\sin x$ instead of $x^2,2x,2$.
+
+    The determinant for $v_2$ is the same as the original, but the second column is replaced by $0,0,\sin x$ instead of $x^{-1},-x^{-2},2x^{-3}$.
+
+    The determinant for $v_3$ is the same as the original, but the third column is replaced by $0,0\sin x$ instea dof $x,1,0$.
+
+    For the original Wronksian, we get $x(4x^{-2}+2x^{-2})-1(2x^{-1}-2x^{-1})=6x^{-1} = W$.
+
+    For the Wronksian of $v_1$, we get $\sin x (x^{-1}+x^{-1})=2x^{-1}\sin x$.
+
+    For the Wronksian of $v_2$, we get $-\sin x(x^2-2x^2)=x^2\sin x$.
+
+    For the Wronksian of $v_3$, we get $\sin x(-1-2)=-3\sin x$.
+
+    So we get $v_1'=\frac{W_1}{W}=\frac{2x^{-1}\sin x}{6x^{-1}}=\frac{1}{3}\sin x$
+
+    We get $v_2'=\frac{W^2}{W}=\frac{x^2\sin x}{6x^{-1}}=\frac{1}{6}x^3\sin x$
+
+    We get $v_3'=\frac{W^3}{W}=\frac{-3\sin x}{6x^{-1}}=-\frac{1}{2}x\sin x$.
+
+    Integrating, we get $v_1=-\frac{1}{3}\cos x$.
+
+    For $v_3$, we have $-\frac{1}{2}\int x\sin x \dd x$. Let $u=x$ and $\dd v=\sin x$. From this, $v = -\cos x$ and $\dd u = 1$.
+
+    Integrating by parts should give $v_3=\frac{1}{2}x\cos x-\frac{1}{2}\sin x$.
+
+    For $v_2$, we get $u=x^3$ then $3x^2,6x,6,0$. and for $\dd v$ we get $\sin x, -\cos x, \sin x, -\cos x,\sin x$.
+
+    This is tabular integration by parts. We get $v_2=\frac{1}{6}[-x^3\cos x+3x^2\sin x+6x\cos x-6\sin x]$.
+
+    Simplifying this gives $v_2=-\frac{1}{6}x^3\cos x+\frac{1}{2}x^2\sin x+x\cos x-\sin x$.
+
+    We can now get $y_p$. 
+
+    Yea, so $y_p$ is simply $y_p=[-\frac{1}{3}\cos x]x^2+[-\frac{1}{6}x^3\cos x+\frac{1}{2}x^2\sin x+x\cos x-\sin x]x^{-1}+[\frac{1}{2}x\cos x-\frac{1}{2}\sin x]x$.
+
+    Simplifying this gives $\cos x-x^{-1}\sin x$.
+
+    So the general solution is $y=\cos x-x^{-1}\sin x+c_1x^2+c_2x^{-1}+c_3x$.
+\end{example}
 \end{document}
