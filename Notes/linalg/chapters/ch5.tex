@@ -3,7 +3,56 @@
 \begin{document}
 \chapter{Eigenvalues and Eigenvectors}
 \section{Eigenvectors and Eigenvalues}
+Eigenvectors and Eigenvalues: viewing a matrix as a linear transformation $x\rightarrow A\textbf{x}$ vectors that are only scaled (not rotated) are called eigenvectors. The scaling factor is the associated eigenvalue.
+
+\begin{definition}
+    An eigenvector of an $n\times n$ matrix $A$ is a nonzero vector $\vec{x}$ such that 
+    \[ A\vec{x} = \lambda \vec{x} \]
+\end{definition}
+is true for some scalar $\lambda$. A scalar $\lambda$ is called an eigenvalue of $A$ if there is a nontrivial solution $\vec{x}$ of the above equation. We often state that 
+$\vec{x}$ is an eigenvector corresponding to $\lambda$.
+
+The equation you will solve to find eigenvectors: $A\vec{x}=\lambda\vec{x}\implies A\vec{x}-\lambda\vec{x}=\vec{0}\implies (A-\lambda I)\vec{x}=\vec{0}$.
+
+The set of solutions to this homogeneous equation is just the nullspace of the matrix, so this set is a subspace of $\textbf{R}^n$ and is caleld the eigenspace corresponding to $\lambda$.
+
+\begin{theorem}
+    The eigenvalues of a triangular matrix are the entries on its main diagonal.
+\end{theorem}
+
+\begin{theorem}
+    If $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p$ are eigenvectors that correspond to distinct eigenvalues of an $n\times n$ matrix, then the set 
+    $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ is linearly independent.
+\end{theorem}
+
+Eigenvectors and Difference Equations: constructing a solution of the first-order difference equation: $x_{k+1}=A\textbf{x}_k (k=0,1,2,\dots)$.
+
+If $A$ is $n\times n$ then $\textbf{x}_{k+1} (k=0,1,2,\dots)$ is a recursive description of a sequence $\{\textbf{x}_k\}$ in $\textbf{R}^n$.
+
+A solution is an explicit description of $\{\textbf{x}_k\}$ whose formula for each $\textbf{x}_k$ does not depend directly on $A$ or the preceding terms in the sequence other than the initial term $\textbf{x}_0$.
+
+The simplest way to build a solution is to take an eigenvector $\textbf{x}_0$ and it's corresponding eigenvalue and let $\vec{x}_k=\lambda^k x$.
+
+This sequence is a solution because: $A\vec{x}_k=A(\lambda^k\vec{x}_0)=\lambda^k(A\vec{x}_0)=\lambda^k(\lambda \vec{x}_0)=\lambda^{k+1}\vec{x}_0=\vec{x}_{k+1}$.
+
+
 \section{The Characteristic Equation}
+\begin{theorem}
+    An $n\times n$ matrix $A$ is invertible if and only if 0 is not an eigenvalue of $A$,
+\end{theorem}
+
+The Characteristic Equation: a scalar $\lambda$ is an eigenvalue of an $n\times n$ matrix $A$ if and only if $\lambda$ satisfies the characteristic equation: det $(A-\lambda I)=0$.
+
+The characteristic equation of an $N\times n$ matrix is an $n$th degree polynomial. We expect exactly $n$ roots, counting multiplicities, provided complex roots are allowed.
+
+Similarity: If $A$ and $B$ are $n\times n$ matrices, then $A$ is similar to $B$ if there is an invertible matrix $P$ such that $P^{-1}=AP=B$ or equivalently $A=PBP^{-1}$. Changing $A$ to $P^{-1}AP$ is called a similarity transformation.
+
+\begin{theorem}
+    If $n\times n$ matrices $A$ and $B$ are similar, then they have the same characteristic polynomial and hence the same eigenvalues with the same multiplicities. 
+
+    Similarity is not the same as row equivalence. If matrices have the same eigenvalues, they may not be similar.
+\end{theorem}
+
 \section{Diagonalization}
 \section{Applications to Differential Equations}
 

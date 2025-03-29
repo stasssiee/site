@@ -3,7 +3,213 @@
 \begin{document}
 \chapter{Laplace Transforms}
 \section{Definition of the Laplace Transform}
+\begin{definition}
+    Let $f(t)$ be a function on $[0,\infty)$. The Laplace transform of $f$ is the function $F$ defined by the integral 
+    \[ F(s)=\int_0^\infty e^{-st}f(t)\dd t \]
+
+    The domain of $F(s)$ is all the values of $s$ for which the integral above exists. The Laplace transform of $f$ is denoted by both $F$ and $\mathcal{L}\{f\}$.
+\end{definition}
+
+\begin{example}
+    Determine the Laplace transform of the constant function $f(t)=1, t\geq 0$.
+
+    Let $F(s)=\int_0^{\infty}e^{-st}1\dd t = \int_0^{\infty}e^{-st}\dd t$. This is equal to $-\frac{1}{s}e^{-st}$ with bounds $\infty$ and $0$.
+
+    Remember this is an improper integral where we have $\lim_{b\to \infty}-\frac{1}{s}e^{-st}$ from $0$ to $b$.
+
+    This gives $-\frac{1}{s}e^{-sb}-\frac{1}{s}e^0$ on the inside of the limit, so we get $\lim_{b\to \infty}\left[-\frac{1}{s}e^{-sb}+\frac{1}{s}\right]$.
+
+    The above equals $\lim_{b\to\infty}\left[-\frac{1}{s}\cdot\frac{1}{e^{rb}}+\frac{1}{s}\right]$.
+
+    The restriction is $s>0$ because $\frac{1}{e^{sb}}$ has to be greater than 0.
+
+    Our result ends up being $\frac{1}{s}$.
+
+    $\mathcal{L}\{1\}=\frac{1}{s}$.
+\end{example}
+
+\begin{example}
+    Determine the Laplace transform of $f(t)=t$.
+
+    We have $\mathcal{L}\{t\}=\int_0^{\infty}e^{-st}t\dd t = \lim_{b\to\infty}\left[\int_0^be^{-st}t\dd t\right]$.
+
+    Integrating by parts gives the inside equal to $-\frac{1}{s}\cdot t\cdot \frac{1}{e^{st}}-\frac{1}{s^2}e^{-st}$ with bounds $0$ to $b$.
+
+    Plugging this in gives $\lim_{b\to\infty} -\frac{1}{s}\cdot \frac{b}{e^{sb}}-\frac{1}{s}\cdot\frac{1}{e^{sb}}+\frac{1}{s^2}$.
+
+    We see that $\frac{b}{e^{sb}}$ is indeterminate, so using L'Hopital's Rule, the derivative is $\frac{1}{se^{sb}}$ and the limit as $b$ approaches $\infty$ gives this as $0$.
+
+    We are left with $\frac{1}{s^2}$.
+
+    $\mathcal{L}\{t\}=\frac{1}{s^2}$.
+\end{example}
+
+We will see that $\mathcal{L}\{t^n\} = \frac{n!}{s^{n+1}}$.
+
+\begin{example}
+    Determine the Laplace transform of $f(t)=e^{at}$, where $a$ is a constant.
+
+    The integral is $\int_0^{\infty}e^{-st}\cdot e^{at}\dd t = \int_0^{\infty}e^{-(s-a)t}\dd t$.
+
+    Integrating this gives $-\frac{1}{s-a}e^{-(s-a)t}$ evaluated from $0$ to $\infty$.
+
+    As $t$ goes to infinity, we get $0$ and then we get $0-\frac{-1}{s-a}e^0 = \frac{1}{s-a}$.
+
+    So $\mathcal{L}\{e^{at}\}=\frac{1}{s-a}$.
+\end{example}
+
+If we were to find the Laplace of $e^{5t}$, from the above example it would be $\frac{1}{s-5}$.
+
+\begin{example}
+    Find $\mathcal{L}\{\sin bt\}$, where $b$ is a nonzero constant.
+
+    The integral this time is $\int_0^{\infty}e^{-st}\cdot\sin bt \dd t$.
+
+    Integrating gives $-\frac{1}{s}\sin bt e^{-st}+\frac{b}{s}\left[-\frac{1}{s}\cos bt e^{-st}-\int -\frac{1}{s}e^{-st}(-b)\sin bt \dd t \right]$.
+
+    (Do this example later)
+
+    Involves factoring Laplace stuff.
+
+    $\mathcal{L}\{\sin bt\} = \frac{b}{s^2+b^2}$.
+\end{example}
+
+\begin{example}
+    Determine the Laplace transform of 
+
+    $f(t)=\begin{cases}
+        2 \qquad 0<t<5 \\ 
+        0 \qquad 5<t<10 \\
+        e^{4t} \qquad t>10
+    \end{cases}$
+
+    To do this, you just do $\int_0^{\infty}e^{-st}f(t)\dd t = \int_0^5 e^{-st}\cdot 2 \dd t + \int_5^{10}e^{-st}\cdot 0 \dd t + \int_10^{\infty}e^{-st}\cdot e^{4t}\dd t$.
+
+    Evaluating this gives the laplace as $-\frac{2}{s}e^{-5s}+\frac{2}{s}+\frac{1}{s-4}e^{-(s-4)10}$
+\end{example}
+
+An important property of the Laplace transform is its linearity. That is, the Laplace transform $\mathcal{L}$ is a linear operator.
+
+\begin{theorem}
+    Let $f$, $f_1$, and $f_2$ be functions whose Laplace transforms exist for $s>\alpha$ and let $c$ be a constant. Then, for $s>\alpha$, 
+    \[ \mathcal{L}\{f_1+f_2\} = \mathcal{L}\{f_1\} + \mathcal{L}\{f_2\} \]
+    \[ \mathcal{L}\{cf\}=c\mathcal{L}\{f\} \]
+\end{theorem}
+
+\ex Determine $\mathcal{L}\{11+5e^{4t}-6\sin 2t\}$.
+
+A function $f(t)$ on $[a,b]$ is said to have a jump discontinuity at $t_0\in (a,b)$ if $f(t)$ is discontinuous at $t_0$, but the one-sided limits 
+\[ \lim_{t\to t_0^-}f(t) \qquad \text{and} \qquad \lim_{t\to t_0^+}f(t) \]
+exist as finite numbers.
+
+\begin{definition}
+    A function $f(t)$ is said to be piecewise continuous on a finite interval $[a,b]$ if $f(t)$ is continuous at every point in $[a,b]$, except possibly for a finite number of points at which $f(t)$ has a jump discontinuity.
+
+    A function $f(t)$ is said to be piecewise continuous on $[0,\infty)$ if $f(t)$ is piecewise continuous on $[0,N]$ for all $N>0$.
+\end{definition}
+
+In contrast, the function $f(t)=1/t$ is not piecewise continuous on any interval containing the origin, since it has an ``infinite jump'' at the origin.
+
+A function that is piecewise continuous on a finite interval is not necessarily integrable over that interval. However, piecewise continuity on $[0,\infty)$ is not enough to guarantee the existence (as a finite number) of the improper integral over 
+$[0,\infty)$; we also need to consider the growth of the integrand for large $t$. The Laplace transform of a piecewise continuous function exists, provided the function does not grow ``faster than an exponential''.
+
+\begin{definition}
+    A function $f(t)$ is said to be of exponential order $\alpha$ if there exist positive constants $T$ and $M$ such that 
+    \[ |f(T)|\leq Me^{\alpha t} \]
+    for all $t\geq T$.
+\end{definition}
+
+\begin{theorem}
+    If $f(t)$ is piecewise continuous on $[0,\infty)$ and of exponential order $\alpha$, then $\mathcal{L}\{f\}(s)$ exists for $s>a$.
+\end{theorem}
+
+Here are common Laplace transforms:
+\begin{itemize}
+    \item $\mathcal{L}\{1\} = \frac{1}{s}$
+    \item $\mathcal{L}\{t\} = \frac{1}{s^2}$
+    \item $\mathcal{L}\{t^n\} = \frac{n!}{s^{n+1}}$
+    \item $\mathcal{L}\{e^{at}\} = \frac{1}{s-a}$
+    \item $\mathcal{L}\{\sin bt\} = \frac{b}{s^2+b^2}$
+    \item $\mathcal{L}\{\cos bt\} = \frac{s}{s^2+b^2}$
+\end{itemize}
+
 \section{Properties of the Laplace Transform}
+\begin{theorem}
+    If the Laplace transform $\mathcal{L}\{f\}(s)=F(s)$ exists for $s>\alpha$, then 
+    \[ \mathcal{L}\{e^{\alpha t}f(t)\}(s)=F(s-a) \]
+    for $s>\alpha+a$
+\end{theorem}
+
+\begin{example}
+    Determine the Laplace transform of $e^{\alpha t}\sin bt$
+
+    We know the Laplace of $\sin bt$ is equal to $\frac{b}{s^2+b^2}$.
+
+    Multiplying by $e^{\alpha t}$ just shifts it $F(s-\alpha)=\frac{b}{(s-\alpha)^2+b^2}$
+\end{example}
+
+\begin{theorem}
+    Let $f(t)$ be continuous on $[0,\infty)$ and $f'(t)$ be piecewise continuous on $[0,\infty)$, with both of exponential order $\alpha$. Then for $s>\alpha$,
+    \[\mathcal{L}\{f'\}(s)=s\mathcal{L}\{f\}(s)-f(0) \]
+\end{theorem}
+
+\begin{theorem}
+    Let $f(t),f'(t),\dots,f^{(n-1)}(t)$ be continuous on $[0,\infty)$ and let $f^{(n)}(t)$ be piecewise continuous on $[0,\infty)$, with all these functions of exponential order $\alpha$.
+    Then, for $s>\alpha$,
+    \[ \mathcal{L}\{f^{(n)}\}(s)=s^n\mathcal{L}\{f\}(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\dots-f^{(n-1)}(0) \]
+\end{theorem}
+
+\begin{example}
+    Using the above theorems and the fact that $\mathcal{L}\{\sin bt\}(s)=\frac{b}{s^2+b^2}$, determine $\mathcal{L}\{\cos bt\}$
+
+    We know that $f'(t)=b\cos bt$ from this. So $\mathcal{L}\{b\cos bt\}=s\mathcal{L}\{\sin bt\}-f(0)$.
+
+    We know that $b\mathcal{L}\{\cos bt\}=s\mathcal{L}\{\sin bt\}$, since $f(0)=0$.
+
+    So simplifying gives the Laplace transform as $\frac{s}{s^2+b^2}$
+\end{example}
+
+\begin{example}
+    Prove the following identity for continous functions $f(t)$ (assuming the transforms exist):
+    \[ \mathcal{L}\left\{\int_0^t f(\tau)\dd \tau\right\}(s)=\frac{1}{s}\mathcal{L}\{f(t)\}(s) \]
+
+    We know $g(t)=\int_0^t f(\tau)\dd \tau$. From this we know $g'(t)=f(t)$.
+
+    We get that $\mathcal{L}\{g'(t)\}=s\mathcal{L}\{g(t)\}-g(0)$. and that $\mathcal{L}\{f(t)\}=s\mathcal{L}\{\int_0^t f(\tau)\dd \tau\}$.
+
+    We also know $g(0)=0$.
+
+    So the Laplace of the function is equal to $\frac{1}{s}\mathcal{L}\{f(t)\}$.
+\end{example}
+
+\begin{theorem}
+    Let $F(s)=\mathcal{L}\{f\}(s)$ and assume $f(t)$ is piecewise continuous on $[0,\infty)$ and of exponential order $\alpha$. Then, for $s>\alpha$,
+    \[ \mathcal{L}\{t^nf(t)\}(s)=(-1)^n \frac{\dd^n F}{\dd s^n}(s) \]
+\end{theorem}
+
+\begin{example}
+    Determine $\mathcal{L}\{t\sin bt\}$.
+
+    We know $f(t)=\sin bt$ and that $n=1$.
+
+    This is equal to $(-1)^1\frac{\dd}{\dd s}\mathcal{L}\{\sin bt\}$.
+
+    We end up getting $-\frac{\dd}{\dd s}\left(\frac{b}{s^2+b^2}\right)$.
+
+    We end up getting $\frac{2bs}{(s^2+b^2)^2}$.
+\end{example}
+
+Here are some basic properties of Laplace Transforms
+\begin{itemize}
+    \item $\mathcal{L}\{f+g\}=\mathcal{L}\{f\}+\mathcal{L}\{g\}$.
+    \item $\mathcal{L}\{cf\}=c\mathcal{L}\{f\}$ for any constant $c$.
+    \item $\mathcal{L}\{e^{at}f(t)\}(s)=\mathcal{L}\{f\}(s-a)$
+    \item $\mathcal{L}\{f'\}(s)=s\mathcal{L}\{f\}(s)-f(0)$
+    \item $\mathcal{L}\{f''(s)\}=s^2\mathcal{L}\{f\}(s)-sf(0)-f'(0)$
+    \item $\mathcal{L}\{f^{(n)}\}(s)=s^n\mathcal{L}\{f\}(s)-s^{n-1}f(0)-s^{n-2}f'(0)-\dots-f^{(n-1)}(0)$
+    \item $\mathcal{L}\{t^nf(t)\}(s)=(-1)^n \frac{\dd^n}{\dd s^n}(\mathcal{L}\{f\}(s))$
+\end{itemize}
+
 \section{Inverse Laplace Transform}
 \section{Solving Initial Value Problems}
 \section{Transforms of Discontinuous Functions}
