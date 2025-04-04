@@ -211,8 +211,281 @@ Here are some basic properties of Laplace Transforms
 \end{itemize}
 
 \section{Inverse Laplace Transform}
+\begin{example}
+    Solve the initial value problem 
+    \[ y''-y=-t \qquad y(0)=0, \qquad y'(0)=1 \]
+
+    We can say that $\mathcal{L}\{y''-y\}=\mathcal{L}\{-t\}$.
+
+    Using properties we know that $\mathcal{L}\{y''\}-\mathcal{L}\{y\}=-\mathcal{L}\{t\}$
+
+    This is equal to $s^2\mathcal{L}\{y\}-sy(0)-y'(0)=\mathcal{L}\{y\}=-\frac{1}{s^2}$.
+
+    Now plugging in $\mathcal{L}\{y(t)\}=Y(s)$, we get $s^2Y(s)1-Y(s)=-\frac{1}{s^2}$
+
+    Simplifying gives $Y(s)(s^2-1)=\frac{s^2-1}{s^2}$.
+
+    We see that $Y(s)=\frac{1}{s^2}$. This is the Laplace of $t$, so $y(t)=t$.
+\end{example}
+
+\begin{definition}
+    Given a function $F(s)$, if there is a function $f(t)$ that is cintinuous on $[0,\infty)$ and satisfies 
+    \[ \mathcal{L}\{f\}=F \]
+    then we say that $f(t)$ is the inverse Laplace transform of $F(s)$ and employ the notation $f=\mathcal{L}^{-1}\{F\}$.
+\end{definition}
+
+\begin{example}
+    Determine $\mathcal{L}\{F\}$ for $F(s)=\frac{2}{s^2}$.
+
+    The Inverse Laplace transform of this is $t^2$.
+
+    Determine it for $F(s)=\frac{3}{s^2+9}$.
+
+    This is $\sin 3t$ from the definition.
+
+    Determine it for $\frac{s-1}{s^2-2s+5}$.
+
+    This simplifies to $\frac{s-1}{(s-1)^2+4}=F(s-1)$. This is the same as $\cos 2t$ but shifted by $1$. The Inverse Laplace transform ends up being $e^t \cos 2t$.
+\end{example}
+
+\begin{theorem}
+    Assume that $\mathcal{L}^{-1}\{F\}, \mathcal{L}^{-1}\{F_1\}$, and $\mathcal{L}^{-1}\{F_2\}$ exist and are continuous on $[0,\infty)$ and let $c$ be any constant. Then 
+    \[ \mathcal{L}^{-1}\{F_1+F_2\} = \mathcal{L}^{-1}\{F_1\}+\mathcal{L}^{-1}\{F_2\} \]
+    \[ \mathcal{L}^{-1}\{cF\} = c\mathcal{L}^{-1}\{F\} \]
+\end{theorem}
+
+\begin{example}
+    Determine $\mathcal{L}^{-1}\left\{\frac{5}{s-6}-\frac{6s}{s^2+9}+\frac{3}{2s^2+8s+10}\right\}$.
+
+    The first two terms of this gives $5e^6t-6\cos 3t$.
+
+    For the last term, We see that $\frac{1}{2(s^2+4s+5)}$ lets us put $\frac{3}{2}$ in the front and we can complete the square for this for the denominator to give $\frac{1}{(s+2)^2+1}$.
+
+    The last term ends up being $\frac{3}{2}e^{-2t}\sin t$.
+\end{example}
+
+\ex Determine $\mathcal{L}^{-1}\{ \frac{5}{s+2}^4 \}$
+
+\ex Determine $\mathcal{L}^{-1} \{ \frac{3s+2}{s^2+2s+10} \}$.
+
+Method of Partial Fractions - A rational function of the form $\frac{P(s)}{Q(s)}$, where $P(s)$ and $Q(s)$ are polynomials with the degree of $P$ less than the degree of $Q$ has a partial fraction expansion 
+whose form is based on the linear and quadratic factors of $Q(s)$. We consider the three cases:
+\begin{enumerate}
+    \item Nonrepeated linear factors 
+    \item Repeated linear factors 
+    \item Quadratic factors
+\end{enumerate}
+
+Nonrepeated Linear Factors - If $Q(s)$ can be factored into a product of distinct linear factors, $Q(s)=(s-r_1)(s-r_2)\dots(s-r_n)$, where the $r_i$'s are all distinct real numbers, then the partial fraction expansion has the form 
+\[ \frac{P(s)}{Q(s)}=\frac{A_1}{s-r_1}+\frac{A_2}{s-r_2}+\dots + \frac{A_n}{s-r_n} \]
+where the $A_i$'s are real numbers.
+
+\begin{example}
+    Determine $\mathcal{L}^{-1}\{F\}$, where $F(s)=\frac{7s-1}{(s+1)(s+2)(s-3)}$.
+
+    The decomposition is equal to $\frac{A}{s+1}+\frac{B}{s+2}+\frac{C}{s-3}$.
+
+    Solving for $A,B,C$ gives $2,-3,1$ respectively.
+
+    We end up getting $\frac{2}{s+1}+\frac{-3}{s+2}+\frac{1}{s-3}$. This gives us $2e^{-t}-3e^{-2t}+e^{3t}$.
+\end{example}
+
+Repeated Linear Factors - Let $s-r$ be a factor of $Q(s)$ and suppose $(s-r)^m$ is the highest power of $s-r$ that divides $Q(s)$. Then the portion of the partial fraction expansion of $P(s)/Q(s)$ that corresponds to the term $(s-r)^m$ is 
+\[ \frac{A_1}{s-r}+\frac{A_2}{(s-r^2)}+\dots + \frac{A_m}{(s-r)^m} \]
+where the $A_i$'s are real numbers.
+
+\begin{example}
+    Determine $\mathcal{L}\left\{\frac{s^2+9s+2}{(s-1)^2(s+3)}\right\}$.
+
+    We end up getting $\frac{A}{s-1}+\frac{B}{(s-1)^2}+\frac{C}{s+3}$.
+
+    Solving for $A,B,C$ gives $2,3,-1$ respectively.
+
+    This gives $2e^t+3t^t t - e^{-3t}$.
+\end{example}
+
+Quadratic Factors - Let $(s-\alpha)^2+\beta^2$ be a quadratic factor of $Q(s)$ that cannot be reduced to linear factors with real coefficients. Suppose $m$ is the highest power of 
+$(s-\alpha)^2+\beta^2$ that divides $Q(s)$. THen the portion of the partial fraction expansion that corresponds to $(s-\alpha)^2+\beta^2$ is 
+\[ \frac{C_1 s+D_1}{(s-\alpha)^2+\beta^2}+\frac{C_2s+D_2}{[(s-\alpha)^2+\beta^2]^2}+\dots + \frac{C_ms+D_m}{[(s-\alpha)^2+\beta^2]^m} \]
+When looking up Laplace transforms, the following equivalent form is more convenient 
+\[ \frac{A_1(s-\alpha)+\beta B_1}{(s-\alpha)^2+\beta^2}+\frac{A_2(s-\alpha)\beta B_2}{[(s-\alpha)^2+\beta^2]^2}+\dots + \frac{A_m(s-\alpha)+\beta B_m}{[(s-\alpha)^2+\beta^2]^m} \]
+
+\begin{example}
+    Determine $\mathcal{L}^{-1}\left\{\frac{2s^2+10s}{(s^2-2s+5)(s+1)}\right\}$.
+
+    The partial fraction is $\frac{As+B}{(s^2-2s+5)}+\frac{C}{s+1}$.
+
+    Solving the system gives $A,B,C=3,5,-1$.
+
+    So we are now finding the Laplace transform of $\frac{3s+5}{(s-1)^2+4}0\frac{1}{s+1}$.
+
+    The first term of this can be rewritten as $\frac{3(s-1)+8}{(s-1)^2+4}$.
+
+    The transform ends up being $3e^t\cos 2t + 4e^t \sin 2t - e^{-t}$.
+\end{example}
+
 \section{Solving Initial Value Problems}
+Method of Laplace Transforms 
+
+To solve initial value problems:
+\begin{itemize}
+    \item Take the Laplace transforms of both sides of the equation 
+    \item Use the properties of the Laplace transform and the initial conditions to obtain an equation for the Laplace transform of the solution and then solve this equation for the transform 
+    \item Determine the inverse Laplace transform of the solution by looking it up in a table or by using a suitable method (such as partial fractions) in combination with the table.
+\end{itemize}
+
+\begin{example}
+    Solve the initial value problem 
+    \[ y''-2y'+5y=-8e^{-t}\qquad y(0)=2, \qquad y'(0)=12 \]
+
+    This is equal to $\mathcal{L}\{y''\}-2\mathcal{L}\{y'\}+5\mathcal{L}\{y\}=-8\mathcal{L}\{e^{-t}\}$.
+
+    This ends up being $s^2\mathcal{L}\{y\}-sy(0)-y'(0)-2[s\mathcal{L}\{y\}-y(0)]+5\mathcal{L}\{y\}=-8\frac{1}{s+1}$.
+
+    We know that $\mathcal{L}\{y\}=Y(s)$.
+
+    So $Y(s)[s^2-2s+5]-2s-12+4=\frac{-8}{s+1}$.
+
+    This is $Y(s)(s^2-2s+5)=2s+8-\frac{8}{s+1}$.
+
+    This ends up being $Y(s)=\frac{2s}{s^2-2s+5}+\frac{8}{s^2-2s+5}-\frac{8}{(s+1)(s^2-2s+5)}$.
+
+    Simplifying ends up getting $\frac{2s^2+10s}{(s+1)(s^2-2s+5)}$.
+
+    Doing partial fraction decomposition gives $\frac{3s+5}{s^2-2s+5}+\frac{-1}{s+1}=\frac{3(s-1)+8}{(s-1)^2+4}+\frac{-1}{s+1}$.
+
+    The Inverse Laplace of this is $3e^t \cos 2t + 4e^t \sin 2t - e^{-t}$.
+\end{example}
+
+\ex Solve the initial value problem 
+\[ y''+4y'-5y=te^t \qquad y(0)=1 \qquad y'(0)=0 \]
+
+\begin{example}
+    Solve the initial value proiblem 
+    \[ w''(t)-2w'(t)+5w(t)=-8e^{\pi-t} \qquad w(\pi)=2 \qquad w'(\pi)=12 \]
+
+    Let's introduce a new function $y(t)=w(t+\pi)$.
+
+    Replace $t$ with $t+\pi$ in this equation and we get $w''(t+\pi)-2w'(t+\pi)+5w(t+\pi)=-8e^{\pi-(t+\pi)}$.
+
+    Substituting the derivatives gives $y''(t)-2y'(t)+5y(t)=-8e^{-t}$.
+
+    This basically comes out to $y=3e^t\cos 2t+4e^t \sin 2t - e^{-t}$.
+
+    Replacing everything with $t-\pi$ gives $3e^{t-\pi}\cos 2(t-\pi)+4e^{t-\pi}\sin 2(t-\pi)-e^{-(t-\pi)}=y(t-\pi)$.
+
+    This gives $w(t)=3e^{t-\pi}\cos 2t + 4e^{t-\pi}\sin 2t - e^{-(t-\pi)}$.
+\end{example}
+
 \section{Transforms of Discontinuous Functions}
+\begin{definition}
+    The unit step function $u(t)$ is defined to by 
+
+    \[ u(t) := \begin{cases}
+        0, \qquad t<0, \\
+        1, \qquad 0<t 
+    \end{cases}
+    \]
+\end{definition}
+
+\begin{example}
+    Graph $u(t), u(t-a)$, and $Mu(t-a)$.
+    
+    The graph of $u(t)$ is just as given above.
+
+    The graph of $u(t-a)$ is just a horizontal shift.
+
+    The graph of $Mu(t-a)$ will just have the one with $1$ multiplied by $M$
+\end{example}
+
+\begin{definition}
+    The rectangular window function $\prod_{a,b}(t)$ is defined by 
+    \[ \prod_{a,b}(t) := u(t-a)-u(t-b) = \begin{cases}
+        0, \qquad t<a \\
+        1, \qquad a<t<b \\
+        0, \qquad b<t 
+    \end{cases}
+    \]
+\end{definition}
+
+\begin{example}
+    Write the function 
+    \[ f(t) = \begin{cases}
+        3 \qquad t<2 \\
+        1 \qquad 2<t<5 \\
+        t \qquad 5<t<8 \\
+        t^2/10 \qquad 8<t 
+    \end{cases}\]
+    In terms of window and step functions.
+
+    This is $3\prod_{0,2}(t)+1\prod_{2,5}(t)+t\prod_{5,8}(t)+\frac{t^2}{10}u(t-8)$.
+
+    Also this can be written as $3u(t)-2u(t-2)+(t-1)u(t-5)+(\frac{t^2}{10}-t)u(t-8)$.
+\end{example}
+
+\[\mathcal{L}\{u(t-a)\}(s)=\frac{e^{-as}}{s} \]
+
+\begin{theorem}
+    Let $F(s)=\mathcal{L}\{f\}(s)$ exist for $s>\alpha\geq 0$. If $a$ is a positive constant, then 
+    \[ \mathcal{L}\{f(t-a)u(t-a)\}(s)=e^{-\alpha s}F(s)\]
+    and, conversely, an inverse Laplace transform of $e^{-as}F(s)$ is given by 
+    \[ \mathcal{L}^{-1}\{e^{-asF(s)}\}(t)=f(t-a)u(t-a) \]
+\end{theorem}
+
+\[\mathcal{L}\{g(t)u(t-a)\}(s)=e^{-as}\mathcal{L}\{g(t+a)\}(s)\]
+
+\begin{example}
+    Determine the Laplace transform of $t^2u(t-1)$.
+
+    $a=$ from here, and $g(t)=t^2$.
+
+    We take $\mathcal{L}\{g(t)u(t-1)\} = e^{-s}\cdot \mathcal{L}\{g(t+1)\}$.
+
+    Replacing $g(t)$ gives that $t^2+2t+1$ for the inside, so the Answer ends up being $e^{-s}\cdot [\frac{2!}{s^3}+\frac{2}{s^2}+\frac{1}{s}]$.
+\end{example}
+
+\begin{example}
+    Determine $\mathcal{L}\{(\cos t)u(t-\pi)\}$.
+
+    This has $a=\pi$. So we can see that We are doing $e^{-\pi s}\mathcal{L}\{g(t+\pi)\}$.
+
+    $g(t)=\cos t$, so $g(t+\pi)=\cos(t+\pi)=\cos t \cos \pi - \sin t\sin \pi = -\cos t$.
+
+    So the Laplace is $e^{-\pi s}\cdot -1\cdot \frac{s}{s^2+1}$.
+\end{example}
+
+\ex Determine $\mathcal{L}^{-1}\left\{\frac{e^{-2s}}{s^2}\right\}$ and sketch its graph.
+
+\begin{example}
+    The current $I$ in an $LC$ series circuit is governed by the initial value problem 
+    \[ I''+4I(t)=g(t) \qquad I(0)=0 \qquad I'(0)=0 \]
+    where 
+    \[ g(t)=\begin{cases}
+        1 \qquad 0<t<1 \\
+        -1 \qquad 1<t<2 \\
+        0 \qquad 2<t 
+    \end{cases}\]
+    Determine the current as a function of time $t$.
+
+    $g(t)=1\prod_{0,1}+-1\prod_{1,2} = 1[u(t-0)-u(t-1)]-1[u(t-1)-u(t-2)]$. This is equal to $g(t)=1u(t-0)-2u(t-1)+u(t-2)$.
+
+    This simplifies to $1-2u(t-1)+u(t-2)$
+
+    The Laplace of the initial value problem is $s^2\mathcal{L}\{I\}-sI(0)-I'(0)+4\mathcal{L}\{I\}=\mathcal{L}\{1-2u(t-1)+u(t-2)\}$
+
+    We end up getting $(s^2+4)\mathcal{L}\{I\}=\frac{1}{s}-\frac{2e^{-s}}{s}+\frac{e^{-2s}}{s}$.
+
+    We get that $\mathcal{L}\{I\} = \frac{1}{s(s^2+4)}-2e^{-s}\left[\frac{1}{s(s^2+4)}\right]+e^{-2s}\left[\frac{1}{s(s^2+4)}\right]$.
+
+    Using partial fraction decomposition of $\frac{1}{s(s^2+4)}$ gives $\frac{1}{4}\cdot \frac{1}{s}+-\frac{1}{4}\cdot \frac{s}{s^2+4}$.
+
+    If we call what we got above to be $F(s)$, we get $F(s)-2e^{-s}F(s)+e^{-2s}F(s)$.
+
+    The inverse of what we have is $I=\mathcal{L}^{-1}\{F(s)\}-2\mathcal{L}^{-1}\{e^{-s}F(s)\}+\mathcal{L}^{-1}\{e^{-2s}F(s)\}$.
+
+    Doing Laplace stuff gives $I=\frac{1}{4}-\frac{1}{4}\cos 2t - 2\left[\frac{1}{4}-\frac{1}{4}\cos 2(t-1)\right]u(t-1)+\left[\frac{1}{4}-\frac{1}{4}\cos 2(t-2)\right]u(t-2)$.
+\end{example}
+
 \section{Transforms of Periodic and Power Functions}
 \section{Convolution}
 \section{Impulses and the Dirac Delta Function}

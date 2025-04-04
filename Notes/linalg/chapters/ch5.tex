@@ -54,6 +54,45 @@ Similarity: If $A$ and $B$ are $n\times n$ matrices, then $A$ is similar to $B$ 
 \end{theorem}
 
 \section{Diagonalization}
+A square matrix $A$ is said to be diagonalizable if $A$ is similar to a diagonal matrix, that is if 
+$A=PDP^{-1}$ for some invertible matrix $P$ and some diagonal, matrix $D$.
+
+\begin{theorem}
+    An $n\times n$ matrix $A$ is diagonalizable if and only if $A$ has $n$ linearly independent eigenvectors.
+
+    In fact, $A=PDP^{-1}$, with $D$ a diagonal matrix, if and only if the columns of $P$ are $n$ linearly independent eigenvectors of $A$.
+    In this case, the diagonal entries of $D$ are eigenvalues of $A$ that correspond, respectively, to the eigenvectors in $P$.
+
+    In other words, $A$ is diagonalizable if and only if there are enough eigenvectors to form a basis. We call such a basis an eigenvector basiso f.
+\end{theorem}
+
+\begin{theorem}
+    An $n\times n$ matrix with $n$ distinct eigenvalues is diagonalizable.
+\end{theorem}
+
+\begin{theorem}
+    Let $A$ be an $n \times n$ matrix whose distinct eigenvalues are $\lambda_1,\dots,\lambda_p$.
+
+    For $1\leq k\leq p$, the dimension of the eigenspace for $\lambda_k$ is less than or equal to the multiplicity of the eigenvalue $\lambda_k$.
+
+    The matrix $A$ is diagonalizable if and only if the sum of the dimensions of the eigenspaces equals $n$, and this happens if and only if the characteristic polynomial factors completely into linear factors and the dimension of the eigenspace for each 
+    $\lambda_k$ equals the multiplicity of $\lambda_k$.
+
+    If $A$ is diagonalizable and $B_k$ is a bsis for the eigenspace corresponding to $\lambda_k$ for each $k$, then the total collection of vectors in the sets $B_1,\dots,B_p$ forms and eigenvector basis.
+\end{theorem}
+
 \section{Applications to Differential Equations}
+Systems of Differential Equations: Several quantities are varying continuously in time and related by a linear system of differential equations:
+
+Linear $\textbf{x}'(t)=A\textbf{x}(t)$ where $\textbf{x}(t)=(x_1(t),x_2(t),\dots,x_n(t))$.
+
+A solution of $\textbf{x}'(t)=A\textbf{x}(t)$ is a vector-valued function that satisfies $\textbf{x}'(t)=A\textbf{x}(t)$ for all $t$ in some interval of real numbers such as $t\geq 0$.
+
+From Differential Equations, we know there always exist what is called a Fundamental Set of Solutions to $\textbf{x}'(t)=A\textbf{x}(t)$ A fundamental set if a basis for the set of all solutions of $\textbf{x}'(t)=A\textbf{x}(t)$, and the solution set is an 
+$n$-dimensional vector space of functions.
+
+If a vector $\textbf{x}_0$ specified, then the initial value problem is to construct the unique function $\textbf{x}(t)$ such that $\textbf{x}'(t)=A\textbf{x}(t)$ and $\textbf{x}(0)=\textbf{x}_0$.
+
+The 2 real solutions to $\textbf{x}'(t)=A\textbf{x}(t)$ are: $\textbf{y}_1(t)=\text{Re}\textbf{x}_1(t)=[(\text{Re}\textbf{v})\cos (bt)-(\text{Im}\textbf{v})\cos (bt)]e^{at}$. and $\textbf{y}_2(t)$ is basically the same but it is Im $\textbf{x}_1(t)$.
 
 \end{document}
