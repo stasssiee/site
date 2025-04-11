@@ -3,7 +3,99 @@
 \begin{document}
 \chapter{Orthogonality and Least Sqaures}
 \section{Inner Product, Length, and Orthogonality}
+Inner Product (generalization of the dot product of vectors in $\textbf{R}^n$)
+
+Inner Product/Dot Product of vectors in $\textbf{R}^n: \vec{u}\cdot \vec{v}=\vec{u}^T \vec{v}=u_1v_1+u_2v_2+\dots+u_nv_n$
+
+\begin{theorem}
+    Let $\textbf{u},\textbf{v},\textbf{w}$ be vectors, let $c$ be a scalar, then an inner product is a function assigns a scalar to each pair of vector $\textbf{u}$ and $\textbf{v}$ satisfies:
+    \begin{itemize}
+        \item $\vec{u}\cdot\vec{v}=\vec{v}\cdot\vec{u}$
+        \item $(\vec{u}+\vec{v})\cdot\vec{w}=\vec{u}\cdot \vec{w}+\vec{v}\cdot\vec{w}$
+        \item $(c\vec{u})\cdot \vec{v}=c(\vec{u}\cdot \vec{v})=\vec{u}\cdot(c\vec{v})$
+        \item $\vec{u}\cdot \vec{u} = 0$ iff $\vec{u}=\vec{0}$
+    \end{itemize}
+\end{theorem}
+
+The Length/Norm of a vector of $\textbf{v}$ is the nonnegative scalar $||\vec{v}||=\sqrt{\vec{v}\cdot\vec{v}}=\sqrt{v_1^2+v_2^2+\dots +v_n^2}$ and $||\vec{v}||^2=\vec{v}\cdot \vec{v}$
+\begin{itemize}
+    \item A vector whose length is 1 is called a unit vector. If we divide a nonzero vector $\textbf{v}$ by its length, that is, multiply by $1/||\textbf{v}||$, we obtain a unit vector this process is called normalizing (direction is preserved)
+\end{itemize}
+
+Distance in $\textbf{R}^n$: for $\textbf{u}$ and $\textbf{v}$ in $\textbf{R}^n$, the distance between $u$ and $v$, written dist($\textbf{u},\textbf{v}$) is the length of the vector $\textbf{u}-\textbf{v}$, that is 
+dist($\textbf{u},\textbf{v})=||\textbf{u}-\textbf{v}||$
+\begin{itemize}
+    \item In $\textbf{R}^2$ and $\textbf{R}^3$ this definition coincides with the usual formulas for Euclidean distance between 2 points 
+\end{itemize}
+
+Orthogonality of vectors in $\textbf{R}^n$ is the generalization of the concept of perpendicular lines in ordinary Euclidean geometry.
+
+Def: two vectors $\textbf{u}$ and $\textbf{v}$ in $\textbf{R}^n$ are orthogonal (to each other) if $\textbf{u}\cdot \textbf{v} =0$.
+
+Note the zero vector is ortohgonal to every vector in $\textbf{R}^n$
+
+Pythagorean theorem: 2 vectors $\textbf{u}$ and $\textbf{v}$ are orthogonal if and only if $||\textbf{u}+\textbf{v}||^2 = ||\textbf{u}||^2 + ||\textbf{v}||^2$.
+
+Orthogonal Complements: used in SVD 
+
+If a vector $\textbf{z}$ is orthogonal to every vector in a subspace $W$ of $\textbf{R}^n$, then $\textbf{z}$ is said to be ortohgonal to $W$
+
+The set of all vectors $\textbf{z}$ that are orthogonal to $W$ is called the ortohgonal complement of $W$ denoted $W^{\perp}$ read as ``$W$ perpendicular'' or ``$W$ perp''
+
+Properties/facts 
+\begin{itemize}
+    \item a vector $\textbf{x}$ is in $W$ perp if and only if $\textbf{x}$ is orthogonal to every vector in a set that spans $W$
+    \item $W$ perp is a subspace of $\textbf{R}^n$
+\end{itemize}
+
+\begin{theorem}
+    Let $A$ be an $m\times n$ matrix. The orthogonal complement of the row space of $A$ is the null space of $A$, and the orthogonal complement of the column space of $A$ is the null space of $A^T$.
+    (Row $A$)$^{\perp}$ = Nul $A$ and (Col $A$)$^{\perp}$ = Nul $A^T$.    
+\end{theorem}
+
 \section{Orthogonal Sets}
+Orthogonal Sets: a set of vectors $\{\textbf{u}_1,\textbf{u}_2,dots,\textbf{u}_p\}$ in $\textbf{R}^n$ is said to be an orthogonal set if each pair of distinct vectors from theset is orthogonal.
+\begin{theorem}
+    If $S=\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ is an orthogonal set of non-zero vectors in $\textbf{R}^n$, then $S$ is linearly independent and hence is a basis for the subspace spanned by $S$.
+\end{theorem}
+
+\begin{definition}
+    An Orthogonal Basis for a subspace $W$ of $\textbf{R}^n$ is a basis for $W$ that is also an orthogonal set.
+\end{definition}
+
+\begin{theorem}
+    Let $\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ be an orthogonal basis for a subspace $W$ of $\textbf{R}^n$. For each vector $\textbf{y}$ in $W$, the weights in the linear combination 
+    $\textbf{y}=c_1\textbf{u}_1+c_2\textbf{u}_2+\dots + c_p\textbf{u}_p$ are: 
+    \[ c_j = \frac{\vec{v}\cdot \vec{u}_j}{\vec{u}_j\cdot \vec{u}_j} \qquad j=1,2,\dots,p \]
+    This formula is why an orthogonal basis is much nicer than others.
+\end{theorem}
+
+Orthogonal projection: given a nonzero vector $\textbf{u}$ in $\textbf{R}^n$, consider the problem of decomposing a vector $\textbf{y}$ in $\textbf{R}^n$ into the sum of two vectors, one a multiple of $\textbf{u}$ and the other orthogonal to $\textbf{u}$.
+
+$\hat{y}$ ios the orthogonal projection of $\textbf{y}$ onto $\textbf{u}$, the vector $|textbf{z}$ is the component of $\textbf{y}$ orthogonal to $\textbf{u}$.
+
+Geometric Interpreation THeorem for finding coordinates of an orthogonal basis: The theorem decomposes vector $\textbf{y}$ into a sum of orthogonal productions onto one-dimensiona subspaces.
+
+Decomposing a Force into Component Forces: occurs in physics 
+
+Orthonormal Sets: a set $\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ is an orthonormal set if it is an orthogonal set of unit vectors. If $W$ is the subspace spanned by such a set, then 
+$\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ is an orthonormal basis for $W$< since the set is automatically linearly independent.
+
+Matrices whose columns form an orthonormal set are important in applications and computer algorithms for matrix computations. Their main properties are given in the following two theorems:
+\begin{theorem}
+    An $m\times n$ matrix $U$ has orthonormal columns if and only if $U^T U=I$.
+\end{theorem}
+
+\begin{theorem}
+    Let $U$ be an $m\times n$ matrix with orthonormal columns, and let $\textbf{x}$ and $\textbf{y}$ be in $R^n$ then:
+    \begin{itemize}
+        \item $||U\vec{x}||=||\vec{x}||$
+        \item $(U\vec{x})\cdot (U\vec{y})=\vec{x}\cdot \vec{y}$
+        \item $(U\vec{x})\cdot (U\vec{y})=0$ iff $\vec{x}\cdot \vec{y}=0$
+    \end{itemize}
+\end{theorem}
+
+An orthogonal matrix is a square invertible matrix $U$, $U^{-1}=U^T$.
 \section{Orthogonal Projections}
 \section{The Gram-Schmidt Process}
 \section{Least-Squares Problems}

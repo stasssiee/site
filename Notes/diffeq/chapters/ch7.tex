@@ -487,8 +487,251 @@ To solve initial value problems:
 \end{example}
 
 \section{Transforms of Periodic and Power Functions}
+\begin{definition}
+    A function $f(t)$ is said to be periodic of period $T$ ($\neq 0$) if 
+    \[ f(t+T)=f(t) \]
+    for all $t$ in the domain of $f$.
+\end{definition}
+
+To specificy a periodic function, it is sufficient to give its values over one period.
+
+The square wave function can be epxressed as 
+\[ f(t) = \begin{cases}
+    1, \qquad 0<t<1 \\
+    -1, \qquad 1<t<2 
+\end{cases} \]
+and $f(t)$ has period $2$.
+
+For convenience, we introduce a notation for a ``windowed'' version of a periodic function (using a rectangular window whose width is the period $T$)
+
+\[ f_T(t) := f(T)\prod_{0,T}(t)=f(t)[u(t)-u(t-T)]=\begin{cases}
+    f(t),\qquad 0<t<T\\
+    0, \qquad \text{otherwise}
+\end{cases}\] 
+\pagebreak
+\begin{theorem}
+    If $f$ has period $T$ and is piecewise continuous on $[0,T]$, then the Laplace transform $F(s)=\int_0^{\infty} e^{-st}f(t)\dd t$ and 
+    $F_T(s)=\int_0^T e^{-st}f(t)\dd t$ are related by 
+
+    \[ F_T(s)=F(s)[1-e^{-sT}] \] or 
+
+
+    \[ F(s)=\frac{F_T(s)}{1-e^{-st}}\] 
+\end{theorem}
+
+\begin{example}
+    Determine $\mathcal{L}\{f\}$, where $f$ is the square wave function.
+
+    The function of the step function gives 
+    \[ f_T(t)=1\prod_{0,1}+-1\prod_{1,2}=u(t)-2u(t-1)+u(t-2) \]
+
+    The Laplace of this gives $\frac{e^0}{s}-\frac{2e^{-s}}{s}+\frac{e^{-2s}}{s} = \frac{1-2e^{-s}+e^{-2s}}{s}$
+
+    $F(s)$ is just $\frac{F_T(s)}{1-e^{-2s}} = \frac{1-e^{-s}}{s(1+e^{-s})}$.
+\end{example}
+
 \section{Convolution}
+\begin{definition}
+    Let $f(t)$ and $g(t)$ be piecewise continuous on $[0,\infty)$. The convolution of $f(t)$ and $g(t)$, denoted $f \ast g$, is defined by 
+    \[ (f\ast g)(t) := \int_0^t f(t-v)g(v)\dd v \]
+\end{definition}
+
+\begin{example}
+    Find the convolution of $t$ and $t^2$.
+
+    Let $f(t)=t$ and $g(t)=t^2$
+
+    $t\ast t^2 = \int_0^t (t-v)\cdot v^2 \dd v$
+
+    So let's integrate. We get $\frac{tv^3}{3}-\frac{v^4}{4}$. Putting in the bounds gives $\frac{t^4}{12}$.
+\end{example}
+
+\begin{theorem}
+    Let $f(t), g(t)$, and $h(t)$ be piecewise continuous on $[0,\infty)$. Then 
+    \begin{itemize}
+        \item $f\ast g = g\ast f$
+        \item $f\ast (g+h) = (f\ast g)+(f\ast h)$
+        \item $(f\ast g)\ast h = f\ast (g\ast h)$
+        \item $f\ast 0 =0$
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}
+    Let $f(t)$ and $g(t)$ be piecewise continuous on $[0,\infty)$ and of exponential order $\alpha$ and set $F(s)=\mathcal\{f\}(s)$ and $G(s)=\mathcal{L}\{g\}(s)$. Then 
+    \[ \mathcal{L}\{f\ast g\}(s)=F(s)G(s)\]
+    or, equivalently,
+    \[ \mathcal{L}^{-1}\{F(s)G(s)\}(t)=(f\ast g)(t) \]
+\end{theorem}
+
+\begin{example}
+    Use the convolution theorem to solve the initial value problem 
+    \[ y''+y=g(t) \qquad y(0)=0 \qquad y'(0)=0 \]
+    where $g(t)$ is piecewise continuous on $[0,\infty)$ and of exponential order.
+
+    We can get that $\mathcal{L}\{y''\}+\mathcal{L}\{y\} = G(s)$ from the problem.
+
+    Doing the Laplace transform gives $s^2Y(s)-sy(0)-y'(0)+Y(s)=G(s)$.
+
+    This simplifies to $(s^2+1)Y(s)=G(s)$.
+
+    So $Y(s)=\frac{1}{s^2+1}\cdot G(s)$.
+
+    Taking the Laplace transform of both sides gives us $y(t)=\mathcal{L}\{\frac{1}{s^2+1}G(s)\}$.
+
+    The right side is just $\sin t\ast g(t)$.
+
+    We know that $y(t)=\int_0^t \sin(t-v)g(v)\dd v$ from this.
+\end{example}
+
+\begin{example}
+    Use the convolution theorem to find $\mathcal{L}^{-1}\left\{\frac{1}{(s^2+1)^2}\right\}$.
+
+    From the Convolution Theorem, we find that $\mathcal{L}\{F(s)G(s)\}=f(t)\ast g(t)$.
+
+    From that definition, the laplace is $\sin t\ast \sin t$.
+
+    This is $\int_0^t \sin(t-v)\cdot \sin v \dd v$.
+
+    Note that $\sin A\sin B = \frac{1}{2}[\cos (A-B)-\cos (A+B)]$.
+
+    So applying this, we get that $\frac{1}{2}\int_0^t \cos[t-v-v]-\cos [t-v+v]\dd v$.
+
+    This is equal to $\frac{1}{2}\int \cos[-(2v-t)]-\cos t \dd v$.
+
+    Remember that $\cos(-A)=\cos A$.
+
+    So we end up getting $\frac{1}{2}\int\cos(2v-t)-\cos t \dd v$.
+
+    Integrating gives $\frac{1}{2}[\frac{1}{2}\sin (2v-t)-v\cos t]$ from $0$ to $t$.
+
+    Simplifying this gives you $\frac{\sin t-t\cos t}{2}$
+\end{example}
+
+\begin{example}
+    Solve the integro-differential equation 
+    \[ y'(t)=1-\int_0^t y(t-v)e^{-2v}\dd v \qquad y(0)=1 \]
+
+    The integral in the expression is just a convolution.
+
+    The integral is $y\ast e^{-2t}$.
+
+    The Laplace transform of both sides results in $\mathcal{L}\{y'(t)\}=\mathcal{L}\{1\}-\mathcal{L}\{y(t)\ast e^{-2t}\}$.
+
+    So this is $sY(s)-y(0)=\frac{1}{s}-\mathcal{L}\{y(t)\}\cdot\mathcal{L}\{e^{-2t}\}$.
+
+    This is $sY(s)-1=\frac{1}{s}-Y(s)\cdot \frac{1}{s+2}$.
+
+    $(s+\frac{1}{s+2})Y(s)=1+\frac{1}{s}$.
+
+    We end up getting $\frac{s^2+2s+1}{s+2}Y(s)=1+\frac{1}{s}$.
+
+    Factoring and solving for $Y(s)$ gives $\frac{s+2}{(s+1)^2}\cdot \frac{s+1}{s}$.
+
+    This gives us $\frac{s+2}{s(s+1)}$.
+
+    Doing the partial fraction decomposition gives us $2=A$ and $1=-B$.
+
+    So we end up getting $\frac{2}{s}-\frac{1}{s+1}$. Taking the inverse laplace transform of both sides gives us $2-e^{-t}$.
+\end{example}
+
 \section{Impulses and the Dirac Delta Function}
+\begin{definition}
+    The Dirac delta function $\delta(t)$ is characterized by the following two properties:
+    \[ \delta(t)=\begin{cases}
+        0, \qquad t\neq 0,
+        ``\text{infinite}'' \qquad t=0 
+    \end{cases}\]
+and 
+\[ \int_{-\infty}^{\infty}f(t)\delta (t)\dd t = f(0)\]
+for any function $f(t)$ that is continuous on an open interval containing $t=0$.
+\end{definition}
+
+By shifting the argument of $\delta(t)$, we have $\delta(t-a)=0. t\neq a$, and 
+\[ \int_{-\infty}^{\infty}f(T)\delta(t-a)\dd t = f(a) \]
+for any function $f(t)$ that is continuous on an interval containing $t=a$.
+
+When $t_0=0$, we derive from the limiting properties of the $\mathcal{F}_n$'s of a ``function'' $\delta$ that satisfies the first equation of this topic and the integral condition 
+\[ \int_{-\infty}^{\infty}\delta(t)\dd t = 1 \]
+
+The Laplace transform of the Dirac Delta function can be equickly derived from the property given above from shifting the argeumtn. Since $\delta(t-a)=0$ for $t\neq a$, then setting $f(t)=e^{-st}$ in that function, we find for $a\geq 0$
+\[ \int_0^{\infty}\delta(t-a)\dd t = \int_{-\infty}^{\infty}e^{-st}\delta(t-a)\dd t = e^{-as} \]
+
+Thus, for $a\geq 0$,
+\[ \mathcal{L}\{\delta(t-a)\}(s)=e^{-as} \]
+
+\begin{example}
+    Use the Laplace transform to solve the initial value-value problem 
+    \[ y'+y=\delta(t-1), \qquad y(0)=2 \]
+
+    Taking the Laplace of both sides gives $sY(s)-y(0)+Y(s)= e^{-s}$.
+
+    Now we see that $Y(s)=\frac{1}{s+1}e^{-s}+\frac{2}{s+1}$.
+
+    This becomes $e^{-(t-1)}u(t-1)+2e^{-t}$.
+
+    To write this as a piecewise function we can write this as $y(t)=\begin{cases}
+        2e^{-t} \qquad 0<t<1 \\
+        e^{-t-1}+2e^{-t} \qquad t>1 \\
+    \end{cases}$.
+\end{example}
+
+\begin{example}
+    A mass attached to a spring is released from rest $1$ m below the equilibrium position for the mass-spring system and begins to vibrate. After $\pi$ seconds, the mass is struck by a hammer exerting an impulse on the mass.
+    The system is governed by the symbolic initial value problem 
+    \[ \frac{\dd^2 x}{\dd t^2} + 9x = 3\delta(t-\pi); \qquad x(0)=1, \qquad \frac{\dd x}{\dd t}(0)=0 \]
+    where $x(t)$ denotes the displacement from equilibrium at time $t$. Determine $x(t)$.
+
+    Doing the Laplace of the problem gives $s^2x(s)-s+9x(s)=3e^{-\pi s}$.
+
+    So we have $x(s)=\frac{s}{s^2+9}+\frac{3}{s^2+9}e^{-\pi s}$.
+
+    From this the inverse Laplace is $\cos (3t) + -\sin(3t)u(t-\pi)$.
+\end{example}
+
 \section{Solving Linear Systems with Laplace Transforms}
+\begin{example}
+    Solve the initial value problem 
+    \begin{align*}
+        x'(t)-2y(t)=4t \qquad x(0)=4 \\
+        y'(t)+2y(t)-4x(t)=-4t-2 \qquad y(0)=-5
+    \end{align*}
+
+    Doing the Laplace of everything gives $sX(s)-x(0)-2Y(s)=4\cdot \frac{1}{s^2}$ for the top equation and $sY(s)-y(0)+2Y(s)-4X(s)=-4\cdot \frac{1}{s^2}-2\cdot \frac{1}{s}$ for the second equation.
+
+    After substituting we get 
+    \begin{align*}
+        sX(s)-2Y(S)=\frac{4}{s^2}+4 \\
+        -4X(s)(s+2)Y(s)=-\frac{4}{s^2}-\frac{2}{s}-5
+    \end{align*}
+
+    By eliminating $y$, we get $X(s)=\frac{4s-2}{(s^2+2s-8)}=\frac{4s-2}{(s+4)(s-2)}$.
+
+    This is equivalent to $\frac{3}{s+4}+\frac{1}{s-2}$.
+
+    This gives us $x(t)=3e^{-4t}+e^{2t}$.
+
+    We know from the problem that $y(t)=\frac{x'(t)-4t}{2}$.
+
+    So substituting values gives us $y(t)=\frac{1}{2}[-12e^{-4t}+2e^{2t}]-2t=-6e^{-4t}+e^{2t}-2t$.
+\end{example}
+
+\begin{example}
+    Solve the initial value problem 
+    \begin{align*}
+        x_1''+10x_1-4x_2=0\\
+        -4x_1+x_2''+4x_2=0
+    \end{align*}
+    subject to $x_1(0)=0, \qquad x_1'(0)=1, \qquad x_2(0)=0, \qquad x_2'(0)=-1$.
+
+    The top equation's laplace transformation is $s_2x_1(s)-sx_1(0)-x_1'(0)+10x_1(s)-4x_2(s)=0$.
+
+    The bottom equation becomes $-4x_1(s)+s^2x_2(s)-sx_2(0)-x_2'(0)+4x_2(s)=0$.
+
+    Solving the system of equations for $x_2(s)$ gives us $\frac{-s^2-6}{(s^2+12)(s^2+2)}=\frac{-2/5}{s^2+2}+\frac{-3/5}{s^2+12}$.
+
+    The Laplace gives $x_2(t)=-\frac{\sqrt{2}}{5}\sin(\sqrt{2}t)-\frac{\sqrt{3}}{10}\sin(2\sqrt{3}t)$.
+
+    Doing the derivatives gives us $x_1=-\frac{\sqrt{2}}{10}\sin(\sqrt{2}t)+\frac{\sqrt{3}}{5}\sin(2\sqrt{3}t)$.
+\end{example}
 
 \end{document}
