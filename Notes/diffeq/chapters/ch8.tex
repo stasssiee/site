@@ -3,9 +3,390 @@
 \begin{document}
 \chapter{Series Solutions of Differential Equations}
 \section{Introduction: The Taylor Polynomial Approximation}
+The best tool for numerically approximating a function $f(x)$ near a particular point $x_0$ is the Taylor polynomial.
+
+The formula for the Taylor polynomial of degree $n$ centered at $x_0$, approximating a function $f(x)$ possessing $n$ derivatives $x_0$ is given by 
+\[ p_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\frac{f'''(x_0)}{3!}(x-x_0)^3+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n = \sum_{j=0}^n \frac{f^{(j)}(x_0)}{j!}(x-x_0)^j \]
+
+\begin{example}
+    Find the first four Taylor polynomials for $e^x$, expanded around $x_0=0$.
+
+    $p_n(x)$ is written as $f(0)+f'(0)(x-0)+\frac{f''(0)}{2!}(x-0)^2+\frac{f'''(0)}{3!}(x-0)^3$.
+
+    Since we know the derivatives of $f(x)=e^x$ is just $e(x)$, $f^{(j)}(0)=1$ for all of them.
+    
+    This simplifies to $1+x+\frac{1}{2}x^2+\frac{1}{6}x^3$.
+\end{example}
+
+The Taylor polynomial $p_n$ is just the $(n+1)$st partial sum of the Taylor series 
+\[ \sum_{j=0}^{\infty}\frac{f^{(j)}(x_0)}{j!}(x-x_0)^j \]
+
+\begin{example}
+    Determine the fourth-degree Taylor polynomials matching the function $\cos x$ at $x_0=2$
+
+    So using what was previously given we have $f(2)+f'(2)(x-2)=\frac{f''(2)}{2!}(x-2)^2+\frac{f'''(2)}{3!}(x-2)^3+\frac{f^{(4)}}{4!}(x-2)^4$.
+
+    Filling in the $f^{(j)}$ values gives us $p_4(x)=\cos 2-\sin 2(x-2)-\frac{\cos 2}{2}(x-2)^2+\frac{\sin 2}{6}(x-2)^3+\frac{\cos 2}{24}(x-2)^4$
+\end{example}
+\medbreak
+\begin{example}
+    Find the first few Taylor polynomials approximating the solution around $x_0=0$ of the initiai value problem 
+    \[ y''=3y'+x^{7/2}y \qquad y(0)=10 \quad y'(0)=5 \]
+
+    In general, this is just $y(0)+y'(0)x+\frac{y''(0)}{2!}x^2+\dots + \frac{y^{(n)}(0)}{n!}x^n$.
+
+    Since we are given the problem, we know that $y''(0)=3y'(0)+0 = 15$.
+
+    As we continue taking derivatives with respect to $x$, we get $y'''=3y''+\frac{7}{3}x^{7/3}y+x^{7/3}y'$, and plugging in the numbrs gives us $y'''(0)=45$.
+
+    Calculating the 4th derivative gives us $135$.
+
+    The fifth derivative is no longer defined.
+\end{example}
+
+\begin{example}
+    Determine the Taylor polynomial of degree $3$ for the solution to the initial value problem 
+    \[ y' = \frac{1}{x+y+1} \qquad y(0)=0 \]
+
+    Finding $y'(0)$ gives us $1$, and finding $y''(0)$ gives us $-2$, and $y'''(0)=10$.
+\end{example}
+
+We can estimate the accuracy to which a Taylor polynomial $p_n(x)$ approximates its target function $f(x)$ for $x$ near $x_0$. The error $\epsilon_n(x)$ measures the accuracy of the approximation, 
+\[ \epsilon_n(x)= f(x)-p_n(x) \]
+and can be estimated by $\epsilon_n(x)=\frac{f^{(n+1)}(\aleph)}{(n+1)!}(x-x_0)^{n+1}$, where $\aleph$ is guaranteed to lie between $x_0$ and $x$ if the $(n+1)$st derivative of $f$ exists and is continuous on an interval containing $x_0$ and $x$.
+
+
 \section{Power Series and Analytic Functions}
+A power series about the point $x_0$ is an expression of the form 
+\[ \sum_{n=0}^{\infty}a_n(x-x_0)^n = a_0+a_1(x-x_0)+a_2(x-x_0)^2 + \dots \]
+where $x$ is a variable and the $a_n$'s are constants.
+
+A power series is convergent at a specified value of $x$ if its sequence of partial sums $\{S_N(x)\}$ converges, that is 
+\[ \lim_{N\to \infty} S_N(x)=\lim_{N\to\infty}\sum^N_{n=0}a_n(x-x_0)^n \]
+If the limit does not exist at $x$, then the series is said to be divergent.
+
+Every power series has an interval of convergence. The interval of convergence is the set of all real numbers $x$ for which the series converges. The center of the interval of convergence is the center $x_0$ of the series. Within its 
+interval of convergence a power series converges absolutely. In other words, if $x$ is in the interval of convergence and is not an endpoint of the interval, then the series of absolute values 
+\[ \sum_{n=0}^{\infty} \left|a_n(x-x_0)^n\right| \]
+converges.
+
+\begin{theorem}
+    For each power series, there is a number $\rho \quad (0\leq \rho < \infty)$, called the radius of convergence of the power series, such that the series converges absolutely for $|x-x_0|<\rho$ and diverges for $|x-x_0|>\rho$.
+    If the series converges for all values of $x$, then $\rho=\infty$. WHen the series converges only at $x_0$, then $\rho=0$.
+\end{theorem}
+\pagebreak
+\begin{theorem}
+    If, for $n$ large, the coefficients $a_n$ are nonzero and satisfy 
+    \[ \lim_{n\to \infty} \left|\frac{a_n}{a_{n+1}}\right| = L \qquad (0\leq L\leq \infty) \]
+    then the radius of convergence of the power series $\sum_{n=0}^{\infty}a_n(x-x_0)^n$ is $\rho = L$.
+\end{theorem}
+
+\begin{example}
+    Determine the interval and radius of convergence of 
+    \[ \sum_{n=0}^{\infty}\frac{(-2)^n}{n+1}(x-3)^n \]
+
+    From the ratio test, the radius of convergence is $\rho=\frac{1}{2}$.
+
+    The interval of convergence is $|x-3|<\frac{1}{2}$.
+
+    So the interval is $-5/2<x<7/2$.
+
+    For $7/2$, it converges, so $-5/2<x\leq 7/2$.
+\end{example}
+
+\begin{theorem}
+    If $\sum_{n=0}^{\infty} a_n(x-x_0)^n=0$ for all $x$ in some open interval, then each coefficient $a_n$ equals zero.
+\end{theorem}
+
+\begin{theorem}
+    If the series $f(x)=\sum_{n=0}^{\infty}a_n(x-x_0)^n$ has a positive radius of convergence $\rho$, then $f$ is differentiable in the interval $|x-x_0|<\rho$ and termwise 
+    differentiation gives the power series for the derivative:
+    \[ f'(x)=\sum_{n=1}^{\infty}na_n(x-x_0)^{n-1} \qquad \text{for} \qquad |x-x_0|<\rho \]
+    Furthermore, termwise integration gives the power series for the integral of $f$:
+    \[ \int f(x)\dd x = \sum^{\infty}_{n=0}\frac{a_n}{n+1} (x-x_0)^{n+1} + C \qquad \text{for} \qquad |x-x_0| < \rho \]
+\end{theorem}
+
+\begin{example}
+    Starting with the geometric series for $\frac{1}{1-x}=1+x+x^2+x^3+x^4+\dots = \sum_{n=0}^{\infty}x^n \qquad -1<x<1$ find a power series for each of the following functions.
+
+    (a) $\frac{1}{1+x^2}$
+
+    Replace $x$ with $-x^2$ and we get the power series equal to 
+    
+    $1-x^2+x^4-x^6+x^8+\dots = \sum_{n=0}^{\infty}(-1)^n x^{2n} \qquad -1<x<1$.
+
+    (b) $\frac{1}{(1-x)^2}$
+
+    This becomes $1+2x+3x^2+\dots = \sum_{n=1}^{\infty}nx^{n-1}$
+
+    (c) $\arctan x$
+    This becomes $x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\dots = \sum_{n=0}^{\infty}\frac{(-1)^n}{2n+1}x^{2n+1}$
+\end{example}
+
+\begin{example}
+    Express the series $\sum_{n=2}^{\infty}n(n-1)a_n x^{n-2}$ as a series where the generic term is $x^k$ instead of $x^{n-2}$.
+
+    Let $k=n-2$, so $n=k+2$.
+
+    Plugging this in gives us $\sum_{k=0}^{\infty}(k+2)(k+1)a_{k+2}x^k$.
+\end{example}
+
+\begin{example}
+    Show that $x^3\sum_{n=0}^{\infty} n^2(n-2)a_nx^n = \sum_{n=3}^{\infty}(n-3)^2(n-5)a_{n-3}x^n$.
+
+    Let $k=n+3$, so $n=k-3$.
+
+    Doing stuff gives you the answer of $\sum_{n=3}^{\infty}(n-3)^2(n-5)a_{n-3}x^n$.
+\end{example}
+
+\ex Show that the identity $\sum_{n=1}^{\infty}na_{n-1}x^{n-1}+\sum_{n=2}^{\infty}b_nx^{n+1}=0$ implies that $a_0=a_1=a_2=0$ and $a_n=-\frac{b_{n-1}}{(n+1)}$ for $n\geq 3$.
+
+\begin{definition}
+    A function $f$ is said to be analytic at $x_0$ if, in an open interval about $x_0$, this function is the sum of a power series $\sum_{n=0}^{\infty}a_n(x-x_0)^n$ that has a positive radius of convergence.
+\end{definition}
+
+A polynomial is analytic at every $x_0$. A rational function $P(x)/Q(x)$ where $P(x)$ and $Q(x)$ are polynomials without a common factor, is analytic except at those $x_0$ for which $Q(x_0)=0$.
+The elementary functions $e^x,\sin x,\cos x$ are analytic for all $x$ while $\ln x$ is analytic for $x>0$. Familiar representations are 
+\[ e^x = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\dots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \]
+\[ \sin x = x-\frac{x^3}{3!}+\frac{x^5}{5!}+\dots = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1} \]
+\[ \cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}+\dots = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} \]
+\[ \ln x = (x-1)-\frac{1}{2}(x-1)^2+\frac{1}{3}(x-1)^3 - \dots = \sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n}(x-1)^n \]
+where the first three are valid for all $x$, whereas the last is valid for $x$ in $(0,2]$.
+
+
+
 \section{Power Series Solutions to Linear Differential Equations}
+\begin{definition}
+    A point $x_0$ is called an ordinary point if both $p=a_1/a_2$ and $q=a_0/a_2$ are analytic at $x_0$. If $x_0$ is not an ordinary point, it is called a singular point of the equation.
+\end{definition}
+
+\begin{example}
+    Determine all the singular points of 
+    \[ xy''+x(1-x)^{-1}y'+(\sin x)y=0 \]
+
+    The form of this is $y''+\frac{1}{1-x}y'+\frac{\sin x}{x}y=0$.
+
+    $p(x)=\frac{1}{1-x}$ can be represented as a power series as well as $q(x)=\frac{\sin x}{x}$.
+
+    The only singular point is at $x=1$.
+\end{example}
+
+\begin{example}
+    Find a power series solution about $x=0$ to 
+    \[ y'+2xy=0 \]
+
+    We are substituting around $y=\sum_{n=0}^{\infty}a_nx^n$. The derivative is $y'=\sum_{n=1}^{\infty} n\cdot a_nx^{n-1}$.
+
+    Substituting this in gives $\sum_{n=1}^{\infty} na_nx^{n-1}+2x\sum_{n=0}^{\sum} a_nx^n =0$.
+
+    When we are trying to get $x^1$ in the summations, we get $a_1 + \sum_{n=2}na+nx^{n-1}+\sum_{n=0}2a_nx^{n+1}=0$.
+
+    Simplifying this gives us $a_1+\sum_{k=1}[(k+1)a_{k+1}+2a_{k-1}]x^k=0$.
+
+    We have $a_{k+1}=\frac{-2a_{k-1}}{k+1}$.
+
+    From the expanded form of $y$ we have $a_0x_0+a_1x+a_2x^2+a_3x^3+a_4x^4+\dots$. 
+
+    We already know $a_1=0$.
+
+    We can keep finding the formulas, $a_2=\frac{-2}{2}a_0$, $a_4=\frac{-2}{4}\cdot \frac{-2}{2}a_0$ and $a_6=\frac{-2}{6}\cdot \frac{-2}{4}\cdot \frac{-2}{2}a_0$, and the odd $k$ will result in $0$.
+
+    We have $y=a_0+\frac{-2}{2}a_0x^2+\frac{(-2)^2}{4\cdot 2}a_0x^4+\frac{(-2)^3}{6\cdot 4\cdot 2}a_0x^6+\dots + \frac{(-3)^n}{2\cdot n!}x^{2n}$.
+
+    We can also write this as $y=a_0\sum_{n=0}\frac{(-1)^n}{n!}x^{2n}$, which ends up being $a_0e^{-x^2}$.
+\end{example}
+
+\begin{example}
+    Find a general solution to 
+    \[ 2y''+xy'+y=0\]
+    in the form of a power series about the ordinary point $x=0$.
+
+    We have $y''+\frac{x}{2}y'+\frac{1}{2}y=0$.
+
+    There are no singular points here, so all points are ordinary.
+
+    We will find this with $y=\sum_{n=0}^{\infty}a_nx^n$ and $y'=\sum_{n=1}a_nnx^{n-1}$ and $y''=\sum_{n=2}a_nn(n-1)x^{n-2}$.
+
+    Plugging this in gives $2\sum_{n=2}a_nn(n-1)x^{n-2}+x\sum_{n=1}a_nnx^{n-1}+\sum_{n=0}a_nx^n =0$.
+
+    This will simplify to $4a_2+a_0+\sum_{k=1}[2a_{k+2}(k+2)(k+1)+(k+1)a_k]x^k =0$.
+
+    The recurrence formula ends up being $a_{k+2}=\frac{-a_k}{2(k+2)}$.
+
+    Let's look at $k=1, k=2,k=3,k=4$ until we find a pattern.
+
+    We also know $a_2=-\frac{1}{4}a_0$.
+
+    We have that $a_3=\frac{-a_1}{2\cdot 3}, a_4=-\frac{a_2}{2\cdot 4}, a_5 = -\frac{a_3}{2\cdot 5}, a_6=-\frac{a_4}{2\cdot 6}$.
+
+    We can write $a_4$ in terms of $a_0$ as $-\frac{1}{2\cdot 4}\cdot -\frac{1}{4}a_0$ and $a_6=-\frac{2\cdot 6}\cdot -\frac{1}{2\cdot 4}\cdot -\frac{1}{4}a_0$.
+
+    With these patterns we can write this as $a_{2n+1}=\frac{(-1)^n}{2^n[(2n+1)\cdot \dots 1]}$.
+
+    Ok we know $y=a_0+a_1x+a_2x^2+a_3x^3+a^4x^4+a^5x^5+\dots$.
+
+    So we get this is equal to $a_0+a_1x-\frac{1}{4}a_0x^2-\frac{1}{6}a_1x^3+\frac{1}{32}a_0x^4+\frac{1}{60}a_1x^5$.
+
+    This is a linear combination of $a_0$ and $a_1$.
+\end{example}
+
+\begin{example}
+    Find the first few terms in a power series expansion about $x=0$ for a general solution to 
+    \[ (1+x^2)y''-y'+y=0 \]
+
+    Yea, a lot of stuff happen.
+
+    If you do previous steps of changing the indices and writing out the power series, we get 
+
+    $[2a_2-a_1+a_0]+[6a_3-2a_2+a_1]x+\sum_{k=2}[(k+2)(k+1)a_{k+2}+(k+1)a_{k+1}+(k^2-k+1)a_k]x^k=0$
+
+    And then we can find $a_{k+2}=\frac{-(k+1)a_{k+1}-(k^2-k+1)a_k}{(k+2)(k+1)}$.
+
+    We also know $a_2=\frac{1}{2}(a_1-a_0)$ and $a_3=\frac{1}{6}(2a_2-a_1)=\\frac{-a_0}{6}$.
+
+    Doing many many steps gives you $y=a_0+-\frac{1}{2}a_0x^2-\frac{1}{6}a_0x^3+\frac{1}{12}a_0x^4+\frac{3}{40}a_0x^5-\frac{17}{720}a_0x^6$ for the case of when $a_1=0$.
+
+    When $a_0=0$, then the equation just becomes $a_1[x+\frac{1}{2}x^2-\frac{1}{8}x^4-\frac{1}{40}x^5+\frac{1}{20}x^6+\dots]$.
+\end{example}
+
 \section{Equations with Analytic Coefficients}
+We start by stating a basic existence theorem for the equation 
+\[ y''(x)+p(x)y'(x)+q(x)y(x)=0\]
+
+\begin{theorem}
+    Suppose $x_0$ is an ordinary point for the equation. THen this equation has two linearly independent analytic solutions of the form 
+    \[ y(x)=\sum_{n=0}^{\infty}a_n(x-x_0)^n \]
+
+    Moreover, the radius of convergence of any power series solution of the form given by the above is at least as large as the distance from $x_0$ to the nearest singular point (real or complex-valued) of the original equation.
+\end{theorem}
+
+\begin{example}
+    Find a minimum value for the radius of convergence of a power series solution about $x=0$ to 
+    \[ 2y''+xy'+y=0 \]
+
+    So we have $y''+\frac{x}{2}y'+\frac{1}{2}y=0$.
+
+    There are no singular points, so the radius of convergence is $\rho = \infty$
+\end{example}
+\pagebreak
+\begin{example}
+    Find a minimum value for the radius of convergence of a power series solution about $x=0$ to 
+    \[ (1+x^2)y''-y'+y=0 \]
+
+    This is $y''-\frac{1}{1+x^2}y'+\frac{1}{1+x^2}y=0$.
+
+    The singular points are $\pm i$.
+
+    The distance from $0$ is $1$, so $\rho = 1$.
+\end{example}
+
+\begin{example}
+    Find the first few terms in a power series expansion about $x=1$ for a general solution to 
+    \[ 2y''+xy'+y=0 \]
+    Also determine the radius of convergence of the series.
+
+    We can let $t=x-1$, and $x=1$ and $t=0$.
+
+    So we can get $y(x)=\sum_{n=0}^{\infty} a_n(x-1)^n$, so $Y(t)=y(x)=y(t+1)$.
+
+    We have $2\frac{\dd^2 Y}{\dd t^2}+(t+1)\frac{\dd Y}{\dd t}+Y =0$.
+
+    Substituting some of this stuff in gives $2\sum_{n=2}^{\infty}n(n-1)a_nt^{n-2}+(t+1)\sum_{n=1}^{\infty}na_nt^{n-1}+\sum_{n=0}^{\infty}a_nt^n=0$.
+
+    We need to break off some stuff, to simplify the sums.
+
+    We get $(4a_2+a_1+a_0)t^0+\sum_{k=1}2(k+2)(k+1)a_{k+2}t^k + \sum_{k=1}ka_kt^k + \sum_{k=1}(k+1)a_{k+1}t^k + \sum_{k=1}a_k t^k$.
+
+    We can get $a_{k+2}=\frac{-a_k-a_{k+1}}{2(k+2)}$.
+
+    We know of course that $Y(t)=a_0+a_1t+a_2t^2+a_3t^3+\dots$.
+
+    We also know it's a linear combination, so $Y(t)=a_0(1-\frac{1}{4}t^2+\frac{1}{24}t^3+\dots)+a_1(t-\frac{1}{4}t^2-\frac{1}{8}t^3+\dots)$
+
+    And just substitute $t=x-1$ into the above to solve it.
+\end{example}
+
 \section{Method of Frobenius}
+\begin{definition}
+    A singular point $x_0$ of 
+    \[ y''(x)+p(x)y'(x)+q(x)y(x)=0\]
+    is said to be a regular singular point if both $(x-x_0)p(x)$ and $(x-x_0)^2q(x)$ are analytic at $x_0$. Otherwise $x_0$ is called an irregular singular point.
+\end{definition}
+
+\begin{example}
+    Classify the singular points of the equation 
+    \[ (x^2-1)^2 y''(x)+(x+1)y'(x)-y(X)=0 \]
+
+    Rewriting this gives you $y''+\frac{(x+1)}{(x+1)^2(x-1)^2}y'-\frac{1}{(x+1)^2(x-1)^2}y=0$.
+
+    The singular points are $x=1$ and $x=-1$.
+
+    $x=1$ is an irregular singular point because it is not analytic for both $p(x)$ and $q(x)$. $-1$ is a regular singular point.
+\end{example}
+
+\begin{definition}
+    If $x_0$ is a regular singular point of $y''+py'+qy=0$, then the indical equation for this point is 
+    \[ r(r-1)+p_0r+q_0=0\]
+
+    where 
+    \[ p_0 := \lim_{x\to x_0}(x-x_0)p(x), \qquad q_0 := \lim_{x\to x_0}(x-x_0)^2q(x) \]
+    The roots of the indicial equation are called the exponents (indices) of the singularity $x_0$.
+\end{definition}
+
+\begin{example}
+    Find the indical equation and the exponents of the singularity $x=-1$ of 
+    \[ (x^2-1)^2y''(x)+(x+1)y'(x)-y(x)=0 \]
+
+    In standard form we have $y''+\frac{(x+1)}{(x+1)^2(x-1)^2}y'-\frac{1}{(x+1)^2(x-1)^2}y=0$.
+
+    We have $(x+1)p(x)=\frac{1}{(x-1)^2}$ and $(x+1)^2q(x)=\frac{-1}{(x-1)^2}$.
+
+    The limits are $1/4$ and $-1/4$ respectively from this.
+
+    So the indical equation becomes $r(r-1)+p_0r+q_0=0$ or $r(r-1)+\frac{1}{4}r-\frac{1}{4}=0$ or $r^2-\frac{3}{4}r-\frac{1}{4}=0$
+
+    Factoring gives $(4r+1)(r-1)$, and the indical roots are $r=-1/4$ and $r=1$.
+\end{example}
+
+\begin{example}
+    Find a series expansion about the regular singular point $x=0$ for a solution to 
+    \[(x+2)x^2y''(x)-xy'(x)+(1+x)y(x)=0, \qquad x>0 \]
+
+    Finding the indical roots gives us $p_0=-1/2$, and $q_0=1/2$.
+
+    The indicial equation is $2r^2-3r+1=0$, so the indicial roots are $r=1/2$ and $r=1$.
+
+    Now expand about $r=1$.
+
+    We get $(x+2)x^2\sum a_n(n+1)nx^{n-1}-x\sum a_n(n+1)x^n+(1+x)\sum a_nx^{n+1}=0$.
+
+    Do some simplification to get $\sum{n=0} a_n(n+1)nx^{n+2}+\sum_{n=1}2a_n(n+1)nx^{n+1}-\sum_{n=1}a_n(n+1)x^{n+1}\sum_{n=0} a_n x^{n+2}$.
+
+    Writing them to start all at the same index and combining gives you $\sum_{k=2}[a_{k-2}(k-1)(k-2)+2a_{k-1}k(k-1)-a_{k-1}(k-1)+a_{k-2}]x^k=0$.
+
+    Finding the recurrence formula gives $a_{k-1}=\frac{-(k^2-3k+3)}{(2k-1)(k-1)}a_{k-2}$.
+
+    Putting $k$ values into the formula gives you $y=x-\frac{1}{3}x^2+\frac{1}{10}x^3-\frac{1}{30}x^4+\dots$.
+\end{example}
+
+\begin{theorem}
+    If $x_0$ is a regular singular point, then there exists at least one series solution, where $r=r_1$ is the larger root of the associated indicial equation. Moreoever, this series converges for all $x$ such that 
+    $0<x-x_0<R$, where $R$ is the distance from $x_0$ to the nearest other singular point (real or complex).
+\end{theorem}
+
+\begin{example}
+    Find as eries solution about the regular singular point $x=0$ of 
+    \[ x^2y''(x)-xy'(x)+(1-x)y(x)=0, \qquad x>0 \]
+
+    We have $x=0$ is a regular singular point from writing this in general form.
+
+    Writing the indicial equation gives us $r=1$.
+
+    Writing the summations gives you $\sum_{n=0}a_n(n+1)nx^{n+1}-\sum_{n=0}a_n(n+1)x^{n+1}+\sum_{n=0}a_n x^{n+1}-\sum_{n=0}a_n x^{n+2}=0$.
+
+    Simplify this to get $a_{k-1}=\frac{a_{k-2}}{(k=1)^2}$.
+
+    You end up getting $y=x+x^2+\frac{1}{4}x^3+\frac{1}{36}x^4+\dots$.
+\end{example}
 
 \end{document}

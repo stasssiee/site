@@ -3,6 +3,35 @@
 \begin{document}
 \chapter{Torque and Rotational Dynamics}
 \section{Rotational Kinematics}
+Angular displacement is the measurement of the angle, in radians, through which a point on a rigid system rotates about a specific axis.
+\begin{itemize}
+    \item In general, the counterclockwise motion is positive, and the clockwise motion is negative.
+\end{itemize}
+
+Angular velocity is the rate at which angular displacement position changes with respect to time.
+\[ \omega = \frac{\dd \theta}{\dd t} \]
+
+Angular acceleration is the rate at which angular velocity changes with respect to time.
+\[ \alpha = \frac{\dd \omega}{\dd t} \]
+
+Angular displacement, angular velocity, and angular acceleration around one axis are analogous to linear displacement, velocity, and acceleration in one dimension and demonstrate the same mathematical relationships.
+
+Graphs of angular displacement, angular velocity, and angular acceleration as functions of time can be used to find the relationships between the above quantitites.
+
+\begin{example}
+    A windmill is spinning because of the nonuniform force of the wind. The windmill is originally spinning at a speed of $\omega_0$, and a crosswind slows it with an angular acceleration 
+    of $-A\omega^2$. What will be the angular speed of the windmill at time $t=T$?
+
+    From $\alpha = -A\omega^2$, we get that $\frac{1}{\omega^2}=-A$.
+
+    Integrating this from $\omega_0$ to $\omega$ gives us $\omega = \frac{\omega_0}{\omega_0 AT + 1}$.
+\end{example}
+
+\ex Two disks, Disk 1 and Disk 2, are initially at rest and begin to rotate with a constant angular acceleration. Disk 1 has an angular acceleration $\alpha_1$ and rotates through an angle 
+$\theta_1$ in a time $\Delta t$. Disk 2 has an angular acceleration $\alpha_2 = 2a_1$ and rotates through an angle $\theta_2$ in the same amount of time $\Delta t$. What is $\theta_2$ in terms of $\theta_1$?
+
+\ex A wheel spins with an initial angular velocity of 18 rad/s in the clockwise direction and a constant angular acceleration. After 3 seconds the wheel is spinning at 6 rad/s in the counterclockwise direction. What is the magnitude and direction of the angular acceleration?
+
 \section{Connecting Linear and Rotational Motion}
 \section{Torque}
 \section{Rotational Inertia}

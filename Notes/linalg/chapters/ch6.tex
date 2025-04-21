@@ -97,10 +97,115 @@ Matrices whose columns form an orthonormal set are important in applications and
 
 An orthogonal matrix is a square invertible matrix $U$, $U^{-1}=U^T$.
 \section{Orthogonal Projections}
+The Orthogonal Projection: Given a vector $\textbf{y}$ and a subspace $W$ in $\textbf{R}^n$ there is a vector $\hat{\textbf{y}}$ in $W$ such that 
+\begin{itemize}
+    \item $\hat{\textbf{y}}$ is the unique vector in $W$ closest to $\textbf{y}$
+    \item $\hat{\textbf{y}}$ is the unique vector for which $\textbf{y}-\hat{\textbf{y}}$ is orthogonal to $W$.
+\end{itemize}
+These two properties of $\vec{\textbf{y}}$ provide the key to finding the least squares solution to linear systems.
+
+\begin{theorem}
+    Let $W$ be a subspace of $\textbf{R}^n$. Then each $\textbf{y}$ in $\textbf{R}^n$ can be written uniquely in the form: $\textbf{y}=\hat{\textbf{y}}+\textbf{z}$ where $\vec{\textbf{y}}$ is in $W$ and $z$ is in $W^{\perp}$.
+    In fact, if $\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ is any orthogonal basis of $W$, then 
+    \[ \hat{y}=\frac{\vec{v}\cdot \vec{u}_1}{\vec{u}_1\cdot \vec{u}_1}\vec{u}_1+\dots+\frac{\vec{v}\cdot \vec{u}_p}{\vec{u}_p\cdot \vec{u}_p}\vec{u}_p \text{ and } \vec{z}=\vec{y}\cdot\hat{y} \]
+\end{theorem}
+The theorem tells us decomposition of $\textbf{y}=\textbf{z}_1+\textbf{z}_2$ can be computed without having an orthogonal basis for $\textbf{R}^n$. It is enough to haev an orthogonal basis only for $W$.
+
+Geometric Interpretation of the Orthogonal Projection: the orthogonal projection $\hat{y}$ of $\textbf{y}$ onto $W$ is the sum of the projections of $\textbf{y}$ onto one-dimensional subspaces that are orthogonal to each other.
+
+Properties of Orthogonal Projections 
+\begin{theorem}
+    Let $W$ be a subspace of $\textbf{R}^n$, let $\textbf{y}$ be any vector in $\textbf{R}^n$ and $\hat{y}$ be the orthogonal projection of $\textbf{y}$ onto $W$.
+    Then $\hat{y}$ is the closest point in $W$ to $\textbf{y}$ in the sense that $||\textbf{y}-\hat{\textbf{y}}||<||\textbf{y}-\textbf{v}||$ for all $\textbf{v}$ in $W$ distinct from $\hat{\textbf{y}}$.
+\end{theorem}
+
+\begin{theorem}
+    If $\{\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_p\}$ is an orthonormal basis for a subspace $W$ of $\textbf{R}^n$, then proj$_w \textbf{y}=(\vec{y}\cdot\vec{u}_1)\vec{u}_1+(\vec{y}\cdot \vec{u}_2)\vec{u}_2+\dots+(\vec{y}\cdot\vec{u}_p)\vec{u}_p$.
+
+    If $U = [\textbf{u}_1 \textbf{u}_2 \dots \textbf{u}_p]$ then proj$_w \textbf{y}=UU^T\textbf{y}$ for all $\textbf{y}$ in $\textbf{R}^n$.
+\end{theorem}
+
 \section{The Gram-Schmidt Process}
+The Gram-Schmidt process is a simple algorithm for producing an orthogonal basis for any nonzero subspace of $\textbf{R}^n$.
+
+\begin{theorem}
+    Given a basis $\{\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_p\}$ for a nonzero subspace of $\textbf{R}^n$, define:
+    \begin{itemize}
+        \item $\vec{v}_1=\vec{x}_1$
+        \item $\vec{v}_2=\vec{x}_2-\frac{\vec{x}_2\cdot \vec{v}_1}{\vec{v}_1\cdot \vec{v}_1}\vec{v}_1$
+        \item $\vec{v}_3=\vec{x}_3-\frac{\vec{x}_3\cdot \vec{v}_1}{\vec{v}_1\cdot \vec{v}_1}\vec{v}_1-\frac{\vec{x}_2\cdot \vec{v}_2}{\vec{v}_2\cdot \vec{v}_2}\vec{v}_2$
+    \end{itemize}
+\end{theorem}
+
+Orthonormal Basis: when working problems by hand, it is easier to normalize each $\textbf{v}_k$ as they are foud.
+
+QR Factorization of Matrices: if an $m\times n$ matrix $A$ has linearly independent columns $\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_p$ then applying the Gram-Schmidt process with normalizations to 
+$\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_p$ amounts to factoring $A$ as described in the following theorem and is used widely in computer algorithms.
+\begin{theorem}
+    If $A$ is an $m\times n$ matrix with linearly independent columns then $A$ can be factored as $A=QR$ where $Q$ is an $m\times n$ matrix whose columns form an orthonormal basis for Col $A$ and $R$ is an $n\times n$ upper triangular matrix with positive entities on the diagonal.
+\end{theorem}
+
+When the Gram Schmidt process is run on the computer, a round off error can build up as the vectors are calculated, one by one. For $j$ and $k$ large but unequal, the innter product may not be sufficiently close to zero.
+A different computer based $QR$ factorization is usually preferred to the modified Graham Schmidt Method because it yields a more accurate orthogonal basis, even though the factorization requires about twice as much arithmetic.
+
 \section{Least-Squares Problems}
+The Least Squares Problem: given $A\textbf{x}=\textbf{b}$ that is possibly inconsistent, find an $\textbf{x}$ that makes $||\textbf{b}-A\textbf{x}||$ as small as possible.
+\begin{definition}
+    If $A$ is an $m\times n$ matrix and $\textbf{b}$ is in $\textbf{R}^n$, a least-squares solution of $A\textbf{x}=\textbf{b}$ is $\textbf{x}$ in $\textbf{R}^n$ such that 
+    $||\textbf{b}-A\textbf{x}||\leq ||\textbf{b}-A\textbf{x}'||$ for all $\textbf{x}'$ in $\textbf{R}^n$
+\end{definition}
+Notice: $A\textbf{x}$ is in the column space of $A$, Col $A$, so we seek an $\textbf{x}$ that makes $A\textbf{x}$ the closest point to in Col $A$ to $\textbf{b}$.
+\begin{theorem}
+    The set of least squares solutions of $A\textbf{x}=\textbf{b}$ coincides with the nonempty set of solutions of the normal equation $A^TA\hat{\textbf{x}}=A^T\hat{\textbf{b}}$
+\end{theorem}
+
+Note: if there is a free variable, the least squares solution may not be unique 
+
+Deriving the Normal Equations for $A\textbf{x}=\textbf{b}$:
+\begin{enumerate}
+    \item Note $A\textbf{x}$ is in the Col $A$, therefore the $\textbf{b}$ associated least squares solution of $A\textbf{x}=\textbf{b}$ is in Col $A$
+    \item Use the Best Approximation Theorem to determine the solution of the Least Square Problem is the orthogonal projection of $\textbf{b}$ onto Col $A$, $\hat{b}=$ proj$_{\text{Col} A}\textbf{b}$
+    \item Note: for the Least Squares Problem: we are looking for $\hat{\textbf{x}}$ that satisfies $A\hat{\textbf{x}}=\hat{\textbf{b}}$
+    \item use the Orthogonal Decomposition Theorem to find the vector $\textbf{z}$ orthogonal to $\hat{\textbf{b}}$, $\textbf{z}=\textbf{b}-\hat{\textbf{b}}$
+    \item use the fact that $\textbf{z}$ must be orthogonal to the Col $A$, and therefore any column vector of $A$, $\textbf{a}_i$ is orthogonal to $\textbf{z}=\textbf{b}-\hat{\textbf{b}}=\textbf{b}-A\hat{\textbf{x}} \implies a_i\cdot (\textbf{b}-A\hat{\textbf{x}}=0)$
+\end{enumerate}
+
+\begin{theorem}
+    Let $A$ be an $m\times n$ matrix. The following statements are logically equivalent 
+    \begin{enumerate}
+        \item the equation $A\textbf{x}=\textbf{b}$ has a unique least-square solution for each $\textbf{b}$ in $\textbf{R}^n$
+        \item the columns of $A$ are linearly independent
+        \item the matrix $A^TA$ is invertible 
+    \end{enumerate}
+    When these statements are true, the least squares solution $\hat{\textbf{x}}$ is given by $\hat{\textbf{x}}=(A^TA)^{-1}A^T\textbf{b}$
+\end{theorem}
+
 \section{Machine Learning and Linear Models}
+Machine learning uses linear models in sitautions where the machine is being trained to predict the outcome based on the values of hte inputs.
+
+The machine is given a set of training data where the values of the independent and dependent variables are known.
+
+The least squares line is the line $y=\beta_0+\beta_1 x$ that minimizes the sum of the squares of the residuals.
+
+This line is also called a line of regression of $y$ on $x$. The coefficients $\beta_0,\beta_1$ of the line are called regression coefficients.
+
+In general a linear model will arise whenever $y$ is to be predicted by an equation of the form 
+\[ y=\beta_0f(0)(u,v)+\beta_1f_1(u,v)+\dots+\beta_k f_k(u,v) \]
+with $f_0,\dots,f_k$ any sort of known functions and $\beta_0,\beta_1,\dots,\beta_k$ unknown weights.
+
 \section{Inner Product Spaces}
+\begin{definition}
+    An inner product on a vector space $V$ is a function that, to each pair of vectors $\textbf{u}$ and $\textbf{v}$ in $V$, associated a real number $\langle \textbf{u},\textbf{v}\rangle$
+    and satisfies the following axioms, for all $\textbf{u},\textbf{v}$, and $\textbf{w}$ in $V$ and all scalars $c$:
+    \begin{enumerate}
+        \item $\langle \textbf{u},\textbf{v}\rangle = \langle \textbf{v},\textbf{u}\rangle$
+        \item $\langle \textbf{u}+\textbf{v}, \textbf{w}\rangle = \langle \textbf{u}+\textbf{w}\rangle + \langle \textbf{v}+\textbf{w}\rangle$
+        \item $\langle c\textbf{u},\textbf{v}\rangle = c\langle \textbf{u},\textbf{v}\rangle$
+        \item $\langle \textbf{u},\textbf{u}\rangle\geq 0$ and $\langle \textbf{u},\textbf{u}\rangle=0$ if and only if $\textbf{u}=\textbf{0}$
+    \end{enumerate}
+    A vector space with an innter product is called an inner product space.
+\end{definition}
+
 
 
 \end{document}
