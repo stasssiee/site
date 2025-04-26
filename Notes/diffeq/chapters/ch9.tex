@@ -2,9 +2,430 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Matrix Methods for Linear Systems}
-\section{Introduction}
+\section{Introduction to Matrix Methods}
+The product of a matrix and a column vector is defined to be the collection of dot products of the rows of the matrix with the vector, arranged as a column vector:
+\[ \begin{bmatrix}
+    \text{row \# 1}\\
+    \text{row \# 2}\\
+    \vdots \\
+    \text{row \# 3} 
+\end{bmatrix}
+\begin{bmatrix}
+    v
+\end{bmatrix}=
+\begin{bmatrix}
+    \text{row \# 1}\cdot v\\
+    \text{row \# 2}\cdot v\\
+    \vdots \\
+    \text{row \# 3}\cdot v 
+\end{bmatrix}
+\]
+where the vector $v$ has $n$ components; the dot product of two $n$-dimensional vectors is computed in the obvious way:
+\[ [a_1 \quad a_2 \quad \cdots \quad a_n]\cdot [x_1 \quad x_2 \quad \cdots \quad x_n]=a_1x_1+a_2x_2+\dots + a_nx_n\]
+
+\begin{example}
+    Express the system as a matrix equation.
+    \begin{align*}
+        x_1'=2x_1+t^2x_2+(4t+e^t)x_4 \\
+        x_2'=(\sin t)x_2+(\cos t)x_3 \\
+        x_3' = x_1+x_2+x_3+x_4 \\
+        x_4' = 0
+    \end{align*}
+
+    This is simply written as 
+    \[ \begin{bmatrix}
+        x_1'\\
+        x_2'\\
+        x_3'\\
+        x_4'
+    \end{bmatrix}=
+    \begin{bmatrix}
+        2 & t^2 & 0 & (4t+e^t) \\
+        0 & \sin t & \cos t & 0 \\
+        1 & 1 & 1 & 1\\
+        0 & 0 & 0 & 0
+    \end{bmatrix}\begin{bmatrix}
+        x_1\\x_2\\x_3\\x_4
+    \end{bmatrix}\]
+\end{example}
+
+In general, if a system or differential equation is expresses as 
+\begin{align*}
+    x_1'=a_{11}(t)x_1+a_{12}(t)x_2+\dots + a_{1n}(t)x_n \\
+    x_2'=a_{21}(t)x_1+a_{22}(t)x_2+\dots + a_{2n}(t)x_n\\
+    \vdots \\
+    x_n' = a_{n1}(t)x_1+a_{n2}(t)x_2+\dots + a_{nn}(t)x_n
+\end{align*}
+it is said to be a linear homogeneous system in normal form. The matrix form of such a system is 
+\[ \textbf{X}'=\textbf{A}\textbf{X}\]
+where $\textbf{A}$ is the coefficient matrix 
+\[ \textbf{A}=\textbf{A}(t)=\begin{bmatrix}
+    a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
+    a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
+    \vdots & \vdots & & \vdots \\
+    a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)
+\end{bmatrix}\]
+and $\textbf{X}$ is the solution vector 
+\[ \textbf{x}=\begin{bmatrix}
+    x_1\\x_2\\ \vdots \\x_n
+\end{bmatrix}\]
+
+\begin{example}
+    Express the differential equation for the undamped, unforced mass-spring oscillator 
+    \[ my''+ky=0 \]
+    as an equivalent system of first-order equations in normal form, expressed in matrix notation.
+
+    We have that $y'=v$ and $v'=-\frac{k}{m}y$.
+
+    So we can write this as $\begin{bmatrix}
+        y\\v
+    \end{bmatrix}'=\begin{bmatrix}
+        0 & 1\\
+        -k/m & 0 
+    \end{bmatrix}
+    \begin{bmatrix}
+        y\\v
+    \end{bmatrix}$.
+
+    We can write this as $a_nx_n'+a_{n-1}x_n+\dots + a_1x_2+a_0x_1=0$.
+
+    Which can be rewritten as $x_n'=-\frac{a_0}{a_n}x_1-\frac{a_1}{a_n}x_2-\dots -\frac{a_{n-1}}{a_n}x_n$.
+
+    Using this can make it easy to get to matrix notation
+\end{example}
+
+\begin{example}
+    A coupled mass-spring oscillator is governed by the system 
+    \begin{align*}
+        2\frac{\dd^2 x}{\dd t^2}+6x-2y=0\\
+        \frac{\dd^2 y}{\dd t^2}+2y-2x =0
+    \end{align*}
+
+    Let $x_1=x$, $x_2=x'$, $x_3=y$, $x_4=y'$.
+
+    This gives us $x_1'=x_2$, $x_2'=-3x_1+x_3$, $x_3'=x_4$, $x_4'=x_1-2x_3$.
+
+    So the matrix form can be easily answered from that.
+\end{example}
+
 \section{Review 1: Linear Algebraic Equations}
+A set of equations of the form 
+\begin{align*}
+    a_{11}x_1+a_{12}x_2+\dots + a_{1n}x_n=b_1\\
+    a_{21}x_1+a_{22}x_2+\dots + a_{2n}x_n=b_2\\
+    \vdots \\
+    a_{n1}x_1+a_{n2}x_2+\dots + a_{nn}x_n=b_n
+\end{align*}
+(where the $a_{ij}$'s and $b_i$'s are given constants) is called a linear system of $n$ algebraic equations in the $n$ unknowns $x_1,x_2,\dots x_n$.
+
+The Gauss-Jordan elimination algorithm uses elimination to uncouple the system making the values of the unknowns apparent.
+\begin{example}
+    Solve the system 
+    \begin{align*}
+        2x_1+6x_2+8x_3=16\\
+        4x_1+15x_2+19x_3=38\\
+        2x_1 \qquad + 3x_3 = 6
+    \end{align*}
+
+    Solving the coefficient matrix gives you $(0,0,2)=(x_1,x_2,x_3)$.
+\end{example}
+
+\ex Solve the system 
+\begin{align*}
+    x_1+2x_2+4x_3+x_4=0\\
+    -x_1-2x_2-2x_3 \qquad = 1\\
+    -2x_1-4x_2-8x_3+2x_4=4\\
+    x_1+4x_2+2x_3 \qquad = -3
+\end{align*}
+
+\begin{example}
+    Solve the system 
+    \begin{align*}
+        2x_1+4x_2+x_3=8\\
+        2x_1+4x_2\qquad =6\\
+        -4x_1-8x_2+x_3=-10
+    \end{align*}
+
+    We will end up getting $x_1+2x_2=3$ and $x_3=2$, and $x_2$ has infinite solutions, and is called a free variable.
+
+    So $x_2=t, x_1=-2t+3$, and $x_3=2$.
+\end{example}
+
+\ex Solve the system 
+\begin{align*}
+    x_1-x_2+2x_3+2x_4=0\\
+    2x_1-2x_2+4x_3+3x_4=1\\
+    3x_1-3x_2+6x_3+9x_4=-3\\
+    4x_1-4x_2+8x_3+8x_4=0
+\end{align*}
+
+
 \section{Review 2: Matrices and Vectors}
+A matrix is a rectangular array of numbers arranged in rows and columns. An $m\times n$ matrix, that is, a matrix with $m$ rows and $n$ columns is usually denoted by 
+\[ A:= 
+\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} & \dots & a_{1n}\\
+    a_{21} & a_{22} & a_{23} & \dots & a_{2n}\\
+    \vdots & \vdots & \vdots & \dots & \vdots\\
+    a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn}
+\end{bmatrix}
+\]
+Where the element in the $i$th row and $j$th column is $a_{ij}$. The notation $[a_{ij}]$ is used to designate $A$.
+
+A square matrix has the same number of rows and columns. A diagonal matrix is a square matrix with only zero entries off the main diagonal. A column matrix, or vector, is an $n\times 1$ matrix.
+An $m\times n$ matrix whose entries are all zero is called a zero matrix. Matrices are denoted by boldfaces capital letters and vectors by boldfaced lower case letters.
+
+The sum of two $m\times n$ matrices is given by 
+\[ \textbf{A}+\textbf{B}=[a_{ij}]+[b_{ij}]=[a_{ij}+b_{ij}] \]
+
+To multiply a matrix by a scalar (number), multiply each element in the matrix by that number:
+\[ r\textbf{A}=r[a_{ij}]=[ra_{ij}]\]
+
+The notation $-\textbf{A}$ stands for $(-1)\textbf{A}$.
+
+Properties of Matrix Addition and Scalar Multiplication
+\begin{itemize}
+    \item $\textbf{A}+(\textbf{B}+\textbf{C})=(\textbf{A}+\textbf{B})+\textbf{C}$
+    \item $\textbf{A}+\textbf{B}=\textbf{B}+\textbf{A}$
+    \item $\textbf{A}+\textbf{0}=\textbf{A}$
+    \item $\textbf{A}+(-\textbf{A})=\textbf{0}$
+    \item $r(\textbf{A}+\textbf{B})=r\textbf{A}+r\textbf{B}$
+    \item $(r+s)\textbf{A}=r\textbf{A}+s\textbf{A}$
+    \item $r(s\textbf{A})=(rs)\textbf{A}=s(r\textbf{A})$
+\end{itemize}
+
+\ex Perform the indicated operation:
+$\begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6
+\end{bmatrix}+
+\begin{bmatrix}
+    1 & 1 & 1\\
+    1 & 1 & 1
+\end{bmatrix}
+$
+
+\ex Perform the indicated operation:
+$3\begin{bmatrix}
+  1&2&3\\4&5&6  
+\end{bmatrix}$
+
+The product of a matrix $A$ and a column vector $x$ is the column vector composed of dot products of the rows of $A$ with $x$. $AB$ is only defined when the number of columns of $A$ matches the number of rows of $B$.
+\ex Perform the indicated operation: 
+$\begin{bmatrix}
+    1&2&3\\
+    4&5&6
+\end{bmatrix}\begin{bmatrix}
+    1\\0\\2
+\end{bmatrix}$
+
+\ex Perform the indicated operation:
+$\begin{bmatrix}
+    1&0&1\\
+    3&-1&2
+\end{bmatrix}\begin{bmatrix}
+    1&2&x\\
+    -1&-1&y\\
+    4&1&z
+\end{bmatrix}$
+
+Properties of Matrix Multiplication
+\begin{itemize}
+    \item $(\textbf{A}\textbf{B})\textbf{C}=\textbf{A}(\textbf{B}\textbf{C})$
+    \item $(\textbf{A}+\textbf{B})\textbf{C}=\textbf{A}\textbf{C}+\textbf{B}\textbf{C}$
+    \item $\textbf{A}(\textbf{B}+\textbf{C})=\textbf{A}\textbf{B}+\textbf{A}\textbf{C}$
+    \item $(r\textbf{A})\textbf{B}=r(\textbf{A}\textbf[B])=\textbf{A}(r\textbf{B})$
+\end{itemize}
+
+Let $A$ be an $m\times n$ matrix and let $x$ and $y$ be $n\times 1$ vectors. Then $Ax$ is an $m\times 1$ vector so we can think of multiplication by $A$ as defining an operator that maps 
+$n\times 1$ vectors into $m\times 1$ vectors. Multiplication by $A$ defines a linear operator since $\textbf{A}(\textbf{x}+\textbf{y})=\textbf{A}\textbf{x}+\textbf{A}\textbf{y}$ and $\textbf{A}(\textbf{r}\textbf{x})=\textbf{r}\textbf{A}\textbf{x}$.
+
+Examples of linear operations are:
+\begin{enumerate}
+    \item Stretching or contracting the components of a vector by constant factors 
+    \item rotating a vector through some angle about a fixed axis 
+    \item reflecting a vector in a plane mirror
+\end{enumerate}
+
+We express the linear system 
+\begin{align*}
+    a_{11}x_1+a_{12}x_2+\dots + a_{1n}x_n=b_1\\
+    a_{21}x_1+a_{22}x_2+\dots + a_{2n}x_n = b_2\\
+    \vdots \\
+    a_{n1}x_1+a_{n2}x_2+\dots + a_{nn}x_n=b_n
+\end{align*}
+In matrix notation as $\textbf{A}\textbf{x}=\textbf{b}$ where $\textbf{A}$ is the coefficient matrix, $\textbf{x}$ is the vector of unknowns, and $\textbf{B}$ is the vector of constants occurring on the right-hand side:
+\[ \textbf{A}=\begin{bmatrix}
+    a_{11}&a_{12}&\dots & a_{1n}\\
+    a_{21}& a_{22} & \dots & a_{2n}\\
+    \vdots & \vdots & & \vdots \\
+    a_{n1} & a_{n2} & \dots & a_{nn}
+\end{bmatrix} \quad \textbf{x}=\begin{bmatrix}
+    x_1\\x_2\\\vdots \\x_n
+\end{bmatrix}
+\quad \textbf{b}=\begin{bmatrix}
+    b_1\\b_2\\\vdots\\b_n
+\end{bmatrix}
+\]
+If $b=0$, the system $Ax=b$ is said to be homogeneous.
+
+The matrix obtained from $A$ by interchaing its rows and columns is called the transpose of $A$ and is denoted by $A^T$.
+
+\ex Find $A^T$ if $\textbf{A}=\begin{bmatrix}
+    1 & 2 & 6\\
+    -1 & 2 & -1
+\end{bmatrix}$.
+
+There is a multiplicative identity in matrix algebra, namely, a square diagonal matrix $\textbf{I}$ with ones down the main diagonal. Multiplying $\textbf{I}$ on the right or left by any other matrix 
+(with compatible dimensions) reproduces the latter matrix.
+
+\ex Demonstrate the identity property for $\textbf{A}=\begin{bmatrix}
+    1&2&6\\
+    -1&2&-1
+\end{bmatrix}$
+
+Some square matrices $\textbf{A}$ can be paired with other square matrices $\textbf{B}$ having the property that $\textbf{B}\textbf{A}=\textbf{I}$. When this happens,
+\begin{enumerate}
+    \item $\textbf{B}$ is the unique matrix satisfying $\textbf{BA}=\textbf{I}$ and 
+    \item $\textbf{B}$ also satisfies $\textbf{AB}=\textbf{I}$.
+\end{enumerate}
+In such a case, $\textbf{B}$ is the inverse of $\textbf{A}$ and write $\textbf{B}=\textbf{A}^{-1}$. A matrix that has no inverse is said to be singular.
+
+When an inverse for the coefficient matrix $A$ in a system of linear equations $A\textbf{x}=\textbf{b}$, the solution can be calculated directly by $\textbf{x}=\textbf{A}^{-1}\textbf{b}$.
+
+If $A=\begin{bmatrix}
+    a & b\\
+    c & d
+\end{bmatrix}$, then $A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}
+    d & -b\\
+    -c & a
+\end{bmatrix}$.
+The matrix $A$ is invertible if and only if $ad-bc\neq 0$. If $ad-bc=0$, then $A$ does not have a multiplicative inverse.
+
+\ex If $A=\begin{bmatrix}
+    2&4\\1&1
+\end{bmatrix}$, solve $Ax=b$ where $b=\begin{bmatrix}
+    1\\2
+\end{bmatrix}$
+
+Finding the Inverse of a Matrix. Row operations include 
+\begin{itemize}
+    \item Interchanging two rows of the matrix 
+    \item Multiplying a row of the matrix by a nonzero scalar
+    \item Adding a scalar multiple of one row of the matrix to another row 
+\end{itemize}
+If the $n\times n$ matrix $\textbf{A}$ has an inverse, $\textbf{A}^{-1}$ can be found by performing row operations on the $n\times 2n$ matrix $[\textbf{A}|\textbf{I}]$ obtained by writing 
+$\textbf{A}$ and $\textbf{I}$ side by side. If the procedure produces a new matrix in the form $[\textbf{I}|\textbf{B}]$, then $\textbf{A}^{-1}=\textbf{B}$.
+
+\ex Find the inverse of $\textbf{A}=\begin{bmatrix}
+    1&2&1\\1&3&2\\1&0&1
+\end{bmatrix}$
+
+For a $2\times 2$ matrix $\textbf{A}$, the determinant of $\textbf{A}$, denoted by $\det \textbf{A}$ or $|\textbf{A}|$, is defined by 
+\[ \det \textbf{A} := \begin{vmatrix}
+    a_{11} & a_{12}\\
+    a_{21} & a_{22}
+\end{vmatrix} = a_{11}a_{22}-a_{12}a_21\]
+The determinant of a $3\times 3$ matrix $A$ can be defined in terms of its cofactor expansion about the first row 
+\[ \det \textbf{A} := \begin{vmatrix}
+    a_{11} & a_{12} & a_{13}\\
+    a_{21} & a_{22} & a_{23}\\
+    a_{31} & a_{32} & a_{33}
+\end{vmatrix}=a_{11}\begin{vmatrix}
+    a_{22} & a_{23}\\
+    a_{32} & a_{33}
+\end{vmatrix}-a_{12}\begin{vmatrix}
+    a_{21} & a_{23}\\
+    a_{31} & a_{33}
+\end{vmatrix}+a_{13}\begin{vmatrix}
+    a_{21} & a_{22}\\
+    a_{31} & a_{32}
+\end{vmatrix} \]
+
+\ex Find the determinant $\begin{vmatrix}
+    2 & 4\\
+    1&1
+\end{vmatrix}$
+
+\ex Find the determinant $\begin{vmatrix}
+    1 & 2 & 1\\
+    0 & 3 & 5\\
+    2 & 1 & -1
+\end{vmatrix}$
+
+\begin{theorem}
+    Let $\textbf{A}$ be an $n\times n$ matrix. The following statements are equivalent:
+\begin{itemize}
+    \item $\textbf{A}$ is singular (does not have an inverse).
+    \item The determinant of $\textbf{A}$ is zero.
+    \item $\textbf{Ax}=\textbf{0}$ has nontrivial solutions ($\textbf{x}\neq 0$)
+    \item The columns (rows) of $\textbf{A}$ form a linearly dependent set.
+\end{itemize} 
+\end{theorem}
+
+
+
+The columns of $A$ are linearly dependent means there exist scalars $c_1,\dots, c_n$ not all zero, such that 
+\[ c_1a_1+c_2a_2+\dots + c_na_n = 0\]
+where $a_j$ is the vector forming the $j$th column of $\textbf{A}$.
+
+If $\textbf{A}$ is a singular square matrix ($\det \textbf{A}=0$) then $\textbf{Ax}=\textbf{0}$ has infinitely many solutions.
+
+If $\textbf{A}$ is singular, $\textbf{Ax}=\textbf{b}$ either has no solutions or it has infinitely many of the form 
+\[ x=x_p+x_h\]
+where $x_p$ is a particular solution to $\textbf{Ax}=\textbf{b}$ and $x_h$ is any of the infinite solutions to $\textbf{Ax}=\textbf{0}$, the homogeneous system.
+
+\ex In a previous section, we saw the system 
+\[ \begin{bmatrix}
+    2 & 4 & 1\\
+    2 &4 & 0\\
+    -4 & -8 & 1
+\end{bmatrix}\begin{bmatrix}
+    x_1\\x_2\\x_3
+\end{bmatrix}=\begin{bmatrix}
+    8\\6\\-10
+\end{bmatrix}\]
+has solutions $x_1=3-2s,x_2=s,x_3=2$ where $-\infty<s<\infty$.
+\begin{enumerate}
+    \item Write the solution in matrix notation and identify $x_p$ and $x_h$.
+    \item Verify $\det \textbf{A}=0$
+    \item Give the identity that exhibits the linear dependence of the columns of $\textbf{A}$.
+\end{enumerate}
+
+If $\textbf{A}$ is a nonsingular square matrix (i.e., $\textbf{A}$ has an inverse and $\det \textbf{A}\neq 0$), then $\textbf{Ax}=\textbf{0}$ has $\textbf{x}=\textbf{0}$ as its only solution and the unique solution to 
+$\textbf{Ax}=\textbf{b}$ is $\textbf{x}=\textbf{A}^{-1}\textbf{b}$.
+
+If the entries $a_{ij}(t)$ in a matrix $\textbf{A}(t)$ are functions of the variable $t$, then $\textbf{A}(t)$ is a matrix function of $t$. Similarly, if the entries $x_i(t)$ of a vector 
+$\textbf{x}(t)$ are functions of $t$, then $\textbf{x}(t)$ is a vector function of $t$.
+
+A matrix $\textbf{A}(t)$ is said to be continuous at $t_0$ if each entry $a_{ij}(t)$ is continuous at $t_0$. $\textbf{A}(t)$ is differentiable at $t_0$ if each entry $a_{ij}(t)$ is differentiable at $t_0$.
+\[ \frac{\dd \textbf{A}}{\dd t}(t_0)=\textbf{A}'(t_0):= [a_{ij}'(t_0)]\]
+\[ \int_a^b \textbf{A}(t)\dd t := \left[\int_a^b a_{ij}(t)\dd t \right]\]
+
+\ex Let $\textbf{A}(t)=\begin{bmatrix}
+    t^2+1 & \cos t \\
+    e^t & 1
+\end{bmatrix}$
+\begin{enumerate}
+    \item Find: $\textbf{A}'(t)$
+    \item Find: $\int_0^1 \textbf{A}(t)\dd t$
+\end{enumerate}
+
+Differentiation Formulas for Matrix Functions:
+\begin{itemize}
+    \item $\frac{\dd}{\dd t}(\textbf{CA})=\textbf{C}\frac{\dd \textbf{A}}{\dd t} \qquad (\textbf{C}$ a constant matrix)
+    \item $\frac{\dd}{\dd t}(\textbf{A}+\textbf{B})=\frac{\dd \textbf{A}}{\dd t}+\frac{\dd \textbf{B}}{\dd t}$
+    \item $\frac{\dd}{\dd t}(\textbf{AB})=\textbf{A}\frac{\dd \textbf{B}}{\dd t}+\frac{\dd \textbf{A}}{\dd t}\textbf{B}$
+\end{itemize}
+
+\ex Show that $\textbf{x}(t)=\begin{bmatrix}
+    \cos \omega t\\
+    \sin \omega t
+\end{bmatrix}$ is a solution of the matrix differential equation $\textbf{x}'=\textbf{Ax}$ where $\textbf{A}=\begin{bmatrix}
+    0 & -\omega \\
+    \omega & 0
+\end{bmatrix}$
+
 \section{Linear Systems in Normal Form}
 \section{Homogeneous Linear Systems with Constant Coefficients}
 \section{Complex Eigenvalues}
