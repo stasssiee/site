@@ -427,7 +427,306 @@ Differentiation Formulas for Matrix Functions:
 \end{bmatrix}$
 
 \section{Linear Systems in Normal Form}
+A system of $n$ linear differential equations is in normal form if it is expressed as 
+\[ \textbf{x}'(t)=\textbf{A}(t)\textbf{x}(t)+\textbf{f}(t) \]
+where $x(t) = \begin{bmatrix}
+    x_1(t)\\\vdots\\x_n(t)
+\end{bmatrix}$, $f(t)=\begin{bmatrix}
+    f_1(t)\\\vdots\\x_n(t)
+\end{bmatrix}$ and $A(t)=\begin{bmatrix}
+    a_{ij}(t)
+\end{bmatrix}$ is an $n\times n$ matrix.
+
+A system is called homogeneous when $\textbf{f}(t)=0$; otherwise it is called nonhomogeneous. When the elements of $A$ are all constants, the system is said to have constant coefficients.
+
+The initial value problem for the normal system is the problem of finding a differentiable vector function $\textbf{x}(t)$ that satisfies the system on an interval $I$ and also satisfies the initial condition $\textbf{x}(t_0)=\textbf{x}_0$ where $t_0$ is a given point of $I$ and $\textbf{x}_0$ is a given vector.
+\begin{theorem}
+    Suppose $\textbf{A}(t)$ and $\textbf{f}(t)$ are continuous on an open interval $I$ that contains the point $t_0$. Then, for any choice of the initial vector $\textbf{x}_0$, there exists a unique solution $\textbf{x}(t)$ on the whole interval $I$ to the initial value problem 
+    \[ \textbf{x}'(t)=\textbf{A}(t)\textbf{x}(t)+\textbf{f}(t), \qquad \textbf{x}(t_0)=\textbf{x}_0 \]
+\end{theorem}
+
+\begin{definition}
+    The $m$ vector functions $\textbf{x}_1,\dots,\textbf{x}_n$ are said to be linearly dependent on an interval $I$ if there exist constants $c_1,\dots, c_n$, not all zero, such that 
+    \[ c_1\textbf{x}_1(t)+ \dots + c_n\textbf{x}_n(t) =\textbf{0}\]
+    for all $t$ in $I$. If the vectors are not linearly dependent, they are said to be linearly independent on $I$.
+\end{definition}
+
+\begin{example}
+    Show that the vector functions $x_1(t)=\begin{bmatrix}
+        e^t\\0\\e^t
+    \end{bmatrix}, x_2(t)=\begin{bmatrix}
+        3e^t\\0\\3e^t
+    \end{bmatrix}$, and $x_3=\begin{bmatrix}
+        t\\1\\0
+    \end{bmatrix}$ are linearly dependent on $(-\infty,\infty)$.
+
+    They are dependent because let $c_1=-3, c_2=1, c_3=0$ to get $\begin{bmatrix}
+        0\\0\\0
+    \end{bmatrix}$.
+\end{example}
+
+\begin{example}
+    Show that the vector functions $x_1(t)=\begin{bmatrix}
+        e^{2t}\\0\\e^{2t}
+    \end{bmatrix}, x_2(t)=\begin{bmatrix}
+        e^{2t}\\e^{2t}\\-e^{2t}
+    \end{bmatrix}$, and $x_3(t)=\begin{bmatrix}
+        e^t\\2e^t\\e^t
+    \end{bmatrix}$ are linearly independent on $(-\infty,\infty)$.
+
+    The only way we can get $\begin{bmatrix}
+        0\\0\\0
+    \end{bmatrix}$ is if the three constants are $0$.
+\end{example}
+
+A set of vector functions $x_1(t),x_2(t),\dots, x_n(t)$ each having $n$ components is linearly independent on an interval $I$ if we can find one point $t_0$ in $I$ where the determinant 
+$\det \begin{bmatrix}
+    x_1(t_0) & \dots & x_n(t_0)
+\end{bmatrix}$ is not zero. We call this detemrinant the Wronksian. (This was previously defined)
+
+\begin{theorem}
+    Let $\textbf{x}_1,\dots,\textbf{x}_n$ be $n$ linearly independent solutions to the homogeneous system 
+    \[\textbf{x}'(t)=\textbf{A}(t)\textbf{x}(t)\]
+    on the interval $I$, where $\textbf{A}(t)$ is an $n\times n$ matrix function continuous on $I$. Then every solution to the above on $I$ can be expressed in the form 
+    \[ \textbf{x}(t)=c_1\textbf{x}_1(t)+\dots +c_n\textbf{x}_n(t)\]
+\end{theorem}
+A set of solutions $\{x_1,\dots x_n\}$ that are linearly independent on $I$ is called a fundamental solution set for the homogeneous system on $I$. The linear combination written with arbitrary constants, is referred to as the general solution to the homogeneous system.
+
+If we take the vectors in a fundamental solution set and let them form the columns of a matrix $\textbf{X}(t)$.
+\[ \textbf{X}(t)=\begin{bmatrix}
+    \textbf{x}_1(t) & \textbf{x}_2(t) & \dots & \textbf{x}_n(t)
+\end{bmatrix} = \begin{bmatrix}
+    x_{1,1}(t) & x_{1,2}(t) & \dots & x_{1,n}(t) \\
+    x_{2,1}(t) & x_{2,2}(t) & \dots & x_{2,n}(t) \\
+    \vdots & \vdots & & \vdots \\
+    x_{n,1}(t) & x_{n,2}(t) & \dots & x_{n,n}(t)
+\end{bmatrix} \]
+Then the matrix $\textbf{X}(t)$ is called a fundamental matrix for the homogeneous system.
+
+\begin{example}
+    Verify that the set $S=\left\{ \begin{bmatrix}
+        e^{2t}\\e^{2t}\\e^{2t}
+    \end{bmatrix}, \begin{bmatrix}
+        -e^{-t}\\0\\e^{-t}
+    \end{bmatrix},\begin{bmatrix}
+        0\\e^{-t}\\-e^{-t}
+    \end{bmatrix}\right\}$ is a fundamental solution set for the system 
+    $\textbf{x}'(t)=\begin{bmatrix}
+        0 & 1 & 1\\
+        1 & 0 & 1\\
+        1 & 1 & 0
+    \end{bmatrix}\\textbf{x}(t)$ on the interval $(-\infty,\infty)$ and find a fundamental matrix for the system. Determine a general solution for the system.
+
+    Testing the three matrices in the system gives the correct resulting vector, and finding the Wronksian shows us that the columns are linearly independent, so the general solution is 
+    \[ x=c_1\begin{bmatrix}
+        e^{2t}\\e^{2t}\\e^{2t}
+    \end{bmatrix}+c_2\begin{bmatrix}
+        -e^{-t}\\0\\e^{-t}
+    \end{bmatrix}+c_3\begin{bmatrix}
+        0\\e^{-t}\\-e^{-t}
+    \end{bmatrix} \]
+\end{example}
+
+\begin{theorem}
+    Let $\textbf{x}_p$ be a particular solution to the nonhomogeneous system 
+    \[ \textbf{x}'(t)=\textbf{A}(t)+\textbf{f}(t) \]
+    on the interval $I$, and let $\{\textbf{x}_1,\dots,\textbf{x}_n\}$ be a fundamental solution set on $I$ for the corresponding homogeneous system $\textbf{x}(t)=\textbf{A}(t)\textbf{x}(t)$.
+    Then every solution to the nonhomogeneous system on $I$ can be expressed in the form 
+    \[ \textbf{x}(t)=\textbf{x}_p(t)+c_1\textbf{x}_1(t)+\dots + c_n\textbf{x}_n(t)\]
+    where $c_1,\dots,c_n$ are constants.
+\end{theorem}
+
+Approach to Solving Normal Systems:
+\begin{enumerate}
+    \item To determine a general solution to the $n\times n$ homogeneous system $\textbf{x}'=\textbf{A}\textbf{x}$:
+    \begin{itemize}
+        \item Find a fundamental solution set $\{\textbf{x}_1,\dots,\textbf{x}_n\}$ that consists of $n$ linearly independent solutions to the homogeneous system.
+        \item Form the linear combination 
+        \[ \textbf{x}=\textbf{X}\textbf{c}=c_1\textbf{x}_1+\dots + c_n\textbf{x}_n \]
+        where $\textbf{c}=$ col$(c_1,\dots,c_n)$ is any constant vector and $\textbf{X}=\begin{bmatrix}
+            \textbf{x}_1 & \dots & \textbf{x}_n
+        \end{bmatrix}$ is the fundamental matrix, to obtain a general solution.
+    \end{itemize}
+    \item To determine a general solution to the nonhomogeneous system $\textbf{x}'(t)=\textbf{Ax}+\textbf{f}$:
+    \begin{itemize}
+        \item Find a particular solution $\textbf{x}_p$ to the nonhomogeneous system.
+        \item Form the sum of the particular solution and the general solution $\textbf{Xc}=c_1\textbf{x}_1+\dots + c_n\textbf{x}_n$ to the corresponding homogeneous system in part 1, 
+        \[\textbf{x}=\textbf{x}_p+\textbf{Xc}=\textbf{x}_p+c_1\textbf{x}_1+\dots + c_n\textbf{x}_n\]
+        to obtain a general solution to the given system.
+    \end{itemize}
+\end{enumerate}
+
 \section{Homogeneous Linear Systems with Constant Coefficients}
+We now define a procedure for obtaining a general solution for the homogeneous system 
+\[ \textbf{x}'(t)=\textbf{Ax}(t)\]
+\begin{definition}
+    Let $\textbf{A}=\begin{bmatrix}
+        a_{ij}
+    \end{bmatrix}$ be an $n\times n$ constant matrix. The eigenvalues of $\textbf{A}$ are those (real or complex) numbers $r$ for which $(\textbf{A}-r\textbf{I})=\textbf{0}$ has at least one nontrivla solution $\textbf{u}$. The corresponding 
+    nontrivial solutions $\textbf{u}$ are called the eigenvectors of $\textbf{A}$ associated with $r$.
+\end{definition}
+
+Finding eigenvalues of a matrix $A$ is equivalent to finding the zeroes of the polynomial $p(r)=\det (A-rI)$. The equation $\det (A-rI)=0$ is called the characteristic equation of $A$ 
+and $p(r)$ is the characteristic polynomial of $A$.
+
+\begin{example}
+    Find the eigenvalues and eigenvectors of the matrix $A=\begin{bmatrix}
+        2 & -3\\
+        1 & -2
+    \end{bmatrix}$
+
+    First find the characteristic equation, this is the determinant of $\begin{bmatrix}
+        2-r & -3\\
+        1 & -2-r
+    \end{bmatrix}$. So the characteristic equation is $r^2-1$ and the eigenvalues are $r=-1$ and $r=1$.
+
+    Now doing the procedure above, we find that for $r=-1$, the eigenvector is $u=\begin{bmatrix}
+        1\\1
+    \end{bmatrix}$ and for $r=1$, the eigenvector is $\begin{bmatrix}
+        3\\1
+    \end{bmatrix}$.
+\end{example}
+The collection of all eigenvectors associated with an eigenvalue forms a subspace when the zero vector is adjoined. These subspaces are called eigenspaces.
+
+\ex Find the eigenvalues and eigenvectors of the matrix 
+\[A = \begin{bmatrix} 
+    1 & 2 & -1 \\
+    1 & 0 & 1\\
+    4 & -4 & 5
+    \end{bmatrix}\]
+
+\begin{theorem}
+    Suppose the $n\times n$ constant matrix $\textbf{A}$ has $n$ linearly independent eigenvectors $\textbf{u}_1,\textbf{u}_2,\dots,\textbf{u}_n$. Let $r_i$ be the eigenvalue corresponding to $\textbf{u}_i$. Then 
+    \[ \{ e^{r_1t}\textbf{u}_1,e^{r_2t}\textbf{u}_2,\dots,e^{r_nt}\textbf{u}_n \} \]
+    is a fundamental solution set (and $\textbf{X}(t)=\begin{bmatrix}
+        e^{r_1t}\textbf{u}_1 & e^{r_2t}\textbf{u}_2 & \dots & e^{r_nt}\textbf{u}_n
+    \end{bmatrix}$ is a fundamental matrix) on $(-\infty,\infty)$ for the homogeneous system $\textbf{x}'=\textbf{Ax}$. Consequently, a general solution of $\textbf{x}'=\textbf{Ax}$ is 
+    \[ \textbf{x}(t)=c_1e^{r_1t}\textbf{u}_1+c_2e^{r_2t}\textbf{u}_2+\dots + c_ne^{r_nt}\textbf{u}_n \]
+    where $c_1,\dots,c_n$ are arbitrary constants.
+\end{theorem}
+
+\begin{example}
+    Find a general solution of $\textbf{x}'(t)=\textbf{Ax}(t)$, where $\textbf{A}=\begin{bmatrix}
+        2 & -3\\
+        1 & -2
+    \end{bmatrix}$
+
+    We get the eigenvalues as $\pm 1$ from this. Therefore, when we find the the general solution, we can see that this is 
+    \[ x(t)=c_1\begin{bmatrix}
+        3\\1
+    \end{bmatrix}e^t + c_2\begin{bmatrix}
+        1\\1
+    \end{bmatrix}e^{-t} \], and this can be written in different ways, but this is a way to write the general solution.
+\end{example}
+
+\begin{theorem}
+    If $r_1,\dots,r_m$ are distinct eigenvalues for the matrix $\textbf{A}$ and $\textbf{u}_i$ is an eigenvector associated with $r_i$, then $\textbf{u}_1,\dots,\textbf{u}_m$ are linearly independent.
+\end{theorem}
+
+\begin{corollary}
+    If the $n\times n$ constant matrix $\textbf{A}$ has $n$ distinct eigenvalues $r_1,\dots,r_n$ and $\textbf{u}_i$ is an eigenvector associated with $r_i$, then 
+    \[ \{ e^{r_1t}\textbf{u}_1,\dots,e^{r_nt}\textbf{u}_n \} \]
+    is a fundamental solution set for the homogeneous system $\textbf{x}'=\textbf{Ax}$.
+\end{corollary}
+
+\ex Solve the initial value problem $\textbf{x}'(T)=\begin{bmatrix}
+    1 & 2 & -1 \\
+    1 & 0 & 1 \\
+    4 & -4 & 5
+\end{bmatrix}\textbf{x}(t)$ where $\textbf{x}(0)=\begin{bmatrix}
+    -1\\0\\0
+\end{bmatrix}$.
+
+\begin{definition}
+    A real symmetric matrix $\textbf{A}$ is a matrix with real entries that satisfies $\textbf{A}^T=\textbf{A}$.
+\end{definition}
+If $A$ is an $n\times n$ real symmetric matrix, there always exist $n$ linearly independent eigenvectors.
+
+\begin{example}
+    Find a general solution of $\textbf{x}'(t)=\textbf{Ax}(t)$, where $\textbf{A}=\begin{bmatrix}
+        1 & -2 & 2\\
+        -2 & 1 & 2\\
+        2 & 2 & 1
+    \end{bmatrix}$.
+
+    From this, we can find the eigenvalues are $r=3$ and $r=-3$.
+
+    The eigenvectos for $r=3$ are $\begin{bmatrix}
+        -1\\1\\0
+    \end{bmatrix}$ and $\begin{bmatrix}
+        1\\0\\1
+    \end{bmatrix}$ and for $c_3$ it is $\begin{bmatrix}
+        -1\\-1\\1
+    \end{bmatrix}$, and the general solution can be found from this.
+\end{example}
+
+Second Solution:
+
+Suppose $r_1$ is an eigenvalue of multiplicity two and that there is only one eigenvector associated with this value. A second solution can be found of the form 
+\[ x_2=Kte^{r_1t}+Pe^{r_1t} \]
+where $\textbf{K}=\begin{bmatrix}
+    k_1 \\ \vdots \\ k_n
+\end{bmatrix}$ and $\textbf{P}=\begin{bmatrix}
+    p_1 \\ \vdots \\ p_n
+\end{bmatrix}$ satisfy $(A-r_1I)K=0$ and $(A-r_1I)P=K$.
+
+\begin{example}
+    Find the general solution of $\textbf{x}'(t)=\textbf{Ax}(t)$, where $\textbf{A}=\begin{bmatrix}
+        3 & -18\\
+        2 & -9
+    \end{bmatrix}$.
+
+    The eigenvalue for this is $r=-3$ with multiplicity $2$.
+
+    If we find the first eigenvector we get $\begin{bmatrix}
+        3\\1
+    \end{bmatrix}$, and we can set this equal to $k$.
+
+    Then we can use this to find the second eigenvector by doing $\begin{bmatrix}
+        6 & -18 \\
+        2 & -6
+    \end{bmatrix}\begin{bmatrix}
+        p_1\\p_2
+    \end{bmatrix}=\begin{bmatrix}
+        3\\1
+    \end{bmatrix}$, and finding this eigenvector as $\begin{bmatrix}
+        1/2 \\ 0
+    \end{bmatrix}$.
+
+    This shows that $x_2=\begin{bmatrix}
+        3\\1
+    \end{bmatrix}te^{-3t}+\begin{bmatrix}
+        1/2 \\ 0 
+    \end{bmatrix}e^{-3t}$.
+
+    Therefore the general solution is $x=c_1\begin{bmatrix}
+        3\\1
+    \end{bmatrix}e^{-3t}$ added on to $c_2$ times what $x_2$ is.
+\end{example}
+
+When the coefficient matrix $A$ has only one eigenvalue associated with an eigenvalue $r_1$ of multiplicity three, we can find a second solution of the form 
+\[ x_2 = Kte^{r_1t}+Pe^{r_1t} \]
+and a third solution of the form 
+\[ x_3 = K\frac{t^2}{2}e^{r_1t}+Pte^{r_1t}+Qe^{r_1t} \]
+where $\textbf{K}=\begin{bmatrix}
+    k_1 \\ \vdots \\ k_n
+\end{bmatrix}, \textbf{P}=\begin{bmatrix}
+    p_1 \\ \vdots \\ p_n
+\end{bmatrix}$, and $Q=\begin{bmatrix}
+    q_1 \\ \vdots \\ q_n
+\end{bmatrix}$ satfisfy 
+\begin{align*}
+    (A-r_1I)K=0\\
+    (A-r_1I)P=K\\
+    (A-r_1I)Q=P
+\end{align*}
+
+\ex Find the general solution $\textbf{x}'(t)=\textbf{Ax}(t)$, where $\textbf{A}=\begin{bmatrix}
+    2 & 1 & 6\\
+    0 & 2 & 5\\
+    0 & 0 & 2
+\end{bmatrix}$.
+
 \section{Complex Eigenvalues}
 \section{Nonhomogeneous Linear Systems}
 
