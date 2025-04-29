@@ -3,7 +3,51 @@
 \begin{document}
 \chapter{Symmetric Matrices and Quadratic Forms}
 \section{Diagonalization of Symmetric Matrices}
-\section{Quadratic Forms}
+A symmetric matrix is a matrix $A$ such that $A^T=A$. Such a matrix is necessarily square. Its main diagonal entries are arbitrary, but its other entries occur in pairs - in opposite sides of the main diagonal.
 
+\begin{theorem}
+    If $A$ is symmetric, then any two eigenvectors from different eigenspaces are orthogonal.
+\end{theorem}
+
+\begin{theorem}
+    An $n\times n$ matrix $A$ is orthogonally diagonalizable if and only if $A$ is a symmetric matrix.
+\end{theorem}
+
+The set of eigenvalues of a matrix $A$ is sometimes called the spectrum of $A$, and the spectral theorem can describe the eigenvalues.
+\begin{theorem}
+    An $n\times n$ symmetric matrix $A$ has the following properties:
+    \begin{itemize}
+        \item $A$ has $n$ real eigenvalues, counting multiplicities.
+        \item The dimension of the eigenspace for each eigenvalue $\lambda$ equals the multiplicity of $\lambda$ as a root of the characteristic equation.
+        \item The eigenspaces are mutually orthogonal, in the sense that eigenvectors corresponding to different eigenvalues are orthogonal.
+        \item $A$ is orthogonally diagonalizable.
+    \end{itemize}
+\end{theorem}
+
+
+
+\section{Quadratic Forms}
+A quadratic form on $\mathbb{R}^n$ is a function $Q$ defined on $\mathbb{R}^n$ whose value at a vector $\textbf{x}$ in $\mathbb{R}^n$ can be computed by an expression of the form 
+$Q(\textbf{x})=\textbf{x}^TA\textbf{x}$, where $A$ is an $n\times n$ symmetric matrix. The matrix $A$ is called the matrix of the quadratic form.
+
+If $\textbf{x}$ represents a variable vector in $\mathbb{R}^n$, then a change of variable is an equation of the form 
+\[ \textbf{x}=P\textbf{y} \]
+where $P$ is an invertible matrix and $\textbf{y}$ is a new variable vector in $\mathbb{R}^n$. Here $\textbf{y}$ is the coordinate vector of $\textbf{x}$ relative to the basis of $\mathbb{R}^n$ determined by the columns of $P$.
+
+\begin{theorem}
+    Let $A$ be an $n\times n$ symmetric matrix. Then there is an orthogonal change of variable, $\textbf{x}=P\textbf{y}$, that transforms the quadratic form $\textbf{x}^TA\textbf{x}$ into a quadratic form 
+    $\textbf{y}^TD\textbf{y}$ with no cross-product term.
+\end{theorem}
+
+\begin{definition}
+    A quadratic form $Q$ is 
+    \begin{itemize}
+        \item positive definite if $Q(\textbf{x})>0$ for all $\textbf{x}\neq 0$
+        \item negative definite if $Q(\textbf{x})<0$ for all $\textbf{x}\neq 0$
+        \item indefinite if $Q(\textbf{x})$ assumes both positive and negative values.
+    \end{itemize}
+\end{definition}
+
+The same as above can be generalized to eigenvalues for a quadratic form $\textbf{x}^TA\textbf{x}$ if the eigenvalues of $A$ are positive, negative, or has both respectively.
 
 \end{document}
