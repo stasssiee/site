@@ -22,17 +22,19 @@
     background-image: url('../figures/apchem.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(10px);
+    filter: blur(10px) brightness(0.6); /* <--- darken the image slightly */
     z-index: -1;
 }
 
 .content {
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.85); /* optional: white background with transparency for readability */
+    background-color: rgba(255, 255, 255, 0.8); /* slightly less white */
     padding: 2rem;
     border-radius: 12px;
     margin: 2rem;
+    color: #222; /* darker text color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* optional subtle shadow */
 }
 
         </style>
