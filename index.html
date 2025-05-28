@@ -7,92 +7,106 @@
   <title>Stasya's Website</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Add additional specific styles for the index page */
     header {
-      background: linear-gradient(45deg, #6a11cb, #2575fc);
-      color: white;
-      padding: 20px 0;
+      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
+      color: #00ffe7;
+      padding: 30px 0;
       text-align: center;
+      box-shadow: 0 0 20px #00ffe7;
     }
 
-
-
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
+      text-shadow: 0 0 10px #00ffe7;
     }
 
     nav {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     nav a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 10px 20px;
-      border: 2px solid white;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffe7;
+      background-color: transparent;
+      border: 2px solid #00ffe7;
       border-radius: 25px;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
 
     nav a:hover {
-      background-color: white;
-      color: #2575fc;
+      background-color: #00ffe7;
+      color: #000;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+
+    body {
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: #ccc;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .content {
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       text-align: center;
     }
 
-    .quote {
-      font-style: italic;
-      color: #444;
-      margin-top: 20px;
+    h2, h3 {
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffe7;
+    }
+
+    p {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid #00ffe7;
+      padding: 15px;
+      margin: 20px 10%;
+      color: #d0d0d0;
+    }
+
+    a {
+      color: #89f0ff;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    table {
+      background: rgba(0, 255, 231, 0.05);
+      border: 1px solid #00ffe7;
+    }
+
+    td {
+      color: #ccc;
     }
 
     footer {
       margin-top: 40px;
-      background-color: #f5f5f5;
-      color: #666;
+      background-color: #111;
+      color: #555;
       padding: 10px 0;
       font-size: 0.9rem;
-    }
-
-    p {
-      text-align: justify;
-    margin: 0 10%;
-    }
-
-    h2{
-      color: #333333;
-    text-align: center;
-    margin-top: 30px;
-    }
-
-    h3{
-      color: #333333;
-    text-align: center;
-    margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Welcome to Stasya's Website</h1>
+    <h1>Welcome to Stasya's Home Page</h1>
     <nav>
       <a href="notes.html">Notes</a>
-      <!--<a href="updates.html">Updates</a>-->
-      <a href="todo.html">To-Do</a>
-      <!--<a href="geo.html">Geography</a>-->
-      <a href="recordings.html">Music Page</a>
+      <a href="todo.html">To-Do Sheet</a>
+      <a href="recordings.html">Music Recordings</a>
     </nav>
   </header>
 
@@ -108,7 +122,7 @@
     <p>
       Hi, this is my homepage.
 
-      I play stuff like <a href = "https://minesweeper.online/player/24177847">minesweeper</a>, <a href = "https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>, <a href = "https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">violin</a>, and sometimes I do math and physics for academics.
+      I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>, <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>, <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
     </p>
   </div>
 </body>
