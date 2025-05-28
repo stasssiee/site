@@ -89,7 +89,7 @@ h2, h3 {
 }
 
 p {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.5);
   border-left: 4px solid #00ffe7;
   padding: 15px;
   margin: 20px 10%;
