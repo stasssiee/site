@@ -32,13 +32,16 @@ table {
   width: 60%;
   margin: 20px auto;
   border-collapse: collapse;
-  background-color: rgba(0, 255, 231, 0.08);
+  background-color: rgba(0, 255, 231, 0.1);
+  border: 1px solid #00ffe7;
+  color: #d0d0d0;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.3);
 }
 
 td {
   padding: 10px;
-  background: rgba(255, 255, 255, 0.05);
   border: 1px solid #00ffe7;
+  background-color: transparent; /* Let the table's background show through */
   color: #d0d0d0;
   text-align: center;
 }
