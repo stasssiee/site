@@ -54,10 +54,27 @@
       font-family: 'Orbitron', sans-serif;
     }
 
-    .content {
-      max-width: 900px;
+    .main-layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1000px;
       margin: 40px auto;
-      text-align: center;
+      padding: 0 20px;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00f0ff;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .content {
+      max-width: 700px;
     }
 
     h2, h3 {
@@ -69,7 +86,7 @@
       background: rgba(255, 255, 255, 0.05);
       border-left: 4px solid #00ffe7;
       padding: 15px;
-      margin: 20px 10%;
+      margin-top: 20px;
       color: #d0d0d0;
     }
 
@@ -84,10 +101,12 @@
     table {
       background: rgba(0, 255, 231, 0.05);
       border: 1px solid #00ffe7;
+      margin-top: 10px;
     }
 
     td {
       color: #ccc;
+      padding: 10px 20px;
     }
 
     footer {
@@ -96,6 +115,7 @@
       color: #555;
       padding: 10px 0;
       font-size: 0.9rem;
+      text-align: center;
     }
   </style>
 </head>
@@ -110,21 +130,30 @@
     </nav>
   </header>
 
-  <div class="content">
-    <h3>About Me</h3>
-    <table>
-      <tr>
-        <td><strong>Student</strong><br>Pronouns: she/they</td>
-        <td><strong>Contact</strong><br>Discord: stasssiee</td>
-      </tr>
-    </table>
+  <!-- FLEX LAYOUT START -->
+  <div class="main-layout">
+    <img src="figures/profile.png" alt="Profile Picture" class="profile-pic">
 
-    <p>
-      Hi, this is my homepage.
+    <div class="content">
+      <h3>About Me</h3>
+      <table>
+        <tr>
+          <td><strong>Student</strong><br>Pronouns: she/they</td>
+          <td><strong>Contact</strong><br>Discord: stasssiee</td>
+        </tr>
+      </table>
 
-      I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>, <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>, <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
-    </p>
+      <p>
+        Hi, this is my homepage.
+
+        I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>,
+        <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>,
+        <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
+      </p>
+    </div>
   </div>
+  <!-- FLEX LAYOUT END -->
+
 </body>
 
 </html>
