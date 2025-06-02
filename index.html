@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stasya's Website</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anastasia's Website</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     header {
       background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
@@ -60,7 +60,8 @@
       text-align: center;
     }
 
-    h2, h3 {
+    h2,
+    h3 {
       color: #00ffe7;
       text-shadow: 0 0 5px #00ffe7;
     }
@@ -73,12 +74,47 @@
       color: #d0d0d0;
     }
 
+    /* Sci-fi themed links - matching nav style but subtle inline */
     a {
-      color: #89f0ff;
+      color: #00ffe7;
+      border: 2px solid transparent;
+      border-radius: 15px;
+      padding: 3px 8px;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px #00ffe7;
     }
 
     a:hover {
-      color: #ffffff;
+      color: #000;
+      background-color: #00ffe7;
+      border-color: #00ffe7;
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    /* Specifically for the big Spotify link wrapping the image */
+    a img {
+      border-radius: 20px;
+      border: 2px solid #00ffe7;
+      box-shadow: 0 0 20px #00ffe7;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    a:hover img {
+      box-shadow: 0 0 30px #00ffe7;
+      transform: scale(1.05);
+    }
+
+    /* Space between profile pic and big spotify link */
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 30px; /* added margin bottom for spacing */
     }
 
     table {
@@ -98,13 +134,6 @@
       color: #555;
       padding: 10px 0;
       font-size: 0.9rem;
-    }
-
-    .profile-pic-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
     }
 
     .profile-pic {
@@ -143,7 +172,7 @@
 
 <body>
   <header>
-    <h1>Welcome to Stasya's Home Page</h1>
+    <h1>Welcome to Anastasia's Home Page</h1>
     <nav>
       <a href="notes.html">Notes</a>
       <a href="todo.html">To-Do Sheet</a>
@@ -152,31 +181,30 @@
   </header>
 
   <div class="profile-pic-container">
-    <img src="figures/profile.png" alt="Profile Picture" class="profile-pic">
+    <img src="figures/profile.png" alt="Profile Picture" class="profile-pic" />
   </div>
 
   <a href="https://stassie.pythonanywhere.com/link">
     <img
-      src="https://stassie.pythonanywhere.com"
+      src="https://stassie.pythonanywhere.com/?spin=true&scan=true&eq_color=rainbow&theme=dark"
       alt="Current Spotify Song"
     />
   </a>
 
-    <h3>About Me</h3>
-    <table>
-      <tr>
-        <td><strong>Student</strong><br>Pronouns: she/they</td>
-        <td><strong>Contact</strong><br>Discord: stasssiee</td>
-      </tr>
-    </table>
+  <h3>About Me</h3>
+  <table>
+    <tr>
+      <td><strong>Student</strong><br />Pronouns: she/they</td>
+      <td><strong>Contact</strong><br />Discord: stasssiee</td>
+    </tr>
+  </table>
 
-    <p>
-      Hi, this is my homepage.
-      I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>, 
-      <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>, 
-      <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
-    </p>
-  </div>
+  <p>
+    Hi, this is my homepage.
+    I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>,
+    <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>,
+    <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
+  </p>
 </body>
 
 </html>
