@@ -9,6 +9,48 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Trans pride banner */
+    .trans-banner {
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #5BCEFA 0%,
+        #5BCEFA 20%,
+        #F5A9B8 20%,
+        #F5A9B8 40%,
+        #FFFFFF 40%,
+        #FFFFFF 60%,
+        #F5A9B8 60%,
+        #F5A9B8 80%,
+        #5BCEFA 80%,
+        #5BCEFA 100%
+      );
+      background-size: 200% 100%;
+      animation: wave-horizontal 5s linear infinite;
+      box-shadow: 0 2px 10px #5bcefa88;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    @keyframes wave-horizontal {
+      0% {
+        background-position: 0% 0;
+      }
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    body {
+      padding-top: 20px;
+      background: linear-gradient(to right, #000000, #1a1a1a);
+      color: #ccc;
+      font-family: 'Orbitron', sans-serif;
+    }
+
     header {
       background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
       color: #00ffe7;
@@ -48,12 +90,6 @@
       box-shadow: 0 0 10px #00ffe7;
     }
 
-    body {
-      background: linear-gradient(to right, #000000, #1a1a1a);
-      color: #ccc;
-      font-family: 'Orbitron', sans-serif;
-    }
-
     .content {
       max-width: 900px;
       margin: 40px auto;
@@ -74,7 +110,6 @@
       color: #d0d0d0;
     }
 
-    /* Sci-fi themed links - matching nav style but subtle inline */
     a {
       color: #00ffe7;
       border: 2px solid transparent;
@@ -93,7 +128,6 @@
       box-shadow: 0 0 15px #00ffe7;
     }
 
-    /* Specifically for the big Spotify link wrapping the image */
     a img {
       border-radius: 20px;
       border: 2px solid #00ffe7;
@@ -108,32 +142,12 @@
       transform: scale(1.05);
     }
 
-    /* Space between profile pic and big spotify link */
     .profile-pic-container {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 20px;
-      margin-bottom: 30px; /* added margin bottom for spacing */
-    }
-
-    table {
-      background: rgba(0, 255, 231, 0.05);
-      border: 1px solid #00ffe7;
-      margin: 0 auto;
-    }
-
-    td {
-      color: #ccc;
-      padding: 10px 20px;
-    }
-
-    footer {
-      margin-top: 40px;
-      background-color: #111;
-      color: #555;
-      padding: 10px 0;
-      font-size: 0.9rem;
+      margin-bottom: 30px;
     }
 
     .profile-pic {
@@ -167,10 +181,31 @@
       text-shadow: 0 0 5px #00ffe7;
       font-size: 1.4rem;
     }
+
+    table {
+      background: rgba(0, 255, 231, 0.05);
+      border: 1px solid #00ffe7;
+      margin: 0 auto;
+    }
+
+    td {
+      color: #ccc;
+      padding: 10px 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      background-color: #111;
+      color: #555;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 
 <body>
+  <div class="trans-banner"></div>
+
   <header>
     <h1>Welcome to Anastasia's Home Page</h1>
     <nav>
