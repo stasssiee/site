@@ -1,6 +1,5 @@
 let questionData = {};
 
-// Load the questions JSON
 fetch('questions.json')
   .then(response => response.json())
   .then(data => {
@@ -36,7 +35,7 @@ function updateUnits() {
     document.getElementById("nextQuestionBtn").style.display = "none";
   }
 
-function displayRandomQuestion() {
+  function displayRandomQuestion() {
     const course = document.getElementById("courseSelect").value;
     const unit = document.getElementById("unitSelect").value;
     const questions = questionData[course]?.[unit];
@@ -45,17 +44,15 @@ function displayRandomQuestion() {
       const randomIndex = Math.floor(Math.random() * questions.length);
       const q = questions[randomIndex];
   
-      document.getElementById("questionDisplay").innerHTML = `\\(${q.question}\\)`;
-      document.getElementById("answerDisplay").innerHTML = `\\(${q.answer}\\)`;
+      document.getElementById("questionDisplay").innerHTML = q.question;
+      document.getElementById("answerDisplay").innerHTML = q.answer;
       document.getElementById("answerDisplay").style.display = "none";
       document.getElementById("questionCard").style.display = "block";
       
-      // Show the Next Question button
       document.getElementById("nextQuestionBtn").style.display = "inline-block";
   
       MathJax.typesetPromise();
     } else {
-      // If no questions or no selection, hide question card and button
       document.getElementById("questionCard").style.display = "none";
       document.getElementById("nextQuestionBtn").style.display = "none";
     }
