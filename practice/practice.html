@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Question Bank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- MathJax via CDN -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      },
+      svg: { fontCache: 'global' }
+    };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Practice</h1>
+  </header>
+
+  <main>
+    <select id="courseSelect" onchange="updateUnits()">
+      <option value="">-- Select Course --</option>
+    </select>
+
+    <select id="unitSelect" onchange="displayRandomQuestion()">
+      <option value="">-- Select Unit --</option>
+    </select>
+
+    <div class="card" id="questionCard" style="display:none;">
+      <div id="questionDisplay" class="question"></div>
+      <div class="reveal-btn" onclick="toggleAnswer()">Click to Reveal Answer</div>
+      <div id="answerDisplay" class="answer"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -399,4 +399,418 @@ Now we see that $W=\vec{F}\cdot \vec{d}$. (Work is constant which means it shoul
     So the dot product of both vectors gives us $250$ ft-lb.
 \end{example}
 
+\section{The Cross Product}
+To the interested reader that has gotten this far, review how to find the determinant of a matrix.
+\ex $\begin{vmatrix}
+    4&-2\\-5&-1
+\end{vmatrix}$
+
+\ex $\begin{vmatrix}
+    3&-1&4\\2&-2&5\\4&-1&0
+\end{vmatrix}$
+
+Remember: when you see the straight vertical bars, you are trying to find the determinant.
+
+Also remember 
+\begin{itemize}
+    \item If any two rows are the same, the determinant is zero.
+    \item Interchanging two rows in a determinant multiplies the value by $-1$.
+\end{itemize}
+
+\begin{definition}[Cross Product]
+    If $\vec{a}=\langle a_1,a_2,a_3\rangle$ and $\vec{b}=\langle b_1,b_2,b_3\rangle$, then the cross product of $\vec{a}$ and $\vec{b}$ is:
+    \[ \vec{a}\times \vec{b}=\langle a_2b_3-a_3b_2,a_3b_1-a_1b_3,a_1b_2-a_2b_1\rangle \]
+    OR 
+    \[ \begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k}\\
+        a_1 & a_2 & a_3\\
+        b_1 & b_2 & b_3
+    \end{vmatrix} \]
+    Notice: This is a vector.
+\end{definition}
+
+\begin{example}
+    $\vec{u}=\langle 1,2,-2\rangle$ and $\vec{v}=\langle 3,0,1\rangle$. Find $\vec{u}\times \vec{v}$ and $\vec{v}\times \vec{u}$.
+
+    First set up $\vec{u}\times \vec{v}$.
+
+    This is $\begin{vmatrix}
+        \vec{i} & \vec{j} & \vec{k}\\
+        1 & 2 & -2\\
+        3 & 0 &1
+    \end{vmatrix}$.
+
+    This is $\vec{i}\begin{vmatrix}
+        2 & -2\\ 0 & 1
+    \end{vmatrix}-\vec{j}\begin{vmatrix}
+        1 & -2\\
+        3 & 1
+    \end{vmatrix}+\vec{k}\begin{vmatrix}
+        1 & 2\\
+        3& 0
+    \end{vmatrix}$.
+
+    This gives you a vector $\vec{u}\times \vec{v}=2\vec{i}-7\vec{j}-6\vec{k}$.
+
+    Now when we set up $\vec{v}\times \vec{u}$, notice that the two rows will be interchanged. Therefore $\vec{v}\times \vec{u}=-2\vec{i}+7\vec{j}+6\vec{k}$.
+\end{example}
+
+Important: $\vec{a}\times \vec{b}$ is orthogonal to BOTH $\vec{a}$ and $\vec{b}$. (If you are asked to find a vector orthogonal to both $\vec{a}$ and $\vec{b}$, this is useful.)
+
+Use the Right-Hand Rule to find direction. If the fingers of your right hand curl in the direction of rotation (less than $180\degree$) from $\vec{a}$ to $\vec{b}$, then your thumb points in the direction of $\vec{a}\times \vec{b}$.
+
+Properties of the Cross Product:
+\begin{enumerate}
+    \item $\vec{a}\times \vec{b}=-\vec{b}\times \vec{a}$
+    \item $(c\vec{a})\times \vec{b}=c(\vec{a}\times \vec{b})=\vec{a}\times (c\vec{b})$
+    \item $\vec{a}\times (\vec{b}+\vec{c})=\vec{a}\times \vec{b}+\vec{a}\times \vec{c}$
+    \item $(\vec{a}+\vec{b})\times \vec{c}=\vec{a}\times \vec{c}+\vec{b}\times \vec{c}$
+    \item $\vec{a}\cdot (\vec{b}\times \vec{c})=(\vec{a}\times \vec{b})\cdot \vec{c}$
+    \item $\vec{a}\times (\vec{b}\times \vec{c})=(\vec{a}\cdot \vec{c})\vec{b}-(\vec{a}\cdot \vec{b})\vec{c}$
+\end{enumerate}
+
+A few more important things:
+\begin{itemize}
+    \item $||\vec{a}\times \vec{b}||=||\vec{a}||||\vec{b}||\sin\theta$ (Similar to the dot product)
+    \item $\vec{a}$ and $\vec{b}$ are parallel if and only if $\vec{a}\times \vec{b}=\vec{0}$. This is because $\sin\pi = 0$.
+    \item The length of $\vec{a}\times \vec{b}$ is equal to the area of the parallelogram determined by $\vec{a}$ and $\vec{b}$.
+\end{itemize}
+
+\begin{example}
+    Find a vector perpendicular to the plane that passes through the points $P(1,4,6)$, $Q(-2,5,-1)$, and $R(1,-1,1)$.
+
+    We need to find $\overrightarrow{PQ}\times \overrightarrow{PR}$ to find the vector perpendicular to the plane.
+
+    Finding $\overrightarrow{PQ}$ gives $\langle -3,1,-7\rangle$ and finding $\overrightarrow{PR}$ gives $\langle 0,-5,-5\rangle$.
+
+    The cross product of this is $-40\vec{i}-15\vec{j}+15\vec{k}$. (All scalar multiples of this are also perpendicular.)
+\end{example}
+
+\begin{example}
+    Find the area of a triangle determined by $P_1(2,2,0), P_2(-1,0,2)$, and $P_3(0,4,3)$.
+
+    First you want to find the area of the parallelogram, then divide it by two.
+
+    Previously, the area of the parallelogram was determined by $||\overrightarrow{P_1P_2}\times \overrightarrow{P_1P_3}||$.
+
+    Do a similar process as the last example, the cross product is $\langle -10,5,-10\rangle$.
+
+    The magnitude of this vector is $15$, so the area of the triangle is $15/2$.
+\end{example}
+
+Now the scalar triple product: we have $\vec{a}\cdot (\vec{b}\times \vec{c})$. This gives a scalar.
+
+Note this is $\begin{vmatrix}
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3\\
+    c_1 & c_2 & c_3
+\end{vmatrix}$
+
+The absolute value of this scalar triple product gives the volume of a parallelpiped determined by $\vec{a}$, $\vec{b}$, and $\vec{c}$. (Note: absolute value, not magnitude.)
+
+\begin{example}
+    Use the scalar triple product to show that $\vec{a}=\langle 1,4,-7\rangle$, $\vec{b}=\langle 2,-1,4\rangle$, and $\vec{c}=\langle 0,-9,18\rangle$ are coplanar.
+
+    The scalar triple product of this will give a determinant of 0. The volume of the parallelpiped therefore is 0, which means that all three vectors are coplanar (meaning on the same plane).
+\end{example}
+
+Torque measures the tendency of a body to rotate about the origin. The direction of the torque vector indicates the axis of rotation.
+
+$\vec{\tau}=\vec{r}\times \vec{F}$ where $\vec{r}$ represents position and $\vec{F}$ represents force.
+
+\begin{example}
+    A bolt is tightened by applying a 40-N force to a 0.25 m as shown. Find the magnitude of the torque about the center of the bolt.
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{1.4.1.PNG}
+    \end{center}
+
+    Remember: the $\vec{r}$ value must be in meters.
+
+    We know that $|\vec{tau}|=|\vec{r}||\vec{F}|\sin\theta$ (Cross Product)
+
+    So plug in numbers to get $|\vec{\tau}| \approx 9.66$ N-m.
+\end{example}
+
+\begin{example}
+    The figure shows a force of 100-N applied in the positive $z$-direction at the point $Q(1,1,1)$. Assuming the cube is free to rotate about $P(0,0,0)$, find the scalar moment (aka torque) of the force about $P$.
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{1.4.2.PNG}
+    \end{center}
+
+    We know that $\vec{F}=\langle 0,0,100\rangle$ from the diagram.
+
+    The vector $\vec{r}$ will be $\overrightarrow{PQ} = \langle 1,1,1\rangle$.
+
+    So the cross product of the two vectors gives the torque vector.
+
+    This vector is $\langle 100,-100,0\rangle$.
+\end{example}
+
+\section{Equations of Lines and Planes}
+To write the equation of a line, you need a point and the position.
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{1.5.E1.PNG}
+\end{center}
+In this figure, we know $P_0$ is a point on the line. The direction of the line is determined by a parallel vector $\vec{v}$. If $\vec{a}=\vec{P}_0P$, then $\vec{a}=t\vec{v}$.
+
+Therefore, the vector equation of a line is $\vec{r}=\vec{r}_0+t\vec{v}$. Each value of $t$ gives a different point on the line. For $t>0$, points are to the right.
+
+Another expression is if we let $\vec{r}=\langle x,y,z\rangle$, $\vec{r}_0=\langle x_0,y_0,z_0\rangle$, and $\vec{v}=\langle a,b,c\rangle$, then we can write this as 
+\[ \langle x,y,z \rangle = \langle x_0+ta, y_0+tb, z_0+tc\rangle \]
+
+This leads us to the parametric equation of a line. The parametric equations of a line through $(x_0,y_0,z_0)$ and parallel to the direction vector $\langle a,b,c\rangle$ are:
+\[ x=x_0+at \qquad y=y_0+bt \qquad z=z_0+ct \]
+
+\begin{example}
+    Find a vector and parametric equations for the line that passes through $(4,2)$ and is parallel to $\vec{v}=\langle -1,5\rangle$. Then find 2 other points on that line.
+
+    We have the vector $\vec{r}=\langle 4,2\rangle + t\langle -1,5\rangle$. This is the vector equation. This can also be written as $\vec{r}=(4\vec{i}+2\vec{j})+t(-\vec{i}+5\vec{j})$.
+    Also this can be written as $\vec{r}=(4-t)\vec{i}+(2+5t)\vec{j}$. 
+
+    For the parametric, we have $x=4-t$ and $y=2+5t$.
+
+    Note: These equations are not unique. You can choose a different point or parallel vector.
+
+    To find 2 other points, just plug in $t$ values.
+
+    For $t=1$, we can get $x=3$, and $y=7$, so the point is $(3,7)$.
+\end{example}
+
+\begin{example}
+    Find parametric equations of the line passing through $P_1(2,4,-1)$ and $P_2(5,0,7)$. Where does this line intersect the $xy$-plane?
+
+    We have $\overrightarrow{P_1P_2}=\langle 3,-4,8\rangle$.
+
+    We can find the parametric equations as $x=2+3t, y=4-4t$, and $z=-1+8t$ using $P_1$. (Note any scalar multiple of $\overrightarrow{P_1P_2}$ will be parallel to the line).
+
+    This will intersect the $xy$-plane when $z=0$. So if we let $-1+8t=0$, $t=\frac{1}{8}$.
+
+    Plugging this in $x$ and $y$ gives the point $\left(\frac{19}{8},\frac{7}{2},0\right)$ as the intersection point.
+\end{example}
+
+A third representation is symmetric equations. Setting the parametric equations and solving for $t$ gives the following:
+\[ t = \frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c} \]
+
+\begin{example}
+    For the last example, write the symmetric equations for the line.
+
+    This is just $\frac{x-2}{3}=\frac{y-4}{-4}=\frac{z+1}{8}$.
+\end{example}
+What happens if we limit $t$? You get a line segment.
+
+\begin{example}
+    Find parametric equations for the line segment joining $P(2,4,-1)$ and $Q(5,0,7)$.
+
+    First, $\overrightarrow{PQ}=\langle 3,-4,8\rangle$.
+
+    The parametric equations are $x=2+3t, y=-4+4t$, and $z=-1+8t$. We have to limit $t$ though as $0\leq t\leq 1$ for this to work.
+
+    A different representation for $\vec{r}(t)=(1-t)\vec{r}_0+t\vec{r}_1=\vec{r}_0+t(\vec{r}_1-\vec{r}_0)$.
+
+    So for this example, this would be $(1-t)\langle 2,4,-1\rangle + t\langle 5,0,7\rangle$.
+\end{example}
+
+\begin{example}
+    Consider the following lines. Are they parallel? Do they intersect?
+    \[ L_1 \qquad x=1+4t \quad y=5-4t \quad z=-1+5t\]
+    \[ L_2 \qquad x=2+8t \quad y=4-3t \quad z=5+t \]
+
+    Writing these in vector form gives $L_1$ as $\langle x,y,z\rangle = \langle 1,5,-1\rangle + t\langle 4,-4,5\rangle$, and $L_2$ as $\langle x,y,z\rangle = \langle 2,4,5\rangle + t\langle 8,-3,1\rangle$.
+
+    We can see that the $t$ terms are not scalar multiples of each other, so the lines are not parallel.
+
+    To find intersection points, we need to see if the points of the two lines can ever equal each other.
+
+    This means we have the equations $1+4t_1=2+8t_2$, $5-4t_1=4-3t_2$, and $-1+5t_1=5+t_2$.
+
+    Solving for $t_1$ in this system gives us $t_1=\frac{1}{4}$ and $t_2=0$.
+
+    This means when $t_1=\frac{1}{4}$ and $t_2=0$, then $L_1$ and $L_2$ have the same $x,y$.
+
+    What we can see from this, is that for the last equation for $z$, they do not equal each other. That means both lines have a different $z$ value. That means the line skews because they are not parallel or intersect.
+\end{example}
+
+Unlike a line, a vector parallel to a plane is not enough information to determine a plane. Instead we need a vector perpendicular to the plane.
+
+The equation of a plane is $\vec{n}\cdot (\vec{r}-\vec{r}_0)=0$. (This is the vector equation of a plane.)
+
+An alternate form is $\langle a,b,c\rangle\cdot \langle x-x_0,y-y_0,z-z_0\rangle =0$. This is also $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$. (This is the scalar equation of a plane).
+
+Note that ``an equation'' means that the equation is not unique.
+
+\begin{example}
+    Find an equation of the plane passing through $(3,-1,7)$ and perpendicular to the vector $\vec{n}=\langle 4,2,-5\rangle$.
+
+    The equation is $\langle 4,2,-5\rangle \cdot \langle x-3,y+1,z-7\rangle =0$.
+
+    This can be written as $4(x-3)+2(y+1)-5(z-7)=0$ or $4x+2y-5z+25=0$. The second equation of this is known as the linear equation.
+
+    To graph this, we need to find 3 points (that are not co-linear). To find 3 points, you would need to come up with the intercepts, and then graph those and that gives you the plane.
+\end{example}
+
+\begin{example}
+    Find an equation of the plane that passes through $P(1,3,2)$, $Q(3,-1,6)$ and $R(5,2,0)$.
+
+    If we find the cross product of $\overrightarrow{PQ}$ and $\overrightarrow{PR}$, this will find the vector perpendicular to the plane.
+
+    We can find that $\overrightarrow{PQ}=\langle 2,-4,4\rangle$ and $\overrightarrow{PR}=\langle 4,-1,-2\rangle$ and that $\vec{n}=\overrightarrow{PQ}\times \overrightarrow{PR}$.
+
+    The cross product is $\langle 12,20,14\rangle$. Dividing by 2 gives us $\langle 6,10,7\rangle$, which is also perpendicular to the plane.
+
+    So an equation of the plane is $6(x-1)+10(y-3)+7(z-2)=0$ or $6x+10y+7z=50$. (There are many ways to represent this.)
+\end{example}
+
+\begin{example}
+    Consider the planes $x+y+z=1$ and $x-2y+3z=1$. Find the angle between the two planes and find symmetric equations for the line of intersection of the two planes.
+
+    We have $\vec{n}_1=\langle 1,1,1\rangle$ and $\vec{n}_2=\langle 1,-2,3\rangle$.
+
+    We know that $\cos\theta = \frac{\vec{n}_1\cdot \vec{n}_2}{|\vec{n}_1|\cdot |\vec{n}_2|}$.
+
+    So plugging in numbers gives $\theta \approx 72\degree$.
+
+    The two planes of the two normal vectors will form a parallelogram. Remember $\vec{n}_1$ and $\vec{n}_2$ are normal vectors to the plane. 
+
+    To find symmetric equations we need a point on the line and a parallel vector.
+
+    We will choose the point where the lines intersects the $xy$-plane ($z=0$), so $x+y=1$ and $x-2y=1$. Solving this system gives $x=1$ and $y=0$.
+
+    Both planes have the point $(1,0,0)$. If line $L$ lies on both planes, then the line must be perpendicular to both $\vec{n}_1$ and $\vec{n}_2$.
+
+    The cross product of the two vectors is $\langle 5,-2,-3\rangle$.
+
+    So the symmetric equation is $\frac{x-1}{5}=\frac{y}{-2}=\frac{z}{-3}$. (There are other representations.)
+\end{example}
+
+\begin{theorem}
+    The distance between a point $P(x_1,y_1,z_1)$ and plane $ax+by+cz+d=0$ is 
+    \[ D=\frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} \]
+\end{theorem}
+
+\begin{example}
+    Find the distance between parallel planes $x+2y-2z=3$ and $2x+4y-4z=7$.
+
+    We have $\vec{n}_1=\langle 1,2,-2\rangle$ and $\vec{n}_2=\langle 2,4,-4\rangle$.
+
+    We can see that the point $(3,0,0)$ is on the first plane (letting $y=z=0$).
+
+    For the second equation we have $2x+4y-4z-7=0$.
+
+    From this, we have all the values needed now.
+
+    Plugging into the distance formula gives $\frac{1}{6}$.
+\end{example}
+
+\begin{example}
+    From a previous example, you found the lines are skew. Find the distance between them.
+    \[ L_1 \qquad x=1+4t \quad y=5-4t \quad z=-1+5t\]
+    \[ L_2 \qquad x=2+8t \quad y=4-3t \quad z=5+t \]
+
+    First find a point on $L_1$. We get a point $(1,5,-1)$ (when $t=0$).
+
+    We need to find a plane through $L_2$ and need a point and a perpendicular vector.
+
+    We know a point would be $(2,4,5)$. To find the perpendicular vector, we need to find a cross product of $\vec{L}_1\times \vec{L}_2$.
+
+    The cross product is $\langle 11,-36,20\rangle$. So the equation of the plane is $11(x-2)-36(y-4)+20(z-5)=0$.
+
+    This can be written as $x-36y+20z+22=0$.
+
+    Now we can find the distance since we have the plane and the point. 
+
+    The distance is roughly $D\approx 3.918$ units.
+\end{example}
+
+\section{Cylinders and Quadric Surfaces}
+\begin{definition}
+    A cylinder is a surface that consists of all lines parallel to a given line and passing through a given plane curve (i.e - in 3 space, the equation only has 2 variables).
+\end{definition}
+
+For example, sketching $z=x^2$ in 3-space. This is essentialy a parabola on the $xz$-plane along a parallel line, and it will look like a piece of paper being in the process of being folded.
+
+\ex Sketch $y^2+z^2=1$ in 3-space.
+
+\begin{definition}
+    A quadric surface is the graph of a second-degree equation in 3 variables 
+    \[ Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Iz+J =0 \]
+\end{definition}
+
+\ex Graph $z=x^2+y^2$. (Hint $z\geq 0$.)
+
+There are 6 different quadric surfaces.
+
+First, the ellipsoid has the general equation $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$.
+The intercepts of this are $(0,0\pm c)$, $(0\pm b,0)$. and $(\pm a,0,0)$. For the traces, we can see that if we let $x$, $y$, or $z$ be a number, they will give ellipses. The shape of this looks like a football (American).
+
+Next, the cone has the general equation $\frac{z^2}{c^2}=\frac{x^2}{a^2}+\frac{y^2}{b^2}$. The axis is that $\frac{z^2}{c^2}$ term, but it can be $y^2$ or $z^2$.
+This has one intercept, $(0,0,0)$. The traces are $z$ is some number, it gives an ellipse, if $x$ or $y$ is some number, you get a hyperbola.
+
+Next, the elliptic paraboloid has the equation $\frac{z}{c}=\frac{x^2}{a^2}+\frac{y^2}{b^2}$. Likewise with the cone, the $\frac{z}{c}$ term just tells you what axis (it can be $x$ or $y$.)
+The intercept is the same as the cone, $(0,0,0)$. For the traces, $z$ gives an ellipse, and $x$ and $y$ gives parabolas.
+
+Next the hyperboloid of one sheet. The equation is $\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$. (The term with a minus is the axis.)
+You have to find the intercept for this one. $z$ gives an ellipse, and $x$ and $y$ gives hyperbolas.
+
+Next, hyperboliods of 2 sheets. The equation is $-\frac{x^2}{a^2}-\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$. (The term with the plus is the axis.)
+You have to find the intercept, and $z$ gives an ellipse ($z>c$), and $x$ and $y$ gives ellipses.
+
+Lastly, the hyperbolic paraboloid. The formula is $\frac{z}{c}=\frac{x^2}{a^2}-\frac{y^2}{b^2}$. You have to find the intercept. $x$ and $y$ gives parabolas and $z$ gives a hyperbola. (This should kind of look like a saddle (on a horse).)
+
+\begin{example}
+    Let's look at $y^2=x^2+\frac{z^2}{4}$.
+
+    The intercept is $(0,0,0)$.
+
+    We can assume that $y$ is the axis we are drawing on. 
+
+    When we look at the traces, they all give ellipses.
+    For example, $y=1$ gives $1=x^2+\frac{z^2}{4}$, $y=2$ gives $4=x^2+\frac{z^2}{4}$ or $1=\frac{x^2}{4}+\frac{z^2}{16}$.
+
+    When we let $x=0$, then we can get $y^2=\frac{z^2}{4}$, which gives $\pm y = \pm \frac{z}{2}$, which is two perpendicular lines essentially.
+
+    This is an elliptic cone.
+\end{example}
+
+\begin{example}
+    Let's look at $4x^2+4y^2+z^2+8y-4z=-4$.
+
+    Completing the square gives $x^2+(y+1)^2+\frac{(z-2)^2}{4}=1$.
+
+    The intercepts are $(0,0,2)$, $(0,-1,0)$ as the two intercepts, (there are no $x$-intercepts.) From what we also see, we can see the center of the graph should be $(0,-1,2)$.
+
+    Hopefully, you can see that all the traces are ellipses.
+
+    Cool! We get an ellipsoid.
+\end{example}
+
+\begin{example}
+    Lastly, graph $z=\frac{y^2}{4}-\frac{x^2}{9}$.
+
+    Starting with intercepts, we get $(0,0,0)$ as the only intercept.
+
+    For our traces, $x$ and $y$ give parabolas, and $z$ gives a hyperbola.
+
+    This gives a hyperbolic paraboloid.
+\end{example}
+
+For a brief review on conic sections: the following.
+
+Circles: A circle is the set of all points in the plane equidistant from a fixed point. The standard equation is $(x-h)^2+(y-k)^2=r^2$, where $(h,k)$ is the center, and $r$ is the radius.
+
+Ellipses: An ellipse is the set of all points in the plane the sum of whose distances from two fixed points (the foci) is constant. The standard equation is $\frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1$. 
+If $a>b$, we get the foci as $(h\pm c,k)$, and if $b>a$, we get the foci as $(h,k\pm c)$. For both of these, the center will be $(h,k)$, and the vertices are the endpoints of the major axis. Use $c$ to find the coordinates of each focus. The foci are located on the major axis and are each $c$ units away from the center.
+If $a=b$, then the ellipse is just a circle, and $a$ and $b$ will equal $r$. The foci of a circle are located at the same point - the center. Eccentricity of an ellipse is $\frac{c}{a}$. (For a circle $e=0$.)
+
+Hyperbolas: A hyperbola is the set of all points in the plane the difference of whose distances from two fixed points (the foci) is constant. The standard equation are the following:
+\begin{itemize}
+    \item For hyperbolas that open left and right: $\frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1$, the foci will be $(h\pm c,k)$
+    \item For hypberolas that open up and down: $\frac{(y-k)^2}{b^2}-\frac{(x-h)^2}{a^2}=1$, the foci will be $(h,k\pm c)$
+\end{itemize}
+The center is $(h,k)$ for both and the vertices are the turning points of the brances of the hyperbola. Use $a$ and $b$ to create the central rectangle around the center of the hyperbola. The diagonals of this rectangle form the asymptotes. 
+The equation for the asymptotes are $y-k=\pm \frac{b}{a}(x-h)$. Use the value $c=\sqrt{a^2+b^2}$, to find the coordinates of each focus. The branches of a hyperbola will always bend towards the foci and away from the center.
+
+Parabolas: A parabola is the set of all points in the plane equidistant from a fixed line (the directrix) and a fixed point (the focus).
+The graph of a parabola will always bend towards its focus and away from its directrix. The coordinates of the vertex are $(h,k)$, the distance from the vertex to both the focus and directrix is given by $|p|$.
+For equation for a parabola that opens up and down is $(x-h)^2=4p(y-k)$, and for one that opens left or right it is $(y-k)^2=4p(x-h)$. If $p>0$, the parabola either opens up or right, and for $p<0$, the opposite happens.
 \end{document}

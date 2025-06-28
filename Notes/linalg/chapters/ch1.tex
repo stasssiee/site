@@ -3,96 +3,105 @@
 \begin{document}
 \chapter{Linear Equations in Linear Algebra}
 \section{Systems of Linear Equations}
-A linear equation in the variables $x_1,x_2,\dots,x_n$ is an equation that can be written in the form $a_1x_1+a_2x_2+\dots+a_nx_n=b$ where $b$ 
-and the coefficients $a_1,a_2,\dots,a_n$ are real or complex numbers.
+A linear equation in the variables $x_1,\dots,x_n$ is an equation that can be written in the form 
+\[ a_1x_1+a_2x_2+\dots + a_nx_n=b\]
+where $b$ and the coefficients $a_1,\dots,a_n$ are real or complex numbers, usually known in advance.
 
-Example: $4x_1-5x_2+2=x_1, x_2=2(6^{1/2}-x_1)+x_3$ are both linear. Not linear examples are $4x_1-5x_2=x_1x_2, x_2=2(x_1^{1/2})-6$, and $2x_1^{-1}+\sin x_2 = 0$.
+A system of linear equations (or a linear system) is a collection of one or more linear equations involving the same variables - say, $x_1,\dots,x_n$.
 
-Systems of Linear Equations: an $(m\times n)$ system of linear equations is a system of $m$ linear equations with $n$ unknowns.
+A solution of the system is a list ($s_1,s_2,\dots,s_n$) of numbers that makes each equation a true statement when the values $s_1,\dots,s_n$ are substituted for $x_1,\dots,x_n$, respectively.
 
-Example: the $2\times 3$ system of equations below has a solution $x_1=5, x_2=6.5$, and $x_3=3$:
-\begin{align*}
-    2x_1-x_2+1.5x_3=8\\
-    x_1-4x_3=-7
-\end{align*}
+The set of all possible solutions is called the solution set of a linear system.
 
 Two linear systems are called equivalent if they have the same solution set.
 
-A system of linear equations can have: infinitely many solutions, no solution, or a unique solution. Coincident lines have infinitely many solutions, parallel lines have no solution, and intersecting lines have a unique solution.
-
-Matrix Notation:
-
-Let's say we have $x_1-2x_2+x_3=0, 2x_2-8x_3=8$, and $5x_1-5x_3=10$.
-
-The coefficient matrix is 
-$\begin{bmatrix}
-1 & -2 & 1 \\
-0 & 2 & -8 \\
-5 & 0 & -5
-\end{bmatrix}$ and the augmented matrix is $\begin{bmatrix}
-    1 & -2 & 1 & 0 \\
-    0 & 2 & -8 & 8\\
-    5 & 0 & -5 & 10
-\end{bmatrix}$. The augmented matrix is $3\times 4$ (3 rows, 4 columns).
-
-To solve a linear system: if one of the following elementary operations is applied to a system of linear equations, the resulting system is equivalent, 
-that is the resulting system has the same set of solutions as the original:
+A system of linear equations has 
 \begin{enumerate}
-    \item interchange two equations 
-    \item multiply an equation by a non-zero scalar 
-    \item add a constant multiple of one equation to another 
+    \item no solution, or
+    \item exactly one solution, or
+    \item infinitely many solutions.
 \end{enumerate}
 
-Let's use the system 
+A system of linear equations is said to be consistent if it has either one solution or infinitely many solutions.
+
+A system is inconsistent if it has no solution.
+
+The essential information of a linear system can be recorded compactly in a rectangular array called a matrix. Given a system,
 \begin{align*}
-x_1-2x_2+x_3 =0 \\
-2x_2 - 8x_3 = 8 \\
-5x_1-5x_3=10
-\end{align*}
+    x_1-2x_2+x_3=0\\
+    2x_2-8x_3=8\\
+    -4x_1+5x_2+9x_3=-9
+\end{align*}, with the coefficients of each variable aligned in columns, the matrix 
+\[ \begin{bmatrix}
+    1&-2&1\\ 0&2&-8\\ -4&5&9
+\end{bmatrix} \]
+is called the coefficient matrix (or matrix of coefficients) of the system.
 
-So using row operations and rearranging the rows, we can do $R_1 \leftrightarrow R_2$ to swap the first and second row. Now we can multiply the second line 
-by $1/2$ so $1/2R_2$. The next step is to do $R_2+R_1$. 
+An augmented matrix of a system consists of the coefficient matrix with an added column containing the constants from the right sides of the equations.
 
-The matrix that results from this is $\begin{bmatrix}
-    1 & -2 & 1 & 0 \\
-    0 & 2 & -8 & 8 \\ 
-    5 & 0 & -5 & 10 
-\end{bmatrix}$
+For the given system of equations,
+\[ \begin{bmatrix}
+    1&-2&1&0\\ 0&2&-8&8\\ -4&5&9&-9
+\end{bmatrix} \]
+is called the augmented matrix of the system.
 
-Doing the operations $R_3-5R_1$, $R_3-5R_2$, and $1/2R_2$ and $1/30R_3$, we end up getting $\begin{bmatrix}
-    1 & -2 & 1 & 0 \\
-    0 & 1 & -4 & 4 \\ 
-    0 & 0 & 1 & -1
-\end{bmatrix}$, so from this we have the equations 
-\begin{align*}
-    x_1-2x_2+x_3 =0 \\
-    x_2-4x_3=4\\
-    x_3=-1
-\end{align*}, so the solution set is $(1,0,-1)$. Since a solution exists, the system is consistent.
+The size of a matrix tells how many rows and columns it has. If $m$ and $n$ are positive integers, an $m\times n$ matrix is a rectangular array of numbers with $m$ rows and $n$ columns. (The number of rows always comes first.)
 
-Let's see if this one is consistent.
-\begin{align*}
-    x_2-4x_3 =8 \\
-    2x_1-3x_2+2x_3 = 1\\
-    4x_1-8x_2+12x_3 = 1
-\end{align*}
+For example, $\begin{bmatrix}
+    1&2&3&4\\ 5&6&7&8
+\end{bmatrix}$ is a $2\times 4$ matrix.
 
-Doing the row operations $R_1\leftrightarrow R_2$, $R_3-2R_1$, $R_3+2R_2$ we get that $0=15$, so this is inconsistent.
+The basic strategy for solving a linear system is to replace one system with an equivalent system (i.e., one with the same solution set) that is easier to solve.
 
-This last example has infinitely many solutions:
-\begin{align*}
-    x_1-2x_2-x_3=-2 \\
-    2x_1+x_2+3x_3 = 1\\
-    -3x_1+x_2-2x_3 = 1
-\end{align*}
+Elementary row operations include the following:
+\begin{enumerate}
+    \item (Replacement) Replace one row by the sum of itself and a multiple of another row. For example, $2R_1+R_3 \rightarrow R_3$.
+    \item (Interchange) Interchange two rows. For example: $R_1\leftrightarrow R_4$.
+    \item (Scaling) Multiply all entries in a row by a nonzero constant. For example: $\frac{1}{3}R_3\rightarrow R_3$.
+\end{enumerate}
 
-Doing the row operations $R_2-2R_1$ and  $R+3+3R_1$, then $R_3+R_2$ and then $1/5R_2$ results in $\begin{bmatrix}
-    1 & -2 & 1 & -2 \\
-    0 & 1 & 1 & 1 \\
-    0 & 0 & 0 & 0
-\end{bmatrix}$
+Two matrices are called row equivalent if there is a sequence of elementary row operations that transforms one matrix into the other.
 
-Solving this, we have $x_3$ with no restrictions, it is a ``free parameter'' and $x_2=1-x_3$ and $x_1=-x_3$ so $x_1$ and $x_2$ are parameterized by $x_3$.
+It is important to note that row operations are reversible.
+
+If the augmented matrices of two linear systems are row equivalent, then the two systems have the same solution set.
+
+Two fundamental equations about a linear system are as follos:
+\begin{enumerate}
+    \item Is the system consistent: that is, does at least one solution exist?
+    \item If a solution exists, is it the only one, that is, is it unique?
+\end{enumerate}
+
+\begin{example}
+    Determine if the following system is consistent:
+    \begin{align*}
+        x_2-4x_3=8\\
+        2x_1-3x_2+2x_3=1\\
+        5x_1-8x_2+7x_3=1
+    \end{align*}
+
+    First interchange row 1 and 2 to get \[\begin{bmatrix}
+        2 & -3 & 2 & 1\\
+        0 & 1 & -4 & 8\\
+        5 & -8 & 7 & 1
+    \end{bmatrix}\]
+
+    Do the operation $-\frac{5}{2}R_1+R_3\rightarrow R_3$:
+    \[\begin{bmatrix}
+        2 & -3 & 2 & 1\\
+        0 & 1 & -4 & 8\\
+        0 & -\frac{1}{2} & 2 & -\frac{3}{2}
+    \end{bmatrix}\] 
+
+    Do the operation $2R_3+R_2\rightarrow R_3$:
+    \[\begin{bmatrix}
+        2 & -3 & 2 & 1\\
+        0 & 1 & -4 & 8\\
+        0 & 0 & 0 & 5
+    \end{bmatrix}\]
+
+    That bottom row says that no $x_1,x_2$ or $x_3$ will equal 5, or $0=5$. This is not true, so the system is inconsistent.
+\end{example}
 
 \section{Row Reduction and Echelon Forms}
 Leading entry of a row: the first (counting from left to right) non-zero entry (in a nonzero row)
