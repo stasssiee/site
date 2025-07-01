@@ -1,6 +1,6 @@
 {
-    "differential equations": {
-      "chapter 1: introduction to differential equations": [
+    "Differential Equations": {
+      "Chapter 1: Introduction to Differential Equations": [
         {
           "question": "Solve for \\(x\\): \\(3x - 5 = 1\\)",
           "answer": "\\(x = 2\\)"
@@ -10,50 +10,153 @@
           "answer": "\\((x - 2)(x - 3)\\)"
         }
       ],
-      "chapter 2: first-order differential equations": [
+      "Chapter 2: First-Order Differential Equations": [
         {
           "question": "Differentiate \\(f(x) = x^3\\)",
           "answer": "\\(f'(x) = 3x^2\\)"
         }
       ],
 
-      "chapter 3: mathematical models and numerical methods involving first-order equations":[
+      "Chapter 3: Mathematical Models and Numerical Methods Involving First-Order Equations":[
         {
 
         }
       ],
 
-      "chapter 4: linear second-order equations":[
+      "Chapter 4: Linear Second-Order Equations":[
         {
 
+        }
+      ],
+      
+      "Chapter 5: Introduction to Systems":[
+        {
+
+        }
+      ],
+
+      "Chapter 6: Theory of Higher-Order Linear Differential Equations":[
+        {
+
+        }
+      ],
+
+      "Chapter 7: Laplace Transforms":[
+        {
+
+        }
+      ],
+
+      "Chapter 8: Series Solutions of Differential Equations":[
+        {
+
+        }
+      ],
+
+      "Chapter 9: Matrix Methods for Linear Systems":[
+        {
+
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Linear Algebra": {
+      "Chapter 1: Linear Equations in Linear Algebra": [
+        {
+          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
+          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
+        }
+      ],
+
+      "Chapter 2: Matrix Algebra":[
+        {
+
+        }
+      ],
+
+      "Chapter 3: Determinants":[
+        {
+
+        }
+      ],
+
+      "Chapter 4: Vector Spaces":[
+        {
+
+        }
+      ],
+
+      "Chapter 5: Eigenvalues and Eigenvectors":[
+        {
+
+        }
+      ],
+
+      "Chapter 6: Orthogonality and Least Squares":[
+        {
+
+        }
+      ],
+
+      "Chapter 7: Symmetric Matrices and Quadratic Forms":[
+        {
+
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Calculus III": {
+      "Chapter 1: Vectors and the Geometry of Space": [
+        {
+          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
+          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
         }
       ],
       
-      "chapter 5: introduction to systems":[
+      "Chapter 2: Vector-Valued Functions":[
         {
 
         }
       ],
 
-      "chapter 6: theory of higher-order linear differential equations":[
+      "Chapter 3: Functions of Several Variables":[
         {
 
         }
       ],
 
-      "chapter 7: laplace transforms":[
+      "Chapter 4: Multiple Integration":[
         {
 
         }
       ],
 
-      "chapter 8: series solutions of differential equations":[
-        {
-
-        }
-      ],
-
-      "chapter 9: matrix methods for linear systems":[
+      "Chapter 5: Vector Calculus":[
         {
 
         }
@@ -73,45 +176,69 @@
 
 
 
-    "linear algebra": {
-      "chapter 1: linear equations in linear algebra": [
+    "Discrete Mathematics": {
+      "Chapter 1: Logic and Proofs": [
         {
           "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
           "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
         }
       ],
 
-      "chapter 2: matrix algebra":[
+      "Chapter 2: Sets, Functions, Sequences, and Sums":[
         {
 
         }
       ],
 
-      "chapter 3: determinants":[
+      "Chapter 3: Algorithms":[
         {
 
         }
       ],
 
-      "chapter 4: vector spaces":[
+      "Chapter 4: Number Theory":[
         {
 
         }
       ],
 
-      "chapter 5: eigenvalues and eigenvectors":[
+      "Chapter 5: Induction and Recursion":[
         {
 
         }
       ],
 
-      "chapter 6: orthogonality and least squares":[
+      "Chapter 6: Counting":[
         {
 
         }
       ],
 
-      "chapter 7: symmetric matrices and quadratic forms":[
+      "Chapter 7: Discrete Probability":[
+        {
+
+        }
+      ],
+
+      "Chapter 8: Advanced Counting Techniques":[
+        {
+
+        }
+      ],
+
+      "Chapter 9: Relations":[
+        {
+
+        }
+      ],
+
+      "Chapter 10: Graphs":[
+        {
+
+        }
+      ],
+
+      "Chapter 11: Trees":[
         {
 
         }
@@ -130,134 +257,7 @@
 
 
 
-    "calculus iii": {
-      "chapter 1: vectors and the geometry of space": [
-        {
-          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
-          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
-        }
-      ],
-      
-      "chapter 2: vector-valued functions":[
-        {
-
-        }
-      ],
-
-      "chapter 3: functions of several variables":[
-        {
-
-        }
-      ],
-
-      "chapter 4: multiple integration":[
-        {
-
-        }
-      ],
-
-      "chapter 5: vector calculus":[
-        {
-
-        }
-      ]
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    "discrete mathematics": {
-      "chapter 1: logic and proofs": [
-        {
-          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
-          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
-        }
-      ],
-
-      "chapter 2: sets, functions, sequences, and sums":[
-        {
-
-        }
-      ],
-
-      "chapter 3: algorithms":[
-        {
-
-        }
-      ],
-
-      "chapter 4: number theory":[
-        {
-
-        }
-      ],
-
-      "chapter 5: induction and recursion":[
-        {
-
-        }
-      ],
-
-      "chapter 6: counting":[
-        {
-
-        }
-      ],
-
-      "chapter 7: discrete probability":[
-        {
-
-        }
-      ],
-
-      "chapter 8: advanced counting techniques":[
-        {
-
-        }
-      ],
-
-      "chapter 9: relations":[
-        {
-
-        }
-      ],
-
-      "chapter 10: Graphs":[
-        {
-
-        }
-      ],
-
-      "chapter 11: trees":[
-        {
-
-        }
-      ]
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-    "ap calculus bc": {
+    "AP Calculus BC": {
       "Unit 1: Limits and Continuity": [
         {
           "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
@@ -335,7 +335,7 @@
 
 
 
-    "ap statistics": {
+    "AP Statistics": {
       "Unit 1: Exploring One-Variable Data": [
         {
           "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
@@ -403,7 +403,7 @@
 
 
 
-    "ap chemistry": {
+    "AP Chemistry": {
       "Unit 1: Atomic Structure and Properties": [
         {
           "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
@@ -474,11 +474,121 @@
 
 
 
-    "honors chemistry": {
+    "Honors Chemistry": {
       "Unit 1: Nature of Science": [
         {
-          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
-          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
+          "question": "How many significant figures are in \\(9.07\\)?",
+          "answer": "\\(3\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(12\\)?",
+          "answer": "\\(2\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(1200.\\)?",
+          "answer": "\\(4\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(0.03\\)?",
+          "answer": "\\(1\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(1.003\\)?",
+          "answer": "\\(4\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(1.00\\)?",
+          "answer": "\\(3\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(0.02\\)?",
+          "answer": "\\(1\\)"
+        },
+
+        {
+          "question": "How many significant figures are in \\(100\\)?",
+          "answer": "\\(1\\)"
+        },
+
+        {
+          "question": "Write \\(0.00007\\) in scientific notation.",
+          "answer": "\\(7\\cdot 10^{-5}\\)"
+        },
+        
+        {
+          "question": "Write \\(420034\\) in scientific notation.",
+          "answer": "\\(4.20034\\cdot 10^5\\)"
+        },
+
+        {
+          "question": "Write \\(0.00450\\) in scientific notation.",
+          "answer": "\\(4.50\\cdot 10^{-5}\\)"
+        },
+        
+        {
+          "question": "Write \\(123456\\) in scientific notation.",
+          "answer": "\\(1.23456\\cdot 10^5\\)"
+        },
+        
+        {
+          "question": "Write \\(0.001\\) in scientific notation.",
+          "answer": "\\(1\\cdot 10^{-3}\\)"
+        },
+        
+        {
+          "question": "Write \\(100.\\) in scientific notation.",
+          "answer": "\\(1.00\\cdot 10^{2}\\)"
+        },
+
+        {
+          "question": "Write \\(1000.\\) in scientific notation.",
+          "answer": "\\(1.000\\cdot 10^3\\)"
+        },
+        
+        {
+          "question": "Write \\(3.1\\times 10^4\\) in floating decimal notation.",
+          "answer": "\\(31000\\)"
+        },
+        
+        {
+          "question": "Write \\(2.48\\times 10^3\\) in floating decimal notation.",
+          "answer": "\\(2480\\)"
+        },
+        
+        {
+          "question": "Write \\(1.000\\times 10^{-3}\\) in floating decimal notation.",
+          "answer": "\\(0.001000\\)"
+        },
+
+        {
+          "question": "Write \\(1.45\\times 10^6\\) in floating decimal notation.",
+          "answer": "\\(0.00000145\\)"
+        },
+        
+        {
+          "question": "Write \\(1.00\\times 10^2\\) in floating decimal notation.",
+          "answer": "\\(100.\\)"
+        },
+
+        {
+          "question": "Round \\(6080.4\\) to 3 significant figures.",
+          "answer": "\\(6080\\)"
+        },
+
+        {
+          "question": "Round \\(6080.4\\) to 4 significant figures.",
+          "answer": "\\(6080.\\)"
+        },
+
+        {
+          "question": "\\( (2.3\\)cm)\\(4.007\\)cm)",
+          "answer": "\\(9.2\\) cm\\(^2\\)"
         }
       ],
 
