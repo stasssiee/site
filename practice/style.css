@@ -67,6 +67,12 @@ body {
   .reveal-btn:hover {
     color: #ffffff;
   }
+
+  #questionImage {
+    border: 1px solid #00ffe7;
+    box-shadow: 0 0 12px rgba(0, 255, 231, 0.3);
+    border-radius: 8px;
+  }
   
   .answer {
     margin-top: 1rem;

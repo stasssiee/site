@@ -2,18 +2,52 @@
     "Differential Equations": {
       "Chapter 1: Introduction to Differential Equations": [
         {
-          "question": "Solve for \\(x\\): \\(3x - 5 = 1\\)",
-          "answer": "\\(x = 2\\)"
+          "question": "Classify this differential equation \\(5\\frac{d^2x}{dt^2} + 4\\frac{dx}{dt}+9x=2\\cos 3t\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "Ordinary, 2nd-order, independent variable: \\(t\\), dependent variable: \\(x\\), linear"
         },
         {
-          "question": "Factor \\(x^2 - 5x + 6\\)",
-          "answer": "\\((x - 2)(x - 3)\\)"
+          "question": "Classify this differential equation \\(\\frac{dy}{dx}=\\frac{y(2-3x)}{x(1-3y}\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "Ordinary, 1st-order, independent variable: \\(x\\), dependent variable: \\(y\\), nonlinear"
+        },
+
+        {
+          "question": "Classify this differential equation \\(y\\left[1+\\left(\\frac{dy}{dx}\\right)^2\\right]=C\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "Ordinary, 1st-order, ind. variable: \\(x\\), dep. variable: \\(y\\), nonlinear"
+        },
+
+        {
+          "question": "Classify this differential equation \\(\\frac{dp}{dt}=kp(P-p)\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "Ordinary, 1st-order, ind. variable: \\(t\\), dep. variable: \\(p\\), nonlinear"
+        },
+
+        {
+          "question": "Classify this differential equation \\(x\\frac{d^2y}{dx^2}+\\frac{dy}{dx}+xy=0\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "Ordinary, 2nd-order, ind. variable: \\(x\\), dep. variable: \\(y\\), linear"
+        },
+
+        {
+          "question": "Classify this differential equation \\(\\frac{\\partial N}{\\partial t}=\\frac{\\partial^2 N}{\\partial r^2}+\\frac{1}{r}\\frac{\\partial N}{\\partial r}+kN\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+          "answer": "partial, 2nd-order, ind. variable: \\(t, r\\), dep. variable: \\(N\\)"
+        },
+
+        {
+          "question": "Write a differential equation that describes the scenario where the rate of change of the population \\(p\\) of bacteria at time \\(t\\) is proportional to the population at time \\(t\\).",
+          "answer": "\\(dp/dt =kp\\), where \\(k\\) is the proportionality constant"
+        },
+
+        {
+          "question": "Write a differential equation that describes the scenario where the rate of change in the temperature \\(T\\) of coffee at time \\(t\\) is proportional to the difference between the temperature \\(M\\) of the air at time \\(t\\) and the temperature of the coffee at time \\(t\\).",
+          "answer": "\\(dT/dt=k(M-T)\\), where \\(k\\) is the proportionality constant"
+        },
+
+        {
+          "question": "Two drivers, Alison and Kevin, are participating in a drag race. Beginning from a standing start, they each proceed with a constant acceleration. Alison covers the last 1/4 of the distance in 3 seconds, whereas Kevin covers the last 1/3 of the distance in 4 seconds. Who wins and by how much time?",
+          "answer": "Kevin wins by \\(6\\sqrt{3}-4\\sqrt{6}\\) sec"
         }
       ],
       "Chapter 2: First-Order Differential Equations": [
         {
-          "question": "Differentiate \\(f(x) = x^3\\)",
-          "answer": "\\(f'(x) = 3x^2\\)"
+  
         }
       ],
 
@@ -76,9 +110,91 @@
     "Linear Algebra": {
       "Chapter 1: Linear Equations in Linear Algebra": [
         {
-          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
-          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
+          "question": "Solve the following system of equations \\begin{align*} x_1+5x_2=7 \\\\ -2x_1-7x_2=-5 \\end{align*}",
+          "answer": "\\((-8,3)\\)"
+        },
+
+        {
+          "question": "Find the point \\((x_1,x_2)\\) that lies on the line \\(x_1+5x_2=7\\) and on the line \\(x_1-2x_2=-2\\). See the figure.",
+          "image": "images/1.1.3.PNG",
+          "answer": "\\((4/7,9/7)\\)"
+        },
+
+        {
+          "question": "Consider the following matrix as the augmented matrix of a linear system. State in words the next two elementary row operations that should be performed in the process of solving the system. \\[ \\begin{bmatrix} 1&3&-4&0&9 \\\\ 1&1&5&0&-8\\\\ 0&0&1&0&7\\\\ 0&0&0&1&-6\\end{bmatrix}\\]",
+          "answer": "Replace row 2 by its sum with -5 times row 3, and then replace row 1 by its sum with 4 times row 3."
+        },
+
+        {
+          "question": "In the following, the augmented matrix of a linear system has been reduced by row operations to the form shown. Continue the appropriate row operations and describe the solution set of the original system. \\[ \\begin{bmatrix} 1&7&3&-4 \\\\ 0&1&-1&3 \\\\ 0&0&0&1 \\\\ 0&0&1&-2\\end{bmatrix} \\]",
+          "answer": "The solution set is empty"
+        },
+
+        {
+          "question": "In the following, the augmented matrix of a linear system has been reduced by row operations to the form shown. Continue the appropriate row operations and describe the solution set of the original system. \\[ \\begin{bmatrix} 1&-1&0&0&-4 \\\\ 0&1&-3&0&-7 \\\\ 0&0&1&-3&-1 \\\\ 0&0&0&0&4\\end{bmatrix} \\]",
+          "answer": "No solutions"
+        },
+
+        {
+          "question": "Solve the following system: \\begin{align*} x_2+4x_3=-4 \\\\ x_1+3x_2+3x_3=-2 \\\\ 3x_1+7x_2+5x_3=6\\end{align*}",
+          "answer": "\\((19,-8,1)\\)"
+        },
+
+        {
+          "question": "Solve the following system: \\begin{align*} x_1-3x_3=8\\\\ 2x_1+2x_2+9x_3 = 7\\\\ x_2+5x_3=-2\\end{align*}",
+          "answer": "\\((5,3,-1)\\)"
+        },
+
+        {
+          "question": "Determine if the following system is consistent. Do not completely solve the system. \\begin{align*} x_1+3x_3=2\\\\ x_2-3x_4=3 \\\\ -2x_2+3x_3+2x_4=1\\\\ 3x_1+7x_4 = -5\\end{align*}",
+          "answer": "Consistent"
+        },
+
+        {
+          "question": "Do the three lines \\(x_1-4x_2=1, 2x_1-x_2=-3\\) and \\(-x_1-3x_2=4\\) have a common point of intersection?",
+          "answer": "The three lines have one point in common."
+        },
+
+        {
+          "question": "Determine the value(s) of \\(h\\) such that the following matrix is the augmented matrix of a consistent linear system. \\[ \\begin{bmatrix} 1&h&4\\\\ 3&6&8 \\end{bmatrix}\\]",
+          "answer": "\\(h\\neq 2\\)"
+        },
+
+        {
+          "question": "Determine the value(s) of \\(h\\) such that the following matrix is the augmented matrix of a consistent linear system. \\[ \\begin{bmatrix} 1&3&-2\\\\ -4&h&8\\end{bmatrix}\\]",
+          "answer": "All \\(h\\)"
+        },
+
+        {
+          "question": "Find an equation involving \\(g\\), \\(h\\), and \\(k\\) that makes the following augmented matrix correspond to a consistent system.",
+          "answer": "\\(k+3g+2h=0\\)"
+        },
+
+        {
+          "question": "Suppose the system below is consistent for all possible values of \\(f\\) and \\(g\\). What can you say about the coefficients \\(c\\) and \\(d\\)? Justify your answer. \\begin{align*} x_1+5x_2=f\\\\ cx_1+dx_2=g\\end{align*}",
+          "answer": "The row reduction of \\begin{bmatrix} 1&5&f\\\\c&d&g\\end{bmatrix} to \\begin{bmatrix} 1&5&f\\\\0&d-5c&g-cf\\end{bmatrix} shows that \\(d-5c\\) must be nonzero, since \\(f\\) and \\(g\\) are arbitrary. Otherwise, for some choices of \\(f\\) and \\(g\\) the second row could correspond to an equation of the form \\(0=b\\), where \\(b\\) is nonzero. Thus \\(d\\neq 5c\\)."
+        },
+
+        {
+          "question": "Find the elementary row operation in the following that transforms the first matrix into the second, and then find the reverse row operation that transforms the second matrix into the first. \\begin{bmatrix} 0&2&-5\\\\1&4&-7\\\\3&-1&6\\end{bmatrix} \\begin{bmatrix} 1&4&-7\\\\0&-2&5\\\\3&-1&6\\end{bmatrix}",
+          "answer": "Swap row 1 and row 2; swap row 1 and row."
+        },
+
+        {
+          "question": "Find the elementary row operation in the following that transforms the first matrix into the second, and then find the reverse row operation that transforms the second matrix into the first. \\begin{bmatrix} 1&-3&2&0\\\\0&4&-5&6\\\\5&-7&8&-9 \\end{bmatrix} \\begin{bmatrix} 1&-3&2&0\\\\0&4&-5&6\\\\0&8&-2&-9\\end{bmatrix}",
+          "answer": "Replace row 3 by row 3 + (-5) row 1; replace row 3 by row 3 + (5) row 1."
+        },
+
+        {
+          "question": "An important concern in the study of heat transfer is to determine the steady-state temperature distribution of a thin plate when the temperature around the boundary is known. Assume the plate shown in the figure represents a cross section of a metal beam, with negligible heat flow in the direction perpendicular to the plate. Let \\(T_1,\\dots,T_4\\) denote the temperatures at the four interior nodes of the mesh in the figure. The temperature at a node is approximately equal to the average of the four nearest nodes - to the left, above, to the right, and below. For instance, \\[ T_1=(10+20+T_2+T_4)/4\\] or \\[4T_1T_2-T_4=30\\] Write a system of four equations whose solution gives estimates for the temperatures \\(T_1,\\dots,T_4\\).",
+          "image": "images/1.1.43.PNG",
+          "answer": "\\begin{align*} 4T_1-T_2-T_4=30\\\\ -T_1+4T_2-T_3=60\\\\ -T_2+4T_3-T_4=70\\\\ -T_1-T_3+4T_4\\end{align*}"
         }
+
+
+
+
+
       ],
 
       "Chapter 2: Matrix Algebra":[
@@ -387,7 +503,7 @@
 
       "Unit 9: Inference for Quantitative Data: Slopes":[
         {
-
+          
         }
       ]
     },
@@ -406,8 +522,187 @@
     "AP Chemistry": {
       "Unit 1: Atomic Structure and Properties": [
         {
-          "question": "Find \\(s\\) if \\(u = 0, a = 9.8, t = 2\\)",
-          "answer": "\\(s = \\frac{1}{2}(9.8)(4) = 19.6\\,m\\)"
+          "question": "Which physical state of matter exhibits the greatest change in volume with changes in temperature or pressure?",
+          "answer": "gas"
+        },
+
+        {
+          "question": "What is the number of neutrons in a single atom of \\(^{22}\\)Ne?",
+          "answer": "12"
+        },
+
+        {
+          "question": "What volume of a liquid having a density of 1.48 g/cm\\(^3\\) is needed to supply 5.0 grams of the liquid?",
+          "answer": "3.38 cm\\(^3\\)"
+        },
+
+        {
+          "question": "The density of a metal is 3.0 g/cm\\(^3\\). If a cube of aluminum weighs 24 grams, what is the length of the edge of the cube?",
+          "answer": "2.0 cm"
+        },
+
+        {
+          "question": "The mass of a sample determined on an electronic balance that is sensitive to \\(\\pm 0.3\\) mg is 1.2300 g. What is the number of significant figures in this measurement?",
+          "answer": "5"
+        },
+
+        {
+          "question": "The prefix \"kilo\" denotes raising 10 to which power?",
+          "answer": "3"
+        },
+
+        {
+          "question": "Consider a brass alloy which contains 66% copper and 34% zinc. How many grams of zinc are present in 125 kg of the alloy?",
+          "answer": "\\(4.2\\times 10^4\\) g"
+        },
+
+        {
+          "question": "The number three hundred and fifty thousand, written in scientific notation is best written as what?",
+          "answer": "\\(3.5\\times 10^5\\)"
+        },
+
+        {
+          "question": "Four samples were massed using three different balances. The masses were 0.94 kg, 58.2 g, 1.55 g, and 250 mg. What should the total mass be reported as?",
+          "answer": "\\(1.00\\times 10^3\\) g"
+        },
+
+        {
+          "question": "The number of significant figures in \\(0.06060\\times 10^{-5}\\) is?",
+          "answer": "4"
+        },
+
+        {
+          "question": "To convert a value in kilograms to centigrams what should one do?",
+          "answer": "multiply by \\(10^5\\)"
+        },
+
+        {
+          "question": "The temperature of the room is 300. K. What is its temperture in degrees Celsius?",
+          "answer": "27\\(^{\\circ}\\) C"
+        },
+
+        {
+          "question": "How many in\\(^2\\) are in an area of 5.10 ft\\(^2\\)?",
+          "answer": "734 in\\(^2\\)"
+        },
+
+        {
+          "question": "What is the % error when an experiment produces a value of 25, when the true, accepted value is 75?",
+          "answer": "67%"
+        },
+
+        {
+          "question": "When the prefix micro (\\(\\mu\\)) is used in the metric system, a fundamental unit of measurement is multipled by what factor?",
+          "answer": "\\(10^{-6})\\"
+        },
+
+        {
+          "question": "Of the masses 86.30 g, 0.0863 kg, and \\(8.630\\times 10^5\\) mg, which (if any) is the largest?",
+          "answer": "\\(8.630\\times 10^5\\) mg"
+        },
+
+        {
+          "question": "The density of a sodium sulfate solution is 1.07 g/cm\\(^3\\). The solution is 8.00% sodium sulfate by mass. How many cm\\(^3\\) of the solution are needed to supply 4.28 g of sodium sulfate?",
+          "answer": "50.0 cm\\(^3\\)"
+        },
+
+        {
+          "question": "What is the numerical value of: 1.5 cm - \\(7.222\\times 10^{-1}\\) cm?",
+          "answer": "0.8 cm"
+        },
+
+        {
+          "question": "What is the correct name for Cu\\(_2\\)CO\\(_3\\)?",
+          "answer": "Copper(I) Carbonate"
+        },
+
+        {
+          "question": "If a photon has a frequency of \\(2.00\\times 10^{14}\\) Hz, what is its wavelength?",
+          "answer": "1500 nm"
+        },
+
+        {
+          "question": "A radio station transmits at 110 MHz. What wavelength is this radio wave?",
+          "answer": "2.72 m"
+        },
+
+        {
+          "question": "What is the energy of a photon with a frequency of \\(5\\times 10^{-1}\\) s\\(^{-1}\\)?",
+          "answer": "\\(3.5\\times 10^{-34}\\) J"
+        },
+
+        {
+          "question": "How many orbitals make up the 4d subshell?",
+          "answer": 5
+        },
+
+        {
+          "question": "What sublevel fills immediately before 4d?",
+          "answer": "5s"
+        },
+
+        {
+          "question": "The image below best represents what type of orbital?",
+          "image": "images/CHEM1.7.PNG",
+          "answer": "p"
+        },
+
+        {
+          "question": "What is the correct electron configuration for a nitrogen atom?",
+          "answer": "1s\\(^2\\)2s\\(^2\\)sp\\(^3\\)"
+        },
+
+        {
+          "question": "In what section of the periodic table is the 4f subshell being filled?",
+          "answer": "Lanthanides"
+        },
+
+        {
+          "question": "The successive ionization energies for one of hte period three elements is listed below. Which element is referred to?",
+          "image": "images/CHEM1.19.PNG",
+          "answer": "Al"
+        },
+
+        {
+          "question": "How many occupied outer shell orbitals does an arsenic (atomic number 33) atom possess?",
+          "answer": "4"
+        },
+
+        {
+          "question": "It is found that a mixture of the elements with atomic numbers 5 through 9 inclusive, produce a PES plot where the peaks representing the 1s sub-shell of each element, all have different heights. What is the best explanation for this observation?",
+          "answer": "B,C,N,O and F must have been present in different abundances in the mixture."
+        },
+
+        {
+          "question": "What is the electron configuration of Fe\\(^{3+}\\)?",
+          "answer": "[Ar]3d\\(^5\\)"
+        },
+
+        {
+          "question": "Mass spectrometry, when applied to elements, is used to collect evidence for what feature of atomic structure?",
+          "answer": "Isotopic abundance"
+        },
+
+        {
+          "question": "The following PES best represents what element?",
+          "image": "images/CHEM1.27.PNG",
+          "answer": "Al"
+        },
+
+        {
+          "question": "The electrons labeled \"1.36\" represent which sublevel?",
+          "image": "images/CHEM1.29.PNG",
+          "answer": "2s"
+        },
+
+        {
+          "question": "Order the following species from smallest to largest radius: Li\\(^+\\), Be\\(^{2+}\\), Cs\\(^+\\), K\\(^+\\).",
+          "answer": "Be\\(^{2+}\\)<Li\\(^+\\)<K\\(^+\\)<Cs\\(^+\\)"
+        },
+
+        {
+          "question": "The mass spectrum of a particular metal shows five distinct peaks, ranging in m/e values from 90 to 96. What do these data alone suggest about the metal?",
+          "answer": "It exists as five different isotopes."
         }
       ],
 
@@ -458,222 +753,5 @@
 
         }
       ]
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    "Honors Chemistry": {
-      "Unit 1: Nature of Science": [
-        {
-          "question": "How many significant figures are in \\(9.07\\)?",
-          "answer": "\\(3\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(12\\)?",
-          "answer": "\\(2\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(1200.\\)?",
-          "answer": "\\(4\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(0.03\\)?",
-          "answer": "\\(1\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(1.003\\)?",
-          "answer": "\\(4\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(1.00\\)?",
-          "answer": "\\(3\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(0.02\\)?",
-          "answer": "\\(1\\)"
-        },
-
-        {
-          "question": "How many significant figures are in \\(100\\)?",
-          "answer": "\\(1\\)"
-        },
-
-        {
-          "question": "Write \\(0.00007\\) in scientific notation.",
-          "answer": "\\(7\\cdot 10^{-5}\\)"
-        },
-        
-        {
-          "question": "Write \\(420034\\) in scientific notation.",
-          "answer": "\\(4.20034\\cdot 10^5\\)"
-        },
-
-        {
-          "question": "Write \\(0.00450\\) in scientific notation.",
-          "answer": "\\(4.50\\cdot 10^{-5}\\)"
-        },
-        
-        {
-          "question": "Write \\(123456\\) in scientific notation.",
-          "answer": "\\(1.23456\\cdot 10^5\\)"
-        },
-        
-        {
-          "question": "Write \\(0.001\\) in scientific notation.",
-          "answer": "\\(1\\cdot 10^{-3}\\)"
-        },
-        
-        {
-          "question": "Write \\(100.\\) in scientific notation.",
-          "answer": "\\(1.00\\cdot 10^{2}\\)"
-        },
-
-        {
-          "question": "Write \\(1000.\\) in scientific notation.",
-          "answer": "\\(1.000\\cdot 10^3\\)"
-        },
-        
-        {
-          "question": "Write \\(3.1\\times 10^4\\) in floating decimal notation.",
-          "answer": "\\(31000\\)"
-        },
-        
-        {
-          "question": "Write \\(2.48\\times 10^3\\) in floating decimal notation.",
-          "answer": "\\(2480\\)"
-        },
-        
-        {
-          "question": "Write \\(1.000\\times 10^{-3}\\) in floating decimal notation.",
-          "answer": "\\(0.001000\\)"
-        },
-
-        {
-          "question": "Write \\(1.45\\times 10^6\\) in floating decimal notation.",
-          "answer": "\\(0.00000145\\)"
-        },
-        
-        {
-          "question": "Write \\(1.00\\times 10^2\\) in floating decimal notation.",
-          "answer": "\\(100.\\)"
-        },
-
-        {
-          "question": "Round \\(6080.4\\) to 3 significant figures.",
-          "answer": "\\(6080\\)"
-        },
-
-        {
-          "question": "Round \\(6080.4\\) to 4 significant figures.",
-          "answer": "\\(6080.\\)"
-        },
-
-        {
-          "question": "\\( (2.3\\)cm)\\(4.007\\)cm)",
-          "answer": "\\(9.2\\) cm\\(^2\\)"
-        }
-      ],
-
-      "Unit 2: Atomic Structure and Energy of Electrons":[
-        {
-
-        }
-      ],
-
-      "Unit 3: Periodicity":[
-        {
-
-        }
-      ],
-
-      "Unit 4: Bonding and Compounds":[
-        {
-
-        }
-      ],
-
-      "Unit 5: Reactions":[
-        {
-
-        }
-      ],
-
-      "Unit 6: Stoichiometry":[
-        {
-
-        }
-      ],
-
-      "Unit 7: VSPER/IMFs":[
-        {
-
-        }
-      ],
-
-      "Unit 8: States of Matter":[
-        {
-
-        }
-      ],
-
-      "Unit 9: Gas Laws":[
-        {
-
-        }
-      ],
-
-      "Unit 10: Solutions":[
-        {
-
-        }
-      ],
-
-      "Unit 11: Acids and Bases":[
-        {
-
-        }
-      ],
-
-      "Unit 12: Equilibrium":[
-        {
-
-        }
-      ],
-
-      "Unit 13: Thermochemistry":[
-        {
-
-        }
-      ],
-
-      "Unit 14: Nuclear Chemistry":[
-        {
-
-        }
-      ],
-
-      "Unit 15: Organic Chemistry":[
-        {
-
-        }
-      ]
     }
-  }
+}
