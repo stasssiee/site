@@ -1,0 +1,688 @@
+{
+    "Unit 1: Atomic Structure and Properties": [
+        {
+            "question": "Which physical state of matter exhibits the greatest change in volume with changes in temperature or pressure?",
+            "answer": "gas"
+        },
+        {
+            "question": "What is the number of neutrons in a single atom of \\(^{22}\\)Ne?",
+            "answer": "12"
+        },
+        {
+            "question": "What volume of a liquid having a density of 1.48 g/cm\\(^3\\) is needed to supply 5.0 grams of the liquid?",
+            "answer": "3.38 cm\\(^3\\)"
+        },
+        {
+            "question": "The density of a metal is 3.0 g/cm\\(^3\\). If a cube of aluminum weighs 24 grams, what is the length of the edge of the cube?",
+            "answer": "2.0 cm"
+        },
+        {
+            "question": "The mass of a sample determined on an electronic balance that is sensitive to \\(\\pm 0.3\\) mg is 1.2300 g. What is the number of significant figures in this measurement?",
+            "answer": "5"
+        },
+        {
+            "question": "The prefix \"kilo\" denotes raising 10 to which power?",
+            "answer": "3"
+        },
+        {
+            "question": "Consider a brass alloy which contains 66% copper and 34% zinc. How many grams of zinc are present in 125 kg of the alloy?",
+            "answer": "\\(4.2\\times 10^4\\) g"
+        },
+        {
+            "question": "The number three hundred and fifty thousand, written in scientific notation is best written as what?",
+            "answer": "\\(3.5\\times 10^5\\)"
+        },
+        {
+            "question": "Four samples were massed using three different balances. The masses were 0.94 kg, 58.2 g, 1.55 g, and 250 mg. What should the total mass be reported as?",
+            "answer": "\\(1.00\\times 10^3\\) g"
+        },
+        {
+            "question": "The number of significant figures in \\(0.06060\\times 10^{-5}\\) is?",
+            "answer": "4"
+        },
+        {
+            "question": "To convert a value in kilograms to centigrams what should one do?",
+            "answer": "multiply by \\(10^5\\)"
+        },
+        {
+            "question": "The temperature of the room is 300. K. What is its temperture in degrees Celsius?",
+            "answer": "27\\(^{\\circ}\\) C"
+        },
+        {
+            "question": "How many in\\(^2\\) are in an area of 5.10 ft\\(^2\\)?",
+            "answer": "734 in\\(^2\\)"
+        },
+        {
+            "question": "What is the % error when an experiment produces a value of 25, when the true, accepted value is 75?",
+            "answer": "67%"
+        },
+        {
+            "question": "When the prefix micro (\\(\\mu\\)) is used in the metric system, a fundamental unit of measurement is multipled by what factor?",
+            "answer": "\\(10^{-6}\\)"
+        },
+        {
+            "question": "Of the masses 86.30 g, 0.0863 kg, and \\(8.630\\times 10^5\\) mg, which (if any) is the largest?",
+            "answer": "\\(8.630\\times 10^5\\) mg"
+        },
+        {
+            "question": "The density of a sodium sulfate solution is 1.07 g/cm\\(^3\\). The solution is 8.00% sodium sulfate by mass. How many cm\\(^3\\) of the solution are needed to supply 4.28 g of sodium sulfate?",
+            "answer": "50.0 cm\\(^3\\)"
+        },
+        {
+            "question": "What is the numerical value of: 1.5 cm - \\(7.222\\times 10^{-1}\\) cm?",
+            "answer": "0.8 cm"
+        },
+        {
+            "question": "What is the correct name for Cu\\(_2\\)CO\\(_3\\)?",
+            "answer": "Copper(I) Carbonate"
+        },
+        {
+            "question": "If a photon has a frequency of \\(2.00\\times 10^{14}\\) Hz, what is its wavelength?",
+            "answer": "1500 nm"
+        },
+        {
+            "question": "A radio station transmits at 110 MHz. What wavelength is this radio wave?",
+            "answer": "2.72 m"
+        },
+        {
+            "question": "What is the energy of a photon with a frequency of \\(5\\times 10^{-1}\\) s\\(^{-1}\\)?",
+            "answer": "\\(3.5\\times 10^{-34}\\) J"
+        },
+        {
+            "question": "How many orbitals make up the 4d subshell?",
+            "answer": 5
+        },
+        {
+            "question": "What sublevel fills immediately before 4d?",
+            "answer": "5s"
+        },
+        {
+            "question": "The image below best represents what type of orbital?",
+            "image": "images/CHEM1.7.PNG",
+            "answer": "p"
+        },
+        {
+            "question": "What is the correct electron configuration for a nitrogen atom?",
+            "answer": "1s\\(^2\\)2s\\(^2\\)sp\\(^3\\)"
+        },
+        {
+            "question": "In what section of the periodic table is the 4f subshell being filled?",
+            "answer": "Lanthanides"
+        },
+        {
+            "question": "The successive ionization energies for one of hte period three elements is listed below. Which element is referred to?",
+            "image": "images/CHEM1.19.PNG",
+            "answer": "Al"
+        },
+        {
+            "question": "How many occupied outer shell orbitals does an arsenic (atomic number 33) atom possess?",
+            "answer": "4"
+        },
+        {
+            "question": "It is found that a mixture of the elements with atomic numbers 5 through 9 inclusive, produce a PES plot where the peaks representing the 1s sub-shell of each element, all have different heights. What is the best explanation for this observation?",
+            "answer": "B,C,N,O and F must have been present in different abundances in the mixture."
+        },
+        {
+            "question": "What is the electron configuration of Fe\\(^{3+}\\)?",
+            "answer": "[Ar]3d\\(^5\\)"
+        },
+        {
+            "question": "Mass spectrometry, when applied to elements, is used to collect evidence for what feature of atomic structure?",
+            "answer": "Isotopic abundance"
+        },
+        {
+            "question": "The following PES best represents what element?",
+            "image": "images/CHEM1.27.PNG",
+            "answer": "Al"
+        },
+        {
+            "question": "The electrons labeled \"1.36\" represent which sublevel?",
+            "image": "images/CHEM1.29.PNG",
+            "answer": "2s"
+        },
+        {
+            "question": "Order the following species from smallest to largest radius: Li\\(^+\\), Be\\(^{2+}\\), Cs\\(^+\\), K\\(^+\\).",
+            "answer": "Be\\(^{2+}\\)<Li\\(^+\\)<K\\(^+\\)<Cs\\(^+\\)"
+        },
+        {
+            "question": "The mass spectrum of a particular metal shows five distinct peaks, ranging in m/e values from 90 to 96. What do these data alone suggest about the metal?",
+            "answer": "It exists as five different isotopes."
+        },
+        {
+            "question": "Write the following numbers in scientific notation with the correct number of significant figures: a) 1,327, b) 0.00562, c) 2.76, d) 0.166, e) 0.09911, f) 100.0",
+            "answer": "a) \\(1.327\\times 10^3\\), b) \\(5.62\\times 10^{-3}\\), c) \\(2.76\\times 10^0\\), d) \\(1.66\\times 10^{-1}\\), e) \\(9.911\\times 10^{-2}\\), f) \\(1.000\\times 10^2\\)"
+        },
+        {
+            "question": "A sample of gold alloy conatins 5.6% by mass. How many grams of silver are there in 1 kilogram of the alloy?",
+            "answer": "56 g Ag"
+        },
+        {
+            "question": "What is the empirical formula of an oxide of nitrogen that is approximately 70% oxygen by mass?",
+            "answer": "NO\\(_2\\)"
+        },
+        {
+            "question": "A compound contains 4.50 mol of X, 2.25 mol of Y, and 9.00 mol of Z. What is the simplest formula of this compound?",
+            "answer": "X\\(_2\\)YZ\\(_4\\)"
+        },
+        {
+            "question": "When a 208 g sample of an unknown hydrate of calcium carbonate, CaCO\\(_3\\cdot x\\)H\\(_2\\)O(s) is heated, water is driven off. The mass of the anhydrous CaCO\\(_3\\) (s) (molar mass 100. g) that remains is 100. g. Find the value of \\(x\\) in the hydrate.",
+            "answer": "\\(x=6\\)"
+        },
+        {
+            "question": "Uranium has an atomic mass equal to 238.0289. It consists of two isotopes: uranium-235 with an isotopic mass of 235.44 amu and uranium-238 with an isotopic mass of 238.51. Calculate the % abundance of the uranium-235 isotope.",
+            "answer": "15.67%"
+        },
+        {
+            "question": "Suppose you have a cylindrical glass tube with a thin capillary opening, and you wish to determine the diameter of the capillary. You can do this experimentally by weighing a piece of the tubing before and after filling a portion of the capillary with mercury. Using the following information, calculate the diameter of the capillary. <br> Mass of tube before adding Hg = 3.263 g <br> Mass of tube after adding Hg = 3.416 g <br> Length of capillary filled with Hg = 16.75 mm <br> Density of Hg = 13.546 g/cm\\(^3\\) <br> Volume of cylindrical capillary filled with Hg = (pi)(radius)\\(^2\\)(length)",
+            "answer": "\\(9.27\\times 10^{-2}\\) cm"
+        },
+        {
+            "question": "The diagram shows the first ionization energies for the elements from Li to Ne. Briefly (in one to three sentences) explain each of the following in terms of atomic structure. <br> (a) In general, there is an increase in the first ionization energy from Li to Ne. <br> (b) The first ionization energy of B is lower than that of Be. <br>(c) The first ionization energy of O is lower than that of N. <br> (d) Predict how the first ionization energy of Na compares to those of Li and of Ne. Explain.",
+            "image": "images/CHEM1.1990.PNG",
+            "answer": "(a) As the number of protons increases, the Zeff increases which implies the valence electrons are more tightly held which implies that there is more energy required to remove an electron. <br> (b) The valence electrons of B is a 2p electron while the valence electron of Be is a 2s electron. 2p electrons are in a higher energy level which implies less tightly held which implies it is easier to remove despite increasing nuclear pull. <br> (c) Oxygen's outer subshell electrons are 2p\\(^4\\) versus N which are 2p\\(^3\\). The 1st pairing of electrons in oxygen results in increased electron-electron repulsions which results in less energy being required to remove its valence electrons, despite an increase in nuclear pull. <br> (d) The ionization energy of Na will be less than that of either Li or Ne since the valence electrons is a 3s electron in Na as opposed to a 2s or 2p electron. The 3s electron is in a higher energy level which implies that it is further from the nucleus which means it is less tightly held and therefore requires less energy to remove it."
+        },
+        {
+            "question": "Account for each of the following in terms of principles of atom structure, including the number, properties, and arrangements of subatomic particles. <br> (a) The second ionization energy of sodium is about three times greater than the second ionization energy of magnesium. <br> (b) The difference between the atomic radii of Na and K is relatively large compared to the difference between the atomic radii of Rb and Cs. <br> (c) A sample of nickel chloride is attracted into a magnetic field, whereas a sample of solid zinc chloride is not. <br> (d) Phosphorus forms the fluorides PF\\(_3\\) and PF\\(_5\\), whereas nitrogen forms only NF\\(_3\\).",
+            "answer": "(a) Na's 2nd ionization energy is greater since the 2nd electron removed comes from a lower energy 2p orbital compared to the higher energy 3s orbital of Mg. The 2p electron is more tightly held which means more energy is required to remove it despite the higher Zeff of Mg. <br> (b) Greater shielding in Rb and Cs means the outer shells are more loosely held and can expand to a similar extent to one another, making the difference in their size relatively small. Less shielding in the Na and K atom means the 3s shell experiences significantly more nuclear attraction than the 4s shell, making the difference in atomic radii greater. <br> (c) The valence electron Ni\\(^{2+}\\) and Zn\\(^{2+}\\) have both ions lose the 2 4s electrons to become ions with +2 charge. Ni has unpaired 3d electrons and is thus paramagnetic and attracted to a magnetic field whereas Zn is not since all of its electrons are paired. <br> (d) N has no d-orbitals, therefore it cannot expand its octet and form 5 bonds. N can only make 4 bonds maximum. P has 3d orbitals and can violate the octet rules, expand its octet and form PF\\(_5\\)."
+        },
+        {
+            "question": "The longest wavelength of light with enough energy to break the Cl-Cl bond in Cl\\(_2\\) (g) is 495 nm. <br> (i) Calculate the frequency, in s\\(^{-1}\\), of the light. <br> (ii) Calculate the energy, in J, of a photon of the light. <br> (iii) Calculate the minimum energy, in kJ mol\\(^{-1}\\) of the Cl-Cl bond.",
+            "answer": "(i) \\(6.06\\times 10^{14}\\) Hz <br> (ii) \\(4.01\\times 10^{-19}\\) J<br> (iii) 242 kJ/mol"
+        },
+        {
+            "question": "A certain line in the spectrum of atomic hydrogen is associated with the electronic transition in the H atom from the sixth energy level to the second energy level. <br> (i) Indicate whether the H atom emits energy of whether it absorbs energy during the transition. Justify your answer. <br> (ii) Calculate the wavelength, in nm, of the radiation associated with the spectral line. <br> (iii) Account for the observation that the amount of energy associated with the same electronic transition in the He\\(^+\\) ion is greater than that associated with the corresponding transition in the H atom.",
+            "answer": "(i) Emits energy. The sixth energy level state is higher than the second energy level, therefore energy is emitted during the transition.<br> (ii) 410. nm <br> (iii) He\\(^+\\) only has 1 electron as does the H atom. However, He\\(^+\\) has 2 protons compared to H's 1 proton, therefore the electrons are more attracted to He's nucleus therefore more energy is emitted when an electron transitions from a higher state to a lower one in He vs H."
+        },
+        {
+            "question": "Answer the following questions about the element selenium, Se (atomic number 34) <br> (a) Samples of natural selenium contain six stable isotopes. In terms of atomic structure, explain what these isotopes have in common, and how they differ. <br> (ii) Write the complete electron configuration for a selenium atom in the ground state. Indicate the number of unpaired electrons in the ground-state atom, and explain your reasoning. <br> (iii) In terms of atomic structure, explain why the first ionization energy of selenium is (i) less than that of bromine, and (ii) greater than that of telleurium. <br> (d) Selenium reacts with fluorine to form SeF\\(_4\\). Draw the complete Lewis electron-dot structure for SeF\\(_4\\), and sketch the molecular structure. Indicate whether the molecule is polar or nonpolar, and justify your answer.",
+            "answer": "(a) Isotopes have the same number of protons but a different number of neutrons, therefore a different mass. <br> (b) 1s\\(^2\\)2s\\(^2\\)2p\\(^6\\)3s\\(^2\\)3p\\(^6\\)4s\\(^2\\)3d\\(^{10}\\)4p\\(^4\\). There are two unpaired electrons since there are three p-orbitals and four electrons to place in them that will occupy each orbital singly prior to pairing in order to minimize electron-electron repulsion. <br> (c) (i) In both Se and Br the electrons to be removed is a 4p valence electron. Br has more protons than Se therefore a higher nuclear attraction and Br's electrons are more rightly held as a result, therefore more energy is needed to remove and electron from Br vs Se. (ii) The valence electron removed from Se is a 4p electron compared to the 5p electron removed from Te. 5p electrons are of higher energy therefore more loosely held, thus less energy is required to remove Te's valence electron vs Se's. <br> (d) <img src = 'courses/images/CHEM20004.PNG'> SeF\\(_4\\) is a polar molecule since the polarities of the Se-F bonds and the lone pair of electrons on Se do not cancel therefore there is not a dipole moment."
+        },
+        {
+            "question": "Answer the following questions related to sulfur and one of its compounds. <br> (a) Consider the two chemical species S and S\\(^{2-}\\). (i) Write the electron configuration of each species. (ii) Explain why the radius of the S\\(^{2-}\\) ion is larder than the radius of the S atom. (iii) Which of the two species would be attracted into a magnetic field? Explain. <br> (b) The S\\(^{2-}\\) ion is isoelectronic with the Ar atom. From which species, S\\(^{2-}\\) or Ar, is it easier to remove an electron? Explain. <br> (c) In the H\\(_2\\)S molecule, the H-S-H bond angle is close to 90\\(^{\\circ}\\). On the basis of this information, which atomic orbitals of the S atom are involved in bonding with the H atoms? <br> (d) Two types of intermolecular forces present in liquid H\\(_2\\)S are London forces and dipole-dipole forces. (i) Compare the strength of the London forces in liquid H\\(_2\\)S to the strength of the London forces in liquid H\\(_2\\)O. Explain. (ii) Compare the strength of the dipole-dipole forces in liquid H\\(_2\\)S to the strength of the dipole-dipole forces in liquid H\\(_2\\)O. Explain.",
+            "answer": "(a) (i) Sulfur: 1s\\(^2\\)2s\\(^2\\)2p\\(^6\\)3s\\(^2\\)3p\\(^4\\), sulfide: 1s\\(^2\\)2s\\(^2\\)2p\\(^6\\)3s\\(^2\\)3p\\(^6\\) (ii) Both S and S\\(^{2-}\\) have 16 protons, but S\\(^{-2}\\) has two additional electrons. The increased number of electrons causes more electron-electron repulsions therefore increasing the average distance between the electrons in S\\(^{2-}\\) thus increasing its radius compared to that of netural S. (iii) S is magnetic since it has 2 unpaired valence electrons and is paramagnetic. S\\(^{2-}\\) is diamagnetic since all of its electrons are paired, thus their magnetic moments cancel.<br> (b) It is easier to remove an electron from S\\(^{2-}\\) since it has 2 fewer protons than does Ar, therefore S\\(^{2-}\\) cannot attract its valence electrons as strongly as Ar and thus less energy is required to remove a valence electron from S\\(^{2-}\\). <br> (c) Only p orbitals are involved since p orbitals are mutually perpendicular. <br> (d) (i) The LDFs of H\\(_2\\)S are stronger since H\\(_2\\)S has more electrons than H\\(_2\\)O, thus H\\(_2\\)S's electron cloud is more polarizable therefore H\\(_2\\)S has stronger LDFs than H\\(_2\\)O. (ii) H\\(_2\\)S has weaker dipole-dipole forces than H\\(_2\\)O because the H-S bonds are not as polar as the H-O bonds because S is less electronegative than O, resulting in a smaller smaller net dipole moment for the H\\(_2\\)S molecule compared to that of H\\(_2\\)O."
+        }
+    ],
+    "Unit 2: Compound Structure and Properties": [
+        {
+            "question": "Using the picture below, what process corresponds to the lattice energy of the ionic compound?",
+            "image": "images/CHEM2.2.PNG",
+            "answer": "5"
+        },
+        {
+            "question": "What type of change takes place when solid sodium chloride is dissolved in distilled water?",
+            "answer": "Both chemical and physical since both intra and inter interactions are broken."
+        },
+        {
+            "question": "How many electrons are shown in the Lewis structure of perchlorate ion, ClO\\(_4^{-}\\)?",
+            "answer": "32"
+        },
+        {
+            "question": "As the bond order of a carbon-carbon bond increases, what will decrease?",
+            "answer": "bond length"
+        },
+        {
+            "question": "What is the bond order of the C-O bond in acetone?",
+            "image": "images/CHEM2.7.PNG",
+            "answer": "2"
+        },
+        {
+            "question": "(a) What is the energy of the two isolated atoms? <br> (b) What is the bond length of the bond between the two atoms? <br> (c) What is the bond energy (bond strength) of the bond?",
+            "image": "images/CHEM2.8.PNG",
+            "answer": "(a) 0 J <br> (b) 0.140 nm <br> (c) -330 J"
+        },
+        {
+            "question": "What is the Lewis structure for SOCl\\(_2\\)?",
+            "answer": "",
+            "answerImage": "images/CHEM2.11S.PNG"
+        },
+        {
+            "question": "When melting a substance, it is observed that less energy is required than when vaporizing the same amount of the same substance. What would best account for this observation?",
+            "answer": "When vaporizing, any intermolecular forces need to be completely broken."
+        },
+        {
+            "question": "What molecular shape has six atoms joined to a central atom?",
+            "answer": "octahedral"
+        },
+        {
+            "question": "What molecular shape is best described as two polar bonds and three equatorial bonds, as shown below?",
+            "image": "images/CHEM2.17.PNG",
+            "answer": "trigonal bypyramidal"
+        },
+        {
+            "question": "The molecule BrF\\(_3\\) has how many lone pairs of electrons on the central atom?",
+            "answer": "2"
+        },
+        {
+            "question": "What is the electron geometry of the H\\(_2\\)O atom?",
+            "answer": "tetrahedral"
+        },
+        {
+            "question": "What is the shape of the BrI\\(_3\\) molecule?",
+            "answer": "T-shaped"
+        },
+        {
+            "question": "What is the shape of the IF\\(_4^{-}\\) ion?",
+            "answer": "square planar"
+        },
+        {
+            "question": "Which hybridization is associated with three areas of electron density?",
+            "answer": "sp\\(^2\\)"
+        },
+        {
+            "question": "Which phenomenon accounts for the fact that the carbonate ion exhibits carbon-oxygen bond lengths that are intermediate in length and strength, between a single carbon-oxygen bond, and a double carbon-oxygen bond?",
+            "answer": "Resonance"
+        },
+        {
+            "question": "Which response contains all the characteristics that apply to BF\\(_3\\)? <br> I. trigonal planar <br> II. one unshaped pair of electrons on B <br> III. sp\\(^2\\) hybridized boron atom <br> IV. polar molecule <br> V. polar bonds",
+            "answer": "I, III, and V"
+        },
+        {
+            "question": "What hybridization is predicted for phosphorus in the PCl\\(_3\\) molecule?",
+            "answer": "sp\\(^3\\)"
+        },
+        {
+            "question": "What angle exists between orbitals in sp\\(^3\\) hybrid orbitals?",
+            "answer": "109.5\\(^{\\circ}\\)"
+        },
+        {
+            "question": "Each of the carbon-oxygen bonds in CO\\(_2\\) contains how many sigma bonds and pi bonds?",
+            "answer": "1 sigma, 1 pi"
+        },
+        {
+            "question": "How many total sigma and pi electron pairs are in a carbon dioxide molecule?",
+            "answer": "two sigma, two pi"
+        },
+        {
+            "question": "Explain each of the following in terms of the electronic structure and/or bonding of the compounds involved. <br> (a) At ordinary conditions, HF is a liquid, whereas HCl is a gas. <br> (b) Molecules of AsF\\(_3\\) are polar, whereas molecules of AsF\\(_5\\) are nonpolar. <br> (c) The N-O bonds in the NO\\(_2^{-}\\) ion are equal in length, whereas they are unequal in HNO\\(_2\\). <br> (d) For sulfur, the fluorides SF\\(_2\\), SF\\(_4\\), and SF\\(_6\\) are known to exist, whereas for oxygen only OF\\(_2\\) is known to exist.",
+            "answer": "(a) Since the H of the HF is bound to the very electronegative F atom, it exhibits a special type of dipole-dipole IMF called hydrogen bonding. HCl molecules are held together with only dipole-dipole forces, therefore they cannot H-bond. It takes more energy to separate HF molecules than HCl molecules due to the hydrogen bonding of HF. <br> (b) AsF\\(_3\\) is a trigonal pyramidal and AsF\\(_5\\) is trigonal bipyramidal. AsF\\(_3\\) is polar since it has a net dipole moment due to the presence of a line pair of electrons. AsF\\(_5\\) has all of its dipole moments cancelling therefore it is nonpolar with no net dipole moment. <br> (c) The nitrite ion has resonance structures with a bond order of 1.5 for each N-O bond. HNO\\(_2\\) does not exhibit resonance therefore HNO\\(_2\\) has 1 N-O single bond and 1 N=O double bond with different lengths. <br> (d) Sulfur's valence electrons are from the 3rd principle energy level therefore d-orbitals are present, therefore S can expand its octet and form 6 bonds around the central atom. Oxygen's valence electrons are from the 2nd principle energy level therefore there are no d-orbitals and O cannot expand its octet."
+        },
+        {
+            "question": "Answer the following questions using principles of chemical bonding and molecular structure. <br> (a) Consider the carbon dioxide molecule, CO\\(_2\\), and the carbonate ion, CO\\(_3^{2-}\\). <br> (i) Draw the complete Lewis electron-dot structure for each species. <br> (ii) Account for the fact that the carbon-oxygen bond length in CO\\(_3^{2-}\\) is greater than the carbon-oxygen bond length in CO\\(_2\\), <br> (b) Consider the molecules CF\\(_4\\) and SF\\(_4\\). <br> (i) Draw the complete Lewis electron-dot structure for each molecule. <br> (ii) In terms of molecular geometry, account for the fact that the CF\\(_4\\) molecule is nonpolar, whereas the SF\\(_4\\) molecule is polar.",
+            "answer": "(a) (i) <img src = 'courses/images/CHEM2A11.PNG'> <img src = 'courses/images/CHEM2A12.PNG'><br> (ii) CO\\(_2\\) has 2 C=O bonds with a bond order of 2 compared to CO\\(_3^{2-}\\) which has 3 resonance structures where each C-O bond has a bond order of 1 1/3. A bond order of 1 1/3 has less electron density than a double bond and is therefore larger.<br> (b) (i) <img src = 'courses/images/CHEM2A21.PNG'> <img src = 'courses/images/CHEM2A22.PNG'> <br> (ii) CF\\(_4\\) is tetrahedral and contains 4 polar C-F bonds. However, it is nonpolar since all of the dipole moments cancel. SF\\(_4\\) is seesaw with a lone pair of electrons present on the central atom, therefore it has a net dipole moment and is therefore polar."
+        },
+        {
+            "question": "Using principles of chemical bonding and molecular geometry, explain each of the following observations. Lewis electron-dot diagrams and sketches of molecules may be helpful as part of your explanations. For each observation, your answer must include references to both substances. <br> (a) The bonds in nitrite ion, NO\\(_2^{-}\\), are shorter than the bonds in nitrate ion, NO\\(_3^-\\). <br> (b) The CH\\(_2\\)F\\(_2\\) molecule is polar, whereas the CF\\(_4\\) molecule is not. <br> (c) The atoms in a C\\(_2\\)H\\(_4\\) molecule are located in a single plane, whereas those in a C\\(_2\\)H\\(_6\\) molecule are not. <br> (e) HClO\\(_3\\) is a stronger acid than HClO.",
+            "answer": "(a) NO\\(_2^-\\) has a bond order of 1.5 while NO\\(_3^-\\) has a bond order of 1 1/3. The greater the bond order, the greater the electron density, the shorter the bonds. <br> (b) Both molecules are tetrahedral, but CH\\(_2\\)F\\(_2\\) has a net dipole moment due to the C-F bonds being more polar than the C-H bonds. CF\\(_4\\) has no net dipole moment since the individual dipole moments cancel. <br> (c) The presence of a double bond in C\\(_2\\)H\\(_4\\) leads to trigonal planar geometry of each C-H bond, therefore the entire molecule is planar. Each C in C\\(_2\\)H\\(_6\\) has tetrahedral bonds, therefore the overall structure cannot be planar. <br> (d) PF\\(_5\\) has no lone pairs of electrons on the central atom while IF\\(_5\\) has 1 lone pair. PF\\(_5\\) has trigonal bipyramidal geometry whereas IF\\(_5\\) is square pyramidal. <br> (e) HClO\\(_3\\) is a stronger acid than HClO due to the presence of 2 additional highly electronegative O atoms which pull additional electron density away from the Cl atom which weakens the O-H bond."
+        },
+        {
+            "question": "Use the information in the following table to answer the following questions about organic compounds. <br> (a) For propanone, <br>(i) draw the complete structural formula (showing all atoms and bonds)<br> (ii) predict the approximate carbon-to-carbon-to-carbon bond angle <br> (b) For each pair of copmpounds below, explain why they do not have the same value for their standard heat of varporization. \\(\\Delta H^{\\circ}_{vap}\\) (You must include specific information about both compounds in each pair.)<br> (i) Propane and propanone<br> (ii) Propanone and 1-propanol<br> (c) Draw the complete structural formula for an isomer of the molecule you drew in part (a) (i) <br> (d) Given the structural formula for propyne. <img src = 'courses/images/CHEM2.4.PNG'> <br> (i) indicate the hybridization of the carbon atom indicated by the arrow in the structure <br> (ii) indicate the total number of sigma bonds and the total number of pi bonds in the molecule.",
+            "image": "images/CHEM2.4D.PNG",
+            "answer": "(a) (i) <img src = 'courses/images/CHEM2.4S.PNG'> (ii) 120\\(^{\\circ}\\) <br> (b) (i) Propane molecules are attracted to each other only by dispersion forces. Propanone molecules are attracted by dispersion forces and dipole-dipole forces which are stronger, therefore more energy is required to separate propanone molecules than propane molecules. <br> (ii) Propanol molecules are attracted to each other by dispersion forces, dipole-dipole, and hydrogen bonding while propanone cannot form H-bond IMFs. Therefore, it requires more energy to vaporize 1-propanol, due to its stronger IMFs. <br> (c) <img src = 'courses/images/CHEM2.4S2.PNG'> <br> (d) (i) sp <br> (ii) 6 sigma, 2 pi"
+        }
+    ],
+    "Unit 3: Properties of Substances and Mixtures": [
+        {
+            "question": "At what temperatures and pressure would a real gas act most ideal?",
+            "answer": "High T, Low P"
+        },
+        {
+            "question": "In which of the following molecules will dipole-dipole attractions play the most significant role as the intermolecular attraction? <br> Choose: HCl, NaCl, Kr, H\\(_2\\)O, NH\\(_3\\)",
+            "answer": "HCl"
+        },
+        {
+            "question": "With which type of substances do London dispersion forces play the most significant role? <br> Choose: polar molecules, metals, ionic compounds, non-polar molecules, network compounds",
+            "answer": "non-polar compounds"
+        },
+        {
+            "question": "When temperature decreases, what happens to the solubility of gaseous solutes in liquid solvents?",
+            "answer": "Gaseous solutes always become more soluble in liquid solvents as temperature decreases."
+        },
+        {
+            "question": "A given mass of gas in a rigid container is heated from 100\\(^{\\circ}\\)C to 300\\(^{\\circ}\\)C. What will happen to the pressure of the gas?",
+            "answer": "It will increase by a factor less than 3"
+        },
+        {
+            "question": "A 31.0 mL sample of gas is collected at a temperature of 37\\(^{\\circ}\\)C and pressure of 720 mmHg. What is the its volume in mL at 17\\(^{\\circ}\\)C and 580 mmHg?",
+            "answer": "[(720)(31)(290)]/[(310)(580)]"
+        },
+        {
+            "question": "If a gas that is confined in a rigid container is heated, what will happen to the pressure of the gas?",
+            "answer": "increase"
+        },
+        {
+            "question": "Of the following 5 substances, which exhibits the stronger intermolecular forces of attraction? <br> Choose: CH\\(_4\\), C\\(_2\\)H\\(_6\\), C\\(_3\\)H\\(_8\\), CH\\(_3\\)OH, CH\\(_3\\)Cl",
+            "answer": "CH\\(_3\\)OH"
+        },
+        {
+            "question": "For the dissolution process, what conditions do you want the strength of the solvent-solvent interaction, the solvent-solute interaction, and the solute-solute interaction?",
+            "answer": "Weaker solvent-solvent, stronger solvent-solute, weaker solute-solute"
+        },
+        {
+            "question": "What is the number of moles of Al(NO\\(_3\\)\\(_3\\) which must be added to form 2.00 L of 0.30 M NO\\(_3^-\\) ions?",
+            "answer": "0.20 mol"
+        },
+        {
+            "question": "Determine the molarity of a solution that is made by dissolving 20.0 g of ammonium nitrate, NH\\(_4\\)NO\\(_3\\) (MW = 80 g/mol) in enough water to make 250.0 mL of solution.",
+            "answer": "1.00 M"
+        },
+        {
+            "question": "Which type of solid generally has the highest melting point?",
+            "answer": "Network"
+        },
+        {
+            "question": "What is the pressure exerted by some nitrogen gas collected in a tube filled with water on a day when the temperature is 18.0\\(^{\\circ}\\)C and the room pressure is 750.0 mmHg. [The partial pressure of water at this temperature is 15.5 mmHg.]",
+            "answer": "734.5 mmHg"
+        },
+        {
+            "question": "The phase diagram of a substance is given below. What occurs when the substance is heated from 100\\(^{\\circ}\\) to 120\\(^{\\circ}\\) at 3 atm pressure?",
+            "image": "images/CHEM3.14.PNG",
+            "answer": "it boils"
+        },
+        {
+            "question": "CH\\(_4\\) gas and O\\(_2\\) gas are together in a container. What can you say about the velocities of the two molecules?",
+            "answer": "The CH\\(_4\\) is moving faster, but less than twice as fast as the O\\(_2\\)"
+        },
+        {
+            "question": "Predict what effect increasing the charge of the metal ion has on the solubility in water of KCl compared with CaCl\\(_2\\).",
+            "answer": "The solubility of KCl is greater than that of CaCl\\(_2\\) due to weaker Coulombic forces in the KCl."
+        },
+        {
+            "question": "A mixture of gases at 810 kPa pressure contains: 3.0 moles of oxygen gas, 2.0 moles of helium gas, and 4.0 moles of carbon dioxide gas. What is the partial pressure of oxygen gas, P\\(_{O2}\\)?",
+            "answer": "270 kPa"
+        },
+        {
+            "question": "Explain how the ions in KCl interact with a polar solvent in the process of dissolution.",
+            "answer": "The potassium ions are attracted to the negative end of the polar solvent, and the chloride ions are attracted to the positive end."
+        },
+        {
+            "question": "The vapor pressure of a liquid increases with an increase of temperature. Why?",
+            "answer": "The average kinetic energy of molecules is greater, thus more molecules can enter the gaseous state."
+        },
+        {
+            "question": "The compounds Br\\(_2\\) and ICl have almost identical molecular weights, yet ICl boils at 97\\(^{\\circ}\\)C and Br\\(_2\\) boils at 59\\(^{\\circ}\\)C. What is the best explanation for this difference?",
+            "answer": "ICl has a measurable dipole moment and Br\\(_2\\) does not."
+        },
+        {
+            "question": "As the average kinetic energy of the molecules of a sample increases, what happens to the temperature?",
+            "answer": "increases"
+        },
+        {
+            "question": "Chemical changes always involve the breaking of what type of interaction?",
+            "answer": "ionic or covalent"
+        },
+        {
+            "question": "How might one recognize a change as a purely physical one?",
+            "answer": "only intermolecular forces broken"
+        },
+        {
+            "question": "If a molecular solid is found to be soft, have a low melting and boiling point, and can sublime at room temperature, what type of intermolecular attractions are most likely to be present in the solid?",
+            "answer": "London dispersion forces"
+        },
+        {
+            "question": "At room temperature and pressure, bromine is a liquid that consists of diatomic molecules. What statement would be consistent with these observations?",
+            "answer": "Diatomic bromine molecules are attracted to one another with weak London dispersion forces."
+        },
+        {
+            "question": "What type of solid is characterized by variable hardness, excellent thermal conductivity, and delocalized electrons?",
+            "answer": "metallic"
+        },
+        {
+            "question": "A sample of gas occupies 30.0 L at 0.800 atm and 298 K. How many moles of gas are in the sample?",
+            "answer": "0.981"
+        },
+        {
+            "question": "If a gas has a pressure of 2.0 atm, what equation will express its pressure after the number of moles has been increase to three times the original amount, the absolute temperature has been reduced to half, and the volume has been tripled?",
+            "answer": "2 atm \\( \\frac{3}{1}\\times \\frac{1}{2}\\times \\frac{1}{3}\\)"
+        },
+        {
+            "question": "What would the grams of KNO\\(_3\\) lost from 2.00 grams of water the temperature of a saturated solution of potassium nitrate is lowered from 80\\(^{\\circ}\\) to 40\\(^{\\circ}\\)?",
+            "answer": "2 g"
+        },
+        {
+            "question": "Toluene has half the molecular mass of glucose. What would the mole fraction of toluene in a solution be if 100. g of each of these substances are mixed and all of the glucose dissolves in the toluene?",
+            "answer": "2/3"
+        },
+        {
+            "question": "A solid dissolves easily in benzene (C\\(_6\\)H\\(_6\\)) but does not dissolve in water. What can the molecules of this solid be best described as?",
+            "answer": "nonpolar molecules"
+        },
+        {
+            "question": "If a pressure of a gas over a liquid increases, what happens to the amount of gas dissolved in the liquid?",
+            "answer": "increases"
+        },
+        {
+            "question": "At STP, it was found that 1.12 L of a gas has a mass of 2.78 g. What is its molar mass?",
+            "answer": "55.6 g/mol"
+        },
+        {
+            "question": "Of the four following aqueous solutions, which would be analyzed using a colorimeter and the application of the Beer-Lambert Law? <br> Choose: NaCl (aq), MgB\\(_2\\) (aq), NiSO\\(_4\\) (aq), Na\\(_2\\)SO\\(_4\\) (aq)",
+            "answer": "NiSO\\(_4\\) (aq)"
+        },
+        {
+            "question": "Microwaves typically cause molecules to undergo what type of behavior?",
+            "answer": "Molecular rotation"
+        },
+        {
+            "question": "In a Beer's law experiment, typically, which wavelength should be chosen as the incident light?",
+            "answer": "The wavelength of light with the highest absorbance"
+        },
+        {
+            "question": "Ultraviolet radiation and infrared radiation are two types of radiation that are used in chemical spectroscopy. Since UV and IR have differing ranges of frequency, the chemicals that are exposed to these types of radiation react in different ways. What is the expected behavior in each case?",
+            "answer": "UV: Causes outer electrons to be promoted; IR: causes bonds to bend and stretch"
+        },
+        {
+            "question": "(a) Discuss how the trend in the melting points of the substances tabulated below can be explained in terms of the types of attractive forces and/or bonds in these substances.<br> (b) For any pairs of substances that have the same kind(s) of attractive forces and/or bonds, discuss the factors that cuase variations in the strengths of the forces and/or bonds.",
+            "image": "images/CHEM3.1F.PNG",
+            "answer": "(a) H\\(_2\\) and C\\(_3\\)H\\(_8\\) have low melting points b/c the forces involved are weak LDFs. HF has a higher melting point b/c stronger hydrogen bonding IMFs are present. CsI and LiF have still higher melting points b/c ionic lattice forces must be overcome to break up the ions, and these ionic forces are stronger than the LDFs and hydrogen bonding. SiC is an example of a macromolecular substance where each atom is held to its neighbors by very strong covalent bonds. <br> (b) H\\(_2\\) and C\\(_3\\)H\\(_8\\): There are more interactions per molecule in C\\(_3\\)H\\(_8\\) than in H\\(_2\\). C\\(_3\\)H\\(_8\\) has weak polar bonds and H\\(_2\\) has only nonpolar bonds. <br> CsI and LiF. The smaller ions in LiF result in a higher lattice energy than CsI has. Lattice energy is inversely proportional to the distance between ions."
+        },
+        {
+            "question": "The state of aggregation of solids can be described as belonging to the following four types: (1) ionic, (2) metallic, (3) covalent network, (4) molecular <br> (a) For each of these types of solids, indicate the kinds of particles that occupy the lattice points and identify forces among these particles. (b) How could each type of solid be identified in the laboratory?",
+            "answer": "(a) (1) ionic solids have ions at the lattice points. The attractive force is electrostatic attraction between positive and negative ions. <br> (2) Metallic solids have metal cations at the lattice points. The force among particles is the electrostatic attraction between metal cations and the mobile sea of electrons. <br> (3) Covalent network solids have atoms or molecules at the lattice points. Force among particles is strong, directional covalent bonding. <br> (4) Molecular solids have molecules at the lattice points. Force among particles is weak. <br> (b) Ionic properties: high melting point, brittle solid, crystalline structure, eletrolyte if dissolved. <br> Metallic properties: Solid, malleable, ductile, conduct heat and electricity <br> Covalent network properties: high melting point, hard solid, nonconducting <br> Molecular solid properties: low melting point, brittle, nonconductive"
+        },
+        {
+            "question": "The van der Waals equation of state for one mole of a real gas is as follows: \\[ (P+\\left(\\frac{a}{V}\\right)^2)(V-b)=RT\\] For any given gas, the values of the constants a and b can be determined experimentally. Indicate which physical properties of a molecule determine the magnitudes of the constants a and b. Which of the two molecules, H\\(_2\\) or H\\(_2\\)S, has the higher value for a and which has the higher value for b? Explain.",
+            "answer": "The intermolecular forces determine the magnitude of the \"a\" constant. Since H\\(_2\\)S is a polar molecule and H\\(_2\\) is a nonpolar molecule, H\\(_2\\)S would be expected to have a higher value for \"a\". The \"a\" constant corrects the ideal gas assumption that there are no attractive forces between the particles. The molecule size determines the magnitude of the \"b\" constant. Since H\\(_2\\)S is a larger molecule than a H\\(_2\\) molecule, it would be expected for H\\(_2\\)S to have a higher value for \"b\". The \"b\" constant corrects the ideal gas assumption that the size of the gas particles are negligible compared to the total space occupied by the gas."
+        },
+        {
+            "question": "Observations about real gases can be explained at the molecular level according to the kinetic molecular theory of gases and ideas about intermolecular forces. Explain how each of the following observations can be interpreted according to these concepts, including how the observation supports the correctness of these theories. <br> (a) When a gas-filled balloon is cooled, it shrinks in volume; this occurs no matter what gas is originally placed in the balloon. <br> (b) When the balloon described in (a) is cooled further, the volume does not become zero; rather the gas becomes a liquid or solid. <br> (c) When NH\\(_3\\) gas is introduced at one end of a long tube while HCl gas is introduced simultaneously at the other end, a ring of white ammonium chloride is observed to form in the tube after a few minutes. This ring is closer to the HCl end of the tube than the NH\\(_3\\) end. <br> (d) A flag waves in the wind.",
+            "answer": "(a) As the temperature is decreased, the U\\(_{rms}\\) of the gas molecules decreases. This would reduce the frequency of the collisions of gas molecules with the balloon walls. In order to maintain a constant pressure inside the balloon versus the external pressure, the volume must decrease. <br> (b) When temperatures get low, the ideal gas assumption that the gas particles do not attract each other is not a good approximation. When the gas is cooled sufficiently, the forces of attraction that exist between the molecules cause the gas to condense or solidify. <br> (c) Both NH\\(_3\\) and HCl diffuse along the tube. Where they meet, NH\\(_4\\)Cl(s) is formed. Since NH\\(_3\\) is a lighter molecule, it has a higher U\\(_{rms}\\), so it can travel further than HCl before they meet. <br> (d) Wind is air molecules going mostly in one direction. When the air molecules collide with the flag, the gas particles transfer some of their energy to the flag, causing it to flap."
+        },
+        {
+            "question": "<img src = 'courses/images/3.1994B1.PNG'> <br> A student collected a sample of hydrogen gas by the displacement of water as shown by the diagram above. The relevant data are given in the following table. <br> (a) Calculate the number of moles of hydrogen gas collected. <br> (b) Calculate the number of molecules of water vapor in the sample of gas. <br> (c) Calculate the ratio of the average speed of the hydrogen molecules to the average speed of the water vapor molecules in the sample. <br> (d) Which of the two gases, H\\(_2\\) or H\\(_2\\)O, deviates more from ideal behavior? Explain your answer.",
+            "image": "images/CHEM3.1994B1.PNG",
+            "answer": "(a) \\(3.49\\times 10^{-3}\\) mol <br> (b) \\(6.94\\times 10^{19}\\) moles <br> (c) 2.99 <br> (d) H\\(_2\\)O deviates more from ideal behavior because it is a polar molecule and will have stronger intermolecular forces than the nonpolar H\\(_2\\). H\\(_2\\)O is also a larger molecule than H\\(_2\\) so it occupies more space than H\\(_2\\). In an ideal gas we assume the molecules occupy negligible space."
+        },
+        {
+            "question": "Represented above are five identical balloons, each filled to the same volume at 25\\(^{\\circ}\\)C and 1.0 atmosphere pressure with the pure gases indicated. <br> (a) Which balloon contains the greatest mass of gas? Explain. <br> (b) Compare the average kinetic energies of the gas molecules in the balloons. Explain. <br> (c) Which balloon contains the gas that would be expected to deviate most from the behavior of an ideal gas? Explain. <br> (d) Twelve hours after being filled, all the balloons have decreased in size. Predict which balloon will be the smallest. Explain your reasoning.",
+            "image": "images/CHEM3.1996.PNG",
+            "answer": "(a) According to Avogadro's hypothesis, they will all contain the same numer of particles, therefore the heaviest particle has the highest pass. <br> (b) The average kinetic energies of the gas molecules from balloon to balloon would be the same since the balloons are all at the same temperature. <br> (c) CO\\(_2\\) would be expected to deviate the most from the behavior of an ideal gas. All of the gases in the balloons are nonpolar, so the greatest intermolecular forces would exist in the particles with the largest number of electrons, which is CO\\(_2\\). <br> (d) The balloon containing He would be the smallest. Of the gases, He has the smallest particle size and greatest velocity, therefore it's the fastest to penetrate the balloon wall and effuse."
+        },
+        {
+            "question": "Account for each of the following observations about pairs of substances. In your answers, use appropriate principles of chemical bonding and/or intermolecular forces. In each part, your answer must include references to both substances. <br> (a) Even though NH\\(_3\\) and CH\\(_4\\) have similar molecular masses, NH\\(_3\\) has a much higher normal boiling point than CH\\(_4\\). <br> (b) At 25\\(^{\\circ}\\) and 1.0 atm, ethane (C\\(_2\\)H\\(_6\\)) is a gas and hexane (C\\(_6\\)H\\(_{14}\\)) is a liquid. <br> (c) Si melts at a much higher temperature than Cl\\(_2\\). <br> (d) MgO melts at a much higher temperature than NaF.",
+            "answer": "(a) NH\\(_3\\) has hydrogen bonding between molecules and London dispersion forces whereas CH\\(_4\\) only has London dispersion forces. The intermolecular force in NH\\(_3\\) are stronger than those in CH\\(_4\\). <br> (b) C\\(_2\\)H\\(_6\\) and C\\(_6\\)H\\(_{14}\\) both have London dispersion forces. The forces in C\\(_6\\)H\\(_{14}\\) are stronger because the molecule is larger with a larger, more polarizable electron cloud. <br> (c) Si is a network covalent solid with strong covalent bonds between atoms. Cl\\(_2\\) has discrete molecules with weak London dispersion forces between molecules. Therefore, more energy is required to break the stronger bonds of Si than the weak intermolecular forces of Cl\\(_2\\). <br> (d) MgO and NaF are both ionic solids. The +2 and -2 charges in MgO result in a greater attraction between ions than the +1 and -1 charges in NaF."
+        },
+        {
+            "question": "A rigid 8.20 L flask contains a mixture of 2.50 moles of H\\(_2\\), 0.500 mole of O\\(_2\\), and sufficient Ar so that the partial pressure of Ar in the flask is 2.00 atm. The temperature is 126\\(^{\\circ}\\). <br> (a) Calculate the total pressure in the flask. <br> (b) Calculate the mole fraction of H\\(_2\\) in the flask. <br> (c) Calculate the density of the mixture in the flask. <br> (d) The mixture in the flask is ignited by a spark, and the reaction represented below occurs until one of the reactions is entirely consumed. <br> 2H\\(_2\\) (g) + O\\(_2\\) (g) \\(\\rightarrow\\) 2H\\(_2\\)O(g) <br>  Give the mole fraction of all species present in the flask at the end of the reaction.",
+            "answer": "(a) 14.0 atm <br> (b) 0.714 <br> (c) 5.00 g/L <br> (d) H\\(_2\\): 0.500, Ar: 0.167, H\\(_2\\)O: 0.333"
+        },
+        {
+            "question": "A student is instructed to determine the concentration of a solution of CoCl\\(_2\\) based on the absorption of light. The student is provided with a 0.10 M solution of CoCl\\(_2\\) with which to prepare standard solutions with concentrations of 0.020 M, 0.040 M, 0.060 M, and 0.080 M. <br> (a) Describe the procedure for diluting the 0.10 M solution to a concentration of 0.020 M using distilled water, a 100 mL volumetric flask, and a pipet or buret. Include specific amounts where appropriate. <br> The student takes the 0.10 M solution and determines the percent transmittance and absorbance at various wavelengths. The two graphs below represent the data. <br> <img src = 'courses/images/CHEM3.20031.PNG'> <br> (b) Identify the optimum wavelength for analysis. <br> The student measures the absorbance of the 0.020 M, 0.040 M, 0.060 M, and 0.080 M, and 0.10 M solutions. The data are plotted below. <br> <img src = 'courses/images/CHEM3.20032.PNG'> <br> (c) The absorbance of the unknown solution is 0.275. What is the concentration of the solution? <br> (d) Beer's Law is an expression that includes three factors that determine the amount of light that passes through a solution. Identify two of these factors. <br> (e) The student handles the sample container that holds the unknown solution and leaves fingerprints in the path of the light beam. How will this affect the calculated concentration of the unknown? Explain your answer. <br> (f) Why is this method of determining the concentration of CoCl\\(_2\\) solution appropriate, whereas using the same method for measuring the concentration of NaCl solution would not be appropriate?",
+            "answer": "(a) Pipet 20. mL of 0.10 M CoCl\\(_2\\) into the 100 mL volumetrick flask, then add enough water to reach the 100 mL mark on the neck of the flask. Stopper the flask and swirl to mix the solution. <br> (b) ~510 nm<br> (c) 0.050 M<br> (d) molar absorptivity, path length, concentration <br> (e) The presence of the fingerprints will scatter or absorb light. Since less light reaches the detector, the solution will have a higher apparent absorbance, andtherefore a higher reported concentration. <br> (f) A CoCl\\(_2\\) solution absorbs visible light. A NaCl solution is colorless."
+        }
+    ],
+    "Unit 4: Chemical Reactions": [
+        {
+            "question": "Balance the following equation <br> NH\\(_3\\) + O\\(_2\\) \\(\\rightarrow\\) NO\\(_2\\) + H\\(_2\\)O <br> The balanced equation shows that 1.00 mole of NH\\(_3\\) requires how many moles of O\\(_2\\)?",
+            "answer": "1.75"
+        },
+        {
+            "question": "Write a balanced equation for the combustion of acetaldehyde, CH\\(_3\\)CHO. When properly balanced, the equation indicates that for each mole of CH\\(_3\\)CHO, how many moles of O\\(_2\\) are required?",
+            "answer": "2.5"
+        },
+        {
+            "question": "Balance the following equation with the smallest whole number coefficients possible. What is the sum of the coefficients in the balanced equation? <br> KClO\\(_3\\) \\(\\rightarrow\\) KCl + O\\(_2\\)",
+            "answer": "7"
+        },
+        {
+            "question": "What is the total mass of products formed when 16 grams of CH\\(_4\\) is burned with excess oxygen?",
+            "answer": "80 g"
+        },
+        {
+            "question": "Write a balanced equation for the combustion of propane, C\\(_3\\)H\\(_8\\). When propertly balanced, the equation indicated that for each mole of C\\(_3\\)H\\(_8\\) requires how many moles of O\\(_2\\)?",
+            "answer": "5"
+        },
+        {
+            "question": "Calculate the mass of hydrogen formed when 25 g of aluminum reacts with excess hydrochloric acid. <br> 2Al + 6HCl \\(\\rightarrow\\) 2AlCl\\(_3\\) + 3H\\(_2\\)",
+            "answer": "2.8 g"
+        },
+        {
+            "question":" How many grams of the iron oxide, Fe\\(_3\\)O\\(_4\\), are formed when 6.00 g of O\\(_2\\) react with Fe according to the following equation <br> 3Fe + 2O\\(_2\\) \\(\\rightarrow\\) Fe\\(_3\\)O\\(_4\\)",
+            "answer": "21.7"
+        },
+        {
+            "question": "When 8.00 g of H\\(_2\\) reacts with 32.0 g of O\\(_2\\) in an explosion, 2H\\(_2\\) \\(\\rightarrow\\) 2H\\(_2\\)O, the final gas mixture will contain what substances?",
+            "answer": "H\\(_2\\) and H\\(_2\\)O only"
+        },
+        {
+            "question": "How many grams of nitric acid, HNO\\(_3\\), (MM = 63 g/mol) can be prepared from the reaction of 92.0 g of NO\\(_2\\) (MM = 46 g/mol) with 36.0 g H\\(_2\\)O? <br> 3NO\\(_2\\) + H\\(_2\\)O \\(\\rightarrow\\) 2HNO\\(_3\\) + NO",
+            "answer": "84"
+        },
+        {
+            "question": "Reaction of an acid with a carbonate always results in the formation of which gas?",
+            "answer": "CO\\(_2\\)"
+        },
+        {
+            "question": "How many moles of H\\(^+\\) are associated with the acid H\\(_2\\)SO\\(_3\\) during neutralization?",
+            "answer": "2"
+        },
+        {
+            "question": "How many moles of Al\\(_2\\)O\\(_3\\) are needed to neutralize 1 mole of HCl?",
+            "answer": "1/6"
+        },
+        {
+            "question": "In the double replacement reaction between the weak acid HC\\(_2\\)H\\(_3\\)O\\(_2\\) and the strong base NaOH, which ion(s) are spectator ions?",
+            "answer": "Na\\(^+\\) only"
+        },
+        {
+            "question": "SO\\(_2\\) turns into which acid in solution?",
+            "answer": "H\\(_2\\)SO\\(_3\\)"
+        },
+        {
+            "question": "What is the oxidation number of C in CO\\(_3^{2-}\\)?",
+            "answer": "+4"
+        },
+        {
+            "question":" What is the oxidation number of Br in KBrO\\(_4\\)?",
+            "answer": "+7"
+        },
+        {
+            "question": "How many milliliters of 0.100 M NaOH solution contain 20.0 g of NaOH (molar mass = 40.00 g/mol)?",
+            "answer": "5000 mL"
+        },
+        {
+            "question": "What is the ion concentration in a 0.12 M solution of BaCl\\(_2\\)?",
+            "answer": "[Ba\\(^{2+}\\)] = 0.12 M and [Cl\\(^-\\)] = 0.24 M"
+        },
+        {
+            "question": "What is the molarity of the solution that results when 60.0 g NaOH is added to enough water to make 500. mL solution?",
+            "answer": "3.00 M"
+        },
+        {
+            "question": "What is the molarity of the solution that results when 72.0 g HCl is dissolved in enough water to make 500. mL solution?",
+            "answer": "3.95 M"
+        },
+        {
+            "question": "What is the concentration of Cl\\(^-\\) ion in 0.60 M AlCl\\(_3\\) solution?",
+            "answer": "1.8 M"
+        },
+        {
+            "question": "How many grams of Na\\(_2\\)CO\\(_3\\) (molar mass = 106.0 g/mol) are required for complete reaction with 10.0 mL of 0.14 M HNO\\(_3\\)?",
+            "answer": "0.074 g"
+        },
+        {
+            "question": "What is the concentration of a NaOH solution if it takes 16.25 mL of a 0.100 M HCl solution to titrate 25.00 mL of the NaOH solution?",
+            "answer": "0.0650 M"
+        },
+        {
+            "question": "Explain, at an atomic or molecular level, what happens when <br> (a) water freezes to form ice <br> (b) copper and tin combine to form bronze <br> (c) rainwater evaporates from the pavement",
+            "answer": "(a) Hydrogen bonding occurs between the oxygen atom and the hydrogen atom on another water molecule and a hexagonal crystal lattice is built. <br> (b) The copper and tin atoms distribute evenly and form a solid homogeneous solution. <br> (c) Water atoms/molecules absorb energy and are excited until they contain enough energy to escape the intermolecular forces holding them together in the liquid phase to change to the gas phase."
+        },
+        {
+            "question": "Identify the following changes as physical or chemical changes: <br> (a) Baking soda reacts with vinegar to produce carbon dioxide. <br> (b) The copper sheath on the Statue of Liberty turns green. <br> (c) Addition of salt melts ice on the highway. <br> (d) Steam condenses on the windowpane. <br> (e) Epoxy resin cures and hardens. <br> (f) Sugar dissolves in a cup of coffee <br> (g) Natural gas burns in a furnace",
+            "answer": "(a) chemical, (b) chemical, (c) physical, (d) physical, (e) chemical, (f) physical, (g) chemical"
+        },
+        {
+            "question": "For each change below, label them as oxidation, reduction, or neither. <br> (a) Cu\\(^{2+}\\) \\(\\rightarrow\\) Cu <br> (b) CH\\(_4\\) \\(\\rightarrow\\) CO\\(_2\\) <br> (c) H\\(_2\\)O\\(_2\\) \\(\\rightarrow\\) H\\(_2\\)O <br> (d) CO\\(_2\\) \\(\\rightarrow\\) H\\(_2\\)CO\\(_3\\)",
+            "answer": "(a) Reduction, (b) Oxidation, (c) Reduction, (d) Neither"
+        },
+        {
+            "question": "When 30. mL of 2.0 M NaNO\\(_3\\) is added to 50. mL of 1.0 M Na\\(_2\\)SO\\(_4\\), what is the resulting concentration of Na\\(^+\\)?",
+            "answer": "2.0 M"
+        },
+        {
+            "question": "A 5.0 mol sample of C\\(_4\\)H\\(_{10}\\) and a 6.5 mole sample of O\\(_2\\) are allowed to react completely. After one of the reactants has been totally consumed, how many moles of H\\(_2\\)O have been produced? <br> 2C\\(_4\\)H\\(_{10}\\) + 13O\\(_2\\) \\(\\rightarrow\\) 8CO\\(_2\\) + 10H\\(_2\\)O",
+            "answer": "5 mol H\\(_2\\)O"
+        },
+        {
+            "question": "A 0.50 mol sample of CuCl\\(_2\\) (s) and a 0.20 mol sample of KCl (s) are dissolved in water and diluted to 600. mL. What is the concentration of Cl\\(^-\\) in the solution?",
+            "answer": "2.0 M Cl\\(^-\\)"
+        },
+        {
+            "question": "A student prepares a solution by dissolving 318. g of sodium carbonate (molar mass 106) in enough distilled water to make 600. mL of solution. What is the molarity of the resulting solution?",
+            "answer": "5.00 M"
+        },
+        {
+            "question": "In the synthesis reaction below, what mass of water is produced if \\(1.2\\times 10^{24}\\) molecules of oxygen react with excess hydrogen? Assume the reaction goes to completion. <br> 2H\\(_2\\) + O\\(_2\\) \\(\\rightarrow\\) 2H\\(_2\\)O",
+            "answer": "72 g"
+        },
+        {
+            "question": "When 127 g of Cu (molar mass 63.5 g) and 1.00 L of 5.00 M AgNO\\(_3\\) are mixed, what is the maximum mass of Ag (molar mass 108 g) that can be produced? <br> 2AgNO\\(_3\\) (ag) + Cu (s) \\(\\rightarrow\\) 2Ag (s) + Cu(NO\\(_3\\))\\(_2\\)(aq)",
+            "answer": "432 g"
+        },
+        {
+            "question": "1.056 g of metal carbonate, containing an unknown metal M, were heated to give the metal oxide and 0.36 g CO\\(_2\\) <br> MCO\\(_3\\) (s) + heat \\(\\rightarrow\\) MO(s) + CO\\(_2\\)(g) <br> What is the identity of metal M?",
+            "answer": "Cu"
+        },
+        {
+            "question": "Combustion analysis of toluene, a common organic solvent, gives 5.86 mg of CO\\(_2\\) and 1.37 mg of H\\(_2\\)O. If the compound contains only carbon and hydrogen, what is its empirical formula?",
+            "answer": "C\\(_7\\)H\\(_8\\)"
+        },
+        {
+            "question": "Menthol, the substance we can smell in mentholated cough drops, is composed of C, H, and O. A 0.1005-g sample of menthol is combusted, producing 0.2829 g of CO\\(_2\\) and 0.1159 g of H\\(_2\\)O. What is the empirical formula for menthol? If the compound has a molar mass of 156 g/mol what is the molecular formula?",
+            "answer": "C\\(_{10}\\)H\\(_{20}\\)O"
+        },
+        {
+            "question": "A sample of an iron ore is dissolved in acid, and the iron is converted to Fe\\(^{2+}\\). The sample is then titrated with 47.20 mL of 0.2240 M solution. The reaction during titration is <br> MnO\\(_4^-\\) + 5Fe\\(^{2+}\\) + 8H\\(^+\\) \\(\\rightarrow\\) Mn\\(^{2+}\\) + 5Fe\\(^{3+}\\) + 4H\\(_2\\)O <br> (a) How many moles of permanganate were added to the solution? <br> (b) How many moles of Fe\\(^{2+}\\) were in the sample? <br> (c) How many grams of iron were in the sample? <br> (d) If the sample had a mass of 0.8890 g, what is the percentage of iron in the sample?",
+            "answer": "(a) 0.01057 mol MnO\\(_4^-\\) <br> (b) 0.05286 mol Fe\\(^{2+}\\) <br> (c) 2.952 g Fe<br> (d) 33.21%"
+        },
+        {
+            "question": "A sample of 1.50 g of lead (II) nitrate is mixed with 125 mL of 0.100 M sodium sulfate solution. <br> (a) Write the chemical equation for the reaction that occurs. <br> (b) What is the limiting reactant in the reaction?",
+            "answer": "(a) Pb(NO\\(_3\\))\\(_2\\) + Na\\(_2\\)SO\\(_4\\) \\(\\rightarrow\\) 2NaNO\\(_3\\) + PbSO\\(_4\\) <br> (b) Pb(NO\\(_3\\))\\(_2\\)"
+        },
+        {
+            "question": "The following observations are made about reactions of sulfuric acid, H\\(_2\\)SO\\(_4\\). Discuss the chemical processes involved in each case. Use principles from acid-base theory, oxidation-reduction, and bonding and/or intermolecular forces to support your answers. <br> (a) When zinc is added to a solution of dilute H\\(_2\\)SO\\(_4\\), bubbles of gas are formed and the zinc disappears. <br> (b) When a solution of Ba(OH)\\(_2\\) is added to a dilute H\\(_2\\)SO\\(_4\\) solution the electrical conductivity decreases and a white precipitate forms.",
+            "answer": "(a) Sulfuric acid is a strong acid and loses both protons in dilute solution. Acids react with metals to form metal ions and hydrogen gas. Since the metal ions are in solution, the metal disappears. <br> (b) Both of the solutions form ions in solution. The sulfuric acid conducts electricity at the beginning because there are ions free to move. When the solutions are mixed, the white precipitate is BaSO\\(_4\\). Since ions are being removed from the solution, this decreases the conductivity."
+        },
+        {
+            "question": "Water is added to 4.267 grams of UF\\(_6\\). The only products are 3.730 grams of a solid containing only uranium, oxygen and fluorine and 0.970 gram of a gas. The gas is 95.0% fluorine, and the remainder is hydrogen. <br> (a) From these data, determine the empirical formula of the gas. <br> (b) What fraction of the fluorine of the original compound is in the solid and what fraction is in the gas after the reaction? <br> (c) What is the formula of the solid product? <br> (d) Write a balanced equation for the reaction between UF\\(_6\\) and H\\(_2\\)O. Assume that the empirical formula of the gas is the true formula.",
+            "answer": "(a) HF <br> (b) 0.667 in HF, 0.33 in solid <br> (c) UO\\(_2\\)F\\(_2\\) <br> (d) UF\\(_6\\) + 2H\\(_2\\)O \\(\\rightarrow\\) UO\\(_2\\)F\\(_2\\) + 4HF"
+        },
+        {
+            "question": "A sample of dolomitic limestone containing only CaCO\\(_3\\) and MgCO\\(_3\\) was analyzed. <br> (a) When a 0.2800 gram sample of this limestone was decomposed by heating, 75.0 milliliters of CO\\(_2\\) at 750 mmHg and 20\\(^{\\circ}\\)C were evolved. How many grams of CO\\(_2\\) were produced? <br> (b) Write equations for the decomposition of both carbonates described above. <br> (c) It was also determined that the initial sample contained 0.0448 gram of calcium. What percent of the limestone by mass was CaCO\\(_3\\)? <br> (d) How many grams of the magnesium-containing product were present in the sample in (a) after it had been heated?",
+            "answer": "(a) 0.135 g CO\\(_2\\) <br> (b) CaCO\\(_3\\) \\(\\rightarrow\\) CO\\(_2\\) + CaO <br> MgCO\\(_3\\) \\(\\rightarrow\\) CO\\(_2\\) + MgO <br> (c) 40.0% <br> (d) 0.0803 g MgO"
+        },
+        {
+            "question": "Use chemical and physical principles to account for each of the following. <br> (a) An aluminum container filled with an aqueous solution of CuSO\\(_4\\) eventually developed a leak. Include a chemical equation with your answer. <br> (b) The redness and itching of the skin caused by ant bites (injections of methanoic acid, HCO\\(_2\\)H) can be relieved by applying a paste made from water and baking soda (solid sodium hydrogen carbonate). Include a chemical equation with your answer.",
+            "answer": "(a) 2Al + 3CuSO\\(_4\\) \\(\\rightarrow\\) Al\\(_2\\)(SO\\(_4\\))\\(_3\\) + 3Cu <br> Aluminum is more reactive than copper so a single replacement reaction occurs. Aluminum is oxidized into Cu\\(^{+3}\\) ions so the solid metal disappears. <br> (b) HCO\\(_2\\)H + NaHCO\\(_3\\) \\(\\rightarrow\\) NaHCO\\(_2\\) + H\\(_2\\)O + CO\\(_2\\) <br> Methanoic acid is neutralized by the HCO\\(_3^-\\) ion. With the neutralization of the acid, the redness and itching of the ant bites is reduced."
+        },
+        {
+            "question": "A sample of ore containing the mineral tellurite, TeO\\(_2\\), was dissolved in acid. The resulting solution was then reacted with a solution of K\\(_2\\)Cr\\(_2\\)O\\(_7\\) to form telluric acid, H\\(_2\\)TeO\\(_4\\). The unbalanced chemical equations for the reaction is given below. <br> TeO\\(_2\\) (s) + Cr\\(_2\\)O\\(_7^{2-}\\) (aq) + H\\(^+\\) (aq) \\(\\rightarrow\\) H\\(_2\\)TeO\\(_4\\) (aq) + Cr\\(^{3+}\\) (aq) + H\\(_2\\)O (l) <br> (a) Identify the molecule or ion that is being oxidized in the reaction. <br> (b) Give the oxidation number of Cr in the Cr\\(_2\\)O\\(_7^{2-}\\) (aq) ion. <br> (c) Balance the chemical equation given above by writing the correct lowest whole-number coefficients. <br> In the procedure described above, 46.00 mL of the 0.03109 M K\\(_2\\)Cr\\(_2\\)O\\(_7\\) was added to the ore sample after it was dissolved in acid. When the chemical reaction had progressed as completely as possible, the amount of unreacted (excess) Cr\\(_2\\)O\\(_7^{2-}\\) (aq) was determined by titrating the solution with 0.110 M Fe(NO\\(_3\\))\\(_2\\). The reaction that occurred during the titration is represented by the following balanced equation. <br> 6Fe\\(^{2+}\\) (aq) + Cr\\(_2\\)O\\(_7^{2-}\\) (aq) + 14H\\(^+\\) (aq) \\(\\rightarrow\\) 2Cr\\(^{3+}\\) (aq) + 6Fe\\(^{3+}\\) (aq) + 7H\\(_2\\)O (l) <br> A volume of 9.85 mL of 0.110 M Fe(NO\\(_3\\))\\(_2\\) was required to reach the equivalence point. <br> (d) Calculate the number of moles of excess Cr\\(_2\\)O\\(_7^{2-}\\) (aq) that was titrated. <br> (e) Calculate the number of moles of Cr\\(_2\\)O\\(_7^{2-}\\) (aq) that reacted with the tellurite. <br> (f) Calculate the mass, in grams, of tellurite that was in the ore sample.",
+            "answer": "(a) Te\\(^{+4}\\) in TeO\\(_2\\) <br> (b) +6 <br> (c) 3TeO\\(_2\\) (s) + Cr\\(_2\\)O\\(_7^{2-}\\) (aq) + 8H\\(^+\\) (aq) \\(\\rightarrow\\) 3H\\(_2\\)TeO\\(_4\\) (aq) + 2Cr\\(^{3+}\\) (aq) + H\\(_2\\)O (l) <br> (d) \\(1.81\\times 10^{-4}\\) mol <br> (e) \\(1.249\\times 10^{-3}\\) mol <br> (f) 0.5980 g" 
+        }
+    ],
+    "Unit 5: Kinetics": [
+        {}
+    ],
+    "Unit 6: Thermochemistry": [
+        {}
+    ],
+    "Unit 7: Equilibrium": [
+        {}
+    ],
+    "Unit 8: Acids and Bases": [
+        {}
+    ],
+    "Unit 9: Applications of Thermodynamics": [
+        {}
+    ]
+}

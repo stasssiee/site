@@ -3,129 +3,277 @@
 \begin{document}
 \chapter{Logic and Proofs}
 \section{Propositional Logic}
-A proposition is a declarative statement that is either true or false, but not both. We use letters to denote propositional variables. 
-The conventional letters for propositional variables are $p,q,r,s$. True is notated as T and false is notated as F. An atomic proposition 
-is a proposition that cannot be expressed in terms of simpler propositions.
-\begin{definition}
-    Let $p$ be a proposition. The negation of $p$, denoted by $\neg{p}$ (or $\bar{p}$) means "It is not the case that $p$".
+A proposition is a declarative statement that is either true or false.
 
-    The proposition $\neg{p}$ is read as "not $p$". The truth value of the negation of $p$, $\neg{p}$ 
-    is the opposite of the truth value of $p$.
-\end{definition}
+For example, we can say there is a proposition $p$ and $q$, such as ``The sky is blue'' or ``The moon is made of cheese''. Something that is not a propositional statement is a statement that is neither true or false, such as ``Sit down'', which is just a statement. $x+1=2$ is not a propositional statement because it is either true or false, unless you assign a value for $x$.
 
-The negation of a proposition can also be considered the result of the operation of the negation operator on a proposition. 
+A compound proposition is comprised of propositions and one or more of the following connectives:
+\begin{itemize}
+    \item negation: $\neg$ ``NOT'' ($\neg p$)
+    \item conjunction: $\land$ ``AND'' ($p\land q$)
+    \item disjunction: $\lor$ ``OR'' ($p\lor q$)
+    \item implication: $\rightarrow$ ``IF, THEN'' ($p\rightarrow q$)
+    \item biconditional $\leftrightarrow$ ``IF AND ONLY IF'' ($p\leftrightarrow q$)
+\end{itemize}
+Each proposition is represented by a propositional variable.
 
-The next operator is a connective and it is used to form new propositions from two or more existing propositions.
-\begin{definition}
-    Let $p$ and $q$ be propositions. The conjunction of $p$ and $q$, denoted by $p\land q$, 
-    is the proposition of "$p$ and $q$". The conjunction $p\land q$ is true when both are true, and false when both are false.
-\end{definition}
+The negation of the proposition $p$ is $\neg p$ (not $p$). For example, If $p$ denotes ``The grass is green'', then $\neg p$ denotes ``it is not the case that the grass is green'', or ``the grass it not green''.
+\begin{example}
+    If $p$ is the statement ``my dog is the cutest dog'', then $\neg p$ is the statement ``my dog is not the cutest dog''.
+\end{example}
+\ex Negate the statement ``the door is not open.''
+\ex Can you negate the statement ``Are we there yet?''
 
-\begin{definition}
-    Let $p$ and $q$ be propositions. The disjunction of $p$ and $q$, denoted by $p\lor q$, 
-    is the proposition "$p$ or $q$". The disjunction $p\lor q$ is false when both $p$ and $q$ are false, otherwise it is true.
-\end{definition}
+Truth Tables: Each row of a truth table gives us one possibility for the truth values of our proposition(s). Since each proposition has two possible truth values, true or false, we will have 2 rows for each proposition (or $2^n$ rows where $n$ is the number of propositions).
 
-\begin{definition}
-    Let $p$ and $q$ be propositions. The exclusive or of $p$ and $q$, denoted by $p\oplus{q}$ 
-    is the proposition that is true when exactly one of $p$ and $q$ is true and is false otherwise.
-\end{definition}
+For $\neg p$, a truth table would look like 
+\begin{tabular}{c|c}
+    $p$ & $\neg p$\\ \hline
+    T & F\\
+    F & T
+\end{tabular}
+The left side is the combinations, and the right side is the connectives. For example, if we were looking at a truth table of $p\lor q$, the combinations would be $p$ and $q$, and the connectives would be $p\lor q$.
 
-There are other ways propositions can be combined.
-\begin{definition}
-    Let $p$ and $q$ be propositions. The conditional statement $p\rightarrow q$, is 
-    the proposition, "if $p$, then $q$". The conditional statement $p\rightarrow q$ is 
-    false when $p$ is true and $q$ is false, and true otherwise. $p$ is called the 
-    hypothesis and $q$ is called the conclusion.
-\end{definition}
+Conjunction: The conjunction of propositions $p$ and $q$ is denoted $p\land q$ and read $p$ ``and'' $q$. For a conjunction to be true, both propositions must be true.
+The truth table looks like the following. 
+\[\begin{tabular}{c|c|c}
+    $p$ & $q$ & $p\land q$ \\ \hline 
+    T & T & T \\\hline
+    T & F & F\\\hline
+    F&T&F\\\hline 
+    F&F&F
+\end{tabular}\]
 
-A conditional statement is also called an implication.
+Disjunction: The disjunction of propositions $p$ and $q$ is denoted $p\lor q$ and read $p$ ``or'' $q$. For a disjunction to be true, either proposition must be true.
+\[ \begin{tabular}{c|c|c}
+    $p$ & $q$ & $p\lor q$ \\ \hline
+    T & T & T \\\hline
+    T&F&T\\\hline
+    F&T&T\\\hline
+    F&F&F
+\end{tabular}\]
 
-With $p\rightarrow q$, we can form three related conditional statements. 
+The connective ``OR'' in English ``XOR''. The inclusive or is a disjunction $p\lor q$. The exclusive or is $p\oplus q$. Basically this is true only if one of the inputs is true, but not both or neither.
+\[ \begin{tabular}{c|c|c|c}
+    $p$ & $q$ & $p\lor q$ & $p\oplus q$\\ \hline
+    T & T & T & F\\\hline
+    T&F&T & T\\\hline
+    F&T&T&T \\\hline
+    F&F&F&F
+\end{tabular}\]
 
-The first is the proposition $q\rightarrow p$, which is the converse of $p\rightarrow q$. 
+Implication (Conditional Statement): The implication of propositions $p$ and $q$ is denoted $p\rightarrow q$ and read ``if $p$ then $q$'' or ``$p$ implies $q$''. 
+When the hypothesis is true, the conclusion must be true for the implication to be true. WHen the hypothesis is false, the conclusion is true.
+\[ \begin{tabular}{c|c|c}
+    $p$ & $q$ & $p\rightarrow q$\\\hline 
+    T & T & T\\\hline
+    T & F & F\\\hline
+    F&T&T\\\hline
+    F&F&T 
+\end{tabular}\]
 
-The contrapositive of $p\rightarrow q$ is $\neg q\rightarrow \neg p$.
+From the implication $p\rightarrow q$, we can construct 3 news conditional statements.
+\begin{itemize}
+    \item Converse: $q\rightarrow p$ (Switch Order)
+    \item Inverse: $\neg p\rightarrow \neg q$ (Negate),
+    \item Contrapositive: $\neg q\rightarrow \neg p$ (Switch and Negative)
+\end{itemize}
+Contrapositives have the same truth value as $p\rightarrow q$.
 
-The inverse of $p\rightarrow q$ is $\neg p \rightarrow \neg q$.
+\begin{example}
+    Give the converse, inverse, and contrapositive of the implication: If your homework is complete, then your teacher is happy.
 
-The contrapositive of a conditional statement is equal to it. We all two compound propositions 
-equivalent when they always have the same truth values. The converse and inverse of a conditional 
-statement are equivalent as well.
+    The converse is, if the teacher is happy, then you completed your homework.
 
-There is another way to combine propositions that expresses that two propositions have the same truth value.
-\begin{definition}
-    Let $p$ and $q$ be propositions. The biconditional statement $p\leftrightarrow q$ 
-    is the proposition "$p$ if and only $q$". This statement is true if $p$ and $q$ have 
-    the same truth values, and is false otherwise.
-\end{definition}
+    The inverse is if you didn't complete your homework, then your teacher is not happy.
 
-The negation operator is applied before all logical operators. Another general rule is 
-that the conjunction operator takes precendence over the disjunction operator. It is an accepted 
-rule that conditional and biconditional operators have lower precendence than the conjuction and disjunction operators. 
+    The contrapositive is if your teacher is not happy, then you did not complete your homework.
+\end{example}
 
-A bit is a symbol with two values, 0 and 1. 1 is true, and 0 is false. 
+Biconditional: The biconditional of propositions $p$ and $q$ is denoted $p\leftrightarrow q$ and read ``$p$ if and only if $q$''. 
+For a biconditional to be true, both propositions must share the same truth value.
+\[ \begin{tabular}{c|c|c}
+    $p$ & $q$ & $p\leftrightarrow q$\\\hline
+    T & T & T\\\hline
+    T&F&F\\\hline
+    F&F&T
+\end{tabular}\]
+
+The biconditional $p\leftrightarrow q$ can also be written as a compound proposition.
+\[ (p\leftrightarrow q)\equiv (p\rightarrow q)\land (q\rightarrow p) \]
+Can you show this?
+
+The steps for constructing a truth table for compound propositions are as follows:
+
+You need rows and columns. You need a row for every possible combination of values for the compound proposition. You need a column for each propositional variable, you need a column for the truth value of each expression that occurs in the compound proposition as it is built up, and you need a column for the compound proposition. The order of operations is as follows: $\neg, \land,\lor,\rightarrow,\leftrightarrow$.
+
+\begin{example}
+    Create a truth table for $(p\lor \neg q)\rightarrow (p\land q)$.
+
+    \[ \begin{tabular}{c|c|c|c|c|c}
+        $p$ & $q$ & $\neg q$ & $p\lor \neg q$ & $p\land q$ & $(p\lor\neg q)\rightarrow (p\land q)$\\\hline
+        T & T & F & T & T & T\\\hline
+        T&F&T&T&F&F\\\hline
+        F&T&F&F&F&T\\\hline
+        F&F&T&T&F&F
+    \end{tabular}\]
+\end{example}
+
 
 \section{Propositional Equivalences}
-\begin{definition}
-    A compound proposition that is always true, no matter what the truth values of the 
-    propositional values that occur in it, is called a tautology. A compound proposition that is 
-    always false is called a contradiction. If it is neither a tautology or a contradiction, it is called a contingency.
-\end{definition}
+Translating English Sentences:
+\begin{enumerate}
+    \item Identify atomic propositions.
+    \item Determine appropriate logical connectives.
+\end{enumerate}
 
-Compound propositions that have the same truth values in all possible cases are called logically equivalent. 
-\begin{definition}
-    The compound propositions $p$ and $q$ are called logically equivalent if $p\leftrightarrow q$ is a 
-    tautology. The notation $p\equiv q$ denotes that $p$ and $q$ are logically equivalent.
-\end{definition}
+For example consider the statement ``If I go to the store or the movies, I won't do my homework.''.
 
-We can establish logical equivalence of more than two compound propositions. Generally $2^n$ 
-rows are required if a compound proposition involves $n$ propositional variables.
-\begin{center}
-    \includegraphics[width=0.72\textwidth]{1.3D.PNG}
-    \includegraphics[width=0.72\textwidth]{1.3.D2.PNG}
+In that statement $p$ is going to the store, $q$ is going to the movies, and $r$ is doing homework, so $(p\lor q)\rightarrow \neg r$.
 
-\end{center}
-Credit: Rosen's Discrete Mathematics 8e
+\ex Translate the propositional statement ``You can get a free sandwich on thursday if you buy a sandwich or a cup of soup.''
 
-When using De Morgan's Laws, remember to change the logical connective after you negate. 
+\ex Translate the propositional statement ``You can get a free sandwich on thursday only if you buy a sandwich or a cup of soup.''
 
-De Morgan's Laws tell us how to negate conjunctions and how to negate disjunctions. 
-The equivalence $\neg(p\lor q)\equiv \neg p \land \neg q$ tells us that the negation of a disjunction 
-is formed from the conjunction of the negations of the component propositions. The negation of a conjunction 
-also gives you the disjunction of the negations of component propositions.
+\ex Translate the propositional statement ``The automated reply can't be sent when the system is full.'
 
-A compound proposition is satisfiable if there is an assignment of truth values to its variables that make it true. 
-If no such assignments exist, then it is unsatisfiable. 
+Translating Propositions:
+\begin{example}
+    Let $q$ be ``You can ride the rollercoaster'', $r$ be ``You are under 4 feet tall'', and $s$ be ``you are older than 16 years old.''
+
+    Translating $(r\lor \neg s)\rightarrow \neg q$ to english gives us, If $r$ or not $s$, then not $q$, or ``If you are under 4 feet tall or younger than 16 years old then you cannot ride the rollercoaster.''
+\end{example}
+
+
+\begin{example}
+    An island has two kinds of inhabitants, knights, who always tell the truth, and knaves, who always lie. You go to the island and meet A and B. A says ``B is a knight''. B says, ``The two of us are opposite types.'' What are A and B? Let $p$ represent that A is a knight and $q$ represent that B is a knight.
+
+    Using the propositional statements, $p\land q$, $p\land \neg q$, $\neg p \land q$, and $\neg p \land \neg q$, we can see that $\neg p \land \neg q$ satisfies the conditions that A and B are both knaves. (Note that this can also be done with a truth table.)
+\end{example}
+
+\ex When planning a party, you want to know whom to invite. Among the poeple you would like to invite are three touchy friends. You know that if Jasmine attends, she will become unhappy if Samir is there. Samir will attend only if Kanti will be there, and Kanti will not attend unless Jasmine also does. Which combinations of these three friends can you invite so as not to make someone unhappy?
+
+Logic circuit - A circuit designed to perform complex tasks designed in terms of elementary logic functinos. Three `gates' are used used implementing a boolean function on one or more binary inputs producing one output.
+
+The ``NOT GATE'' will have one input $p$, and output $\neg p$. The ``OR GATE'' will have two inputs, and output the disjunction of those two inputs. The ``AND GATE'' will have two inputs, and output the conjunction of the propositions. (Search up images yourself)
 
 \section{Predicates and Quantifiers}
-We will introduce predicate logic now. For example in the statement $x$ is greater than 3, the variable is $x$ and 
-the predicate is "is greater than 3".
+A tautology is a proposition which is always true. Ex. $p\lor \neg p$
 
-In general a statement involving $n$ variables $x_1,x_2,\cdots,x_n$ can be denoted as $P(x_1,x_2,\cdots,x_n)$. 
+A contradiction is a proposition which is always false. Ex. $p\land \neg p$
 
-\begin{definition}
-    The universal quantification of $P(x)$ is the statement:
+A contingency is a proposition which is neither a tautology nor a contradiction. Ex. $p$
 
-    "$P(x)$ for all values of $x$ in the domain."
+Two compound propositions $p$ and $q$ are logically equivalent if $p\leftrightarrow q$ is a tautology, meaning they have the same truth value in all possible cases. This is written as $p\equiv q$, where $p$ and $q$ are compound propositions.
 
-    The notation $\forall x P(x)$ denotes the universal quantification of $P(x)$. Here $\forall$ 
-    is called the universal quantifier. An element for which $P(x)$ is false is called a counterexample to $\forall x P(x)$.
-\end{definition}
+For example, the truth table below shows $\neg p\lor q\equiv p\rightarrow q$.
+\[ \begin{tabular}{c|c|c|c|c}
+    $p$ & $q$ & $\neg p$ & $\neg p\lor q$ & $p\rightarrow q$\\\hline
+    T&T&F&T&T\\\hline
+    T&F&F&F&F\\\hline
+    F&T&T&T&T\\\hline
+    F&F&T&T&T
+\end{tabular}\]
 
-\begin{definition}
-    The existential quantification of $P(x)$ is the proposition:
+\ex Determine if $\neg p\land q\equiv \neg p\lor \neg q$.
 
-    "There exists an element in $x$ in the domain such that $P(x)$"
+\ex Determine if $p\lor (q\land r)\equiv (p\lor q)\land (p\lor r)$.
 
-    We use the notation $\exists x P(x)$ for the existential quantification of $P(x)$.
-\end{definition}
+Identity Laws:
+\begin{itemize}
+    \item $p\land T\equiv p$
+    \item $p\lor F\equiv p$
+\end{itemize}
 
-Remember the truth value for both $\forall x P(x)$ and $\exists x P(x)$ depends on the domain.
-\begin{center}
-    \includegraphics[width=0.9\textwidth]{1.4.PNG}
-\end{center}
-Credit: Rosen's Discrete Mathematics 8e
+Domination Laws:
+\begin{itemize}
+    \item $p\lor T\equiv T$
+    \item $p\land F\equiv F$
+\end{itemize}
+
+Indempotent Laws:
+\begin{itemize}
+    \item $p\lor p\equiv p$
+    \item $p\land p\equiv p$
+\end{itemize}
+
+Double Negation Law: $\neg(\neg p)\equiv p$
+
+Absorbtion Laws:
+\begin{itemize}
+    \item $p\lor (p\land q)\equiv p$
+    \item $p\land (p\lor q)\equiv p$
+\end{itemize}
+
+Negation Laws:
+\begin{itemize}
+    \item $p\lor \neg p\equiv T$
+    \item $p\land \neg p\equiv F$
+\end{itemize}
+
+Commutative Laws:
+\begin{itemize}
+    \item $p\lor q\equiv q\lor p$
+    \item $p\land q\equiv q\land p$
+\end{itemize}
+
+Associative Laws:
+\begin{itemize}
+    \item $(p\lor q)\lor r\equiv p\lor(q\lor r)$
+    \item $(p\land q)\land r\equiv p\land(q\land r)$
+\end{itemize}
+
+Distributive Laws:
+\begin{itemize}
+    \item $p\lor (q\land r)\equiv(p\lor q)\land (p\lor r)$
+    \item $p\land (q\lor r)\equiv (p\land q)\lor (p\land r)$
+\end{itemize}
+
+De Morgan's Laws:
+\begin{itemize}
+    \item $\neg(p\land q)\equiv \neg p\lor \neg q$
+    \item $\neg(p\lor q)\equiv \neg p\land \neg q$
+\end{itemize}
+
+More equivalencies:
+\begin{itemize}
+    \item $p\rightarrow q\equiv \neg p \lor q$
+    \item $p\rightarrow q\equiv \neg q\rightarrow \neg p$
+    \item $p\lor q\equiv \neg p\rightarrow q$
+    \item $p\land q\equiv \neg(p\rightarrow \neg q)$
+    \item $(p\rightarrow q)\land (p\rightarrow r)\equiv p\rightarrow (q\land r)$
+    \item $(p\rightarrow r)\land (q\rightarrow r)\equiv (p\land q)\rightarrow r$
+    \item $(p\rightarrow q)\lor (p\rightarrow r)\equiv p\rightarrow (q\lor r)$
+    \item $(p\rightarrow r)\lor (q\rightarrow r)\equiv (p\land q)\rightarrow r$
+    \item $p\leftrightarrow q\equiv (p\rightarrow q)\land (q\rightarrow p)$
+    \item $p\leftrightarrow q\equiv \neg p\leftrightarrow \neg q$
+    \item $p\leftrightarrow q\equiv (p\land q)\lor (\neg p\land \neg q)$
+    \item $\neg(p\leftrightarrow q)\equiv p\leftrightarrow \neg q$
+\end{itemize}
+
+We can construct new logical equivalences.
+\begin{example}
+    Show $\neg(p\lor (\neg p\land q))\equiv \neg p\land \neg q$ by developing a series of logical equivalences 
+    
+    The original statement is equivalent to $\neg p\land \neg(\neg p\land q)$ from the 2nd demorgan law.
+    
+    By the 1st De Morgan law, this is $\neg p\land \neg\neg p\lor \neg q$.
+
+    Double negation: $\neg p\land (p\lor \neg q)$
+
+    2nd Distributive Law: $(\neg p\land p)\lor (\neg p\land \neg q)$
+
+    2nd Negation Law: $F\lor (\neg p\land \neg q)$
+
+    Commutative Law for Disjunction: $(\neg p\land \neg q)\lor F$
+
+    Identity Law: $\neg p\land \neg q$.
+\end{example}
+
+\ex Show $(p\land q)\rightarrow (p\lor q)$ is a tautology by developing a series of logical equivalences.
+
+\ex Use logical equivalences to show $\neg(\neg p\lor q)\equiv \neg q\land p$
+
 
 \section{Nested Quantifiers}
 A nested quantifier is when one quantifier is in the scope of another.

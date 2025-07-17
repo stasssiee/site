@@ -4,15 +4,12 @@
   <meta charset="UTF-8" />
   <title>Question Bank</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- MathJax with ams support -->
-  <script>
-    window.MathJax = {
-      tex: { packages: { '[+]': ['ams'] } }
-    };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+  
+  <!-- MathJax via CDN -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -26,10 +23,14 @@
       <option value="">-- Select Course --</option>
     </select>
 
-    <select id="unitSelect" onchange="displayRandomQuestion()">
+    <select id="unitSelect" onchange="displayRandomQuestion(); updateQuestionCount();">
       <option value="">-- Select Unit --</option>
     </select>
 
+    <p id="questionCount" style="margin-top: 10px; font-size: 1.1rem; color: #161818;"></p>
+    <div style="margin-top: 15px;">
+      <button onclick="resetShownQuestions()">Reset Progress</button>
+    </div>
     <div class="card" id="questionCard" style="display:none;">
       <div id="questionDisplay" class="question"></div>
       <div class="reveal-btn" onclick="toggleAnswer()">Click to Reveal Answer</div>
@@ -37,9 +38,42 @@
     </div>
 
     <button id="nextQuestionBtn" style="display:none;" onclick="displayRandomQuestion()">Next Question</button>
-    <button onclick="resetShownQuestions()" style="margin-top: 10px;">Reset Questions</button>
   </main>
 
   <script src="script.js"></script>
+
+  <h3>List of Current Courses</h3>
+  <table border>
+    <tr>
+      <td><a href = "..\subnotes\diffeq.html">Differential Equations</a></td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\linalg.html">Linear Algebra</a>
+      </td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\calc3.html">Calculus III</a>
+      </td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\discrete.html">Discrete Mathematics</a>
+      </td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\calcbc.html">AP Calculus BC</a>
+      </td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\apstats.html">AP Statistics</a>
+      </td>
+    </tr>
+    <tr>
+      <td>  <a href = "..\subnotes\apchem.html">AP Chemistry</a>
+      </td>
+    </tr>
+  </table>
+  
+
+
 </body>
 </html>

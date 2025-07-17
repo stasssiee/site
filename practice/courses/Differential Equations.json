@@ -1,0 +1,268 @@
+{
+    "Chapter 1: Introduction to Differential Equations": [
+        {
+            "question": "Classify this differential equation \\(5\\frac{d^2x}{dt^2} + 4\\frac{dx}{dt}+9x=2\\cos 3t\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "Ordinary, 2nd-order, independent variable: \\(t\\), dependent variable: \\(x\\), linear"
+        },
+        {
+            "question": "Classify this differential equation \\(\\frac{dy}{dx}=\\frac{y(2-3x)}{x(1-3y}\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "Ordinary, 1st-order, independent variable: \\(x\\), dependent variable: \\(y\\), nonlinear"
+        },
+        {
+            "question": "Classify this differential equation \\(y\\left[1+\\left(\\frac{dy}{dx}\\right)^2\\right]=C\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "Ordinary, 1st-order, ind. variable: \\(x\\), dep. variable: \\(y\\), nonlinear"
+        },
+        {
+            "question": "Classify this differential equation \\(\\frac{dp}{dt}=kp(P-p)\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "Ordinary, 1st-order, ind. variable: \\(t\\), dep. variable: \\(p\\), nonlinear"
+        },
+        {
+            "question": "Classify this differential equation \\(x\\frac{d^2y}{dx^2}+\\frac{dy}{dx}+xy=0\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "Ordinary, 2nd-order, ind. variable: \\(x\\), dep. variable: \\(y\\), linear"
+        },
+        {
+            "question": "Classify this differential equation \\(\\frac{\\partial N}{\\partial t}=\\frac{\\partial^2 N}{\\partial r^2}+\\frac{1}{r}\\frac{\\partial N}{\\partial r}+kN\\) as an ordinary differential equation or a partial differential equation, give the order, and indicate the independent and dependent variables. If the equation is ordinary, indicate whether it is linear or nonlinear.",
+            "answer": "partial, 2nd-order, ind. variable: \\(t, r\\), dep. variable: \\(N\\)"
+        },
+        {
+            "question": "Write a differential equation that describes the scenario where the rate of change of the population \\(p\\) of bacteria at time \\(t\\) is proportional to the population at time \\(t\\).",
+            "answer": "\\(dp/dt =kp\\), where \\(k\\) is the proportionality constant"
+        },
+        {
+            "question": "Write a differential equation that describes the scenario where the rate of change in the temperature \\(T\\) of coffee at time \\(t\\) is proportional to the difference between the temperature \\(M\\) of the air at time \\(t\\) and the temperature of the coffee at time \\(t\\).",
+            "answer": "\\(dT/dt=k(M-T)\\), where \\(k\\) is the proportionality constant"
+        },
+        {
+            "question": "Two drivers, Alison and Kevin, are participating in a drag race. Beginning from a standing start, they each proceed with a constant acceleration. Alison covers the last 1/4 of the distance in 3 seconds, whereas Kevin covers the last 1/3 of the distance in 4 seconds. Who wins and by how much time?",
+            "answer": "Kevin wins by \\(6\\sqrt{3}-4\\sqrt{6}\\) sec"
+        },
+        {
+            "question": "Is \\(y=\\sin x+x^2\\) a solution to \\(\\frac{d^2y}{dx^2}+y=x^2+2\\)?",
+            "answer": "Yes"
+        },
+        {
+            "question": "Is \\(\\theta = 2e^{3t}-e^{2t}\\) a solution to \\(\\frac{d^2\\theta}{dt^2}-\\theta\\frac{d\\theta}{dt}+3\\theta=-2e^{2t}\\)?",
+            "answer": "No"
+        },
+        {
+            "question": "Is \\(y=e^{2x}-3e^{-x}\\) a solution to \\(\\frac{d^2y}{dx^2}-\\frac{dy}{dx}-2y=0\\)?",
+            "answer": "Yes"
+        },
+        {
+            "question": "Is \\(x^2+y^2=4\\) an implicit solution to the differential equation \\(\\frac{dy}{dx}=\\frac{x}{y}\\)? Assume that the relationship does define \\(y\\) implicitly as a function of \\(x\\) and use implicit differentiation.",
+            "answer": "No"
+        },
+        {
+            "question": "Is \\(e^{xy}+y=x-1\\) an implicit solution to \\(\\frac{dy}{dx}=\\frac{e^{-xy}-y}{e^{-xy}+x}\\)? Assume that the relationship does define \\(y\\) implicitly as a function of \\(x\\) and use implicit differentiation.",
+            "answer": "Yes"
+        },
+        {
+            "question": "Is \\(\\sin y+xy-x^3=2\\) an implicit solution to \\(y''=\\frac{6xy'+(y')^3\\sin y-2(y')^2}{3x^2-y}\\)? Assume that the relationship does define \\(y\\) implicitly as a function of \\(x\\) and use implicit differentiation.",
+            "answer": "Yes"
+        },
+        {
+            "question": "Show that the equation \\((dy/dx)^2+y^2+4=0\\) has no (real-valued) solution.",
+            "answer": "The left-hand side is always \\(\\geq 4\\)."
+        },
+        {
+            "question": "Determine for which values of \\(m\\) the function \\(\\phi (x)=x^m\\) is a solution to the given equation. \\[ 3x^2\\frac{d^2y}{dx^2}+11x\\frac{dy}{dx}-3y=0 \\]",
+            "answer": "1/3, -3"
+        },
+        {
+            "question": "Determine for which values of \\(m\\) the function \\(\\phi (x)=x^m\\) is a solution to the given equation. \\[ x^2\\frac{d^2y}{dx^2}-x\\frac{dy}{dx}-5y=0\\]",
+            "answer": "\\(1\\pm \\sqrt{6}\\)"
+        },
+        {
+            "question": "A model for the velocity \\(v\\) at time \\(t\\) of a certain object falling under the influence of gravity in a viscous medium is given by the equation \\[ \\frac{dv}{dt}=1-\\frac{v}{8}\\] From the direction field shown below, sketch the solutions with the initial conditions \\(v(0)=5,8\\) and 15. Why is the value \\(v=8\\) called the \"terminal\" velocity?",
+            "image": "images/DIFFEQ1.3.3.PNG",
+            "answer": "All solutions have limiting value 8 as \\(t\\rightarrow +\\infty\\)",
+            "answerImage": "images/1.3.3S.PNG"
+        },
+        {
+            "question": "The logistic equation for the population (in thousands) of a certain species is given by \\[ \\frac{dp}{dt}=3p-2p^2\\] (a) Sketch the direction field. <br> (b) If the initial population is 3000 what can you say about the limiting population \\(\\lim_{t\\rightarrow +\\infty}p(t)\\)? <br> (c) If \\(p(0)=0.8\\), what is \\(\\lim_{t\\rightarrow +\\infty} p(t)\\)? <br> (d) Can a population of 2000 ever decline to 800?",
+            "answer": "(a) <img src = 'courses/images/DIFFEQ1.3.5S.PNG'> <br> (b) \\(\\lim_{t\\rightarrow\\infty}p(t) = 3/2\\) <br> (c) \\(\\lim_{t\\rightarrow\\infty}p(t)=3/2\\) <br> (d) No"
+        },
+        {
+            "question": "Consider the differential equation \\[ \\frac{dp}{dt}=p(p-1)(2-p)\\] for the population \\(p\\) (in thousands) of a certain species at time \\(t\\). <br> (a) Sketch the direction field. <br> (b) If the initial population is 4000, what can you say about the limiting population \\(\\lim_{t\\rightarrow +\\infty}p(t)\\)? <br> (c) If \\(p(0)=1.7\\), what is \\(\\lim_{t\\rightarrow +\\infty}p(t)\\)? <br> (d) If \\(p(0)=0.8\\), what is \\(\\lim_{t\\rightarrow+\\infty}p(t)\\)?<br> (e) Can a population of 900 ever increase to 1100?",
+            "answer": "(a) <img src = 'courses/images/DIFFEQ1.3.7S.PNG'> <br> (b) 2<br> (c) 2<br> (d) 0<br> (e) No"
+        },
+        {
+            "question": "Draw the isoclines with their direction markers and sketch several solution curves, including the curve satisfying the given initial conditions for \\(dy/dx = -x/y\\), \\(y(0)=4\\)",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.3.11S.PNG"
+        },
+        {
+            "question": "Draw the isoclines with their direction markers and sketch several solution curves, including the curve satisfying the given initial conditions for \\(dy/dx = 2x\\) and \\(y(0)=-1\\)",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.3.13S.PNG"
+        },
+        {
+            "question": "Draw the isoclines with their direction markers and sketch several solution curves, including the curve satisfying the given initial conditions for \\(dy/dx = 2x\\) and \\(y(0)=-1\\)",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.3.15S.PNG"
+        },
+        {
+            "question": "From a sketch of the direction field, what can one say about the behavior as \\(x\\) approaches \\(+\\infty\\) of a solution to the following? \\[ \\frac{dy}{dx}=3-y+\\frac{1}{x} \\]",
+            "answer": "It approaches 3"
+        },
+        {
+            "question": "Use Euler's method to approximate the solution to the given initial value problem at the points \\(x=0.1,0.2,0.3,0.4\\) and 0.5, using steps of size 0.1 \\((h=0.1)\\) for \\(dy/dx = -x/y\\) and \\(y(0)=4\\).",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.4.1S.PNG"
+        },
+        {
+            "question": "Use Euler's method to approximate the solution to the given initial value problem at the points \\(x=0.1,0.2,0.3,0.4\\) and 0.5, using steps of size 0.1 \\((h=0.1)\\) for \\(dy/dx = x+y\\) and \\(y(0)=1\\),",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.4.3S.PNG"
+        },
+        {
+            "question": "Use Euler's method with step size \\(h=0.1\\) to approximate the solution to the initial value problem. \\[ y'=x-y^2, \\qquad y(1) = 0\\] at the points \\(x=1.1,1.2,1.3,1.4\\) and 1.5.",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.4.5S.PNG"
+        },
+        {
+            "question": "Use Euler's method to find approximations to the solution of the initial value problem \\[ y'=1-\\sin y \\qquad y(0)=0 \\] at \\(x=\\pi\\), taking 1,2,4, and 8 steps.",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.4.7S.PNG"
+        },
+        {
+            "question": "Use Euler's method with \\(h=0.1\\) to approximate the solution to the initial value problem \\[ y'=\\frac{1}{x^2}-\\frac{y}{x}-y^2 \\qquad y(1)=-1\\] on the interval \\(1\\leq x\\leq 2\\).",
+            "answer": "",
+            "answerImage": "images/DIFFEQ1.4.9S.PNG"
+        },
+        {
+            "question": "Newton's law of cooling states that the rate of change in the temperature \\(T(t)\\) of a body is proportional to the difference between the temperature of the medium \\(M(t)\\) and the temperature of the body. That is \\[ \\frac{dT}{dt}=K[M(t)-T(t)]\\] where \\(K\\) is a constant. Let \\(K=0.04\\) (min)\\(^{-1}\\) and the temperature of the medium be constant, \\(M(t)\\) = 293 kelvins. If the body is initially at 360 kelvins, use Euler's method with \\(h=3.0\\) min to approximate the temperature of the body after <br> (a) 30 minutes <br> (b) 60 minutes",
+            "answer": "(a) \\(T(30)=311.7\\) <br> (b) \\(T(60)=298.2\\)"
+        },
+        {
+            "question": "Identify the independent variable, dependent variable, and determine whether the equation is linear or nonlinear. \\[ 5\\frac{dx}{dt}+5x^2+3=0\\]",
+            "answer": "ind: t<br> dep: x<br> nonlinear"
+        },
+        {
+            "question": "Identify the independent variable, dependent variable, and determine whether the equation is linear or nonlinear. \\[ y^3\\frac{d^2x}{dy^2}+3x-\\frac{8}{y-1}=0\\]",
+            "answer": "ind: y<br> dep: x<br> linear"
+        },
+        {
+            "question": "Identify the independent variable, dependent variable, and determine whether the equation is linear or nonlinear. \\[ 6-t^3\\frac{d^2v}{dt^2}+3v-\\ln t=\\frac{dv}{dt}\\]",
+            "answer": "ind: t<br> dep: v<br> linear"
+        },
+        {
+            "question": "True or false. The function \\(x(t)=t^{-3}\\sin t+4t^{-3}\\) is a solution to \\(t^3\\frac{dx}{dt}=\\cos t-3t^2x\\).",
+            "answer": "True"
+        },
+        {
+            "question": "True or false. The relation \\(x^2+y^3-e^y=1\\) is an implicit solution to \\(\\frac{dy}{dx}=\\frac{e^y-2x}{3y^2}\\).",
+            "answer": "False"
+        },
+        {
+            "question": "True or false. The initial value problem \\(dx/dt=3x^{2/3}\\), \\(x(0)=1\\) has a unique solution in some open interval around \\(t=0\\).",
+            "answer": "True"
+        },
+        {
+            "question": "True or false. The solution to the initial value problem \\(dy/dx)=(x-2)(y-3)^2, y(0)=0\\) will always be less than 3; that is \\(y(x)<3\\) for \\(x\\geq 0\\).",
+            "answer": "True"
+        },
+        {
+            "question": "If Euler's method with step size \\(h=1/n\\), where \\(n\\) is a positive integer, is used to approximate the solution to the initial value problem \\(dy/dx+y=0,y(0)=1\\), at \\(x=1\\), what formula do you obtain for the approximation of \\(y(1)\\)? What is the exact value of \\(y(1)\\)?",
+            "answer": "\\(y_n = \\left( 1-\\frac{1}{n}\\right)^n\\), \\(y(1)=e^{-1}\\)"
+        },
+        {
+            "question": "The direction field for the equation \\[ \\frac{dp}{dt}=p(2p-1)(p-3)/9\\] where \\(p\\) is the population (in thousands) at time \\(t\\) of a certain species, is plotted below. <br> (a) If the initial population is 2500, what can you say about the limiting population as \\(t\\rightarrow \\infty\\)? <br> (b) If the initial population is 4000, will it ever decrease to 3500? <br> (c) If \\(p(1)=0.3\\), what is \\(\\lim_{t\\rightarrow \\infty}p(t)\\)?",
+            "image": "images/DIFFEQ1.17.PNG",
+            "answer": "(a) 500 <br> (b) No <br> (c) 500"
+        }
+    ],
+    "Chapter 2: First-Order Differential Equations": [
+        {
+            "question": "Determine whether the given equation is separable. \\[ \\frac{dy}{dx}-\\sin(x+y)=0\\]",
+            "answer": "No"
+        },
+        {
+            "question": "Determine whether the given equation is separable. \\[ \\frac{ds}{dt}=t\\ln(s^{2t})+8t^2\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Determine whether the given equation is separable. \\[(xy^2+3y^2)dy-2xdx=0\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Solve the equation \\[ x\\frac{dy}{dx}=\\frac{1}{y^3}\\]",
+            "answer": "\\(y=\\pm \\sqrt[4]{\\ln(x^4)+C}\\)"
+        },
+        {
+            "question": "Solve the equation \\[ \\frac{dx}{dt}=\\frac{t}{xe^{t+2x}}\\]",
+            "answer": "\\(e^{2x}(2x-1+4e^{-t}(t+1)=C\\)"
+        },
+        {
+            "question": "Solve the equation \\[ x\\frac{dv}{dx}=\\frac{1-4v^2}{3v}\\]",
+            "answer": "\\(v=\\pm \\frac{\\sqrt{1-Cx^{-8/3}}}{2}\\)"
+        },
+        {
+            "question": "Solve the equation \\[ \\frac{dy}{dx}=3x^2(1+y^2)^{3/2}\\]",
+            "answer": "\\(\\frac{y}{\\sqrt{1+y^2}}-x^3=C\\)"
+        },
+        {
+            "question": "Solve the equation \\[(x+xy^2)dx+e^{x^2}ydy=0\\]",
+            "answer": "\\(y=\\pm\\sqrt{C \\exp [\\exp(-x^2)]-1}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{dy}{dx}=(1+y^2)\\tan x, \\qquad y(0)=\\sqrt{3}\\]",
+            "answer": "\\(y=\\tan \\left( -\\ln |\\cos x|+\\frac{\\pi}{3}\\right)\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{1}{2}\\frac{dy}{dx}=\\sqrt{y+1}\\cos x, \\qquad y(\\pi)=0\\]",
+            "answer": "\\(y=(\\sin x+1)^2-1\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{1}{\\theta}\\frac{dy}{d\\theta}=\\frac{y\\sin\\theta}{y^2+1}, \\qquad y(\\pi)=1\\]",
+            "answer": "\\(y^2/2+\\ln y=\\sin\\theta-\\theta\\cos\\theta+1/2-\\pi\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{dy}{dt}=2t\\cos^2 y, \\qquad y(0)=\\pi/4\\]",
+            "answer": "\\(y=\\arctan(t^2+1)\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{dy}{dx}=x^2(1+y), \\qquad y(0)=3\\]",
+            "answer": "\\(y= 4e^{x^3/3}-1\\)"
+        },
+        {
+            "question": "As discussed in calculus, certain indefinite integrals such as \\(\\int e^{x^2}dx\\) cannot be expressed in finite terms using elementary functions. When such an integral is encountered while solving a differential equation, it is often helpful to use definite integration. For example, consider the initial value problem \\[ \\frac{dy}{dx}=e^{x^2}y^2, \\qquad y(2)=1\\] The differential equation separates if we divide by \\(y^2\\) and multiply by \\(dx\\). We integrate the separated equation from \\(x=2\\) to \\(x=x_1\\) and find \\begin{align*} \\int_{x=2}^{x=x_1} e^{x^2}dx = \\int_{x=2}^{x=x_1}\\frac{dy}{y^2} \\\\ =-\\frac{1}{y}\\rvert^{x=x_1}_{x=2} \\\\ =-\\frac{1}{y(x_1)}+\\frac{1}{y(2)} \\end{align*} If we let \\(t\\) be the variable of integration and replace \\(x_1\\) by \\(x\\) and \\(y(2)\\) by 1, then we can express the solution to the initial value problem by \\[ y(x)=\\left(1-\\int_2^x e^{t^2}dt\\right)^{-1}\\] Use definite integration to find an explicit solution to the initial value problems in the following parts. <br> (a) \\[ dy/dx = e^{x^2}, \\qquad y(0)=0\\] <br> (b) \\[dy/dx=e^{x^2}y^{-2}, \\qquad y(0)=1\\] <br> (c) \\[ dy/dx=\\sqrt{1+\\sin x}(1+y^2), \\qquad y(0)=1\\] <br> (d) Use a numerical integration algorithm to approximate the solution to part (b) at \\(x=0.5\\) to three decimal places.",
+            "answer": "(a) \\[ y(x)=\\int_0^x e^{t^2}dt\\] <br> (b) \\[ y(x)=\\left(1+3\\int_0^x e^{t^2}dt\\right)^{1/3}\\]<br> (c) \\[y(x)=\\tan\\left(\\int_0^x \\sqrt{1+\\sin t}dt+\\pi/4\\right)\\]<br> (d) \\(y(0.5)\\approx 1.381\\)"
+        },
+        {
+            "question": "Suppose a brine containing 0.3 kilogram of salt per liter runs into a tank initially filled with 400 L of water containing 2 kg of salt. If the brine enters at 10 L/min, the mixture is kept uniform by stirring, and the mixture flows out at the same rate. Find the mass of the salt in the tank after 10 min.",
+            "image": "images/DIFFEQ2.1.33.PNG",
+            "answer": "28.1 kg"
+        },
+        {
+            "question": "If \\(P(t)\\) is the amount of dollars in a savings bank account that pays a yearly interest rate of r% compounded continuously, then \\[ \\frac{dP}{dt}=\\frac{r}{100}P, \\qquad t\\text{ in years}\\] Assume the interest is 5% annually, \\(P(0)=\\$1000\\), and no monies are withdrawn. <br> (a) How much will be in the account after 2 yr? <br> (b) When will the account reach $4000? <br> (c) If $1000 is added to the account every 12 months, how much will be in the account after 3.5 yr?",
+            "answer": "(a) $1105.17, (b) 27.73 years, (c) $4427.59"
+        },
+        {
+            "question": "Driver A had been leading archrival B or a while by a steady 3 miles. Only 2 miles from the finish, driver A ran out of gas and decelerated thereafter at a rate proportional to the square of his remaining speed. One mile later, driver A's speed was exactly halved. If driver B's speed remained constant, who won the race?",
+            "answer": "A wins"
+        }
+        
+    ],
+    "Chapter 3: Mathematical Models and Numerical Methods Involving First-Order Equations": [
+        {}
+    ],
+    "Chapter 4: Linear Second-Order Equations": [
+        {}
+    ],
+    "Chapter 5: Introduction to Systems": [
+        {}
+    ],
+    "Chapter 6: Theory of Higher-Order Linear Differential Equations": [
+        {}
+    ],
+    "Chapter 7: Laplace Transforms": [
+        {}
+    ],
+    "Chapter 8: Series Solutions of Differential Equations": [
+        {}
+    ],
+    "Chapter 9: Matrix Methods for Linear Systems": [
+        {}
+    ]
+}

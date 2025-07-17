@@ -1,103 +1,137 @@
 body {
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    background-color: #0b0c10;
-    background-image: radial-gradient(circle at top left, #1f1f2f 0%, #000 100%);
-    color: #d0d0d0;
-    text-align: center;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  h1 {
-    color: #00ffe7;
-    margin-top: 20px;
-    text-shadow: 0 0 8px #00ffe7;
-  }
-  
-  /* Dropdowns */
-  select {
-    font-family: 'Orbitron', sans-serif;
-    background-color: rgba(0, 255, 231, 0.1);
-    border: 1px solid #00ffe7;
-    color: #00ffe7;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 400px;
-    margin: 15px auto;
-    display: block;
-    text-align: center;
-  }
-  
-  select:focus {
-    outline: none;
-    box-shadow: 0 0 8px #00ffe7;
-  }
-  
-  /* Question Card */
-  .card {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 1px solid #00ffe7;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
-    padding: 20px;
-    width: 80%;
-    max-width: 700px;
-    margin: 20px auto;
-    color: #d0d0d0;
-  }
-  
-  .question {
-    font-size: 1.2rem;
-    color: #00ffe7;
-    text-shadow: 0 0 6px #00ffe7;
-    margin-bottom: 1rem;
-  }
-  
-  .reveal-btn {
-    color: #00ffe7;
-    cursor: pointer;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .reveal-btn:hover {
-    color: #ffffff;
-  }
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  background-color: #f4f1e0;
+  background-image: url('../figures/pachment.png'); /* Add a background image if available */
+  background-size: cover;
+  color: #2d1b00;
+  text-align: center;
+  padding: 0;
+  line-height: 1.6;
+}
 
-  #questionImage {
-    border: 1px solid #00ffe7;
-    box-shadow: 0 0 12px rgba(0, 255, 231, 0.3);
-    border-radius: 8px;
+h1 {
+  font-family: 'Uncial Antiqua', cursive;
+  color: #4b2e06;
+  text-shadow: 1px 1px 0 #d9c9a3;
+  margin-top: 20px;
+}
+
+/* Dropdowns */
+select {
+  font-family: 'Cinzel', serif;
+  background-color: #fff3dc;
+  border: 2px solid #a18458;
+  color: #2d1b00;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  margin: 15px auto;
+  display: block;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 8px #a18458;
+}
+
+/* Question Card */
+.card {
+  background-color: rgba(255, 255, 240, 0.9);
+  border: 2px solid #a18458;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(139, 98, 50, 0.3);
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  color: #2d1b00;
+  font-family: 'Cinzel', serif;
+}
+
+.question {
+  font-size: 1.3rem;
+  font-family: 'Uncial Antiqua', cursive;
+  color: #4b2e06;
+  margin-bottom: 1rem;
+}
+
+.reveal-btn {
+  color: #5a3e1b;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.reveal-btn:hover {
+  color: #2d1b00;
+}
+
+#questionImage {
+  border: 2px solid #a18458;
+  box-shadow: 0 0 12px rgba(125, 98, 56, 0.2);
+  border-radius: 8px;
+}
+
+/* Tables */
+table {
+  width: 60%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 248, 220, 0.85);
+  border: 2px solid #a18458;
+  color: #2d1b00;
+  box-shadow: 0 0 15px rgba(125, 98, 56, 0.3);
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #a18458;
+  text-align: center;
+}
+
+/* Answer Reveal */
+.answer {
+  margin-top: 1rem;
+  display: none;
+  color: #2d1b00;
+  background: rgba(222, 202, 160, 0.3);
+  border-left: 4px solid #a18458;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #ddd0b3;
+  color: #5a3e1b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Links */
+a {
+  color: #5a3e1b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #8a5c2f;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  select,
+  .card {
+    width: 90%;
   }
-  
-  .answer {
-    margin-top: 1rem;
-    display: none;
-    color: #d0d0d0;
-    background: rgba(0, 255, 231, 0.05);
-    border-left: 4px solid #00ffe7;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #111;
-    color: #777;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  @media (max-width: 600px) {
-    select, .card {
-      width: 90%;
-    }
-  }
-  
+}
