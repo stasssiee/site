@@ -85,7 +85,7 @@ function displayRandomQuestion() {
   const used = shownQuestions[key] || [];
 
   if (used.length === questions.length) {
-    hideCardWithMessage("🎉 No more questions left for this unit.");
+    hideCardWithMessage("No more questions left for this unit.");
     return;
   }
 

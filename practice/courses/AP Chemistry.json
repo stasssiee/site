@@ -671,18 +671,884 @@
         }
     ],
     "Unit 5: Kinetics": [
-        {}
+        {
+            "question": "Use the following information to answer the following parts. For the following, data were collected during a method of initial rates experiment for the gas phase reaction: <br> BF\\(_3\\) (g) + NH\\(_3\\) (g) \\(\\rightarrow\\) F\\(_3\\)BNH\\(_3\\) (g) <br> (a) What is the rate equation for this reaction? <br> (b) What is the initial rate of the reaction in units of M/s for experiment 4?",
+            "image": "images/CHEM5.1.PNG",
+            "answer": "(a) Rate = k[BF\\(_3\\)][NH\\(_3\\)] <br> (b) 1.67"
+        },
+        {
+            "question": "If the rate of consumption of NO is 0.44 M/s in the following equation, what is the rate of formation of nitrogen, in units of M/s? <br> 2H\\(_2\\) (g) + 2NO (g) \\(\\rightarrow\\) N\\(_2\\) (g) + 2H\\(_2\\)O (g)",
+            "answer": "0.22"
+        },
+        {
+            "question": "Dinitrogen monoxide decomposes into nitrogen and oxygen when heated. The initial rate of the disappearance of N\\(_2\\)O is -0.022 M/sec. What is the initial rate of oxygen?",
+            "answer": "+0.011 M/s"
+        },
+        {
+            "question": "Use the following information to answer the two questions. <br> For the reaction 2A + B \\(\\rightarrow\\) C, the initial rate was measured at several different reaction concentrations. From the tabulated data, determine the rate law. <br> (b) What is the rate constant for the reaction?",
+            "image": "images/CHEM5.6.PNG",
+            "answer": "(a) Rate = k[A][B]\\(^2\\) <br> (b) \\(2.8\\times 10^2\\)M\\(^{-2}\\)s\\(^{-1}\\)"
+        },
+        {
+            "question": "What could cause the change in the kinetic energy diagrams as shown?",
+            "image": "images/CHEM5.9.PNG",
+            "answer": "addition of a catalyst"
+        },
+        {
+            "question": "What are the correct units for a second order rate constant?",
+            "answer": "L/mol\\(\\cdot\\)s"
+        },
+        {
+            "question": "A time vs. concentration graph is presented below for the reaction A \\(\\rightarrow\\) B. What is the rate of appearance of 'B' 10 seconds after the start of the reaction?",
+            "image": "images/CHEM5.11.PNG",
+            "answer": "0.20 mol/L\\(\\cdot\\)s"
+        },
+        {
+            "question": "The reaction 3O\\(_2\\) \\(\\rightarrow\\) 2O\\(_3\\) is proceeding with a rate of disappearance of O\\(_2\\) equal to 0.60 mol/L\\(\\cdot\\)s. What is the rate of appearance of O\\(_3\\), in mol/L\\(\\cdot\\)s?",
+            "answer": "0.40"
+        },
+        {
+            "question": "A reaction has the rate law <br> Rate = k[A]\\(^2\\)[B] <br> What is the overall order of the reaction?",
+            "answer": "3"
+        },
+        {
+            "question": "The reaction I\\(^-\\) + OCl\\(^-\\) \\(\\rightarrow\\) IO\\(^-\\) + Cl\\(^-\\) is first order with respect to I\\(^-\\) and first order with respect to OCl\\(^-\\). The rate constant is \\(6.1\\times 10^{-2}\\)L/mol\\(\\cdot\\)s. What is the rate of reaction when [I\\(^-\\)] = 0.10 M and [OCl\\(^-\\)] = 0.20 M?",
+            "answer": "\\(1.2\\times 10^{-3}\\) M/s"
+        },
+        {
+            "question": "The rate law for the reaction <br> 2NO(g) + O\\(_2\\)(g) \\(\\rightarrow\\) 2NO\\(_2\\)(g) <br> is <br> Rate = k[NO]\\(^2\\)[O\\(_2\\)] <br> What happens to the rate when the concentration of NO is doubled?",
+            "answer": "the rate quadruples"
+        },
+        {
+            "question": "Below is some rate data for thye hypothetical reaction, 2A + B \\(\\rightarrow\\) C. What is the rate law for this reaction?",
+            "image": "images/CHEM5.16.PNG",
+            "answer": "Rate = k[B]\\(^2\\)"
+        },
+        {
+            "question": "What is the rate constant for a first order reaction for which the half-life is 85.0 sec?",
+            "answer": "0.00814 sec\\(^{-1}\\)"
+        },
+        {
+            "question": "What fraction of a reactant remains after 3 half-lives of a first order reaction?",
+            "answer": "1/8"
+        },
+        {
+            "question": "Assume a reaction occurs by the mechanism given below. What is the rate law for the reaction? <br> A + B \\(\\leftrightarrow\\) C \\(\\qquad\\) fast <br> C \\(\\rightarrow\\) D \\(\\qquad\\) slow",
+            "answer": "Rate = k[A][B]"
+        },
+        {
+            "question": "What distance corresponds to the activation energy for the reaction of X to Y?",
+            "image": "images/CHEM5.21.PNG",
+            "answer": "B"
+        },
+        {
+            "question": "At what point on the potential energy diagram given below does the transition state (activated complex) occur?",
+            "image": "images/CHEM5.22.PNG",
+            "answer": "C"
+        },
+        {
+            "question": "If a collision between molecules is very gentle, what are the molecules likely to do?",
+            "answer": "Rebound without reacting"
+        },
+        {
+            "question": "A certain reaction is zero order in reactant A and second order in reactant B. What happens to the reaction rate when the concentration of both reactants are doubled?",
+            "answer": "The reaction rate increases by a factor of four."
+        },
+        {
+            "question": "The half-life of a radioactive element X is 10.0 min. What weight of X was originally present in a sample if 40. grams is left after 60. minutes?",
+            "answer": "2,560 grams"
+        },
+        {
+            "question": "The isomerization of cyclopropane to propylene is a first-order process with a half-life of 19 minutes at 500\\(^{\\circ}\\)C. The time it takes for the partial pressure of cyclopropane to decrease from 1.0 atmosphere to 0.125 atmosphere at 500\\(^{\\circ}\\)C is closest to what number?",
+            "answer": "57 minutes"
+        },
+        {
+            "question": "2A(g) + B(g)\\(\\rightarrow\\) 2C(g) <br> When the concentration of substance B in the reaction above is doubled, all other factors are being held constant, it is found that the rate of the reaction remains unchanged. What is the most probable explanation for this observation?",
+            "answer": "Substance B is not involved in the rate-determining step of the mechanism, but is involved in subsequent steps."
+        },
+        {
+            "question": "A student performed a lab and measured the concentration of NO\\(_2\\) over a time period. They then created three different graphs with the data. What can the student correctly conclude from the graphs?",
+            "image": "images/CHEM5.29.PNG",
+            "answer": "The reaction is second order."
+        },
+        {
+            "question": "In any first order reaction, as the reaction proceeds at constant temperature, which describes the corresponding effects on k (the rate constant) and rate?",
+            "answer": "k remains the same, the rate decreases"
+        },
+        {
+            "question": "2A + 2B \\(\\leftrightarrow\\) C + D <br> The following data about the reaction above were obtained from three experiments: <br> (a) What is the rate of the reaction? <br> (b) What is the numerical value of the rate constant k? What are its dimensions? <br> Propose a reaction mechanism for this reaction.",
+            "image": "images/CHEM5F1.PNG",
+            "answer": "(a) Rate = k[A]\\(^2\\)[B] <br> (b) 0.12 M\\(^{-2}\\)min\\(^{-1}\\) <br> (c) <br> 2A + B \\(\\rightarrow\\) F <br> B + F\\(\\rightarrow\\) C + D <br> \\(\\rule{5cm}{1pt}\\) <br> 2A + 2B \\(\\rightarrow\\) C + D"
+        },
+        {
+            "question": "A (aq) + 2B (aq) \\(\\leftrightarrow\\) 3C (aq) + D (aq) <br> For the reaction above, carried out in solution of 30\\(^{\\circ}\\)C, the following kinetic data were obtained: <br> (a) Write the rate-law expression for this reaction. <br> (b) Calculate the value of the specific rate constant k at 30\\(^{\\circ}\\) and specify its units. <br> (c) Calculate the value of the initial rate of this reaction at 30\\(^{\\circ}\\)C for the initial concentrations shown in experiment 6. <br> (d) Assume that the reaction goes to completion. Under the conditions specified for experiment 2, what would be the final molar concentration of C?",
+            "image": "images/CHEM5F2.PNG",
+            "answer": "(a) Rate = k[A]\\(^2\\)[B] <br> (b) 289 M\\(^{-2}\\)hr\\(^{-1}\\) <br> (c) 0.0766 M/hr <br> (d) 0.18 M C"
+        },
+        {
+            "question": "Graphical methods are frequently used to analyze data and obtain desired quantities. <br> (a) 2HI (g) \\(\\rightarrow\\) H\\(_2\\) (g) + I\\(_2\\) (g) <br> The following data give the value of the rate constant at various temperatures for the gas reaction above. <br> <img src = 'courses/images/CHEM5F3A.PNG'> <br> Describe, without doing any calculations, how a graphical method can be used to obtain the activation energy for this reaction. <br> (b) A (g) \\(\\rightarrow\\) B (g) + C (g) <br> The following data give the partial pressure of A as a function of time and were obtained at 100\\(^{\\circ}\\)C for the reaction above. <br> <img src = 'courses/images/CHEM5F3B.PNG'> <br> Describe, without doing any calculations, how graphs can be used to determine whether this reaction is first or second order in A and how these graphs are used to determine the rate constant.",
+            "answer": "(a) Plot ln k vs 1/T, then slope = \\(\\frac{E_a}{R}\\), which we can find \\(E_a\\) from. <br> (b) Plot lnP\\(_A\\) vs time and 1/P\\(_A\\) vs time. If lnP\\(_A\\) vs time is linear, the reaction is first order. If 1/P\\(_A\\) vs time is linear, the reaction is second order. If first order, k = -slope, if second order, k = slope."
+        },
+        {
+            "question": "For a hypothetical chemical reaction that has the stoichiometry 2X + Y \\(\\rightarrow\\) Z, the following initial rate data were obtained. All measurements were made at the same temperature. <br> (a) Give the rate law for this reaction from the data above. <br> (b) Calculate the specific rate constant for this reaction and specify its units. <br> (c) How long must the reaction proceed to produce a concentration of Z equal to 0.20 molar, if the initial concentrations are [X]\\(_0\\) = 0.80 molar, [Y]\\(_0\\) = 0.60 molar and [Z]\\(_0\\) = 0 molar?",
+            "image": "images/CHEM5F4.PNG",
+            "answer": "(a) Rate = k[Y] <br> (b) 0.0070 s\\(^{-1}\\) <br> (c) 58 s"
+        },
+        {
+            "question": "The overall order of a reaction may not be predictable from the stoichiometry of the reaction. <br> (a) Explain how this statement can be true. <br> (b) 2XY \\(\\rightarrow\\) X\\(_2\\) + Y\\(_2\\) <br> 1. For the hypothetical reaction above, give a rate law that shows that the reaction is first order in the reactant XY. <br> 2. Give the units for the specific rate constant for this rate law. <br> 3. Propose a mechanism that is consistent with both the rate law and the stoichiometry.",
+            "answer": "(a) The order of a reaction is determined by the slowest step in the mechanism (or by exponents in the rate law). <br> (b) <br> 1. Rate = k[XY] <br> 2. k = 1/time <br> 3. <br> XY \\(\\rightarrow\\) X + Y (slow) <br> XY + X + Y \\(\\rightarrow\\) X\\(_2\\) + Y\\(_2\\) (fast) <br> \\(\\rule{5cm}{1pt}\\) <br> 2XY \\(\\rightarrow\\) X\\(_2\\) + Y\\(_2\\)"
+        },
+        {
+            "question": "C\\(_2\\)H\\(_4\\) (g) + H\\(_2\\) (g) \\(\\rightarrow\\) C\\(_2\\)H\\(_6\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -137 kJ <br> Account for the following observations regarding the exothermic reaction represented by the equation above. <br> (a) An increase in the pressure of the reactants causes an increase in the reaction rate. <br> (b) A small increase in temperature causes a large increase in the reaction rate. <br> (c) The presence of a metallic nickel causes an increase in reaction rate. <br> (d) The presence of powdered nickel causes a larger increase in the reaction rate than does the presence of a single piece of nickel of the same mass.",
+            "answer": "(a) Increasing the pressure of the reactions would cause more collisions between reactant gases. More collisions means more effective collisions, so the reaction rate increases. <br> (b) Increasing the temperature causes the average kinetic energy of the gas reactants to increase, therefore causing more frequent collisions. More collisions means more effective collisions, so the reaction rate increases. Colliding particles will also have more energy. <br> (c) The nickel acts as a catalyst in this reaction. So although the nickel is neither a reactant or a product, it lowers the activation energy of the reaction, which leads to more successful collisions. <br> (d) Since the nickel acts as a surface catalyst, and powdered nickel has much greater surface area than a single piece of nickel, the reaction rate increases with increased surface area of the catalyst."
+        },
+        {
+            "question": "2NO (g) + 2H\\(_2\\) (g) \\(\\rightarrow\\) N\\(_2\\) (g) + 2H\\(_2\\)O (g) <br> Experiments were conducted to study the rate of the reaction represented by the equation above. Initial concentrations and rates of reaction are given in the table below. <br> (a) (i) Determine the order for each of the reactants, NO and H\\(_2\\), from the data given and show your reasoning. <br> (ii) Write the overall rate law for the reaction. <br> (b) Calculate the value of the rate constant, k, for the reaction. Include units. <br> (c) For experiment 2, calculate the concentration of NO remaining when exactly one-half of the original amount of H\\(_2\\) had been consumed. <br> (d) The following sequence of elementary steps is a proposed mechanism for the reaction. <br> I. NO + NO \\(\\rightarrow\\) N\\(_2\\)O\\(_2\\) <br> II. N\\(_2\\)O\\(_2\\) + H\\(_2\\) \\(\\rightarrow\\) H\\(_2\\)O + N\\(_2\\)O <br> III. N\\(_2\\)O + H\\(_2\\) \\(\\rightarrow\\) N\\(_2\\) + H\\(_2\\)O <br> Based on the data presented, which of the above is the rate-determining step? Show that the mechanism is consistent with <br> (i) the observed rate law for the reaction, and <br> (ii) the overall stoichiometry of the reaction.",
+            "image": "images/CHEM5F7.PNG",
+            "answer": "(a) (i) 1st order: [H\\(_2\\)], 2nd order: [NO]. Since doubling [NO] while keeping [H\\(_2\\)] constant quadrupled the rate, the reaction is 2nd order with respect to [NO]. Since doubling [H\\(_2\\)] while keeping [NO] constant doubled the rate, the reaction is 1st order with respect to [H\\(_2\\)]. <br> (ii) Rate = k[NO]\\(^2\\)[H\\(_2\\)] <br> (b) k = \\(5.0\\times 10^3\\)M\\(^{-2}\\)min\\(^{-1}\\) <br> (c) 0.0050 M <br> (d) Rate determining step is N\\(_2\\)O\\(_2\\) + H\\(_2\\) \\(\\rightarrow\\) H\\(_2\\)O + N\\(_2\\)O. <br> (i) k[NO]\\(^2\\)[H\\(_2\\)] agrees with (a) (ii) <br> (iI) 2NO\\(_2\\) + 2H\\(_2\\) \\(\\rightarrow\\) N\\(_2\\) + 2H\\(_2\\)O agrees with the overall stoichiometry."
+        }
     ],
     "Unit 6: Thermochemistry": [
-        {}
+        {
+            "question": "A system has an increase in internal energy, \\(\\Delta E\\) of 40 kJ. If 20 kJ of work, w, is done on the system, what is the heat change, q?",
+            "answer": "+20 kJ"
+        },
+        {
+            "question": "What are the correct units for specific heat capacity?",
+            "answer": "J/g\\(^{\\circ}\\)C"
+        },
+        {
+            "question": "How much heat is required to convert solid sulfur to gaseous sulfur at 298 K and 1 atm pressure? <br> S (s) + O\\(_2\\) (g) \\(\\rightarrow\\) SO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -395 kJ/mol <br> S (g) + O\\(_2\\) (g) \\(\\rightarrow\\) SO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -618 kJ/mol",
+            "answer": "+223 kJ/mol"
+        },
+        {
+            "question": "The heat of vaporization of methane, CH\\(_4\\), at its boiling point is 9.20 kJ/mol. How much heat is required to vaporize 90. g of methane (MM = 16 g/mol) at its boiling point?",
+            "answer": "51.8 kJ"
+        },
+        {
+            "question": "Using the \\(\\Delta H_f^{\\circ}\\) given below, calculate the \\(\\Delta\\)H\\(_{\\text{combustion}}\\) for propane, C\\(_3\\)H\\(_8\\) <br> H\\(_2\\)O (l) \\(\\qquad\\) \\(\\Delta H_f^{\\circ}\\) = -296 kJ/mol <br> CO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H_f^{\\circ}\\) = -394 kJ/mol <br> C\\(_3\\)H\\(_8\\)(g) \\(\\qquad\\) \\(\\Delta H_f^{\\circ}\\) = -104 kJ/mol",
+            "answer": "-2222 kJ"
+        },
+        {
+            "question": "When 0.100 g benzoic acid (HC\\(_6\\)H\\(_4\\)CO\\(_2\\)) and excess oxygen is ignited in a bomb calorimeter, the temperature of the water changes from 25.000\\(^{\\circ}\\)C to 25.225\\(^{\\circ}\\)C. The heat capacity of the calorimeter is 603 J/\\(^{\\circ}\\)C. What is the \\(\\Delta\\)E of this reaction?",
+            "answer": "-136 J"
+        },
+        {
+            "question": "If \\(\\Delta\\)H for a reaction is positive, what does this say about the enthalpy of the products and reactants?",
+            "answer": "The enthalpy of the products is greater than the enthalpu of the reactants."
+        },
+        {
+            "question": "Given the two equations: <br> 2S (s) + 3O\\(_2\\) (g) \\(\\rightarrow\\) 2SO\\(_3\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -790.4 kJ <br> SO\\(_2\\) (g) + 1/2 O\\(_2\\) (g) \\(\\rightarrow\\) SO\\(_3\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -99.1 kJ <br> What is the standard enthalpy of formation for sulfur dioxide, SO\\(_2\\) (g)?",
+            "answer": "-296.1 kJ"
+        },
+        {
+            "question": "How much energy is required to melt 39.0 g benzene, C\\(_6\\)H\\(_6\\) (MM = 78 g/mol)? The heat of fusion of benzene is 2.37 kJ/mol.",
+            "answer": "1.19 kJ"
+        },
+        {
+            "question": "Under conditions of constant pressure, what is the heat change that occurs during a chemical reaction equal to?",
+            "answer": "\\(\\Delta\\)H"
+        },
+        {
+            "question": "What is the standard enthalpy of formation of butane, C\\(_4\\)H\\(_{10}\\), given the data below? <br> \\(\\Delta\\)H\\(^{\\circ}_{\\text{combustion}}\\) for C\\(_4\\)H\\(_{10}\\) (g) = -2900 kJ/mol <br> \\(\\Delta\\)H\\(^{\\circ}_{\\text{formation}}\\) for CO\\(_2\\) (g) = -395 kJ/mol <br> \\(\\Delta\\)H\\(^{\\circ}_{\\text{formation}}\\) for H\\(_2\\)O (l) = -290 kJ/mol",
+            "answer": "-130 kJ"
+        },
+        {
+            "question": "Calculate the standard enthalpy of the reaction for the process <br> 3NO (g) \\(\\rightarrow\\) N\\(_2\\)O (g) + NO\\(_2\\) (g) <br> using the standard enthalpies of formation (in kJ/mol): NO = 90; N\\(_2\\)O = 82.1; NO\\(_2\\) = 34.0",
+            "answer": "-153.9 kJ"
+        },
+        {
+            "question": "How much energy is required to change the temperature of 2.00 g aluminum from 20.0\\(^{\\circ}\\)C to 25.0\\(^{\\circ}\\)C? The specific heat of aluminum is 0.902 J/g\\(^{\\circ}\\)C.",
+            "answer": "9.0 J"
+        },
+        {
+            "question": "Calculate the amount of heat needed to change 20.0 g ice at 0\\(^{\\circ}\\)C to water at 0\\(^{\\circ}\\). The heat of fusion of H\\(_2\\)O = 333 J/g",
+            "answer": "6.66 kJ"
+        },
+        {
+            "question": "The heat of vaporization of H\\(_2\\)S, at its boiling point (-61\\(^{\\circ}\\)C) is 18.8 kJ/mol. What mass of H\\(_2\\)S can be vaporized (at its boiling point) with 100 kJ of energy?",
+            "answer": "100\\(\\times\\) 34.1/18.8"
+        },
+        {
+            "question": "During the condensing of a liquid what happens to the kinetic energy and potential energy?",
+            "answer": "kinetic stays the same, potential decreases"
+        },
+        {
+            "question": "What is the heat of sublimation of a compound equal to?",
+            "answer": "Heat of fusion plus heat of vaporization"
+        },
+        {
+            "question": "Samples of neon gas and of krypton gas, with identical numbers of moles, pressures, and volumes, are also held at the same temperature. What can be said of the kinetic energy and the velocities between twh two particles?",
+            "answer": "They both have the same kinetic energy, but a different velocity"
+        },
+        {
+            "question": "In an exothermic chemical reaction, where the reaction is considered to be \"the system\", where is energy transferred, and what is the \\(\\Delta\\)H\\(_{\\text{system}}\\)?",
+            "answer": "Energy is transferred from the system to the surroundings and \\(\\Delta\\)H\\(_{\\text{system}}\\) is negative."
+        },
+        {
+            "question": "What is associated with an increase in the energy of the surroundings?",
+            "answer": "An exothermic system"
+        },
+        {
+            "question": "In a Maxwell-Boltzmann distribution plot of the number of particles of a particular gas (y-axis) and their kinetic energies (x-axis), at three different temperatures, 100 K, 200 K, and 300 K, at which temperature will the peak of the curve be furthest to the right on the x-axis?",
+            "answer": "300 K"
+        },
+        {
+            "question": "The combustion of methane occurs according to the equation, and with the enthalpy change, shown below. What is the energy change when 0.080 g of methane is completely combusted in oxygen gas? <br> CH\\(_4\\) (g) + 2O\\(_2\\) (g) \\(\\rightarrow\\) CO\\(_2\\) (g) + 2H\\(_2\\)O (l) \\(\\qquad\\) \\(\\Delta\\)H = -890 kJ/mol \\(_{\\text{rxn}}\\)",
+            "answer": "-4.45 kJ"
+        },
+        {
+            "question": "A student performs a neutralization reaction involving an acid and a base in an open polystryrene coffee-cup calorimeter. How would the calculated value of \\(\\Delta\\)H differ from the actual value if there was significant heat loss to the surroundings?",
+            "answer": "\\(\\Delta\\)H\\(_{\\text{calc}}\\) would be negative, but less negative than the actual value"
+        },
+        {
+            "question": "One cup of ice has a mass of approximately 250 g. The ice is at 0.0\\(^{\\circ}\\)C. How much heat is required to melt the ice and then warm the resulting water to 25\\(^{\\circ}\\)C? A table of useful information is provided. <br> Heat of fusion of H\\(_2\\)O (s): 332 kJ/kg <br> Specific heat of H\\(_2\\)O (l): 4.18 J/\\(^{\\circ}\\)C\\(\\cdot\\)g",
+            "answer": "110 kJ"
+        },
+        {
+            "question": "What would be an equation that best represents the energy associated with the system and the surroundings, when energy is transferred via heat, from one to the other?",
+            "answer": "q\\(_{\\text{system}}\\) = -q\\(_{\\text{surroundings}}\\)"
+        },
+        {
+            "question": "Consider the reaction shown below:<br>Given the following information, calculate \\(\\Delta^{\\circ}\\)\\(_{\\text{rxn}}\\) for the reaction represented, where each molecule represents 1 mole of that substance. Assume that all states are those listed below. <br> CO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}_f\\) = -393.5 kJ/mol <br> H\\(_2\\)O (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}_f\\) = -285.8 kJ/mol <br> CH\\(_3\\)OH (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}_f\\) = -201.0 kJ/mol",
+            "image": "images/CHEM6.31.PNG",
+            "answer": "-1528.2 kJ"
+        },
+        {
+            "question": "A 100.0 g sample of aluminum metal is heated to 80.00\\(^{\\circ}\\)C and then immersed in a relatively cold water bath that contains 0.1000 kg of water until thermal equilibrium is established. The specific heat capacity of water is known to be 4.200 J/g\\(^{\\circ}\\)C, and the apparatus is considered to be perfectly insulated (no energy losses are observed to either the atmosphere or the apparatus itself). The following data are collected below. According to this data, what would be the correct set-up for the calculation of the heat capacity of Al, if it is assigned a value of x?",
+            "image": "images/CHEM6.32.PNG",
+            "answer": "(100.0)(4.200)(34.79-25.00) = -(100.0)(x)(34.79-80.00)"
+        },
+        {
+            "question": "Propane, C\\(_3\\)H\\(_8\\), is a hydrocarbon that is commonly used as fuel for cooking. <br> (a) Write a balanced equation for the complete combustion of propane gas, which yields CO\\(_2\\) (g) and H\\(_2\\)O (l). <br> (b) Calculate the volume of air at 30\\(^{\\circ}\\)C and 1.00 atmosphere that is needed to burn completely 10.0 grams of propane. Assume that air is 21.0 percent O\\(_2\\) by volume. <br> (c) The heat of combustion of propane is -2,220.1 kJ/mol. Calculate the heat of formation of propane given that the heat of formation of H\\(_2\\)O (l) = -285.3 kJ/mol and for CO\\(_2\\) (g) it is -393.5 kJ/mol <br> (d) Assuming that all the heat evolved in burning 30.0 grams of propane is transferred to 8.00 kilograms of water (specific heat = 4.18 J/gK), calculate the increase in temperature of water.",
+            "answer": "(a) C\\(_3\\)H\\(_8\\) (g) + 5O\\(_2\\) (g) \\(\\rightarrow\\) 3CO\\(_2\\) (g) + 4H\\(_2\\)O (l) <br> (b) 1.13 mol O\\(_2\\) <br> (c) -101.6 kJ <br> (d) 45.2 K"
+        },
+        {
+            "question": "Given the following data: <br> Fe\\(_2\\)O\\(_3\\) (s) + 3CO (g) \\(\\rightarrow\\) 2Fe (s) + 3CO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -23 kJ <br> 3Fe\\(_2\\)O\\(_3\\) (s) + CO (g) \\(\\rightarrow\\) 2Fe\\(_3\\)O\\(_4\\) (s) + CO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = -39 kJ <br> Fe\\(_3\\)O\\(_4\\) (s) + CO (g) \\(\\rightarrow\\) 3FeO (s) + CO\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta H^{\\circ}\\) = +18 kJ <br> Calculate \\(\\Delta H^{\\circ}\\) for the reaction <br> FeO (s) + CO (g) \\(\\rightarrow\\) Fe (s) + CO\\(_2\\) (g)",
+            "answer": "-11 kJ"
+        },
+        {
+            "question": "When 1.000 gram of propane gas, C\\(_3\\)H\\(_8\\) is burned at 25\\(^{\\circ}\\)C and 1.00 atmosphere, H\\(_2\\)O (l) and CO\\(_2\\) (g) are formed with the evolution of 12.03 kilocalories. <br> (a) Write a balanced equation for the combustion reaction. <br> (b) Calculate the molar enthalpy of combustion of propane. <br> (c) Calculate the standard molar enthalpy of formation of propane gas.",
+            "image": "images/CHEM6.1F.PNG",
+            "answer": "(a) C\\(_3\\)H\\(_8\\) (g) + 5O\\(_2\\) (g) \\(\\rightarrow\\) 3CO\\(_3\\) (g) + 4H\\(_2\\)O (l) <br> (b) -530.4 kcal/mol <br> (c) -25.0 kcal/mol"
+        },
+        {
+            "question": "The standard enthalpy of combustion of ethane gas, C\\(_2\\)H\\(_4\\) (g), is -1411.1 kJ/mol at 298 K. Given the following enthalpies of formations, calculate \\(\\Delta H^{\\circ}_f\\) for C\\(_2\\)H\\(_4\\) (g).",
+            "image": "images/CHEM6.2F.PNG",
+            "answer": "52.5 kJ/mol"
+        },
+        {
+            "question": "(a) Write a separate, balanced equation for the combustion of each of the following: C (S), H\\(_2\\) (g), and C\\(_2\\)H\\(_5\\)OH (l). Consider the only products to be CO\\(_2\\) and/or H\\(_2\\)O (l). <br> (b) In principle, ethanol can be prepared by the following reaction: <br> 2C (s) + 2H\\(_2\\) (g) + H\\(_2\\)O (l) \\(\\rightarrow\\) C\\(_2\\)H\\(_5\\)OH (l) <br> Calculate the standard enthalpy change for the preparation of ethanol, as shown in the reaction above.",
+            "image": "images/CHEM6.3F.PNG",
+            "answer": "(a) <br> C (s) + O\\(_2\\) (g) \\(\\rightarrow\\) CO\\(_2\\) (g) <br> H\\(_2\\) (g) + 1/2 O\\(_2\\) (g) \\(\\rightarrow\\) H\\(_2\\)O (l) <br> C\\(_2\\)H\\(_5\\)OH (l) + 3O\\(_2\\) (g) \\(\\rightarrow\\) 2CO\\(_2\\) (g) + 3H\\(_2\\)O (l) <br> (b) -8.1 kJ/mol"
+        },
+        {
+            "question": "Consider the following reaction: <br> 2H\\(_2\\) (g) + O\\(_2\\) (g) \\(\\rightarrow\\) 2H\\(_2\\)O (l) \\(\\qquad\\) \\(\\Delta H\\) = -572 kJ <br> (a) How much heat is evolved for the production of 1.00 mol of H\\(_2\\)O (l)? <br> (b) How much heat is evolved when 186 g of oxygen is reacted with excess hydrogen? <br> (c) The total volume of hydrogen gas needed to fill the Hindenburg was \\(2.0\\times 10^8\\) L at 1.0 atm and 25\\(^{\\circ}\\)C. How much heat was evolved when the Hindenburg exploded? Assume all the hydrogen reacted.",
+            "answer": "(a) 286 kJ/mol <br> (b) 3320 kJ/mol <br> (c) \\(2.34\\times 10^9\\) kJ"
+        },
+        {
+            "question": "An experiment is to be performed to determine the standard molar enthalpy of neutralization of a strong acid by a strong base. Standard school laboratory equipment and a supply of standardized 1.00 molar HCl and standardized 1.00 molar NaOH are available. <br> (a) What equipment would be needed? <br> (b) What measurements should be taken? <br> (c) Without performing calculations, describe how the resulting data should be used to obtain the standard molar enthalpy of neutralization. <br> (d) When a class of students performed this experiment, the average of the results was -55.0 kilojoules per mole. The accepted value for the standard molar enthalpy of neutralization of a strong acid by a strong base is -57.7 kilojoules per mole. Propose two likely sources of experimental error that could account for the result obtained by the class.",
+            "answer": "(a) volumetric glassware, styrofoam cup/lids, thermometer <br> (b) Measurements should include the temperatures before and after the reaction, and volumes of the acid and base used. <br> (c) Determination of heat: the sum of the volumes of the two solutions and change in temperature. Then use the formula q = mc\\(\\Delta\\)T to find q. Then divide q by moles of water produced to get \\(\\Delta H\\). <br> (d) Experimental errors: heat loss to the calorimeter wall, to air, or to the thermometer. These errors would all tend to lower the calculated molar enthalpy."
+        },
+        {
+            "question": "In a coffee-cup calorimeter, 1.60 g of NH\\(_4\\)NO\\(_3\\) is mixed with 75.0 g of water at an initial temperature of 25.00\\(^{\\circ}\\)C. After dissolution of the salt, the final temperature of the calorimeter is 23.34\\(^{\\circ}\\). Assuming the solution has a heat capacity of 4.18 J/g\\(^{\\circ}\\)C and assuming no heat loss to the calorimeter, calculate the enthalpy change for the dissolution of NH\\(_4\\)NO\\(_3\\) in units of kJ/mol.",
+            "answer": "31 kJ/mol"
+        }
     ],
     "Unit 7: Equilibrium": [
-        {}
+        {
+            "question": "Consider the reaction system, <br> CoO (s) + H\\(_2\\) (g) \\(\\leftrightarrow\\) Co (s) + H\\(_2\\)O (g). <br> What is the equilibrium constant expression?",
+            "answer": "\\(\\frac{[\\text{H}_2\\text{O}]}{[\\text{H}_2]}\\)"
+        },
+        {
+            "question": "At a given temperature, 0.300 mole NO, 0.200 mol Cl\\(_2\\) and 0.500 mol ClNO were placed in a 25.0 Liter container. The following equilibrium is established: <br> 2ClNO (g) \\(\\leftrightarrow\\) 2NO (g) + Cl\\(_2\\) (g) <br> (a) At equilibrium, 0.600 mol of ClNO was present. What is the number of moles of Cl\\(_2\\) present at equilibrium? <br> (b) What is the equilibrium constant, K\\(_c\\)?",
+            "answer": "(a) 0.150 <br> (b) \\(\\frac{(0.2)^2(0.15)}{(0.6^2)(25)}\\)"
+        },
+        {
+            "question": "What is the relationship between K\\(_p\\) and K\\(_c\\) for the reaction <br> 2ICl (g) \\(\\leftrightarrow\\) I\\(_2\\) (g) + Cl\\(_2\\) (g)?",
+            "answer": "K\\(_p\\) = K\\(_c\\)"
+        },
+        {
+            "question": "For the reaction system <br> N\\(_2\\) (g) + 3H\\(_2\\) (g) \\(\\leftrightarrow\\) 2NH\\(_3\\) (g) + heat <br> What conditions of temperature and pressure would favor maximum conversion of the reactants to products?",
+            "answer": "Low temperatures and high pressure"
+        },
+        {
+            "question": "N\\(_2\\)O\\(_4\\) (g) \\(\\leftrightarrow\\) 2NO\\(_2\\) (g) <br> At 25\\(^{\\circ}\\)C, 0.11 mole of N\\(_2\\)O\\(_4\\) reacts to form 0.10 mol of N\\(_2\\)O\\(_4\\) and 0.02 mole of NO\\(_2\\). <br> At 90\\(^{\\circ}\\)C, 0.11 mole of N\\(_2\\)O\\(_4\\) forms 0.050 mole of N\\(_2\\)O\\(_4\\) and 0.12 mole of NO\\(_2\\). <br> What can we conclude from this data?",
+            "answer": "The equilibrium constant for the reaction above increases with an increase in temperature."
+        },
+        {
+            "question": "For the equilibrium system <br> H\\(_2\\)O (g) + CO (g) \\(\\leftrightarrow\\) H\\(_2\\) (g) + CO\\(_2\\) (g) <br> \\(\\Delta H\\) = -42 kJ/mol <br> K\\(_c\\) equals 0.62 at 1260 K. If 0.10 mole each of H\\(_2\\)O, CO, H\\(_2\\) and CO\\(_2\\) (each at 1260 K) were placed in a 1.0-Liter flask at 1260 K. When the system comes to equilibrium, what will happen to the temperature and the mass of CO?",
+            "answer": "Temperature would decrease, and the mass of CO would increase."
+        },
+        {
+            "question": "The graph below is a concentration vs. time plot for a hypothetical reaction A\\(\\leftrightarrow\\)B. Estimate the value of the equilibrium constant, K\\(_c\\) for this system.",
+            "image": "images/CHEM7.10.PNG",
+            "answer": "K\\(_c\\) > 1"
+        },
+        {
+            "question": "At 700 K, carbon tetrachloride decomposes into carbon and chlorine. <br> CCl\\(_4\\) (g) \\(\\leftrightarrow\\) C (s) + 2Cl\\(_2\\) (g) <br> Before any reaction occurs, initial amounts of CCl\\(_4\\), C, and Cl\\(_2\\) are injected into a rigid container at 700 K. For the first 5 seconds, the concentration of Cl\\(_2\\) decreases. What is the relationship between K and Q during the first 5 seconds of this reaction?",
+            "answer": "K < Q"
+        },
+        {
+            "question": "At 985\\(^{\\circ}\\)C, the equilibrium constant for the reaction <br> H\\(_2\\) (g) + CO\\(_2\\) (g) \\(\\leftrightarrow\\) H\\(_2\\)O (g) + CO (g) <br> is 1.6. What is the equilibrium constant for the reverse reaction?",
+            "answer": "0.625"
+        },
+        {
+            "question": "Solid HgO, liquid Hg, and gaseous O\\(_2\\) are placed in a glass bulb and are allowed to reach equilibrium at a given temperature. <br> 2HgO (s) \\(\\leftrightarrow\\) 2Hg (l) + O\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta\\)H = +43.4 kcal <br> How can the mass of HgO in the bulb increase?",
+            "answer": "Reducing the volume of the bulb."
+        },
+        {
+            "question": "When a reversible reaction is exposed to a catalyst, how does the rate of the forward and backward reactions change?",
+            "answer": "Both rates increase to the same extent"
+        },
+        {
+            "question": "Automobile exhaust gases often reach a temperature of 1200 K. At this temperature, carbon dioxide can establish the following equilibrium system: <br> 2CO\\(_2\\) (g) \\(\\leftrightarrow\\) 2CO (g) + O\\(_2\\) (g) \\(\\qquad\\) \\(\\Delta\\)H = -514 kJ <br> An equilibrium mixture contains 2 M CO\\(_2\\) and 5 M O\\(_2\\) and K\\(_c\\) = 5. Determine the equilibrium concentration of CO.",
+            "answer": "2 M"
+        },
+        {
+            "question": "Determine the K\\(_p\\) for the following reaction if at equilibrium half of the initial SO\\(_2\\) reacted to form 2.00 atm of SO\\(_3\\). The initial partial pressure of SO\\(_2\\) and O\\(_2\\) were equal. <br> 2SO\\(_2\\) (g) + O\\(_2\\) (g) \\(\\leftrightarrow\\) 2SO\\(_3\\) (g)",
+            "answer": "0.333 atm"
+        },
+        {
+            "question": "Hydrogen gas at a pressure of 9.0 atm is added to a vessel containing 5.0 atm of iodine vapor. The resulting reaction is allowed to come to equilibrium, and it is found that the final pressure of iodine vapor is 2.0 atm. What is the K\\(_p\\) value for the following reaction? <br> H\\(_2\\) (g) + I\\(_2\\) (g) \\(\\leftrightarrow\\) 2HI (g)",
+            "answer": "3.0"
+        },
+        {
+            "question": "Dinitrogen pentoxide is added to an evacuated rigid container at 25\\(^{\\circ}\\)C. Given that the initial pressure of N\\(_2\\)O\\(_5\\) is 1.00 atm and at equilibrium the N\\(_2\\)O\\(_5\\) pressure is 0.500 atm, determine the final pressure in the reaction vessel at equilibrium. <br> 2N\\(_2\\)O\\(_5\\) (g) \\(\\leftrightarrow\\) 4NO\\(_2\\) (g) + O\\(_2\\) (g)",
+            "answer": "1.75 atm"
+        },
+        {
+            "question": "The chemical reaction below has K\\(_c\\) = 5.0 at a temperature of 2000 K. <br> H\\(_2\\) (g) + CO\\(_2\\) (g) \\(\\leftrightarrow\\) H\\(_2\\)O (g) + CO (g) <br> In an experiment, 2.0 moles of H\\(_2\\) (g), 2.0 moles of CO\\(_2\\) (g), 1.0 mole of H\\(_2\\)O (g), and 1.0 mole of CO (g) are brought together in a 1.0 L container at 2000 K. <br> (a) What happens to the concentration of CO\\(_2\\) (g) as the mixture approaches equilibrium? <br> (b) What is K\\(_c\\) for the reaction shown below? <br> 2H\\(_2\\)O (g) + 2CO (g) \\(\\leftrightarrow\\) 2H\\(_2\\) (g) + 2CO\\(_2\\) (g)",
+            "answer": "(a) It decreases since the reaction will proceed forward in order to reach equilibrium. <br> (b) 1/25"
+        },
+        {
+            "question": "The salt MX\\(_2\\) has a solubility of \\(1.0\\times 10^{-4}\\) M. Determine the K\\(_{sp}\\) for MX\\(_2\\).",
+            "answer": "\\(4.0\\times 10^{-12}\\)"
+        },
+        {
+            "question": "Hydrogen gas, iodine vapor, and hydrogen iodide gas are added to an evacuated flask until the concentrations of H\\(_2\\) and I\\(_2\\) are both 2.0 M and that of HI equals 8.0 M. <br> H\\(_2\\) (g) + I\\(_2\\) (g) \\(\\leftrightarrow\\) 2HI (g) \\(\\qquad\\) (At 425\\(^{\\circ}\\)C, K = 9.00) <br> (a) Determine the value of Q. <br> (b) The reaction vessel is heated to 675\\(^{\\circ}\\)C, where the equilibrium concentration of the HI is determined to be 6.0 M. What is the K value at 675\\(^{\\circ}\\)C? <br> (c) Once the system reaches equilibrium at 675\\(^{\\circ}\\)C, additiona H\\(_2\\) is added and the temperature is held constant. How does this affect the value of K?",
+            "answer": "(a) 16 <br> (b) 4.0 <br> (c) The value of K remains unchanged because the temperature remained constant."
+        },
+        {
+            "question": "When 0.10 mole of solid Ag\\(_2\\)C\\(_2\\)O\\(_4\\) is added to 1 L of pure water at 25\\(^{\\circ}\\)C, a saturated solution is formed. The solubility of Ag\\(_2\\)C\\(_2\\)O\\(_4\\) is \\(2.1\\times 10^{-4}\\)M. What would be the setup to calculate the K\\(_{sp}\\) of Ag\\(_2\\)C\\(_2\\)O\\(_4\\)?",
+            "answer": "K\\(_{sp}\\) = (\\(4.2\\times 10^{-4}\\))\\(^2\\)(\\(2.1\\times 10^{-4}\\))"
+        },
+        {
+            "question": "A 0.010 mole sample of K\\(_2\\)SO\\(_4\\) is added to 1.0 L each of two different solutions. One solution contains \\(2.0\\times 10^{-3}\\) M Ba(NO\\(_3\\))\\(_2\\), and the other contains \\(2.0\\times 10^{-3}\\) M AgNO\\(_3\\). What is observed? <br> K\\(_{sp}\\) for BaSO\\(_4\\) is \\(1.5\\times 10^{-9}\\) <br> K\\(_{sp}\\) for Ag\\(_2\\)SO\\(_4\\) is \\(1.2\\times 10^{-5}\\)",
+            "answer": "BaSO\\(_4\\) would precipitate, but Ag\\(_2\\)SO\\(_4\\) would not."
+        },
+        {
+            "question": "Aqueous solutions of NaCl and Na\\(_2\\)CrO\\(_4\\) are mixed and they do not react. To this mixture an aqueous solution of AgNO\\(_3\\) is added (dropwise). At first, a white solid forms. As the AgNO\\(_3\\) solution continues to be added, a yellow solid begins to form. AgCl (s) is white in color and Ag\\(_2\\)CrO\\(_4\\) (s) is yellow. What is an accurate conclusion based on these results?",
+            "answer": "The molar solubility of the AgCl is less than the molar solubility of Ag\\(_2\\)CrO\\(_4\\) because the white solid formed first."
+        },
+        {
+            "question": "Barium iodate has a K\\(_{sp}\\) of \\(4.0\\times 10^{-9}\\). What is the iodate concentration in saturated solution of barium iodate?",
+            "answer": "\\(2.0\\times 10^{-3}\\) M"
+        },
+        {
+            "question": "Three ionic salts, AX, BX\\(_2\\), and CX\\(_3\\), each have a solubility of \\(2\\times 10^{-5}\\) M. Rank the K\\(_{sp}\\) of the three salts from least to greatest.",
+            "answer": "CX\\(_3\\) < BX\\(_2\\) < AX"
+        },
+        {
+            "question": "Solid sodium chloride was added to pure water slowly, with stirring, at 25\\(^{\\circ}\\)C, until no more sodium chloride would dissolve. Solid remained on the bottom of the container, even after the solution was stirred repeatedly over 8 hours. After the solid was allowed to settle, some of the clear, colorless solution was carefully poured off into a flask. The flask was placed in a refrigerator at a temperature of 4\\(^{\\circ}\\)C for 2 hours. When the flask was removed from the refrigerator, a small amount of white solid was found to have appeared in the flask. What is the best explanation of this?",
+            "answer": "The K\\(_{sp}\\) of NaCl decreases with decreasing temperature."
+        },
+        {
+            "question": "The solubility product of PbI\\(_2\\) is \\(7.9\\times 10^{-9}\\). What is the molar solubility of PbI\\(_2\\) in distilled water?",
+            "answer": "\\(1.25\\times 10^{-3}\\)"
+        },
+        {
+            "question": "Aqueous solutions of Na\\(_2\\)CO\\(_3\\) and Ca(NO\\(_3\\))\\(_2\\), 0.10 M each, are combined. A white precipitate is observed in the container after mixing. The precipitate is filtered and carefully rinsed with distilled water to remove other ions. A sample of the precipitate is added to 100 mL of 0.1 M NaCl. A second sample of the precipitate is then added to 100 mL of 0.1 M HCl. What would be observed in each case?",
+            "answer": "With NaCl, no visible reaction occurs. With AgCl, gas is produced and some precipitate dissolves."
+        },
+        {
+            "question": "The solubility of gold (III) chloride is \\(1.00\\times 10^{-4}\\) g/L. What is the solubility product of AuCl\\(_3\\) (molar mass = 303)?",
+            "answer": "\\(3.2\\times 10^{-25}\\)"
+        },
+        {
+            "question": "At 25\\(^{\\circ}\\)C the solubility product constant, K\\(_{sp}\\), for strontium sulfate. SrSO\\(_4\\) is \\(7.6\\times 10^{-7}\\). The solubility product constant for strontium fluoride, SrF\\(_2\\) is \\(7.9\\times 10^{-10}\\). <br> (a) What is the molar solubility of SrSO\\(_4\\) in pure water at 25\\(^{\\circ}\\)C? <br> What is the molar solubility of SrF\\(_2\\) in pure water at 25\\(^{\\circ}\\)C? <br> (c) An aqueous solution of Sr(NO\\(_3\\))\\(_2\\) is added slowly to 1.0 liter of a well-stirred solution containing 0.020 mole F\\(^-\\) and 0.10 mole SO\\(_4\\)\\(^{2-}\\) at 25\\(^{\\circ}\\)C. (You may assume that the added Sr(NO\\(_3\\))\\(_2\\) solution does not materially affect the total volume of the system.) <br> 1. Which salt precipitates first? <br> 2. What is the concentration of stronium ion, Sr\\(^{2+}\\), in the solution when the first precipitate begins to form? <br> (d) As more Sr(NO\\(_3\\))\\(_2\\) is added to the mixture in (c) and a second precipitate begins to form. At that stage, what percent of the anion of the first precipitate remains in solution?",
+            "answer": "(a) \\(8.7\\times 10^{-4}\\) M <br> (b) \\(5.9\\times 10^{-4}\\) M <br> (c) <br> 1. SrF\\(_2\\) <br> 2. \\(2.0\\times 10^{-6}\\) M <br> (d) 50%"
+        },
+        {
+            "question": "At elevated temperatures, SbCl\\(_5\\) gas decomposes into SbCl\\(_3\\) gas and Cl\\(_2\\) gas, as shown by the following equation. <br> SbCl\\(_5\\) \\(\\leftrightarrow\\) SbCl\\(_3\\) + Cl\\(_2\\) <br> (a) An 89.7 gram sample of SbCl\\(_5\\) (molecular weight 299.0) is placed in an evacuated 15.0-liter container at 182\\(^{\\circ}\\)C. <br> (1) What is the concentration in moles per liter of SbCl\\(_5\\) in the container before any decomposition occurs? <br> (2) What is the pressure in atmospheres of SbCl\\(_5\\) in the container before any decomposition occurs? <br> (b) If the SbCl\\(_5\\) is 29.2 percent decomposes when equilibrium is established at 182\\(^{\\circ}\\)C, calculate the value for either equilibrium constant, K\\(_p\\) or K\\(_c\\), for this decomposiion reaction. Indicate whether you are calculating K\\(_p\\) or K\\(_c\\). <br> (c) In order to produce some SbCl\\(_5\\), a 1.00-mole sample of SbCl\\(_3\\) is first placed in an empty 2.00-liter container maintained at a temperature different from 182\\(^{\\circ}\\)C. At this temperature K\\(_c\\) equals 0.117. How many moles of Cl\\(_2\\) must be added to this container to reduce the number of moles of SbCl\\(_3\\) to 0.700 mole at equilibrium?",
+            "answer": "(a) <br> (1) 0.0200 M <br> (2) 0.747 atm <br> (b) K\\(_c\\) = 0.00241 or K\\(_p\\) = 0.0898 <br> (c) 0.400 mol"
+        },
+        {
+            "question": "2NaHCO\\(_3\\) (s) \\(\\leftrightarrow\\) Na\\(_2\\)CO\\(_3\\) (s) + H\\(_2\\)O (g) + CO\\(_2\\) (g) <br> Solid sodium hydrogen carbonate, NaHCO\\(_3\\), decomposes on heating according to the equation above. <br> (a) A sample of 100. grams of solid NaHCO\\(_3\\) was placed in a previously evacuated rigid 5.00-liter container and heated to 160.\\(^{\\circ}\\)C. Some of the original solid remained and the total pressure in the container was 7.76 atmospheres when equilibrium was reached. Calculate the number of moles of H\\(_2\\)O (g) present at equilibrium. <br> (b) How many grams of the original solid remained in the container under the conditions described in (a)? <br> (c) Write the equilibrium expression for the equilibrium constant, K\\(_p\\), and calculate its value for the reaction under the conditions in (a). <br> (d) If 110. grams of solid NaHCO\\(_3\\) had been placed in the 5.00-liter container and heated to 160\\(^{\\circ}\\)C, what would the total pressure have been at equilibrium? Explain.",
+            "answer": "(a) 0.546 mol <br> (b) 8.3 g remain <br> (c) 15.0 <br> (d) The total pressure at equilibrium would be the same. 100 g of NaHCO\\(_3\\) already represents an excess of solid, so a T = 160\\(^{\\circ}\\)C will only decompose part of the 100 g. Adding 10 g more to the initial amount in a new experiment at the same T only causes there to be an extra 10 g of excess. No more decomposition occurs at the same T."
+        },
+        {
+            "question": "MgF\\(_2\\) (s) \\(\\leftrightarrow\\) Mg\\(^{2+}\\) (aq) + 2F\\(^-\\) (aq) <br> In a saturated solution of MgF\\(_2\\) at 18\\(^{\\circ}\\)C, the concentration of Mg\\(^{2+}\\) is \\(1.21\\times 10^{-3}\\) molar. The equilibrium is represented by the equation above. <br> (a) Write the expression for the solubility-product constant, K\\(_{sp}\\) and calculate its value at 18\\(^{\\circ}\\)C. <br> (b) Calculate the equilibrium concentration of Mg\\(^{2+}\\) in 1.000 liter of saturated MgF\\(_2\\) solution at 18\\(^{\\circ}\\)C to which 0.100 mole of solid KF has been added. The KF dissolves completely. Assume the volume change is negligible. <br> (c) Predict whether a precipitate of MgF\\(_2\\) will form when 100.0 milliliters of a \\(3.00\\times 10^{-3}\\) molar Mg(NO\\(_3\\))\\(_2\\) solution is mixed with 200.0 milliliters of a \\(2.00\\times 10^{-3}\\) molar NaF solution at 18\\(^{\\circ}\\)C. Calculations to support your prediction must be shown. <br> (d) At 27\\(^{\\circ}\\) the concentration of Mg\\(^{2+}\\) in a saturated solution of MgF\\(_2\\) is \\(1.17\\times 10^{-3}\\) molar. Is the dissolving of MgF\\(_2\\) in water an endothermic or an exothermic process? Give an explanation to support your conclusion.",
+            "answer": "(a) \\(7.09\\times 10^{-9}\\) <br> (b) \\(7.09\\times 10^{-7}\\) M <br> (c)Q is \\(1.78\\times 10^{-9}\\) and K was found above. Since K > Q, no precipitate forms. <br> (d) The dissolving of MgF\\(_2\\) is an exothermic process since less Mg\\(^{2+}\\) exists as heat is added to the system. The equilibrium shifts left upon heating."
+        },
+        {
+            "question": "C (s) + H\\(_2\\)O (g) \\(\\leftrightarrow\\) CO (g) + H\\(_2\\) (g) <br> \\(\\Delta H^{\\circ}\\) = +131 kJ <br> A rigid container holds a mixture of graphite pellets (C(s)), H\\(_2\\)O (g), CO (g), and H\\(_2\\) (g) at equilibrium. State whether the number of moles of CO (g) in the container will increase, decrease, or remain the same after each of the following disturbances is applied to the original mixture. For each case, assume that all other variables remain constant except for the given disturbance. Explain each answer with a short statement. <br> (a) Additional H\\(_2\\) (g) is added to the equilibrium mixture at constant volume. <br> (b) The temperature of the equilibrium mixture is increased at constant volume. <br> (c) The volume of the container is decreased at constant temperature. <br> (d) The graphite pellets are pulverized.",
+            "answer": "(a) The number of moles of CO will decrease. Adding H\\(_2\\) will cause the reaction to shift to the left in order to reduce the number of moles of H\\(_2\\) in order to restore the equilibrium. <br> (b) The number of moles of CO will increase. The reaction is endothermic; adding heat (which can be thought as a reactant) will cause the reaction to shift to the right in order to use up the heat. <br> (c) The number of moles of CO will decrease. There are more moles of gas on the right-hand side of the equation than on the left-hand side, thus decreasing the volume (which will increase the pressure) causes the reaction to shift to the left in order to reduce the pressure in order to restore the equilibrium. <br> (d) The number of moles of CO will stay the same. Pure solids are not involved in the equilibrium expression since their concentrations cannot be changed."
+        },
+        {
+            "question": "N\\(_2\\) (g) + 3H\\(_2\\) (g) \\(\\leftrightarrow\\) 2NH\\(_3\\) (g) <br> For the reaction represented above, the value of the equilibrium constant, K\\(_p\\) is \\(3.1\\times 10^{-4}\\) at 700. K. <br> (a) Write the expression for the equilibrium constant, K\\(_p\\), for the reaction. <br> (b) Assume the initial partial pressures of the gases are as follows: <br> P\\(_{N2}\\) = 0.411 atm, P\\(_{H2}\\) = 0.903 atm, and P\\(_{NH3}\\) = 0.224 atm <br> i. Calculate the value of the reaction quotient, Q, at these initial conditions. <br> ii. Predict the direction in which the reaction will proceed at 700. K if the initial partial pressures are those given above. Justify your answer. <br> (c) Calculate the value of the equilibrium constant, K\\(_c\\), given that the value of K\\(_p\\) for the reaction at 700. K is \\(3.1\\times 10^{-4}\\). <br> (d) The value of K\\(_p\\) for the reaction represented below is \\(8.3\\times 10^{-3}\\) at 700. K <br> NH\\(_3\\) (g) + H\\(_2\\)S (g) \\(\\leftrightarrow\\) NH\\(_4\\)HS (g) <br> Calculate the value of K\\(_p\\) at 700. K for each of the reactions represented below. <br> i. NH\\(_4\\)HS (g) \\(\\leftrightarrow\\) NH\\(_3\\) (g) + H\\(_2\\)S (g) <br> ii. 2H\\(_2\\)S (g) + N\\(_2\\) (g) + 3H\\(_2\\) (g) \\(\\leftrightarrow\\) 2NH\\(_4\\)HS (g)",
+            "answer": "(a) \\(K_p = \\frac{(P_{NH3})^2}{(P_{N2})(P_{H2})^3}\\) <br> (b) i. 0.166 <br> ii. Since K < Q, the numerator must decrease and the denominator must increase, so the reaction must proceed to the left-hand side to establish equilibrium. <br> (c) 1.02 <br> (d) i. 120 <br> ii. \\(2.1\\times 10^{-8}\\)"
+        },
+        {
+            "question": "Answer the following questions relating to the solubilites of two silver compounds. Ag\\(_2\\)CrO\\(_4\\) and Ag\\(_3\\)PO\\(_4\\). <br> Silver chromate dissociates in water according to the equation below. <br> Ag\\(_2\\)CrO\\(_4\\) (s) \\(\\leftrightarrow\\) 2Ag\\(^+\\) (aq) + CrO\\(_4^{2-}\\) (aq) \\(\\qquad\\) K\\(_{sp} = 2.6\\times 10^{-12}\\) at 25\\(^{\\circ}\\)C <br> (a) Write the equilibrium-constant expression for the dissolving of Ag\\(_2\\)CrO\\(_4\\) (s) <br> (b) Calculate the concentration, in mol/L, of Ag\\(^+\\) (aq) in a saturated solution of Ag\\(_2\\)CrO\\(_4\\) at 25\\(^{\\circ}\\)C. <br> (c) Calculate the maximum mass, in grams, of Ag\\(_2\\)CrO\\(_4\\) that dissolve in 100. mL of water at 25\\(^{\\circ}\\)C. <br> (d) A 0.100 mol sample of solid AgNO\\(_3\\) is added to a 1.00 L saturated solution of Ag\\(_2\\)CrO\\(_4\\). Assuming no volume change, does [CrO\\(_4^{2-}\\)] increase, decrease, or remain the same? Justify your answer. <br> In a saturated solution of Ag\\(_3\\)PO\\(_4\\) at 25\\(^{\\circ}\\)C, the concentration of Ag\\(^+\\) (aq) is \\(5.3\\times 10^{-5}\\) M. The equilibrium constant expression for the dissolving of Ag\\(_3\\)PO\\(_4\\) (s) in water is shown below. <br> K\\(_{sp}\\) = [Ag\\(^+\\)]\\(^3\\)[PO\\(_4\\)\\(^{-3}\\)] <br> (e) Write the balanced equation for the dissolving of Ag\\(_3\\)PO\\(_4\\) in water. <br> (f) Calculate the value of K\\(_{sp}\\) for Ag\\(_3\\)PO\\(_4\\) at 25\\(^{\\circ}\\)C. <br> (g) A 1.00 L sample of saturated Ag\\(_3\\)PO\\(_4\\) solution is allowed to evaporate at 25\\(^{\\circ}\\)C to a final volume of 500. mL. What is [Ag\\(^+\\)] in the solution? Justify your answer.",
+            "answer": "(a) K\\(_{sp}\\) = [Ag\\(^+\\)]\\(^2\\)[CrO\\(_4^{2-}\\)] <br> (b) \\(1.7\\times 10^{-4}\\) M <br> (c) 0.0029 g <br> (d) [CrO\\(_4^{2-}\\)] decreases since adding additional Ag\\(^+\\) shifts the equilibrium to the left according to Le Chatelier's Principle, decreasing [CrO\\(_4^{2-}\\)] <br> (e) Ag\\(_3\\)PO\\(_4\\) (s) \\(\\leftrightarrow\\) 3Ag\\(^+\\) (aq) + PO\\(_4^{3-}\\) (aq) <br> (f) \\(2.6\\times 10^{-18}\\) <br> (g) \\(5.3\\times 10^{-5}\\). [Ag\\(^+\\)] is unchanged since the [Ag\\(^+\\)] in a saturated solution is independent of the volume."
+        }
     ],
     "Unit 8: Acids and Bases": [
-        {}
+        {
+            "question": "A sample of lemon juice is found to have a pH of 3. What is the H\\(^+\\) concentration of the juice?",
+            "answer": "0.001 M"
+        },
+        {
+            "question": "HCN (aq) + HCO\\(_3^-\\) (aq) \\(\\leftrightarrow\\) CN\\(^-\\) (aq) + H\\(_2\\)CO\\(_3\\) (aq) <br> If the value of the equilibrium constant, K, is less than 1, what is the strongest base in this system?",
+            "answer": "CN\\(^-\\)"
+        },
+        {
+            "question": "A solution in which [H\\(^+\\)] = \\(10^{-8}\\) has a pH of what and is either (acidic/neutral/basic)?",
+            "answer": "8, basic"
+        },
+        {
+            "question": "A sample of milk is found to have a pH of 6.00. What is the OH\\(^-\\) concentration of the milk?",
+            "answer": "\\(1.0\\times 10^{-8}\\) M"
+        },
+        {
+            "question": "What is the [H\\(^+\\)] in a 0.0025 M HCl solution?",
+            "answer": "\\(2.5\\times 10^{-3}\\) M"
+        },
+        {
+            "question": "What is the conjugate acid of the bicarbonate ion, HCO\\(_3^-\\), in H\\(_2\\)O?",
+            "answer": "H\\(_2\\)CO\\(_3\\)"
+        },
+        {
+            "question": "What is the pH of a 0.00010 M KOH solution?",
+            "answer": "10.00"
+        },
+        {
+            "question": "What is the [OH\\(^-\\)] in a 0.001 M HCl solution?",
+            "answer": "\\(1\\times 10^{-11}\\) M"
+        },
+        {
+            "question": "What is the concentration of OCl\\(^-\\) in a 0.60 M solution of HOCl? K\\(_a\\) = \\(3.1\\times 10^{-8}\\)",
+            "answer": "\\(1.4\\times 10^{-4}\\) M"
+        },
+        {
+            "question": "What is the pH of a 0.020 M solution of hydrosulfuric acid, a diportic acid? K\\(_{a1}\\) = \\(1.1\\times 10^{-7}\\) K\\(_{a2}\\) = \\(1.0\\times 10^{-14}\\)",
+            "answer": "4.33"
+        },
+        {
+            "question": "What is the concentration of CO\\(_3^{2-}\\) in a 0.010 M solution of carbonic acid? The relevant equilibria are, <br> H\\(_2\\)CO\\(_3\\) \\(\\leftrightarrow\\) H\\(^+\\) + HCO\\(_3^-\\) \\(\\qquad\\) K\\(_{a1}\\) = \\(4.3\\times 10^{-7}\\) <br> HCO\\(_3^-\\) \\(\\leftrightarrow\\) H\\(^+\\) + CO\\(_3^{2-}\\) \\(\\qquad\\) K\\(_{a2}\\) = \\(5.6\\times 10^{-11}\\)",
+            "answer": "\\(5.6\\times 10^{-11}\\) M"
+        },
+        {
+            "question": "What is the S\\(^{2-}\\) concentration in a saturated solution (0.10 M) of H\\(_2\\)S, in which the pH has been adjusted to 6.00 by the addition of HCl? For H\\(_2\\)S, K\\(_{a1}\\) = \\(1.1\\times 10^{-7}\\) and K\\(_{a2}\\) = \\(1.0\\times 10^{-14}\\)",
+            "answer": "\\(1.1\\times 10^{-10}\\) M"
+        },
+        {
+            "question": "What is the pH of a 1.0 M solution of NaOCl? For HOCl, K\\(_a\\) = \\(3.1\\times 10^{-8}\\)",
+            "answer": "10.75"
+        },
+        {
+            "question": "The following titration curve is the kind of curve expected for what kind of acid with what kind of base?",
+            "image": "images/CHEM8.4.PNG",
+            "answer": "strong acid, strong base"
+        },
+        {
+            "question": "What change will be caused by the addition of a small amount of NaOH to a solution containing sodium nitrite and nitrous acid?",
+            "answer": "The concentration of nitrous acid will decrease and the concentration of sodium nitrite will increase. The pH will increase."
+        },
+        {
+            "question": "A 50.0-mL sample of 0.10 M HNO\\(_2\\) (K\\(_a\\) = \\(4.0\\times 10^{-4}\\)) is titrated with 0.12 M NaOH. What is the pH after 25.0 mL of NaOH have been added?",
+            "answer": "3.57"
+        },
+        {
+            "question": "A solution contains 0.250 M HA (K\\(_a\\) = \\(1.0\\times 10^{-6}\\)) and 0.45 M NaA. What is the pH after 0.17 mole of HCl is added to 1.00 L of this solution?",
+            "answer": "5.82"
+        },
+        {
+            "question": "A 1.0-liter solution contains 0.25 M HF and 0.83 M NaF (K\\(_a\\) for HF is \\(7.2\\times 10^{-4}\\)). What is the pH of this solution?",
+            "answer": "3.66"
+        },
+        {
+            "question": "If 25 mL of 0.750 M HCl are added to 100. mL of 0.352 M NaOH, what is the final pH?",
+            "answer": "13.12"
+        },
+        {
+            "question": "The following two parts refer to the titration of 300.0 mL of 0.450 M NH\\(_3\\) (K\\(_b\\) = \\(1.8\\times 10^{-5}\\)) with 0.450 M HNO\\(_3\\). <br> (a) How many milliliters of 0.450 M HNO\\(_3\\) are required to reach the stoichiometric point of the reaction? <br> (b) What is the pH at the stoichiometric point of this titation?",
+            "answer": "(a) \\(3.00\\times 10^{2}\\) mL <br> (b) 2.70"
+        },
+        {
+            "question": "What is the best explanation for the dissolution of ZnS in diluate HCl?",
+            "answer": "The sulfide-ion concentration is decreased by the formation of H\\(_2\\)S."
+        },
+        {
+            "question": "A weak acid, HF, is in solution with dissolved sodium fluoride, NaF. If HCl is added, which ion will react with the extra hydrogen ions from the HCl to keep the pH from changing?",
+            "answer": "F\\(^-\\)"
+        },
+        {
+            "question": "The mineral fluorite is the main source of calcium fluoride. CaF\\(_2\\) has a solubility of \\(2.2\\times 10^{-4}\\) M in pure water. What is a correct explanation for what occurs when solid CaF\\(_2\\) is dissolved in acidic solution, rather than pure water?",
+            "answer": "The solubility increases because HF is a weak acid."
+        },
+        {
+            "question": "A 50.0-mL sample of a 1.50 M NaOH solution is titrated with a 1.86 M HCl solution. What will be the final volume of solution when the NaOH has been completely neutralized by the HCl?",
+            "answer": "90.3"
+        },
+        {
+            "question": "You have two salts, AgX and AgY, with very similar K\\(_{sp}\\) values. You know that K\\(_a\\) for HX is much greater than K\\(_a\\) for HY. Which salt is more soluble in acidic solution?",
+            "answer": "AgY"
+        },
+        {
+            "question": "Compare the solubility of AgCl in water to the solubility of AgCl in strong acid at the same temperature.",
+            "answer": "Impossible to be compared to"
+        },
+        {
+            "question": "You are asked to make 1.00 L of a solution buffered at a pH of 9.00. You are given 1.00 M HCN (K\\(_a\\) = \\(6.2\\times 10^{-10}\\)) and 1.00 M NaCN. Describe the relative volumes needed of each solution to make such a buffer.",
+            "answer": "The volume of the 1.00 M HCN must be greater than the volume of the 1.00 M NaCN."
+        },
+        {
+            "question": "The K\\(_{sp}\\) of a hypothetical metallic hydroxide, MOH, is \\(1.0\\times 10^{-4}\\). What is the pH of a saturated solution of MOH?",
+            "answer": "12.00"
+        },
+        {
+            "question": "A certain buffer solution has a pH of 4.6. The weak acid used to make this solution, HA, has a pK\\(_a\\) of 3.2. Describe the relationship between the concentrations of hydrogen ion, and the concentration of A\\(^-\\).",
+            "answer": "[H\\(^+\\)] < [A\\(^-\\)] because pH > pK\\(_a\\)"
+        },
+        {
+            "question": "A 25.0-mL sample of 0.10 M HC\\(_2\\)H\\(_3\\)O\\(_2\\) is titrated with 0.10 M NaOH. What is the pH after 25.0 mL of NaOH have been added? The K\\(_a\\) value for HC\\(_2\\)H\\(_3\\)O\\(_2\\) is \\(1.8\\times 10^{-5}\\).",
+            "answer": "8.72"
+        },
+        {
+            "question": "Use the following information <br> 0.01 M HX \\(\\qquad\\) K\\(_a\\) = \\(1.0\\times 10^{-4}\\) <br> 0.01 M HA \\(\\qquad\\) K\\(_a\\) = \\(1.0\\times 10^{-8}\\) <br> (a) Which acid solution has a greater pH? <br> (b) How would diluting HA from 0.15 M to 0.005 M affect the pH of the solution?",
+            "answer": "(a) HA because it dissociates less than HX <br> (b) The pH would increase because the [H\\(^+\\)] decreases"
+        },
+        {
+            "question": "A 50.0 mL sample of acid, HA, of unknown molarity is titrated, and the pH of the resulting solution is measured with a pH meter and graphed as a function of volume of 0.100 M NaOH added. <br> (a) At point R in the titration, which species has the highest concentration? <br> (b) At which point on the titration curve is [A\\(^-\\)] closest to twice that of [HA] <br> (c) A student carries out the same titration, but uses an indicator instead of a pH meter. If the indicator changes color slightly past the equivalence point, what will the student obtain for the calculated concentration of the acid?",
+            "image": "images/CHEM8.30.PNG",
+            "answer": "(a) HA <br> (b) T <br> (c) Slightly more than 0.0800 M"
+        },
+        {
+            "question": "Why do strong acids not make good buffered solutions?",
+            "answer": "Strong acids dissociate completely and the equilibrium lies far to the right."
+        },
+        {
+            "question": "A 0.10 M HCl solution may be titrated with two different bases: 0.10 M NaOH or 0.10 M Ca(OH)\\(_2\\). What best describes the volumes of the bases necessary to reach the equivalence point?",
+            "answer": "Twice as much NaOH is needed."
+        },
+        {
+            "question": "H\\(_2\\)SO\\(_3\\) \\(\\quad\\) HSO\\(_3^-\\) \\(\\quad\\) HClO\\(_4\\) \\(\\quad\\) HClO\\(_3\\) \\(\\quad\\) H\\(_3\\)BO\\(_3\\) <br> Oxyacids, such as those above, contain an atom bonded to one or more oxygen atoms; one or more of these oxygen atoms may also be bonded to hydrogen. <br> (a) Discuss the factors that are often used to predict correctly the strengths of the oxyacids listed above. <br> (b) Arrange the examples above in the order of increasing acid strength.",
+            "answer": "(a) In general, as the number of oxygen atoms not bound to the H atom increases, the acid strength increases since the added electron density polarizes the O-H bond, weakening it. Also, as either effective nuclear pull or electronegativity increases on the central atom, acid strength increases. Additionally, as H\\(^+\\) is lost from a neutral acid, strength decreases. <br> (b) H\\(_3\\)BO\\(_3\\) < HSO\\(_3^-\\) < H\\(_2\\)SO\\(_3\\) < HClO\\(_3\\) < HClO\\(_4\\)"
+        },
+        {
+            "question": "Give a brief explanation for each of the following. <br> (a) For the diprotic acid H\\(_2\\)S, the first dissociation constant is larger than the second dissociation constant by about 10\\(^5\\) (K\\(_1\\) = \\(10^5\\) K\\(_2\\)). <br> (b) In water, NaOH is a base but HOCl is an acid. <br> (c) HCl and HI are equally strong acids in water but in pure acetic acid, HI is a stronger acid than HCl. <br> (d) When each is dissolved in water, HCl is a much stronger acid than HF.",
+            "answer": "(a) Once the H\\(^+\\) is removed from H\\(_2\\)S to form HS\\(^-\\), the S atom has a greater attraction for the bonding electron in HS\\(^-\\) therefore the bond is stronger therefore the acid doesn't dissociate as well therefore it is a weaker acid. <br> (b) Polar water can separate the ionic Na\\(^+\\) ions form the OH\\(^-\\), resulting in a basic solution. In HOCl, chlorine has a higher attraction for electrons due to its greater charge density, which draws the electrons in the O-H bond towards chlorine, so H\\(^+\\) is released, resulting in an acidic solution. <br> (c) The water in aqueous solution has a greater attraction for H\\(^+\\) and removes H\\(^+\\) from both Cl\\(^-\\) and I\\(^-\\) equally. In acetic acid, little attraction exists between the acetic acid molecules but HAc can separate H\\(^+\\) from the larger I\\(^-\\) since it has more electrons. The HI bond is more polarizable, thus weaker therefore, breaks to release H\\(^+\\) and the HI acid is therefore stronger. <br> (d) The bond between H-F is stronger than the ebond between H-Cl, therefore HF is a weak acid and HCl is a strong acid."
+        },
+        {
+            "question": "<img src = 'courses/images/CHEM8.2010B1.PNG'> <br> A solution of 0.100 M HCl and a solution of 0.100 M NaOH are prepared. A 40.0 mL sample of one of the solutions is added to a beaker and then titrated with the other solution. A pH electrode is used to obtain the data that are plotted in the titration curve shown above. <br> (a) Identify the solution that was initially added to the beaker. Explain your reasoning. <br> (b) At the equivalence point, how many moles of titrant have been added? <br> (c) The same titration is to be performed again, this time using an indicator. Use the information in the table below to select the best indicator for the titration. Explain your choice. <br> <img src = 'courses/images/CHEM8.2010B2.PNG'> <br> (d) What is the difference between the equivalence point of a titration and the end point of a titration?",
+            "answer": "(a) HCl was initially in the beaker since the pH is roughly 1 before any titrant is added. <br> (b) 0.00400 mol NaOH <br> (c) Methyl red is the best indicator to choose from the list since its color change will occur closest to the equivalence point of the titration. <br> (d) The equivalence point is when the mol acid = mol base = mol salt formed. The end point is when the indicator changes color."
+        },
+        {
+            "question": "The percentage by weight of nitric acid, HNO\\(_3\\), in a sample of concentrated nitric acid is to be determined. <br> (a) Initially a NaOH solution was standardized by titration with a sample of potassium hydrogen phthalate, KHC\\(_8\\)H\\(_4\\)O\\(_4\\), a monoprotic acid often used as a primary standard. A sample of pure KHC\\(_8\\)H\\(_4\\)O\\(_4\\) weighing 1.518 grams was dissolved in water and titrated with the NaOH solution. To reach the equivalence point, 26.90 milliliters of base was required. Calculate the molarity of the NaOH solution. (Molecular weight: KHC\\(_8\\)H\\(_4\\)O\\(_4\\) = 204.2) <br> (b) A 10.00 milliliter sample of the concentrated nitric acid was diluted with water to a total volume of 500.00 milliliters. Then 25.00 milliters of the diluted acid solution was titrated with the standardized NaOH solution prepared in part (a). The equivalence point was reached after 28.35 milliliters of the base had been added. Calculate the molarity of the nitric acid. <br> (c) The density of the concentrated nitric acid used in this experiment was determined to be 1.42 grams per milliliter. Determine the percentage by weight of HNO\\(_3\\) in the original sample of concentrated nitric acid.",
+            "answer": "(a) 0.2764 M <br> (b) 15.67 M <br> (c) 69.5%"
+        },
+        {
+            "question": "Concentrated sulfuric acid (18.4-molar H\\(_2\\)SO\\(_4\\)) has a density of 1.84 grams per milliliter. After dilution with water to 5.20-molar, the solution has a density of 1.38 grams per milliliter and can be used as an electrolyte in lead storage batteries for automobiles. <br> (a) Calculate the volume of the concentrated acid required to prepare 1.00 liter of 5.20-molar H\\(_2\\)SO\\(_4\\) <br> (b) Determine the mass percent of H\\(_2\\)SO\\(_4\\) in the original concentrated solution. <br> (c) Calculate the volume of 5.20-molar H\\(_2\\)SO\\(_4\\) that can be completely neutralized with 10.5 grams of sodium bicarbonate NaHCO\\(_3\\). <br> (d) What is the molality of the 5.20-molar H\\(_2\\)SO\\(_4\\)?",
+            "answer": "(a) 0.283 L <br> (b) 98.1% <br> (c) 0.0120 L <br> (d) 5.98 m"
+        },
+        {
+            "question": "(a) What is the pH of a 2.0 molar solution of acetic acid. K\\(_a\\) acetic acid = \\(1.8\\times 10^{-5}\\)? <br> (b) A buffer solution is prepared by adding 0.10 liter of 2.0 molar acetic acid solution to 0.1 liter of a 1.0 molar sodium hydroxide solution. Compute the hydrogen ion concentration of the buffer solution. <br> (c)Suppose that 0.10 liter of 0.50 molar hydrochloric acid is added to 0.040 liter of the buffer prepared in (b). Compute the hydrogen ion concentration of the resulting solution.",
+            "answer": "(a) 2.22 <br> (b) \\(1.8\\times 10^{-5}\\) M <br> (c) 0.214 M"
+        },
+        {
+            "question": "A buffer solution contains 0.40 mole of formic acid, HCOOH, and 0.60 mole of sodium formate, HCOONa, in 1.00 liter of solution. The ionization constant, K\\(_a\\), of formic acid is \\(1.8\\times 10^{-4}\\). <br> (a) Calculate the pH of this solution. <br> (b) If 100. milliliters of this buffer solution is diluted to a volume of 1.00 liter with pure water, the pH does not change. Discuss why the pH remains constant on dilution. <br> (c) A 5.00 milliliter sample of 1.00 molar HCl is added to 100. milliliters of the original buffer solution. Calculate the [H\\(_3\\)O\\(^+\\)] of the resulting solution. <br> (d) A 800. milliliter sample of 2.00 molar formic acid is mixed with 200. milliliters of 4.80 molar NaOH. Calculate the [H\\(_3\\)O\\(^+\\)] of the resulting solution.",
+            "answer": "(a) 3.92 <br> (b) Diluting the buffer has no effect on the mol:mol ratio of HA:A\\(^-\\) in the buffer system since both are diluted equally. <br> (c) \\(1.5\\times 10^{-4}\\) M <br> (d) \\(1.2\\times 10^{-4}\\) M"
+        },
+        {
+            "question": "The acid ionization constant, K\\(_a\\) for propanoic acid, C\\(_2\\)H\\(_5\\)COOH, is \\(1.3\\times 10^{-5}\\). <br> (a) Calculate the hydrogen ion concentration, [H\\(^+\\)], in a 0.20 molar solution of propanoic acid. <br> (b) Calculate the percentage of propanoic acid molecules that are ionized in the solution in (a). <br> (c) What is the ratio of the concentration of propanoate ion, C\\(_2\\)H\\(_5\\)COO\\(^-\\), to that of propanoic acid in a buffer solution with a pH of 5.20? <br> (d) In a 100. milliliter sample of a different buffer solution, the propanoic acid concentration is 0.35 molar and the sodium propanoate concentration is 0.50 molar. To this buffer solution, 0.0040 mole of solid NaOH is added. Calculate the pH of the resulting solution.",
+            "answer": "(a) \\(1.6\\times 10^{-3}\\) M <br> (b) 0.81% <br> (c) 2.1 <br> (d) 5.13"
+        },
+        {
+            "question": "HOCl \\(\\leftrightarrow\\) OCl\\(^-\\) + H\\(^+\\) <br> Hypochlorous acid, HOCl, is a weak acid commonly used as a bleaching agent. The acid-dissociation constant, K\\(_a\\), for the reaction represented above is \\(3.2\\times 10^{-8}\\). <br> (a) Calculate the [H\\(^+\\)] of a 0.14-molar solution of HOCl. <br> (b) Write the correctly balanced net ionic equation for the reaction that occurs when NaOCl is dissolved in water and calculate the numerical value of the equilibrium constant for the reaction. <br> (c) Calculate the pH of a solution made by combining 40.0 milliliters of 0.14-molar HOCl and 10.0 milliliters of 0.56-molar NaOH. <br> (d) How many millimoles of solid NaOH must be added to 50.0 milliliters of 0.20-molar HOCl to obtain a buffer solution that has a pH of 7.49? Assume that the addition of the solid NaOH results in a negligible change in volume. <br> (e) Household bleach is made by dissolving chlorine gas in water, as represented below. <br> Cl\\(_2\\) (g) + H\\(_2\\)O \\(\\leftrightarrow\\) H\\(^+\\) + Cl\\(^-\\) + HOCl (aq) <br> Calculate the pH of such a solution if the concentration of HOCl in the solution is 0.065 molar.",
+            "answer": "(a) \\(6.7\\times 10^{-5}\\) M <br> (b) OCl\\(^-\\) + H\\(_2\\) \\(\\leftrightarrow\\) HOCl + OH\\(^-\\) <br> K\\(_b\\) = \\(3.1\\times 10^{-7}\\) <br> (c) 10.27 <br> (d) 5.0 mmol <br> (e) 1.19"
+        },
+        {
+            "question": "Answer the following questions about acetylsalicylic acid, the active ingredient in aspirin. <br> (a) The amount of acetylsalicylic acid in a single aspirin tablet is 325 mg, yet the tablet has a mass of 2.00 g. Calculate the mass percent of acetylsalicylic acid in the tablet. <br> (b) The elements contained in acetylsalicylic acid are hydrogen, carbon, and oxygen. The combustion of 3.000 g of the pure compound yields 1.200 g of water and 3.72 L of dry carbon dioxide, measured at 750. mm Hg and 25\\(^{\\circ}\\)C. Calculate the mass, in g, of each element in the 3.000 g sample. <br> (c) A student dissolved 1.625 g of pure acetylsalicylic acid in distilled water and titrated the resulting solution to the equivalence point using 88.43 mL of 0.102 M NaOH (aq). Assuming that acetylsalicylic acid has only one ionizable hydrogen, calculate the molar mass of the acid. <br> (d) A \\(2.00\\times 10^{-3}\\) mole sample of pure acetylsalicylic acid was dissolved in 15.00 mL of water and then titrated with 0.100 M NaOH (aq). The equivalence point was reached after 20.00 mL of the NaOH solution had been added. Using the data from the tiration, shown in the table below, determien <br> (i) the value of the acid dissociation constant, K\\(_a\\), for acetylsalicylic acid and <br> (ii) the pH of the solution after a total volume of 25.00 mL of the NaOH solution had been added (assume that volumes are additive).",
+            "image": "images/CHEM8.2001.PNG",
+            "answer": "(a) 16.3% <br> (b) 1.802 g C, 0.1343 g H, 1.064 g O <br> (c) 180. g/mol <br> (d) <br> (i) \\(3.6\\times 10^{-4}\\) <br> (ii) 12.10"
+        },
+        {
+            "question": "C\\(_6\\)H\\(_5\\)NH\\(_2\\) (aq) + H\\(_2\\)O (l) \\(\\leftrightarrow\\) C\\(_6\\)H\\(_5\\)NH\\(_3^+\\) (aq) + OH\\(^-\\) (aq) <br> Aniline, a weak base, reacts with water according to the reaction represented above. <br> (a) Write the equilibrium constant, K\\(_b\\) for the reaction represented above. <br> (b) A sample of aniline is dissolved in water to produce 25.0 mL of a 0.10 M solution. The pH of the solution is 8.82. Calculate the equilibrium constant, K\\(_b\\), for this reaction. <br> (c) The solution prepared in part (b) is titrated with 0.10 M HCl. Calculate the pH of the solution when 5.0 mL of the acid has been added. <br> (d) Calculate the pH at the equivalence point of the titration in part (c). <br> (e) The pK\\(_a\\) values for several indicators are given below. Which of the indicators listed is most suitable for this titration? Justify your answer.",
+            "image": "images/CHEM8.2003.PNG",
+            "answer": "(a) K\\(_b\\) = \\( \\frac{[C_6H_6NH_3^+][OH^-]}{[C_6H_5NH_2}]\\) <br> (b) \\(4.4\\times 10^{-10}\\) <br> (c) 5.25 <br> (d) 2.97 <br> (e) Erythrosine is the best indicator choice since the pH at the equivalence point is near 3, which is the pK\\(_a\\) value for erythrosine."
+        },
+        {
+            "question": "C\\(_6\\)H\\(_5\\)COOH (s) \\(\\leftrightarrow\\) C\\(_6\\)H\\(_5\\)COO\\(^-\\) (aq) + H\\(^+\\) (aq) \\(\\qquad\\) K\\(_a\\) = \\(6.46\\times 10^{-5}\\) <br> Benzoic acid, C\\(_6\\)H\\(_5\\)COOH, dissociates in water as shown in the equation above. A 25.0 mL sample of an aqueous solution of pure benzoic acid is titrated using standardized 0.150 M NaOH. <br> (a) After addition of 15.0 mL of the 0.150 M NaOH, the pH of the resulting solution is 4.37. Calculate each of the following. <br> (i) [H\\(^+\\)] in the solution <br> (ii) [OH\\(^-\\)] in the solution <br> (iii) THe number of moles of NaOH added <br> (iv) The number of moles of C\\(_6\\)H\\(_5\\)COO\\(^-\\) (aq) in the solution <br> (v) The number of moles of C\\(_6\\)H\\(_5\\)COOH in the solution <br> (b) State whether the solution at the equivalence point of the titration is acidic, basic, or neutral. Explain your reasoning. <br> In a different titration, a 0.7529 g sample of a mixture of solid C\\(_6\\)H\\(_5\\)COOH and solid NaCl is dissolved in water and titrated with 0.150 M NaOH. The equivalence point is reached when 24.78 mL of the base solution is added. <br> (c) Calculate each of the following. <br> (i) The mass, in grams, of benzoic acid in the solid sample <br> (ii) The mass percentage of benzoic acid in the solid sample",
+            "answer": "(a) <br> (i) \\(4.3\\times 10^{-5}\\) <br> (ii) \\(2.3\\times 10^{-10}\\) M <br> (iii) 0.00225 mol <br> (iv) 0.00225 mol <br> (v) 0.0015 mol <br> (b) Basic, because in reaction, the salt is basic. <br> (c) <br> (i) 0.4539 g <br> (ii) 60.29%"
+        }
     ],
     "Unit 9: Applications of Thermodynamics": [
-        {}
+        {
+            "question": "Under which set of conditions (\\(\\Delta H\\), \\(\\Delta S\\), and temperature) is a chemical reaction most likely to be spontaneous?",
+            "answer": "Low \\(\\Delta H\\), Low \\(\\Delta S\\), low temperature"
+        },
+        {
+            "question": "The enthalpy of vaporization of methanol (CH\\(_3\\)OH) is 35.3 kJ/mol at the boiling point of 64.2\\(^{\\circ}\\)C. Calculate the entropy change for methanol going from a liquid to vapor.",
+            "answer": "105 J/K\\(\\cdot\\)mol"
+        },
+        {
+            "question": "If \\(\\Delta H\\) and \\(\\Delta S\\) are both negative or both positive, then what sign does \\(\\Delta G\\) have?",
+            "answer": "variable"
+        },
+        {
+            "question": "Calculate the standard entropy change for the following reaction, <br> Cu (s) + 1/2 O\\(_2\\) (g) \\(\\rightarrow\\) CuO (s) <br> given that <br> S\\(^{\\circ}\\)[Cu(s)] = 33.15 J/K\\(\\cdot\\)mol <br> S\\(^{\\circ}\\)[O\\(_2\\)(g)] = 205.14 J/K\\(\\cdot\\)mol <br> S\\(^{\\circ}\\)[CuO(s)] = 42.63 J/K\\(\\cdot\\)mol",
+            "answer": "-93.09 J/K\\(\\cdot\\)mol\\(_{rxn}\\)"
+        },
+        {
+            "question": "At what temperature would a given reaction become spontaneous if \\(\\Delta H\\) = +119 kJ and \\(\\Delta S\\) = +263 J/K?",
+            "answer": "452 K"
+        },
+        {
+            "question": "The free energy change for a given reaction is -36.2 kJ/mol\\(_{rxn}\\). What is the equilibrium constant at 25\\(^{\\circ}\\)C?",
+            "answer": "\\(e^{\\frac{36200}{(8.31)(298)}} \\)"
+        },
+        {
+            "question": "Given the following information, calculate \\(\\Delta G^{\\circ}\\) for the reaction below at 25\\(^{\\circ}\\)C: <br> SnCl\\(_4\\) (l) + 2H\\(_2\\)O (l) \\(\\rightarrow\\) SnO\\(_2\\) (s) + 4HCl (g) <br> \\(\\Delta H^{\\circ}\\) = 133.0 kJ/mol\\(_{rxn}\\) <br> \\(\\Delta S^{\\circ}\\) = 401.5 J/K\\(\\cdot\\) mol\\(_{rxn}\\)",
+            "answer": "13.4 kJ/mol\\(_{rxn}\\)"
+        },
+        {
+            "question": "The formation 1/2 A\\(_2\\) + 2B\\(_2\\) + C \\(\\rightarrow\\) CAB\\(_4\\) has an enthalpy of formation of -104 kJ and a change in entropy of -60.8 J/K at 30\\(^{\\circ}\\)C. What is \\(\\Delta G\\) and spontaneity of the reaction?",
+            "answer": "-85.6 kJ/mol\\(_{rxn}\\), spontaneous"
+        },
+        {
+            "question": "For the process <br> I\\(_2\\) (g) \\(\\rightarrow\\) I\\(_2\\) (s) <br> what are the signs of \\(\\Delta G\\), \\(\\Delta H\\), and \\(\\Delta S\\) at 25\\(^{\\circ}\\)C?",
+            "answer": "all -"
+        },
+        {
+            "question": "If a process is exothermic and not spontaneous, what is true about the entropy?",
+            "answer": "\\(\\Delta S < 0\\)"
+        },
+        {
+            "question": "A 100.0 mL sample of water is placed in a coffee cup calorimeter. Solid NaCl is then dissolved in the water. The temperature of the water decreases from 20.5\\(^{\\circ}\\)C to 19.7\\(^{\\circ}\\)C and is then allowed to return to room temperature, 20.5\\(^{\\circ}\\)C. Determine the signs of \\(\\Delta H\\), \\(\\Delta S\\), and \\(\\Delta G\\) for the process at constant temperature.",
+            "answer": "\\(\\Delta H\\) is positive, \\(\\Delta S\\) is positive, and \\(\\Delta G\\) is negative."
+        },
+        {
+            "question": "For any reaction at equilibrium, what is true about \\(\\Delta G\\)?",
+            "answer": "\\(\\Delta G = 0\\)"
+        },
+        {
+            "question": "Sodium nitrate is observed to be highly soluble in water under standard conditions. It is also observed that the temperature of the solution drops quite dramatically during the solution process. What best describes these observations and the change in entropy that occurs?",
+            "answer": "Entropy must increase, since in order to make \\(\\Delta G^{\\circ}\\) negative, a positive \\(T\\Delta S^{\\circ}\\) must be subtracted from a positive \\(\\Delta H^{\\circ}\\)."
+        },
+        {
+            "question": "What can be said about a chemical system that has reached a minimum free energy?",
+            "answer": "It is at equilibrium."
+        },
+        {
+            "question": "For the following reaction, \\(\\Delta H\\) is 137 J and \\(\\Delta S^{\\circ}\\) is 120 J/K. <br> C\\(_2\\)H\\(_6\\) (g) \\(\\rightarrow\\) C\\(_2\\)H\\(_4\\) (g) + H\\(_2\\) (g) <br> What can be said about the spontaneity of the reaction?",
+            "answer": "Spontaneous only at high temperatures."
+        },
+        {
+            "question": "Consider the freezing of liquid water at -10\\(^{\\circ}\\)C and 1 atm. For this process, what are the signs of \\(\\Delta H\\), \\(\\Delta S\\), and \\(\\Delta G\\)?",
+            "answer": "All negative"
+        },
+        {
+            "question": "What does a value of \\(\\Delta G^{\\circ}\\) that is cloes to zero tells us about the ratio of products to reactants in the equilibrium mixture?",
+            "answer": "Products and reactants are approximately equally favored."
+        },
+        {
+            "question": "What combination of conditions of entropy and heat is found to be thermodynamically favored at high temperatures, but unfavored at low temperatures?",
+            "answer": "An endothermic reaction where the entropy increases."
+        },
+        {
+            "question": "What is true of the absolute entropy values, S\\(^{\\circ}\\), of all substances?",
+            "answer": "They are all positive."
+        },
+        {
+            "question": "Which of the following is associated with a very large magnitude, negative value for \\(\\Delta G^{\\circ}\\)?",
+            "answer": "A large K value"
+        },
+        {
+            "question": "What combination of \\(\\Delta G^{\\circ}\\), K, and rate of reaction best describes a thermodynamically favored reaction?",
+            "answer": "\\(\\Delta G\\) is negative, K > 1, and the rate of reaction can be fast or slow."
+        },
+        {
+            "question": "It is found that the reaction below has \\(\\Delta G^{\\circ}\\) = -35 kJ/mol and \\(\\Delta H^{\\circ}\\) = -100 kJ/mol. <br> A\\(_2\\) (g) + 3B\\(_2\\) (g) \\(\\leftrightarrow\\) 2AB\\(_3\\) (g) <br> It is also found that when reactants A\\(_2\\) (g) and B\\(_2\\) (g) are mixed in the stoichiometric ratio under standard conditions, no AB\\(_3\\) (g) is formed. What is the best explanation for this observation?",
+            "answer": "Despite being thermodynamically favored, the reaction is a very slow one with a high activation energy."
+        },
+        {
+            "question": "The combustion of a solid hydrocarbon in oxygen, leads to the production of two gases and the evolution of energy. The reaction is found to be thermodynamically favored. What is the driving force for this reaction?",
+            "answer": "both enthalpy and entropy"
+        },
+        {
+            "question": "Calculate the \\(\\Delta G^{\\circ}\\) for the following equation <br> 2SO\\(_2\\) (g) + O\\(_2\\) (g) \\(\\rightarrow\\) 2SO\\(_3\\) (g) <br> \\(\\Delta G_f^{\\circ}\\) for SO\\(_2\\) = -300 kJ/mol <br> \\(\\Delta G_f^{\\circ}\\) for SO\\(_3\\) = -371 kJ/mol",
+            "answer": "-142 kJ/mol"
+        },
+        {
+            "question": "2Fe\\(_2\\)O\\(_3\\) (s) + 3C (s) \\(\\leftrightarrow\\) 4Fe (s) + 3CO\\(_2\\) (g) <br> In a blast furnace, the reaction represented above occurs, producing Fe (s) from its ore, Fe\\(_2\\)O\\(_3\\) (s). The reaction is thermodynamically favorable based on coupling the two reactions represented below. <br> 2Fe\\(_2\\)O\\(_3\\) \\(\\rightarrow\\) 4Fe + 3O\\(_2\\) <br> C + O\\(_2\\) \\(\\rightarrow\\) CO\\(_2\\) <br> What is a limitation in how the representations above a describe a system of coupled reactions?",
+            "answer": "The values of \\(\\Delta G^{\\circ}\\) for each reaction are not shown."
+        },
+        {
+            "question": "Given the absolute entropies below, all given in units of J/K\\(\\cdot\\)mol, calculate \\(\\Delta S^{\\circ}\\) for the formation of NH\\(_3\\) (g) from its elements. <br> S\\(^{\\circ}\\) for N\\(_2\\) (g) = 192 <br> S\\(^{\\circ}\\) for H\\(_2\\) (g) = 131 <br> S\\(^{\\circ}\\) for NH\\(_3\\) (g) = 193 <br> N\\(_2\\) (g) + 3H\\(_2\\) (g) \\(\\rightarrow\\) 2NH\\(_3\\) (g)",
+            "answer": "-199 J/K\\(\\cdot\\)mol\\(_{rxn}\\)"
+        },
+        {
+            "question": "C\\(_2\\)H\\(_5\\)OH (l) + 3O\\(_2\\) (g) \\(\\rightarrow\\) 2CO\\(_2\\) (g) + 3H\\(_2\\)O (g) <br> \\(\\Delta S^{\\circ}\\) = +217.7 J/(mol\\(_{rxn}\\)\\(\\cdot\\)K) <br> \\(\\Delta H^{\\circ}\\) = -1235 kJ/mol\\(_{rxn}\\) <br> The combustion of C\\(_2\\)H\\(_5\\)OH is represented by the equation above and the standard entropy and enthalpy changes for the reaction are provided. When the reactants are combined at 25\\(^{\\circ}\\)C, essentially no CO\\(_2\\) (g) or H\\(_2\\)O (g) is produced after a few hours. Which diagram below could best help explain the low yield of the reactions under these conditions, and why?",
+            "image": "images/CHEM9.33.PNG",
+            "answer": "Diagram 2, because it represents a reaction with a high activation energy barrier for molecules to overcome and a very slow reaction rate, even if it is thermodynamically favorable with \\(\\Delta G^{\\circ}\\) < 0."
+        },
+        {
+            "question": "Both solutions are 1.0 M. <br> (a) What statement is true about the electrons migrating in the cell? <br> (b) What is the function of the salt bridge? <br> (c) If the zinc solution was replaced with 0.004 M Zn\\(^{+2}\\) (aq) and the copper solution was replaced with 4.0 M Cu\\(^{+2}\\) (aq) solution, then the E\\(_{cell}\\) generated would be ____ the cell with 1.0 M solutions.",
+            "image": "images/CHEM9.1B.PNG",
+            "answer": "(a) Electrons migrate through the wire from the zinc to the copper. <br> (b) It maintains electrical neutrality in the solutions. <br> (c) greater than"
+        },
+        {
+            "question": "Under acidic conditions, the bromate ion is reduced to the bromide ion. Write the balanced half-reaction for this process.",
+            "answer": "BrO\\(_3^-\\) + 6H\\(^+\\) + 6e\\(^-\\) \\(\\rightarrow\\) Br\\(^-\\) + 3H\\(_2\\)O"
+        },
+        {
+            "question": "The diagram below shows an electrolytic cell in which an electric current passes through a hot liquid calcium bromide using inert electrodes. <br> (a) What happens at the carbon electrode. <br> (b) What is true at the platinum electrode? <br> (c) Calculate the mass of calcium metal, in grams, produced by electrolysis when a current of 15.0 amps is passed through the liquid calcium bromide for 10.0 hours.",
+            "image": "images/CHEM9.5B.PNG",
+            "answer": "(a) calcium ions are reduced. <br> (b) Electrons are removed, leading to oxidation. <br> (c) 112 g"
+        },
+        {
+            "question": "If electric current is passed through aqueous LiBr, the product at the cathode would be ___ and the product at the anode would be ___.",
+            "image": "images/CHEM9.8B.PNG",
+            "answer": "H\\(_2\\) (g), Br\\(_2\\) (l)"
+        },
+        {
+            "question": "Balance the following redox equation, which occurs in acidic solution. <br> N\\(_2\\)H\\(_4\\) (g) + BrO\\(_3^-\\) (aq) \\(\\rightarrow\\) Br\\(^-\\) (aq) + N\\(_2\\) (g)",
+            "answer": "3N\\(_2\\)H\\(_4\\) + 2BrO\\(_3^-\\) \\(\\rightarrow\\) 3N\\(_2\\) + 2Br\\(^-\\) + 6H\\(_2\\)O"
+        },
+        {
+            "question": "The following spontaneous reaction occurs when the cell represented in the diagram below operates. <br> Mg (s) + 2Ag\\(^+\\) (aq) \\(\\rightarrow\\) 2Ag (s) + Mg\\(^{2+}\\) (aq) <br> <img src = 'courses/images/CHEM9.10B1.PNG'> <br> Four separate but identical cells, W, X, Y, and Z are prepared. Cells W, X, Y, and Z all look like the diagram above. <br> <img src = 'courses/images/CHEM9.10B2.PNG'> <br> (a) Calculate E\\(^{\\circ}\\) for cell W when it first starts to operate. <br> (b)In Cell W, what happens when the salt bridge is replaced by a magnesium wire. <br> (c) In cell X, a 50 mL sample of 2.0 M Mg(NO\\(_3\\))\\(_2\\) (aq) is added to the 1.0 M Mg(NO\\(_3\\))\\(_2\\) (aq). <br> (d) In electrochemical cell Y, the magnesium electrode is replaced by one twice as large and the solution is doubled to 200 mL of 1.0 M Mg(NO\\(_3\\))\\(_2\\) (aq). <br> (e) In electrochemical cell Z, a 20 mL sample of 1.0 M NaCl is added to the AgNO\\(_3\\) (aq)",
+            "answer": "(a) +3.17 V <br> (b) The voltage becomes zero. <br> (c) The voltage decreases. <br> (d) The voltage remains the same. <br> (e) The voltage decreases."
+        },
+        {
+            "question": "Using data from the reduction potential table and the reaction <br> 2Ag (s) + Pt\\(^{2+}\\) (aq) \\(\\rightarrow\\) Pt (s) + 2Ag\\(^+\\) (aq) \\(\\qquad\\) E\\(^{\\circ}\\) = 0.38 V <br> calculate the standard reduction potential of the platinum half-reaction.",
+            "image": "images/CHEM9.15B.PNG",
+            "answer": "1.18 V"
+        },
+        {
+            "question": "A current of 6.0 amps is passed through a solution of Ag\\(^+\\) for 2.0 hours. How many grams of silver are produced?",
+            "answer": "48 g"
+        },
+        {
+            "question": "An electrochemical cell is constructed using a silver electrode in 1.0 M silver nitrate and a copper electrode in 1.0 M copper(II) nitrate. Determine E\\(_{cell}\\) of the setup.",
+            "image": "images/CHEM9.17B.PNG",
+            "answer": "0.46 V"
+        },
+        {
+            "question": "Photosynthesis is a chemical reaction that occurs in nature, but one that is generally not thermodynamically favored. It is forced forward by the presence of light. What is another example of a thermodynamically unfavored process, which must be forced to occur by the use of an external source of energy?",
+            "answer": "Electrolysis"
+        },
+        {
+            "question": "What is the oxidation state of manganese in manganese dioxide, MnO\\(_2\\)?",
+            "answer": "+4"
+        },
+        {
+            "question": "How many electrons are transferred in the following half-reaction when it is balanced? <br> S\\(_4\\)O\\(_6^{-2}\\) \\(\\rightarrow\\) S\\(_2\\)O\\(_3^{2-}\\)",
+            "answer": "2"
+        },
+        {
+            "question": "What is the coefficient of Br\\(^-\\) when the following redox equation is balanced? <br> BrO\\(^-\\) + Fe(OH)\\(_2\\) \\(\\rightarrow\\) Br\\(^-\\) + Fe(OH)\\(_3\\)",
+            "answer": "1"
+        },
+        {
+            "question": "Determine the overall E\\(^{\\circ}\\) cell for a voltaic cell in which the overall reaction is <br> Fe + 2Ag\\(^+\\) \\(\\rightarrow\\) Fe\\(^{+2}\\) + 2Ag",
+            "answer": "1.24 V"
+        },
+        {
+            "question": "The metal indium is known to exist in an oxidation state of +3. What approximate mass of indium (molar mass = 114.82 g) will be produced during the electrolysis of a molten salt that contains In\\(^{3+}\\), if a current of 10.0 amps is passed through the electrolyte for a period of 50.0 hours.",
+            "answer": "714 g"
+        },
+        {
+            "question": "What is the purpose of the salt bridge in a galvanic cell?",
+            "answer": "Allow the passage of ions to maintain the potential difference between the two half-cells."
+        },
+        {
+            "question": "Consider the two standard reduction potentials shown below. <br> Cu\\(^{2+}\\) + 2e\\(^-\\) \\(\\rightarrow\\) Cu \\(\\qquad\\) (+0.34 V)<br> H\\(^+\\) + e\\(^-\\) \\(\\rightarrow\\) 1/2 H\\(_2\\) \\(\\qquad\\) (0.00 V) <br> (a) If the two half-cells above were combined in a standard galvanic cell, what would be the correct chemical equation to represent the spontaneous redox process? <br> (b) If the two half-cells were combined in a galvanic cell, what would be the voltage generated in the spontaneous redox process?",
+            "answer": "(a) Cu\\(^{2+}\\) (aq) + H\\(_2\\) (g) \\(\\rightarrow\\) Cu (s) + 2H\\(^+\\) (aq) <br> (b) +0.34 V"
+        },
+        {
+            "question": "What is always true of all electrolysis processes?",
+            "answer": "They have \\(\\Delta G^{\\circ}\\) values that are positive."
+        },
+        {
+            "question": "Which combination of values for \\(\\Delta G^{\\circ}\\), K\\(_{eq}\\), and E\\(^{\\circ}\\) is the most likely?",
+            "answer": "Negative \\(\\Delta G^{\\circ}\\), K > 1, and positive E\\(^{\\circ}\\)"
+        },
+        {
+            "question": "In a simple galvanic cell constructed from the two half-cells shown below, how do electrons and ions flow? <br> Cu\\(^{2+}\\) (aq) + 2e\\(^-\\) \\(\\rightarrow\\) Cu (s) \\(\\qquad\\) +0.34 V <br> Zn\\(^{2+}\\) (aq) + 2e\\(^-\\) \\(\\rightarrow\\) Zn (s) \\(\\qquad\\) -0.76 V",
+            "answer": "Electrons flow toward the copper cathode where reduction takes place and positive ions from the salt bridge enter the reduced half-cell."
+        },
+        {
+            "question": "The electrolysis of molten sodium chloride yields different products than the electrolysis of aqueous sodium chloride. The relevant standard electrode potentials are shown below. <br> (a) The standard electrode potentials alone, predict that the products from the electrolysis of aqueous sodium chloride should be H\\(_2\\) gas and O\\(_2\\) gas, but it is found that in many situations, the actual products are chlorine gas and hydrogen gas. What is the most likely explanation for this observation. <br> (b) What is the product at the cathode when molten sodium chloride is electroylzed. <br> (c) When considering the four reactions listed in the table, it would appear that the reduction of Cl\\(_2\\) gas to chloride ions is the most likely reduction to occur. Why is Cl\\(_2\\) gas not reduced at the beginning of the electrolysis of either aqueous or molten NaCl?",
+            "image": "images/CHEM9.33B.PNG",
+            "answer": "(a) The electrode potentials for the production of chlorine gas and oxygen gas are very similar, and any small deviation from standard conditions may favor the production of chlorine over oxygen. <br> (b) sodium <br> (c) There is not chlorine gas present in aqueous or molten sodium chloride"
+        },
+        {
+            "question": "2C\\(_4\\)H\\(_{10}\\) (g) + 13O\\(_2\\) (g) \\(\\rightarrow\\) 8CO\\(_2\\) (g) + 10H\\(_2\\)O (l) <br> The reaction represented above is spontaneous at 25\\(^{\\circ}\\)C. Assume that all reactants and products are in their standard state. <br> (a) Predict the sign of \\(\\Delta S^{\\circ}\\) for the reaction and justify your prediction. <br> (b) What is the sign of \\(\\Delta G^{\\circ}\\) for the reaction? How would the sign and magnitude of \\(\\Delta G^{\\circ}\\) be affected by an increase in temperature to 50\\(^{\\circ}\\)C? Explain your answer. <br> (c) What must be the sign of \\(\\Delta H^{\\circ}\\) for the reaction at 25\\(^{\\circ}\\)C? How does the total bond energy of the reactants compare to that of the products? <br> (d) When the reactants are placed together in a container, no change is observed even though the reaction is known to be spontaneous. Explain this observation.",
+            "answer": "(a) -\\(\\Delta S\\); since a more ordered state is formed as evidenced by the reaction of 15 mol gas to form 8 mol gas plus 10 mol liquid. <br> (b) -\\(\\Delta G\\); since we are told the reaction is spontaneous. The T\\(\\Delta S\\) term is negative but subtracted, therefore ultimately added to the \\(\\Delta H\\) term. \\(\\Delta H\\) must be negative to cause \\(\\Delta G\\) to be negative. As temperature increases, the magnitude of \\(\\Delta G\\) becomes less negative. If temperature continues to increase, \\(\\Delta G^{\\circ}\\) will become positive. <br> (c) \\(\\Delta H^{\\circ}\\) must be negative since \\(\\Delta G^{\\circ}\\) is negative. Since \\(\\Delta H^{\\circ}\\) is negative, energy left the system, therefore, the bond energy of the reactants is less than the bond energy released as product bonds form. <br> (d) The reaction has a high activation energy. Spontaneous reactions occur without additional energy added beyond the E\\(_a\\) required to start them."
+        },
+        {
+            "question": "For the gaseous equilibrium represented below, it is observed that greater amounts of PCl\\(_3\\) and Cl\\(_2\\) are produced as the temperature is increased. <br> PCl\\(_5\\) (g) \\(\\leftrightarrow\\) PCl\\(_3\\) (g) + Cl\\(_2\\) (g) <br> (a) What is the sign of \\(\\Delta S^{\\circ}\\) for the reaction? Explain. <br> (b) What change, if any, will occur in \\(\\Delta G^{\\circ}\\) for the reaction as the temperature is increased? Explain your reasoning in terms of thermodynamic principles. <br> (c) If He gas is added to the original reaction mixture at constant volume and temperature, what will happen to the partial pressure of Cl\\(_2\\)? Explain. <br> (d) If the volume of the original reaction is decreased at constant temperature to half the original volume, what will happen to the number of moles of Cl\\(_2\\) in the reaction vessel? Explain.",
+            "answer": "(a) +\\(\\Delta S^{\\circ}\\) since 1 mole gas reacts to produce 2 mol of gas products which is a more disordered state. <br> (b) \\(\\Delta G^{\\circ}\\)'s magnitude will decrease as temperature increases since the T\\(\\Delta S\\) term is positive and increases with increasing temperature. It is subtracted from a positive \\(\\Delta H\\) term, so it is possible that the \\(\\Delta G^{\\circ}\\) value will change sign. <br> (c) There will be no effect since He is not a factor in the equilibrium expression. Adding He has no effect on the partial pressure of Cl\\(_2\\), thus no effect on equilibrium. <br> (d) The number of moles of Cl\\(_2\\) will decrease since the system will shift left to favor the side of the equation with fewer moles of gas."
+        },
+        {
+            "question": "The tables below contain information for determining thermodynamic properties of the reaction below. <br> C\\(_2\\)H\\(_5\\)Cl (g) + Cl\\(_2\\) (g) \\(\\rightarrow\\) C\\(_2\\)H\\(_4\\)Cl\\(_2\\) (g) + HCl (g) <br> (a) Calculate the \\(\\Delta H^{\\circ}\\) for the reaction above, using the table of average bond dissociation energies. <br> (b) Calculate the \\(\\Delta S^{\\circ}\\) for the reaction at 298 K, using data from either table as needed. <br> (c) Calculate the value of K\\(_{eq}\\) for the reaction at 298 K. <br> (d) What is the effect of an increase in temperature on the value of the equilibrium constant? Explain your answer.",
+            "image": "images/CHEM9FRQ1.PNG",
+            "answer": "(a) -151 kJ/mol <br> (b) -0.120 kJ/mol\\(\\cdot\\)K <br> (c) \\(1.5\\times 10^{20}\\) <br> (d) \\(\\Delta H\\) was negative, therefore exothermic K\\(_{eq}\\) value would decrease with an increase in temperature since the reaction is exothermic. Increasing temperature favors the reactant side of the equation. Since K is proportion to products over reactants, as more reactants form, the value of K decreases."
+        },
+        {
+            "question": "Cl\\(_2\\) (g) + 3F\\(_2\\) (g) \\(\\rightarrow\\) 2ClF\\(_3\\) (g) <br> ClF\\(_3\\) can be prepared by the reaction represented by the equation above. For ClF\\(_3\\) the standard enthalpy of formation, \\(\\Delta H_f^{\\circ}\\), is -163.2 kilojoules/mole and the standard free energy of formation, \\(\\Delta G_f^{\\circ}\\), is -123.0 kilojoules/mole. <br> (a) Calculate the value of the equilibrium constant for the reaction at 298 K. <br> (b) Calculate the standard entropy change, \\(\\Delta S^{\\circ}\\), for the reaction at 298 K. <br> (c) If ClF\\(_3\\) were produced as a liquid rather than as a gas, how would the sign and the magnitude of \\(\\Delta S\\) for the reaction be affected? Explain. <br> (d) At 298 K the absolute entropies of Cl\\(_2\\) (g) and ClF\\(_3\\) (g) are 222.96 joules per mole\\(\\cdot\\) Kelvin and 281.50 joules per mole\\(\\cdot\\) Kelvin, respectively. <br> (i) Account for the larger entropy of ClF\\(_3\\) (g) relative to that of Cl\\(_2\\) (g) <br> (ii) Calculate the value of the absolute entropy of F\\(_2\\) (g) at 298 K.",
+            "answer": "(a) \\(1.23\\times 10^{43}\\) <br> (b) -0.270 kJ/mol\\(\\cdot\\)K <br> (c) 4 mol of gas react to form 2 mol of more ordered liquid product, therefore \\(\\Delta S\\) remains negative but its magnitude increases. <br> (d) <br> (i) ClF\\(_3\\) has a larger entropy since it has a larger number of atoms, therefore more disorder. <br> (ii) 203.3 J/mol\\(\\cdot\\)K"
+        },
+        {
+            "question": "O\\(_3\\) (g) + NO (g) \\(\\leftrightarrow\\) O\\(_2\\) (g) + NO\\(_2\\) (g) <br> Consider the reaction represented above. <br> (a) Referring to the data in the table below, calculate the standard enthalpy change, \\(\\Delta H^{\\circ}\\), for the reaction at 25\\(^{\\circ}\\)C. Be sure to show your work. <br> <img src = 'courses/images/CHEM9.2000A.PNG'> <br> (b) Make a qualitative prediction about the magnitude of the standard entropy change, \\(\\Delta S^{\\circ}\\), for the reaction at 25\\(^{\\circ}\\)C. Justify your answer. <br> (c) On the basis of your answers to parts (a) and (b), predict the sign of the standard free-energy change, \\(\\Delta G^{\\circ}\\), for the reaction at 25\\(^{\\circ}\\)C. Explain your reasoning. <br> (d) Use the information in the table below to write the rate-law expression for the reaction, and explain how you obtained your answer. <br> <img src = 'courses/images/CHEM9.2000D.PNG'> <br> (e) The following three-step mechanism is proposed for the reaction. Identify the step that must be the slowest in order for this mechanism to be consistent with the rate-law expression derived in part (d). Explain. <br> Step I: O\\(_3\\) + NO \\(\\rightarrow\\) O + NO\\(_3\\) <br> Step II: O + O\\(_3\\) \\(\\rightarrow\\) 2O\\(_2\\) <br> Step III: NO\\(_3\\) + NO \\(\\rightarrow\\) 2NO\\(_2\\)",
+            "answer": "(a) -200. kJ/mol <br> (b) \\(\\Delta S^{\\circ}\\) will be near zero since the number of moles of gas on each side of the equation are the same, therefore the amount of disorder did not appreciably change. <br> (c) \\(\\Delta G^{\\circ}\\) will be negative because of the formula \\(\\Delta G^{\\circ}\\) = \\(\\Delta H^{\\circ}\\) - T\\(\\Delta S^{\\circ}\\) <br> (d) rate = k[O\\(_3\\)][NO]; experiment 1 & 2 held [O\\(_3\\)] constant while doubling [NO] and the rate doubled, therefore, 1st order with respect to [NO]. Experiment 1 & 3 held [NO] constant while doubling [O\\(_3\\)] and the rate doubled, therefore 1st order with respect to [O\\(_3\\)] <br> (e) Step 1 is the rate determining step since its rate law agree with the experimentally determined rate law, rate = k[O\\(_3\\)][NO]. If the slow step were step step 2, then the mechanism would yield a rate law of rate = k[O\\(_3\\)]\\(^2\\)[NO]. If the slow step were step 3, then the mechanism would yield a rate law of rate = k[O\\(_3\\)]\\(^2\\)[NO]\\(^2\\). Neither of these rate laws agree with the experimentally determined rate law."
+        },
+        {
+            "question": "2Fe (s) + 3/2 O\\(_2\\) (g) \\(\\rightarrow\\) Fe\\(_2\\)O\\(_3\\) (s) \\(\\qquad\\) \\(\\Delta^{\\circ}_f\\) = -824 kJ/mol <br> Iron reacts with oxygen to produce iron(III) oxide, as represented by the equation above. A 75.0 g sample of Fe(s) is mixed with 11.5 L of O\\(_2\\) (g) at 2.66 atm and 298 K. <br> (a) Calculate the number of moles of each of the following before the reaction begins. <br> (i) Fe(s) <br> (ii) O\\(_2\\) (g) <br> (b) Identify the limiting reactant when the mixture is heated to produce Fe\\(_2\\)O\\(_3\\) (s). Support your answer with calculations. <br> (c) Calculate the number of moles of Fe\\(_2\\)O\\(_3\\) (s) produced when the reaction proceeds to completion. <br> (d) The standard free energy of formation. \\(\\Delta G^{\\circ}_f\\), of Fe\\(_2\\)O\\(_3\\) (s) is -740. kJ mol at 298 K. <br> (i) Calculate the standard entropy of formation. \\(\\Delta S^{\\circ}_f\\), of Fe\\(_2\\)O\\(_3\\) (s) at 298 K. Include units with your answer. <br> (ii) Which is more responsible for the spontaneity of the formation reaction at 298 K, the standard enthalpy of formation, \\(\\Delta H^{\\circ}_f\\), or the standard entropy of formation, \\(\\Delta S^{\\circ}_f\\)? Justify your answer. <br> (e) The reaction represented below also produces iron(III) oxide. The value of \\(\\Delta H^{\\circ}\\) for the reaction is -280. kJ per mole of Fe\\(_2\\)O\\(_3\\) (s) formed. <br> 2FeO (s) + 3/2 O\\(_2\\) (g) \\(\\rightarrow\\) Fe\\(_2\\)O\\(_3\\) (s) <br> Calculate the standard enthalpy of formation, \\(\\DeltaH^{\\circ}_f\\), of FeO (s).",
+            "answer": "(a) (i) 1.34 mol Fe <br> (ii) 1.25 mol O\\(_2\\) <br> (b) Fe is the limiting reactant <br> (c) 0.671 mol Fe\\(_2\\)O\\(_3\\) <br> (d) <br> (i) -0.282 kJ/mol\\(\\cdot\\)K <br> (ii) Since there is a decrease in entropy, which does not favor spontaneity, the change in enthalpy is more responsible for the negative \\(\\Delta G^{\\circ}\\) value. <br> (e) -272 kJ/mol"
+        },
+        {
+            "question": "N\\(_2\\) (g) + 2H\\(_2\\) (g) \\(\\leftrightarrow\\) N\\(_2\\)H\\(_4\\) (g) <br> \\(\\Delta H^{\\circ}_{298}\\) = +95.4 kJ/mol <br> \\(\\Delta S^{\\circ}_{298}\\) = -176 J/K\\(\\cdot\\)mol <br> Answer the following questions about the reaction represented above using principles of thermodynamics. <br> (a) On the basis of the thermodynamic data given above, compare the sum of the bond strengths of the reactants to the sum of the bond strengths of the product. Justify your answer. <br> (b) Does the entropy change of the reaction favor the reactants or the product? Justify your answer. <br> (c) For the reaction under the conditions specified, which is favored, the reactants or the product? Justify your answer. <br> (d) Explain how to determine the value of the equilibrium constant, K\\(_{eq}\\) for the reaction. (Do not do any calculations.) <br> (e) Predict whether the value of K\\(_{eq}\\) for the reaction is greater than 1, equal to 1, or less than 1. Justify your prediction.",
+            "answer": "(a) \\(\\Delta H\\) is positive, therefore, energy was taken into the system to break bonds. Energy is released when bonds form. So, the sum of the bond energies of the reactants is greater than the sum of the bond energies of the products. <br> (b) The entropy change favors the reactants since they are in a less condensed state (more disordered). <br> (c) Reactants are favored since \\(\\Delta G\\) is positive. <br> (d) Solve for \\(\\Delta G^{\\circ}\\) using \\(\\Delta G^{\\circ} = \\Delta H^{\\circ} - T\\Delta S^{\\circ}\\) and values given for \\(\\Delta H^{\\circ}\\) and \\(\\Delta S^{\\circ}\\); T = 298 K. Next, solve for ln K using \\(\\Delta G = -RT\\ln K_{eq}\\) where R = 8.31 J/mol\\(\\cdot\\)K and T = 298 K. Then K\\(_{eq}\\) = \\(e^{-(\\Delta G/RT)}\\) <br> (e) A positive \\(\\Delta G\\) value indicates that K\\(_{eq}\\) < 1"
+        },
+        {
+            "question": "Answer the following questions about the thermodynamics of the reactions represented below. <br> Reaction X: 1/2 I\\(_2\\) (s) + 3/2 Cl\\(_2\\) (g) \\(\\leftrightarrow\\) ICl (g) <br> \\(\\Delta H^{\\circ}_f\\) = 18 kJ/mol, \\(\\Delta S^{\\circ}_{298}\\) = 78 J/K\\(\\cdot\\)mol <br> Reaction Y: 1/2 I\\(_2\\) (s) + 1/2 Br\\(_2\\) (l) \\(\\leftrightarrow\\) IBr (g) <br> \\(\\Delta H^{\\circ}_f\\) = 41 kJ/mol, \\(\\Delta S^{\\circ}_{298}\\) = 124 J/K\\(\\cdot\\)mol <br> (a) Is reaction X, represented above, spontaneous under standard conditions? Justify your answer with a calculation. <br> (b) Calculate the value of the equilibrium constant, K\\(_{eq}\\), for reaction X at 25\\(^{\\circ}\\)C. <br> (c) What effect will an increase in temperature have on the equilibrium constant for reaction X? Explain your answer. <br> (d) Explain why the standard entropy change is greater for reaction Y than for reaction X. <br> (e) Above what temperature will the value of the equilibrium constant for reaction Y be greater than 1.0? Justify your answer with calculations. <br> (f) For the vaporization of solid iodine, I\\(_2\\) (s) \\(\\rightarrow\\) I\\(_2\\) (g), the value of \\(\\Delta H^{\\circ}_{298}\\) is 62 kJ/mol. Using this information, calculate the value of \\(\\Delta H^{\\circ}_{298}\\) for the reaction represented below. <br> I\\(_2\\) (g) + Cl\\(_2\\) (g) \\(\\leftrightarrow\\) 2ICl (g)",
+            "answer": "(a) \\(\\Delta G_x^{\\circ}\\) = -5.2 kJ/mol, so yes the reaction is thermodynamically favorable. <br> (b) 8.3 <br> (c) Reaction X is endothermic, therefore increasing temperature favors the forward reaction, therefore more products will be formed, and the value of K increases as a result. <br> (d) Both reactions have solid I\\(_2\\) as a reactant but reaction X has Cl\\(_2\\) gas as a reactant versus reaction Y having Br\\(_2\\) liquid as a reactant. Both reactions form gaseous products, so the entropy change is greater for reaction Y compared to that of reaction X. <br> (e) 331 K <br> (f) -26 kJ/mol"
+        },
+        {
+            "question": "An electrochemical cell consists of a tin electrode in an acidic solution of 1.00 molar Sn\\(^{2+}\\) connected by a salt bridge to a second compartment with a silver electrode in an acidic solution of 1.00 molar Ag\\(^+\\). <br> (a) Write the equation for the half-cell reaction occurring at each electrode. Indicate which half-reaction occurs at the anode. <br> (b) Write the balanced chemical equation for the overall spontaneous cell reaction that occurs when the circuit is complete. Calculate the standard voltage, E\\(^{\\circ}\\), for this cell reaction. <br> (c) Calculate the equilibrium constant for this cell reaction at 298 K. <br> (d) A cell similar to the one described above is constructed with solutions that have initial concentrations of 1.00 molar Sn\\(^{2+}\\) and 0.0200 molar Ag\\(^+\\). Calculate the initial voltage, E, of this cell.",
+            "answer": "(a) Sn\\(^{2+}\\) + 2e\\(^-\\) \\(\\rightarrow\\) Sn <br> Ag\\(^+\\) + e\\(^-\\) \\(\\rightarrow\\) Ag <br> Sn happens at the anode <br> (b) 2Ag\\(^+\\) + Sn \\(\\rightarrow\\) 2Ag + Sn\\(^{2+}\\) <br> 0.94 V <br> (c) \\(6\\times 10^{31}\\) <br> (d) 0.84 V"
+        },
+        {
+            "question": "Explain each of the following. <br> (a) When an aqueous solution of NaCl is electrolyzed, Cl\\(_2\\) (g) is produced at the anode, but no Na (s) is produced at the cathode. <br> (b) The mass of Fe (s) produced when 1 faraday is used to reduce a solution of FeSO\\(_4\\) is 1.5 times the mass of Fe (s) produced when 1 faraday is used to reduce a solution of FeCl\\(_3\\). <br> Zn + Pb\\(^{2+}\\) (1.0 M) \\(\\rightarrow\\) Zn\\(^{2+}\\) (1.0 M) + Pb <br> (c) The cell that utilized the reaction above has a higher potential when [Zn\\(^{2+}\\)] is decreased and [Pb\\(^{2+}\\)] held constant, but a lower potential when [Pb\\(^{2+}\\)] id decreased and [Zn\\(^{2+}\\)] is held constant. <br> (d) The cell that utilizes the reaction given in (c) has the same cell potential as another cell in which [Zn\\(^{2+}\\)] and [Pb\\(^{2+}\\)] are each 0.10 M.",
+            "answer": "(a) Alkali metals and alkaline earth metals are not reduced in aqueous electrolytic processes; water is reduced instead. Cl\\(^-\\) is oxidized to Cl\\(_2\\). <br> (b) 2 mol of electrons are required to reduce Fe\\(^{2+}\\) in FeSO\\(_4\\) as opposed to 3 moles of electrons required to reduce Fe\\(^{3+}\\) in FeCl\\(_3\\), therefore 1.5 mol of Fe\\(^{2+}\\) is reduced for each mol of Fe\\(^{3+}\\) reduced to Fe. <br> When [Zn\\(^{2+}\\)] is decreased, Q < 1, therefore log Q < 0, which is then subtracted from E\\(^{\\circ}_{cell}\\) therefore energy increases. Also, when [Pb\\(^{2+}\\)] is decreased, Q > 1 and log Q > 0, which is then subtracted from E\\(^{\\circ}_{cell}\\), therefore E\\(_{cell}\\) decreases. <br> (d) Q = 1, so log Q = 0, so E = E\\(^{\\circ}_{cell}\\)"
+        },
+        {
+            "question": "An unknown metal M forms a soluble compound, M(NO\\(_3\\))\\(_2\\). <br> (a) A solution of M(NO\\(_3\\))\\(_2\\) is electrolyzed. When a constant current of 2.50 amperes is applied for 35.0 minutes, 3.06 grams of the metal M is deposited. Calculate the molar mass of M and identify the metal. <br> (b) The metal identified in (a) is used with zinc to construct a galvanic cell, as shown below. Write the net ionic equation for the cell reaction and calculate the cell potential, E\\(^{\\circ}\\). <br> <img src = 'courses/images/CHEM9.1992.PNG'> <br> (c) Calculate the value of the standard free energy change, \\(\\Delta G^{\\circ}\\), at 25\\(^{\\circ}\\)C for the reaction in (b). <br> (d) Calculate the potential, E, for the cell shown in (b) if the initial concentration of ZnSO\\(_4\\) is 0.10-molar, but the concentration of the M(NO\\(_3\\))\\(_2\\) solution remains unchanged.",
+            "answer": "(a) 112 g/mol, cadmium <br> (b) Cd\\(^{2+}\\) + Zn \\(\\rightarrow\\) Cd + Zn\\(^{2+}\\), 0.36 V <br> (c) -69 kJ/mol <br> (d) 0.39 V"
+        },
+        {
+            "question": "Sr (s) + Mg\\(^{2+}\\) \\(\\rightarrow\\) Sr\\(^{2+}\\) + Mg (s) <br> Consider the reaction represented above that occurs at 25\\(^{\\circ}\\)C. All reactants and products are in their standard states. The value of the equilibrium constant, K\\(_{eq}\\), for the reaction is \\(4.2\\times 10^{17}\\) at 25\\(^{\\circ}\\)C. <br> (a) Predict the sign of hte standard cell potential, E\\(^{\\circ}\\), for a cell based on the reaction. Explain your prediction. <br> (b) Identify the oxidizing agent for the spontaneous reaction. <br> (c) If the reaction were carried out at 60\\(^{\\circ}\\)C instead of 25\\(^{\\circ}\\)C, how would the cell potential change? Justify your answer. <br> (d) How would the cell potential change if the reaction were carried out at 25\\(^{\\circ}\\)C with a 1.0-molar solution of Mg(NO\\(_3\\))\\(_2\\) and a 0.10-molar soultion of Sr(NO\\(_3\\))\\(_2\\)? Explain. <br> (e) When the cell reaction in (d) reaches equilibrium, what is the cell potential?",
+            "answer": "(a) Since K>>1, E\\(^{\\circ}_{cell}\\) > 0. When K > 1, products are favored, the reaction is spontaneous, and E\\(^{\\circ}_{cell}\\) is positive. <br> (b) Mg\\(^{2+}\\) <br> (c) If temperature increases, E also increases. <br> (d) E\\(_{cell}\\) increases, since log Q < 0 and you subtract it from E\\(^{\\circ}_{cell}\\), E\\(_{cell}\\) > E\\(^{\\circ}_{cell}\\) <br> (e) E = 0"
+        },
+        {
+            "question": "In an electrolytic cell, a current of 0.250 amphere is passed through a solution of a chloride of iron, producing Fe (s) and Cl\\(_2\\) (g). <br> (a) Write the equation for the reaction that occurs at the anode. <br> (b) When the cell operates for 2.00 hours, 0.521 gram of iron is deposited at one electrode. Determine the formula of the chloride of iron in the original solution. <br> (c) Write the balanced equation for the overall reaction that occurs in the cell. <br> (d) How many liters of Cl\\(_2\\) (g), measured at 25\\(^{\\circ}\\)C and 750 mmHg, are produced when the cell operates as described in part (b)? <br> (e) Calculate the current that would produce chlorine gas at a rate of 3.00 grams per hour.",
+            "answer": "(a) 2Cl\\(^-\\) \\(\\rightarrow\\) Cl\\(_2\\) + 2e\\(^-\\) <br> (b) FeCl\\(_2\\) <br> (c) Fe\\(^{2+}\\) + 2Cl\\(^-\\) \\(\\rightarrow\\) Cl\\(_2\\) + Fe <br> (d) 0.23 L <br> (e) 2.27 A"
+        },
+        {
+            "question": "Answer the following questions regarding the electrochemical cell below. <br> (a) Write the balanced net-ionic equation for the spontaneous reaction that occurs as the cell operates, and determine the cell voltage. <br> (b) In which direction do anions flow in the salt bridge as the cell operates? Justify your answer. <br> (c) If 10.0 mL of 3.0-molar AgNO\\(_3\\) solution is added to the half-cell on the right, what will happen to the cell voltage? Explain. <br> (d) If 1.0 grams of solid NaCl is added to each half-cell, what will happen to the cell voltage? Explain. <br> (e) If 20.0 mL of distilled water is added to both half-cells, the cell voltage decreases. Explain.",
+            "image": "images/CHEM9.1998.PNG",
+            "answer": "(a) 2Ag\\(^+\\) + Cd \\(\\rightarrow\\) 2Ag + Cd\\(^{2+}\\), 1.20 V <br> (b) In the salt bridge, to balance the charge, the anions from the salt bridge, NO\\(_3^-\\), must flow into the anode solution, Cd(NO\\(_3\\))\\(_2\\), and the cations from the salt bridge, K\\(^+\\), must flow into the cathode solution, AgNO\\(_3\\) <br> (c) The cell voltage will increase because log Q < 0. <br> (d) Na\\(^+\\) is always soluble, but AgCl would precipitate, decreasing [Ag\\(^+\\)], therefore Q > 1, which makes log Q > 0, so E\\(_{cell}\\) would decrease. <br> (e) Diluting both cells equally causes Q to increase since the [Ag\\(^+\\)] term is squared, therefore, Q > 1, which makes log Q > 0 and since log Q is subtracted from E\\(^{\\circ}_{cell}\\), E must decrease."
+        },
+        {
+            "question": "AgNO\\(_3\\) (s) \\(\\rightarrow\\) Ag\\(^+\\) (aq) + NO\\(_3^-\\) (aq) <br> The dissolving of AgNO\\(_3\\) (s) in pure water is represented by the equation above. <br> (a) Is \\(\\Delta G\\) for the dissolving of AgNO\\(_3\\) (s) positive, negative, or zero? Justify your answer. <br> (b) Is \\(\\Delta S\\) for the dissolving of AgNO\\(_3\\) (s) positive, negative, or zero? Justify your answer. <br> (c) The solubility of AgNO\\(_3\\) (s) increases with increasing temperature. <br> (i) What is the sign of \\(\\Delta H\\) for the dissolving process? Justify your answer. <br> (ii) Is the answer you gave in part (a) consistent with your answers to part (b) and (c) (i)? Explain. <br> The compound NaI dissolves in pure water according to the equation NaI (s) \\(\\rightarrow\\) Na\\(^+\\) (aq) + I\\(^-\\) (aq). Some of the information in the table of standard reduction potentials given below may be useful in answering the questions that follow. <br> <img src = 'courses/images/CHEM2005.PNG'> <br> (d) An electric current is applied to a 1.0 M NaI solution. <br> (i) Write the balanced oxidation half-reaction for the reaction that takes place. <br> (ii) Write the balanced reduction half-reaction for the reaction takes place. <br> (iii) Which reaction takes place at the anode, the oxidation reaction or the reduction reaction? <br> (iv) All electrolysis reactions have the same sign for \\(\\Delta G^{\\circ}\\). Is the sign positive or negative? Justify your answer.",
+            "answer": "(a) \\(\\Delta G\\) is negative; AgNO\\(_3\\) (s) is known to be soluble, therefore the reaction is spontaneous, therefore \\(\\Delta G < 0\\) <br> (b) \\(\\Delta S\\) is positive, as the reaction proceeds, 1 mole AgNO\\(_3\\) (s), a condensed state, produces 2 moles of aqueous ions, therefore disorder increases, therefore \\(\\Delta S > 0\\) <br> (c) (i) \\(\\Delta H\\) is positive since \"adding\" heat energy to the system increases the solubility of AgNO\\(_3\\) (s), therefore it's an endothermic process. <br> (ii) Yes, a negative \\(\\Delta G\\) can occur. As the temperature increases, the -\\(T\\Delta S\\) term increases such that its value can be greater than the +\\(\\Delta H\\) term, yielding \\(\\Delta G<0\\). <br> (d) (i) 2I\\(^-\\) \\(\\rightarrow\\) I\\(_2\\) (s) + 2e\\(^-\\) <br> (ii) 2H\\(_2\\)O + 2e\\(^-\\) \\(\\rightarrow\\) H\\(_2\\) + 2OH\\(^-\\) <br> (iii) The oxidation half reaction occurs at the anode <br> (iv) If E\\(^{\\circ}_{cell}\\) is negative, the \\(\\Delta G^{\\circ}\\) must be positive since \\(\\Delta G^{\\circ} = -nFE^{\\circ}\\), where n and F are always positive terms."
+        },
+        {
+            "question": "2H\\(_2\\) (g) + O\\(_2\\) (g) \\(\\rightarrow\\) 2H\\(_2\\)O (l) <br> In a hydrogen-oxygen fuel cell, energy is produced by the overall reaction represented above. <br> (a) When the fuel cell operates at 25\\(^{\\circ}\\)C and 1.00 atm for 78.- minutes, 0.0746 mol of O\\(_2\\) (g) is consumed. Calculate the volume of H\\(_2\\) (g) consumed during the same time period. Express your answer in liters measured at 25\\(^{\\circ}\\)C and 1.00 atm. <br> (b) Given that the fuel cell reaction takes place in an acidic medium, <br> (i) write the two half reactions that occur as the cell operates, <br> (ii) identify the half reaction that takes place at the cathode, and <br> (iii) determine the value of the standard potential, E, of the cell. <br> (c) Calculate the charge, in coulombs, the passes through the cell during the 78.0 minutes of operation as described in part (a).",
+            "answer": "(a) 3.65 L <br> (b) (i) <br> H\\(_2\\) \\(\\rightarrow\\) 2H\\(^+\\) + 2e\\(^-\\) <br> O\\(_2\\) + 4e\\(^-\\) + 4H\\(^+\\) \\(\\rightarrow\\) 2H\\(_2\\)O <br> (ii) O\\(_2\\) + 4H\\(^+\\) + 4e\\(^-\\) \\(\\rightarrow\\) 2H\\(_2\\)O <br> (iii) 1.23 V <br> (c) 28800 C"
+        }
     ]
 }

@@ -276,121 +276,111 @@ We can construct new logical equivalences.
 
 
 \section{Nested Quantifiers}
-A nested quantifier is when one quantifier is in the scope of another.
-
-Here is table that summarizes different quantifications involving two variables.
-\begin{center}
-    \includegraphics[width=1\textwidth]{1.5.PNG}
-\end{center}
-
-\section{Rules of Inference}
-Rules of inference are our basic tools for establishing the truth of statements.
-
-An argument in propositional logic is a sequence of propositions. All but the final proposition in the 
-argument are called premises and the final proposition is called the conclusion. An argument is valid 
-if the truth of all its premises implies the conclusion is true.
-
-An argument form in propositional logic is a sequence of compound propositions involving propositional 
-variables. An argument form is valid if no matter what particular propositions are substituted for the 
-propositional variables in the premises, the conclusion is true if the premises are all true.
-
-The tautology $(p\land(p\rightarrow q))\rightarrow q$ is the basis of the rule of inference 
-modus ponens, or the law of detachment, basically: if $p$ and $p\rightarrow q \therefore q$.
-
-Yet again another chart I took from Rosen.
-\begin{center}
-    \includegraphics[width=1\textwidth]{1.6.PNG}
-\end{center}
-
-Fallacies resemble rules of inference, the difference lies in that they are based in contingencies rather than tautologies.
-
-There are also some rules of inference for statements involving quantifiers.
-This is what Rosen summarized:
-\begin{center}
-    \includegraphics[width=1\textwidth]{1.6.1.PNG}
-\end{center}
-
-Because universal instantiation and modus ponens are so often used together, the combination of rules 
-is called universal modus ponens. This rule tells us if $\forall x (P(x)\rightarrow Q(x))$ is true, 
-and if $P(a)$ is true for a particular element $a$ in the domain of the universal quantifier, 
-then $Q(a)$ must also be true. Note that by universal instantiation $P(a)\rightarrow Q(a)$ is true. 
-By modus ponens, $Q(a)$ must also be true. 
-
-This is how it is described:
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{1.6.2.PNG}
-\end{center}
-
-There is also universal modus tollens:
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{1.6.3.PNG}
-\end{center}
-
-\section{Introduction to Proofs}
-A proof is a valid argument that establishes the truth of a mathematical statement. 
-
-A theorem is a statement that can be shown to be true. We show the truth using a proof.
-
-A less important theorem that is helpful in the proof of other results is called a lemma. 
-
-A corollary is a theorem that can be established directly from a theorem that has been proved. 
-
-A conjecture is a statement that is being proposed to be a true statement.
-
-A direct proof of a conditional statement $p\rightarrow q$ is constructed with the 
-assumption that $p$ is true with the goal for the combination of $p$ being true and $q$ being false to never happen. 
-\begin{definition}
-    The integer $n$ is even if there exists an integer $k$ such that $n=2k$, and $n$ is odd if there exists an 
-    integer $k$ such that $n=2k+1$. Two integers have the same parity when both are even or both are odd; they have 
-    opposite parity when one is even and the other is odd.
-\end{definition}
-
-An indirect proof is a type of proof that is not direct. One example is proof by contraposition. P
-roofs by contraposition use the fact that $p\rightarrow q$ is equal to $\neg q \rightarrow \neg p$. 
-We have to show $\neg q \rightarrow \neg p$ is true to show that $p\rightarrow q$ is true as well.
-
-We can prove that $p\rightarrow q$ is true if $p$ is false as well. This is called a vacuous proof. 
-
-If we show that $q$ is true in $p\rightarrow q$ this is called a trivial proof. 
-\begin{definition}
-    The real number $r$ is rational if there exist integers $p$ and $q$ with $q\neq 0$ such that $r=p/q$. 
-    A real number that is not rational is irrational.
-\end{definition}
-
-Suppose we want to prove a statement $p$ is true. Suppose that we can find a contradiction $q$ such that 
-$\neg p \rightarrow q$ is true. Because $q$ is false, but $\neg p \rightarrow q$ is true, we can conclude 
-$\neg p$ is false, meaning $p$ is true. 
-
-To find a contradiction $q$ that might help us find that $p$ is true, we can show that 
-$\neg p \rightarrow (r\land \neg r)$ is true for some proposition $r$. This is called a proof by contradiction. 
-
-To prove a theorem in the form $p\leftrightarrow q$, we show that both $p\rightarrow q$ and $q\rightarrow p$ are both true. 
-
-Many incorrect arguments are based on a fallacy called begging the question or circular reasoning. 
-This fallacy occurs when one or more steps of a proof are based on the truth of the statement being proved.
-
-\section{Proof Methods and Strategy}
-Suppose we have a conditional $(p_1\lor p_2\lor \cdots \lor p_n)\rightarrow q$. We can separate the 
-proof into different cases, called proof by cases by proving each of the $n$ conditional statements.
-
-Some theorems can be proved by examining a relatively small number of examples. This is called proof by exhaustion. 
-
-The phrase "without loss of generality" (WLOG) means that we assert by proving one case of a theorem, 
-no additional argument is required to prove other specified cases. 
-
-Many theorems are assertions that objects of a particular type exist. A theorem of this type is a 
-proposition in the form $\exists xP(x)$, where $P$ is a predicate. A proof of a proposition in this 
-form is called an existence proof. Sometimes an existence proof can be given by finding an element $a$, 
-called a witness, such that $P(a)$ is true. This existence proof is called constructive. If we prove 
-$\exists xP(x)$ is true in another way it can be nonconstructive.
-
-For a uniqueness proof, we need two parts:
+If I say,
 \begin{itemize}
-    \item Existence: We show that an element $x$ with the desired property exists.
-    \item Uniqueness: We show that if $x$ and $y$ both have the desired property, $x=y$
+    \item All candy made with chocolate is delicious 
+    \item M \& M's are made with chocolate 
+\end{itemize}
+Does it follow that M\&M's are delicious?
+
+We can't model this relationship with propositions.
+
+This is where we need predicate logic which include:
+\begin{itemize}
+    \item Variables: $x$, $y$, $z$, these are the subjects of the statement(s)
+    \item Predicates: a property the variable can have 
+    \item Quantifiers: covered later 
 \end{itemize}
 
-Forward reasoning is a proof when you start with your premises. You construct a proof with steps 
-leading to the conclusion. It may sometimes be helpful to use backwards reasoning, we find a 
-statement $p$ that we can prove $p\rightarrow q$. 
+Statements involving variables, such as ``$x<2$'' and ``$x+y=z$'' are often found in mathematical assertions, in computer programs, and in system specifications. The statements are neither true nor false when the values of the variables aren't specified.
+
+The statement ``x is less than 2'' has two parts. First, the variable $x$ is the subject of the statement. The second part, the predicate, ``is less than 2'' refers to the property that the subject of our statement can have. The predicate, ``is less than 2'' can be denoted by $P(x)$, where $P$ denotes the predicate and $x$ the variable.
+
+Propositional functions become propositions (and have truth values) when their variables are each replaced by a value from the domain (or bound by a quantifier, as we will see later).
+
+The statement $P(x)$ is said to be the value of the propositional function $P$ at $x$.
+
+For example, let $P(x)$ denote ``$x>0$'' and the domain be the integers. Then, $P(-3)$ is false, $P(0)$ is false, and $P(3)$ is true.
+
+Often the domain is denoted by $U$. So in this example, $U$ is the integers.
+
+\begin{example}
+    Let ``$x+y=z$'' be denoted by $R(x,y,z)$ and $U$ (for all three variables) be the integers. Find these truth values:
+
+    (a) $R(2,-1,5)$
+
+    FALSE, because $2+-1=5$ is false 
+
+    (b) $R(3,4,7)$
+
+    TRUE, because $3+4=7$
+
+    (c) $R(x,3,z)$
+
+    This is not a proposition 
+\end{example}
+
+Connectives from propositional logic carry over the predicate logic.
+
+If $P(x)$ denotes ``$x>0$'', find these truth values:
+\begin{itemize}
+    \item $P(3)\lor P(-1)$: True 
+    \item $P(3)\land P(-1)$: False 
+    \item $P(3)\rightarrow P(-1)$: False 
+    \item $P(3)\rightarrow \neg P(-1)$: True 
+\end{itemize}
+
+Expressions with variables are not propositions and therefore do not have truth values. For example, 
+\begin{center}
+    $P(3)\land P(y)$ \\
+    $P(x)\rightarrow P(y)$
+\end{center}
+
+When used with quantifiers (see below), these expressions (propositional functions) become propositions.
+
+As we know, a propositional function $P(x)$ is not a proposition until it has a truth value. Up to this point, we could only do this by assigning a value to our variable.
+
+For example, if $P(x)$ represents ``$x>0$'', the truth value for $P(4)$ returns true.
+
+Now we will turn a propositional function into a proposition using a quantifier.
+
+Let's focus on the two most widely used quantifiers:
+\begin{itemize}
+    \item ``forall'': $\forall$ (Universal Quantifier)
+    \item ``there exists'': $\exists$ (Existential Quantifier)
+\end{itemize}
+
+The statement, $\forall xP(x)$ tells us that the proposition $P(x)$ must be true for all values of $x$ in the domain of discourse/universe.
+\begin{example}
+    Let $P(x)$ represent ``$x>0$''. Find each truth value for $\forall xP(x)$
+
+    (a) $U$ is $\mathbb{Z}$
+
+    False, because negative numbers exist.
+
+    (b) $U$ is $\mathbb{Z}^+$
+
+    True 
+\end{example}
+
+The statement, $\exists xP(x)$, tells us that the proposition $P(x)$ is true for some value(s) of $x$ in the domain of discourse/universe.
+
+\begin{example}
+    Same example as above, but the truth value is for $\exists xP(x)$.
+
+    (a) $U$ is $\mathbb{Z}$
+
+    True 
+
+    (b) $U$ is $\mathbb{Z}^-$
+
+    False 
+\end{example}
+
+\section{Rules of Inference}
+
+\section{Introduction to Proofs}
+
+\section{Proof Methods and Strategy}
+
 \end{document}
