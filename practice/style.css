@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Cinzel', serif;
   color: #4b2e06;
   text-shadow: 1px 1px 0 #d9c9a3;
   margin-top: 20px;
@@ -54,7 +54,7 @@ select:focus {
 
 .question {
   font-size: 1.3rem;
-  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Cinzel', serif;
   color: #4b2e06;
   margin-bottom: 1rem;
 }
