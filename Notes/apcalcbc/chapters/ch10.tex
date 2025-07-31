@@ -1,115 +1,16 @@
-\documentclass[../chem.tex]{subfiles}
+\documentclass[../bccalc.tex]{subfiles}
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
-\chapter{Infinite Sequences and Series}
-\section{Defining Convergent and Divergent Infinite Series}
-Writing terms of a sequence.
-\[ a_n = \{1+(-2)^n\} \]
-ends up becoming $-1,5,-7,17,-31$/
+\chapter{Parametrics, Vectors, and Polar}
+\section{Parametric Equations: The Basics}
 
-A sequence is a collection of numbers that are in one-to-one correspondence with positive integers.
+\section{Vectors and Motion along a Curve}
 
-A monotonic sequence never decreases or never increases.
-\begin{itemize}
-    \item $a_1\leq a_2\leq a_3\leq \dots \leq a_n$
-    \item $a_1\geq a_2 \geq a_3\geq \dots \geq a_n$
-\end{itemize}
+\section{Polar Coordinates and Polar Graphs}
 
-Bounded Sequences 
-\begin{itemize}
-    \item $a_n\leq M$ (upper bound/above)
-    \item $a_n\geq N$ (lower bound/below)
-    \item $\{a_n\}$ bounded if both are true 
-\end{itemize}
+\section{Area Bounded by a Polar Curve}
 
-An infinite series is 
-\[ \sum_{n=1}^{\infty} a_n = a_1+a_2+a_3+\dots + a_n \]
+\section{Notes on Polar}
 
-Partial sums are 
-\[ S_n=a_1+a_2+a_3+\dots + a_n \]
-
-$a_n$ is an expression that gives the $n$th term in a sequence.
-
-$s_n$ is an expression that gives the sum of the first $n$ terms.
-
-\begin{example}
-    Use the following sequence $2,4,6,8,10$ to find $a_4$ and $S_4$.
-
-    The fourth term is $a_4=8$.
-
-    $S_4=2+4+6+8=20$.
-\end{example}
-
-That leads us to $\sum_{n=1}^{\infty}a_n = \lim_{n\to \infty}S_n$ 
-
-\begin{definition}
-    For the infinite series $\sum_{n=1}^{\infty} a_n$, the $n$th partial sum is $S_n=a_1+a_2+a_3+\dots + a_n$.
-
-    If the sequence of the partial sum $\{S_n\}$ converges to $S$, then the series $\sum_{n=1}^{\infty}a_n$ converges. The limit $S$ is called the sum of the series.
-
-    Likewise, if $\{S_n\}$ diverges, then the series diverges.
-\end{definition}
-
-\begin{example}
-    Does the series converge or diverge? 
-    \[ \sum_{n=1}^{\infty} \frac{1}{2^n} \]
-
-    The first term is $S_1=\frac{1}{2}$. Then $S_2 = \frac{1}{2}+\frac{1}{4} = \frac{3}{4}$. $S_3=\frac{7}{8}$ and $S_4 = \frac{15}{16}$.
-
-    This keeps on getting closer to $1$, so the guess is that this converges.
-
-    A strategy is to find $S_n$. This ends up being $\frac{1}{2}+\frac{1}{2^2}+\frac{1}{2^3}+\dots + \frac{1}{2^n}$.
-    
-    We get $\frac{1}{2}S_n=\frac{1}{2^2}+\frac{1}{2^3}+\frac{1}{2^4}+\dots + \frac{1}{2^{n+1}}$.
-
-    We say that $S_n-\frac{1}{2}S_n$ by subtracting the two.
-
-    If we do this, we see that everything cancels all the way until you get $\frac{1}{2}+\frac{1}{2^{n+1}}$.
-
-    Simplifying for $S_n$ gives $1-\frac{1}{2^n}$.
-
-    Letting this appraoch infinity gives $1$.
-\end{example}
-
-\begin{example}
-    Use a calculator to find the partial sum $S_n$ of the series $\sum_{n=1}^{\infty} \frac{10}{n(n+2)}$ for $n=200,1000$.
-
-    Hint: Use a calculator
-\end{example}
-
-\begin{example}
-    Does the series converge or diverge? 
-    \[ \sum_{n=1}^{\infty} n \]
-
-    If you see this, it keeps getting bigger, so it diverges.
-\end{example}
-
-\ex Given the infinite series $\sum_{n=1}^{\infty} (-1)^n$, find the sequence of partial sums $S_1,S_2,S_3,S_4$, and $S_5$. (Answer: $-1,0,-1,0,-1$)
-
-\ex Find the sequence of partial sums $S_1,S_2,S_3,S_4$, and $S_5$ for the infinite series $1+\frac{1}{2}+\frac{1}{4}+\frac{1}{6}+\frac{1}{8}+\frac{1}{10}+\dots$. (Answer: $1,\frac{3}{2},\frac{7}{4},\frac{23}{12},\frac{49}{24}$)
-
-\ex If the infinite series $\sum_{n=1}^{\infty} a_n$ has $n$th partial sum $S_n=(-1)^{n+1}$ for $n\geq 1$, what is the sum of the series. (Answer: $1,-1,1,-1$ diverges)
-
-\ex The infinite series $\sum_{n=1}^{\infty}a_n$ has $n$th partial sum $S_n=\frac{n}{4n+1}$ for $n\geq 1$. What is the sum of the series? (The limit of the $S_n$ to infinity gives $\frac{1}{4}$)
-
-\ex Use a calculator to find the partial sum $S_n$ of the series $\sum_{n=1}^{\infty}\frac{6}{n(n+3)}$ for $n=100,500,1000$. (Answer: Trivial)
-
-\ex Show that the sequence with the given $n$th term $a_n=1+2n$ is monotonic. (Answer: $3,5,7,9$ is monotic because it is strictly increasing)
-
-\ex What is the $n$th partial sum of the infinite series $\sum_{n=1}^{\infty} \frac{1}{2^{n+1}}$. (Answer: Do what was above you get $\frac{1}{2}-\frac{1}{2^{n+1}}$)
-
-$\textbf{Special}$
-
-\ex Which of the following could be the $n$th partial sum for the infinite series $\sum_{n=1}^{\infty}\frac{1}{4^n}$? (Answer: DO same process as above, get $S_n=\frac{1}{3}(1-\frac{1}{4^n})$)
-$\textbf{(A) } S_n = \frac{1}{3}(1+\frac{1}{4^n}) \qquad \textbf{(B) } S_n=\frac{1}{3}(1-\frac{1}{4^{n+1}}) \qquad \textbf{(C) } S_n=\frac{1}{3}(1-\frac{1}{4^n}) \qquad \textbf{(D) } S_n=\frac{1}{4}(1-\frac{1}{3^n})$
-
-\ex If the infinite series $\sum_{n=1}^{\infty}a_n$ is convergent and has a sum of $\frac{7}{8}$, what could be the $n$th partial sum? (The limit as $n$ goes to infinity for $S_n$ is $\frac{7}{8}$)
-$\textbf{(A) } S_n = \frac{7n+1}{8n^2+1} \qquad \textbf{(B) } S_n = \frac{7n^2+1}{8n+1} \qquad \textbf{(C) } S_n = 2(\frac{7}{8}-\frac{1}{n+2}-\frac{1}{n+3}) \qquad \textbf{(D) } S_n = (\frac{7}{8}-\frac{1}{n+2}-\frac{1}{n+3})$
-
-\ex Which of the following sequences with the given $n$th term is bounded and monotonic?
-$\textbf{(A) } a_n=2+(-1)^n \qquad \textbf{(B) } a_n=\frac{n^2}{n+1} \qquad \textbf{(C) } a_n = \frac{3n}{n+2} \qquad \textbf{(D) } a_n = \frac{\cos n}{n}$
-
-
-
-
+\section{More on Polar Graphs}
 \end{document}

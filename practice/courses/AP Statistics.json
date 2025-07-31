@@ -1,6 +1,67 @@
 {
     "Unit 1: Exploring One-Variable Data": [
-        {}
+        {
+            "question": "A survey of 299 undergraduate students asked about respondents' diet preference (Carnivore, Omnivore, Vegeration) and political alignment (Liberal, Moderate, Conservative). Here are side-by-side stacked bar charts of the 285 responses. <br> (a) Describe what this plot shows using the concept of a conditional distribution. <br> (b) Do you think the differences here are real? Explain.",
+            "image": "images/STATS1.1.PNG",
+            "answer": "(a) Omnivores are more liberal and less conservative than Carnivores. Vegerations are the most liberal. <br> (b) The differences are very large. It does appear there is a strong association between diet preference and political alignment."
+        },
+        {
+            "question": "An article in Chance magazine reported on the Houston Independent School District's magnet schools programs. Of the 1755 qualified applications, 931 were accepted, 300 were wait-listed, and 524 were turned away for lack of space. Find the relative frequency distribution of the decisions made, and write a sentence describing it.",
+            "answer": "1755 students applied for admission to the magnet schools program. 53% were accepted, 17% were wait-listed, and the other 30% were turned away."
+        },
+        {
+            "question": "The Centers for Disease Control and Prevention lists causes of death in the United States during 2017: <br> <img src = 'courses/images/STATS1.2.PNG'> <br> (a) Is it reasonable to conclude that heart or lung diseases were the cause of approximately 29.4% of U.S. deaths in 2017? <br> (b) What percentage of deaths were from causes not listed here? <br> (c) Create an appropriate display for these data.",
+            "answer": "(a) Yes. We can add because these categories do not overlap. (Each person is assigned only one cause of death.) <br> (b) 36.8% <br> (c) <img src = 'courses/images/STATS1.3.PNG'>"
+        },
+        {
+            "question": "Data from the International Tanker Owners Pollution Federation Limited (www.itopf.com) give the cause of spillage for 460 large oil tanker accidents from 1970-2016. Write a brief report interpreting what the bar chart shows.",
+            "image": "images/STATS1.4.PNG",
+            "answer": "The bar chart shows that grounding and collision are the most frequent causes of oil spills. Very few have unknown causes."
+        },
+        {
+            "question": "As part of an effort to reduce smoking among teenagers, the organization Monitoring the Future (www.monitoringthefuture.com) asked 2048 eighth graders who said they smoked cigarettes what brands they preferred. The table below shows brand preferences for two regions of the country. Write a few sentences describing the similarities and differences in brand preferences among eight graders in the two regions listed.",
+            "image": "images/STATS1.5.PNG",
+            "answer": "In both the South and West, about 58% of the eighth-grade smokers preferred Marlboro. Newport was the next most popular brand, but was far more popular in the South than in the West, where Camel was cited nearly 3 times as often as in the South. Nearly twice the proportion in the West as in the South indicated that they had no usual brand (12.9% to 6.7%)."
+        },
+        {
+            "question": "In 2019, Pew Research Center conducted a survey of 6878 American adults to ask \"How would you describe your household's finiancial sitation?\" Participants were asked to choose one of the following options for their response: \"live comfortably\", \"meet basic expenses with a little left over for extras\", \"just meet basic expenses\", or \"don't even have enough to meet basic expenses\". Some participants said they didn't know or chose not to respond. The table below summarizes the responses by whether or not the respondent completed college. Respondents who gave no answer have been removed from the table. <br> (a) What percent of respondents who could not meet basic expenses did not complete college? <br> (b) What percent of respondents who did not complete college could not meet basic expenses? <br> (c) What are the conditional distributions of household financial situation by college completion status? <br> (d) Do you think that household financial situation is independent of college completion? Use a suitable visualization to support your answer.",
+            "image": "images/STATS1.6.PNG",
+            "answer": "(a) 79.4% <br> (b) 8.1% <br> (c) <img src = 'courses/images/STATS1.7.PNG'> <br> (d) <img src = 'courses/images/STATS1.8.PNG'> <br> No, household financial situation is not independent of college completion status. The stacked barchart above shows, for example, college grads are about twice as likely to live comfortably as non-college grads."
+        },
+        {
+            "question": "Prior to graduation, a high school class was surveyed about its plans. The following table displays the results for white and minority students (the \"Minority\" group included African-American, Asian, Hispanic, and Native American Students) <br> (a) What percent of the seniors are white? <br> (b) What percent of the seniors are planning to attend a 2-year college? <br> (c) What percent of the seniors are white and planning to attend a 2-year college? <br> (d) What percent of the white seniors are planning to attend a 2-year college? <br> (e) What percent of the seniors planning to attend a 2-year college are white?",
+            "image": "images/STATS1.9.PNG",
+            "answer": "(a) 82.5% <br> (b) 12.9% <br> (c) 11.1% <br> (d) 13.4% <br> (e) 85.7%"
+        },
+        {
+            "question": "Since 2010, the American Statistical Association has encouraged participation by students in the \"Census at School\" survey. One question in the survey asks students which of five super powers they would most like to have: Fly, Freeze Time, Invisibility, Super Strength, or Telepathy. From the very large dataset of past responses, we selected a random sample of 100 students and plotted the distribution of Super Power choice in the graph shown below. <br> <img src = 'courses/images/STATS1.10.PNG'> <br> (a) Describe the distribution of Super Power among students in this sample. Include at least three distinct characteristics of the distribution. <br> We wondered whether the apparent characteristics of the Super Power distribution that we saw in our sample of 100 students reflected similar characteristics of the entire population, or if they were just chance \"quirks\" of this particular sample. So we selected three more different random samples of 100 students and did the same thing. The graphs below show the distributions resulting from these samples. <br> <img src = 'courses/images/STATS1.11.PNG'> <br> (b) For each of the characteristics you described in (a), use these new graphs to decide whether the characteristic is likely to be descriptive of the whole population, or if it may easily just have been a change \"quirk\" of the first sample.",
+            "answer": "(a) The most frequently chosen superpower (by about a third of those in the sample) was Flying. The next most appealing superpowers were Freezing Time and Telepathy, followed by Invisibility. The least frequently chosen was Super Strength. <br> (b) All of the graphs look about the same. This suggests that the proportions of students choosing these superpowers in these samples are pretty to the proportions of students in the whole population who selected them. The differences in proportions across superpowers aren't just quirks of one or two samples - they reflect real differences in the population."
+        },
+        {
+            "question": "A company held a blood pressure screening clinic for its employees. The results are summarized in the table below by age group and blood pressure level. <br> (a) Find the marginal distribution of blood pressure level. <br> (b) Find the conditional distribution of blood pressure level within each age group. <br> (c) Compare these distributions with a segmented bar graph. <br> (d) Write a brief description of the association between age and blood pressure among these employees. <br> (e) Does this prove that people's blood pressure increases as they age? Explain.",
+            "image": "images/STATS1.12.PNG",
+            "answer": "(a) Low 20.0%, Normal 48.9%, High 31.0% <br> (b) <img src = 'courses/images/STATS1.13.PNG'> <br> (c) <img src = 'courses/images/STATS1.14.PNG'> <br> (d) As age increases, the percentage of adults with high blood pressure increases. By contrast, the percentage of adults with low blood pressure decreases. <br> (e) No, but it gives an indication it might. We would need to follow the same individuals over time."
+        },
+        {
+            "question": "Hearing anecdotal reports that some patients undergoing treatment for the eating disorder anorexia seemed to be responding positively to the antidepressant Prozac, medical researchers conducted an experiment to investigate. They found 93 women being treated for anorexia who volunteered to participate. For one year, 49 randomly selected patients were treated with Prozac and the other 44 were given an inert substance called a placebo. At the end of the year, patients were diagnosed as healthy or relapsed, as summarized in the table. Do these results provide evidence that Prozac might be helpful in treating anorexia? Explain.",
+            "image": "images/STATS1.15.PNG",
+            "answer": "No, there's no evidence that Prozac is effective. The relapse rates were nearly identical: 28.6% among the people treated with Prozac, compared to 27.3% among those who took the placebo."
+        },
+        {
+            "question": "The table below shows the number of licensed U.S. drivers (in millions) in age and by sex in 2014. (www.fhwa.dot.gov/policyinformation/statistics.cfm) <br> (a) What percent of total drivers are under 20? <br> (b) What percent of total drivers are male? <br> (c) Write a few sentences comparing the number of male and female licensed drivers in each age group. <br> (d) Do a driver's age and sex appear to be independent? Explain.",
+            "image": "images/STATS1.16.PNG",
+            "answer": "(a) 4% <br> (b) 49.5% <br> (c) Only a slightly higher percentage of younger drivers are male than in the overall population. This difference decreases as drivers are older. But in the oldest categories, the drivers are increasingly women. <br> (d) No, the answer to part (c) describes a relationship that is not independent."
+        },
+        {
+            "question": "Most patients who undergo surgery make routine recoveries and are discharged as planned. Others suffer excessive bleeding, infection, or other postsurgical complications and have their discharges from the hospital delayed. Suppose your city has a large hospital and a small hospital, each performing major and minor surgeries. You collect data to see how many surgical patients have their discharges delayed by postsurgical complications, and you find the results shown in the following table. <br> (a) Overall, for what percent of patients was discharge delayed? <br> (b) Were the percentages different for major and minor surgery? <br> (c) Overall, what were the discharge delay rates at each hospital? <br> (d) What were the delay rates at each hospital for each kind of surgery? <br> (e) The small hospital advertises that it has a lower rate of post-surgical complications. Do you agree? <br> (f) Explain, in your own words, why this confusion occurs.",
+            "image": "images/STATS1.17.PNG",
+            "answer": "(a) 12.3% <br> (b) Yes <br> (c) Large: 13%, Small: 10% <br> (d) Large: Major 15% vs minor 5%, Small: Major 20% vs minor 8% <br> (e) No. Smaller hospitals have a higher rate for both kinds of surgery, even though it's lower \"overall\" <br> (f) The small hospital has a larger percentage of minor surgeries than the large hospital. Minor surgeries have a lower delay rate, so the small hospital looks better \"overall\"."
+        },
+        {
+            "question": "A 1975 article in the magazine Science examined the graduate admissions process at Berkeley for evidence of sex discrimination. The table below shows the number of applicants accepted to each of four graduate programs. <br> (a) What percent of total applications were admitted? <br> (b) Overall, was a higher percentage of males or females admitted? <br> (c) Compare the percentage of males and females admitted in each program. <br> (d) Which of the comparisons you made do you consider to be the most valid. Why?",
+            "image": "images/STATS1.18.PNG",
+            "answer": "(a) 42.6% <br> (b) Males <br> (c) Program 1: Males 61.9% to females 82.4% <br> Program 2: Males 62.9% to females 68.0% <br> Program 3: Males 33.7% to females 35.2% <br> Program 4: Males 5.9% to females 7.0% <br> (d) The comparison in part (c) is better because it takes into account the differences in admission rates among programs; those differences are lost in part (b)."
+        }
     ],
     "Unit 2: Exploring Two-Variable Data": [
         {}

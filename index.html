@@ -1,1 +1,286 @@
-skibidi rizz (update coming soon)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anastasia's Website</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">  <style>
+    /* Trans pride banner 
+    .trans-banner {
+      width: 100%;
+      height: 20px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #5BCEFA 0%,
+        #5BCEFA 20%,
+        #F5A9B8 20%,
+        #F5A9B8 40%,
+        #FFFFFF 40%,
+        #FFFFFF 60%,
+        #F5A9B8 60%,
+        #F5A9B8 80%,
+        #5BCEFA 80%,
+        #5BCEFA 100%
+      );
+      background-size: 200% 100%;
+      animation: wave-horizontal 5s linear infinite;
+      box-shadow: 0 2px 10px #5bcefa88;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }*/
+
+    @keyframes wave-horizontal {
+      0% {
+        background-position: 0% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    body {
+  padding-top: 20px;
+  background: url('figures/pachment.png');
+  background-size: cover;
+  color: #2e2518;
+  font-family: 'Cinzel', serif;
+}
+
+header {
+  background: linear-gradient(to bottom, #d3c4a3, #bba98b);
+  color: #3b2f1b;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(90, 74, 50, 0.3);
+  border-bottom: 2px solid #9e8d73;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  font-family: 'Uncial Antiqua', cursive;
+  margin: 0;
+  text-shadow: 1px 1px 0 #c6b59a;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 15px;
+}
+
+nav a {
+  font-family: 'Cinzel', serif;
+  color: #f4ede3;
+  background-color: #6e5b3c;
+  border: 1px solid #8d7a5c;
+  border-radius: 20px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 4px rgba(74, 59, 41, 0.2);
+}
+
+nav a:hover {
+  background-color: #8d7a5c;
+  color: #fffdf6;
+  box-shadow: 0 0 8px rgba(90, 74, 50, 0.4);
+}
+
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: #4a3823;
+  text-shadow: 1px 1px 0 #d8ccb2;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+p {
+  background: rgba(248, 240, 224, 0.5);
+  border-left: 4px solid #9e8d73;
+  padding: 15px;
+  margin: 20px 10%;
+  color: #2e2518;
+  font-family: 'Cinzel', serif;
+}
+
+a {
+  color: #5e4830;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 3px 8px;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background-color: #8d7a5c;
+  color: #fff;
+  border-color: #8d7a5c;
+  box-shadow: 0 0 6px rgba(90, 74, 50, 0.3);
+}
+
+a img {
+  border-radius: 15px;
+  border: 2px solid #8d7a5c;
+  box-shadow: 0 0 10px rgba(74, 59, 41, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+a:hover img {
+  box-shadow: 0 0 18px rgba(90, 74, 50, 0.3);
+  transform: scale(1.03);
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #a08c6d;
+  box-shadow: 0 0 8px rgba(74, 59, 41, 0.2);
+}
+
+.spotify-widget {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(248, 240, 224, 0.3);
+  border: 1px solid #9e8d73;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(90, 74, 50, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spotify-widget:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 18px rgba(90, 74, 50, 0.3);
+}
+
+.spotify-widget h3 {
+  margin-top: 0;
+  color: #4a3823;
+  text-shadow: 1px 1px 0 #c8bba3;
+  font-size: 1.3rem;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+table {
+  background: rgba(248, 240, 224, 0.4);
+  border: 1px solid #9e8d73;
+  margin: 0 auto;
+}
+
+td {
+  color: #2e2518;
+  padding: 10px 20px;
+  font-family: 'Cinzel', serif;
+}
+
+footer {
+  margin-top: 40px;
+  background-color: #d7c8ab;
+  color: #4a3a28;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-family: 'Cinzel', serif;
+}
+
+.updates-container {
+  margin: 40px auto;
+  max-width: 700px;
+  padding: 20px;
+  background: rgba(248, 240, 224, 0.3);
+  border: 1px solid #9e8d73;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(90, 74, 50, 0.2);
+}
+
+.update-entry {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #9e8d73;
+  color: #3b2f1b;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-family: 'Cinzel', serif;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="trans-banner"></div>
+
+  <header>
+    <h1>Anastasia's Page</h1>
+    <nav>
+      <a href="notes.html">Notes</a>
+      <a href="todo.html">To-Do Sheet</a>
+      <a href="recordings.html">Music Recordings</a>
+    </nav>
+  </header>
+
+  <div class="profile-pic-container">
+    <img src="figures/profile.png" alt="Profile Picture" class="profile-pic" />
+  </div>
+
+  <!--<div class="updates-container">
+    <h3>Updates</h3>
+    <div class="update-entry">
+      <h1>College Update (08/15/2025)</h1>
+      <p>Full Website Revision</p>
+      <p>AP Stats Notes Revised</p>
+      <p>Practice Tool Added [WIP]</p>
+    </div>-->
+
+
+ <!--<a href="https://stassie.pythonanywhere.com/link">
+    <img src="https://stassie.pythonanywhere.com/?spin=true&scan=true&eq_color=rainbow&theme=dark"
+      alt="Current Spotify Song" />
+  </a>--> 
+
+  <h3>About Me</h3>
+  <table>
+    <tr>
+      <td>Discord: stasssiee</td>
+    </tr>
+  </table>
+
+  <p>Insert stuff here. I like math and stuff.
+  </p>
+  <!-- <p>
+    Hi, this is my homepage.
+    I play <a href="https://minesweeper.online/player/24177847">minesweeper</a>,
+    <a href="https://www.geoguessr.com/user/62f6fa678422ac66c7a782e3">geoguessr</a>,
+    <a href="https://www.youtube.com/@orchestranerd4639">violin</a>, and love to learn.
+  </p>-->
+
+</body>
+
+</html>

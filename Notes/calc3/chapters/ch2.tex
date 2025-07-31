@@ -2,174 +2,184 @@
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
 \chapter{Vector-Valued Functions}
-\section{Vector-Valued Functions}
-A vector valued function has the form $\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle$.
+\section{Vector Functions and Space Curves}
+Review: Parametric Curves 
+\begin{itemize}
+    \item $x=f(t)$
+    \item $y=g(t)$
+    \item $z=h(t)$
+\end{itemize}
+These represent a curve in 3-space (for 2-space, it is just $x$ and $y$.)
 
-A set of parametric equations $x=x(t), y=y(t), z=z(t)$ can describe a curve in space.
+The above represents a path in space that is traced in a specific direction as $t$ increases (orientation). The domain is ($-\infty$, $\infty$), unless specified otherwise.
 
-It can also be viewed as a vector function where each variable varies with respect to an independent variable $t$. 
+\begin{definition}
+    \[ \vec{r}=\vec{r}(t) = \langle f(t),g(t),h(t)\rangle \]
+    At any given $t$ value, $\vec{r}$ represents a vector whose initial point is at the origin and terminal point is $(f(t),g(t),h(t))$.
 
-A point $(x(t),y(t),z(t))$ on the curve is the head of the vector $\textbf{r}(t)=\langle x(t),y(t),z(t)\rangle$.
+    The domain is $(-\infty,\infty)$ and the range is the set of vectors.
+\end{definition}
 
-We can consider the vector-valued function of the form: 
-\[\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle\]
-or
-\[f(t)\textbf{i}+g(t)\textbf{j}+h(t)\textbf{k}\]
-where $f,g,h$ are defined on some interval $a$ to $b$.
-
-The positive orientation of a curve is the direction the curve  is generated as the parameter increases.
+Graphs of vector-valued functions: curve that is traced by connecting tips of ``radius vectors''.
 
 \begin{example}
-    Find the domain of $\textbf{r}(t)=\frac{4}{\sqrt{1-t}}\textbf{i}+\frac{2}{t+3}\textbf{j}$
-    \smallbreak
-    The domain is the largest set of values of $t$ on which both $f$ and $g$ are defined.
-    \smallbreak
-    The first component has $1-t>0$, therefore the domain is $(-\infty,1)$.
-    \smallbreak
-    The second component's domain is $(-\infty,-3)\cup(-3,\infty)$.
-    \smallbreak
-    We now find the intersection which is $(-\infty,-3)\cup(-3,1)$ 
+    Graph $\vec{r}(t)=2\cos t\vec{i}-3\sin t\vec{j}$ for $0\leq t\leq 2\pi$.
+
+    We could write this as $x=2\cos t$ and $y=-3\sin t$ (parametric).
+
+    We could instead write a table.
+    \[ \begin{tabular}{c|c|c}
+        t & x & y\\ \hline 0 & 2 & 0\\ \hline $\pi/2$ & 0 & -3 \\\hline $\pi$ & -2 & 0 \\\hline $3\pi/2$ & 0 & 3 \\\hline $2\pi$ & 2 & 0
+    \end{tabular} \]
+
+    As you draw this, you can see that this will be an ellipse.
+\end{example}
+
+\begin{example}
+    \[ \vec{r}(t) = \langle 4\cos t, 4\sin t, t\rangle \]
+
+    We should know that since there are trig things in here, that we go from $0$ to $2\pi$, and if we put this on a table, we can see that $x$ and $y$ will give you a circle from the table. The $z$ is moving up though, so basically the function will just be circling around a cylinder of radius $2$.
+\end{example}
+\medbreak
+\begin{example}
+    Find a vector and parametric equations for the line segment that joins $A(1,-3,4)$ to $B(-5,1,7)$.
+
+    We have $\vec{r}=\vec{AB}=\langle -6,4,3\rangle$. So $\vec{r}(t)=\langle 1-6t,-3+4t,4+3t\rangle$, and we want to put the bound $0\leq t\leq 1$
+
+    The parametrics are $x(t)=1-6t, y(t)=-3+4t$, and $z=4+3t$, with $0\leq t\leq 1$.
+\end{example}
+
+\begin{example}
+    Find a vector function that represents the curve of intersection of $x^2+y^2=1$ and $y+z=2$.
+
+    $x^2+y^2=1$ is a cylinder and $y+z=2$ is a plane.
+
+    We can represent $x^2+y^2=1$ as $x=\cos t$ and $y=\sin t$, with bounds $0\leq t\leq 2\pi$.
+
+    $y+z=2$ can be represneted as $z=2-y$ or $z=2-\sin t$ with $0\leq t\leq 2\pi$.
+
+    So $\vec{r}(t)=(\cos t)\vec{i}+(\sin t)\vec{j}+(2-\sin t)\vec{k} = \langle \cos t, \sin t, 2-\sin t\rangle$ with $0\leq t\leq 2\pi$.
+\end{example}
+
+\begin{example}
+    Find the domain of $\vec{r}(t)=\langle \ln|t-1|, e^t, \sqrt{t}\rangle$.
+
+    The domain is all values of $t$ for which $\vec{r}(t)$ is defined.
+
+    So we have $x=\ln |t-1|$, $y=e^t$ and $z=\sqrt{t}$.
+
+    For $x$, we have the domain as $(-\infty, 1)\cup (1,\infty)$, for $y$ we have the domain as $t\in \mathbb{R}$, and for $z$, we have $t\geq 0$, so combining them gives domain $[0,1)\cup (1,\infty)$.  
 \end{example}
 
 \begin{definition}
-    A vector valued function \textbf{r} approaches the limit \textbf{L} as $t$ approaches $a$, 
-    written \[\lim_{t\to a}\textbf{r}(t)=\textbf{L}\], provided \[\lim_{t\to a}|\textbf{r}(t)-\textbf{L}|=0\]
+    If $\vec{r}(t)=\langle f(t),g(t),h(t)\rangle$, then $\lim_{t\to a}\vec{r}(t)=\langle \lim_{t\to a}f(t),\lim_{t\to a}g(t),\lim_{t\to a}h(t)\rangle$ (as long as all 3 limits exist).
 \end{definition}
 
-A function $\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle$ is continuous at $\textbf{a}$ 
-provided $\lim_{t\to a}\textbf{r}(t)=\textbf{r}(a)$.
+\begin{example}
+    Let $\vec{r}(t)=t^2\vec{i}+e^t\vec{j}-(2\cos \pi t)\vec{k}$. Find $\lim_{t\to 0}\vec{r}(t)$.
 
-\section{Calculus of Vector-Valued Functions}
-We can define the derivative of a vector-valued function as:
-\[\textbf{r}'(t)=\lim_{\Delta t\to 0}\frac{\textbf{r}(t+\Delta t)-\textbf{r}(t)}{\Delta t}\]
+    The limit of the $\vec{i}$ term is 0 as it goes to 0.
 
-The result of the derivative is a vector-valued function.
+    The limit of the $\vec{j}$ term is 1 as it approaches 0.
 
-Geometrically, as $\Delta t\rightarrow 0$, $\frac{\Delta \textbf{r}}{\Delta t}\rightarrow \textbf{r'}(t)$, 
-which is a tangent vector at point $P$.
+    The limit of the $\vec{k}$ term is -2 as it approaches 0.
 
-Much like single variable calculus, we can simply use the power rule as we know, rather than the limit definition.
+    So the limit is $\lim_{t\to 0} \vec{r}(t) = \vec{j}-2\vec{k}$
+\end{example}
 
-The unit tangent vector for a particular value $t$ is:
-\[\textbf{T}(t)=\frac{\textbf{r}'(t)}{|\textbf{r}'(t)|}\]
+\begin{example}
+    Let $\vec{r}(t) = \left(\frac{4t^3+5}{3t^3+1}\right)\vec{i}+\left(\frac{1-\cos t}{t}\right)\vec{j}+\left(\frac{\ln(t+1)}{t}\right)\vec{k}$. Find $\lim_{t\to 0}\vec{r}(t)$.
 
-A vector-valued function is smooth if it is differentiable and the derivative is not equal to $\langle 0,0,0\rangle$.
+    For the first term, we get 5 as the limit.
 
-We can also integrate vector-valued functions. The rules remain the same as in single 
-variable calculus, just breaking it into three vector components.
+    For the other two, we will use L'Hopital's Rule.
 
-\section{Motion in Space}
-The derivative of the position vector function is the velocity vector function. 
+    Doing this and finding the limits should give that $\lim_{t\to 0}\vec{r}(t) = \langle 5,0,1\rangle$.
+\end{example}
 
-The speed of a scalar function is 
-\[|v(t)|=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}\]
+Continuity: A vector function $\vec{r}(t)$ is continuous at $a$ if: $\lim_{t\to a} \vec{r}(t)=\vec{r}(a)$. (This is just AP Calculus BC)
 
-Acceleration is the derivative of the velocity vector function.
+\section{Derivatives and Integrals of Vector Functions}
+\begin{definition}
+    If $\vec{r}(t)$ is a vector function, the derivative of $\vec{r}(t)$ with respect to $t$ is 
+    \[ \vec{r}' = \vec{r}(t)'=\frac{d\vec{r}}{dt}=\frac{d}{dt}(\vec{r}(t)) = \lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h} \]
+\end{definition}
 
-Straight-line motion has a uniform velocity. Given:
-\[\textbf{r}(t)=\langle x_0+at,y_0+bt,z_0+ct\rangle\]
-the velocity $\textbf{v}(t) = \langle a,b,c\rangle$
+Geometrically, this would have $\vec{r}(t)$ as a vector tangent to the curve at the tip of $\vec{r}(t)$. It points in the direction of increasing parameter.
 
-Circular motion has constant $|r(t)|$. We let $\textbf{r}(t)=\langle A\cos t, A\sin t\rangle$.
+\begin{theorem}
+    If $\vec{r}(t)=\langle f(t),g(t),h(t)\rangle$, where $f$, $g$, and $h$ are differentiable functions, then 
+    \[ \vec{r}'(t)=\langle f'(t),g'(t),h'(t)\rangle \]
+\end{theorem}
+\begin{proof}
+    Let $\vec{r}(t)=\langle x(t),y(t)\rangle$
 
-$\textbf{r}(t)$ describes a circular trajectory counter-clockwise around a circle with radius $A$ and center at the origin.
+    By definition, $\vec{r}'(t)=\lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h}$.
 
-We have:
-\[|\textbf{r}(t)|=\sqrt{(A\cos t)^2+(A\sin t)^2}=A\]
-and
-\[\textbf{v}(t)=\langle -A\sin t, A\cos t\rangle\]
-as well as
-\[\textbf{a}(t)=\langle -A\cos t, -A\sin t\rangle=-\textbf{r}(t)\]
+    This is equal to $\lim_{h\to 0}\frac{[x(t+h)\vec{i}+y(t+h)\vec{j}]-[x(t)\vec{i}+y(t)\vec{j}]}{h}$.
 
-Also there are some important properties - the position and acceleration vectors are both 
-orthogonal to the velocity vector as seen:
-\begin{itemize}
-    \item $\textbf{r}(t)\cdot\textbf{v}(t)=-A^2\cos t\sin t+A^2\sin t \cos t = 0$
-    \item $\textbf{a}(t)\cdot\textbf{v}(t)=A^2\sin t\cos t-A^2\cos t\sin t = 0$
-\end{itemize}
+    Which is equal to 
+    \[ \left(\lim_{h\to 0}\frac{x(t+h)\vec{i}-x(t)\vec{i}}{h}\right) + \left(\lim_{h\to 0}\frac{y(t+h)\vec{j}-y(t)}{h}\right) \]
 
-Let $\textbf{r}$ describe a path on which $|\textbf{r}|$ is constant.
+    Taking out the $\vec{i}$ and $\vec{j}$, allows us to see that this equals to $x'(t)\vec{i}+y'(t)\vec{j}$. \qed
+\end{proof}
 
-We can show that $\textbf{r}\cdot\textbf{v}=0$, showing that the position and velocity vectors are always orthogonal.
+\begin{example}
+    $\vec{r}(t) = \frac{1}{t}\vec{i}+e^{2t}\vec{j}-2\cos\pi t\vec{k}$. Find $\vec{r}(t)$.
 
-For two-dimensional motion in a gravitational field:
+    The derivative of this is simply $\langle \frac{-1}{t^2},2e^{2t}, 2\pi\sin\pi t\rangle$.
+\end{example}
 
-The gravitational force is $\textbf{F}=\langle 0, -mg\rangle$.
+$\vec{r}'(t)$ refers to the tangent vector. The tangent line is the line through $P$ that is parallel to $\vec{r}'(t)$. 
 
-Therefore: $\textbf{F}=m\textbf{a}(t)=\langle 0,-mg\rangle$.
+Unit Tangent Vector: $\vec{T}(t)=\frac{\vec{r}'(t)}{|\vec{r}'(t)|}$.
 
-This shows that $\textbf{a}(t)=\langle 0,-g\rangle$.
+\begin{example}
+    From the previous example, find the unit tangent vector at $t=1$.
 
-We can summarize this:
+    We know that $\vec{r}'(t)=\langle \frac{-1}{t^2},2e^{2t}, 2\pi\sin\pi t\rangle$. 
 
-The velocity of the object is 
-\[\textbf{v}(t)=\langle x'(t),y'(t)\rangle =\langle u_0,-gt+v_0\rangle\]
-where $\textbf{v}(0)=\langle u_0,v_0\rangle$ and $\textbf{r}(0)=\langle x_0,y_0\rangle$.
+    From this, $\vec{r}'(1)=\langle -1,2e^2,0\rangle$, and the magnitude of this is $\sqrt{1+4e^4}$.
 
-The position is:
-\[\textbf{r}(t)=\langle x(t),y(t)\rangle=\langle u_0t+x_0,-\frac{1}{2}gt^2+v_0t+y_0\rangle\] 
+    Therefore, $\vec{T}(1)=\langle \frac{-1}{\sqrt{1+4e^4}}, \frac{2e^2}{\sqrt{1+4e^4}}, 0\rangle$.
+\end{example}
 
-\section{Length of Curves}
-We know the arc length of a parametric equation is:
-\[L=\int_a^b\sqrt{f'(t)^2+g'(t)^2}\mathrm{d}t\]
+\ex For the curve $\vec{r}(t)=\sqrt{t}\vec{i}+(2-t)\vec{j}$, find $\vec{r}'(t)$. Sketch $\vec{r}(1)$ and $\vec{r}'(1)$.
 
-Now we can consider this equation in three dimensions.
+\begin{example}
+    Find parametric equations for the tangent line to the helix with equations $x=2\cos t$, $y=\sin t$, and $z=t$ at the point $(0,1,\pi/2)$.
 
-The arc length of a parametrized curve is:
-\[L=\int_a^b\sqrt{f'(t)^2+g'(t)^2+h'(t)^2}\mathrm{d}t=\int_a^b|\textbf{r}'(t)|\mathrm{d}t\] 
+    We have $\vec{r}(t)=\langle 2\cos t,\sin t, t\rangle$, so $\vec{r}'(t)=\langle -2\sin t,\cos t,1\rangle$.
 
-To find the arc length of a curve given $\textbf{r}(t)=\langle f(t),g(t),h(t)\rangle$ for $t\geq a$, we have:
-\[s(t)=\int_a^t\sqrt{(f'(u))^2+(g'(u))^2+(h'(u))^2}\mathrm{d}u=\int_a^t |\textbf{v}(u)|\mathrm{d}u\] 
+    We get $0=2\cos t$, $1=\sin t$, and $\frac{\pi}{2}=t$, so we know that $t$ is.
+    
+    Plugging this in gives $\vec{r}'\left(\frac{\pi}{2}\right) = \langle -2,0,1\rangle$. This is the tangent vector.
 
-Suppose $|\textbf{v}(t)| = 1$, then we have $t-a$. This shows the parameter $t$ corresponds to arc length.
+    So $\vec{r}(t)=\langle 0,1,\frac{\pi}{2}\rangle + t\langle -2,0,1\rangle$. 
 
-\section{Curvature and Normal Vectors}
-Curvature will be a measure of how fast a curve $\textbf{r}(t)$ turns at a point.
+    Parametrically: $x=-2t$, $y=1$, $z=\frac{\pi}{2}+t$.
+\end{example}
 
-Recall the unit tangent vector:
-\[\textbf{T}(t)=\frac{\textbf{r}'(t)}{|\textbf{r}'(t)|}\]    
+Differentiation Rules:
+\begin{enumerate}
+    \item $\frac{d}{dt}[\vec{u}(t)+\vec{v}(t)]=\vec{u}'(t)+\vec{v}'(t)$
+    \item $\frac{d}{dt}[c\vec{u}(t)]=c\vec{u}'(t)$
+    \item $\frac{d}{dt}[f(t)\vec{u}(t)]=f'(t)\vec{u}(t)+f(t)\vec{u}'(t)$
+    \item $\frac{d}{dt}[\vec{u}(t)\cdot \vec{v}(t)]=\vec{u}'(t)\cdot\vec{v}(t)+\vec{u}(t)\cdot \vec{v}'(t)$
+    \item $\frac{d}{dt}[\vec{u}(t)\times \vec{v}(t)]=\vec{u}'(t)\times \vec{v}(t)+\vec{u}(t)\times \vec{v}'(t)$ (Order matters here)
+    \item $\frac{d}{dt}[\vec{u}(f(t))]=f'(t)\vec{u}'(f(t))$
+\end{enumerate}
 
-The curvature is 
-\[\kappa(s) = \left|\frac{\mathrm{d}\textbf{T}}{\mathrm{d}s}\right|\] 
-where $s$ denotes arc length, and $\textbf{T}$ denotes the tangent vector.
+\begin{theorem}
+    If $\vec{r}(t)$ is differentiable and $||\vec{r}(t)||$ is constant for all $t$, then $\vec{r}(t)\cdot \vec{r}'(t)=0$.
 
-Lines have zero curvature.
+    This means they are orthogonal for all $t$.
+\end{theorem}
 
-We can write the curvature in terms of arclength:
-\[\kappa(t)=\frac{1}{|\textbf{v}|}\left|\frac{\mathrm{d}\textbf{T}}{\mathrm{d}t}\right|\frac{|\textbf{T}'(t)|}{|\textbf{r}'(t)|}\]
 
-Circles have constant curvature of $\frac{1}{R}$.
 
-An alternative curvature formula is used for trajectories of moving objects in three-space:
-\[\kappa = \frac{|\textbf{v}\times\textbf{a}|}{|\textbf{v}|^3}\] 
-where $\textbf{v}=\textbf{r'}$ is the velocity and $\textbf{a}=\textbf{v'}$ is the acceleration.
+\section{Arc Length and Curvature}
 
-The principal unit normal vector will determine the direction in which the curve turns. 
+\section{Motion in Space - Velocity and Acceleration}
 
-The principal unit normal vector at point $P$ on the curve at which $kappa\neq 0$ is:
-\[\textbf{N}(s)=\frac{\mathrm{d}\textbf{T}/\mathrm{d}s}{|\mathrm{d}\textbf{T}/\mathrm{d}s|}=\frac{1}{\kappa}
-\frac{\mathrm{d}\textbf{T}}{\mathrm{d}s}\] 
-
-For other parameters $t$, we use the equivalent formula:
-\[\textbf{N}(s)=\frac{\mathrm{d}\textbf{T}/\mathrm{d}t}{|\mathrm{d}\textbf{T}/\mathrm{d}t|}\] 
-
-There are two ways to change the velocity of an object or accelerate - to change its speed or its direction of motion.
-
-The acceleration vector of an object moving in space along a smooth curve has the following representation of its 
-tangential component $a_T$ (in the direction of $\textbf{T}$) and its normal component $a_N$ (in the direction of $\textbf{N}$):
-\[\textbf{a}=a_N\textbf{N}+a_T\textbf{T}\]
-where $a_N=\kappa |\textbf{v}|^2=\frac{|\textbf{v}\times\textbf{a}}{|\textbf{v}|}$ and $a_T=\frac{\mathrm{d}^2s}{\mathrm{d}t^2}$.
-
-Alternatively $\textbf{a}\cdot\textbf{N}=a_N$ and $\textbf{a}\cdot\textbf{T}=a_T$.
-
-If we have the unit tangent and principal unit vectors $\textbf{T}$ and $\textbf{N}$. 
-The unit binormal vector at each point in the curve is:
-\[ \textbf{B}=\textbf{T}\times\textbf{N}\] 
-and the torsion is:
-\[\tau = -\frac{\mathrm{d}\textbf{B}}{\mathrm{d}s}\cdot\textbf{N}\]
-
-The binormal vector is orthogonal to both $\textbf{T}$ and $\textbf{N}$.
-
-$|\tau|=\left|\frac{\mathrm{d}\textbf{B}}{\mathrm{d}s}\right|$ and the torsion gives the rate 
-at which the curve moves out of the osculating plane formed by $\textbf{T}$ and $\textbf{N}$.
 \end{document}

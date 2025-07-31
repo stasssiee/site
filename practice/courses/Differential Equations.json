@@ -241,28 +241,2090 @@
         {
             "question": "Driver A had been leading archrival B or a while by a steady 3 miles. Only 2 miles from the finish, driver A ran out of gas and decelerated thereafter at a rate proportional to the square of his remaining speed. One mile later, driver A's speed was exactly halved. If driver B's speed remained constant, who won the race?",
             "answer": "A wins"
+        },
+        {
+            "question": "Determine whether the equation is separable, linear, neither, or both. \\[ x^2\\frac{dy}{dx}+\\sin x - y =0 \\]",
+            "answer": "Linear"
+        },
+        {
+            "question": "Determine whether the equation is separable, linear, neither or both. \\[ (t^2+1)\\frac{dy}{dt} = yt-y \\]",
+            "answer": "Both"
+        },
+        {
+            "question": "Determine whether the equation is separable, linear, neither or both. \\[ x\\frac{dx}{dt}+t^2x=\\sin t\\]",
+            "answer": "Neither"
+        },
+        {
+            "question": "Obtain the general solution to \\[ \\frac{dy}{dx}-y-e^{3x}=0\\]",
+            "answer": "\\(y=(1/2)e^{3x}+Ce^x\\)"
+        },
+        {
+            "question": "Obtain the general solution to \\[ \\frac{dr}{d\\theta} + r\\tan\\theta = \\sec\\theta \\]",
+            "answer": "\\(r=\\sin\\theta + C\\cos\\theta\\)"
+        },
+        {
+            "question": "Obtain the general solution to \\[ (t+y+1)dt-dy=0\\]",
+            "answer": "\\(y=-t-2+Ce^t\\)"
+        },
+        {
+            "question": "Obtain the general solution to \\[ y\\frac{dx}{dt}+2x=5y^3\\]",
+            "answer": "\\(x=y^3+Cy^{-2}\\)"
+        },
+        {
+            "question": "Obtain the general solution to \\[ (x^2+1)\\frac{dy}{dx}+xy-x=0\\]",
+            "answer": "\\(y=1+C(x^2+1)^{-1/2}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ \\frac{dy}{dx}-\\frac{y}{x}=xe^x, \\qquad y(1)=e-1\\]",
+            "answer": "\\(y=xe^x-x\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ t^2\\frac{dx}{dt}+3tx=t^4\\ln t+1, \\qquad x(1)=0\\]",
+            "answer": "\\(x=\\frac{t^3}{6}\\ln t-\\frac{t^3}{36}+\\frac{1}{2t}-\\frac{17}{36t^3}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ (\\cos x)\\frac{dy}{dx}+y\\sin x=2x\\cos^2 x, \\qquad y\\left(\\frac{\\pi}{4}\\right) = \\frac{-15\\sqrt{2}\\pi^2}{32}\\]",
+            "answer": "\\(y=x^2\\cos x-\\pi^2\\cos x\\)"
+        },
+        {
+            "question": "Use your ingenuity to solve the equation \\[ \\frac{dy}{dx}=\\frac{1}{e^{4y}+2x}\\]",
+            "answer": "\\(x=e^{4y}/2+Ce^{2y}\\)"
+        },
+        {
+            "question": "As we will see in Chapter 3, occasions arise when the coefficient \\(P(x)\\) in a linear equations fails to be continuous because of jump discontinuities. Fortunately, we may still obtain a \"reasonable\" solution. For example, consider the initial value problem \\[ \\frac{dy}{dx}+P(x)y=x, \\qquad y(0)=1\\], where \\[ P(x) := \\begin{cases} 1, \\qquad 0\\leq x\\leq 2, \\\\ 3, \\qquad x>2\\end{cases}\\] (a) Find the general solution for \\(0\\leq x\\leq 2\\) <br> (b) Choose the constant in the solution of part (a) so that the initial condition is satisfied. <br> (c) Find the general solution for \\(x>2\\). <br> (d) Now choose the constant in the general solution from part (c) so that the solution from part (b) and the solution from part (c) agree at \\(x=2\\). By patching the two solutions together, we can obtain a continuous function that satisfies the differentiation equation except at \\(x=2\\), where its derivative is undefined. <br> (e) Sketch the graph of the solution from \\(x=0\\) to \\(x=5\\).",
+            "answer": "(a) \\(y=x-1+Ce^{-x}\\) <br> (b) \\(y=x-1+2e^{-x}\\) <br> (c) \\(y=x/3-1/9+Ce^{-3x}\\) <br> (d) \\[ y = \\begin{cases} x - 1 + 2e^{-x}, & \\text{if } 0 \\leq x \\leq 2 \\\\ \\frac{x}{3} - \\frac{1}{9} + \\left(\\frac{4e^6}{9} + 2e^4\\right)e^{-3x}, & \\text{if } x > 2 \\end{cases} \\] <br> (e) <img src = 'courses/images/DIFFEQ2.2.31.PNG'>"
+        },
+        {
+            "question": "Suppose a brine containing 0.2 kg of salt per liter runs into a tank initially filled with 500 L of water containing 5 kg of salt. The brine enters the tank at a rate of 5 L/min. The mixture, kept uniform by stirring, is folowing out at the rate of 5 L/min.<br> <img src = 'courses/images/DIFFEQ2.2.35.1.PNG'> <br> (a) Find the concentration in kilograms per liter, of salt in the tank after 10 min. [Hint: Let A denote the number of kilograms of salt in the tank at \\(t\\) minutes after the process begins and use the fact that <br> rate of increase in \\(A\\) = rate of input - rate of exit] <br> (b) After 10 min, a leak develops in the tank and an additional liter per minute of mixture flows out of the tank. What will be the concentration, in kilograms per liter, of salt in the tank 20 min after the leak develops? <br> <img src = 'courses/images/DIFFEQ2.2.35.2.PNG'>",
+            "answer": "(a) 0.0281 kg/L <br> (b) 0.0598 kg/L"
+        },
+        {
+            "question": "The secretion of hormones into the blood is often a periodic activity. If a hormone is secreted on a 24-h cycle, then the rate of change of the level of the hormone in the blood may be represented by the initial value problem \\[ \\frac{dx}{dt}=\\alpha -\\beta \\cos\\frac{\\pi t}{12}-kx, \\qquad x(0)=x_0\\], where \\(x(t)\\) is the amount of the hormone in the blood at time \\(t\\), \\(\\alpha\\) is the average secretion rate, \\(\\beta\\) is the amount of daily variation in the secretion, and \\(k\\) is a positive constant reflecting the rate at which the body removes the hormone from the blood. If \\(\\alpha=\\beta=1, k=2\\), and \\(x_0=10\\), solve for \\(x(t)\\).",
+            "answer": "\\( x(t)=\\frac{1}{2}-\\frac{2\\cos(\\pi t/12)}{4+(\\pi/12)^2}-\\frac{(\\pi/12)\\sin(\\pi t/12)}{4+(\\pi/12)^2}+\\left(\\frac{19}{2}+\\frac{2}{4+(\\pi/12)^2}\\right)e^{-2t}\\)"
+        },
+        {
+            "question": "The temperature \\(T\\) (in units of 100\\(^{\\circ}\\)F) of a university classroom on a cold winter day varies with time \\(t\\) (in hours) as \\[ \\frac{dT}{dt} = \\begin{cases} 1-T, \\qquad \\text{if heating unit is ON} \\\\ -T, \\qquad \\text{if heating unit is OFF}\\end{cases}\\] Suppose \\(T=0\\) at 9:00 A.M., the heating unit is ON from 9-10 A.M., OFF from 10-11 A.M., ON again from 11 A.M.-noon, and so on for the rest of the day. How warm will the classroom be at noon? At 5:00 P.M.?",
+            "answer": "71.8\\(^{\\circ}\\)F at noon; 26.9\\(^{\\circ}\\)F at 5 P.M."
+        },
+        {
+            "question": "Classify the equation as separable, linear, exact, or none of these. \\[ (x^2y+x^4\\cos x)dx-x^3 dy = 0\\]",
+            "answer": "Linear with y as dep. var."
+        },
+        {
+            "question": "Classify the equation as separable, linear, exact, or none of these. \\[\\sqrt{-2y-y^2}dx+(3+2x-x^2)dy=0\\]",
+            "answer": "Separable"
+        },
+        {
+            "question": "Classify the equation as separable, linear, exact, or none of these. \\[ xydx+dy=0\\]",
+            "answer": "Separable, also linear with \\(x\\) as dep. var."
+        },
+        {
+            "question": "Classify the equation as separable, linear, exact, or none of these. \\[ [2x+y\\cos(xy)]dx+[x\\cos (xy)-2y]dy=0\\]",
+            "answer": "Exact"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[ (2xy+3)dx+(x^2-1)dy=0\\]",
+            "answer": "\\(y=(C-3x)/(x^2-1)\\)"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[ (e^x\\sin y-3x^2)dx+(e^x\\cos y+y^{-2/3}/3)dy=0\\]",
+            "answer": "\\(e^x\\sin y-x^3+\\sqrt[3]{y}=C\\)"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[ e^t(y-t)dt+(1+e^t)dy=0\\]",
+            "answer": "\\(y=\\frac{(t-1)e^t+C}{1+e^t}\\)"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[\\cos\\theta dr-(r\\sin\\theta - e^{\\theta})d\\theta =0 \\]",
+            "answer": "\\(r=(C-e^{\\theta})\\sec\\theta\\)"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[(1/y)dx-(3y-x/y^2)dy=0\\]",
+            "answer": "Not exact"
+        },
+        {
+            "question": "Determine whether the equation is exact. If it is, then solve it. \\[ \\left(2x+\\frac{y}{1+x^2y^2}\\right)dx+\\left(\\frac{x}{1+x^2y^2}-2y\\right)dy=0\\]",
+            "answer": "\\(x^2+y^2+\\arctan(xy)=C\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ (1/x+2y^2x)dx+(2yx^2-\\cos y)dy=0, \\qquad y(1)=\\pi\\]",
+            "answer": "\\(\\ln x+x^2y^2-\\sin y=\\pi^2\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ (e^t y+te^t y)dt + (te^t+2)dy =0, \\qquad y(0)=-1\\]",
+            "answer": "\\(y=-2/(te^t+2)\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ (y^2\\sin x)dx+(1/x-y/x)dy=0, \\qquad y(\\pi)=1\\]",
+            "answer": "\\(\\sin x-x\\cos x=\\ln y+1/y+\\pi -1\\)"
+        },
+        {
+            "question": "For each of the following equations, find the most general function \\(M(x,y)\\) so that the equation is exact. <br> (a) \\(M(x,y)dx+(\\sec^2y-x/y)dy=0\\) <br> (b) \\(M(x,y)dx+(\\sin x\\cos y-xy-e^{-y})dy=0\\)",
+            "answer": "(a) \\(-\\ln|y|+f(x)\\) <br> (b) \\(\\cos x\\sin y-y^2/2+f(x)\\), where \\(f\\) is a function of \\(x\\) only"
+        },
+        {
+            "question": "Identify the equation as separable, linear, exact, or having an integrating factor that is a function of either \\(x\\) or \\(y\\) alone. \\[ (2x+yx^{-1})dx+(xy-1)dy=0\\]",
+            "answer": "Integrating factor depending on \\(x\\) alone."
+        },
+        {
+            "question": "Identify the equation as separable, linear, exact, or having an integrating factor that is a function of either \\(x\\) or \\(y\\) alone. \\[ (2x+y)dx+(x-2y)dy=0\\]",
+            "answer": "Exact"
+        },
+        {
+            "question": "Identify the equation as separable, linear, exact, or having an integrating factor that is a function of either \\(x\\) or \\(y\\) alone. \\[ (x^2\\sin x+4y)dx+xdy=0\\]",
+            "answer": "Linear with \\(x\\) as dep. var., has integrating factor depending on \\(x\\) alone."
+        },
+        {
+            "question": "Solve the equation. \\[ (2xy)dx+(y^2-3x^2)dy=0\\]",
+            "answer": "\\(\\mu = y^{-4}\\); \\(x^2y^{-3}-y^{-1}=C\\) and \\(y=0\\)"
+        },
+        {
+            "question": "Solve the equation. \\[ (x^4-x+y)dx-xdy=0\\]",
+            "answer": "\\(\\mu=x^{-2}\\); \\(y=x^4/3-x\\ln|x|+Cx\\) and \\(y=0\\)"
+        },
+        {
+            "question": "Solve the equation. \\[ (y^2+2xy)dx-x^2dy=0\\]",
+            "answer": "\\(\\mu = y^{-2}\\); \\(x^2y^{-1}+x=C\\) and \\(y=0\\)"
+        },
+        {
+            "question": "Find an integrating factor of the form \\(x^ny^m\\) and solve the equation. \\[ (2y^2-6xy)dx+(3xy-4x^2)dy=0\\]",
+            "answer": "\\(\\mu=xy\\); \\(x^2y^3-2x^3y^2=C\\)"
+        },
+        {
+            "question": "(a) Show that if (\\(\\partial N/\\partial x-\\partial M/\\partial y\\))/(\\(xM-yN\\)) depends only on the product \\(xy\\), that is, \\[ \\frac{\\partial N/\\partial x-\\partial M/\\partial y}{xM-yN}=H(xy)\\] then the equation \\(M(x,y)dx+N(x,y)dy=0\\) has an integrating factor of the form \\(\\mu(xy)\\). Give the general formula for \\(\\mu(xy)\\). <br> (b) Use the answer to part (a) to find an implicit solution to \\[ (3y+2xy^2)dx+(x+2x^2 y)dy=0\\] satisfying the initial condition \\(y(1)=1\\)",
+            "answer": "(a) \\(\\mu(z)=\\exp[\\int H(z)dz]; z=xy\\) <br> (b) \\(\\ln(x^3y)+2xy=2\\)"
+        },
+        {
+            "question": "(a) Find a condition on \\(M\\) and \\(N\\) that is necessary and sufficient for \\(Mdx+Ndy=0\\) to have an integrating factor that depends only on the product \\(x^2y\\). <br> (b) Use part (a) to solve the equation \\[ (2x+2y+2x^3y+4x^2y^2)dx + (2x+x^4+2x^3y)dy =0\\]",
+            "answer": "(a) \\(\\frac{\\partial N/\\partial x-\\partial M/\\partial y}{x^2M-2xyN}\\) depends only on \\(x^2y\\) <br> (b) \\(\\exp(x^2y)[x^2+2xy]=C\\)"
+        },
+        {
+            "question": "Identify the equation as homogeneous, Bernoulli, linear coefficients, or of the form \\(y'=G(ax+by)\\). \\[ 2txdx+(t^2-x^2)dt=0\\]",
+            "answer": "Homogeneous and Bernoulli"
+        },
+        {
+            "question": "Identify the equation as homogeneous, Bernoulli, linear coefficients, or of the form \\(y'=G(ax+by)\\). \\[ dy/dx+y/x=x^3y^2\\]",
+            "answer": "Bernoulli"
+        },
+        {
+            "question": "Identify the equation as homogeneous, Bernoulli, linear coefficients, or of the form \\(y'=G(ax+by)\\). \\[ \\theta dy - yd\\theta=\\sqrt{\\theta y}d\\theta\\]",
+            "answer": "Homogeneous and Bernoulli"
+        },
+        {
+            "question": "Identify the equation as homogeneous, Bernoulli, linear coefficients, or of the form \\(y'=G(ax+by)\\). \\[ \\cos(x+y)dy=\\sin(x+y)dx\\]",
+            "answer": "\\(y'=G(ax+by)\\)"
+        },
+        {
+            "question": "Use the method for homogeneous equations to solve the equation. \\[ (xy+y^2)dx-x^2dy=0\\]",
+            "answer": "\\(y=-x/(\\ln|x|+C)\\) and \\(y=0\\)"
+        },
+        {
+            "question": "Use the method for homogeneous equations to solve the equation. \\[ (y^2-xy)dx+x^2dy=0\\]",
+            "answer": "\\( y=x/(\\ln|x|+C)\\) and \\(y\\equiv 0, x\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method for homogeneous equations to solve the equation. \\[ \\frac{dx}{dt}=\\frac{x^2+t\\sqrt{t^2+x^2}}{tx}\\]",
+            "answer": "\\(\\sqrt{1+x^2/t^2}=\\ln|t|+C\\)"
+        },
+        {
+            "question": "Use the method for homogeneous equations to solve the equation. \\[ \\frac{dy}{dx}=\\frac{x^2-y^2}{3xy}\\]",
+            "answer": "\\( (x^2-4y^2)^3x^2=C\\)"
+        },
+        {
+            "question": "Use the method for equations of the form \\(dy/dx=G(ax+by)\\) to solve the equation. \\[ dy/dx = \\sqrt{x+y}-1\\]",
+            "answer": "\\(y=(x+C)^2/4-x\\) and \\(y=-x\\)"
+        },
+        {
+            "question": "Use the method for equations of the form \\(dy/dx=G(ax+by)\\) to solve the equation. \\[ dy/dx=(x-y+5)^2\\]",
+            "answer": "\\(y=x+(6+4Ce^{2x})/(1+Ce^{2x})\\) and \\(y=x+4\\)"
+        },
+        {
+            "question": "Use the method of Bernoulli Equations to solve the equation. \\[ \\frac{dy}{dx}+\\frac{y}{x}=x^2y^2\\]",
+            "answer": "\\(y=2/(Cx-x^3)\\) and \\(y\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method of Bernoulli Equations to solve the equation. \\[ \\frac{dy}{dx}=\\frac{2y}{x}-x^2y^2\\]",
+            "answer": "\\(y=5x^2/(x^5+C)\\) and \\(y\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method of Bernoulli Equations to solve the equation. \\[ \\frac{dx}{dt}+tx^3+\\frac{x}{t}=0\\]",
+            "answer": "\\(x^{-2}=2t^2\\ln|t|+Ct^2\\) and \\(x\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method of Bernoulli Equations to solve the equation. \\[ \\frac{dr}{d\\theta} = \\frac{r^2+2r\\theta}{\\theta^2}\\]",
+            "answer": "\\(r=\\theta^2/(C-\\theta)\\) and \\(r\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method for equations with linear coefficients to solve the equation. \\[ (x+y-1)dx+(y-x-5)dy=0\\]",
+            "answer": "\\(2\\arctan\\left(\\frac{y-3}{x+2}\\right)-\\ln[(x+2)^2+(y-3)^2]=C\\)"
+        },
+        {
+            "question": "Use the method for equations with linear coefficients to solve the equation. \\[ (2x-y)dx+(4x+y-3)dy=0\\]",
+            "answer": "\\( (2x+2y-3)^3=C(2x+y-2)^2 \\)"
+        },
+        {
+            "question": "Solve the equation \\[ 2txdx+(t^2-x^2)dt=0\\]",
+            "answer": "\\(x^2+t^2-Ct=0\\) and \\(t\\equiv 0\\)"
+        },
+        {
+            "question": "Solve the equation \\[ dy/dx+y/x=x^3y^2\\]",
+            "answer": "\\(y=-3/(x^4+Cx)\\) and \\(y\\equiv 0\\)"
+        },
+        {
+            "question": "Solve the equation \\[ \\theta dy - yd\\theta = \\sqrt{\\theta y}d\\theta\\]",
+            "answer": "\\(y=(\\theta/4)(\\ln|\\theta|+C)^2\\) and \\(\\theta = 0\\)"
+        },
+        {
+            "question": "Solve the equation \\[ \\cos(x+y)dy=\\sin(x+y)dx\\]",
+            "answer": "\\(\\sin(x+y)+\\cos(x+y)=Ce^{x-y}\\)"
+        },
+        {
+            "question": "In analyzing coupled equations of the form \\[ \\frac{dy}{dt}=ax+by \\] \\[ \\frac{dx}{dt}=\\alpha x + \\beta y\\] where \\(a,b,\\alpha\\), and \\(\\beta\\) are constants, we may wish to determine the relationship between \\(x\\) and \\(y\\) rather than the individual solutions of \\(x(t)\\), \\(y(t)\\). For this purpose, divide the first equation by the second to obtain \\[ \\frac{dy}{dx}=\\frac{ax+by}{\\alpha x+\\beta y}\\] This new equation is homogeneous, so we can solve it via the substitution \\(v=y/x\\). We refer to the solutions of the above equation as integral curves. Detrmine the integral curves for the system \\[ \\frac{dy}{dt}=-4x-y\\] \\[\\frac{dx}{dt}=2x-y\\]",
+            "answer": "\\( (y-4x)^2(y+x)^3=C \\)"
+        },
+        {
+            "question": "An equation of the form \\[ \\frac{dy}{dx}=P(x)y^2+Q(x)y+R(x)\\] is called a generalized Riccati equation. <br> (a) If one solution - say, \\(u(x)\\) of the above equation is known, show that the substitution \\(y=u+1/v\\) reduces the Riccati equation to a linear equation in \\(v\\). <br> (b) Given that \\(u(x) = x\\) is a solution to \\[ \\frac{dy}{dx}=x^3(y-x)^2+\\frac{y}{x}\\] use the result of part (a) to find all the other solutions to this equation.",
+            "answer": "(a) \\(v'+2[Pu+Q]v=-P\\) <br> (b) \\(y=x+5x/(C-x^5)\\)"
         }
-        
     ],
     "Chapter 3: Mathematical Models and Numerical Methods Involving First-Order Equations": [
-        {}
+        {
+            "question": "A brine solution of salt flows at a constant rate of 8 L/min into a large tank that initially held 100 L of brine solution in which was dissolved 0.5 kg of salt. The solution inside the tank is kept well stirred and flows out of the tank at the same time. If the concentration of salt in the brine entering entering the tank is 0.05 kg/L, determine the mass of salt in the tank after \\(t\\) min. When will the concentration of salt in the tank reach 0.02 kg/L?",
+            "answer": "\\(5-4.5e^{-2t/25}\\) kg; 5.07 min"
+        },
+        {
+            "question": "A nitric acid solution flows at a constant rate of 6 L/min into a large tank that initially held 200 L of a 0.5% nitric acid solution. The solution inside the tank is kept well stirred and flows out of the the tank at a rate of 8 L/min. If the solution entering the tank is 20% nitric acid, determine the volume of nitric acid in the tank after \\(t\\) min. When will the percentage of nitric acid in the tank reach 10%?",
+            "answer": "\\( (0.4)(100-t)-(3.0\\times 10^{-7})(100-t)^4\\) L; 19.96 min"
+        },
+        {
+            "question": "A swimming pool whose volume is 10,000 gal contains water that is 0.01% chlorine. Starting at \\(t=0\\), city water containing 0.001% chlorine is pumped into a pool at a rate of 5 gal/min. The pool water flows out at the same rate. What is the percentage of chlorine in the pool after 1 h? When will the pool water be 0.002% chlorine?",
+            "answer": "0.0097%; 73.24 h"
+        },
+        {
+            "question": "Beginning at time \\(t=0\\), fresh water is pumped at the rate of 3 gal/min into a 60-gal tank initially filled with brine. The resulting less-and-less salty mixture overflows at the same rate into a second 60-gal tank that initially contained only pure water, and from there it eventually spills onto the ground. Assuming perfect mixing in both tanks, when will the water in the second tank taste the saltiest? And exactly how salty will it be, compared with the original brine?",
+            "answer": "20 min later; \\(1/e\\) times as salty"
+        },
+        {
+            "question": "In 1990 the Department of Natural Resources released 1000 splake (a crossbead of fish) into a lake. In 1997 the population of splake in the lake was estimated to be 3000. Using the Malthusian law for population growth, estimate the population of splake in the lake in the year 2020.",
+            "answer": "110,868"
+        },
+        {
+            "question": "The initial mass of a certain species of fish is 7 million tons. The mass of fish, if left alone, would increase at a rate proportional to the mass, wich a proportionality constant of 2/yr. However, commercial fishing removes fish mass at a constant rate of 15 million tons per year. When will all the fish be gone? If the fishing rate is changed so that the mass of fish remains constant, what should that rate be?",
+            "answer": "\\( (1/2)\\ln(15)\\approx 1.354\\) yr; 14 million tons per yr"
+        },
+        {
+            "question": "A snowball melts in such a way that the rate of change in its volume is proportional to its surface area. If the snowball was initially 4 in. in diameter and after 30 min its diameter is 3 in., when will its diameter be 2 in.? Mathematically speaking, when will the snowball disappear?",
+            "answer": "1 hr; 2h"
+        },
+        {
+            "question": "If initially there are 50 g of a radioactive substance and after 3 days there are only 10 g remaining, what percentage of the original amount remains after 4 days? Assume that the rate of a decay of a radioactive substance is proportional to the amount of the substance present. The half-life of a radioactive substance is the time it takes for one-half of the substance to disintegrate.",
+            "answer": "11.7%"
+        },
+        {
+            "question": "Carbon dating is often used to determine the age of a fossil. For example, a humanoid skull was found in a cave in South Africa along with the remains of a campfire. Archaeologists believe the age of the skull to be the same age as the campfire. It is determined that only 2% of the original amount of carbon-14 remains in the burnt wood of the campfire. Estimate the age of the skull if the half-life of carbon-14 is about 5600 years. Assume that the rate of a decay of a radioactive substance is proportional to the amount of the substance present. The half-life of a radioactive substance is the time it takes for one-half of the substance to disintegrate.",
+            "answer": "31,606 yr"
+        },
+        {
+            "question": "The only undiscovered types isotopes of the two unknown elements hohum and inertium (symbols Hh and It) are radioactive. Hohum decays into interium with a decay constant of 2/yr, and intertium decays into the nonradioactive isotope of bunkum (symbol Bu) with a decay constant of 1/yr. An initial mass of 1 kg of hohum is put into a non-radioactive container, with no other source of hohum, intertium, or bunkum. How much of each of the three elements is in the container after \\(t\\) yr? Assume that the rate of a decay of a radioactive substance is proportional to the amount of the substance present. The half-life of a radioactive substance is the time it takes for one-half of the substance to disintegrate. (The decay constant is the constant of proportionality in the statement that the rate of loss of mass of the element at any time is proportional to the mass of the element at that time.)",
+            "answer": "\\(e^{-2t}\\) kg of Hh, \\(2e^{-t}-2e^{-2t}\\) kg of It, and \\(1-2e^{-t}+e^{-2t}\\) kg of Bu"
+        },
+        {
+            "question": "Use the improved Euler's method subroutine with step size \\(h=0.1\\) to apprximate the solution to the initial value problem \\[ y'=x-y^2 \\qquad y(1) = 0\\] at the points \\(x=1.1,1.2,1.3,1.4\\) and 1.5. (Thus, input \\(N=5\\)).",
+            "answer": "",
+            "answerImage": "images/DIFFEQ3.5.1.PNG"
+        },
+        {
+            "question": "Use the improved Euler's method subroutine with step size \\(h=0.2\\) to approximate the solution to \\[ y'=x+3\\cos(xy) \\qquad y(0)=0\\] at the points \\(x=0,0.2,0.4,\\dots,2.0\\).",
+            "answer": "",
+            "answerImage": "images/DIFFEQ3.5.2.PNG"
+        },
+        {
+            "question": "Use the improved Euler's method with tolerance to approximate the solution to \\[\\frac{dx}{dt}=1+t\\sin(tx)\\qquad x(0)=0\\] at \\(t=1\\). For a tolerance of \\(\\epsilon=0.01\\), use a stopping procedure based on the absolute error.",
+            "answer": "\\(\\phi(1)\\approx x(1;2^{-3})=1.25494\\)"
+        },
+        {
+            "question": "Use the improved Euler's method with tolerance to approximate the solution to \\[ y'=1-y+y^3\\qquad y(0)=0\\] at \\(x=1\\). For a tolerance of \\(\\epsilon=0.003\\), use a stopping procedure based on the absolute error.",
+            "answer": "\\(\\phi(1)\\approx y(1;2^{-3})=0.71698 \\)"
+        },
+        {
+            "question": "The solution to the initial value problem \\[ \\frac{dy}{dx}=(x+y+2)^2\\qquad y(0)=-2\\] crosses the \\(x\\)-axis at a point in the interval [0,1.4]. By experimenting with the improved Euler's method subroutine, determine this point to two decimal places.",
+            "answer": "\\(x=1.27\\)"
+        },
+        {
+            "question": "Use Euler's method with \\(h=0.1\\) to approximate the solution to the initial value problem \\[y'=-20y\\qquad y(0)=1\\] on the interval \\(0\\leq x\\leq 1\\) (that is, at \\(x=0,0.1,\\dots,1.0\\)). Compare your answers with the actual solution to \\(y=e^{-20t}\\). What went wrong? Next try the step size \\(h=0.025\\) and also \\(h=0.2\\). What conclusions can you drew concerning the choice of step size?",
+            "answer": "We conclude that step size can dramatically affect convergence.",
+            "answerImage": "images/DIFFEQ3.5.3.PNG"
+        },
+        {
+            "question": "We can model the temperature inside a building with the initial value problem \\[ \\frac{dT}{dt} = K[M(t)-T(t)]+H(t)+U(t) \\qquad T(t_0)=T_0\\] where \\(M\\) is the temperature outside the building, \\(T\\) is the temperature inside the building, \\(H\\) is the additional heating rate, \\(U\\) is the furnace heating or air conditioner cooling rate, \\(K\\) is a positive constant, and \\(T_0\\) is the initial temperature at time \\(t_0\\). In a typical model, \\(t_0=0\\) (midnight), \\(T_0=65^{\\circ}\\)F, \\(H(t)=0.1\\), \\(U(t)=1.5[70-T(t)]\\), and \\[ M(t)=75-20\\cos(\\pi t/12)\\] The constant \\(K\\) is usually between 1/4 and 1/2, depending on such things as insulation. To study the effect of insulating this building, consider the typical building described above and use the improved Euler's method subroutine with \\(h=2/3\\) to approximate the solution to the above model equation on the interval \\(0\\leq t\\leq 24\\) (1 day) for \\(K=0.2,0.4\\), and 0.6.",
+            "answer": "",
+            "answerImage": "images/DIFFEQ3.5.4.PNG"
+        },
+        {
+            "question": "Determine the recursive formulas for the Taylor method of order 2 for the initial value problem \\[ y'=\\cos(x+y) \\qquad y(0)=\\pi\\]",
+            "answer": "\\(y_{n+1}=y_n+h\\cos(x_n+y_n)-\\frac{h^2}{2}\\sin(x_n+y_n)[1+\\cos(x_n+y_n)]\\)"
+        },
+        {
+            "question": "Determine the recursive formulas for the Taylor method of order 4 for the initial value problem \\[ y'=x-y\\qquad y(0)=0\\]",
+            "answer": "\\(y_{n+1}=y_n+h(x_n-y_n)+\\frac{h^2}{2}(1-x_n+y_n)-\\frac{h^3}{6}(1-x_n+y_n)+\\frac{h^4}{24}(1-x_n+y_n)\\)"
+        },
+        {
+            "question": "Use the Taylor methods of orders 2 and 4 with \\(h=0.25\\) to approximate the solution the solution to the initial value problem \\[ y'=x+1-y\\qquad y(0)=1\\]",
+            "answer": "Order 2, \\(\\phi(1)\\approx 1.3725\\); order 4, \\(\\phi(1)\\approx 1.3679\\)"
+        },
+        {
+            "question": "Use the fourth-order Runge-Kutta subroutine with \\(h=0.25\\) to approximate the solution to the initial value problem \\[ y'=2y-6\\qquad y(0)=1\\] at \\(x=1\\) (Thus, input \\(N=4\\)) ",
+            "answer": "-11.7679"
+        },
+        {
+            "question": "Use the fourth-order Runge-Kutta subroutine with \\(h=0.25\\) to approximate the solution to the initial value problem \\[ y'=x+1-y\\qquad y(0)=1\\] at \\(x=1\\).",
+            "answer": "1.36789"
+        },
+        {
+            "question": "The solution to the initial value problem \\[ y'=\\frac{2}{x^4}-y^2 \\qquad y(1)=-0.414\\] crosses the \\(x\\)-axis at a point in the interval \\( [1,2] \\). By experimenting with the fourth-order Runge-Kutta subroutine, determine this point to two decimal places.",
+            "answer": "\\(x=1.41\\)"
+        },
+        {
+            "question": "The solution to the initial value problem \\[ \\frac{dy}{dx}=y^2-2e^xy+e^{2x}+e^x \\qquad y(0)=3\\] has a vertical asymptote (\"blows up\") at some point in the interval \\( [0,2]\\). By experimenting with the fourth-order Runge-Kutta subroutine, determine this point to two decimals places.",
+            "answer": "\\(x=0.50\\)"
+        },
+        {
+            "question": "Use the fourth-order Runge-Kutta subroutine with \\(h=0.1\\) to approximate the solution \\[ y'=\\cos(5y)-x \\qquad y(0)=0\\] at the points \\(x=0,0.1,0.2,\\dots,3.0\\). ",
+            "answer": "",
+            "answerImage": "images/DIFFEQ3.6.1.PNG"
+        },
+        {
+            "question": "In the study of the nonisothermal flow of a Newtonian fluid between parallel plates, the equation \\[ \\frac{d^2y}{dx^2}+x^2e^y=0 \\qquad x>0\\] was encountered. By a series of substitutions, this equation can be transformed into the first-order equation \\[ \\frac{dv}{du}=u\\left(\\frac{u}{2}+1\\right)v^3+\\left(u+\\frac{5}{2}\\right)v^2 \\] Use the fourth-order Runge-Kutta algorithm to approximate \\(v(3)\\) if \\(v(u)\\) satisfies \\(v(2)=0.1\\). For a tolerance of \\(\\epsilon=0.0001\\) use a stopping procedure based on the relative error.",
+            "answer": "\\(v(3)\\approx 0.24193\\) with \\(h=0.0625\\)"
+        },
+        {
+            "question": "In the study of the electric field that is induced by two nearby transmission lines, an equation of the form \\[ \\frac{dz}{dx}+g(x)z^2=f(x)\\] arises. Let \\(f(x)=5x+2\\) and \\(g(x)=x^2\\). If \\(z(0)=1\\), use the fourth-order Runge-Kutta algorithm to approximate \\(z(1)\\). For a tolerance of \\(\\epsilon=0.0001\\), use a stopping procedure based on the absolute error.",
+            "answer": "\\(z(1)\\approx 2.87083\\) with \\(h=0.03125\\)"
+        }
     ],
     "Chapter 4: Linear Second-Order Equations": [
-        {}
+        {
+            "question": "Find the general solution to \\[ 2y''+7y'-4y=0\\]",
+            "answer": "\\(c_1e^{t/2}+c_2e^{-4t}\\)"
+        },
+        {
+            "question": "Find the general solution to \\[ y''+5y'+6y=0\\]",
+            "answer": "\\(c_1e^{-3t}+c_2e^{-2t}\\)"
+        },
+        {
+            "question": "Find the general solution to \\[ y''+8y'+16y=0\\]",
+            "answer": "\\(c_1e^{-4t}+c_2te^{-4t}\\)"
+        },
+        {
+            "question": "Find the general solution to \\[ 6y''+y'-2y=0\\]",
+            "answer": "\\(c_1e^{t/2}+c_2e^{-2t/3}\\)"
+        },
+        {
+            "question": "Find the general solution to \\[ 4y''-4y'+y=0\\]",
+            "answer": "\\(c_1e^{t/2}+c_2te^{t/2}\\)"
+        },
+        {
+            "question": "Find the general solution to \\[ 4w''+20w'+25w=0\\]",
+            "answer": "\\(c_1e^{-5t/2}+c_2te^{-5t/2}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''+2y'-8y=0; y(0)=3, y'(0)=-12\\]",
+            "answer": "\\(3e^{-4t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''-4y'+3y=0; y(0)=1, y'(0)=1/3\\]",
+            "answer": "\\(\\frac{4}{3}e^t-\\frac{1}{3}e^{3t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''-6y'+9y=0; y(0)=2, y'(0)=25/3\\]",
+            "answer": "\\( \\left(\\frac{7t}{3}+2\\right)e^{3t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''+2y'+y=0; y(0)=1, y'(0)=-3\\]",
+            "answer": "\\(e^{-t}-2te^{-t}\\)"
+        },
+        {
+            "question": "(a) Substituting \\(y=e^{rt}\\), find the auxiliary equation for the first-order linear equation \\[ ay'+by=0\\] where \\(a\\) and \\(b\\) are constants with \\(a\\neq 0\\). <br> (b) Use the result of part (a) to find the general solution.",
+            "answer": "(a) \\(ar+b=0\\) <br> (b) \\(ce^{-bt/a}\\)"
+        },
+        {
+            "question": "Explain why two functions are linearly dependent on an interval \\(I\\) if and only if there exist constants \\(c_1\\) and \\(c_2\\), not both zero, such that \\[ c_1y_1(t)+c_2y_2(t)=0 \\qquad \\text{for all } t \\text{ in } I\\]",
+            "answer": "If \\(c_1\\neq 0\\), then \\(y_1=-(c_2/c_1)y_2\\)"
+        },
+        {
+            "question": "Three functions \\(y_1(t),y_2(t)\\), and \\(y_3(t)\\) are said to be linearly dependent on an interval \\(I\\) if, on \\(I\\), at least one of these functions is a linear combination of the remaining two. Equivalently, \\(y_1,y_2\\), and \\(y_3\\) are linearly dependent on \\(I\\) if there exist constants \\(C_1,C_2\\), and \\(C_3\\), not all zero, such that \\[ C_1y_1(t)+C_2y_2(t)+C_3y_3(t)=0 \\qquad \\text{for all } t \\text{ in } I\\] Otherwise, we say that these functions are linearly independent on \\(I\\). For each of the following, determine whether the given three functions are linearly dependent or linearly independent on \\((-\\infty,\\infty)\\) <br> (a) \\(y_1(t)=1, y_2(t)=t, y_3(t)=t^2\\) <br> (b) \\(y_1(t)=-3, y_2(t)=5\\sin^2 t, y_3(t) = \\cos^2 t\\) <br> (c) \\(y_1(t)=e^t, y_2(t)=te^t, y_3(t)=t^2e^t\\) <br> (d) \\(y_1(t)=e^t, y_2(t)=e^{-t}, y_3(t)=\\cosh t\\)",
+            "answer": "(a) Lin. indep. <br> (b) Lin. dep. <br> (c) Lin. indep. <br> (d) Lin. dep."
+        },
+        {
+            "question": "Find three linearly independent solutions of the third-order differentiation equation and write a general solution as an arbitrary linear combination of these. \\[ y'''+y''-6y'+4y=0\\]",
+            "answer": "\\(c_1e^t+c_2e^{(-1-\\sqrt{5})t}+c_3e^{(-1+\\sqrt{5})t}\\)"
+        },
+        {
+            "question": "Find three linearly independent solutions of the third-order differentiation equation and write a general solution as an arbitrary linear combination of these. \\[ z'''+2z''-4z'-8z=0\\]",
+            "answer": "\\(c_1e^{-2t}+c_2te^{-2t}+c_3e^{2t}\\)"
+        },
+        {
+            "question": "Find three linearly independent solutions of the third-order differentiation equation and write a general solution as an arbitrary linear combination of these. \\[ z'''+2z''-4z'-8z=0\\]",
+            "answer": "\\(c_1e^{-3t}+c_2e^{-2t}+c_3e^{2t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem: \\[ y'''-y'=0; \\qquad y(0)=2\\qquad y'(0)=3\\qquad y''(0)=-1\\]",
+            "answer": "\\(3+e^t-2e^{-t}\\)"
+        },
+        {
+            "question": "The auxiliary equation for the given differential equation has complex roots. Find a general solution. \\[ y''+9y=0\\]",
+            "answer": "\\( c_1\\cos 3t+c_2\\sin 3t\\)"
+        },
+        {
+            "question": "The auxiliary equation for the given differential equation has complex roots. Find a general solution. \\[ z''-6z'+10z=0\\]",
+            "answer": "\\(c_1e^{3t}\\cos t+c_2e^{3t}\\sin t\\)"
+        },
+        {
+            "question": "The auxiliary equation for the given differential equation has complex roots. Find a general solution. \\[ w''+4w'+6w=0\\]",
+            "answer": "\\(c_1e^{-2t}\\cos\\sqrt{2}t+c_2e^{-2t}\\sin\\sqrt{2}t\\)"
+        },
+        {
+            "question": "The auxiliary equation for the given differential equation has complex roots. Find a general solution. \\[ 4y''+4y'+6y=0\\]",
+            "answer": "\\(c_1e^{-t/2}\\cos(\\sqrt{5}/2)+c_2e^{-t/2}\\sin(\\sqrt{5}t/2)\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ y''-8y'+7y=0\\]",
+            "answer": "\\(c_1e^t+c_2e^{7t}\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ z''+10z'+25z=0\\]",
+            "answer": "\\( c_1e^{-5t}+c_2te^{-5t}\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ y''-2y'+26y=0\\]",
+            "answer": "\\( c_1e^t\\cos 5t+c_2e^t\\sin 5t\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ y''-3y'-11y=0\\]",
+            "answer": "\\( c_1e^{(3+\\sqrt{53})t/2}+c_2e^{(3-\\sqrt{53})t/2}\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ y''-y'+7y=0\\]",
+            "answer": "\\( c_1e^{t/2}\\cos(3\\sqrt{3}t/2)+c_2e^{t/2}\\sin(3\\sqrt{3}t/2)\\)"
+        },
+        {
+            "question": "Find a general solution. \\[ y'''+y''+3y'-5y=0\\]",
+            "answer": "\\( c_1e^t+c_2e^{-t}\\cos 2t+c_3e^{-t}\\sin 2t\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''+2y'+2y=0; \\qquad y(0)=2, \\qquad y'(0)=1\\]",
+            "answer": "\\( 2e^{-t}\\cos t+3e^{-t}\\sin t\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ w''-4w'+2w=0; \\qquad w(0)=0, \\qquad w'(0)=1\\]",
+            "answer": "\\( (\\sqrt{2}/4)[e^{(2+\\sqrt{2})t}-e^{(2-\\sqrt{2})t}]\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y''-2y'-2y=0; \\qquad y(\\pi)=e^{\\pi}, \\qquad y'(\\pi)=0\\]",
+            "answer": "\\(e^t\\sin t-e^t\\cos t\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y'''-4y''+7y'-6y=0; \\quad y(0)=1, \\quad y'(0)=0, \\quad y''(0)=0\\]",
+            "answer": "\\(e^{2t}-\\sqrt{2}e^t \\sin\\sqrt{2}t\\)"
+        },
+        {
+            "question": "Find a general solution to the following higher-order equations. <br> (a) \\(y'''-y''+y'+3y=0\\) <br> (b) \\(y'''+2y''+5y'-26y=0\\) <br> (c) \\(y^{iv}+13y''+36y=0\\)",
+            "answer": "(a) \\(c_1e^{-t}+c_2e^t \\cos\\sqrt{2}t+c_3e^t\\sin\\sqrt{2}t\\) <br> (b) \\(c_1e^{2t}+c_2e^{-2t}\\cos 3t+c_3e^{-2t}\\sin 3t\\) <br> (c) \\(c_1\\cos 2t+c_2\\sin 2t+c_3\\cos 3t+c_4\\sin 3t\\)"
+        },
+        {
+            "question": "Using the mass-spring analogy, predict the behavior as \\(t\\rightarrow + \\infty\\) of the solution to the given initial value problem. Then confirm your prediction by actually solving the problem. <br> (a) \\(y''+16y=0; \\quad y(0)=2 \\quad y'(0)=0\\) <br> (b) \\(y''+100y'+y=0; \\quad y(0)=1, \\quad y'(0)=0\\) <br> (c) \\(y''-6y'+8y=0; \\quad y(0)=1, \\quad y'(0)=0\\) <br> (d) \\(y''+2y'-3y=0; \\quad y(0)=-2, \\quad y'(0)=0\\) <br> (e) \\(y''-y'-6y=0; \\quad y(0)=1, \\quad y'(0)=1\\)",
+            "answer": "(a) Oscillatory <br> (b) Tends to zero <br> (c) Tends to \\(-\\infty\\) <br> (d) Tends to \\(-\\infty\\) <br> (e) Tends to \\(+\\infty\\)"
+        },
+        {
+            "question": "The motion of a swinging door with an adjustment screw that controls the amount of friction on the hinges is governed by the initial value problem \\[ I\\theta''+b\\theta' + k\\theta =0; \\quad \\theta(0)=\\theta_0, \\quad \\theta'(0)=v_0\\] where \\(\\theta\\) is the angle that the door is open, \\(I\\) is the moment of intertia of the door about its hinges, \\(b>0\\) is a damping constant that varies with the amount of friction on the door, \\(k>0\\) is the spring constant associated with the swinging door, \\(\\theta_0\\) is the initial angle that the door is opened, and \\(v_0\\) is the initial angular velocity imparted to the door. If \\(I\\) and \\(k\\) are fixed, determine for which values of \\(b\\) the door will not continually swing back and forth when closing.",
+            "image": "images/DIFFEQ4.3.1.PNG",
+            "answer": "\\(b\\geq 2\\sqrt{Ik}\\)"
+        },
+        {
+            "question": "Can the method of undetermined coefficients be used to find a particular solution to the given equation? \\[ y''+2y'-y=t^{-1}e^t\\]",
+            "answer": "No"
+        },
+        {
+            "question": "Can the method of undetermined coefficients be used to find a particular solution to the given equation? \\[ 2y''(x)-6y'(x)+y(x)= (\\sin x)/e^{4x}\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Can the method of undetermined coefficients be used to find a particular solution to the given equation? \\[ y''(\\theta)+3y'(\\theta)-y(\\theta)=\\sec\\theta\\]",
+            "answer": "No"
+        },
+        {
+            "question": "Can the method of undetermined coefficients be used to find a particular solution to the given equation? \\[ 8z'(x)-2z(x)=3x^{100}e^{4x}\\cos 25x\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''+3y=-9\\]",
+            "answer": "\\(y_p\\equiv -3\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''(x)+y(x)=2^x\\]",
+            "answer": "\\( y_p(x)=[(\\ln 2)^2+1]^{-1}2^x\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''-y'+9y=3\\sin 3t\\]",
+            "answer": "\\(\\cos 3t\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ \\frac{d^2y}{dx^2}-5\\frac{dy}{dx}+6y=xe^x\\]",
+            "answer": "\\( xe^x/2+3e^x/4\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''+4y=8\\sin 2t\\]",
+            "answer": "\\(-2t\\cos 2t\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ 4y''+11y'-3y=-2te^{-3t}\\]",
+            "answer": "\\( \\left(\\frac{t}{13}+\\frac{8}{169}\\right)te^{-3t}\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ x''(t)-4x'(t)+4x(t)=te^{2t}\\]",
+            "answer": "\\(t^3e^{2t}/6\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''(\\theta)-7y'(\\theta)=\\theta^2\\]",
+            "answer": "\\( -\\frac{1}{21}\\theta^3-\\frac{1}{49}\\theta^2-\\frac{2}{343}\\theta\\)"
+        },
+        {
+            "question": "Find a particular solution to the differential equation. \\[ y''+2y'+4y=111e^{2t}\\cos 3t\\]",
+            "answer": "\\(e^{2t}(\\cos 3t+6\\sin 3t)\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ y''+9y=4t^3\\sin 3t\\]",
+            "answer": "\\( (A_3t^4+A_2t^3+A_1t^2+A_0 t)\\cos 3t + (B_3t^4+B_2t^3+B_1t^2+B_0t)\\sin 3t\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ y''+3y'-7y=t^4 e^t\\]",
+            "answer": "\\( e^t(A_4t^4+A_3t^3+A_2t^2+A_1t+A_0)\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ y''+2y'+2y=8t^3e^{-t}\\sin t\\]",
+            "answer": "\\( (A_3t^4+A_2t^3+A_1t^2+A_0t)e^{-t}\\cos t+(B_3t^4+B_2t^3+B_1t^2+B_0t)e^{-t}\\sin t\\)"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to find a particular solution to the given higher-order equation. \\[ y'''-y''+y=\\sin t\\]",
+            "answer": "\\( (1/5)\\cos t+(2/5)\\sin t\\)"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to find a particular solution to the given higher-order equation. \\[ y'''+y''-2y=te^t\\]",
+            "answer": "\\( \\left(\\frac{1}{10}t^2-\\frac{4}{25}t\\right)e^t\\)"
+        },
+        {
+            "question": "Given that \\(y_1(t)=\\cos t\\) is a solution to \\[ y''-y'+y=\\sin t\\] and \\(y_2(t)=e^{2t}/3\\) is a solution to \\[ y''-y'+y=e^{2t}\\] use the superposition principle to find solutions to the following differential equations. <br> (a) \\(y''-y'+y=5\\sin t\\) <br> (b) \\( y''-y'+y=\\sin t-3e^{2t}\\) <br> (c) \\( y''-y'+y=4\\sin t+18e^{2t}\\)",
+            "answer": "(a) \\(5\\cos t\\) <br> (b) \\(\\cos t-e^{2t}\\) <br> (c) \\(4\\cos t+6e^{2t}\\)"
+        },
+        {
+            "question": "A nonhomogeneous equation and a particular solution are given. Find a general solution for the equation. \\[ y''-y=t, \\qquad y_p(t)=-t\\]",
+            "answer": "\\( y=-t+c_1e^t+c_2e^{-t}\\)"
+        },
+        {
+            "question": "A nonhomogeneous equation and a particular solution are given. Find a general solution for the equation. \\[ \\theta''-\\theta'-2\\theta = 1-2t, \\qquad \\theta_p(t)=t-1\\]",
+            "answer": "\\( \\theta = t-1+c_1e^{2t}+c_2e^{-t}\\)"
+        },
+        {
+            "question": "A nonhomogeneous equation and a particular solution are given. Find a general solution for the equation. \\[ y''=2y+2\\tan^3 x, \\qquad y_p(x)=\\tan x\\]",
+            "answer": "\\( y=\\tan x+c_1e^{\\sqrt{2}x}+c_2e^{-\\sqrt{2}x}\\)"
+        },
+        {
+            "question": "Decide whether the method of undetermined coefficients together with superposition can be applied to find a particular solution of the given equation. \\[ 3y''+2y'+8y=t^2+4t-t^2e^t\\sin t\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Decide whether the method of undetermined coefficients together with superposition can be applied to find a particular solution of the given equation. \\[ y''-6y'-4y=4\\sin 3t=e^{3t}t^2+1/t\\]",
+            "answer": "No"
+        },
+        {
+            "question": "Decide whether the method of undetermined coefficients together with superposition can be applied to find a particular solution of the given equation. \\[ y''-6y'-4y=4\\sin 3t=e^{3t}t^2+1/t\\]",
+            "answer": "Yes"
+        },
+        {
+            "question": "Decide whether the method of undetermined coefficients together with superposition can be applied to find a particular solution of the given equation. \\[ y''+e^ty'+y=7+3t\\]",
+            "answer": "No"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ y''-2y'-3y=3t^2-5\\]",
+            "answer": "\\( y(t)=-t^2+\\frac{4t}{3}+\\frac{1}{9}+c_1e^{3t}+c_2e^{-t}\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ y''(x)-3y'(x)+2y(x)=e^x\\sin x\\]",
+            "answer": "\\( y=(\\cos x-\\sin x)e^x/2+c_1e^x+c_2e^{2x}\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ y''(\\theta)+2y'(\\theta)+2y(\\theta)=e^{-\\theta}\\cos\\theta \\]",
+            "answer": "\\( (1/2)\\theta e^{-\\theta}\\sin\\theta + (c_1\\cos\\theta+c_2\\sin\\theta)e^{-\\theta}\\)"
+        },
+        {
+            "question": "Find the solution to the initial value problem. \\[ y'-y=1, \\qquad y(0)=0\\]",
+            "answer": "\\( y=e^t-1\\)"
+        },
+        {
+            "question": "Find the solution to the initial value problem. \\[ z''(x)+z(x)=2e^{-x}; \\quad z(0)=0, \\quad z'(0)=0\\]",
+            "answer": "\\( z=e^{-x}-\\cos x+\\sin x\\)"
+        },
+        {
+            "question": "Find the solution to the initial value problem. \\[ y''(x)-y'(x)-2y(x)=\\cos x-\\sin 2x; \\quad y(0)=-7/20, \\quad y'(0)=1/5\\]",
+            "answer": "\\( y=-(3/10)\\cos x-(1/10)\\sin x-(1/20)\\cos 2x+(3/20)\\sin 2x\\)"
+        },
+        {
+            "question": "Find the solution to the initial value problem. \\[ y''(\\theta)-y(\\theta)=\\sin\\theta - e^{2\\theta}; \\quad y(0)=1, \\quad y'(0)=-1\\]",
+            "answer": "\\( y=-(1/2)\\sin\\theta - (1/3)e^{2\\theta}+(3/4)e^{\\theta}+(7/12)e^{-\\theta}\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ y''+y=\\sin t+t\\cos t+10^t\\]",
+            "answer": "\\( y_p=(A_1t+A_0)t\\cos t+(B_1t+B_0)t\\sin t+C\\cdot 10^t\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ x''-x'-2x=e^t\\cos t-t^2+\\cos^3 t\\]",
+            "answer": "\\( x_p(t)=(A\\cos t+B\\sin t)e^t +C_2t^2+C_1t+C_0+D_1\\cos 3t+D_2\\sin 3t+E_1\\cos t+E_2\\sin t\\)"
+        },
+        {
+            "question": "Determine the form of a particular solution for the differential equation. \\[ y''-4y'+5y=e^{5t}+t\\sin 3t-\\cos 3t\\]",
+            "answer": "\\( y_p=(A_1t+A_0)\\cos 3t+(B_1t+B_0)\\sin 3t+Ce^{5t}\\)"
+        },
+        {
+            "question": "Find a particular solution to the given higher-order equation. \\[ y'''-2y''-y'+2y=2t^2+4t-9\\]",
+            "answer": "\\( y_p=t^2+3t-1\\)"
+        },
+        {
+            "question": "Find a particular solution to the given higher-order equation. \\[ y'''+y''-2y=te^t+1\\]",
+            "answer": "\\( y_p=(t/10-4/25)te^t-1/2\\)"
+        },
+        {
+            "question": "In certain physical models, the nonhomogeneous term, or forcing term, \\(g(t)\\) in the equation \\[ ay''+by'+cy=g(t)\\] may not be continuous but may have a jump discontinuity. If this occurs, we can still obtain a reasonable solution using the following procedure. Consider the initial value problem \\[ y''+2y'+5y=g(t); \\quad y(0)=0, \\quad y'(0)=0\\] where \\[ g(t) = \\begin{cases} 10 \\text{ if } 0\\leq t\\leq 3\\pi/2 \\\\ 0 \\text{ if } t>3\\pi/2\\end{cases}\\] (a) Find a solution to the initial value problem for \\(0\\leq t\\leq 3\\pi/2\\) <br> (b) Find a general solution for \\(t>3\\pi/2\\) <br> (c) Now choose the constants in the general solution from part (b) so that the solution from part (a) and the solution from part (b) agree, together with their first derivatives, at \\(t=3\\pi/2\\). This gives us a continuously differentiable function that satisfies the differential equation except at \\(t=3\\pi/2\\).",
+            "answer": "(a) \\(y_1=-(2\\cos 2t+\\sin 2t)e^{-t}+2\\) for \\(0\\leq t\\leq 3\\pi/2\\) <br> (b) \\(y_2=y_h=(c_1\\cos 2t+c_2\\sin 2t)e^{-t}\\) for \\(t>3\\pi/2\\) <br> (c) \\(c_1=-2(e^{3\\pi/2}+1)\\), \\(c_2=-(e^{3\\pi/2}+1)\\)"
+        },
+        {
+            "question": "A mass-spring system is driven by a sinusoidal external force \\(g(t)=5\\sin t\\). The mass equals 1, the spring constant equals 3, and the damping coefficient equals 4. If the mass is initially located at \\(y(0)=1/2\\) and at rest, i.e., \\(y'(0)=0\\), find its equation of motion.",
+            "answer": "\\( y=-\\cos t+(1/2)\\sin t-(1/2)e^{-3t}+2e^{-t}\\)"
+        },
+        {
+            "question": "Find the solution(s) to \\[ y''+9y=27\\cos 6t\\] (if it exists) satisfying the boundary conditions <br> (a) \\(y(0)=-1, \\quad y(\\pi/6)=3\\) <br> (b) \\(y(0)=-1, \\quad y(\\pi/3)=5\\) <br> (c) \\(y(0)=-1, \\quad y(\\pi/3)=-1\\)",
+            "answer": "(a) \\(2\\sin 3t-\\cos 6t\\) <br> (b) No solution <br> (c) \\(c\\sin 3t-\\cos 6t\\), where \\(c\\) is any constant"
+        },
+        {
+            "question": "Find a general solution to the differential equation using the method of variation of parameters. \\[ y''+4y=\\tan 2t\\]",
+            "answer": "\\( c_1\\cos 2t+c_2\\sin 2t-(1/4)(\\cos 2t)\\ln|\\sec 2t+\\tan 2t|\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation using the method of variation of parameters. \\[ y''-2y'+y=t^{-1}e^t\\]",
+            "answer": "\\( c_1e^t+c_2te^t+te^t\\ln|t|\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation using the method of variation of parameters. \\[ y''(\\theta)+16y(\\theta)=\\sec 4\\theta\\]",
+            "answer": "\\( c_1\\cos 4\\theta+c_2\\sin 4\\theta + (\\theta/4)\\sin 4\\theta + (1/16)(\\cos 4\\theta)\\ln|\\cos4\\theta|\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation using the method of variation of parameters. \\[ y''+4y'+4y=e^{-2t}\\ln t\\]",
+            "answer": "\\( (2\\ln t-3)t^2e^{-2t}/4+c_1e^{-2t}+c_2te^{-2t}\\)"
+        },
+        {
+            "question": "Find a particular solution by undetermined coefficients. \\[ y''-y=2t+4\\]",
+            "answer": "\\( y_p=-2t-4\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ y''+y=\\tan t+e^{3t}-1\\]",
+            "answer": "\\( y=-(\\cos t)\\ln|\\sec t+\\tan t|+(1/10)e^{3t}-1+c_1\\cos t+c_2\\sin t\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ v''+4v=\\sec^4 (2t)\\]",
+            "answer": "\\( c_1\\cos 2t+c_2\\sin 2t+(1/24)\\sec^2 2t-1/8+(1/8)(\\sin 2t)\\ln|\\sec 2t+\\tan 2t|\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ y''+y=3\\sec t-t^2+1\\]",
+            "answer": "\\( c_1\\cos t+c_2\\sin t-t^2+3+3t\\sin t+3(\\cos t)\\ln|\\cos t|\\)"
+        },
+        {
+            "question": "Find a general solution to the differential equation. \\[ \\frac{1}{2}y''+2y=\\tan 2t-\\frac{1}{2}e^t\\]",
+            "answer": "\\( c_1\\cos 2t+c_2\\sin 2t-e^t/5 - (1/2)(\\cos 2t)\\ln|\\sec 2t+\\tan 2t|\\)"
+        },
+        {
+            "question": "Suppose \\(y\\) satisfies the equation \\(y''+10y'+25y=e^{t^3}\\) subject to \\(y(0)=1\\) and \\(y'(0)=-5\\). Estimate \\(y(0.2)\\) to within \\(\\pm 0.0001\\) by numerically approximating the integrals in the variation of parameters formula.",
+            "answer": "0.3785"
+        },
+        {
+            "question": "Use variation of parameters to find a general solution to the differential equation given that the functions \\(y_1\\) and \\(y_2\\) are linearly independent solutions to the corresponding homogeneous equation for \\(t>0\\). \\[ ty''-(t+1)y'+y=t^2; \\quad y_1=e^t, \\quad y_2 = t+1\\]",
+            "answer": "\\( c_1e^t+c_2(t+1)-t^2\\)"
+        },
+        {
+            "question": "Use variation of parameters to find a general solution to the differential equation given that the functions \\(y_1\\) and \\(y_2\\) are linearly independent solutions to the corresponding homogeneous equation for \\(t>0\\). \\[ ty''+(5t-1)y'-5y=t^2e^{-5t}; \\quad y_1=5t-1, \\quad y_2=e^{-5t}\\]",
+            "answer": "\\( c_1(5t-1)+c_2e^{-5t}-t^2e^{-5t}/10\\)"
+        },
+        {
+            "question": "Find a general solution to the given Cauchy-Euler equation for \\(t>0\\). \\[ t^2y''(t)+7ty'(t)-7y(t)=0\\]",
+            "answer": "\\( c_1t+c_2t^{-7}\\)"
+        },
+        {
+            "question": "Find a general solution to the given Cauchy-Euler equation for \\(t>0\\). \\[ t^2\\frac{d^2z}{dt^2}+5t\\frac{dz}{dt}+4z=0\\]",
+            "answer": "\\( c_1t^{-2}+c_2t^{-2}\\ln t\\)"
+        },
+        {
+            "question": "Find a general solution to the given Cauchy-Euler equation for \\(t>0\\). \\[ 9t^2y''(t)+15ty'(t)+y(t)=0\\]",
+            "answer": "\\( c_1t^{-1/3}+c_2t^{-1/3}\\ln t\\)"
+        },
+        {
+            "question": "Find a general solution for \\(t<0\\). \\[ y''(t)-\\frac{1}{t}y'(t)+\\frac{5}{t^2}y(t)=0\\]",
+            "answer": "\\( c_1t\\cos[2\\ln(-t)]+c_2t\\sin[2\\ln(-t)]\\)"
+        },
+        {
+            "question": "Find a general solution for \\(t<0\\). \\[ t^2y''(t)+9ty'(t)+17y(t)=0\\]",
+            "answer": "\\( t^{-4}\\{c_1\\cos[\\ln(-t)]+c_2\\sin[\\ln(-t)]\\}\\)"
+        },
+        {
+            "question": "Solve the given initial value problem for the Cauchy-Euler equation. \\[ t^2y''(t)-4ty'(t)+4y(t)=0; \\quad y(1)=-2, \\quad y'(1)=-11\\]",
+            "answer": "\\( t-3t^4\\)"
+        },
+        {
+            "question": "Devise a modification of the method for Cauchy-Euler equations to find a general solution to the given equation. \\[ (t-2)^2y''(t)-7(t-2)y'(t)+7y(t)=0, \\quad t>2\\]",
+            "answer": "\\( c_1(t-2)+c_2(t-2)^7\\)"
+        },
+        {
+            "question": "Let \\(y_1\\) and \\(y_2\\) be two functions defined on \\( (-\\infty,\\infty)\\). <br> (a) True or False: If \\(y_1\\) and \\(y_2\\) are linearly dependent on the interval \\( [a,b]\\), then \\(y_1\\) and \\(y_2\\) are linearly dependent on the smaller interval \\( [c,d] \\subset [a,b] \\). <br> (b) True or False: If \\(y_1\\) and \\(y_2\\) are linearly dependent on the interval \\( [a,b]\\), then \\(y_1\\) and \\(y_2\\) are linearly dependent on the larger interval \\( [C,D] \\supset [a,b]\\).",
+            "answer": "(a) True <br> (b) False"
+        },
+        {
+            "question": "Prove that if \\(y_1\\) and \\(y_2\\) are linearly independent solutions of \\(y''+py'+qy=0\\) on \\( (a,b)\\), then they cannot both be zero at the same point \\(t_0\\) in \\( (a,b)\\).",
+            "answer": "Otherwise their Wronskian would be zero at \\(t_0\\), contradicting linear independence."
+        },
+        {
+            "question": "Determine whether the following functions can be Wronskians on \\( -1 < t < 1 \\) for a pair of solutions to some equation \\( y'' + p y' + q y = 0 \\) (with \\( p \\) and \\( q \\) continuous). <br> (a) \\( w(t) = 6e^{4t} \\) <br> (b) \\( w(t) = t^3 \\) <br> (c) \\( w(t) = (t + 1)^{-1} \\) <br> (d) \\( w(t) \\equiv 0 \\)",
+            "answer": "(a) Yes <br> (b) No <br> (c) Yes <br> (d) Yes"
+        },
+        {
+            "question": "Given that \\(1+t\\), \\(1+2t\\), and \\(1+3t^2\\) are solutions to the differential equation \\(y''+p(t)y'+q(t)y=g(t)\\), find the solution to this equation that satisfies \\(y(1)=2\\), \\(y'(1)=0\\).",
+            "answer": "\\(1+2t-t^2\\)"
+        },
+        {
+            "question": "Find general solutions to the non-homogeneous Cauchy-Euler equations using variation of parameters. \\[ t^2z''+tz'+9z=-\\tan(3\\ln t)\\]",
+            "answer": "\\(c_1\\cos(3\\ln t)+c_2\\sin(3\\ln t)+(1/9)\\cos(3\\ln t)\\ln|\\sec(3\\ln t)+\\tan(3\\ln t)|\\)"
+        },
+        {
+            "question": "Find general solutions to the non-homogeneous Cauchy-Euler equations using variation of parameters. \\[ t^2z''-tz'+z=t\\left( 1+\\frac{3}{\\ln t}\\right)\\]",
+            "answer": "\\( c_1 t + c_2 t \\ln t + \\frac{1}{2} t (\\ln t)^2 + 3t (\\ln t) \\left( \\ln |\\ln t| \\right) \\)"
+        },
+        {
+            "question": "A differential equation and a non-trivial solution \\(f\\) are given. Find a second linearly independent solution using reduction of order. \\[ t^2y''-2ty'-4y=0, \\quad t>0; \\quad f(t)=t^{-1}\\]",
+            "answer": "\\( t^4\\)"
+        },
+        {
+            "question": "A differential equation and a non-trivial solution \\(f\\) are given. Find a second linearly independent solution using reduction of order. \\[ tx''-(t+1)x'+x=0, \\quad t>0; \\quad f(t)=e^t\\]",
+            "answer": "\\(t+1\\)"
+        },
+        {
+            "question": "Find a particular solution to the nonhomogeneous equation \\[ ty''-(t+1)y'+y=t^2e^{2t}\\] given that \\( f(t)=e^t\\) is a solution to the corresponding homogeneous equation.",
+            "answer": "\\( (t-1)e^{2t}/2\\)"
+        },
+        {
+            "question": "In quantum mechanics, the study of the Schrodinger equation for the case of a harmonic oscillator leads to a consideration of Hermite's equation. \\[ y''-2ty'+\\lambda y=0\\] where \\(\\lambda\\) is a parameter. Use the reduction of order formula to obtain an integral representation of a second linearly independent solution to Hermite's equation for the given value of \\(\\lambda\\) and corresponding solution \\(f(t)\\). <br> (a) \\(\\lambda = 4, \\quad f(t)=1-2t^2\\) <br> (b) \\(\\lambda = 6, \\quad f(t)=3t-2t^3\\)",
+            "answer": "(a) \\( (1-2t^2)\\int (1-2t^2)^{-2}e^{t^2}dt\\) <br> (b) \\( (3t-2t^3)\\int (3t-2t^3)^{-2}e^{t^2}dt\\)"
+        },
+        {
+            "question": "The reduction of order procedure can be used more generally to reduce a homogeneous linear \\(n\\)th-order equation to a homogeneous linear \\( (n-1) \\)th-order equation. For the equation \\[ ty'''-ty''+y'-y=0\\] which has \\( f(t)=e^t\\) as a solution, use the substitution \\(y(t)=v(t)f(t)\\) to reduce this third-order equation to a homogeneous linear second-order equation in the variable \\(w = v'\\).",
+            "answer": "\\( tw''+2tw'+(t+1)w=0\\)"
+        }
     ],
     "Chapter 5: Introduction to Systems": [
-        {}
+        {
+            "question": "Let \\(A=D-1, B=D+2, C=D^2+D-2\\), where \\(D=d/dt\\). For \\(y=t^3-8\\), compute <br> (a) \\(A[y]\\) <br> (b) \\(B[A[y]]\\) <br> (c) \\(B[y]\\) <br> (d) \\(A[B[y]]\\) <br> (e) \\(C[y]\\)",
+            "answer": "(a) \\(-t^3+3t^2+8\\) <br> (b) \\(-2t^3+3t^2+6t+16\\) <br> (c) \\(2t^3+3t^2-16\\) <br> (d) \\(-2t^3+3t^2+6t+16\\) <br> (e) \\(-2t^3+3t^2+6t+16\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} x'+2y=0 \\\\x'-y'=0 \\end{align*}",
+            "answer": "\\(x=c_1+c_2e^{-2t}; \\quad y=c_2e^{-2t}\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} x'+y'-x=5\\\\ x'+y'+y=1 \\end{align*}",
+            "answer": "\\( x\\equiv -5; \\quad y\\equiv 1\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} (D+1)[u]-(D+1)[v]=e^t\\\\ (D-1)[u]+(2D+1)[v]=5 \\end{align*}",
+            "answer": "\\(u=c_1-(1/2)c_2e^{-t}+(1/2)e^t+(5/3)t\\) <br> \\( v=c_1+c_2e^{-t}+(5/3)t\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} x'+y'+2x=0\\\\ x'+y'-x-y=\\sin t \\end{align*}",
+            "answer": "\\( x=c_1e^t+(1/4)\\cos t-(1/4)\\sin t\\) <br> \\( y=-3c_1e^t-(3/4)\\cos t-(1/4)\\sin t\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} (D+1)[u]-(D+1)[v]=e^t\\\\ (D-1)[u]+(2D+1)[v]=5 \\end{align*}",
+            "answer": "\\( u=c_1\\cos 2t+c_2\\sin 2t+c_3e^{\\sqrt{3}t}+c_4e^{-\\sqrt{3}t}-(3/10)e^t  \\) <br> \\( v=c_1\\cos 2t+c_2\\sin 2t-(2/5)c_3e^{\\sqrt{3}t}-(2/5)c_4e^{-\\sqrt{3}t}+(1/5)e^t\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} \\frac{dx}{dt} = x-4y \\\\ \\frac{dy}{dt}=x+y\\end{align*}",
+            "answer": "\\(x=2c_2e^t\\cos 2t-2c_1e^t\\sin 2t\\) <br> \\(y=c_1e^t\\cos 2t+c_2e^t \\sin 2t\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} \\frac{dw}{dt}=5w+2z+5t \\\\ \\frac{dz}{dt}=3w+4z+17t \\end{align*}",
+            "answer": "\\( w=-(2/3)c_1e^{2t}+c_2e^{7t}+t+1\\) <br> \\( z=c_1e^{2t}+c_2e^{7t}-5t-2\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given linear system, where differentiation is with respect to \\(t\\). \\begin{align*} x''+5x-4y=0 \\\\ -x+y''+2y=0 \\end{align*}",
+            "answer": "\\(x=c_1\\cos t+c_2\\sin t-4c_3\\cos(\\sqrt{6}t)-4c_4\\sin(\\sqrt{6}t)\\) <br> \\(y=c_1\\cos t+c_2\\sin t+c_3\\cos(\\sqrt{6}t)+c_4\\sin(\\sqrt{6}t)\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\begin{align*} \\frac{dx}{dt}=4x+y; \\quad x(0)=1 \\\\ \\frac{dy}{dt}=-2x+y; \\quad y(0)=0\\end{align*}",
+            "answer": "\\( x=2e^{3t}-e^{2t}\\) <br> \\(y=-2e^{3t}+2e^{2t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\begin{align*} \\frac{d^2x}{dt^2}=y; \\quad x(0)=3, \\quad x'(0)=1\\\\ \\frac{d^2y}{dt^2}=x; \\quad y(0)=1, \\quad y'(0)=-1 \\end{align*}",
+            "answer": "\\(x=e^t+e^{-t}+\\cos t+\\sin t\\) <br> \\( y=e^t+e^{-t}-\\cos t-\\sin t\\)"
+        },
+        {
+            "question": "Show that the given linear system is degenerate. In attempting to solve the system, determine whether it has no solutions or infinitely many solutions. \\begin{align*} (D-1)[x]+(D-1)[y]=-3e^{-2t} \\\\ (D+2)[x]+(D+2)[y]=3e^t \\end{align*}",
+            "answer": "Infinitely many solutions satisfying \\(x+y=e^t+e^{-2t}\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given system of three equations in the three unknown functions \\(x(t),y(t),z(t)\\). \\begin{align*} x'=x+2y-z \\\\ y'=x+z\\\\ z'-4x-4y+5z\\end{align*}",
+            "answer": "\\( x(t)=-c_1e^t-2c_2e^{2t}-c_3e^{3t}\\) <br> \\( y(t)=c_1e^t+c_2e^{2t}+c_3e^{3t}\\) <br> \\( z(t)=2c_1e^t+4c_2e^{2t}+4c_3e^{3t}\\)"
+        },
+        {
+            "question": "Use the elimination method to find a general solution for the given system of three equations in the three unknown functions \\(x(t),y(t),z(t)\\). \\begin{align*} x'=4x-4z \\\\ y'=4y-2z \\\\ z'=-2x-4y+4z \\end{align*}",
+            "answer": "\\( x(t)=c_1e^{8t}+c_2e^{4t}+c_3\\) <br> \\( y(t)=\\frac{1}{2}(c_1e^{8t}-c_2e^{4t}+c_3) \\) <br> \\( z(t)=-c_1e^{8t}+c_3\\)"
+        },
+        {
+            "question": "Determine the range of valures (if any) of the parameter \\(\\lambda\\) that will ensure all solutions \\(x(t),y(t)\\) of the given system remain bounded as \\(t\\rightarrow \\infty\\). \\begin{align*} \\frac{dx}{dt}=\\lambda x-y\\\\ \\frac{dy}{dt}=3x+y \\end{align*}",
+            "answer": "\\(-3\\leq \\lambda \\leq -1\\)"
+        },
+        {
+            "question": "Two large tanks, each holding 100 L of liquid, are interconnected by pipes, with the liquid flowing from tank A into tank B at a rate of 3 L/min and from B into A at a rate of 1 L/min. The liquid inside each tank is kept well stirred. A brine solution with a concentration of 0.2 kg/L of salt flows into tank A at a rate of 6 L/min. The (diluted) solution flows out of the system from tank A at 4 L/min and from tank B at 2 L/min. If, initially, tank A contains pure water and tank B contains 20 kg of salt, determine the mass of salt in each tank at time \\(t\\geq 0\\).",
+            "image": "images/DIFFEQ5.2.1.PNG",
+            "answer": "\\( x(t)=-\\left(10+\\frac{20}{\\sqrt{7}}\\right)e^{r_1t}-\\left(10-\\frac{20}{\\sqrt{7}}\\right)e^{r_2t}+20\\) kg <br> \\(y(t)=\\frac{30}{\\sqrt{7}}e^{r_1t}-\\frac{30}{\\sqrt{7}}e^{r_2t}+20\\) kg, where <br> \\(r_1=\\frac{-5-\\sqrt{7}}{100}\\approx -0.0765\\) <br> \\(r_2=\\frac{-5+\\sqrt{7}}{100}\\approx -0.0235\\)"
+        },
+        {
+            "question": "A house, for cooling purposes, consists of two zones: the attaic area zone A and the living area zone B. The living area is cooled by a 2-ton air conditioning unit that removes 24,000 Btu/hr. The heat capacity of zone B is 1/2\\(^{\\circ}\\)F per thousand Btu. The time constant for heat transfer between zone A and the outside is 2 hr, between zone B and the outside is 4 hr, and between the two zones is 4 hr. If the outside temperature stays at 100\\(^{\\circ}\\)F, how warm does it eventually get in the attic zone A?",
+            "image": "images/DIFFEQ5.2.2.PNG",
+            "answer": "90.4\\(^{\\circ}\\)F"
+        },
+        {
+            "question": "Convert the given initial value problem into an initial value problem for a system in normal form. \\begin{align*} y''(t)+ty'(t)-3y(t)=t^2 \\\\ y(0)=3, \\quad y'(0)=-6 \\end{align*}",
+            "answer": "\\(x_1'=x_2, x_2'=3x_1-tx_2+t^2\\) <br> \\(x_1(0)=3, x_2(0)=-6\\)"
+        },
+        {
+            "question": "Convert the given initial value problem into an initial value problem for a system in normal form. \\begin{align*} y^{(4)}(t)-y^{(3)}(t)+7y(t)=\\cos t\\\\ y(0)=y'(0)=1, \\quad y''(0)=0, \\quad y^{(3)}(0)=2 \\end{align*}",
+            "answer": "\\(x_1'=x_2, x_2'=x_3, x_3'=x_4, x_4'=x_4-7x_1+\\cos t\\) <br> \\( x_1(0)=x_2(0)=1, x_3(0)=0, x_4(0)=2\\)"
+        },
+        {
+            "question": "Convert the given initial value problem into an initial value problem for a system in normal form. \\begin{align*} x''+y-x'=2t; \\quad x(3)=5, \\quad x'(3)=2 \\\\ y''-x+y=-1; \\quad y(3)=1, \\quad y'(3)=-1\\end{align*}",
+            "answer": "\\( x_1'=x_2, x_2'=x_2-x_3+2t, x_3'=x_4, x_4'=x_1-x_3-1\\) <br> \\(x_1(3)=5, x_2(3)=2, x_3(3)=1, x_4(3)=-1\\)"
+        },
+        {
+            "question": "Convert the given initial value problem into an initial value problem for a system in normal form. \\begin{align*} x'''-y=t; \\quad x(0)=x'(0)=x''(0)=4 \\\\ 2x''+5y''-2y=1; \\quad y(0)=y'(0)=1 \\end{align*}",
+            "answer": "\\( x_1'=x_2, x_2'=x_3, x_3'=x_4+t, x_4'=x_5, x_5'=(2x_4-2x_3+1)/5\\) <br> \\( x_1(0)=x_2(0)=x_3(0)=4, x_4(0)=x_5(0)=1\\)"
+        }
     ],
     "Chapter 6: Theory of Higher-Order Linear Differential Equations": [
-        {}
+        {
+            "question": "Determine whether the given functions are linearly dependent or linearly independent on the specified interval. \\[ \\{e^{3x}, e^{5x}, e^{-x} \\} \\qquad \\text{ on } (-\\infty,\\infty)\\]",
+            "answer": "Lin. indep."
+        },
+        {
+            "question": "Determine whether the given functions are linearly dependent or linearly independent on the specified interval. \\[ \\{ \\sin^2x,\\cos^2x,1 \\} \\qquad \\text{ on } (-\\infty,\\infty) \\]",
+            "answer": "Lin. dep."
+        },
+        {
+            "question": "Determine whether the given functions are linearly dependent or linearly independent on the specified interval. \\[ \\{ x^{-1},x^{1/2},x\\} \\qquad \\text{ on } (0,\\infty)\\]",
+            "answer": "Lin. indep."
+        },
+        {
+            "question": "Determine whether the given functions are linearly dependent or linearly independent on the specified interval. \\[ \\{ x,x^2,x^3,x^4 \\} \\qquad \\text{ on } (-\\infty,\\infty) \\]",
+            "answer": "Lin. indep."
+        },
+        {
+            "question": "Using the Wronskian, verify that the given function forms a fundamental solution set for the given differential equation and find a general solution. \\[ y'''+2y''-11y'-12y=0; \\qquad \\{e^{3x},e^{-x},e^{-4x}\\} \\]",
+            "answer": "\\( c_1e^{3x}+c_2e^{-x}+c_3e^{-4x}\\)"
+        },
+        {
+            "question": "Using the Wronskian, verify that the given function forms a fundamental solution set for the given differential equation and find a general solution. \\[ x^3y'''-3x^2y''+6xy'-6y=0, \\quad x>0; \\qquad \\{x,x^2,x^3\\} \\]",
+            "answer": "\\( c_1x+c_2x^2+c_3x^3\\)"
+        },
+        {
+            "question": "A particular solution and a fundamental solution set are given for a nonhomogeneous equation and its corresponding homogeneous equation. <br> (a) Find a general solution to the homogeneous equation. <br> (b) Find the solution that satisfies the specified initial conditions. \\[ y'''+y''+3y'-5y=2+6x-5x^2 \\] \\[ y(0)=-1, \\qquad y'(0)=1, \\qquad y''(0)=-3 \\] \\[ y_p=x^2; \\qquad \\{ e^x,e^{-x}\\cos 2x, e^{-x}\\sin 2x\\} \\]",
+            "answer": "(a) \\( c_1e^x+c_2e^{-x}\\cos 2x+c_3e^{-x}\\sin 2x+x^2\\) <br> (b) \\(-e^x+e^{-x}\\sin 2x+x^2\\)"
+        },
+        {
+            "question": "A particular solution and a fundamental solution set are given for a nonhomogeneous equation and its corresponding homogeneous equation. <br> (a) Find a general solution to the homogeneous equation. <br> (b) Find the solution that satisfies the specified initial conditions. \\[ x^3y'''+xy'-y=3-\\ln x, \\qquad x>0\\] \\[ y(1)=3, \\qquad y'(1)=3, \\qquad y''(1)=0\\] \\[ y_p=\\ln x; \\qquad \\{ x,x\\ln x, x(\\ln x)^2\\} \\]",
+            "answer": "(a) \\(c_1x+c_2x\\ln x+c_3x(\\ln x)^2+\\ln x\\) <br> (b) \\(3x-x\\ln x+x(\\ln x)^2+\\ln x\\)"
+        },
+        {
+            "question": "Let \\( L[y] := y'''+y'+xy, \\quad y_1(x):= \\sin x\\), and \\(y_2(x):=x\\). Verify that \\(L[y_1](x)=x\\sin x\\) and \\(L[y_2](x)=x^2+1\\). Then use the superposition principle (linearity) to find a slution to the differential equation. <br> (a) \\(L[y]=2x\\sin x-x^2-1\\) <br> (b) \\( L[y]=4x^2+4-6x\\sin x\\)",
+            "answer": "(a) \\(2\\sin x-x\\) <br> (b) \\( 4x-6\\sin x\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ y'''+2y''-8y'=0\\]",
+            "answer": "\\( c_1+c_2e^{2x}+c_3e^{-4x}\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ 6z'''+7z''-z'-2z=0\\]",
+            "answer": "\\( c_1e^{-x}+c_2e^{-2x/3}+c_3e^{x/2}\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ y'''+3y''+28y'+26y=0\\]",
+            "answer": "\\(c_1e^{-x}+c_2e^{-x}\\cos 5x+c_3e^{-x}\\sin 5x\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[2y'''-y''-10y'-7y=0\\]",
+            "answer": "\\( c_1e^{-x}+c_2e^{(3+\\sqrt{65})x/4}+c_3e^{(3-\\sqrt{65})x/4}\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ u'''-9u''+27u'-27u=0\\]",
+            "answer": "\\( c_1e^{3x}+c_2xe^{3x}+c_3x^2e^{3x}\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ y^{(4)}+4y'''+6y''+4y'+y=0\\]",
+            "answer": "\\( c_1e^{-x}+c_2xe^{-x}+c_3x^2e^{-x}+c_4x^3e^{-x}\\)"
+        },
+        {
+            "question": "Find a general solution for the differential equation with \\(x\\) as the independent variable. \\[ y^{(4)}+4y''+4y=0\\]",
+            "answer": "\\( c_1\\cos \\sqrt{2}x+c_2x\\cos\\sqrt{2}x+c_3\\sin\\sqrt{2}x+c_4x\\sin\\sqrt{2}x\\)"
+        },
+        {
+            "question": "Find a general solution to the given homogeneous equation. \\[ (D-1)^2(D+3)(D^2+2D+5)^2[y]=0\\]",
+            "answer": "\\( c_1e^x+c_2xe^x+c_3e^{-3x}+(c_4+c_5x)e^{-x}\\cos 2x+(c_6+c_7x)e^{-x}\\sin 2x\\)"
+        },
+        {
+            "question": "Find a general solution to the given homogeneous equation. \\[ (D+4)(D-3)(D+2)^3(D^2+4D+5)^2 D^5 [y] =0\\]",
+            "answer": "\\( c_1e^{-4x}+c_2e^{3x}+(c_3+c_4x+c_5x^2)e^{-2x}+(c_6+c_7x)e^{-2x}\\cos x+(c_8+c_9x)e^{-2x}\\sin x+c_{10}+c_{11}x+c_{12}x^2+c_{13}x^3+c_{14}x^4 \\)"
+        },
+        {
+            "question": "Solve the given initial value problem. \\[ y'''-y''-4y'+4y=0; \\qquad y(0)=-4, \\quad y'(0)=-1, \\quad y''(0)=-19\\]",
+            "answer": "\\( e^x-2e^{-2x}-3e^{2x}\\)"
+        },
+        {
+            "question": "Solve the initial value problem. \\[ y'''-4y''+7y'-6y=0; \\qquad y(0)=1, \\quad y'(0)=0, \\quad y''(0)=0\\]",
+            "answer": "\\( e^{2x}-\\sqrt{2}e^x \\sin\\sqrt{2}x\\)"
+        },
+        {
+            "question": "A differential equation that can be expressed in the form \\[ a_nx^ny^{(n)}(x)+a_{n-1}x^{n-1}y^{(n-1)}(x)+\\dots + a_0y(x)=0\\] where \\( a_n, a_{n-1},\\dots, a_0\\) are constants, is called a homogeneous Cauchy-Euler equation. Use the substitution \\(y=x^r\\) to help determine a fundamental solution set for the following Cauchy-Euler equations. <br> (a) \\(x^3y'''+x^2y''-2xy'+2y=0, x>0\\) <br> (b) \\( x^4y^{(4)}+6x^3y'''+2x^2y''-4xy'+4y=0, x>0\\) <br> (c) \\( x^3y'''-2x^2y''+13xy'-13y=0, x>0\\)",
+            "answer": "(a) \\( \\{x,x^{-1},x^2\\} \\) <br> (b) \\( \\{ x,x^2,x^{-1},x^{-2}\\} \\) <br> (c) \\( \\{ x,x^2\\cos(3\\ln x), x^2\\sin(3\\ln x) \\} \\)"
+        },
+        {
+            "question": "In studying the transverse vibrations of a beam, one encounters the homogeneous equation \\[ EI \\frac{d^4y}{dx^4}-ky=0\\] where \\( y(x) \\) is related to the displacement of the beam at position \\(x\\), the constant \\(E\\) is Young's modulus, \\(I\\) is the area moment of inertia, and \\(k\\) is a parameter. Assuming \\(E, I\\), and \\(k\\) are positive constants, find a general solution in terms of sines, cosines, hyperbolic sines, and hyperbolic cosines.",
+            "answer": "\\( c_1 \\cosh rx + c_2\\sinh rx + c_3 \\cos rx + c_4 \\sin rx\\), where \\( r^4=k/(EI)\\)"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to determine the form of a particular solution for the given equation. \\[ y'''-2y''-5y'+6y=e^x+x^2\\]",
+            "answer": "\\( c_1xe^x+c_2+c_3x+c_4x^2\\)"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to determine the form of a particular solution for the given equation. \\[ y'''+3y''-4y=e^{-2x}\\]",
+            "answer": "\\( c_1x^2e^{-2x}\\)"
+        },
+        {
+            "question": "Find a general solution to the given equation. \\[ y'''-2y''-5y'+6y=e^x +x^2\\]",
+            "answer": "\\( c_1e^x+c_2e^{3x}+c_3e^{-2x}-(1/6)xe^x+(1/6)x+(5/18)x+37/108\\)"
+        },
+        {
+            "question": "Find a general solution to the given equation. \\[ y'''+3y''-4y=e^{-2x}\\]",
+            "answer": "\\( c_1e^x+c_2e^{-2x}+c_3xe^{-2x}-(1/6)x^2e^{-2x}\\)"
+        },
+        {
+            "question": "Find a general solution to the given equation. \\[ y'''-3y''+3y'-y=e^x\\]",
+            "answer": "\\( c_1e^x+c_2xe^x+c_3x^2e^x+(1/6)x^3e^x\\)"
+        },
+        {
+            "question": "Find a differential operator that annihilates the given function. \\[ x^4-x^2+11\\]",
+            "answer": "\\(D^5\\)"
+        },
+        {
+            "question": "Find a differential operator that annihilates the given function. \\[ e^{-7x}\\]",
+            "answer": "\\( D+7\\)"
+        },
+        {
+            "question": "Find a differential operator that annihilates the given function. \\[ e^{2x}-6e^x\\]",
+            "answer": "\\( (D-2)(D-1) \\)"
+        },
+        {
+            "question": "Find a differential operator that annihilates the given function. \\[ x^2e^{-x}\\sin 2x\\]",
+            "answer": "\\( [(D+1)^2+4]^3 \\)"
+        },
+        {
+            "question": "Find a differential operator that annihilates the given function. \\[ xe^{-2x}+xe^{-5x}\\sin 3x\\]",
+            "answer": "\\( (D+2)^2[(D+5)^2+9]^2 \\)"
+        },
+        {
+            "question": "Use the annihilator method to determine the form of a particular solution for the given equation. \\[ u''-5u'+6u=\\cos 2x+1\\]",
+            "answer": "\\( c_3\\cos 2x+c_4\\sin 2x+c_5\\)"
+        },
+        {
+            "question": "Use the annihilator method to determine the form of a particular solution for the given equation. \\[ y''-5y'+6y=e^{3x}-x^2\\]",
+            "answer": "\\( c_3xe^{3x}+c_4x^2+c_5x+c_6\\)"
+        },
+        {
+            "question": "Use the annihilator method to determine the form of a particular solution for the given equation. \\[ y''-6y'+9y=\\sin 2x+x\\]",
+            "answer": "\\( c_3+c_4x+c_5\\cos 2x+c_6\\sin 2x\\)"
+        },
+        {
+            "question": "Use the annihilator method to determine the form of a particular solution for the given equation. \\[ y''+2y'+2y=e^{-x}\\cos x+x^2\\]",
+            "answer": "\\( c_3xe^{-x}\\cos x+c_4xe^{-x}\\sin x+c_4x^2+c_6x+c_7\\)"
+        },
+        {
+            "question": "Use the annihilator method to determine the form of a particular solution for the given equation. \\[ z'''-2z''+z'=x-e^x\\]",
+            "answer": "\\( c_2x+c_3x^2+c_6x^2e^x\\)"
+        },
+        {
+            "question": "Solve the given initial value problem. \\[ y'''+2y''-9y'-18y=-18x^2-18x+22; \\quad y(0)=-2, \\quad y'(0)=-8, \\quad y''(0)=-12 \\]",
+            "answer": "\\( -2e^{3x}+e^{-2x}+x^2-1\\)"
+        },
+        {
+            "question": "Solve the given initial value problem. \\[ y'''-2y''-3y'+10y=34xe^{-2x}-16e^{-2x}-10x^2+6x+34\\] \\[ y(0)=3, \\qquad y'(0)=0, \\qquad y''(0)=0\\]",
+            "answer": "\\( x^2e^{-2x}-x^2+3\\)"
+        },
+        {
+            "question": "Use the method of variation of parameters to determine a particular solution to the given equation. \\[ y'''-3y''+4y=e^{2x}\\]",
+            "answer": "\\( (1/6)x^2e^{2x}\\)"
+        },
+        {
+            "question": "Use the method of variation of parameters to determine a particular solution to the given equation. \\[ z'''+3z''-4z=e^{2x}\\]",
+            "answer": "\\( e^{2x}/16\\)"
+        },
+        {
+            "question": "Use the method of variation of parameters to determine a particular solution to the given equation. \\[ y'''+y'=\\tan x, \\qquad 0<x<\\pi/2\\]",
+            "answer": "\\( \\ln(\\sec x)-(\\sin x)\\ln(\\sec x+\\tan x)\\)"
+        },
+        {
+            "question": "Find a general solution to the Cauchy-Euler equation \\[ x^3y'''-3x^2y''+6xy'-6y=x^{-1}, \\qquad x>0\\] given that \\( \\{x,x^2,x^3\\} \\) is a fundamental solution set for the correspondong homogeneous equation.",
+            "answer": "\\( c_1x+c_2x^2+c_3x^3-(1/24)x^{-1}\\)"
+        },
+        {
+            "question": "Given that \\( \\{ e^x, e^{-x}, e^{2x}\\}\\) is a funamental solution set for the homogeneous equation corresponding to the equation \\[ y'''-2y''-y'+2y=g(x)\\] determine a formula involving integrals for a particular solution.",
+            "answer": "\\( -(1/2)e^x\\int e^{-x}g(x)dx+(1/6)e^{-x}\\int e^x g(x)dx + (1/3)e^{2x}\\int e^{-2x}g(x)dx\\)"
+        },
+        {
+            "question": "Find a general solution to the Cauchy-Euler equation \\[ x^3y'''-3xy'+3y=x^4\\cos x, \\qquad x>0\\]",
+            "answer": "\\( c_1x+c_2x^{-1}+c_3x^3-x\\sin x-3\\cos x+3x^{-1}\\sin x\\)"
+        }
     ],
     "Chapter 7: Laplace Transforms": [
-        {}
+        {
+           "question": "Use a Laplace transform table and the linearly of the Laplace transform to determine the following transform. \\[ \\mathcal{L}\\{ 6e^{-3t}-t^2+2t-8 \\} \\]",
+           "answer": "\\( \\frac{6}{s+3}-\\frac{2}{s^3}+\\frac{2}{s^2}-\\frac{8}{s}, s>0\\)"
+        },
+        {
+            "question": "Use a Laplace transform table and the linearly of the Laplace transform to determine the following transform. \\[ \\mathcal{L} \\{ t^3-te^t+e^{4t}\\cos t\\} \\]",
+            "answer": "\\( \\frac{6}{s^4}-\\frac{1}{(s-1)^2}+\\frac{s-4}{(s-4)^2+1}, s>4\\)"
+        },
+        {
+            "question": "Use a Laplace transform table and the linearly of the Laplace transform to determine the following transform. \\[ \\mathcal{L} \\{e^{3t}\\sin 6t-t^3+e^t \\} \\]",
+            "answer": "\\( \\frac{6}{(s-3)^2+36}-\\frac{6}{s^4}+\\frac{1}{s-1}, s>3 \\)"
+        },
+        {
+            "question": "Use a Laplace transform table and the linearly of the Laplace transform to determine the following transform. \\[ \\mathcal{L} \\{t^4e^{5t}-e^t\\cos \\sqrt{7}t \\} \\]",
+            "answer": "\\( \\frac{24}{(s-5)^5}-\\frac{s-1}{(s-1)^2+7}, s>5\\)"
+        },
+        {
+            "question": "Determine whether \\( f(t) \\) is continuous, piecewise continuous, or neither on \\( [0,10] \\).\\[ f(t) = \\begin{cases} 1, & 0 \\leq t \\leq 1 \\\\ (t - 2)^2, & 1 < t \\leq 10 \\end{cases} \\]",
+            "answer": "Continuous (hence piecewise continuous)"
+        },
+        {
+            "question": "Determine whether \\( f(t) \\) is continuous, piecewise continuous, or neither on \\( [0,10] \\). \\[ f(t) = \\begin{cases} 1, & 0 \\leq t < 1 \\\\ t - 1, & 1 < t < 3 \\\\ t^2 - 4, & 3 < t \\leq 10 \\end{cases} \\]",
+            "answer": "Piecewise continuous"
+        },
+        {
+            "question": "Determine whether \\( f(t) \\) is continuous, piecewise continuous, or neither on \\( [0,10]\\). \\[ f(t) = \\frac{t^2-t-20}{t^2+7t+10} \\]",
+            "answer": "Continuous (hence piecewise continuous)"
+        },
+        {
+            "question": "Determine whether \\( f(t) \\) is continuous, piecewise continuous, or neither on \\( [0,10] \\).\\[ f(t) = \\begin{cases} \\dfrac{1}{t}, & 0 < t < 1 \\\\ 1, & 1 \\leq t \\leq 2 \\\\ 1 - t, & 2 < t \\leq 10 \\end{cases} \\]",
+            "answer": "Neither"
+        },
+        {
+            "question": "Which of the following functions are of exponential order? <br> (a) \\(t^3\\sin t\\) <br> (b) \\( 100e^{49t} \\) <br> (c) \\(e^{t^3}\\) <br> (d) \\(t\\ln t\\) <br> (e) \\(\\cosh (t^2)\\) <br> (f) \\( \\frac{1}{t^2+1} \\) <br> (g) \\( \\sin(t^2)+t^4e^{6t} \\) <br> (h) \\(3-e^{t^2}+\\cos 4t \\) <br> (i) \\(\\exp \\{t^2/(t+1)\\} \\) <br> (j) \\(\\sin(e^{t^2})+e^{\\sin t} \\)",
+            "answer": "All but functions (c), (e), and (h)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ t^2+e^t\\sin 2t\\]",
+            "answer": "\\( \\frac{2}{s^3}+\\frac{2}{(s-1)^2+4} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ e^{-t}\\cos 3t+e^{6t}-1\\]",
+            "answer": "\\( \\frac{s+1}{(s+1)^2+9} + \\frac{1}{s-6} - \\frac{1}{s} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ 2t^2e^{-t}-t=\\cos 4t\\]",
+            "answer": "\\( \\frac{4}{(s+1)^3}-\\frac{1}{s^2}+\\frac{s}{s^2+16} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ (t-1)^4 \\]",
+            "answer": "\\( \\frac{24}{s^5}-\\frac{24}{s^4}+\\frac{12}{s^3}-\\frac{4}{s^2}+\\frac{1}{s} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ e^{-t}t\\sin 2t \\]",
+            "answer": "\\( \\frac{4(s+1)}{ [(s+1)^2+4]^2} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ \\cosh bt \\]",
+            "answer": "\\( \\frac{s}{s^2-b^2} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ \\sin^2 t\\]",
+            "answer": "\\( \\frac{1}{2s}-\\frac{s}{2(s^2+4)} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ \\cos^3 t\\]",
+            "answer": "\\( \\frac{3s}{4(s^2+1)}+\\frac{s}{4(s^2+9)} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ \\sin 2t\\sin 5t \\]",
+            "answer": "\\( \\frac{s}{2(s^2+9)}-\\frac{s}{2(s^2+49)} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given function. \\[ \\cos nt\\sin mt, m\\neq n\\]",
+            "answer": "\\( \\frac{n+m}{2[s^2+(n+m)^2]} + \\frac{m-n}{2[s^2+(m-n)^2]} \\)"
+        },
+        {
+            "question": "Given that \\(\\mathcal{L}\\{\\cos bt\\}(s)=s/(s^2+b^2)\\), use the translation property to compute \\(\\mathcal{L}\\{e^{at}\\cos bt\\}\\).",
+            "answer": "\\( \\frac{s-a}{(s-a)^2+b^2} \\)"
+        },
+        {
+            "question": "Let \\(g(t)\\) be the given function \\(f(t)\\) translated to the right by \\(c\\) units. Find \\(\\mathcal{L}\\{ g(t)\\}(s)\\).",
+            "answer": "\\( e^{-(\\pi/2)s}/(s^2+1)\\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform of the given function. \\[ \\frac{6}{(s-1)^4}\\]",
+            "answer": "\\( e^t t^3\\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform of the given function. \\[ \\frac{s+1}{s^2+2s+10} \\]",
+            "answer": "\\( e^{-t}\\cos 3t \\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform of the given function. \\[ \\frac{1}{s^2+4s+8} \\]",
+            "answer": "\\( (1/2)e^{-2t}\\sin 2t\\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform of the given function. \\[ \\frac{2s+16}{s^2+4s+13} \\]",
+            "answer": "\\( 2e^{-2t}\\cos 3t+4e^{-2t}\\sin 3t\\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform of the given function. \\[ \\frac{3s-15}{2s^2-4s+10} \\]",
+            "answer": "\\( (3/2)e^t \\cos 2t-3e^t \\sin 2t \\)"
+        },
+        {
+            "question": "Determine the partial fraction expansion for the given rational function. \\[ \\frac{s^2-26s-47}{(s-1)(s+2)(s+5)} \\]",
+            "answer": "\\( \\frac{6}{s+5}-\\frac{1}{s+2}-\\frac{4}{s-1} \\)"
+        },
+        {
+            "question": "Determine the partial fraction expansion for the given rational function. \\[ \\frac{-2s^2-3s-2}{s(s+1)^2} \\]",
+            "answer": "\\( \\frac{1}{(s+1)^2}-\\frac{2}{s} \\)"
+        },
+        {
+            "question": "Determine the partial fraction expansion for the given rational function. \\[ \\frac{8s-2s^2-14}{(s+1)(s^2-2s+5)} \\]",
+            "answer": "\\( -\\frac{3}{s+1}+\\frac{(s-1)+2}{(s-1)^2+4} \\)"
+        },
+        {
+            "question": "Determine the partial fraction expansion for the given rational function. \\[ \\frac{3s+5}{s(s^2+s-6)} \\]",
+            "answer": "\\( -\\frac{5}{6s}+\\frac{11}{10(s-2)}-\\frac{4}{15(s+3)} \\)"
+        },
+        {
+            "question": "Determine the partial fraction expansion for the given rational function. \\[ \\frac{1}{(s-3)(s^2+2s+2)} \\]",
+            "answer": "\\( \\frac{1}{17} \\left[ \\frac{1}{s-3}-\\frac{s+1}{(s+1)^2+1}-\\frac{4}{(s+1)^2+1} \\right] \\)"
+        },
+        {
+            "question": "Determine \\(\\mathcal{L}^{-1}\\{F\\}\\) \\[ F(s)=\\frac{6s^2-13s+2}{s(s-1)(s-6)} \\]",
+            "answer": "\\( (1/3)+e^t+(14/3)e^{6t} \\)"
+        },
+        {
+            "question": "Determine \\(\\mathcal{L}^{-1}\\{F\\}\\) \\[ F(s)=\\frac{5s^2+34s+53}{(s+3)^2(s+1)} \\]",
+            "answer": "\\( -e^{-3t}+2te^{-3t}+6e^{-t} \\)"
+        },
+        {
+            "question": "Determine \\(\\mathcal{L}^{-1}\\{F\\}\\) \\[ F(s) = \\frac{7s^2+23s+30}{(s-2)(s^2+2s+5)} \\]",
+            "answer": "\\( 8e^{2t}-e^{-t}\\cos 2t+3e^{-t}\\sin 2t\\)"
+        },
+        {
+            "question": "Determine \\(\\mathcal{L}^{-1}\\{F\\}\\) \\[ s^2F(s)-4F(s)=\\frac{5}{s+1} \\]",
+            "answer": "\\( -(5/3)e^{-t}+(5/12)e^{2t}+(5/4)e^{-2t} \\)"
+        },
+        {
+            "question": "Determine \\(\\mathcal{L}^{-1}\\{F\\}\\) \\[ sF(s)+2F(s) = \\frac{10s^2+12s+14}{s^2-2s+2} \\]",
+            "answer": "\\( 3e^{-2t}+7e^t \\cos t+11e^t \\sin t\\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ y''-2y'+5y=0; \\qquad y(0)=2, \\qquad y'(0)=4 \\]",
+            "answer": "\\( 2e^t \\cos 2t+e^t \\sin 2t\\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ y''+6y'+9y=0; \\qquad y(0)=-1, \\qquad y'(0)=6\\]",
+            "answer": "\\( -e^{-3t}+3te^{-3t} \\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ w''+w=t^2+2; \\qquad w(0)=1, \\qquad w'(0)=-1 \\]",
+            "answer": "\\( t^2+\\cos t-\\sin t\\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ y''-7y'+10y=9\\cos t+7\\sin t; \\qquad y(0)=5, \\qquad y'(0)=-4 \\]",
+            "answer": "\\(\\cos t-4e^{5t}+8e^{2t}\\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ z''+5z'-6z=21e^{t-1}; \\qquad z(1)=-1, \\qquad z'(1)=9\\]",
+            "answer": "\\( 3(t-1)e^{t-1}-e^{-6(t-1)} \\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ y''-y=t-2; \\qquad y(2)=3, \\qquad y'(2)=0\\]",
+            "answer": "\\( 2-t+e^{2-t}+2e^{t-2}\\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms. \\[ y''-y'-2y=-8\\cos t-2\\sin t; \\qquad y(\\pi/2)=1, \\qquad y'(\\pi/2)=0 \\]",
+            "answer": "\\( (7/5)\\sin t+(11/5)\\cos t+(3/5)e^{2t-\\pi}-e^{-(t-\\pi/2)} \\)"
+        },
+        {
+            "question": "Solve for \\( Y(s) \\), the Laplace transform of the solution \\(y(t)\\) to the given initial value problem. \\[ y''-3y'+2y=\\cos t; \\qquad y(0)=0, \\qquad y'(0)=-1\\]",
+            "answer": "\\( \\frac{-s^2+s-1}{(s^2+1)(s-1)(s-2)} \\)"
+        },
+        {
+            "question": "Solve for \\( Y(s) \\), the Laplace transform of the solution \\(y(t)\\) to the given initial value problem. \\[ y''+y'-y=t^3; \\qquad y(0)=1, \\qquad y'(0)=0\\]",
+            "answer": "\\( \\frac{s^5+s^4+6}{s^4(s^2+s-1)} \\)"
+        },
+        {
+            "question": "Solve for \\( Y(s) \\), the Laplace transform of the solution \\(y(t)\\) to the given initial value problem. \\[ y''+5y'-y=e^t-1; \\qquad y(0)=1, \\qquad y'(0)=1\\]",
+            "answer": "\\( \\frac{s^3+5s^2-6s+1}{s(s-1)(s^2+5s-1)} \\)"
+        },
+        {
+            "question": "Solve for \\( Y(s) \\), the Laplace transform of the solution \\(y(t)\\) to the given initial value problem. \\[y''-2y'+y=\\cos t-\\sin t; \\qquad y(0)=1, \\qquad y'(0)=3\\]",
+            "answer": "\\(\\frac{s^3+s^2+2s}{(s^2+1)(s-1)^2} \\)"
+        },
+        {
+            "question": "Solve for \\( Y(s) \\), the Laplace transform of the solution \\(y(t)\\) to the given initial value problem. \\[y''+4y=g(t); \\qquad y(0)=-1, \\qquad y'(0)=0\\] where \\[ g(t) = \\begin{cases} t, & t<2 \\\\ 5, & t>2 \\end{cases} \\]",
+            "answer": "\\( \\frac{-s^3+1+3se^{-2s}-e^{-2s}}{s^2(s^2+4)} \\)"
+        },
+        {
+            "question": "Solve the given third-order initial value problem for \\( y(t) \\) using the method of Laplace transforms. \\[ y'''-y''+y'-y=0; \\quad y(0)=1, \\quad y'(0)=1, \\quad y''(0)=3\\]",
+            "answer": "\\( 2e^t-\\cos t-\\sin t\\)"
+        },
+        {
+            "question": "Solve the given third-order initial value problem for \\( y(t) \\) using the method of Laplace transforms. \\[ y'''+3y''+3y'+y=0; \\quad y(0)=-4, \\quad y'(0)=4, \\quad y''(0)=-2 \\]",
+            "answer": "\\( (t^2-4)e^{-t}\\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to find a general solution to the given differential equation by assuming \\( y(0)=a\\) and \\( y'(0)=b \\), where \\(a\\) and \\(b\\) are arbitrary constants. \\[ y''-4y'+3y=0\\]",
+            "answer": "\\( (3a-b)e^t/2+(b-a)e^{3t}/2 \\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to find a general solution to the given differential equation by assuming \\( y(0)=a\\) and \\( y'(0)=b \\), where \\(a\\) and \\(b\\) are arbitrary constants. \\[ y''+2y'+2y=5\\]",
+            "answer": "\\( 5/2+(a-5/2)e^{-t}\\cos t+(a+b-5/2)e^{-t}\\sin t\\)"
+        },
+        {
+            "question": "Find a solution to the given initial value problem. \\[ y''+3ty'-6y=1; \\qquad y(0)=0, \\qquad y'(0)=0 \\]",
+            "answer": "\\( t^2/2\\)"
+        },
+        {
+            "question": "Find a solution to the given initial value problem. \\[ ty''-2y'+ty=0; \\qquad y(0)=1, \\qquad y'(0)=0 \\]",
+            "answer": "\\( \\cos t+t\\sin t+c(\\sin t-t\\cos t) \\), (\\( c\\) arbitrary)"
+        },
+        {
+            "question": "Determine the Laplace transform. \\[ (t-1)^2 u(t-1) \\]",
+            "answer": "\\( 2e^{-s}/s^3 \\)"
+        },
+        {
+            "question": "Determine the Laplace transform. \\[ t^2u(t-2) \\]",
+            "answer": "\\( e^{-2s}(4s^2+4s+2)/s^3\\)"
+        },
+        {
+            "question": "Compute the Laplace transform for the following. <br> \\[ g(t) = \\begin{cases} 0, & 0 < t < 1 \\\\ 2, & 1 < t < 2 \\\\ 1, & 2 < t < 3 \\\\ 3, & 3 < t \\end{cases} \\]",
+            "answer": "\\( (2e^{-s}-e^{-2s}+2e^{-3s})/s \\)"
+        },
+        {
+            "question": "Compute the Laplace transform for the following.",
+            "image": "images/DIFFEQ7.6.7.png",
+            "answer": "\\( [(e^{-s}-e^{-2s})(s+1)]/s^2 \\)"
+        },
+        {
+            "question": "Compute the Laplace transform for the following.",
+            "image": "images/DIFFEQ7.6.9.PNG",
+            "answer": "\\( (e^{-s}-2e^{-2s}+e^{-3s})/s^2 \\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform for the given function. \\[ \\frac{e^{-2s}}{s-1} \\]",
+            "answer": "\\( e^{t-2}u(t-2) \\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform for the given function. \\[ \\frac{e^{-2s}-3e^{-4s}}{s+2} \\]",
+            "answer": "\\( e^{-2(t-2)}u(t-2)-3e^{-2(t-4)}u(t-4) \\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform for the given function. \\[ \\frac{se^{-3s}}{s^2+4s+5} \\]",
+            "answer": "\\( e^{-2(t-3)}[\\cos (t-3)-2\\sin (t-3)]u(t-3) \\)"
+        },
+        {
+            "question": "Determine the inverse Laplace transform for the given function. \\[ \\frac{e^{-3s}(s-5)}{(s+1)(s+2)} \\]",
+            "answer": "\\( (7e^{6-2t}-6e^{3-t})u(t-3) \\)"
+        },
+        {
+            "question": "The current \\( I(t)\\) in an RLC series circuit is governed by the initial value \\[ I''(t)+2I'(t)+2I(t) = g(t) \\] \\[ I(0)=10, \\qquad I'(0)=0 \\] where \\[ g(t) := \\begin{cases} 20, & 0 < t < 3\\pi \\\\ 0, & 3\\pi < t < 4\\pi \\\\ 20, & 4\\pi < t \\end{cases} \\] Determine the current as a function of time \\(t\\).",
+            "answer": "\\( 10-10u(t-3\\pi)[1+e^{-(t-3\\pi)}(\\cos t+\\sin t)]+10u(t-4\\pi)[1-e^{-(t-4\\pi)}(\\cos t+\\sin t)] \\)"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms, then sketch the graph of the solution. \\[ y''+y=u(t-3); \\quad y(0)=0, \\quad y'(0)=1 \\]",
+            "answer": "\\( \\sin t+[1-\\cos(t-3)]u(t-3) \\)",
+            "answerImage": "images/DIFFEQ7.6.21.PNG"
+        },
+        {
+            "question": "Solve the initial value problem using the method of Laplace transforms, then sketch the graph of the solution. \\[ y''+y=t-(t-4)u(t-2); \\quad y(0)=0, \\quad y'(0)=1 \\]",
+            "answer": "\\( t+[4-t+\\sin (t-2)-2\\cos (t-2)]u(t-2) \\)",
+            "answerImage": "images/DIFFEQ7.6.23.PNG"
+        },
+        {
+            "question": "Solve the given initial value problem using the method of Laplace transforms. \\[ y''+2y'+2y=u(t-2\\pi)-u(t-4\\pi); \\quad y(0)=1, \\quad y'(0)=1 \\]",
+            "answer": "\\( e^{-t}\\cos t+2e^{-t}\\sin t+(1/2)[1-e^{2\\pi-t}(\\cos t+\\sin t)]u(t-2\\pi)-(1/2)[1-e^{4\\pi-t}(\\cos t+\\sin t)]u(t-4\\pi) \\)"
+        },
+        {
+            "question": "Solve the given initial value problem using the method of Laplace transforms. \\[ z''+3z'+2z=e^{-3t}u(t-2); \\quad z(0)=2, \\quad z'(0)=-3\\]",
+            "answer": "\\( e^{-t}+e^{-2t}+(1/2)[e^{-3t}-2e^{-2(t+1)}+e^{-(t+4)}]u(t-2) \\)"
+        },
+        {
+            "question": "Solve the given initial value problem using the method of Laplace transforms. \\[ y''+4y=g(t); \\quad y(0)=1, \\quad y'(0)=3\\] where \\[ g(t) = \\begin{cases} \\sin t, & 0 \\leq t \\leq 2\\pi \\\\ 0, & 2\\pi < t \\end{cases} \\]",
+            "answer": "\\( \\cos 2t+(1/3)[1-u(t-2\\pi)]\\sin t+(1/6)[8+u(t-2\\pi)]\\sin 2t \\)"
+        },
+        {
+            "question": "Solve the given initial value problem using the method of Laplace transforms. \\[ y''+5y'+6y=g(t); \\quad y(0)=0, \\quad y'(0)=2 \\] where \\[ g(t) = \\begin{cases} 0, & 0 \\leq t \\leq 1 \\\\ t, & 1 < t < 5 \\\\ 1, & 5 < t \\end{cases} \\]",
+            "answer": "\\( 2e^{-2t}-2e^{-3t}+[1/36+(1/6)(t-1)-(1/4)e^{-2(t-1)}+(2/9)e^{-3(t-1)}]u(t-1)-[19/36+(1/6)(t-5)-(7/4)e^{-2(t-5)}+(11/9)e^{-3(t-5)}]u(t-5)\\)"
+        },
+        {
+            "question": "The mixing tank in the image below initially holds 500 L of a brine solution with a salt concentration of 0.02 kg/L. For the first 10 min of operation, valvae A is open, adding 12 L/min of brine containing a 0.04 kg/L salt concentration. After 10 min, valve B is switched in, adding a 0.06 kg/L concentration at 12 L/min. The exit valve C removes 12 L/min, thereby keeping the volume constant. Find the concentration of salt in the tank as a function of time.",
+            "image": "images/DIFFEQ7.6.33.PNG",
+            "answer": "\\( 0.04-0.02e^{-3t/125}+0.02u(t-10)[1-e^{-3(t-10)/125}]\\)"
+        },
+        {
+            "question": "Determine \\( \\mathcal{L}\\{f\\}\\), where \\(f(t)\\) is periodic with the given period. Also graph \\( f(t) \\). \\[ f(t)=t, \\quad 0 < t < 2\\] and \\(f(t)\\) has period 2.",
+            "answer": "\\( \\frac{1-2se^{-2s}-e^{-2s}}{s^2(1-e^{-2s})} \\)",
+            "answerImage": "images/DIFFEQ7.7.1.PNG"
+        },
+        {
+            "question": "Determine \\( \\mathcal{L}\\{f\\}\\), where \\(f(t)\\) is periodic with the given period. Also graph \\( f(t) \\). \\[ f(t)= \\begin{cases} e^{-t}, & 0 < t < 1 \\\\ 1, & 1 < t < 2 \\end{cases} \\] and \\(f(t)\\) has period 2.",
+            "answer": "\\( \\frac{1}{1-e^{-2s}}\\left[ \\frac{1-e^{-s-1}}{s+1} + \\frac{e^{-s}-e^{-2s}}{s} \\right] \\)",
+            "answerImage": "images/DIFFEQ7.7.3.png"
+        },
+        {
+            "question": "Determine \\( \\mathcal{L}\\{f\\} \\), where the periodic function is described by its graph.",
+            "image": "images/DIFFEQ7.7.5.PNG",
+            "answer": "\\( \\frac{1}{s(1+e^{-as})} \\)"
+        },
+        {
+            "question": "Determine \\( \\mathcal{L}\\{f\\} \\), where the periodic function is described by its graph.",
+            "image": "images/DIFFEQ7.7.7.PNG",
+            "answer": "\\( \\frac{1-e^{-as}}{as^2(1+e^{-as})} \\)"
+        },
+        {
+            "question": "Find a Taylor series for \\( f(t) \\) about \\( t=0 \\). Assuming the Laplace transform of \\( f(t) \\) can be computed term by term, find an expansion for \\( \\mathcal{L}\\{f\\}(s)\\) in powers of \\( 1/s \\). If possible, sum the series. \\[ f(t) = e^t \\]",
+            "answer": "\\( \\sum_{n=1}^\\infty \\frac{1}{s^n} = \\frac{1}{s-1} \\)"
+        },
+        {
+            "question": "Find a Taylor series for \\( f(t) \\) about \\( t=0 \\). Assuming the Laplace transform of \\( f(t) \\) can be computed term by term, find an expansion for \\( \\mathcal{L}\\{f\\}(s)\\) in powers of \\( 1/s \\). If possible, sum the series. \\[ f(t) = \\frac{1-\\cos t}{t} \\]",
+            "answer": "\\( \\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{2ns^{2n}} = \\frac{1}{2}\\ln \\left( 1+\\frac{1}{s^2} \\right) \\)"
+        },
+        {
+            "question": "Use the convolution theorem to obtain a formula for the solution to the given initial value problem, where \\( g(t) \\) is piecewise continuous on \\( [0,\\infty) \\) and of exponential order. \\[ y''-2y'+y=g(t); \\quad y(0)=-1, \\quad y'(0)=1 \\]",
+            "answer": "\\( 2te^t - e^t + \\int_0^t e^{t-v}(t-v)g(v)dv \\)"
+        },
+        {
+            "question": "Use the convolution theorem to obtain a formula for the solution to the given initial value problem, where \\( g(t) \\) is piecewise continuous on \\( [0,\\infty) \\) and of exponential order. \\[ y''+4y'+5y=g(t); \\quad y(0)=1, \\quad y'(0)=1 \\]",
+            "answer": "\\( \\int_0^t g(v)e^{2v-2t}\\sin(t-v)dv+e^{-2t}\\cos t+3e^{-2t}\\sin t\\)"
+        },
+        {
+            "question": "Use the convolution theorem to find the inverse Laplace transform of the given function. \\[ \\frac{1}{s(s^2+1)} \\]",
+            "answer": "\\( 1-\\cos t\\)"
+        },
+        {
+            "question": "Use the convolution theorem to find the inverse Laplace transform of the given function. \\[ \\frac{14}{(s+2)(s-5)} \\]",
+            "answer": "\\( 2e^{5t}-2e^{-2t} \\)"
+        },
+        {
+            "question": "Use the convolution theorem to find the inverse Laplace transform of the given function. \\[ \\frac{s}{(s^2+1)^2} \\]",
+            "answer": "\\( (t/2)\\sin t\\)"
+        },
+        {
+            "question": "Use the convolution theorem to find the inverse Laplace transform of the given function. \\[ \\frac{s}{(s-1)(s+2)} \\]",
+            "answer": "\\( (2/3)e^{-2t}+(1/3)e^t \\)"
+        },
+        {
+            "question": "Find the Laplace transform of \\[ f(t) := \\int_0^t (t-v)e^{3v}dv \\]",
+            "answer": "\\( s^{-2}(s-3)^{-1} \\)"
+        },
+        {
+            "question": "Solve the given integral equation or integro-differential equation for \\( y(t) \\). \\[ y(t)+3\\int_0^t y(v)\\sin (t-v)dv = t\\]",
+            "answer": "\\( t/4+(3/8)\\sin 2t\\)"
+        },
+        {
+            "question": "Solve the given integral equation or integro-differential equation for \\( y(t) \\). \\[ y(t)=\\int_0^t (t-v)y(v)dv=1 \\]",
+            "answer": "\\( \\cos t\\)"
+        },
+        {
+            "question": "Solve the given integral equation or integro-differential equation for \\( y(t) \\). \\[ y(t)+\\int_0^t (t-v)^2y(v)dv=t^3+3 \\]",
+            "answer": "\\( 3\\)"
+        },
+        {
+            "question": "Solve the given integral equation or integro-differential equation for \\( y(t) \\). \\[ y'(t)-y(t)-\\int_0^t y(v)\\sin(t-v)dv=-\\sin t, \\quad y(0)=1\\]",
+            "answer": "\\( e^{-t/2}\\cos(\\sqrt{3}t/2)-(1/\\sqrt{3})e^{-t/2}\\sin(\\sqrt{3}t/2) \\)"
+        },
+        {
+            "question": "In the following problem, a linear system is governed by the given initial value problem. Find the transfer function \\( H(s)\\) for the system and the impulse response function \\( h(t) \\) and give a formula for the solution to the initial value problem. \\[ y''+9y=g(t); \\quad y(0)=2, \\quad y'(0)=-3 \\]",
+            "answer": "\\( H(s)=(s^2+9)^{-1}; \\quad h(t) = (1/3)\\sin 3t; \\quad y_k (t)=(1/3)\\int_0^t [\\sin 3(t-v)]g(v)dv+2\\cos 3t-\\sin 3t\\)"
+        },
+        {
+            "question": "In the following problem, a linear system is governed by the given initial value problem. Find the transfer function \\( H(s)\\) for the system and the impulse response function \\( h(t) \\) and give a formula for the solution to the initial value problem. \\[ y''-y'-6y=g(t); \\quad y(0)=1, \\quad y'(0)=8\\]",
+            "answer": "\\( H(s)=(s^2-s-6)^{-1}; \\quad h(t)=(e^{3t}-e^{-2t})/5; \\quad y_k (t)=2e^{3t}-e^{-2t}; \\quad y(t)=(1/5)\\int_0^t [e^{3(t-v)}-e^{-2(t-v)}]g(v)dv + 2e^{3t}-e^{-2t} \\)"
+        },
+        {
+            "question": "In the following problem, a linear system is governed by the given initial value problem. Find the transfer function \\( H(s)\\) for the system and the impulse response function \\( h(t) \\) and give a formula for the solution to the initial value problem. \\[ y''-2y'+5y=g(t); \\quad y(0)=0, \\quad y'(0)=2 \\]",
+            "answer": "\\( H(s)=(s^2-2s+5)^{-1}; \\quad h(t)=(1/2)e^t\\sin 2t; \\quad y_k(t)=e^t \\sin 2t; \\quad y(t)=(1/2)\\int_0^t e^{(t-v)}[\\sin 2(t-v)]g(v)dv+e^t\\sin 2t\\)"
+        },
+        {
+            "question": "The current \\( I(t)\\) in an RLC circuit with voltage source \\( E(t) \\) is governed by the initial value problem \\[ LI''(t)+RI'(t)+\\frac{1}{C}I(t)=e(t) \\] \\[ I(0)=a, \\quad I'(0)=b \\] where \\( e(t) = E'(t) \\). For the given constants \\(R, L, C, a\\), and \\(b\\), find a formula for hte solution \\( I(t)\\) in terms of \\( e(t) \\). <br> R = 20 \\( \\Omega\\), L = 5 H, C = 0.005 F, \\(a\\) = -1 A, b = 8 A/sec.",
+            "image": "images/DIFFEQ7.8.29.PNG",
+            "answer": "\\( (1/30)\\int_0^t e^{-2(t-v)}[\\sin 6(t-v)]e(v)dv-e^{-2t}\\cos 6t+e^{-2t}\\sin 6t\\)"
+        },
+        {
+            "question": "Use the convolution theorem and Laplace transforms to compute \\(1 * 1 * 1\\).",
+            "answer": "\\( t^2/2\\)"
+        },
+        {
+            "question": "Evaluate the given integral. \\[ \\int_{-\\infty}^{\\infty} (t^2-1)\\delta (t)dt \\]",
+            "answer": "-1"
+        },
+        {
+            "question": "Evaluate the given integral. \\[ \\int_{-\\infty}^{\\infty} (\\sin 3t)\\delta \\left(t-\\frac{\\pi}{2} \\right) dt\\]",
+            "answer": "-1"
+        },
+        {
+            "question": "Evaluate the given integral. \\[ \\int_0^{\\infty} e^{-2t}\\delta (t-1)dt\\]",
+            "answer": "\\( e^{-2} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given generalized function. \\[ \\delta(t-1)-\\delta(t-3) \\]",
+            "answer": "\\( e^{-s}-e^{-3s} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given generalized function. \\[ t\\delta (t-1) \\]",
+            "answer": "\\( e^{-s} \\)"
+        },
+        {
+            "question": "Determine the Laplace transform of the given generalized function. \\[ \\delta(t-\\pi)\\sin t\\]",
+            "answer": "0"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem. \\[ w''+w=\\delta (t-\\pi); \\quad w(0)=0, \\quad w'(0)=0\\]",
+            "answer": "\\( -(\\sin t)u(t-\\pi) \\)"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem. \\[ y''+2y'-3y=\\delta(t-1)-\\delta(t-2); \\quad y(0)=2, \\quad y'(0)=-2\\]",
+            "answer": "\\( e^t+e^{-3t}+(1/4)(e^{t-1}-e^{3-3t})u(t-1)-(1/4)(e^{t-2}-e^{6-3t})u(t-2)\\)"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem. \\[ y''-y=4\\delta (t-2)+t^2; \\quad y(0)=0. \\quad y'(0)=2\\]",
+            "answer": "\\( 2(e^{t-2}-e^{-(t-2)})u(t-2)+2e^t-t^2-2\\)"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem. \\[ w''+6w'+5w=e^t \\delta(t-1)\\]",
+            "answer": "\\( e^{-t}-e^{-5t}+(e/4)(e^{1-t}-e^{5-5t})u(t-1)\\)"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem and sketch a graph of the solution. \\[ y''+y=\\delta(t-2\\pi); \\quad y(0)=0, \\quad y'(0)=1\\]",
+            "answer": "\\( \\sin t+(\\sin t)u(t-2\\pi)\\)",
+            "answerImage": "images/DIFFEQ7.9.21.PNG"
+        },
+        {
+            "question": "Solve the given symbolic initial value problem and sketch a graph of the solution. \\[ y''+y=-\\delta(t-\\pi)+\\delta(t-2\\pi); \\quad y(0)=0, \\quad y'(0)=1\\]",
+            "answer": "\\( \\sin t+(\\sin t)u(t-\\pi)+(\\sin t)u(t-2\\pi)\\)",
+            "answerImage": "images/DIFFEQ7.9.23.PNG"
+        },
+        {
+            "question": "Find the impulse response function \\( h(t) \\) by using the fact that \\( h(t) \\) is the solution to the symbolic initial value problem with \\( g(t) = \\delta (t) \\) and zero initial conditions. \\[ y''+4y'+8y=g(t) \\]",
+            "answer": "\\( (1/2)e^{-2t}\\sin 2t\\)"
+        },
+        {
+            "question": "Find the impulse response function \\( h(t) \\) by using the fact that \\( h(t) \\) is the solution to the symbolic initial value problem with \\( g(t) = \\delta (t) \\) and zero initial conditions. \\[ y''-2y'+5y=g(t) \\]",
+            "answer": "\\( (1/2)e^t \\sin 2t\\)"
+        },
+        {
+            "question": "A mass attached to a spring is released from rest 1 m below the equilibrium position for the mass-spring system and begins to vibrate. After \\( \\pi/2\\) sec, the mass is struck by a hammer exerting an impulse on the mass. The system is governed by the symbolic initial value problem \\[ \\frac{d^2x}{dt^2}+9x=-3\\delta \\left(t-\\frac{\\pi}{2}\\right) \\] \\[ x(0)=1, \\quad \\frac{dx}{dt}(0)=0\\] where \\( x(t) \\) denotes the displacement from equilibrium at time \\( t\\). What happens to the mass after it is struck?",
+            "answer": "The mass remains stopped at \\( x(t) =0 \\), \\(t > \\pi/2\\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'=3x-2y; \\quad x(0)=1 \\\\ y'=3y-2x; \\quad y(0)=1\\]",
+            "answer": "\\( x=e^t; \\quad y=e^t\\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ z'+w'=z-w;\\quad z(0)=1\\] \\[ z'-w'=z-w; \\quad w(0)=0\\]",
+            "answer": "\\( z=e^t; \\quad w\\equiv 0\\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'=y+\\sin t; \\quad x(0)=2\\] \\[ y'=x+2\\cos t; \\quad y(0)=0\\]",
+            "answer": "\\[ x=(7/4)e^t+(7/4)e^{-t}-(3/2)\\cos t\\] \\[ y=(7/4)e^t-(7/4)e^{-t}+(1/2)\\sin t\\]"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ (D-4)[x]+6y=9e^{-3t}; \\quad x(0)=-9 \\] \\[ x-(D-1)[y]=5e^{-3t}; \\quad y(0)=4\\]",
+            "answer": "\\[ x=-(150/17)e^{5t/2}\\cos(\\sqrt{15}t/2)-(334\\sqrt{15}/85)e^{5t/2}\\sin(\\sqrt{15}t/2)-(3/17)e^{-3t}\\] \\[ y=(46/17)e^{5t/2}\\cos(\\sqrt{15}t/2)-(146\\sqrt{15}/85)e^{5t/2}\\sin(\\sqrt{15}t/2)+(22/17)e^{-3t}\\]"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x''+2y'=-x; \\quad x(0)=2, \\quad x'(0)=-7\\] \\[ -3x''+2y''=3x-4y; \\quad y(0)=4, \\quad y'(0)=-9\\]",
+            "answer": "\\( x=4e^{-2t}-e^{-t}-\\cos t; \\quad y=5e^{-2t}-e^{-t} \\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'+y=1-u(t-2); \\quad x(0)=0 \\] \\[x+y'=0; \\quad y(0)=0\\]",
+            "answer": "\\[ x=(e^t-e^{-t})/2-(1/2)[e^{t-2}-e^{-(t-2)}]u(t-2) \\] \\[ y=1-(e^t+e^{-t})/2-[1-(e^{t-2}+e^{-(t-2)})/2]u(t-2)\\]"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'-y'=(\\sin t)u(t-\\pi); \\quad x(0)=1 \\] \\[x+y'=0; \\quad y(0)=1\\]",
+            "answer": "\\[ x=e^{-t}-(1/2)[e^{-(t-\\pi)}+\\cos t-\\sin t]u(t-\\pi)\\] \\[ y=e^{-t}+[1-(1/2)e^{-(t-\\pi)}+(1/2)\\cos t+(1/2)\\sin t]u(t-\\pi) \\]"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'-2y=2; \\quad x(1)=1\\] \\[ x'+x-y'=t^2+2t-1; \\quad y(1)=0\\]",
+            "answer": "\\( x=t^2; \\quad y=t-1 \\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'+x-y'=2(t-2)e^{t-2}; \\quad x(2)=0\\] \\[x''-x'-2y=-e^{t-2}; \\quad x'(2)=1, \\quad y(2)=1\\]",
+            "answer": "\\( x=(t-2)e^{t-2}; \\quad y=e^{t-2} \\)"
+        },
+        {
+            "question": "Use the method of Laplace transforms to solve the given initial value problem. Here \\(x'\\), \\(y'\\), etc., denotes the differentiation with respect to \\(t\\); so does the symbol \\(D\\). \\[ x'=3x+y-2z; \\quad x(0)=-6 \\] \\[ y'=-x+2y+z; \\quad y(0)=2\\] \\[z'=4x+y-3z; \\quad z(0)=-12\\]",
+            "answer": "\\( x=-7e^{-t}+e^t; \\quad y=2e^{-t} \\quad z=-13e^{-t}+e^t \\)"
+        }
     ],
     "Chapter 8: Series Solutions of Differential Equations": [
-        {}
+        {
+            "question": "Determine the first three nonzero terms in the Taylor polynomial approximation for the given initial value problem. \\[ y'=x^2+y^2; \\quad y(0)=1\\]",
+            "answer": "\\( 1+x+x^2+\\dots \\)"
+        },
+        {
+            "question": "Determine the first three nonzero terms in the Taylor polynomial approximation for the given initial value problem. \\[ y'=\\sin y+e^x; \\quad y(0)=0 \\]",
+            "answer": "\\( x+x^2+(1/2)x^3+\\dots \\)"
+        },
+        {
+            "question": "Determine the first three nonzero terms in the Taylor polynomial approximation for the given initial value problem. \\[ x''+tx=0; \\quad x(0)=1, \\quad x'(0)=0 \\]",
+            "answer": "\\( 1-(1/6)t^3+(1/180)t^6+\\dots\\)"
+        },
+        {
+            "question": "Determine the first three nonzero terms in the Taylor polynomial approximation for the given initial value problem. \\[ y''(\\theta)+y(\\theta)^3=\\sin \\theta; \\quad y(0)=0, \\quad y'(0)=0\\]",
+            "answer": "\\( (1/6)\\theta^3-(1/120)\\theta^5+(1/5040)\\theta^7 + \\dots\\)"
+        },
+        {
+            "question": "In the study of a nonlinear spring with periodic forcing, the following equation arises: \\[ y''+ky+ry^3=A\\cos \\omega t\\] Let \\( k=r=A=1\\) and \\(\\omega = 10\\). Find the first three nonzero terms in the Taylor polynomial approximations to the solution with initial values \\( y(0)=0, y'(0)=1\\).",
+            "answer": "\\( t+(1/2)t^2-(1/6)t^3+\\dots \\)"
+        },
+        {
+            "question": "The solution to the initial value problem \\[ xy''(x)+2y'(x)+xy(x)=0; \\quad y(0)=1, \\quad y'(0)=0\\] has derivatives of all orders at \\(x=0\\) (although this is far from obvious). Use L'Hopital's rule to compute the Taylor polynomial of degree 2 approximating this solution.",
+            "answer": "\\( 1-x^2/6\\)"
+        },
+        {
+            "question": "Determine the convergence set of the given power series. \\[ \\sum_{n=0}^{\\infty} \\frac{2^{-n}}{n+1} (x-1)^n \\]",
+            "answer": "\\( [-1,3) \\)"
+        },
+        {
+            "question": "Determine the convergence set of the given power series. \\[ \\sum_{n=0}^{\\infty} \\frac{n^2}{2^n}(x+2)^n \\]",
+            "answer": "\\( (-4,0) \\)"
+        },
+        {   
+            "question": "Determine the convergence set of the given power series. \\[ \\sum_{n=1}^{\\infty} \\frac{3}{n^3}(x-2)^n \\]",
+            "answer": "\\( [1,3] \\)"
+        },
+        {
+            "question": "Find the power series expansion \\( \\sum_{n=0}^{\\infty} a_n x^n\\) for \\( f(x)+g(x) \\), given the expansions for \\(f(x)\\) and \\(g(x)\\). \\[ f(x)=\\sum_{n=0}^{\\infty} \\frac{1}{n+1}x^n, \\quad g(x) = \\sum_{n=1}^{\\infty} 2^{-n}x^{n-1} \\]",
+            "answer": "\\( \\sum_{n=0}^{\\infty} \\left[ \\frac{1}{n+1}+2^{-n-1}\\right]x^n \\)"
+        },
+        {
+            "question": "Find the first three nonzero terms in the power series expansion for the product \\( f(x)g(x) \\). \\[ f(x) = e^{-x} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n}{n!}x^n\\] \\[ g(x)=(1+x)^{-1}=\\sum_{n=0}^{\\infty} (-1)^n x^n \\]",
+            "answer": "\\( 1-2x+(5/2)x^2+\\dots \\)"
+        },
+        {
+            "question": "Find a power series expansion for \\( f'(x) \\), given the expansion for \\(f(x) \\). \\[ f(x)=(1+x)^{-1} = \\sum_{n=0}^{\\infty} (-1)^n x^n \\]",
+            "answer": "\\( \\sum_{n=1}^{\\infty} (-1)^n nx^{n-1} \\)"
+        },
+        {
+            "question": "Find a power series expansion for \\( f'(x) \\), given the expansion for \\(f(x) \\). \\[ f(x) = \\sum_{k=0}^{\\infty} a_k x^{2k} \\]",
+            "answer": "\\[ \\sum_{k=1}^{\\infty} a_k 2kx^{2k-1} \\]"
+        },
+        {
+            "question": "Find a power series expansion for \\( g(x) = \\int_0^x f(t)dt\\), given the expansion for \\( f(x) \\). \\[ f(x)=(1+x)^{-1} = \\sum_{n=0}^{\\infty} (-1)^n x^n \\]",
+            "answer": "\\[ \\ln(x+1)=\\sum_{n=0}^{\\infty} \\frac{(-1)^n}{n+1}x^{n+1} \\]"
+        },
+        {
+            "question": "Express the given power series as a series with generic term \\(x^k\\). \\[ \\sum_{n=1}^{\\infty} na_n x^{n-1} \\]",
+            "answer": "\\[ \\sum_{k=0}^{\\infty} (k+1)a_{k+1}x^k \\]"
+        },
+        {
+            "question": "Express the given power series as a series with generic term \\(x^k\\). \\[ \\sum_{n=0}^{\\infty} a_n x^{n+1} \\]",
+            "answer": "\\[ \\sum_{k=1}^{\\infty} a_{k-1}x^k\\]"
+        },
+        {
+            "question": "Determine the Taylor series about the point \\(x_0\\) for the given functions and values of \\(x_0\\). \\[ f(x)=\\cos x, \\quad x_0=\\pi \\]",
+            "answer": "\\[ \\sum_{n=0}^{\\infty} \\frac{(-1)^{n+1}(x-\\pi)^{2n}}{(2n)!} \\]"
+        },
+        {
+            "question": "Determine the Taylor series about the point \\(x_0\\) for the given functions and values of \\(x_0\\). \\[ f(x)=\\frac{1+x}{1-x}, \\quad x_0 =0 \\]",
+            "answer": "\\[ 1+\\sum_{n=1}^{\\infty} 2x^n \\]"
+        },
+        {
+            "question": "Determine the Taylor series about the point \\(x_0\\) for the given functions and values of \\(x_0\\). \\[ f(x)=x^3+3x-4, \\quad x_0=1 \\]",
+            "answer": "\\[ 6(x-1)+3(x-1)^2+(x-1)^3 \\]"
+        },
+        {
+            "question": "Determine all the singular points of the given differential equation. \\[ (x+1)y''-x^2y'+3y=0\\]",
+            "answer": "-1"
+        },
+        {
+            "question": "Determine all the singular points of the given differential equation. \\[ (\\theta^2-2)y''+2y'+(\\sin \\theta)y=0\\]",
+            "answer": "\\( \\pm \\sqrt{2} \\)"
+        },
+        {
+            "question": "Determine all the singular points of the given differential equation. \\[ (t^2-t-2)x''+(t+1)x'-(t-2)x=0\\]",
+            "answer": "-1, 2"
+        },
+        {
+            "question": "Determine all the singular points of the given differential equation. \\[ (\\sin x)y''+(\\cos x)y=0\\]",
+            "answer": "\\( x=n\\pi\\), \\(n\\) an integer"
+        },
+        {
+            "question": "Determine all the singular points of the given differential equation. \\[ (\\sin \\theta)y''-(\\ln \\theta)y=0\\]",
+            "answer": "\\( \\theta \\leq 0\\) and \\(\\theta = n\\pi, \\quad n=1,2,3,\\dots \\)"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for a general solution to the given differential equation. \\[ y'+(x+2)y=0\\]",
+            "answer": "\\[ y=a_0(1-2x+(3/2)x^2-x^3/3+\\dots) \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for a general solution to the given differential equation. \\[ z''-x^2z=0\\]",
+            "answer": "\\[ a_0(1+x^4/1\\dots) + a_1(x+x^5/20+\\dots) \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for a general solution to the given differential equation. \\[ y''+(x-1)y'+y=0\\]",
+            "answer": "\\[ a_0(1-x^2/2-x^3/6+\\dots)+a_1(x+x^2/2-x^3/6+\\dots)\\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for a general solution to the given differential equation. \\[ w''-x^2w'+w=0\\]",
+            "answer": "\\[ a_0(1-x^2+\\dots)+a_1(x-x^3/6+\\dots) \\]"
+        },
+        {
+            "question": "Find a power series expansion about \\( x=0\\) for a general solution to the given differential equation. Include a general formula for your coefficients. \\[ y'-2xy=0\\]",
+            "answer": "\\[ a_0 \\sum_{n=0}^{\\infty} \\frac{1}{n!}x^{2n}=a_0e^{x^2} \\]"
+        },
+        {
+            "question": "Find a power series expansion about \\( x=0\\) for a general solution to the given differential equation. Include a general formula for your coefficients. \\[ y''-xy'+4y=0\\]",
+            "answer": "\\[ a_0(1-2x^2+x^4/3)+a_1\\left[ x+\\sum_{k=1}^{\\infty} \\frac{(-3)(-1)\\cdots (2k-5)}{(2k+1)!}x^{2k+1} \\right] \\]"
+        },
+        {
+            "question": "Find a power series expansion about \\( x=0\\) for a general solution to the given differential equation. Include a general formula for your coefficients. \\[ z''-x^2z'-xz=0\\]",
+            "answer": "\\[ a_{3k+2}=0, k=0,1,\\dots \\] \\[ a_0\\left(1+\\sum_{k=1}^{\\infty} \\frac{[1\\cdot 4\\cdot 7\\cdots (3k-2)]^2}{(3k)!}x^{3k}\\right)+a_1\\left(x+\\sum_{k=1}^{\\infty} \\frac{[2\\cdot 5\\cdot 8\\cdots (3k-1)]^2}{(3k+1)!}x^{3k+1}\\right)\\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for the solution to the given initial value problem. \\[ w''+3xw'-w=0; \\quad w(0)=2, \\quad w'(0)=0 \\]",
+            "answer": "\\[ 2+x^2-(5/12)x^4+(11/72)x^6+\\cdots \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x=0\\) for the solution to the given initial value problem. \\[ (x+1)y''-y=0; \\quad y(0)=0, \\quad y'(0)=1\\]",
+            "answer": "\\[ x+(1/6)x^3-(1/12)x^(7/120)x^5+\\cdots \\]"
+        },
+        {
+            "question": "Use the first few terms of the power series expansion to find a cubic polynomial approximation for the solution to the given initial value problem. \\[ y''+y'-xy=0; \\quad y(0)=1, \\quad y'(0)=2 \\]",
+            "answer": "\\[ 1-2x+x^2-(1/6)x^3 \\]"
+        },
+        {
+            "question": "Use the first few terms of the power series expansion to find a cubic polynomial approximation for the solution to the given initial value problem. \\[ (x^2+2)y''+2xy'+3y=0; \\quad y(0)+1, \\quad y'(0)=2\\]",
+            "answer": "\\[ 1+2x-(3/4)x^2-(5/6)x^3 \\]"
+        },
+        {
+            "question": "Find a minimum value for the radius of convergence of a power series solution about \\(x_0\\). \\[ (x+1)y''-3xy'+2y=0; \\quad x_0=1\\]",
+            "answer": "2"
+        },
+        {
+            "question": "Find a minimum value for the radius of convergence of a power series solution about \\(x_0\\). \\[ (1+x+x^2)y''-3y=0; \\quad x_0=1\\]",
+            "answer": "\\( \\sqrt{3}\\)"
+        },
+        {
+            "question": "Find a minimum value for the radius of convergence of a power series solution about \\(x_0\\). \\[ y''-(\\tan x)y'+y=0; \\quad x_0=0\\]",
+            "answer": "\\( \\pi/2\\)"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x_0\\) for a general solution to the given differential equation with the given value for \\(x_0\\). \\[ y'+2(x-1)y=0; \\quad x_0=1\\]",
+            "answer": "\\[ a_0[1-(x-1)^2+(1/2)(x-1)^4-(1/6)(x-1)^6+\\cdots] \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x_0\\) for a general solution to the given differential equation with the given value for \\(x_0\\). \\[ (x^2-2x)y''+2y=0; \\quad x_0=1\\]",
+            "answer": "\\[ a_0[1+(x-1)^2+\\cdots]+a_1[(x-1)+(1/3)(x-1)^3+\\cdots ] \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion about \\(x_0\\) for a general solution to the given differential equation with the given value for \\(x_0\\). \\[ x^2y''-y'+y=0; \\quad x_0=2\\]",
+            "answer": "\\[ a_0[1-(1/8)(x-2)^2+(1/32)(x-2)^3 + \\cdots ]+a_1[(x-2)+(1/8)(x-2)^2-(7/96)(x-2)^3+\\cdots ] \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion of the solution to the given initial value problem. \\[ x'+(\\sin t)x=0; \\quad x(0)=1\\]",
+            "answer": "\\[ 1-(1/2)t^2+(1/6)t^4-(31/720)t^6+\\cdots \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion of the solution to the given initial value problem. \\[ (x^2+1)y''-e^x y'+y=0; \\quad y(0)=1, \\quad y'(0)=1\\]",
+            "answer": "\\[ 1+x+(1/24)x^4+(1/60)x^5+\\cdots \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion of the solution to the given initial value problem. \\[ y''-(\\sin x)y=0; \\quad y(\\pi)=1, \\quad y'(\\pi)=0\\]",
+            "answer": "\\[ 1-(1/6)(x-\\pi)^3+(1/120)(x-\\pi)^5+(1/180)(x-\\pi)^6+\\cdots \\]"
+        },
+        {
+            "question": "Find at least the first four nonzero terms in a power series expansion of the solution to the given initial value problem. \\[ y''-e^{2x}y'+(\\cos x)y=0; \\quad y(0)=-1, \\quad y'(0)=1\\]",
+            "answer": "\\[ -1+x+x^2+(1/2)x^3+\\cdots \\]"
+        },
+        {
+            "question": "Classify each singular point (real or complex) of the given equation as regular or irregular. \\[ (x^2-1)y''+xy'+3y=0\\]",
+            "answer": "\\( \\pm 1\\) are regular."
+        },
+        {
+            "question": "Classify each singular point (real or complex) of the given equation as regular or irregular. \\[ (x^2+1)z''+7x^2z'-3xz=0\\]",
+            "answer": "\\( \\pm i\\) are regular."
+        },
+        {
+            "question": "Classify each singular point (real or complex) of the given equation as regular or irregular. \\[ (x^2-1)^2y''-(x-1)y'+3y=0\\]",
+            "answer": "1 is regular, -1 is irregular"
+        },
+        {
+            "question": "Classify each singular point (real or complex) of the given equation as regular or irregular. \\[ (t^2-t-2)^2x''+(t^2-4)x'-tx=0\\]",
+            "answer": "2 is regular, -1 is irregular"
+        },
+        {
+            "question": "Classify each singular point (real or complex) of the given equation as regular or irregular. \\[ (x^2+2x-8)^2y''+(3x+12)y'-x^2y=0\\]",
+            "answer": "-4 is regular and 2 is irregular."
+        },
+        {
+            "question": "Find the indicial equation and the exponents for the specified singularity of the given differential equation. \\[ x^2y''-2xy'-10y=0\\] at \\(x=0\\).",
+            "answer": "\\[ r^2-3r-10=0; \\quad r_1=5, \\quad r_2=-2\\]"
+        },
+        {
+            "question": "Find the indicial equation and the exponents for the specified singularity of the given differential equation. \\[ (x^2-x-2)^2z''+(x^2-4)z'-6xz=0\\] at \\(x=2\\).",
+            "answer": "\\[ r^2-5r/9-4/3=0; \\quad r_1=(5+\\sqrt{457})/18; \\quad r_2=(5-\\sqrt{457})/18\\]"
+        },
+        {
+            "question": "Find the indicial equation and the exponents for the specified singularity of the given differential equation. \\[ \\theta^3 y''+\\theta(\\sin\\theta)y'-(\\tan \\theta)y=0\\] at \\(\\theta = 0\\).",
+            "answer": "\\[ r^2-1=0; \\quad r_1=1, \\quad r_2=-1\\]"
+        },
+        {
+            "question": "Find the indicial equation and the exponents for the specified singularity of the given differential equation. \\[ (x-1)^2y''+(x^2-1)y'-12y=0\\] at \\(x=1\\).",
+            "answer": "\\[ r^2+r-12=0; \\quad r_1=3, \\quad r_2=-4\\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find at least the first four nonzero terms in the series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ 9x^2y''+9x^2y'+2y=0\\]",
+            "answer": "\\[ a_0[x^{2/3}-(1/2)x^{5/3}+(5/28)x^{8/3}-(1/21)x^{11/3}+\\cdots] \\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find at least the first four nonzero terms in the series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ x^2y''+xy'+x^2y=0\\]",
+            "answer": "\\[ a_0[1-(1/4)x^2+(1/64)x^4-(1/2304)x^6+\\cdots ]\\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find at least the first four nonzero terms in the series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ x^2z''+(x^2+x)z'-z=0\\]",
+            "answer": "\\[ a_0[x-(1/3)x^2+(1/12)x^3-(1/60)x^4+\\cdots ]\\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find a general formula for the coefficient \\(a_n\\) in a series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ 4x^2y''+2x^2y'-(x+3)y=0\\]",
+            "answer": "\\[ a_0\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{n+(3/2)}}{2^{n-1}(n+2)!} \\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find a general formula for the coefficient \\(a_n\\) in a series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ xw''-w'-xw=0\\]",
+            "answer": "\\[ a_0\\sum_{n=0}^{\\infty} \\frac{x^{2n+2}}{2^{2n}(n+1)!n!} \\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find a general formula for the coefficient \\(a_n\\) in a series expansion about \\(x=0\\) for a solution to the given equation for \\(x>0\\). \\[ xy''+(x-1)y'-2y=0\\]",
+            "answer": "\\[ a_0 x^2\\]"
+        },
+        {
+            "question": "First determine a recurrence formula for the coefficients in the (Frobenius) series expansion of the solution about \\(x=0\\). Use this recurrence formula to determine if there exists a solution to the differential equation that is decreasing for \\(x>0\\). \\[ xy''+(1-x)y'-y=0\\]",
+            "answer": "\\[ a_0\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = a_0e^x\\] yes, \\(a_0 < 0 \\)."
+        },
+        {
+            "question": "First determine a recurrence formula for the coefficients in the (Frobenius) series expansion of the solution about \\(x=0\\). Use this recurrence formula to determine if there exists a solution to the differential equation that is decreasing for \\(x>0\\). \\[ 3xy''+2(1-x)y'-4y=0\\]",
+            "answer": "\\[ a_0 \\left[ x^{1/3}+\\sum_{n=1}^{\\infty} \\frac{2^{n-2}(3n+4)x^{n+(1/3)}}{3^n n!}\\right] \\] yes, \\(a_0<0\\)."
+        },
+        {
+            "question": "Use the method of Frobenius to find at least the first four nonzero terms in the series expansion about \\(x=0\\) for a solution to the given linear third-order equation for \\(x>0\\). \\[ 6x^3y'''+13x^2y''+(x+x^2)y'+xy=0\\]",
+            "answer": "\\[ a_0[x^{5/6}-(1/11)x^{11/6}+(1/374)x^{17/6}-(1/25806)x^{23/6}+\\cdots ]\\]"
+        },
+        {
+            "question": "Use the method of Frobenius to find at least the first four nonzero terms in the series expansion about \\(x=0\\) for a solution to the given linear third-order equation for \\(x>0\\). \\[ 6x^3y'''+13x^2y''-(x^2+3x)y'-xy=0\\]",
+            "answer": "\\[ a_0[x^{4/3}+(1/17)x^{7/3}+(1/782)x^{10/3}+(1/68034)x^{13/3}+\\cdots] \\]"
+        },
+        {
+            "question": "Try to use the method of Frobenius to find a series expansion about the irregular singular point \\(x=0\\) for a solution to the given differential equation. If the method works, give at least the first four nonzero terms. If the method does not work, explain what went wrong. \\[ x^2y''+(3x-1)y'+y=0\\]",
+            "answer": "The expansion \\( \\sum_{n=0}^{\\infty} n!x^n\\) diverges for \\(x\\neq 0\\)."
+        },
+        {
+            "question": "In certain applications, it is desirable to have an expansion about the point at infinity. To obtain such an expansion, we use the change of variables \\(z=1/x\\) and expand about \\( z=0\\). Show that infinity is a regular singular point of the given differential equation by showing that \\( z=0\\) is a regular singular point for the transformed equation in \\(z\\). Also find at least the first four nonzero terms in the series expansion about infinity of a solution to the original equation in \\(x\\). \\[ x^3y''-x^2y'-y=0\\]",
+            "answer": "The transformed equation is \\( zd^2y/dz^2 + 3dy/dz-y=0\\). Also \\( zp(z)=3\\) and \\(z^2q(z)=-z\\) are analytic at \\(z=0\\); hence, \\(z=0\\) is a regular singular point. \\[ y_1(x)=a_0[1+(1/3)x^{-1}+(1/24)x^{-2}+(1/360)x^{-3}+\\cdots]\\]"
+        }
     ],
     "Chapter 9: Matrix Methods for Linear Systems": [
-        {}
+        {
+            "question": "Express the given system of differential equations in matrix notation. \\[ x'=7x+2y\\] \\[ y'=3x-2y\\]",
+            "answer": "\\[ \\begin{bmatrix} x\\\\y \\end{bmatrix}' = \\begin{bmatrix} 7 & 2 \\\\ 3 & -2 \\end{bmatrix} \\begin{bmatrix} x \\\\ y\\end{bmatrix} \\]"
+        },
+        {
+            "question": "Express the given system of differential equations in matrix notation. \\[ x'=x+y+z\\] \\[ y'=2z-x\\] \\[ z'=4y\\]",
+            "answer": "\\[ \\begin{bmatrix} x\\\\y\\\\z \\end{bmatrix}' = \\begin{bmatrix} 1 & 1 & 1 \\\\ -1 & 0 & 2 \\\\ 0 & 4 & 0 \\end{bmatrix} \\begin{bmatrix} x\\\\y\\\\z\\end{bmatrix} \\]"
+        },
+        {
+            "question": "Express the given system of differential equations in matrix notation. \\[ x'=(\\sin t)x+e^t y\\] \\[ y'=(\\cos t)x+(a+bt^3)y\\]",
+            "answer": "\\[ \\begin{bmatrix} x\\\\y\\end{bmatrix}' = \\begin{bmatrix} \\sin t & e^t \\\\ \\cos t & a+bt^3 \\end{bmatrix} \\begin{bmatrix} x\\\\ y\\end{bmatrix} \\]"
+        },
+        {
+            "question": "Express the given higher-order differential equation as a matrix system in normal form. <br> The damped mass-spring oscillator equation \\( my''+by'+ky=0 \\).",
+            "answer": "\\[ \\begin{bmatrix} y\\\\ v\\end{bmatrix}' = \\begin{bmatrix} 0 & 1\\\\ -k/m & -b/m\\end{bmatrix} \\begin{bmatrix} y\\\\ v\\end{bmatrix} \\]"
+        },
+        {
+            "question": "Express the given higher-order differential equation as a matrix system in normal form. <br> The Airy equation \\( y''-ty=0\\).",
+            "answer": "\\[ \\begin{bmatrix} x_1 \\\\ x_2\\end{bmatrix}' = \\begin{bmatrix} 0 & 1\\\\ t & 0\\end{bmatrix} \\begin{bmatrix} x_1 \\\\ x_2\\end{bmatrix}; \\quad x_1=y, \\quad x_2 = y'\\]"
+        },
+        {
+            "question": "Express the given system of higher-order differential equations as a matrix system in normal form. \\[ x''+3x+2y=0\\] \\[ y''-2x=0\\]",
+            "answer": "\\[ \\begin{bmatrix} x_1\\\\ x_2\\\\ x_3\\\\ x_4\\end{bmatrix}' = \\begin{bmatrix} 0 & 1 & 0 & 0\\\\ -3 & 0 & -2 & 0\\\\ 0 & 0 & 0 & 1\\\\ 2 & 0 & 0 & 0\\end{bmatrix} \\begin{bmatrix} x_1\\\\x_2\\\\x_3\\\\x_4\\end{bmatrix} \\] \\[ x_1=x, \\quad x_2=x', \\quad x_3 = y, \\quad x_4=y'\\]"
+        },
+        {
+            "question": "Express the given system of higher-order differential equations as a matrix system in normal form. \\[ x''-3x'+t^2y-(\\cos t)x=0\\] \\[ y'''+y''-tx'+y'+e^t x =0 \\]",
+            "answer": "\\[ \\begin{bmatrix} x_1\\\\x_2\\\\x_3\\\\x_4\\\\x_5\\end{bmatrix}' = \\begin{bmatrix} 0&1&0&0&0\\\\ \\cos t & 3 & -t^2 & 0 & 0\\\\ 0&0&0&1&0 \\\\ 0&0&0&0&1 \\\\ -e^t & t & 0 & -1 & -1 \\end{bmatrix} \\begin{bmatrix} x_1\\\\x_2\\\\x_3\\\\x_4\\\\x_5\\end{bmatrix}\\] \\[ x_1=x, \\quad x_2=x', \\quad x_3=y, \\quad x_4=y', \\quad x_5=y''\\]"
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ x_1+2x_2+2x_3=6\\] \\[ 2x_1+x_2+x_3=6\\] \\[ x_1+x_2+3x_3=6\\]",
+            "answer": "\\[ x_1=2,\\quad x_2=1, \\quad x_3=1\\]"
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ x_1+x_2-x_3=0\\] \\[ -x_1-x_2+x_3=0\\] \\[x_1+x_2-x_3=0\\]",
+            "answer": "\\[ x_1=-s+t, \\quad x_2=s, \\quad x_3=t\\]"
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ -x_1+2x_2=0\\] \\[2x_1+3x_2=0\\]",
+            "answer": "\\[ x_1=0, \\quad x_2=0\\]"
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ -x_1+3x_2=0\\] \\[-3x_1+9x_2=0\\]",
+            "answer": "\\[ x_1=3s, \\quad x_2=s \\quad (-\\infty < s < \\infty) \\]"
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ (1-i)x_1+2x_2=0\\] \\[-x_1-(1+i)x_2=0\\]",
+            "answer": "\\[ x_1=2s, \\quad x_2=(-1+i)s\\] with \\(s\\) any complex number."
+        },
+        {
+            "question": "Find all solutions to the system using the Gauss-Jordan elimination algorithm. \\[ 2x_1+x_3=-1\\] \\[ -3x_1+x_2+4x_3=1\\] \\[-x_1+x_2+5x_3=0\\]",
+            "answer": "\\[ x_1=-(s+1)/2, \\quad x_2=-(11s+1)/2, \\quad x_3=s \\quad (-\\infty < s < \\infty) \\]"
+        },
+        {
+            "question": "Use the Gauss-Jordan elimination algorithm to show that the following system of equations has a unique solution for \\( r=2\\), but an infinite number of solutions for \\( r=1\\). \\[ 2x_1-3x_2=rx_1\\] \\[x_1-2x_2=rx_2\\]",
+            "answer": "For \\(r=2\\), unique solution is \\(x_1=x_2=0\\). <br> For \\( r=1\\), solutions are \\( x_1=3s, \\quad x_2=s, \\quad -\\infty < s < \\infty \\)"
+        },
+        {
+            "question": "Let \\( \\textbf{A} := \\begin{bmatrix} 2&1 \\\\ 3&5 \\end{bmatrix}\\) and \\( \\textbf{B} := \\begin{bmatrix} -1 & 0 \\\\ 2 & -3\\end{bmatrix} \\). <br> Find: (a) \\( \\textbf{A}+\\textbf{B} \\) <br> (b) \\( 3\\textbf{A}-\\textbf{B} \\)",
+            "answer": "(a) \\( \\begin{bmatrix} 1 & 1 \\\\ 5 & 2 \\end{bmatrix} \\) <br> (b) \\( \\begin{bmatrix} 7 & 3\\\\ 7 & 18 \\end{bmatrix} \\)"
+        },
+        {
+            "question": "Let \\( \\textbf{A} := \\begin{bmatrix} 2&4 \\\\ 1&1 \\end{bmatrix} \\) and \\(\\textbf{B} := \\begin{bmatrix} -1&3\\\\ 5&2\\end{bmatrix} \\). Find: <br> (a) \\( \\textbf{AB}\\) <br> (b) \\( \\textbf{A}^2=\\textbf{AA}\\) <br> (c) \\( \\textbf{B}^2=\\textbf{BB} \\)",
+            "answer": "(a) \\(\\begin{bmatrix} 18 & 14\\\\ 4 & 5\\end{bmatrix}\\) <br> (b) \\(\\begin{bmatrix} 8 & 12\\\\ 3&5\\end{bmatrix}\\) <br> (c) \\( \\begin{bmatrix} 16&3\\\\ 5&19\\end{bmatrix} \\)"
+        },
+        {
+            "question": "Let \\( \\textbf{A} := \\begin{bmatrix} 1& -2\\\\ 2& -3\\end{bmatrix}\\), \\(\\textbf{B} := \\begin{bmatrix} 1&0\\\\ 1&1\\end{bmatrix} \\), and \\(\\textbf{C} := \\begin{bmatrix} -1 & 1\\\\ 2&1\\end{bmatrix}\\) Find: <br> (a) \\(\\textbf{AB}\\) <br> (b) \\(\\textbf{AC}\\) <br> (c) \\(\\textbf{A}(\\textbf{B}+\\textbf{C})\\)",
+            "answer": "(a) \\( \\begin{bmatrix} -1 & -2\\\\ -1&-3\\end{bmatrix}\\) <br> (b) \\( \\begin{bmatrix} -5 & -1\\\\ -8 & -1\\end{bmatrix}\\) <br> (c) \\( \\begin{bmatrix} -6 & -3\\\\ -9&-4\\end{bmatrix} \\)"
+        },
+        {
+            "question": "Find the matrix function \\(\\textbf{X}^{-1}(t)\\) whose value at \\(t\\) is the inverse of the given matrix \\( \\textbf{X}(t)\\). \\[ \\textbf{X}(t)=\\begin{bmatrix} e^t & e^{4t} \\\\ e^t & 4e^{4t} \\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} (4/3)e^{-t} & -(1/3)e^{-t} \\\\ -(1/3)e^{-4t} & (1/3)e^{-4t} \\end{bmatrix} \\]"
+        },
+        {
+            "question": "Find the matrix function \\(\\textbf{X}^{-1}(t)\\) whose value at \\(t\\) is the inverse of the given matrix \\( \\textbf{X}(t)\\). \\[ \\textbf{X}(t) = \\begin{bmatrix} e^t & e^{-t} & e^{2t} \\\\ e^t & -e^{-t} & 2e^{2t} \\\\ e^t & e^{-t} & 4e^{2t}\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} e^{-t} & (1/2)e^{-t} & -(1/2)e^{-t} \\\\ (1/3)e^t & -(1/2)e^t & (1/6)e^t \\\\ -(1/3)e^{-2t} & 0 & (1/3)e^{-2t}\\end{bmatrix} \\]"
+        },
+        {
+            "question": "Evaluate the given determinant. \\[ \\begin{vmatrix} 4 & 3\\\\ -1 & 2\\end{vmatrix} \\]",
+            "answer": "11"
+        },
+        {
+            "question": "Evaluate the given determinant. \\[ \\begin{vmatrix} 1 & 0 & 0\\\\ 3&1&2\\\\ 1&5&-2\\end{vmatrix}\\]",
+            "answer": "-12"
+        },
+        {
+            "question": "Evaluate the given determinant. \\[ \\begin{vmatrix} 1&4&3\\\\ -1&-1&2\\\\4&5&2\\end{vmatrix}\\]",
+            "answer": "25"
+        },
+        {
+            "question": "Determine the values of \\(r\\) for which \\(\\det (\\textbf{A}-r\\textbf{I})=0\\). \\[ \\textbf{A}=\\begin{bmatrix}1&1\\\\-2&4\\end{bmatrix}\\]",
+            "answer": "2, 3"
+        },
+        {
+            "question": "Determine the values of \\(r\\) for which \\(\\det (\\textbf{A}-r\\textbf{I})=0\\). \\[ \\textbf{A}=\\begin{bmatrix} 0 & 0 & 0\\\\ 0 & 1 & 0\\\\ 1 & 0 & 1\\end{bmatrix}\\]",
+            "answer": "0, 1, 1"
+        },
+        {
+            "question": "Find \\(dx/dt\\) for the given vector function. \\[ \\textbf{x}(t)=\\begin{bmatrix} e^{3t} \\\\ 2e^{3t} \\\\ -e^{3t}\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} 3e^{3t}\\\\ 6e^{3t}\\\\ -3e^{3t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find \\( d\\textbf{X}/dt\\) for the given matrix function. \\[ \\textbf{X}(t)=\\begin{bmatrix} e^{5t} & 3e^{2t}\\\\ -2e^{5t}& -e^{2t}\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} 5e^{5t} & 6e^{2t}\\\\ -10e^{5t} & -2e^{2t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "The matrices \\(\\textbf{A}(t)\\) and \\(\\textbf{B}(t)\\) are given. Find <br> (a) \\(\\int \\textbf{A}(t)dt\\) <br> (b) \\( \\int_0^1 \\textbf{B}(t)dt\\) <br> (c) \\( \\frac{d}{dt}[\\textbf{A}(t)\\textbf{B}(t)]\\) \\[ \\textbf{A}(t)=\\begin{bmatrix} t & e^t\\\\ 1&e^t\\end{bmatrix} \\] \\[ \\textbf{B}(t)=\\begin{bmatrix} \\cos t & -\\sin t\\\\ \\sin t & \\cos t\\end{bmatrix} \\]",
+            "answer": "(a) \\( \\begin{bmatrix} (1/2)t^2+c_1 & e^t + c_2\\\\ t+c_3 & e^t+c_4\\end{bmatrix}\\) <br> (b) \\(\\begin{bmatrix} \\sin 1 & -1+\\cos 1\\\\ 1-\\cos 1 & \\sin 1\\end{bmatrix}\\) <br> (c) \\( \\begin{bmatrix} (1+e^t)\\cos t+(e^t-t)\\sin t & (e^t-t)\\cos t-(e^t+1)\\sin t \\\\ (e^t-1)\\sin t+e^t \\cos t & (e^t-1)\\cos t-e^t \\sin t\\end{bmatrix} \\)"
+        },
+        {
+            "question": "Write the given system in the matrix form \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}\\). \\[ x'(t)=3x(t)-y(t)+t^2\\] \\[ y'(t)=-x(t)+2y(t)+e^t\\]",
+            "answer": "\\[ \\begin{bmatrix} x'(t) \\\\ y'(t)\\end{bmatrix} = \\begin{bmatrix} 3&-1\\\\ -1&2\\end{bmatrix} \\begin{bmatrix} x(t)\\\\ y(t)\\end{bmatrix} + \\begin{bmatrix} t^2\\\\ e^t\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Write the given system in the matrix form \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}\\). \\[ \\frac{dx}{dt}=t^2x - y - z + t\\] \\[ \\frac{dy}{dt}=e^t z + 5\\] \\[ \\frac{dz}{dt} = tx-y+3z-e^t\\]",
+            "answer": "\\[ \\begin{bmatrix} dx/dt \\\\ dy/dt \\\\ dz/dt\\end{bmatrix} = \\begin{bmatrix} t^2 & -1 & -1\\\\ 0 & 0 & e^t \\\\ t & -1 & 3\\end{bmatrix} \\begin{bmatrix} x\\\\ y\\\\ z\\end{bmatrix} + \\begin{bmatrix} t\\\\ 5\\\\ -e^t\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Rewrite the given scalar equation as a first-order system in normal form. Express the system in the matrix form \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}\\). \\[ y''(t)-3y'(t)-10y(t)=\\sin t\\]",
+            "answer": "\\[ \\begin{bmatrix} x'_1(t) \\\\ x'_2 (t) \\end{bmatrix} = \\begin{bmatrix} 0 & 1 \\\\ 10 & 3\\end{bmatrix} \\begin{bmatrix} x_1(t)\\\\ x_2(t)\\end{bmatrix} + \\begin{bmatrix}0\\\\ \\sin t\\end{bmatrix}\\] \\[ x_1=y, \\quad x_2=y'\\]"
+        },
+        {
+            "question": "Rewrite the given scalar equation as a first-order system in normal form. Express the system in the matrix form \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}\\). \\[ \\frac{d^4 w}{dt^4} + w =t^2\\]",
+            "answer": "\\[ \\begin{bmatrix} x'_1 (t) \\\\ x'_2 (t) \\\\ x'_3 (t)\\\\ x'_4(t) \\end{bmatrix} = \\begin{bmatrix} 0&1&0&0\\\\ 0&0&1&0\\\\ 0&0&0&1\\\\ -1&0&0&0 \\end{bmatrix} \\begin{bmatrix} x_1(t)\\\\ x_2(t)\\\\ x_3(t)\\\\ x_4(t)\\end{bmatrix} + \\begin{bmatrix} 0\\\\ 0\\\\ 0\\\\ t^2\\end{bmatrix} \\] \\[ x_1=w, \\quad x_2=w', \\quad x_3=w'', \\quad x_4=w'''\\]"
+        },
+        {
+            "question": "Write the given system as a set of scalar equations. \\[ \\textbf{x}' = \\begin{bmatrix} 5 & 0\\\\ -2 & 4\\end{bmatrix} \\textbf{x} + e^{-2t}\\begin{bmatrix} 2\\\\ -3\\end{bmatrix}\\]",
+            "answer": "\\[ x'_1(t) = 5x_1(t)+2e^{-2t}\\] \\[x'_2(t) = -2x_1(t)+4x_2(t)-3e^{-2t}\\]"
+        },
+        {
+            "question": "Write the given system as a set of scalar equations. \\[ \\textbf{x}' = \\begin{bmatrix} 1 & 0 & 1\\\\ -1 & 2 & 5\\\\ 0 & 5 & 1\\end{bmatrix} \\textbf{x} + e^t\\begin{bmatrix}1\\\\0\\\\0\\end{bmatrix}+t\\begin{bmatrix}0\\\\1\\\\0\\end{bmatrix}\\]",
+            "answer": "\\[ x'_1(t) = x_1(t)+x_3(t)+e^t\\] \\[x'_2(t) = -x_1(t)+2x_2(t)+5x_3(t)+t\\] \\[x'_3(t)=5x_2(t)+x_3(t)\\]"
+        },
+        {
+            "question": "Determine whether the given vector functions are linearly dependent (LD) or linearly independent (LI) on the interval \\( (-\\infty,\\infty) \\). \\[ \\begin{bmatrix} t\\\\ 3\\end{bmatrix}, \\quad \\begin{bmatrix} 4\\\\ 1\\end{bmatrix} \\]",
+            "answer": "LI"
+        },
+        {
+            "question": "Determine whether the given vector functions are linearly dependent (LD) or linearly independent (LI) on the interval \\( (-\\infty,\\infty) \\). \\[ e^t\\begin{bmatrix} 1\\\\ 5\\end{bmatrix}, \\quad e^t\\begin{bmatrix} -3\\\\ -15\\end{bmatrix}\\]",
+            "answer": "LD"
+        },
+        {
+            "question": "Determine whether the given vector functions are linearly dependent (LD) or linearly independent (LI) on the interval \\( (-\\infty,\\infty) \\). \\[ e^{2t}\\begin{bmatrix}1\\\\0\\\\5\\end{bmatrix}, \\quad e^{2t}\\begin{bmatrix}1\\\\1\\\\-1\\end{bmatrix}, \\quad e^{3t}\\begin{bmatrix}0\\\\1\\\\0\\end{bmatrix}\\]",
+            "answer": "LI"
+        },
+        {
+            "question": "Determine whether the given vector functions are linearly dependent (LD) or linearly independent (LI) on the interval \\( (-\\infty,\\infty) \\). \\[ \\begin{bmatrix} 1\\\\0\\\\1\\end{bmatrix}, \\quad \\begin{bmatrix} t\\\\0\\\\t \\end{bmatrix}, \\quad \\begin{bmatrix} t^2 \\\\ 0 \\\\ t^2\\end{bmatrix}\\]",
+            "answer": "LI"
+        },
+        {
+            "question": "The given vector function is a solution to a system \\(\\textbf{x}'(t)=\\textbf{Ax}(t)\\). Determine whether they form a fundamental solution set. If they do, find a fundamental matrix for the system and give a general solution. \\[ \\textbf{x}_1=e^{2t}\\begin{bmatrix} 1\\\\-2\\end{bmatrix}, \\quad \\textbf{x}_2=e^{2t}\\begin{bmatrix} -2\\\\ 4\\end{bmatrix}\\]",
+            "answer": "Not a fundamental solution set"
+        },
+        {
+            "question": "The given vector function is a solution to a system \\(\\textbf{x}'(t)=\\textbf{Ax}(t)\\). Determine whether they form a fundamental solution set. If they do, find a fundamental matrix for the system and give a general solution. \\[ \\textbf{x}_1=\\begin{bmatrix} e^{-t}\\\\ 2e^{-t}\\\\ e^{-t}\\end{bmatrix}, \\quad \\textbf{x}_2=\\begin{bmatrix} e^t \\\\ 0 \\\\ e^t\\end{bmatrix}, \\quad \\textbf{x}_3 = \\begin{bmatrix} e^{3t}\\\\ -e^{3t}\\\\ 2e^{3t}\\end{bmatrix}\\]",
+            "answer": "Yes; \\[ \\begin{bmatrix} e^{-t} & e^t & e^{3t} \\\\ 2e^{-t} & 0 & -e^{3t}\\\\ e^{-t} & e^t & 2e^{3t} \\end{bmatrix} \\] \\[ c_1\\begin{bmatrix} e^{-t} \\\\ 2e^{-t}\\\\ e^{-t}\\end{bmatrix} + c_2\\begin{bmatrix} e^t \\\\ 0 \\\\ e^t\\end{bmatrix} + c_3\\begin{bmatrix} e^{3t} \\\\ -e^{3t}\\\\2e^{3t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Verify that the vector functions \\[ \\textbf{x}_1(t)=\\begin{bmatrix} e^t\\\\ e^t\\end{bmatrix}\\] and \\[ \\textbf{x}_2=\\begin{bmatrix} e^{-t}\\\\ 3e^{-t}\\end{bmatrix}\\] on \\( (-\\infty,\\infty)\\) and that \\[ \\textbf{x}_p = \\frac{3}{2}\\begin{bmatrix} te^t \\\\ te^t\\end{bmatrix}-\\frac{1}{4}\\begin{bmatrix} e^t\\\\ 3e^t\\end{bmatrix}+\\begin{bmatrix} t\\\\ 2t\\end{bmatrix}-\\begin{bmatrix}0\\\\ 1\\end{bmatrix}\\] is a particular solution to the nonhomogeneous system \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}(t)\\), where \\( \\textbf{f}(t)= \\text{col} (e^t,t)\\). Find a general solution to \\( \\textbf{x}'=\\textbf{Ax}+\\textbf{f}(t)\\).",
+            "answer": "\\[ \\frac{3}{2}\\begin{bmatrix} te^t\\\\ te^t\\end{bmatrix} - \\frac{1}{4}\\begin{bmatrix} e^t\\\\ 3e^t\\end{bmatrix}+\\begin{bmatrix} t\\\\ 2t\\end{bmatrix}-\\begin{bmatrix} 0 \\\\ 1\\end{bmatrix}+c_1\\begin{bmatrix} e^t\\\\ e^t\\end{bmatrix} + c_2\\begin{bmatrix} e^{-t}\\\\ 3e^{-t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find the eigenvalues and eigenvectors of the given matrix. \\[ \\begin{bmatrix} -4 & 2\\\\ 2&-1\\end{bmatrix}\\]",
+            "answer": "Eigenvalues are \\( r_1=0\\) and \\(r_2=-5\\) with associated eigenvectors \\( \\textbf{u}_1 = \\begin{bmatrix} s\\\\ 2s\\end{bmatrix}\\) and \\(\\textbf{u}_2=\\begin{bmatrix} 2s\\\\ -s\\end{bmatrix}\\)."
+        },
+        {
+            "question": "Find the eigenvalues and eigenvectors of the given matrix. \\[ \\begin{bmatrix} 1&-1\\\\ 2&4\\end{bmatrix}\\]",
+            "answer": "Eigenvalues are \\( r_1=2\\) and \\(r_2=3\\) with associated eigenvectors \\( \\textbf{u}_1=s\\begin{bmatrix}1\\\\-1\\end{bmatrix}\\) and \\(\\textbf{u}_2=s\\begin{bmatrix}1\\\\-2\\end{bmatrix}\\)."
+        },
+        {
+            "question": "Find the eigenvalues and eigenvectors of the given matrix. \\[ \\begin{bmatrix} 1 & 0 & 0\\\\ 0 & 0 & 2\\\\ 0 & 2 & 0\\end{bmatrix}\\]",
+            "answer": "Eigenvalues are \\(r_1=1, \\quad r_2=2\\) and \\(r_3=-2\\) with associated eigenvectors \\(\\textbf{u}_1=s\\begin{bmatrix}1\\\\0\\\\0\\end{bmatrix}, \\quad \\textbf{u}_2=s\\begin{bmatrix}0\\\\1\\\\1\\end{bmatrix}\\), and \\(\\textbf{u}_3=s\\begin{bmatrix}0\\\\-1\\\\1\\end{bmatrix}\\)."
+        },
+        {
+            "question": "Find the eigenvalues and eigenvectors of the given matrix. \\[ \\begin{bmatrix} 1 & 0 & 0\\\\ 2 & 3 & 1\\\\ 0 & 2 & 4\\end{bmatrix}\\]",
+            "answer": "Eigenvalues are \\(r_1=1, \\quad r_2=2\\) and \\( r_3=5\\) with associated eigenvectors \\( \\textbf{u}_1=s\\begin{bmatrix}2\\\\-3\\\\2\\end{bmatrix}, \\quad \\textbf{u}_2=s\\begin{bmatrix}0\\\\-1\\\\1\\end{bmatrix}\\), and \\( \\textbf{u}_3=s\\begin{bmatrix}0\\\\1\\\\2\\end{bmatrix}\\)."
+        },
+        {
+            "question": "In the following matrix, some of the eigenvalues are complex. Find all the eigenvalues and eigenvectors. \\[ \\begin{bmatrix} 0 & -1\\\\ 1&0\\end{bmatrix}\\]",
+            "answer": "Eigenvalues are \\(r_1=i\\) and \\(r_2=-i\\), with associated eigenvectors \\( \\textbf{u}_1=s\\begin{bmatrix}i\\\\1\\end{bmatrix}\\), and \\(\\textbf{u}_2=s\\begin{bmatrix}-i\\\\1\\end{bmatrix}\\)."
+        },
+        {
+            "question": "Find a general solution of the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A} = \\begin{bmatrix} -1 & \\frac{3}{4} \\\\ -5 & 3\\end{bmatrix} \\]",
+            "answer": "\\[ c_1e^{3t/2}\\begin{bmatrix}3\\\\ 10\\end{bmatrix}+c_2e^{t/2}\\begin{bmatrix}1\\\\ 2\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a general solution of the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A} = \\begin{bmatrix} 1&2&2\\\\ 2&0&3\\\\ 2&3&0\\end{bmatrix}\\]",
+            "answer": "\\[ c_1e^{-t}\\begin{bmatrix} -2\\\\ 1\\\\ 1\\end{bmatrix} + c_2e^{-3t}\\begin{bmatrix} 0\\\\ -1\\\\ 1\\end{bmatrix} + c_3e^{-5t}\\begin{bmatrix} 1\\\\ 1\\\\ 1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a general solution of the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} 1&2&3\\\\ 0&1&0\\\\ 2&1&2\\end{bmatrix}\\]",
+            "answer": "\\[c_1e^{-t}\\begin{bmatrix} 3\\\\ 0\\\\ -2\\end{bmatrix} + c_2e^t \\begin{bmatrix} 1\\\\ -6\\\\ 4\\end{bmatrix} + c_3e^{4t}\\begin{bmatrix} 1\\\\ 0\\\\1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} -1&1\\\\ 8&1\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} e^{3t} & e^{-3t} \\\\ 4e^{3t} & -2e^{-3t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} 0 & 1 & 0\\\\ 0 & 0 & 1\\\\ 8 & -14 & 7\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} e^t & e^{2t} & e^{4t} \\\\ e^t & 2e^{2t} & 4e^{4t} \\\\ e^t & 4e^{2t} & 16e^{4t} \\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A} = \\begin{bmatrix} 2 & 1 & 1 & -1\\\\ 0 & -1 & 0 & 1\\\\ 0 & 0 & 3 & 1\\\\ 0 & 0 & 0 & 7\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} e^{2t} & e^{-t} & e^{3t} & e^{-7t} \\\\ 0 & -3e^{-t} & 0 & e^{7t} \\\\ 0 & 0 & e^{3t} & 2e^{7t} \\\\ 0 & 0 & 0 & 8e^{7t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Using matrix algebra techniques, find a general solution of the system \\[ x'=x+2y-z\\] \\[ y'=x+z\\] \\[ z'=4x-4y+5z\\]",
+            "answer": "\\[ x=-c_1e^t-2c_2e^{2t}-c_3e^{3t}\\] \\[ y=c_1e^t+c_2e^{2t}+c_3e^{3t}\\] \\[ z=2c_1e^t + 4c_2e^{2t}+4c_3e^{3t}\\]"
+        },
+        {
+            "question": "Solve the given initial value problem. \\[ \\textbf{x}'(t)=\\begin{bmatrix} 1&3\\\\ 3&1\\end{bmatrix}\\textbf{x}(t), \\quad \\textbf{x}(0)=\\begin{bmatrix}3\\\\1\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} 2e^{4t}+e^{-2t}\\\\ 2e^{4t}-e^{-2t}\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Solve the given initial value problem. \\[ \\textbf{x}'(t)=\\begin{bmatrix} 1 & -2 & 2\\\\ -2&1&-2 \\\\ 2&-2&1\\end{bmatrix}\\textbf{x}(t), \\quad \\textbf{x}(0)=\\begin{bmatrix} -2\\\\ -3\\\\ 2\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} -3e^{-t}+e^{5t} \\\\ -2e^{-t}-e^{5t}\\\\ e^{-t}+e^{5t} \\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a general solution of the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} 2&-4\\\\ 2&-2\\end{bmatrix}\\]",
+            "answer": "\\[ c_1\\begin{bmatrix} 2\\cos 2t\\\\ \\cos 2t+\\sin 2t\\end{bmatrix} + c_2\\begin{bmatrix} 2\\sin 2t \\\\ \\sin 2t-\\cos 2t \\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a general solution of the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} 1&2&-1\\\\ 0 & 1 & 1\\\\ 0 & -1 & 1\\end{bmatrix}\\]",
+            "answer": "\\[ c_1e^t \\cos t\\begin{bmatrix} -1\\\\ 1\\\\ 0\\end{bmatrix} - c_1e^t \\sin t\\begin{bmatrix} -2\\\\ 0\\\\ 1\\end{bmatrix} + c_2e^t \\sin t\\begin{bmatrix} -1\\\\ 1\\\\ 0\\end{bmatrix} + c_2e^t\\cos t\\begin{bmatrix} -2\\\\ 0\\\\ 1\\end{bmatrix} + c_3e^t \\begin{bmatrix} 1\\\\ 0\\\\ 0\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A}=\\begin{bmatrix} -1 & -2\\\\ 8 & -1\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} e^{-t}\\cos 4t & e^{-t}\\sin 4t \\\\ 2e^{-t}\\sin 4t & -2e^{-t}\\cos 4t\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A} = \\begin{bmatrix} 0 & 0 & 1\\\\ 0 & 0 & -1\\\\ 0 & 1 & 0\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} 1 & \\cos t & \\sin t \\\\ 0 & -\\cos t & -\\sin t \\\\ 0 & -\\sin t & \\cos t\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find a fundamental matrix for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)\\) for the given matrix \\(\\textbf{A}\\). \\[ \\textbf{A} = \\begin{bmatrix} 0 & 1 & 0 & 0\\\\ -1 & 0 & 0 & 0\\\\ 0 & 0 & 0 & 1\\\\ 0 & 0 & -1 & 0\\end{bmatrix}\\]",
+            "answer": "\\[ \\begin{bmatrix} \\cos t & \\sin t & 0 & 0\\\\ -\\sin t & \\cos t & 0 & 0\\\\0 & 0 & \\cos t & \\sin t \\\\ 0 & 0 & -\\sin t & \\cos t\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Find the solution to the given system that satisfies the given initial condition. \\[ \\textbf{x}'(t)=\\begin{bmatrix} -3 & -1\\\\ 2 & -1\\end{bmatrix} \\textbf{x}(t)\\] <br> (a) \\( \\textbf{x}(0)=\\begin{bmatrix} -1\\\\ 0\\end{bmatrix} \\) <br> (b) \\( \\textbf{x}(\\pi) = \\begin{bmatrix} 1\\\\ -1\\end{bmatrix}\\) <br> (c) \\( \\textbf{x}(-2\\pi) = \\begin{bmatrix} 2\\\\ 1\\end{bmatrix}\\) <br> (d) \\( \\textbf{x}(\\pi/2) = \\begin{bmatrix} 0\\\\ 1\\end{bmatrix}\\)",
+            "answer": "(a) \\[ \\begin{bmatrix} e^{-2t}(\\sin t-\\cos t) \\\\ -2e^{-2t}\\sin t\\end{bmatrix}\\] <br> (b) \\[ \\begin{bmatrix} -e^{-2(t-\\pi)}\\cos t \\\\ e^{-2(t-\\pi)}(\\cos t-\\sin t)\\end{bmatrix}\\] <br> (c) \\[ \\begin{bmatrix} e^{-2(t+2\\pi)}(2\\cos t-3\\sin t) \\\\ e^{-2(t+2\\pi)}(\\cos t+5\\sin t)\\end{bmatrix}\\] <br> (d) \\[ \\begin{bmatrix} e^{\\pi-2t}\\cos t \\\\ e^{\\pi-2t}(\\sin t-\\cos t)\\end{bmatrix}\\]"
+        },
+        {
+            "question": "The currents in the RLC network given by the schematic diagram below are governed by the following equations. \\[ 4I'_2(t)+52q_1(t)=10 \\] \\[ 13I_3(t)+52q_1(t)=10\\] \\[ I_1(t)=I_2(t)+I_3(t)\\] where \\(q_1(t)\\) is the charge on the capacitor, \\( I_1(t)=q'_1(t)\\), and initially \\(q_1(0)=0\\) coulombs and \\(I_1(0)=0\\) amps. Solve for the currents \\( I_1, I_2\\), and \\(I_3\\).",
+            "image": "images/DIFFEQ9.6.21.PNG",
+            "answer": "\\[ I_1=(5/6)e^{-2t}\\sin 3t\\] \\[ I_2=-(10/13)e^{-2t}\\cos 3t+(25/78)e^{-2t}\\sin 3t\\] \\[ I_3 = (10/13)e^{-2t}\\cos 3t+(20/39)e^{-2t}\\sin 3t\\]"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)+\\textbf{f}(t)\\), where \\(\\textbf{A}\\) and \\(\\textbf{f}(t)\\) are given. \\[ \\textbf{A}=\\begin{bmatrix} 6 & 1\\\\ 4 & 3\\end{bmatrix}, \\quad \\textbf{f}(t)=\\begin{bmatrix} -11\\\\ -5\\end{bmatrix}\\]",
+            "answer": "\\[ c_1e^{7t}\\begin{bmatrix} 1\\\\ 1\\end{bmatrix} + c_2e^{2t}\\begin{bmatrix} 1\\\\ -4\\end{bmatrix} + \\begin{bmatrix} 2\\\\ -1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)+\\textbf{f}(t)\\), where \\(\\textbf{A}\\) and \\(\\textbf{f}(t)\\) are given. \\[ \\textbf{A}=\\begin{bmatrix} 1 & -2 & 2\\\\ -2 & 1 & 2\\\\ 2 & 2 & 1\\end{bmatrix}, \\quad \\textbf{f}(t)=\\begin{bmatrix} 2e^t \\\\ 4e^t\\\\ -2e^t\\end{bmatrix}\\]",
+            "answer": "\\[ c_1e^{-3t}\\begin{bmatrix} 1\\\\ 1\\\\ -1\\end{bmatrix} + c_2e^{3t}\\begin{bmatrix}1\\\\0\\\\ 1\\end{bmatrix}+c_3e^{3t}\\begin{bmatrix} -1\\\\ 1\\\\ 0\\end{bmatrix}+e^t\\begin{bmatrix}1\\\\ 0 \\\\ -1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to the system \\( \\textbf{x}'(t) = \\textbf{Ax}(t)+\\textbf{f}(t)\\), where \\(\\textbf{A}\\) and \\(\\textbf{f}(t)\\) are given. \\[ \\textbf{A}=\\begin{bmatrix} 0 & -1 & 0\\\\ -1 & 0 & 0 \\\\ 0 & 0 & 1\\end{bmatrix}, \\quad \\textbf{f}(t) = \\begin{bmatrix} e^{2t} \\\\ \\sin t \\\\ t\\end{bmatrix}\\]",
+            "answer": "\\[ t\\begin{bmatrix} 0\\\\ 0\\\\ -1\\end{bmatrix} + \\begin{bmatrix} 0\\\\ 0\\\\ -1\\end{bmatrix} + \\frac{e^{2t}}{3}\\begin{bmatrix} 2\\\\ -1\\\\ 0\\end{bmatrix} + \\frac{\\sin t}{2}\\begin{bmatrix} 1\\\\ 0\\\\ 0\\end{bmatrix} + \\frac{\\cos t}{2}\\begin{bmatrix} 0 \\\\ -1\\\\ 0\\end{bmatrix}+c_1e^{-t} \\begin{bmatrix} 1\\\\ 1\\\\ 0\\end{bmatrix} + c_2e^t \\begin{bmatrix} -1\\\\ 1\\\\ 0\\end{bmatrix} + c_3e^t \\begin{bmatrix} 0\\\\ 0\\\\ 1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to determine only the form of a particular solution for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)+\\textbf{f}(t)\\), where \\(\\textbf{A}\\) and \\(\\textbf{f}(t)\\) are given. \\[ \\textbf{A}=\\begin{bmatrix} 0 & 1\\\\ 2&0\\end{bmatrix}, \\quad \\textbf{f}(t)=\\begin{bmatrix} \\sin 3t\\\\ t\\end{bmatrix}\\]",
+            "answer": "\\[ \\textbf{x}_p = t\\textbf{a}+\\textbf{b}+\\sin 3t\\textbf{c}+\\cos 3t\\textbf{d}\\]"
+        },
+        {
+            "question": "Use the method of undetermined coefficients to determine only the form of a particular solution for the system \\( \\textbf{x}'(t)=\\textbf{Ax}(t)+\\textbf{f}(t)\\), where \\(\\textbf{A}\\) and \\(\\textbf{f}(t)\\) are given. \\[ \\textbf{A} = \\begin{bmatrix} 0 & -1 & 0\\\\ -1 & 0 & 1\\\\ 0 & 0 & 1\\end{bmatrix}, \\quad \\textbf{f}(t)=\\begin{bmatrix} e^{2t}\\\\ \\sin t\\\\ t\\end{bmatrix}\\]",
+            "answer": "\\[ \\textbf{x}(t)=t\\textbf{a}+\\textbf{b}+e^{2t}\\textbf{c}+(\\sin t)\\textbf{d}+(\\cos t)\\textbf{e}\\]"
+        },
+        {
+            "question": "Find the solution to the given system that satisfies the given initial conditions. \\[ \\textbf{x}'(t)=\\begin{bmatrix} 0 & 2\\\\ -1 & 3\\end{bmatrix}\\textbf{x}(t)+\\begin{bmatrix} e^t \\\\ -e^t\\end{bmatrix}\\] <br> (a) \\( \\textbf{x}(0)=\\begin{bmatrix}5\\\\ 4\\end{bmatrix}\\) <br> (b) \\(\\textbf{x}(1)=\\begin{bmatrix}0\\\\ 1\\end{bmatrix}\\) <br> (c) \\(\\textbf{x}(5)=\\begin{bmatrix}1\\\\0\\end{bmatrix}\\) <br> (d) \\(\\textbf{x}(-1)=\\begin{bmatrix}-4\\\\ 5\\end{bmatrix}\\)",
+            "answer": "(a) \\[ \\begin{bmatrix} 4te^t+5e^t\\\\ 2te^t+4e^t\\end{bmatrix} \\] <br> (b) \\[ \\begin{bmatrix} -2e^{t-1}+2e^{2(t-1)}-3e^{2t-1}+(4t-1)e^t \\\\ -e^{t-1}+2e^{2(t-1)}=3e^{2t-1}+(2t+1)e^t\\end{bmatrix}\\] <br> (c) \\[ \\begin{bmatrix} (-20+2e^{-5})e^t+(-3e^{-5}-e^{-10})e^{2t}+(4t+3)e^t\\\\ (-10+e^{-5})e^t+(-3e^{-5}-e^{-10})e^{2t}+(2t+3)e^t\\end{bmatrix}\\] <br> (d) \\[ \\begin{bmatrix} -18e^{t+1}+14e^{2t+2}-3e^{2t+1}+(4t+7)e^t \\\\ -9e^{t+1}+14e^{2t+2}-3e^{2t+1}+(2t+5)e^t \\end{bmatrix} \\]"
+        },
+        {
+            "question": "Find a general solution of the system \\[ \\textbf{x}'(t)=\\begin{bmatrix} 0 & 1 & 1\\\\ 1 & 0 & 1\\\\ 1 & 1 & 0\\end{bmatrix}\\textbf{x}(t)+\\begin{bmatrix} -1 \\\\ -1-e^{-t} \\\\ -2e^{-t} \\end{bmatrix}\\]",
+            "answer": "\\[ c_1e^{2t}\\begin{bmatrix} 1\\\\ 1\\\\ 1\\end{bmatrix}+c_2e^{-t}\\begin{bmatrix} -1\\\\ 0\\\\ 1\\end{bmatrix}+c_3e^{-t}\\begin{bmatrix} -1\\\\ 1\\\\ 0\\end{bmatrix}  +te^{-t}\\begin{bmatrix} 1\\\\ 0\\\\ -1\\end{bmatrix} + e^{-t}\\begin{bmatrix} 1\\\\ 0\\\\ 0\\end{bmatrix} + \\begin{bmatrix} 0\\\\ 0\\\\ 1\\end{bmatrix}\\]"
+        },
+        {
+            "question": "The currents in the RL network given by the schematic diagram below are governed by the following equations. \\[ 2I'_1(t)=90I_2(t)=9\\] \\[ I_3'(t)+30I_4(t)-90I_2(t)=0\\] \\[ 60I_5(t)-30I_4(t)=0\\] \\[ I_1(t)=I_2(t)+I_3(t)\\] \\[ I_3(t)=I_4(t)+I_5(t)\\] Assume the currents are initially zero. Solve for the five currents \\( I_1,\\dots,I_5\\).",
+            "image": "images/DIFFEQ9.7.33.PNG",
+            "answer": "\\[ I_1=I_2+3I_5, \\quad I_3 = 3I_5, \\quad I_4=2I_5\\] where \\[ I_2=(1/(20\\sqrt{817}))[(13-\\sqrt{817})e^{-(31+\\sqrt{817})5t/2}-(13+\\sqrt{817})e^{(-31+\\sqrt{817})5t/2}]+1/10\\] \\[ I_5=(3/40\\sqrt{817}))[(31-\\sqrt{817})e^{-(31+\\sqrt{817})5t/2}-(31+\\sqrt{817})e^{(-31+\\sqrt{817})5t/2}]+3/20\\]"
+        }
     ]
 }

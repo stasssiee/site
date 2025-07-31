@@ -1,0 +1,133 @@
+\documentclass[../bccalc.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Limits and Continuity}
+\section{Limits and Their Properties}
+Properties of Limits:
+
+If $L$, $M$, $c$, and $k$ are real numbers and $\lim_{x\to c}f(x)=L$ and $\lim_{x\to c}g(x)=M$, then 
+\begin{enumerate}
+    \item Sum Rule: $\lim_{x\to c}(f(x)+g(x))=L+M$
+    \item Difference Rule: $\lim_{x\to c}(f(x)-g(x))=L-M$
+    \item Product Rule: $\lim_{x\to c}(f(x)\cdot g(x))=L\cdot M$
+    \item Quotient Rule: $\lim_{x\to c}\left(\frac{f(x)}{g(x)}\right)=\frac{L}{M}$ where $M\neq 0$
+    \item Constant Multiple Rule: $\lim_{x\to c}(k\cdot f(x))=k\cdot L$
+    \item Power Rule: If $r$ and $s$ are integers, $s\neq 0$, then $\lim_{x\to c}(f(x))^{r/s}=L^{r/s}$ provided that $L^{r/s}$ is a real number.
+    \item Limit of a Composite Function Rule: If $f$ and $g$ are functions such that $\lim_{x\to c}g(x)=L$ and $\lim_{x\to c}f(x)=f(L)$, then $\lim_{x\to c}f(g(x))=f(\lim_{x\to c}g(x))=f(L)$.
+\end{enumerate}
+
+\begin{example}
+    Given that $\lim_{x\to a}f(x)=2$ and $\lim_{x\to a}g(x)=3$, find the limit if it exists.
+
+    (a) $\lim_{x\to a}(5g(x)) = 15$
+
+    (b) $\lim_{x\to a}\frac{f(x)}{g(x)} = \frac{2}{3}$
+\end{example}
+
+Two special trig limits:
+
+$\lim_{\theta\to 0}\frac{\sin\theta}{\theta} = 1$
+
+$\lim_{\theta\to 0}\frac{1-\cos\theta}{\theta}=0$
+
+\begin{example}
+    $\lim_{x\to 0}\frac{\sin(5x)}{4x}$
+
+    This can be written as $\frac{1}{4}\lim_{x\to 0}\frac{\sin(5x)}{x} = \frac{5}{4}$
+\end{example}
+
+\begin{example}
+    $\lim_{x\to 0}\frac{2x+\sin x}{x}$
+
+    We can split it up, $\lim_{x\to 0}\frac{2x}{x}+\lim_{x\leq 0}\frac{\sin x}{x}=2+1=3$
+\end{example}
+
+\begin{theorem}[Squeeze Theorem]
+    If $h(x)\leq f(x)\leq g(x)$ for all $x$ in an open interval containing $c$, except possible at $c$ itself, and if $\lim_{x\to c}h(x)=L$ and $\lim_{x\to c}g(x)=L$, then $\lim_{x\to c}f(x)=L$.
+\end{theorem}
+
+\begin{example}
+    If $2\leq f(x)\leq x^2+2$ for all $x$, find $\lim_{x\to 0}f(x)$.
+
+    The answer is 2.
+\end{example}
+
+\section{Continuity}
+\begin{definition}[Continuity]
+    A function $f$ is said to be continuous at $x=c$ if and only if:
+    \begin{enumerate}
+        \item $f(c)$ defined 
+        \item $\lim_{x\to c}f(x)$ exists 
+        \item $f(c)=\lim_{x\to c}f(x)$
+    \end{enumerate}
+
+    Essentially, no gaps or holes.
+\end{definition}
+
+\ex Sketch a function $f$ so that $f(c)$ is not defined. 
+
+\ex Sketch a function $f$ so that $\lim_{x\to c}f(x)$ does not exist.
+
+\ex Sketch a function where $f(c)$ is defined and $\lim_{x\to c}f(x)$ exists but $\lim_{x\to c}f(x)\neq f(c)$
+
+\ex Sketch a function where $f$ is continuous at $x=c$
+
+If a function $f$ is not continuous at $x=c$, the discontinuity may be one of three types:
+\begin{enumerate}
+    \item point discontinuity (essentially a hole)
+    \item jump discontinuity (gap)
+    \item asymptotic discontinuity (asymptote)
+\end{enumerate}
+
+A point discontinuity is said to be a removable discontinuity because the function can be redefined at the point in such as way as to make the function continuous there.
+Jump discontinuites and asymptotic discontinuites are non-removable because the functions which contain them cannot be redefined at a point to make them continuous.
+
+\begin{example}
+    Find the value(s) of $x$ at which the given function is discontinuous. Identify each value as a point, jump, or asymptotic discontinuity. Identify each value as a removable or non-removable discontinuity. If it is removable, redefine the function at that value so that it will be continuous.
+
+    (a) $f(x)=\frac{x^2-x-6}{x-3}$
+
+    Factoring this gives gives $x=3$ a hole, so the function is redefined as $f(x)=x+2$. There is a removable discontinuity in this.
+
+    (b) $f(x)=\frac{1}{x-3}$
+
+    This is asymptotic at $x=3$.
+\end{example}
+
+\ex Do the same for the example above with the function $f(x)=\begin{cases}
+    x+2 \text{ if } x<1\\
+    2-x \text{ if } x>1
+\end{cases}$
+
+\begin{example}
+    Find $k$ so that $f$ will be continuous at $x=2$ given $f(x)=\begin{cases}
+        x+3 \text{ if } x\leq 2 \\
+        kx+6 \text{ if }x>2
+    \end{cases}$
+
+    Since we know that $x+3=kx+6$ when $x=2$, plug in $2$ for $x$, to get $-1/2=k$.
+\end{example}
+
+\section{Intermediate Value Theorem}
+Since a person's height is a continuous function of time, if a child had a height of 58 inches at age 11 and a height of 64 inches at age 14, then the child's height took on every value between 58 and 64 inches for some time between the age of 11 and the age of 14. This is a simple example of an important theorem in calculus called the Intermediate Value Theorem.
+\begin{theorem}[Intermediate Value Theorem]
+    If \begin{enumerate}
+        \item $f(x)$ is continuous on the closed interval $[a,b]$
+        \item if $f(a)\neq f(b)$
+        \item if $k$ is between $f(a)$ and $f(b)$
+    \end{enumerate}
+    then there exists a number $c$ between $a$ and $b$ for which $f(c)=k$.
+\end{theorem}
+
+In other words, a function $y=f(x)$ that is continuous on a closed interval $[a,b]$ takes on every value between $f(a)$ and $f(b)$. If $k$ is between $f(a)$ and $f(b)$, then there is at least one value $c$ in $(a,b)$ for which $f(c)=k$.
+
+\begin{example}
+    Determine if the Intermediate Value Theorem holds for the given values of $k$. If the theorem holds, find a number $c$ for which $f(c)=k$. If the theorem does not hold, give the reason.
+
+    $f(x) = \frac{1}{x-2}$, $[a,b]=\left[2\frac{1}{2},7\right], k=\frac{1}{4}$
+
+    We have $\frac{1}{x-2}=\frac{1}{4}$, so $x=6$.
+\end{example}
+
+\ex Do the same for $f(x)=x^2+5x-6, [a,b]=[-1,2], k=4$
+\end{document}
