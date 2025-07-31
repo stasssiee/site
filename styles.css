@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Cinzel', serif;
   color: #3d2b1a;
   text-shadow: 1px 1px 0 #c6b798;
   margin-top: 20px;
@@ -177,7 +177,7 @@ footer {
 
 .question {
   font-size: 1.3rem;
-  font-family: 'Uncial Antiqua', cursive;
+  font-family: 'Cinzel', serif;
   color: #3d2b1a;
   margin-bottom: 1rem;
 }
