@@ -3,14 +3,183 @@
 \begin{document}
 \chapter{Parametrics, Vectors, and Polar}
 \section{Parametric Equations: The Basics}
+It is a way to add a third variable into a two dimensional picture.
+
+We let $x=f(t)$ and $y=f(t)$ and can introduce that third variable.
+
+Let's say $x=t^2-4$ and $y=1/2t$. We can eliminate the parameter by plugging in $2y=t$ into $x=t^2-4$. And then we get $x=4y^2-4$.
+
+\ex Eliminate the parameter for $x=3\cos t$ and $y=4\sin t$. What do you get?
+
+Slope of a parametric is $\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}$.
+
+For example, if $x=\cos t$ and $y=\sin t$, then $\frac{dy}{dx}=\frac{\cos t}{-\sin t}=-\cot t$.
+
+\ex Find $\frac{dy}{dx}$ at $(2,3)$ if $x=\sqrt{t}$ and $y=\frac{1}{4}(t^2-4)$.
+
+The second derivative is $\frac{d^2 y}{dx^2}=\frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}}$.
+
+Arc length is 
+\[ \int_{t=a}^{t=b}\sqrt{\left(\frac{dy}{dt}\right)^2+\left(\frac{dx}{dt}\right)^2}dx \]
+
 
 \section{Vectors and Motion along a Curve}
+\begin{example}
+    A particle moves in the $xy$-plane so that at any time $t$, the position of the particle is given by 
+    \[ x(t)=2t^3-5t^2, y(t)=2t^4+t^3 \]
+
+    (a) Find the velocity vector when $t=1$.
+
+    $v(t)=\langle x'(t), y'(t)\rangle$, so $v(t)=\langle 6t^2-10t, 8t^3+3t^2\rangle$.
+
+    Therefore $v(1)=\langle -4,1\rangle$.
+
+    (b) Find the acceleration vector when $t=1$.
+
+    A similar process, $a(t)=\langle 12t-10, 24t^2+6t\rangle$, so $a(1)=\langle 2,30\rangle$.
+\end{example}
+
+The magnitude of the position vector is $\sqrt{(x(t))^2+(y(t))^2}$
+
+The magnitude of the velocity vector is $\sqrt{(x'(t))^2+(y'(t))^2}$. The magnitude of the velocity vector is called the speed of the object moving along the curve.
+
+The magnitude of the acceleration vector is $\sqrt{(x''(t))^2+(y''(t))^2}$
+
+\ex A particle moves in the $xy$-plane so that any time $t$, $t\geq 0$, the position of the particle is given by $x(t)=t^2+5t, y(t)=\ln (t^2+4)$. Find the magnitude of the velocity vector when $t=3$.
+
+\ex A particle moves in the $xy$-plane so that $x=\sqrt{3}{-4\cos t}$ and $y=1-2\sin t$, where $0\leq t\leq 2\pi$. The path of the particle intersects the $x$-axis twice. Write an expression that represents the distance traveled by the particle between the two $x$-intercepts. Do not evaluate.
+
+\ex A particle moves in the $xy$-plane so that at any time $t$, the posiiton of the particle is given by $x(t)=2t^3-15t^2+36t+5, y(t)=t^3-3t^2+1$, where $t\geq 0$. For what value(s) of $t$ is the particle at rest?
+
+\ex A particle moves in the $xy$-plane in such a way that its velocity vector is $\langle 3t^2-4t, 8t^3+5\rangle$. At $t=0$, the position of the particle is $(7,-4)$. Find the position of the particle at $t=1$.
+
+\begin{example}
+    A particle is moving along a curve in the $xy$-plane has a position $\langle x(t),y(t)\rangle$ at time $t$ with $\frac{dx}{dt}=\sin(t^3)$, $\frac{dy}{dt}=\cos (t^2)$. At time $t=2$, the object is at the position $(7,4)$.
+
+    (a) Write the equation of the tangent line to the curve at the point where $t=2$.
+
+    Recall the derivative of a parametric function.
+
+    You should get $y-4=\frac{\cos 4}{\sin 8}(x-7)$.
+
+    (b) Find the speed of the particle at $t=2$.
+
+    The speed is $\sqrt{(\sin 8)^2+(\cos 4)^2}=1.186$.
+
+    (c) For what value of $t$, $0<t<1$, does the tangent line to the curve have a slope of 4? Find the acceleration vector at this time.
+
+    $\frac{dy}{dx}=4$, $t-.616$, $a(.616)=\langle 1.107, -.456\rangle$.
+
+    (d) Find the position of the particle at time $t=1$.
+
+    $\int_2^1 \sin(t^3)dt = x(1)-x(2)$.
+
+    $x(1)=7+\int_2^1 \sin(t^3)dt$.
+
+    $4+\int_2^1 \cos(t^2)dt=y(1)$.
+
+    So $(6.7819, 4.44306)$ is the answer.
+\end{example}
 
 \section{Polar Coordinates and Polar Graphs}
+Rectangular coordinates are in the form $(x,y)$.
+
+Polar coordinates are in the form $(r,\theta)$.
+
+In the past you learnt that $\cos \theta = \frac{x}{r}$, $\sin \theta = \frac{y}{r}$, $\tan\theta = \frac{y}{x}$. 
+
+So we have $x=r\cos \theta, y=r\sin\theta$ and $r=\pm \sqrt{x^2+y^2}$ (from $x^2+y^2=r$).
+
+\begin{example}
+    Convert $\left(2,\frac{5\pi}{6}\right)$ to rectangular coordinates.
+
+    Using the formulas above should give you $(-\sqrt{3},1)$.
+\end{example}
+
+\ex Convert $(3,-3)$ to polar coordinates.
+
+\begin{example}
+    Convert the following equation to polar form. $y=4$.
+
+    $r\sin \theta = 4$, so $r=4\csc \theta$.
+\end{example}
+
+\ex Convert $x^2+y^2=25$ to polar form.
+
+\ex Convert $r\sin\theta = 3$ to rectangular form and graph.
+
+\ex Convert $r=2\cos\theta$ to rectangular form and graph.
+
+\ex Convert $\theta=\frac{2\pi}{3}$ to rectangular form and graph.
+
+To find the slope of a tangent line to a polar graph $r=f(\theta)$, we can use the facts that $x=r\cos\theta$ and $y=r\sin\theta$ together with the product rule:
+\[ \frac{dy}{dx}=\frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} \]
+
+\begin{example}
+    Find $\frac{dy}{dx}$ and the slope of the graph of the polar curve at the given value of $\theta$.
+    \[ r=3+2\sin\theta, \theta=\frac{\pi}{6} \]
+
+    We have $x=(3+2\sin\theta)\cos\theta$ and $y=(3+2\sin\theta)\sin\theta$.
+
+    Using the formula above, we should get $-5\sqrt{3}$.
+\end{example}
 
 \section{Area Bounded by a Polar Curve}
+\begin{example}
+    Find the area bounded by the graph $r=2+2\sin\theta$.
+
+    A good idea is to draw this graph. You get a cardioid.
+
+    The area of a polar graph is $A=\frac{1}{2}\int_a^b r^2 d\theta$.
+
+    So this graph goes from $0$ to $2\pi$, so $\frac{1}{2}\int_0^{2\pi}(2+2\sin\theta)^2 d\theta = 18.8496$.
+\end{example}
+
+\ex Sketch, and set up an integral expression to find the area of one petal of $r=2\sin(3\theta)$. Do not evaluate.
+
+\ex Sketch, and set up an integral expression to find the area of one petal of $r=4\cos(2\theta)$. Do not evaluate.
 
 \section{Notes on Polar}
+\begin{example}
+    Set up an integral expression to find the area inside the graph of $r=3\sin\theta$ and outside the graph of $r=2-\sin\theta$. Do not evaluate.
 
+    We end up getting two polar graphs and we are finding the area where they do not have in common.
+
+    $3\sin\theta = 2-\sin\theta$ gives $\theta = \pi/6, 5\pi/6$.
+
+    The integral is then 
+    \[ A = \int_{\pi/6}^{\pi/2}9\sin^2 \theta d\theta - \int_{\pi/6}^{\pi/2}(2-\sin\theta)^2 d\theta \]
+\end{example}
+
+\ex Sketch, and set up an integral expression to find the area of the common interior of $r=3\cos\theta$ and $r=1+\cos\theta$.
+
+\pagebreak
 \section{More on Polar Graphs}
+
+\begin{example}
+    A curve is drawn in the $xy$-plane and is described by the equation in polar coordinates $r=2+\sin(2\theta)$ for $0\leq \theta\leq \pi$, where $r$ is measured in meters and $\theta$ is measured in radians.
+
+    (a) Find the area bounded by the curve and the $x$-axis.
+
+    $A=\frac{1}{2}\int_0^{\pi}r^2 d\theta = 7.069$.
+
+    (b) Find the angle $\theta$ that corresponds to the point on the curve with $x$-coordinate $-1$.
+
+    $x=r\cos\theta$. $x=\frac{(2+\sin(2\theta))\cos\theta}{y_1}=\frac{-1}{y_2}$.
+
+    Get $\theta =2.63036$.
+
+    (c) Find the value of $\frac{dr}{d\theta}$ at the instant that $\theta=\frac{5\pi}{7}$. What does your answer tell you about $r$? What does it tell you about the curve?
+
+    $r=2+\sin(2\theta)$. $\frac{dr}{d\theta}=2\cos(2\theta)$.
+
+    So $\frac{dr}{d\theta}=-.445$. This is less than 0, so $r$ is decreasing, and the curve closes to the pole as a result.
+
+    (d) A particle is traveling along the polar curve given by $r=2+\sin(2\theta)$ so that its position at time $t$ is $(x(t),y(t))$ and such that $\frac{d\theta}{dt}=3$. Find the value of $\frac{dx}{dt}$ at the instant that $\theta=\frac{\pi}{6}$, and interpret the meaning of your answer in the context of the problem.
+
+    $\frac{dx}{dt}=(2+\sin(2\theta))-3\sin\theta+\cos\theta(\cos(2\theta))$, so at $\pi/6$, this is $-1.70096$.
+
+    $x$ is decreasing because $\frac{dx}{dt}<0$.
+\end{example}
+
 \end{document}
