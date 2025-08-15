@@ -24,11 +24,14 @@ Note that this equilibrium has two equilibrium solutions $p(t)=p_1$ and $p(t)=0$
 \begin{example}
     Taking the population of 3.93 million as the initial population and given the 1840 and 1890 populations of 17.07 and 62.98 million respectively, use the logistic model to estimate the population at time $t$.
 
-    We have $P(50)=17.07$ and $P(100)=62.98$. Using a previously derived formula, $p(t)=\frac{p_0p_1}{p_0+(p_1-p_0)e^{-Ap_1t}}$, we get $17.07=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-50Ap_1}}$ and $62.98=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-100Ap_1}}$. 
+    We have $P(50)=17.07$ and $P(100)=62.98$. Using a previously derived formula, 
+    
+    $p(t)=\frac{p_0p_1}{p_0+(p_1-p_0)e^{-Ap_1t}}$, we get $17.07=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-50Ap_1}}$ and $62.98=\frac{3.93p_1}{3.93+(p_1-3.93)e^{-100Ap_1}}$. 
 
     The answers are that $p_1\approx 251.78$ and $A\approx 0.0001210$, so the logistic equation ended up being $p(t)=\frac{989.5}{3.93+247.85e^{-0.030463t}}$.
 \end{example}
 
+\pagebreak
 \begin{example}
     Suppose a student carrying a flu virus returns to an isolated college campus of 1000 students. If it is assumed that the rate at which the virus spreads is proportional not only to the number $x$ of infected students 
     but also to the number of students not infected, determine the number of infected students after 6 days if it is further observed that after 4 days, $x(4)=50$.
@@ -63,6 +66,7 @@ The Taylor series for $\phi_n (x)$ about the point $x_n$ is
 where $h=x-x_n$. Since $\phi_n$ satisfies the initial value, we can write this series in the form 
 \[ \phi_n(x)=y_n+hf(x_n,y_n)+\frac{h^2}{2!}\phi''_n(x_n)+\dots \]
 
+\pagebreak
 \begin{example}
     Determine the recursive formula for the Taylor method of order 2 for the initial value 
     \[ y'=\sin(xy), y(0)=\pi \]

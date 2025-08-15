@@ -28,7 +28,7 @@ The Taylor polynomial $p_n$ is just the $(n+1)$st partial sum of the Taylor seri
 
     Filling in the $f^{(j)}$ values gives us $p_4(x)=\cos 2-\sin 2(x-2)-\frac{\cos 2}{2}(x-2)^2+\frac{\sin 2}{6}(x-2)^3+\frac{\cos 2}{24}(x-2)^4$
 \end{example}
-\medbreak
+\pagebreak
 \begin{example}
     Find the first few Taylor polynomials approximating the solution around $x_0=0$ of the initiai value problem 
     \[ y''=3y'+x^{7/2}y \qquad y(0)=10 \quad y'(0)=5 \]
@@ -74,7 +74,7 @@ converges.
     For each power series, there is a number $\rho \quad (0\leq \rho < \infty)$, called the radius of convergence of the power series, such that the series converges absolutely for $|x-x_0|<\rho$ and diverges for $|x-x_0|>\rho$.
     If the series converges for all values of $x$, then $\rho=\infty$. WHen the series converges only at $x_0$, then $\rho=0$.
 \end{theorem}
-\pagebreak
+
 \begin{theorem}
     If, for $n$ large, the coefficients $a_n$ are nonzero and satisfy 
     \[ \lim_{n\to \infty} \left|\frac{a_n}{a_{n+1}}\right| = L \qquad (0\leq L\leq \infty) \]
@@ -105,7 +105,7 @@ converges.
     Furthermore, termwise integration gives the power series for the integral of $f$:
     \[ \int f(x)\dd x = \sum^{\infty}_{n=0}\frac{a_n}{n+1} (x-x_0)^{n+1} + C \qquad \text{for} \qquad |x-x_0| < \rho \]
 \end{theorem}
-
+\pagebreak
 \begin{example}
     Starting with the geometric series for $\frac{1}{1-x}=1+x+x^2+x^3+x^4+\dots = \sum_{n=0}^{\infty}x^n \qquad -1<x<1$ find a power series for each of the following functions.
 
@@ -196,6 +196,7 @@ where the first three are valid for all $x$, whereas the last is valid for $x$ i
     We can also write this as $y=a_0\sum_{n=0}\frac{(-1)^n}{n!}x^{2n}$, which ends up being $a_0e^{-x^2}$.
 \end{example}
 
+\pagebreak
 \begin{example}
     Find a general solution to 
     \[ 2y''+xy'+y=0\]
@@ -268,7 +269,7 @@ We start by stating a basic existence theorem for the equation
 
     There are no singular points, so the radius of convergence is $\rho = \infty$
 \end{example}
-\pagebreak
+
 \begin{example}
     Find a minimum value for the radius of convergence of a power series solution about $x=0$ to 
     \[ (1+x^2)y''-y'+y=0 \]
@@ -280,6 +281,7 @@ We start by stating a basic existence theorem for the equation
     The distance from $0$ is $1$, so $\rho = 1$.
 \end{example}
 
+\pagebreak
 \begin{example}
     Find the first few terms in a power series expansion about $x=1$ for a general solution to 
     \[ 2y''+xy'+y=0 \]
@@ -324,6 +326,7 @@ We start by stating a basic existence theorem for the equation
     $x=1$ is an irregular singular point because it is not analytic for both $p(x)$ and $q(x)$. $-1$ is a regular singular point.
 \end{example}
 
+\pagebreak
 \begin{definition}
     If $x_0$ is a regular singular point of $y''+py'+qy=0$, then the indical equation for this point is 
     \[ r(r-1)+p_0r+q_0=0\]
@@ -360,7 +363,9 @@ We start by stating a basic existence theorem for the equation
 
     We get $(x+2)x^2\sum a_n(n+1)nx^{n-1}-x\sum a_n(n+1)x^n+(1+x)\sum a_nx^{n+1}=0$.
 
-    Do some simplification to get $\sum{n=0} a_n(n+1)nx^{n+2}+\sum_{n=1}2a_n(n+1)nx^{n+1}-\sum_{n=1}a_n(n+1)x^{n+1}\sum_{n=0} a_n x^{n+2}$.
+    Do some simplification to get 
+    
+    $\sum{n=0} a_n(n+1)nx^{n+2}+\sum_{n=1}2a_n(n+1)nx^{n+1}-\sum_{n=1}a_n(n+1)x^{n+1}\sum_{n=0} a_n x^{n+2}$.
 
     Writing them to start all at the same index and combining gives you $\sum_{k=2}[a_{k-2}(k-1)(k-2)+2a_{k-1}k(k-1)-a_{k-1}(k-1)+a_{k-2}]x^k=0$.
 
@@ -375,7 +380,7 @@ We start by stating a basic existence theorem for the equation
 \end{theorem}
 
 \begin{example}
-    Find as eries solution about the regular singular point $x=0$ of 
+    Find a series solution about the regular singular point $x=0$ of 
     \[ x^2y''(x)-xy'(x)+(1-x)y(x)=0, \qquad x>0 \]
 
     We have $x=0$ is a regular singular point from writing this in general form.

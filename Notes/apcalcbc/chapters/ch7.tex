@@ -3,10 +3,120 @@
 \begin{document}
 \chapter{Area between Curves, Volume, and Arc Length}
 \section{Area Between Two Curves}
+To find the area bounded by two functions $y=f(x)$ and $y=g(x)$ on the interval $[a,b]$:
+
+Area = $\int_a^b f(x)-g(x)dx$
+
+To find the area bounded by two functions $x=f(y)$ and $x=g(y)$ on the interval $[a,b]$:
+
+Area = $\int_a^b g(y)-f(y)dy$
+
+\begin{example}
+    Find the area bounded by the graphs $y=3-x^2$ and $y=-x+1$.
+
+    The intersections are when the two graphs are equal to each other.
+
+    Setting $3-x^2=-x+1$ results in $x=-1$ and $x=2$.
+
+    $A=\int_{-1}^2 3-x^2-(-x+1)dx$
+
+    This is equal to $\int_{-1}^2 2-x^2+xdx$.
+
+    Simplifying this gives $A=4.5$.
+\end{example}
+
+\ex Find the area between the two graphs $x=5-y^2$ and $x=y-1$.
 
 \section{Volume with Known Cross Sections}
+For this, we will find the volume of a solid whose cross sections are familiar geometric shapes, such as squares, rectangles, triangles, and semicircles.
+
+For cross sections of area $A(x)$ taken perpendicular to the $x$-axis, the volume is $\int_a^b A(x)dx$
+
+For cross sections of area $A(y)$ taken perpendicular to the $y$-axis, volume is $\int_{y=c}^{y=d}A(y)dy$ 
+
+\begin{example}
+    Set up the integrals needed to find the volume of the solid whose base is the area bounded by the lines $y=x^2$ and $y=-2x+3$ and whose cross sections perpendicular to the $x$-axis are the following shapes.
+
+    (a) Rectangles of height 4
+
+    $V=\int_{-3}^1 -8x+12-4x^2dx$
+
+    (b) Semicircles 
+
+    $V=\frac{1}{2}\pi \int_{-3}^1 \left(\frac{-2x+3-x^2}{2}\right)^2 dx$
+\end{example}
+
+\ex Set up the integrals needed to find the volume of the solid whose base is the area bounded by the circle $x^2+y^2=9$ and whose cross sections perpendicular to the $x$-axis are equilateral triangles. Note the area of an equilateral triangle is $\frac{s^2\sqrt{3}}{4}$ where $s$ is a side of a triangle.
+
+\ex The base of a solid is bounded by $y=x^2$, $y=0$, and $x=2$. For this solid, each cross section perpendicular to the $y$-axis is square. Set up the integral needed to find the volume of this solid.
 
 \section{Volume: The Disc Method}
+If we revolve a figure around a line, a solid of revolution is formed. The line is called the axis of revolution. The simplest such solid is a right circular cylinder or disc.
+
+To find the volume of the solid, we partition it into rectangles, which are revolved about the axis of revolution.
+
+Each disc is a thin cylinder standing on its side. A volume of a cylinder is $\pi r^2h$, a volume of a disc is $\pi (R(x))^2\Delta x$.
+
+Adding the volumes of all of the discs together, we get the volume of a solid to be approximately $\sum_{i=1}^n \pi[R(x_1)]^2\Delta x_i$.
+
+To get the exact volume, this is equal to 
+\[ \lim_{n\to \infty}\sum_{i=1}^n \pi[R(x_i)]^2\Delta x_i = \pi\int_a^b [R(x)]^2 dx \]
+
+Volume about horizontal axis by discs: $V=\pi \int_a^b [R(x)]^2 dx$
+
+Volume about vertical axis by discs: $V=\pi \int_c^d [R(y)]^2 dy$
+
+The disc method can be extended to cover solids of revolutions with a hole in them. This is called the washer method.
+
+If $R(x)$ is the outer radius and $r(x)$ is the inner radius:
+
+Volume about horizontal axis by washers: $V=\pi \int_a^b [R(x)]^2 - [r(x)]^2 dx$
+
+Volume about vertical axis by washers: $V=\pi \int_c^d [R(y)]^2 - [r(y)]^2 dy$
+
+Things to remember: In the disc or washer method:
+\begin{enumerate}
+    \item The representative rectangle is always perpendicular to the axis of revolution.
+    \item If the representative rectangle is vertical, you will work in $x$'s. If the representative rectangle is horizontal, you will work in $y$'s.
+\end{enumerate}
+
+\begin{example}
+    Find the volume of the solid formed by revolving the region bounded by the graphs of the given equations about the indicated axis.
+    \[ y=9-x^2, x=0, y=0 \]
+
+    (a) about the $x$-axis.
+
+    $\pi \int_0^3 (9-x^2)^2 dx$
+
+    (b) about the line $y=-2$
+
+    $V=\pi \int_0^3 (11-x^2)^2 - 2^2 dx$
+
+    (c) about the $y$-axis 
+
+    $V=\pi \int_0^9 (\sqrt{9-y})^2 dy$
+
+    (d) about the line $x=-2$
+
+    $V=\pi \int_0^9 (\sqrt{9-y}+2)^2-2^2 dy$
+\end{example}
+
+\ex Find the volume of the solid former by revolving the region bounded by the graphs of $y=2x-x^2$ and $y=x^2$ about the line $y=3$.
 
 \section{Arc Length}
+Arc length of $f(x)$ from $x=a$ to $x=b$:
+\[ s=\int_a^b \sqrt{1+(f'(x))^2}dx \]
+
+Arc length of $f(y)$ from $y=c$ to $y=d$:
+\[ s=\int_c^d \sqrt{1+(f'(y))^2}dy \]
+
+\begin{example}
+    Find the arc length of the graph of the given function over the indicated interval.
+
+    \[ y=x^{3/2}-1 \quad [0,4] \]
+
+    $s=\int_0^4 \sqrt{1+\left(\frac{3}{2}x^{1/2}\right)^2}dx$
+\end{example}
+
+\ex Find the arc length of the graph of the function $y=3x^{2/3}-10$ on the interval $[8,27]$.
 \end{document}

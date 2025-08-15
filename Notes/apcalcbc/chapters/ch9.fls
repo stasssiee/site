@@ -1,7 +1,7 @@
 PWD c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc
 INPUT C:\Users\augus\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.tex
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.log
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.tex
+OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.log
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.cls
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.cls
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\import\import.sty
@@ -213,9 +213,9 @@ INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\asymptote\asymptote.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\asymptote\asymptote.sty
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.pre
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.pre
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.pre
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.pre
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.pre
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.pre
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
@@ -229,7 +229,7 @@ INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\etexcmds\etexcmds.sty
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.pre
+OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.pre
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\mdframed\mdframed.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\mdframed\mdframed.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
@@ -292,10 +292,10 @@ INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.aux
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.aux
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.aux
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.aux
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.aux
+OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -304,14 +304,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.pdf
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.pdf
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
@@ -342,21 +342,13 @@ INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssi10.tfm
 INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.1.PNG
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\..\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\figures\3.1.2.png
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch3.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.aux
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT c:\Users\augus\Documents\GitHub\site\Notes\apcalcbc\chapters\ch9.out
+INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
+INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi5.pfb
@@ -377,5 +369,7 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb

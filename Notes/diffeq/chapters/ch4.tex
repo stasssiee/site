@@ -29,11 +29,14 @@ to the mass by shaking the supports holding the system. For now we refer to the 
 
     The differential equation is $my''+by'+ky=F_{\text{ext}}$ and that $my''+ky=0$.
 
-    Since we are given what $y(t)$ is, taking the derivative of the differential equation gives that $-m\omega^2\cos(\omega t)+k\cos(\omega t)=0$, and solving for $\omega$, we get that $\omega=\sqrt{\frac{k}{m}}$.
+    Since we are given what $y(t)$ is, taking the derivative of the differential equation gives that 
+    
+    $-m\omega^2\cos(\omega t)+k\cos(\omega t)=0$, and solving for $\omega$, we get that $\omega=\sqrt{\frac{k}{m}}$.
 
     If $k$ increases, $\omega$ increases, and if $m$ increases, $\omega$ decreases.
 \end{example}
 
+\pagebreak
 \begin{example}
     Verify that the exponentially damped sinusoid given by $y(t)=e^{-3t}\cos 4t$ is a solution to the above differential equation if $F_{\text{ext}}=0, m=1, k=25$, and $b=6$.
 
@@ -211,6 +214,7 @@ To find a solution to the differential equation $ay''+by'+cy = Ct^me^{\alpha t}\
     \item $s=1$ if $\alpha + i\beta$ is a root of the associated auxiliary equation
 \end{enumerate}
 
+\pagebreak
 \section{The Superposition Principle and Undetermined Coefficients Revisited}
 \begin{theorem}[Superposition Principle]
     Let $y_1$ be a solution to the differential equation 
@@ -343,6 +347,7 @@ Typically, the equation is divided by the nonzero coefficient $a_2(t)$ and is ex
     \[ y''(t)+p(t)y'(t)+q(t)y(t)=g(t), \qquad y(t_0)=Y_0, \qquad y'(t_0)=Y_1 \]
 \end{theorem}
 
+\pagebreak
 \begin{example}
     Determine the largest interval for which the above theorem ensures the existence and uniqueness of a solution to the initial value problem 
     \[(t-3)y'' + y'+\sqrt{t}y = \ln t \qquad y(1)=3, \qquad y'(1)=-5 \]
@@ -375,7 +380,7 @@ the resulting equation $ar^2+(b-a)r+c=0$ is called the associated characteristic
 
 If the roots of the associated characteristic equation $r$ are equal, then independent solutions of the Cauchy-Euler equation on $(0, \infty)$ are given by 
 \[ y_1 = t^r \qquad \text{and} \qquad y^2 = t^r\ln t\]
-IF the roots are complex, $r=\alpha\pm\beta i$, then the independent solutions are given by 
+If the roots are complex, $r=\alpha\pm\beta i$, then the independent solutions are given by 
 \[ y_1=t^a\cos(\beta \ln t) \qquad \text{and} \qquad y_2=t^{\alpha}\sin(\beta \ln t) \]
 
 \begin{example}

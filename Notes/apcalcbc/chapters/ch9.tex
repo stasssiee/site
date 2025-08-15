@@ -3,18 +3,269 @@
 \begin{document}
 \chapter{Improper Integrals, Sequences and Series, Taylor Polynomials, and Taylor Series}
 \section{Improper Integrals}
+\begin{example}
+    \[ \int_1^{\infty} \frac{1}{x^2}dx \]
 
+    This can be written as 
+    \[ \lim_{b\to \infty}\int_1^b \frac{1}{x^2}dx=\lim_{b\to \infty}\left[-\frac{1}{x}\right]^b_1 = \lim_{b\to\infty}\left[-\frac{1}{b}-\frac{-1}{1}\right] \]
+    Which converges to 1.
+\end{example}
+
+\ex $\int_{-1}^0 \frac{1}{x^2}dx$
+
+\ex $\int_{-1}^2 \frac{1}{x^3}dx$
 \section{nth Term Test}
+A sequence $\{a_n\} = a_1, a_2, a_3, a_4,\dots, a_n,a_{n2}$.
 
+$\{a_n\}$ converges if $\lim_{n\to \infty}a_n=L$ and diverges if $L\rightarrow \infty$ or $L$ does not exist.
+
+A series $\sum_{n=1}^{\infty}a_n = a_1+a_2+a_3+\dots a_n+\dots$.
+
+If $\sum_{n=1}^{\infty}a_n$ becomes $\infty$ we say the series diverges.
+
+If $\sum_{n=1}^{\infty}a_n$ stays finite, we say it converges.
+
+The 2 big questions are 
+\begin{enumerate}
+    \item Does $\sum_{n=1}^{\infty}a_n$ converge?
+    \item If so, to what value?
+\end{enumerate}
+
+Let's say we have a sum $\sum_{n=1}^{\infty}2n = 2+4+6+8+\dots$.
+
+$S_1$ would be $2$, $S_2$ would be $2+4=6$, $S_3$ would be $2+4+6=12$. We can see that the $\lim_{n\to\infty}=\infty$ so it diverges.
+\pagebreak
+\begin{example}
+    Does this diverge or converge?
+    \[ \sum_{n=1}^{\infty} \frac{n}{2n-1}\]
+
+    Expanding we see that This ends up being $\frac{1}{1}+\frac{2}{3}+\frac{3}{5}+\frac{4}{7}+\dots$
+
+    The limit $\lim_{n\to\infty}\frac{n}{2n-1}=\frac{1}{2}$.
+
+    $S_n\rightarrow \infty$ so diverges.
+\end{example}
+
+To ``stand a chance'' to converge 
+\[ \lim_{n\to\infty}a_n=0\]
+
+nth term for divergence:
+
+If $\lim_{n\to\infty}a_n\neq 0$ then $\sum_{n=1}^{\infty}a_n$ diverges.
+
+\ex Use the nth term test to determine whether the series diverges for $\sum_{n=1}^{\infty}\frac{1}{3n}$.
+
+\ex Use the nth term test to determine whether the series diverges for $\sum_{n=1}^{\infty}\frac{n!}{3n!+2}$.
+
+Never use the nth term test to argue for convergence.
 \section{Geometric Series and Telescopic}
+\ex Does $\sum_{n=1}^{\infty}\tan^{-1}n$ diverge? Use the nth term test.
+
+\begin{example}
+    \[ \sum_{n=1}^{\infty}\frac{e^n}{3^n}\]
+
+    The summation can be written as $\left(\frac{e}{3}\right)^n$. Using the nth term test, the limit goes to 0.
+
+    Whenever you have $\sum_{n=0}^{\infty}a_1(r)^n = \frac{a_1}{1-r}$ if $-1<r<1$ is what it converges to.
+    
+    This converges if $-1<r<1$.
+
+    Converges to $\frac{a_1}{1-r}$.
+
+    In the above case, $a_1=\frac{e}{3}$ and $r=\frac{e}{3}$ so it converges to $\frac{\frac{e}{3}}{1-\frac{e}{3}}$.
+\end{example}
+
+\ex Can you use geometric series or nth term test on $\sum_{n=1}^{\infty}\frac{1}{10n+7}$?
+
+\begin{example}
+    \[ \sum_{n=1}^{\infty}\frac{1}{n(n+1)} \]
+
+    We can separate this into $\sum_{n=1}^{\infty}\frac{1}{n}-\frac{1}{n+1}=1$ becauase you can see that every term will cancel out except $\frac{1}{1}$.
+
+    Converges to 1.
+\end{example}
+
+\ex Does $\sum_{n=1}^{\infty} \frac{3^{n-2}}{2^n}$ diverge or converge?
+
+\ex Does $\sum_{n=1}^{\infty}\frac{3^n+1}{3^{n+1}}$ diverge or converge?
 
 \section{Integral Test and p-Series}
+Integral Test:
+
+If $f$ is positive, continuous, and decreasing for $x\geq 1$ and  $a_n=f(n)$, then $\sum_{n=1}^{\infty}a_n$ and $\int_1^{\infty}f(x)dx$ either both converge or both diverge.
+
+\begin{example}
+    Determine whether the following series converges or diverges.
+    \[ \sum_{n=1}^{\infty}\frac{n}{n^2+1} \]
+
+    $\lim_{n\to\infty}a_n=0$, so we use a different test.
+
+    $\int_1^{\infty} \frac{x}{x^2+1}$ diverges, so the series will diverge as a result.
+\end{example}
+
+\ex Determine if the series converges or diverges. $\sum_{n=1}^{\infty}\frac{1}{n^2+1}$
+
+If $f$ is positive, continuous, and decreasing for $x\geq 1$ and $a_n=f(n)$ and if $\sum_{n=1}^{\infty} a_n$ and $\int_1^{\infty}f(x)dx$ both converge, then the series converges to $S$, and the remainder, $R_N=S-S_N$ is bounded by $0\leq R_N\leq \int_N^{\infty}f(x)dx$.
+
+\begin{example}
+    Approximate the sum of the convergent series $\sum_{n=1}^{\infty}\frac{1}{n^4}$ by using six terms. Include an estimate of the maximum error for your approximation.
+
+    Using the first six terms gives you $1.07209$.
+
+    The error is error $\leq \int_6^{\infty}\frac{1}{x^4}dx=0.0015$.
+
+    $1.07289<\sum < 1.07289+0.0015$
+\end{example}
+
+p-Series 
+
+A series of the form $\sum_{n=1}^{\infty} \frac{1}{n^p}=\frac{1}{1^p}+\frac{1}{2^p}+\frac{1}{3^p}+\dots+\frac{1}{n_p}+\dots$ is called a $p$-series, where $p$ is a positive constant. For $p=1$, the series $\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{n}+\dots$ is called the harmonic series.
+
+The p-series diverges if $0<p\leq 1$ and converges if $p>1$. The harmonic series diverges.
+
+\begin{example}
+    \[ \sum_{n=1}^{\infty}\frac{1}{n\sqrt{n}}\]
+
+    $p=3/2$ for this, so the series converges.
+\end{example}
 
 \section{Comparison of Series}
+Direct Comparison Test 
+
+If $a_n\geq 0$ and $b_n\geq 0$,
+\begin{enumerate}
+    \item If $\sum_{n=1}^{\infty}b_n$ converges and $0\leq a_n\leq b_n$, then $\sum_{n=1}^{\infty}a_n$ converges.
+    \item If $\sum_{n=1}^{\infty}a_n$ diverges and $0\leq a_n\leq b_n$, then $\sum_{n=1}^{\infty}b_n$ diverges.
+\end{enumerate}
+
+\begin{example}
+    Determine if this converges or diverges.
+    \[ \sum_{n=1}^{\infty}\frac{1}{n^3+1} \]
+
+    Compare this to $\sum_{1}^{\infty}\frac{1}{n^3}$. This is a p-series that converges, so this series converges.
+\end{example}
+
+\ex Determine whether the following series converges or diverges. $\sum_{n=1}^{\infty}\frac{1}{3^n+2}$
+
+\ex Determine whether the following series converges or diverges. $\sum_{n=4}^{\infty}\frac{1}{\sqrt{n}-1}$
+
+Limit Comparison Test 
+
+Suppose $a_n>0, b_n>0$ and $\lim_{n\to\infty}\frac{a_n}{b_n}=L$, where $L$ is both finite and positive. Then the two series $\sum_{n=1}^{\infty}a_n$ and $\sum_{n=1}^{\infty}b_n$ either both converge or both diverge.
+
+\begin{example}
+    Determine whether the following converge or diverge.
+    \[ \sum_{n=1}^{\infty}\frac{n^4+10}{4n^5-n^3+7} \]
+
+    Compare this to $\frac{1}{n}$ and this diverges. The limit of what is in the summation as $n\rightarrow \infty$ is $\frac{1}{4}$ so this diverges so they diverge.
+\end{example}
+
+\ex Determine whether the series converges or diverges. $\sum_{n=2}^{\infty}\frac{1}{n^3-2}$.
 
 \section{Alternating Series}
+An alternating series is a series whose terms are alternately positive and negative.
+
+Examples are $\sum_{n=1}^{\infty}(-1)^{n+1}\frac{1}{n}$ or $\sum_{n=1}^{\infty}(-1)^n \frac{1}{n!}$.
+
+In general, just knowing that $\lim_{n\to\infty}a_n=0$ tells us very little about the convergence of the series $\sum_{n=1}^{\infty}a_n$ however it turns out that an alternating series must converge if the terms have a limit of 0 and the terms decrease in magnitude.
+
+Alternating Series Test 
+
+Let $a_n>0$. The alternating series $\sum_{n=1}^{\infty}(-1)^n a_n$ and $\sum_{n=1}^{\infty}(-1)^{n+1}a_n$ converge if the following two conditions are met 
+\begin{enumerate}
+    \item $\lim_{n\to\infty}a_n=0$
+    \item $a_{n+1}<a_n$ for all $n$
+\end{enumerate}
+In other words, a series converges if its terms 
+\begin{enumerate}
+    \item alternate in sign 
+    \item decrease in magnitude 
+    \item have a limit of 0
+\end{enumerate}
+
+Note: This does not say that if $\lim_{n\to\infty}a_n\neq 0$, the series diverges by the Alternating Series Test. The Alternating Series Test can only be used to prove convergence. If $\lim_{n\to\infty}a_n\neq 0$ then the series diverges by the nth Term Test for Divergence not by the Alternating Series Test.
+\pagebreak
+\begin{example}
+    Determine if the series converges or diverges.
+    \[ \sum_{n=1}^{\infty}\frac{(-1)^{n+1}n}{2n-1} \]
+
+    The limit $\lim_{n\to\infty}\frac{n}{2n-1}=\frac{1}{2}$ so this diverges by the nth term test.
+\end{example}
+
+\ex Determine if the series converges or diverges. $\sum_{n=1}^{\infty}\frac{(-1)^n n}{\ln(2n)}$
+
+\ex Determine if the series converges or diverges. $\sum_{n=1}^{\infty}\frac{(-1)^n}{n}$
+
+The above series is called the alternating harmonic series. If an alternating series converges to a sum $S$, then its partial sums jump around $S$ from side to side with decreasing distances from $S$. 
+
+\begin{definition}
+    $\sum_{n=1}^{\infty}a_n$ is absolutely convergent if $\sum_{n=1}^{\infty}|a_n|$ converges.
+
+    $\sum_{n=1}^{\infty}a_n$ is conditionally convergent if $\sum_{n=1}^{\infty}a_n$ converges but $\sum_{n=1}^{\infty}|a_n|$ diverges.
+\end{definition}
+
+\begin{example}
+    Determine whether the given alternating series converges or diverges. If it converges, determine whether it is absolutely convergent or conditionally convergent.
+
+    \[ \sum_{n=1}^{\infty}\frac{(-1)^n}{\sqrt{n}} \]
+
+    The limit of $\frac{1}{\sqrt{n}}=0$ as $n$ goes to infinity.
+
+    It is an alternating series because terms are decreasing in magnitude.
+
+    So we see that $\left| \frac{(-1)^n}{\sqrt{n}}\right|$ converges, but $\frac{1}{\sqrt{n}}$ will diverge.
+
+    This is conditionally convergent.
+\end{example}
+
+Alternating Series Remainder 
+
+If a series has terms that are alternating, decreasing in magnitude, and having a limit of 0, then the series converges so that it has a sum $S$. If the sum $S$ is approximated by the nth partial sum, $S_n$, then the error in the approximation, $|R_n|$, which equals $|S-S_n|$, will be less than the absolute value of the first omitted or trucnated term.
+
+In other words, if the three conditions are met, you can approximate the sum of the series by using the nth partial sum, $S_n$, and your error will be bounded by the absolute value of the first truncated term.
+\pagebreak
+\begin{example}
+    Given the series $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n!}$
+
+    (a) Approximate hte sum $S$ of the series by using its first four terms.
+
+    First four terms comes out to $0.625$
+
+    (b) Explain why the estimate found in (a) differs from the actual value by less than $\frac{1}{100}$.
+
+    error$<\left|\frac{(-1)^{5+1}}{5!}\right| = \frac{1}{120}<\frac{1}{100}$
+
+    (c) Use your results to explain why $S\neq 0.7$
+
+    $0.625-\frac{1}{120} < $ sum$<0.625+\frac{1}{120}$.
+
+    $0.7$ is not in this interval.
+\end{example}
+
+\ex How many terms are needed to approximate the sum of the series $\sum_{n=1}^{\infty}\frac{(-1)^{n+1}}{n^4}$ so that the estimate differs from the actual sum by less than $\frac{1}{1000}$? Justify your answer.
 
 \section{Ratio Test}
+Ratio Test 
+
+Let $\sum_{n=1}^{\infty}a_n$ be a series of nonzero terms.
+\begin{enumerate}
+    \item $\sum_{n=1}^{\infty}a_n$ converges if $\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|<1$.
+    \item $\sum_{n=1}^{\infty}a_n$ diverges if $\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|>1$.
+    \item If $\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=1$ the Ratio Test is inconclusive so another test would need to be used.
+\end{enumerate}
+
+\begin{example}
+    Determine whether the following converge or diverge.
+    \[ \sum_{n=1}^{\infty}\frac{2^n}{n!} \]
+
+    We do $\lim_{n\to\infty}\left| \frac{2^{n+1}}{(n+1)!}\cdot \frac{n!}{2^n} \right|$.
+
+    This simplies to $\lim_{n\to\infty}\left|\frac{2}{n+1}\right|=0<1$ converges.
+\end{example}
+
+\ex Determine whether the following converges or diverges. $\sum_{n=1}^{\infty}\frac{n^2 3^{n+1}}{2^n}$
+
+\ex Determine whether the following converges or diverges. $\sum_{n=1}^{\infty}\frac{(n+1)!}{3^n}$
 
 \section{Taylor Polynomials}
 

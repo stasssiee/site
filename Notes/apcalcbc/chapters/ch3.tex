@@ -153,12 +153,280 @@ To find the extrema of a continuous function $f$ on a closed interval $[a,b]$, w
 
 
 \section{Mean Value Theorem and Rolle's Theorem}
+\begin{theorem}[Mean Value Theorem]
+    If a function $f$ is: 
+
+    \begin{enumerate}
+        \item continuous on $[a,b]$ and 
+        \item differentiable on $(a,b)$
+    \end{enumerate}
+    then there is at least one number $c$ in $(a,b)$ such that 
+    \begin{enumerate}
+        \item $\frac{f(b)-f(a)}{b-a}=f'(c)$
+        \item $f(b)-f(a)=f'(c)(b-a)$
+        \item $f(b)=f(a)+f'(c)(b-a)$
+    \end{enumerate}
+\end{theorem}
+
+If $f(a)$ and $f(b)$ are equal, this special case of the Mean Value Theorem is called Rolle's Theorem.
+\begin{theorem}[Rolle's Theorem]
+    If a function $f$ is 
+    \begin{enumerate}
+        \item continuous on $[a,b]$ and 
+        \item differentiable on $(a,b)$ and 
+        \item $f(a)=f(b)$
+    \end{enumerate}
+    then there is at least one number $c$ in $(a,b)$ such that 
+    \begin{enumerate}
+        \item $\frac{f(b)-f(a)}{b-a}=f'(c)$
+        \item $\frac{0}{b-a}=f'(c)$
+        \item $0=f'(c)$
+    \end{enumerate}
+\end{theorem}
+\pagebreak
+\begin{example}
+    Show that the conditions of Rolle's Theorem are met, and find the $c$ that Rolle's Theorem guarantees.
+
+    \[ f(x)=x^2-x-6 \quad [-2,3] \]
+
+    This is a continuous and differentiable function.
+
+    $f(3)=0$ and $f(-2)=0$, so $f'(x)=2x-1=0$, so $x=1/2$.
+\end{example}
+
+\ex Given the function $f(x)=3-\frac{5}{x}$ on the interval $[1,5]$, show that the Mean Value Theorem applies, and find the $c$ that the theorem guarantees.
+
+\begin{example}
+    You are driving a car traveling on an interstate at 50 mph, and you pass a police car. Four minutes later, you pass a second police car, and you are again traveling at 50 mph.
+    The speed limit on the interstate is 60 mph. The distance between the two police cars is five miles. The patrolman in the second police car gives you a speeding ticket for driving 75 mph. How can he prove that you were speeding?
+
+    $r=\frac{d}{t}=75$ mph. Since speed is a differnetiable function of time and averaged 75 mph, the MVT says there is at least one time in those 4 minutes where the instantaneous rate of change is 75 mph.
+\end{example}
 
 \section{Increasing and Decreasing Functions and the First Derivative Test}
+\begin{definition}
+    \begin{enumerate}
+        \item A function $f$ is increasing on an interval if for any two numbers 
+        
+        $x_1$ and $x_2$ in the interval, $x_1<x_2$ implies $f(x_1)<f(x_2)$.
+
+        \item A function $f$ is decreasing on an interval if for any two numbers 
+        
+        $x_1$ and $x_2$ in the interval, $x_1<x_2$ implies $f(x_1)>f(x_2)$
+    \end{enumerate}
+\end{definition}
+
+Test for Increasing and Decreasing Functions 
+\begin{enumerate}
+    \item If $f'(x)>0$ for all $x$ in $(a,b)$, then $f$ is increasing on $[a,b]$.
+    \item If $f'(x)<0$ for all $x$ in $(a,b)$, then $f$ is decreasing on $[a,b]$.
+    \item If $f'(x)=0$ for all $x$ in $(a,b)$, then $f$ is constant on $[a,b]$.
+\end{enumerate}
+
+First Derivative Test:
+
+Let $c$ be a critical number of a function $f$ that is continuous on an open interval $I$ containing $c$. If $f$ is differentiable on the interval, except possibly at $c$, then $(c,f(c))$ can be classified as follows.
+\begin{enumerate}
+    \item If $f'(x)$ changes from negative to positive at $x=c$, then $(c,f(c))$ is a relative minimum of $f$.
+    \item If $f'(x)$ changes from positive to negative at $x=c$, then $(c,f(c))$ is a relative maximum of $f$.
+\end{enumerate}
+\pagebreak
+\begin{example}
+    Find the intervals where $f$ is increasing and decreasing, identify all points that are relative maximum and minimum points, and justify your answers.
+
+    \[ f(x)=\frac{1}{3}x^3-x^2-3x+2 \]
+
+    $f'(x)=x^2-2x-3$ or $(x-3)(x+1)=0$.
+
+    We can try points, $f'(-2)=5$, $f'(0)=-3$, $f'(4)=5$.
+
+    $f$ is increasing on $(-\infty]\cup [3,\infty)$ because $f'$ is positive and decreasing on $[-1,3]$ because $f'$ is negative.
+
+    $f$ has a relative maximum at $-1$ because $f'$ changes from positive to negative.
+
+    $f$ has a relative minimum at $x=3$ because $f'$ changes from negative to positive.    
+\end{example}
+
+\ex Do the same as above for the function $f(x)=(x^2-4)^{2/3}$
+
+\ex Do the same above for the function $f(x)=\frac{x^2}{2x-1}$
+
+\ex Do the same above for the function $f(x)=\begin{cases}
+    2x+1, & x\leq -1 \\
+    x^2-2, & x>-1
+\end{cases}$
+
+\begin{example}
+    Use the graph of $f'$ to: 
+
+    (a) identify the interval(s) on which the graph of $f$ is increasing and decreasing 
+
+    (b) estimate the value(s) of $x$ at which the graph of $f$ has a relative maximum or minimum. Justify your answers.
+
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{3.2.1.png}
+    \end{center}
+
+    We can see critial points are $-3,1,4$ when they cross the $x$-axis.
+
+    Looking at the graph, $(-3,1)\cup (4,\infty)$ $f$ is increasing on this interval because $f'>0$ and $f$ has a relative maximum at $x=1$ because $f'$ goes positive to negative.
+
+    From the interval $(-\infty,-3)\cup (1,4)$ $f$ is decreasing because $f'<0$ and $f$ has a relative minimum at $-3$ and $4$ because $f'$ goes negative to positive. 
+\end{example}
+
+\ex Given $f'(x)<0$ on $(-\infty,3)$, $f'(x)>0$ on $(-3,2)$, $f'(x)<0$ on $(2,\infty)$. 
+
+(a) If $g(x)=2f(x)$, what is the sign of $g'(-1)$?
+
+(b) If $g(x)=f(3x-5)$, what is the sign of $g'(-1)$?
+
+\pagebreak
+\begin{example}
+    The function $s(t)=t^2-7t+10$ describes the motion of a particle along a line.
+
+(a) Find the velocity function of the particle at any time $t\geq 0$.
+
+$v(t)=2t-7$
+
+(b) Identify the time interval(s) in which the particle is moving in a positive direction. Justify.
+
+$(7/2,\infty)$ because $v(t)=s'(t)>0$
+
+(c) Identify the interval(s) in which the particle is moving in a negative direction. Justify.
+
+$(-\infty,7/2)$ because $v(t)=s'(t)<0$
+
+(d) Identify the time(s) at which the particle changes direction. Justify.
+
+$t=7/2$ because $v(t)$ changes from negative to positive.
+\end{example}
+
 
 \section{Concavity and the Second Derivative}
+\begin{definition}[Concavity]
+    Let $f$ be differentiable on an open interval $I$.
+
+    \begin{enumerate}
+        \item The graph of $f$ is concave upward on an interval $I$ if $f'$ is increasing on the interval.
+        \item The graph of $f$ is concave downward on an interval $I$ if $f'$ is decreasing on the interval.
+    \end{enumerate}
+\end{definition}
+
+Test for Concavity
+\begin{enumerate}
+    \item If $f''(x)>0$ for all $x$ in $I$, then the graph of $f$ is concave up in $I$.
+    \item If $f''(x)<0$ for all $x$ in $I$, then the graph of $f$ is concave down in $I$.
+\end{enumerate}
+
+\begin{definition}[Inflection Point]
+    A function $f$ has an inflection point at $(c,f(c))$
+
+    \begin{enumerate}
+        \item if $f''=0$ or if $f''$ does not exist and 
+        \item if $f''$ changes sign from negative to positive or positive to negative at $x=c$ OR if $f'(x)$ changes from increasing to decreasing or decreasing to increasing at $x=c$.
+    \end{enumerate}
+\end{definition}
+
+\begin{example}
+    The graph of $f$ is shown below. State the signs of $f'$ and $f''$ on the interval $(0,3)$.
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{3.3.1.PNG}
+    \end{center}
+
+    $f$ is decreasing the whole time, so $f'<0$, but $f'$ is increasing so $f''>0$.
+\end{example}
+
+\begin{example}
+    Given the function $f(x)=x^4-4x^3$ find:
+
+    (a) the intervals where $f$ is increasing and decreasing 
+
+    $f$ is decreasing on $(-\infty,0)\cup (0,3)$ because $f'<0$.
+
+    $f$ is increasing on $(3,\infty)$ because $f'>0$.
+
+    (b) the relative extrema 
+
+    $f$ has a relative minimum at $x=3$ because $f'$ changes negative to positive.
+
+    (c) the intervals where $f$ is concave up and concave down 
+
+    Concave up: $(-\infty,0)\cup (2,\infty)$.
+
+    Concave down: $(0,2)$
+
+    (d) the inflection points 
+
+    $x=0$ and $x=2$
+\end{example}
+
+\ex Sketch a graph for the following characteristics
+
+(a)
+\begin{itemize}
+    \item $f(0)=f(2)=0$
+    \item $f'(x)>0$ if $x<1$
+    \item $f'(1)=0$
+    \item $f'(x)<0$ if $x>1$
+    \item $f''(x)<0$
+\end{itemize}
+
+(b)
+\begin{itemize}
+    \item $f(0)=f(2)=0$
+    \item $f'(x)>0$ if $x<1$
+    \item $f'(1)$ is undefined 
+    \item $f'(x)<0$ if $x>1$
+    \item $f''(x)>0$
+\end{itemize}
+
 
 \section{Second Derivative Test}
+Second Derivative Test:
+
+Let $f$ be a function such that the second derivative of $f$ exists on an open interval containing $c$.
+\begin{enumerate}
+    \item If $f'(c)=0$ and $f''(c)>0$, then $f(c)$ is a relative minimum of $f$.
+    \item If $f'(c)=0$ and $f''(c)<0$, then $f(c)$ is a relative maximum of $f$.
+\end{enumerate}
+\pagebreak
+\begin{example}
+    Use the Second Derivative Test, if possible, to find the relative extrema of $f(x)=-3x^5+5x^3$. Justify your answer.
+
+    The first derivative is $-15x^4+15x^2$. We can factor this to get $x=0,\pm 1$.
+
+    $f''(x)=-60x^3+30x$, $f''(1)=-30<0$, $f''(-1)=30>0$ and $f''(0)=0$.
+
+    So we can see there is a relative maximum at $x=1$ because $f'=0$ and $f''<0$.
+
+    There is a relative minimum at $x=-1$ because $f'=0$ and $f''>0$.
+\end{example}
+
+\ex Suppose that the function $f$ has a continuous second derivative for all $x$, and that $f(3)=-4, f'(3)=1, f''(3)=-2$. Let $g$ be a function whose derivative is given by $g'(x)=(x^2-9)(2f(x)+5f'(x))$ for all $x$. Does $g$ have a local maximum or a local minimum at $x=3$. Justify your answer.
 
 \section{Graphs of f, f', and f''}
+\begin{example}
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{3.4.1.PNG}
+    \end{center}
+    The graph of $y=f'(x)$ is given above. The domain of $f$ is $[-3,3]$.
+
+    (a) For what value(s) of $x, -3<x<3$, is the graph of $f$ increasing? Justify your answer.
+
+    $(-3,-2)\cup (0,2)\cup (2,3)$ because $f'>0$.
+
+    (b) For what value(s) of $x,-3<x<3$, does the graph of $f$ have a relative maximum? Justify your answer.
+
+    $f$ has a relative maximum at $x=-2$ because $f'$ goes from positive to negative.
+
+    (c) For what value(s) of $x, -3<x<3$, is the graph of $f$ concave down? Justify your answer.
+
+    $f$ is concave down on $(-3,-1)\cup (1,2)$ because $f$ is decreasing.
+
+    (d) For what value(s) of $x,-3<x<3$, does the graph of $f$ have an inflection point? Justify your answer.
+
+    $f$ has a point of inflection at $x=-1,1,2$ because $f'$ changes from decreasing to increasing at this point.
+\end{example}
+\ex Using the information above, and the fact that $f(-3)=0$ sketch a possible graph for $f$.
+
 \end{document}

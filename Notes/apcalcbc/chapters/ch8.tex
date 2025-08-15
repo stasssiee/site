@@ -3,8 +3,128 @@
 \begin{document}
 \chapter{Techniques of Integration}
 \section{Integration by Parts}
+Integration by parts is used to integrate a product, such as the product of an algebraic and a transcendental function:
 
+For example, $\int xe^x dx, \int x\sin x dx, \int x\ln x dx$.
+
+Recall the product rule is $\frac{d}{dx}[uv]=u\frac{dv}{dx}+v\frac{du}{dx}$.
+
+Integrating both sides, we get $uv=\int u dv + vdu$.
+
+Rearranging we get the formula for integration by parts:
+\[ \int u dv = uv-\int v du \]
+
+\begin{example}
+    \[ \int x\sin x dx \]
+
+    Let $u=x$, $dv= \sin x dx$, then $du=dx$ and $v=-\cos x$.
+
+    We get $x\cos x+\int \cos dx$.
+
+    Simplifying, we get $-x\cos x + \sin x+C$
+\end{example}
+
+\ex $\int x^2e^x dx$
+
+A tabular approach is helpful with these ``repeated'' integration by parts problems 
+\begin{example}
+    \[ x^2e^x dx \]
+\begin{center}
+\begin{tabular}{c|c}
+    $u$ & $v$ \\ \hline
+    $x^2$ & $e^x$ \\
+    $2x$  & $e^x$ \\
+    $2$   & $e^x$ \\
+    $0$   & $e^x$
+\end{tabular}
+\end{center}
+    
+
+    Criss crossing gives you $x^2e^x - 2xe^x+2e^x$.
+\end{example}
+
+If you have limits of integration, first integrate without them.
+\begin{example}
+    \[ \int_0^{\pi/2}x\sin x dx \]
+
+    Using integration by parts you get $[-x\cos x+\sin x]$.
+
+    Using the limits of integration, you get $1$.
+\end{example}
+
+\ex $\int e^x \cos x dx$
 \section{Integration by Partial Fractions}
+Fractions which have a denominator that can be factored can be decomposed into a sum or difference of fractions.
+
+Fractions which have a denominator that can be factored into distinct linear factors 
+\[ \frac{4x+1}{x^2-5x+6}=\frac{4x+1}{(x-3)(x-2)}=\frac{A}{x-3}+\frac{B}{x-2} \]
+Solving for $A$ and $B$ results in $A=13$ and $B=-9$, so that the above equals 
+\[ \frac{13}{x-3}-\frac{9}{x-2} \]
+
+\begin{example}
+    \[ \int \frac{4x+41}{x^2+3x-10}dx \]
+
+    This is $\frac{4x+41}{(x-2)(x+5)}=\frac{A}{x-2}+\frac{B}{x+5}$ inside the integral.
+
+    $4x+41=A(x+5)+B(x-2)$. If we let $x=-5$, $B=-3$. Let $x=2$, then $A=7$.
+
+    We are now integrating $\int \frac{7}{x-2}-\frac{3}{x+5}dx$.
+
+    This is $7\ln |x-2|-3\ln |x+5|+C$.
+\end{example} 
 
 \section{Logistic Growth}
+In exponential growth (or decay), we assume that the rate of increase (or decrease) of a population at any time $t$ is directly proportional to the population $P$. In otehr words, $\frac{dP}{dt}=kP$. However, in many situations population growth levels off and approaches a limiting number $L$ (the carrying capacity) because of limited resources.
+In this situation the rate of increase (or decrease) is directly proportional to both $P$ and $L-P$. This type of growth is called logistic growth. It is modeleted by the differential equation $\frac{dP}{dt}=kP{L-P}$.
+
+If we find $\frac{d^2P}{dt^2}$ we can find out an important fact about the time when $P$ is growing the fastest. We will do this in the example below.
+
+\begin{example}
+    The population $P(t)$ of fish in a lake satisfies the logistic differnetial equation $\frac{dP}{dt}=3P-\frac{P^2}{6000}$ where $t$ is measured in years and $P(0)=4000$.
+
+    (a) $\lim_{t\to \infty}P(t)=$?
+
+    18000
+
+    (b) What is the range of the solution curve?
+
+    $4000\leq P(t)<18000$
+
+    (c) For what values of $P$ is the solution curve increasing? Decreasing? Justify your answer.
+
+    $P(t)$ is increasing because $\frac{dP}{dt}>0$.
+
+    (d) For what values of $P$ is the solution curve concave up? Concave down? Justify your answer.
+
+    Concave up from $(4000,9000)$ and concave down $(9000,18000)$.
+
+    (e) Does the solution curve have an inflection point? Justify your answer.
+
+    Yes because the second derivative changed signs.
+\end{example}
+
+\ex The population $P(t)$ of fish in a lake satisfies the logistic differential equation $\frac{dP}{dt}=3P-\frac{P^2}{6000}$ where $t$ is measured in years and $P(0)=10000$.
+
+(a) $\lim_{t\to\infty}P(t)$
+
+(b) What is the range of the solution cuve?
+
+(c) For what values of $P$ is the solution curve increasing? Decreasing? Justify your answer.
+
+(d) For what values of $P$ is the solution curve concave up? Concave down? Justify your answer.
+
+(e) Does the solution curve have an inflection point? Justify your answer.
+
+\ex The population $P(t)$ of fish in a lake satisfies the logistic differential equation $\frac{dP}{dt}=3P-\frac{P^2}{6000}$ where $t$ is measured in years and $P(0)=20000$.
+
+(a) $\lim_{t\to\infty}P(t)$
+
+(b) What is the range of the solution cuve?
+
+(c) For what values of $P$ is the solution curve increasing? Decreasing? Justify your answer.
+
+(d) For what values of $P$ is the solution curve concave up? Concave down? Justify your answer.
+
+(e) Does the solution curve have an inflection point? Justify your answer.
+
 \end{document}
