@@ -40,7 +40,7 @@ Graphs of vector-valued functions: curve that is traced by connecting tips of ``
 
     We should know that since there are trig things in here, that we go from $0$ to $2\pi$, and if we put this on a table, we can see that $x$ and $y$ will give you a circle from the table. The $z$ is moving up though, so basically the function will just be circling around a cylinder of radius $2$.
 \end{example}
-\medbreak
+\pagebreak
 \begin{example}
     Find a vector and parametric equations for the line segment that joins $A(1,-3,4)$ to $B(-5,1,7)$.
 
@@ -56,7 +56,7 @@ Graphs of vector-valued functions: curve that is traced by connecting tips of ``
 
     We can represent $x^2+y^2=1$ as $x=\cos t$ and $y=\sin t$, with bounds $0\leq t\leq 2\pi$.
 
-    $y+z=2$ can be represneted as $z=2-y$ or $z=2-\sin t$ with $0\leq t\leq 2\pi$.
+    $y+z=2$ can be represented as $z=2-y$ or $z=2-\sin t$ with $0\leq t\leq 2\pi$.
 
     So $\vec{r}(t)=(\cos t)\vec{i}+(\sin t)\vec{j}+(2-\sin t)\vec{k} = \langle \cos t, \sin t, 2-\sin t\rangle$ with $0\leq t\leq 2\pi$.
 \end{example}
@@ -102,19 +102,19 @@ Continuity: A vector function $\vec{r}(t)$ is continuous at $a$ if: $\lim_{t\to 
 \section{Derivatives and Integrals of Vector Functions}
 \begin{definition}
     If $\vec{r}(t)$ is a vector function, the derivative of $\vec{r}(t)$ with respect to $t$ is 
-    \[ \vec{r}' = \vec{r}(t)'=\frac{d\vec{r}}{dt}=\frac{d}{dt}(\vec{r}(t)) = \lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h} \]
+    \[ \vec{r'} = \vec{r}(t)'=\frac{d\vec{r}}{dt}=\frac{d}{dt}(\vec{r}(t)) = \lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h} \]
 \end{definition}
 
 Geometrically, this would have $\vec{r}(t)$ as a vector tangent to the curve at the tip of $\vec{r}(t)$. It points in the direction of increasing parameter.
 
 \begin{theorem}
     If $\vec{r}(t)=\langle f(t),g(t),h(t)\rangle$, where $f$, $g$, and $h$ are differentiable functions, then 
-    \[ \vec{r}'(t)=\langle f'(t),g'(t),h'(t)\rangle \]
+    \[ \vec{r'}(t)=\langle f'(t),g'(t),h'(t)\rangle \]
 \end{theorem}
 \begin{proof}
     Let $\vec{r}(t)=\langle x(t),y(t)\rangle$
 
-    By definition, $\vec{r}'(t)=\lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h}$.
+    By definition, $\vec{r'}(t)=\lim_{h\to 0}\frac{\vec{r}(t+h)-\vec{r}(t)}{h}$.
 
     This is equal to $\lim_{h\to 0}\frac{[x(t+h)\vec{i}+y(t+h)\vec{j}]-[x(t)\vec{i}+y(t)\vec{j}]}{h}$.
 
@@ -130,30 +130,31 @@ Geometrically, this would have $\vec{r}(t)$ as a vector tangent to the curve at 
     The derivative of this is simply $\langle \frac{-1}{t^2},2e^{2t}, 2\pi\sin\pi t\rangle$.
 \end{example}
 
-$\vec{r}'(t)$ refers to the tangent vector. The tangent line is the line through $P$ that is parallel to $\vec{r}'(t)$. 
+$\vec{r'}(t)$ refers to the tangent vector. The tangent line is the line through $P$ that is parallel to $\vec{r'}(t)$. 
 
-Unit Tangent Vector: $\vec{T}(t)=\frac{\vec{r}'(t)}{|\vec{r}'(t)|}$.
+Unit Tangent Vector: $\vec{T}(t)=\frac{\vec{r'}(t)}{|\vec{r'}(t)|}$.
 
 \begin{example}
     From the previous example, find the unit tangent vector at $t=1$.
 
-    We know that $\vec{r}'(t)=\langle \frac{-1}{t^2},2e^{2t}, 2\pi\sin\pi t\rangle$. 
+    We know that $\vec{r'}(t)=\langle \frac{-1}{t^2},2e^{2t}, 2\pi\sin\pi t\rangle$. 
 
-    From this, $\vec{r}'(1)=\langle -1,2e^2,0\rangle$, and the magnitude of this is $\sqrt{1+4e^4}$.
+    From this, $\vec{r'}(1)=\langle -1,2e^2,0\rangle$, and the magnitude of this is $\sqrt{1+4e^4}$.
 
     Therefore, $\vec{T}(1)=\langle \frac{-1}{\sqrt{1+4e^4}}, \frac{2e^2}{\sqrt{1+4e^4}}, 0\rangle$.
 \end{example}
 
-\ex For the curve $\vec{r}(t)=\sqrt{t}\vec{i}+(2-t)\vec{j}$, find $\vec{r}'(t)$. Sketch $\vec{r}(1)$ and $\vec{r}'(1)$.
+\ex For the curve $\vec{r}(t)=\sqrt{t}\vec{i}+(2-t)\vec{j}$, find $\vec{r'}(t)$. Sketch $\vec{r}(1)$ and $\vec{r'}(1)$.
 
+\pagebreak
 \begin{example}
     Find parametric equations for the tangent line to the helix with equations $x=2\cos t$, $y=\sin t$, and $z=t$ at the point $(0,1,\pi/2)$.
 
-    We have $\vec{r}(t)=\langle 2\cos t,\sin t, t\rangle$, so $\vec{r}'(t)=\langle -2\sin t,\cos t,1\rangle$.
+    We have $\vec{r}(t)=\langle 2\cos t,\sin t, t\rangle$, so $\vec{r'}(t)=\langle -2\sin t,\cos t,1\rangle$.
 
     We get $0=2\cos t$, $1=\sin t$, and $\frac{\pi}{2}=t$, so we know that $t$ is.
     
-    Plugging this in gives $\vec{r}'\left(\frac{\pi}{2}\right) = \langle -2,0,1\rangle$. This is the tangent vector.
+    Plugging this in gives $\vec{r'}\left(\frac{\pi}{2}\right) = \langle -2,0,1\rangle$. This is the tangent vector.
 
     So $\vec{r}(t)=\langle 0,1,\frac{\pi}{2}\rangle + t\langle -2,0,1\rangle$. 
 
@@ -171,15 +172,654 @@ Differentiation Rules:
 \end{enumerate}
 
 \begin{theorem}
-    If $\vec{r}(t)$ is differentiable and $||\vec{r}(t)||$ is constant for all $t$, then $\vec{r}(t)\cdot \vec{r}'(t)=0$.
+    If $\vec{r}(t)$ is differentiable and $\|\vec{r}(t)\|$ is constant for all $t$, then $\vec{r}(t)\cdot \vec{r'}(t)=0$.
 
     This means they are orthogonal for all $t$.
 \end{theorem}
 
+\begin{example}
+    The graphs of $\textbf{r}_1(t)$ and $\textbf{r}_2(t)$ intersect at the origin. Find the degree measure of the acute angle between the tangent lines to the graphs of $\textbf{r}_1(t)$ and $\textbf{r}_2(t)$ at the origin.
 
+    We have $\vec{r}_1(t)=\langle \tan^{-1}t, \sin t, t^2\rangle$ and $\vec{r}_2(t)=\langle t^2-t, 2t-2,\ln t\rangle$.
+
+    $\vec{r}_1(t)=\langle 0,0,0\rangle$ at $t=0$.
+
+    $\vec{r}_2(t)=\langle 0,0,0\rangle$ at $t=1$.
+
+    We need the derivatives of the functions.
+
+    $\vec{r}_1'(t)=\langle \frac{1}{1+t^2},\cos t, 2t\rangle$
+    
+    $\vec{r}_2'(t)=\langle 2t-1, 2,\frac{1}{t}\rangle$
+
+    $\vec{r}_1'(0)=\langle 1,1,0\rangle$ and $\vec{r}_2'(1)=\langle 1,2,1\rangle$.
+
+    If we want to find the angles between then we have to use the dot product.
+
+    We get $\cos\theta = \frac{1+2+0}{\sqrt{2}\cdot \sqrt{6}} = \frac{\sqrt{3}}{2}$.
+
+    So $\theta = \frac{\pi}{6}$.
+\end{example}
+
+\pagebreak
+\begin{example}
+    Calculate $\frac{d}{dt}\left[ \vec{r}_1(t)\cdot \vec{r}_2(t)\right]$ and $\frac{d}{dt}\left[\vec{r}_1(t)\times \vec{r}_2(t)\right]$ by differentiating the product directly and using the formulas.
+    \[ \vec{r}_1(t)=2t\vec{i}+3t^2\vec{j}+t^3\vec{k} \]
+    \[ \vec{r}_2(t)=t^4 \vec{k}\]
+
+    \textbf{Directly:}
+
+    The dot product $\vec{r}_1\cdot \vec{r}_2 = t^7$. The derivative of this is $7t^6$.
+
+
+    \textbf{Formula:}
+    The formula is $\vec{r}_1'\cdot \vec{r}_2+\vec{r}_1\cdot \vec{r}_2'$.
+
+    Using this formula gives you $3t^4t^6 = 7t^6$.
+
+    
+    Now for the cross product.
+
+    \textbf{Directly:}
+    The cross product gives $\langle 3t^6-0, -(2t^5-0),0\rangle = \langle 3t^6, -2t^5,0\rangle$.
+
+    The derivative of this is $\langle 18t^5, -10t^4,0\rangle$.
+
+    \textbf{Formula:}
+    The formula is $\vec{r}_1'\times \vec{r}_2 + \vec{r}_1' \times \vec{r}_2'$.
+
+    You should get the same answer.
+\end{example}
+
+\[ \int_a^b \vec{r}(t)=\lim_{n\to \infty}\sum_{i=1}^{n}\vec{r}(t_i^*)\Delta t \]
+
+Or, more helpfully 
+\[\int_a^b \vec{r}(t)dt = \left(\int_a^b f(t)dt\right)\vec{i}+\left(\int_a^b g(t)dt\right)\vec{j}+\left(\int_a^b h(t)dt\right)\vec{k}(t)\]
+
+\begin{example}
+    Let $\vec{r}(t)=t^2\vec{i}+e^t\vec{j}-2\cos\pi t\vec{k}$. Find $\int_0^1 \vec{r}(t)dt$.
+
+    Integrating each component and plugging in the limits of integration results in $\int_0^1 \vec{r}(t)dt = \frac{1}{3}\vec{i}+(e^t)\vec{j}$.
+\end{example}
+
+\begin{example}
+    Find $\int(2t\vec{i}+3t^2\vec{j})dt$.
+
+    Remember in an indefinite integral to add a constant at the end.
+
+    The result is $t^2\vec{i}+t^3\vec{j}+\vec{c}$.
+\end{example}
+
+\begin{example}
+    Find $\vec{r}(t)$ given that $\vec{r'}(t)=\langle 3,2t\rangle$ and $\vec{r}(1)=\langle 2,5\rangle$.
+
+    If we start by integrating, then $\vec{r}(t)=\langle 3t,t^2\rangle + \vec{c}$.
+
+    We have $\langle 2,5\rangle = \langle 3,1\rangle+ \langle c_1,c_2\rangle$.
+
+    We get $\vec{c}=\langle -1,4\rangle$ from this.
+
+    So $\vec{r}(t)=\langle 3t-1, t^2+4\rangle$.
+\end{example}
 
 \section{Arc Length and Curvature}
+Consider a curve given by parametric equations $x=x(t)$ and $y=y(t), a\leq t\leq b$.
+
+Then arc length 
+\[ L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}dt \]
+
+The Arc Length of a Vector Valued Function is the exact same idea 
+\[ L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2 + \left(\frac{dz}{dt}\right)^2}dt = \int_a^b \|\vec{r'}(t)\|dt \]
+
+\begin{example}
+    Find the arc length of the portion of the curve $x=3\cos t$, $y=3\sin t$, $z=4t$ from $(3,0,0)$ to $(-3,0,4\pi)$.
+
+    If we use $z=4t$ we get $t=0$ and $t=\pi$ from both points.
+
+    The integral is $L=\int_0^{\pi}\sqrt{(-3\sin t)^2+(3\cos t)^2+4^2}dt$.
+
+    This is equal to $\int_0^{\pi}\sqrt{25}dt = 5\pi$.
+\end{example}
+
+A curve can be represented by more than one function.
+
+\begin{example}
+    Given $\vec{r}_1(t)=\langle t,t^2,t^3\rangle, 1\leq t\leq 2$.
+
+    If we use $t=e^u$ then $\vec{r}_1(u)=\langle e^u, e^{2u}, e^{3u}\rangle, 0\leq u\leq \ln 2$.
+
+    Both represent the same curve. These are called parametrizations of the curve. Both can be use dto find arc length (because arc length does not depend on the parameter).
+\end{example}
+
+\begin{example}
+    Find the length of the curve above using both parametrizations.
+
+    $\vec{r}_1(t)=\langle t,t^2,t^3\rangle$.
+
+    $\vec{r}_1'(t)=\langle 1,2t,3t^2\rangle$.
+
+    Then we integrate $L=\int_1^2 \sqrt{1+4t^2+9t^4}dt \approx 7.075$.
+
+    For $\vec{r}_2(u)=\langle e^4,e^{2u},e^{3u}\rangle$.
+
+    The derivative of this is $\vec{r}_2'(u)=\langle e^u, 2e^{2u}, 3e^{3u}\rangle$.
+
+    The integral is $\int_0^{\ln 2}\sqrt{e^{2u}4e^{4u}+9e^{6u}}du \approx 7.075$.
+
+    As you can see, they are the same.
+\end{example}
+
+We want to parametrize a curve in terms of arc length, $s$, rather than an arbitrary value in a particular coordinate system.
+
+We first must recognize that $s(t)=\int_a^t |\vec{r'}(u)|du$.
+
+This of course is equal to 
+\[ \int_a^t \sqrt{\left(\frac{dx}{dt}\right)^2+\left( \frac{dy}{du}\right)^2 + \left(\frac{dz}{du}\right)^2}du \]
+
+We can also see that $\frac{ds}{dt}=|\vec{r'}(t)|$.
+
+\begin{example}
+    Find the arc length parametrization of $\vec{r}(t)=\cos t\vec{i}+\sin t\vec{j}+t\vec{k}$ with reference point $(1,0,0)$ and the same orientation as the helix.
+
+    We know that $\frac{ds}{dt}=|\vec{r'}(t)| = \sqrt{(-\sin t)^2+(\cos t)^2+1^2}=\sqrt{2}$.
+
+    $s=s(t)=\int_0^t \sqrt{2}du = \sqrt{2}t$.
+
+    We get that $t=\frac{s}{\sqrt{2}}$ as a result.
+
+    Therefore $\vec{r}(s)=\cos \left(\frac{s}{\sqrt{2}}\right)\vec{i}+\sin\left(\frac{s}{\sqrt{2}}\right)\vec{j}+\left(\frac{s}{\sqrt{2}}\right)\vec{k}$.
+
+    Arc length formula guarantees same orientation.
+
+    This is useful because let's say we need to move along the curve for a certain amount of units, well we can just plug in that value and find the point at which we are.
+
+    For example, $\vec{r}(5)\approx (-0.923, -0.384, 3.5636)$.
+\end{example}
+
+
+\begin{example}
+    Find the arc length parametrization of the curve below measured from $(0,0)$ in the direction of increasing $t$.
+    \[ \vec{r}(t)=\langle 1/3t^2, 1/2t^2\rangle, t\geq 0 \]
+
+    $\vec{r'}(t)=\langle t^2,t\rangle$ and the magnitude of this is $t\sqrt{t^2+1}$.
+
+    We are now integrating $s=\int_0^t u\sqrt{u^2+1}du$.
+
+    This gives you $\frac{1}{3}(u^2+1)^{3/2}$ from $0$ to $t$.
+
+    Integrating this and solving for $t$ gives you $t=\sqrt{(3s+1)^{2/3}-1}$.
+
+    Therefore the parametrization of this is $\vec{r}(s)=\langle \frac{1}{3}[(3s+1)^{2/3}-1]^{3/2}, \frac{1}{2}[(3s+1)^{2/3}-1]\rangle$.
+\end{example}
+
+\begin{example}
+    Let $\vec{r}(t)=\langle \ln t, 2t, t^2\rangle$. Find 
+
+    (a) $\| \vec{r'}(t) \|$
+
+    $\vec{r'}(t)=\langle \frac{1}{t},2,2t\rangle$, so the magnitude of this is $\sqrt{\frac{1}{t^2}+4+4t^2}=2t+\frac{1}{t}$.
+
+    (b) $\frac{ds}{dt}$
+
+    This is the exact same thing as $\| \vec{r'}(t)\| = 2t+\frac{1}{t}$
+
+    (c) $\int_1^3 \| \vec{r'}(t)\| dt$
+
+    We are integrating $\int_1^3 (2t+\frac{1}{t})dt = 9+\ln 3-1-0 = 8+\ln 3$.
+\end{example}
+
+A parametrization is called smoth on $I$ if $\vec{r'}(t)$ is continuous and $\vec{r'}(t)\neq 0$ on $I$ (a smooth curve has smooth parametrization). Smooth means no sharp corners or cusps.
+
+\pagebreak
+\begin{example}
+    $\vec{r}(t)=\langle \cos t, \sin t, t\rangle$.
+    
+    Is $\vec{r}(t)$ smooth?
+
+    The derivative of the vector is $\langle -\sin t,\cos t, 1\rangle$. This is continuous on $(-\infty,\infty)$ and this is not equal to $\vec{0}$, so $\vec{r}(t)$ is smooth.
+\end{example}
+
+Recall: $\vec{T}(t)=\frac{\vec{r'}(t)}{|\vec{r'}(t)|}$ (called unit tangent vector) indicated the direction of curve.
+
+Curvature is as followed.
+\[ \kappa = \left| \frac{d\vec{T}}{ds}\right| \]
+$\vec{T}$ has a constant length so $\kappa$ is only affected by a change in direction.
+
+\begin{example}
+    Show that the curvature of a circle with radius $a$ is $1/a$.
+
+    $\vec{r}(t)=\langle a\cos t, a\sin t\rangle$.
+
+    The derivative $\vec{r'}(t)=\langle -a\sin t,a\cos t\rangle$.
+
+    $s(t)=\int_0^t \sqrt{a^2\sin^2 u+a^2\cos^2 u}du =\int_0^t a du$.
+
+    We get $s(t)=s=at$ so $t=\frac{a}{s}$.
+
+    The circle in terms of $s$ is $\vec{r}(S)=\langle a\cos \frac{a}{s},a\sin\frac{a}{s}\rangle$.
+
+    The derivative of this is $\langle -\sin\frac{a}{s},\cos\frac{a}{s}\rangle$.
+
+    The magnitude of this is 1.
+
+    The unit tangent vector $\vec{T}(s)=\langle -\sin \frac{a}{s},\cos\frac{a}{s}\rangle$.
+
+    The derivative of this vector is $\langle -\frac{1}{a}\cos \frac{a}{s}, -\frac{1}{a}\sin\frac{a}{s}\rangle$.
+
+    The magnitude of this vector is $\kappa = \frac{1}{a}$. A big radius means a small curvature.
+\end{example}
+
+The curvature of a straight line is $\kappa =0$.
+
+A circle has constant curvature.
+
+Other formulas for $\kappa$ are the following
+\[ \kappa = \left| \frac{d\vec{T}}{dS}\right| = \left| \frac{\frac{dT}{dt}}{\frac{dS}{dt}} \right|\]
+\[ \kappa = \frac{|\vec{T'}(t)|}{|\vec{r'}(t)|} \]
+\[ \kappa = \frac{|\vec{r'}(t)\times \vec{r''}(t)}{\vec{r'}(t)|^3} \]
+\[ \kappa(t) = \frac{|x'y''-y'x''|}{[(x')^2+(y')^2]^{3/2}}\]
+
+\ex Use another formula to calculate $\kappa$ for $\vec{r}(t)=\langle a\cos t,a\sin t\rangle$.
+
+\pagebreak
+\begin{example}
+    Find $\kappa$ for $\vec{r'}(t)=\langle 2t,t^2,-\frac{1}{3}t^3\rangle$.
+
+    The derivative $\vec{r'}(t)=\langle 2,2t,-t^2\rangle$.
+
+    $|\vec{r'}(t)|=\sqrt{4+4t^2+t^4}=t^2+2$
+
+    $\vec{T}(t)=\frac{\langle 2,2t,-t^2\rangle}{t^2}+2 = \langle \frac{2}{t^2+2}, \frac{2t}{t^2+2}, \frac{-t^2}{t^2+2}\rangle$.
+
+    $\vec{T'}(t)=\langle \frac{4t}{(t^2+2)^2}, \frac{-2t^2+4}{(t^2+2)^2}, \frac{-4t}{(t^2+2)^2}\rangle$.
+
+    $\| \vec{T'}(t)\| = \sqrt{\frac{16t^2+4t^4-16t^2+16+16t^2}{(t^2+2)^4}} = \frac{2}{t^2+2}$
+
+    $\kappa (t)=\frac{2/t^2+2}{t^2+2}=\frac{2}{(t^2+2)^2}$
+
+
+
+    We can also use the other formula using the cross product.
+
+    $\vec{r'}(t)=\langle 2,2t,-t^2\rangle$ and $\vec{r''}(t)=\langle 0,2,-2t\rangle$.
+
+    The cross product of these two vectors will result in $\langle -4t^2--2t^2, -(-4t-0), 4-0\rangle = \langle -2t^2,4t,4\rangle$.
+
+    The magnitude of this is $2(t^2+2)$, so $\kappa (t)=\frac{2(t^2+2)}{(t^2+2)^3} = \frac{2}{(t^2+2)^2}$.
+
+    Both ways give an equivalent answer.
+\end{example}
+
+There is one more curvature formula in terms of $x$ rather than $t$.
+\[ \kappa(x)=\frac{|f''(x)|}{[1+(f'(x))^2]^{3/2}} \]
+
+\begin{example}
+    Find the curvature of the parabola $y=x^2$ at the points $(0,0)$, $(1,1)$, and $(2,4)$.
+
+    So $f(x)=x^2$, $f'(x)=2x$, and $f''(x)=2$.
+
+    $\kappa (x)=\frac{|2|}{(1+(2x)^2)^{3/2}} = \frac{2}{(1+4x^2)^{7/2}}$
+
+    $\kappa(0)=2$, $\kappa(1)\approx 0.18$, $\kappa(2) \approx 0.03$.
+
+    As $\kappa \rightarrow \infty$, $\kappa (x)\rightarrow 0$.
+\end{example}
+
+Radius of curvature: $\rho = \frac{1}{\kappa}$
+
+We have also shown $\kappa = \frac{1}{a}$
+
+\begin{example}
+    From the previous example, calculate the curvature at $(0,0)$. Then draw a circle of curvature.
+
+    $\kappa(0)=2$ and $\rho(0,0)=\frac{1}{2}$.
+
+    At the point $(0,0)$, $\kappa$ is same as circle with radius $\frac{1}{2}$.
+\end{example}
+
+Recall the unit tangent vector, $\vec{T}(t)=\frac{\vec{r'}(t)}{|\vec{r'}(t)|}$ which points in the direction of increasing parameter.
+
+The unit tangent vector is orthogonal to its derivative.
+
+Unit normal vector $\vec{N}(t)=\frac{\vec{T'}(t)}{|\vec{T'}(t)|}$. This points inward towards the concave part of curve $c$.
+
+Binormal vector $\vec{B}(t) = \vec{T}(t)\times \vec{N}(t)$. 
+
+$\| \vec{T}\times \vec{N}\| = \| \vec{T}\| \| \vec{N}\| \sin 90$. This is a also a unit vector.
+
+\begin{example}
+    Find the unit tangent, unit normal, and binormal vectors for $\vec{r}(t)=\langle 3\sin t, 3\cos t, 4t\rangle$.
+
+    $\vec{r'}(t)=\langle 3\cos t, -3\sin t,4\rangle$.
+
+    $\| \vec{r'}(t)\| = 5$
+
+    $\vec{T}(t)=\langle \frac{3}{5}\cos t,-\frac{3}{5}\sin t, \frac{4}{5}\rangle$.
+
+    $\vec{T'}(t)=\langle -\frac{3}{5}\sin t, -\frac{3}{5}\cos t,0\rangle$
+
+    $\| \vec{T'}(t)\| = \frac{3}{5}$
+
+    $\vec{N}(t)=\langle -\sin t,-\cos t,0 \rangle$.
+
+    $\vec{B}(t)=\vec{T}\times \vec{N} =\langle \frac{4}{5}\cos t, -\frac{4}{5}\sin t,-\frac{3}{5}\rangle$
+\end{example}
+
+Another wayt to find $\vec{B}(t)$ is the following 
+\[ \vec{B}(t)=\frac{\vec{r'}(t)\times \vec{r''}(t)}{\| \vec{r'}(t)\times \vec{r''}(t)\|} \]
+
+\begin{example}
+    Consider $\vec{r}(t)=\langle t,\frac{\sqrt{2}}{2}t^2, \frac{1}{3}t^3\rangle$. Find $\vec{T}, \vec{N}$ at $t=2$.
+
+    $\vec{r'}(t)=\langle 1,\sqrt{2}t,t^2\rangle$
+
+    $\| \vec{r'}(t)\|=\sqrt{1+2t^2+t^4} = t^2+1$
+
+    $\vec{T}(t)=\langle \frac{1}{1+t^2}, \frac{\sqrt{2}t}{1+t^2}, \frac{t^2}{1+t^2}\rangle$
+
+    $\vec{T}(2)=\langle \frac{1}{5}, \frac{2\sqrt{2}}{5}, \frac{4}{5}\rangle$
+
+    Now to find $\vec{N}(2)$.
+
+    $\vec{T'}(t)=\langle \frac{-2t}{(1+t^2)2}, \frac{(1+t^2)\sqrt{2}-2t(\sqrt{2}t)}{(1+t^2)^2}, \frac{2t(1+t^2)-t^2(2t)}{(1+t^2)^2}\rangle = \langle \frac{-2t}{(1+t^2)^2}, \frac{-2t^2+2}{(1+t^2)^2}, \frac{2t}{(1+t^2)^2}\rangle$
+
+    $\vec{N}(t)=\frac{\vec{T'}(t)}{|\vec{T'}(t)|}$
+
+    We should instead of finding the magnitude, find $\vec{T'}(2)=\langle \frac{-4}{25}, \frac{-8+\sqrt{2}}{25}, \frac{4}{25}\rangle$
+
+    The magnitude of this is $\| \vec{T'}(2)\| = \sqrt{\frac{16}{625}+\frac{64-16\sqrt{2}+2}{625}+\frac{16}{625}} = \frac{\sqrt{98-16\sqrt{2}}}{25}$
+
+    So $\vec{N}(2)= \frac{\langle \frac{-4}{25}, \frac{-8+\sqrt{2}}{25}, \frac{4}{25}\rangle}{\sqrt{98-16\sqrt{2}}{25}}$
+
+    This is equal to $\langle \frac{-4}{\sqrt{98-16\sqrt{2}}}, \frac{-8+\sqrt{2}}{\sqrt{98-16\sqrt{2}}}, \frac{4}{\sqrt{98-16\sqrt{2}}}\rangle$.
+\end{example}
+
+A normal plane contains $\vec{N}$ and $\vec{B}$. It contains all lines perpendicular to $\vec{T}$.
+
+The osculating plane contains $\vec{T}$ and $\vec{N}$. It is related to the circle of curvature or osculating circle.
+
+The rectifying plane contains $\vec{T}$ and $\vec{B}$.
+
+To find the equation of a plane you need a point and a perpendicular vector.
+
+\pagebreak
+\begin{example}
+    Find the equations of the normal and osculating plantes at $(3,0,2\pi)$ for the following:
+    \[ \vec{T}(t)=\langle \frac{3}{5}\cos t, -\frac{3}{5}\sin t, \frac{4}{5}\rangle \]
+    \[ \vec{N}(t) = \langle -\sin t,-\cos t,0\rangle \]
+    \[ \vec{B}(t) = \langle \frac{4}{5}\cos t, -\frac{4}{5}\sin t, -\frac{3}{5}\rangle \]
+
+    The normal plane has point $(3,0,2\pi)$ and normalvector at $\frac{\pi}{2}$ is $\vec{T}\left(\frac{\pi}{2}\right) = \langle 0,-\frac{3}{5},\frac{4}{5}\rangle$.
+
+    We have $0(x-3)+\frac{-3}{5}(y-0)+\frac{4}{5}(z-2\pi)=0$ and this gives $\frac{-3}{5}y+\frac{4}{5}z=\frac{8}{5}\pi$.
+
+    The osculating plane we need the binormal vector. $\vec{B}\left(\frac{\pi}{2}\right) = \langle 0,-\frac{4}{5},\frac{3}{5}\rangle$.
+
+    $0(x-3)+-\frac{4}{5}(y-0)+\frac{3}{5}(z-2\pi)=0$ so we get $-\frac{4}{5}y-\frac{3}{5}z=-\frac{6}{5}\pi$
+\end{example}
+
+\begin{example}
+    Consider the ellipse given by 
+    \[ \vec{r}(t) = 2\cos t\vec{i}+3\sin t\vec{j}, 0\leq t\leq 2\pi \]
+
+    Note: $\kappa(t)=\frac{6}{[4\sin^2 t+9\cos^2 t]^{3/2}}$
+
+    Find and draw the osculating circles at $(2,0)$ and $(0,-3)$.
+
+    So we have $t=0$ and $t=\frac{3\pi}{2}$.
+
+    For $(2,0)\rightarrow \kappa(0)=\frac{2}{9}$. so circle with radius $\frac{9}{2}$ and diamater 9.
+    
+    For $(0,-3)$, $\kappa\left(\frac{3\pi}{2}\right) = \frac{3}{4}$ so radius $r=\frac{3}{4}$ and diameter $\frac{8}{3}$.
+
+    For the point $(2,0)$, we also have the point $(-7,0)$, so the center is $\left(-\frac{5}{2},0\right)$.
+
+    So the equation for that is $\left(x+\frac{5}{2}\right)^2 + y^2 = \frac{81}{4}$.
+\end{example}
 
 \section{Motion in Space - Velocity and Acceleration}
+\begin{enumerate}
+    \item Direction of motion time $t$ is in the direction of $\vec{T}$.
+    \item speed = $\frac{ds}{dt}$ (instantaneous rate of change of the arc length traveled). This is a scalar
+    \item velocity vector $\vec{v}(t)=\frac{ds}{dt}\vec{T}(t)$
+\end{enumerate}
+$\frac{ds}{dt}$ is the magnitude of $\vec{v}(t)$.
+
+$\vec{T}(t)$ denotes direction.
+
+$\vec{v}(t)$ points in direction of motion and has magnitude = speed
+
+If $\vec{r}(t)$ is a position function, then $\vec{v}(t)=\frac{d\vec{r}}{dt}(t)$ and $\vec{a}(t)=\frac{d\vec{v}}{dt} = \frac{d^2\vec{r}}{dt}$.
+
+Speed is $\| \vec{v}(t)\| = \frac{ds}{dt}$
+
+\pagebreak
+\begin{example}
+    A particle moves along $C$: $\vec{r}(t)=\langle 2\sin\left(\frac{t}{2}\right), 2\cos\left(\frac{t}{2}\right)\rangle$.
+
+    (a) Find its velocity, acceleration, and speed at time $t$.
+
+    $\vec{v}(t)=\vec{r'}(t)=\langle \cos \frac{t}{2}, -\sin\frac{t}{2}\rangle = \vec{v}(t)$.
+
+    $\vec{a}(t)=\vec{v'}(t)=\langle -\frac{1}{2}\sin \frac{t}{2}, -\frac{1}{2}\cos \frac{t}{2}\rangle = \vec{a}(t)$
+
+    speed = $\| \vec{v}(t)\| = 1$
+
+    (b) Show that $\vec{a}(t)$ is orthogonal to $\vec{v}(t)$ for this path only.
+
+    $\vec{a}(t)\cdot \vec{v}(t)=-\frac{1}{2}\cos \frac{t}{2}\sin \frac{t}{2}+\frac{1}{2}\sin \frac{t}{2}\cos \frac{t}{2}=0$.
+
+    This implies that $\vec{a}(t)$ is orthogonal to $\vec{v}(t)$.
+\end{example}
+
+\begin{example}
+    An object moves in 3-space so that $\vec{v}(t)=\langle 1,t,t^2\rangle$. Find the coordinates of the particle at time $t=1$ given that at $t=0$, the particle is at $(-1,2,4)$.
+
+    $\vec{r}(t)=\int \vec{v}(t)dt = \langle t,\frac{1}{2}t^2,\frac{1}{3}t^3\rangle + \vec{c}$
+
+    We know that $\vec{r}(0)=\langle -1,2,4\rangle$. This means that $\vec{c}=\langle -1,2,4\rangle$.
+
+    So, $\vec{r}(t)=\langle t-1, \frac{1}{2}t^2, \frac{1}{3}t^3+4\rangle$.
+
+    $\vec{r}(1)=\langle 0, \frac{5}{2}, \frac{13}{3}\rangle$.
+
+    So this becomes the point $\left( 0,\frac{5}{2}, \frac{13}{3}\right)$ at $t=1$.
+\end{example}
+
+\begin{example}
+    An object with mass $m$ that moves in a circular pattern with constant angular speed $\omega$ has position vector $\vec{r}(t)=a\cos \omega t \vec{i}+a\sin\omega t \vec{j}$. Find the force acting on the object and show that it is directed toward the origin.
+
+    We have a circle toward the origin with radius $a$ and we have points on the circle $P$ at an angle $\theta$.
+
+    Newton's 2nd law states that $\vec{F}(t)=m\vec{a}(t)$.
+
+    We have the position vector.
+
+    $\vec{v}(t)=\langle -a\omega \sin\omega t, a\omega \cos\omega t\rangle$
+
+    $\vec{a}(t)=\langle -a\omega^2\cos\omega t, -a\omega^2\sin\omega t\rangle$
+
+    $\vec{F}(t)=m\vec{a}(t)=m\langle -a\omega^2\cos\omega t, -a\omega^2\sin\omega t\rangle$.
+
+    This can be simplified to $-m\omega^2\langle a\cos\omega t, a\sin\omega t\rangle$. As you can see the vector is just $\vec{r}(t)$.
+
+    So $\vec{F}(t)=-m\omega^2 \vec{r}(t)$.
+
+    The force acts in direction opposite to radius vector $\vec{r}(t)$. It points towards the origin.
+\end{example}
+
+Newton's Second Law is $\vec{F}=m\vec{a}$ as we talked about earlier.
+
+Assumptions:
+\begin{itemize}
+    \item Mass is constant 
+    \item Only force acting on the object after launch is Earth's gravity
+    \item Assume the force of gravity is constant because the object is sufficiently close to the earth 
+\end{itemize}
+
+$\vec{F}=m\vec{a}$. $m$ is mass, $g$ is the acceleration due to gravity.
+
+We can find $\vec{a}$ by letting $\vec{F}=-mg\vec{j}$, and we can rewrite as $m\vec{a}=-mg\vec{j}$.
+
+This gives $\vec{a}=-g\vec{j}$.
+
+$\vec{v}(t)=\int \vec{a}(t)=\int -g\vec{j}dt = -gt\vec{j}+c$ at $t=0, v(0)=v_0$.
+
+This leads us to $\vec{v}(t)=-gt\vec{j}+\vec{v_0}$.
+
+To find position, we need to integrate once more.
+
+$\vec{r}(t)= -\frac{1}{2}gt^2\vec{j}+\vec{v_0}t+\vec{c_2}$, we have initial conditions $\vec{r}(0)=s_0$ and $\vec{c_2}=s_0 \vec{j}$ (up)
+
+We can find that $\vec{r}(t)=-\frac{1}{2}gt^2\vec{j}+\vec{v_0}t+s_0\vec{j}$ or written as $\left( -\frac{1}{2}gt^2+s_0\right)\vec{j}+t\vec{v_0}$
+
+We can express $\vec{v_0}$ in two components, with the $x$ component being $\vec{v_0}\cos\alpha$ and the $y$ component being $\vec{v_0}\sin\alpha$.
+
+So $\vec{v_0} = v_0\cos\alpha \vec{i}+v_0\sin\alpha \vec{j}$.
+
+So $\vec{r}(t)=\left(-\frac{1}{2}gt^2+s_0\right)\vec{j}+t(v_0\cos\alpha \vec{i}+v_0\sin\alpha\vec{j})$.
+
+This simplifies to $\vec{r}(t)=(v_0\cos\alpha t)\vec{i}+(s_0+v_0\sin\alpha t-\frac{1}{2}gt^2)\vec{j}$
+
+So $x(t)=v_0\cos \alpha \cdot t$ and $y(t)=s_0+v_0\sin\alpha \cdot t-\frac{1}{2}gt^2$.
+
+Velocity in each direction is $v_x = v_0\cos\alpha$ and $v_y=v_0\sin\alpha-gt$
+
+\begin{example}
+    A basketball is hit with an initial speed of 80 ft/sec at an angle of $30^{\circ}$ and an initial height of 3 feet. 
+
+    (a) Find parametric equations for the trajectory of the ball.
+
+    $x=80\cos(30)t$ so $x(t)=40\sqrt{3}t$
+
+    $y=3+80\sin 30 t-\frac{1}{2}(32)t^2$ so $y(t)=3+40t-16t^2$
+
+    (b) How high does the ball get?
+
+    We need to find the maximum of $y$ so $\frac{dy}{dt}=40-32t$. $0=40-32t$ and that gives $t=\frac{5}{4}$ seconds.
+
+    Substituting that back in gives $y\left(\frac{5}{4}\right) = 28$ ft.
+
+    Before $t=\frac{5}{4}$ the value is positive and after this time it is negative, so it is a maximum by the first derivative test.
+
+    (c) How far does it travel horizontally?
+
+    $0=3+40t-16t^2$ and $t\approx 2.57$ sec. $x(2.57)\approx 178.25$ ft.
+
+    (d) What is the speed of the ball when it lands?
+
+    It lands at $t\approx 2.57$ sec and speed is $\| \vec{v}(t)\|$.
+
+    $\vec{v}(t)=\vec{r'}(t)=\langle 40\sqrt{3},40-32t\rangle$.
+
+    Speed is $\sqrt{(40\sqrt{3})^2+(40-32(2.57))^2} \approx 81.19$ ft/sec
+\end{example}
+
+It if often useful to break acceleration into 2 components - one that is in the direction of the tangent vector and one in the direction of the normal vector. 
+
+We will define $\| \vec{v}(t)\| = v$. Then $\vec{T}(t)=\frac{\vec{r'}(t)}{| \vec{r'}(t)|}=\frac{\vec{v}(t)}{|\vec{v}(t)|} = \frac{\vec{v}(t)}{v}$
+
+So, $\vec{v}(t)=v\cdot \vec{T}(t)=v\cdot \vec{T}$.
+
+Differentiating this gives $\vec{v'}=v'\vec{T}+v\vec{T'}$.
+
+To get $\vec{T'}$, use $\kappa$ (curvature).
+
+$\kappa = \frac{|\vec{T'}(t)|}{|\vec{r'}(t)|}=\frac{|\vec{T'}(t)|}{v}\implies |\vec{T'}(t)|=\kappa\cdot v$
+
+Also $\vec{N}=\frac{\vec{T'}(t)}{|\vec{T'}(t)|}\implies \vec{T'}(t)=|\vec{T'}(t)|\vec{N}$
+
+Substituting in gives $\vec{T'}(t)=\kappa v\cdot \vec{N}$.
+
+$\vec{v'}=\vec{a}(t)=v'\vec{T}+v(\kappa v \vec{N}) = v'\vec{T}+\kappa v^2 \vec{N}$
+
+We can write $\vec{a}(t)= a_T \vec{T}+a_N \vec{N}$.
+
+This tells us that the object always moves according to the direction of motion ($\vec{T}$) and direction the curve is turning ($\vec{N}$)
+
+We can dot $\vec{a}(t)$ with $v$ to get $\vec{v}\cdot \vec{a}=(v\vec{T})\cdot(v'\vec{T}+\kappa v^2\vec{N})$
+
+This gives us $\vec{v}\cdot \vec{a}=vv'\vec{T}\cdot \vec{T}+\kappa v^3\vec{T}\cdot \vec{N}$. Hence, $\vec{v}\cdot \vec{a}=vv'$.
+
+We know that $v'=a_T$, so $a_T = \frac{\vec{v}\cdot \vec{a}}{v} = \frac{\vec{r'}(t)\cdot \vec{r''}(t)}{| \vec{r'}(t)|}$.
+
+We also know that $a_N = \kappa v^2 = \frac{|\vec{r'}(t)|\times \vec{r''}(t)|}{|\vec{r'}(t)|^3}|\vec{r'(t)}^2$.
+
+This gives $a_N = \frac{|\vec{r'}(t)\times \vec{r''}(t)|}{|\vec{r'}(t)|}$
+
+In summary:
+
+Scalar Tangential component of acceleration 
+\[ a_T = \frac{\vec{r'}(t)\cdot \vec{r''}(t)}{\| \vec{r'}(t)\|} \]
+
+Scalar Normal component of acceleration 
+\[ a_N = \frac{\| \vec{r'}(t)\times \vec{r''}(t)\| }{\| \vec{r'}(t)\|} \]
+
+\pagebreak
+\begin{example}
+    Suppose a particle moves along $C: \vec{r}(t)=\langle t,t^2,t^3\rangle$.
+
+    (a) Find the scalar tangential and normal components of $\vec{a}$.
+
+    The first derivative is $\vec{r'}(t)=\langle 1,2t,3t^2\rangle$ and $\vec{r''}(t)=\langle 0,2,6t\rangle$.
+
+    $\vec{r'}(t)\cdot \vec{r''}(t)=4t+18t^3$.
+
+    $|\vec{r'}(t)| = \sqrt{9t^4+4t^2+1}$.
+
+    So, $a_T = \frac{18t^3+4t}{\sqrt{9t^4+4t^2+1}}$.
+
+    The cross product of $\vec{r'}(t)$ and $\vec{r''}(t)= \langle 6t^2,-6t,2\rangle$.
+
+    The magnitude of this vector is $\sqrt{36t^4+36t^2+4}$.
+
+    The scalar normal component $a_N = \sqrt{\frac{36t^4+36t^2+4}{9t^4+4t^2+1}}$.
+
+    (b) Find the scalar tangential and normal components of $\vec{a}$ at $(1,1,1)$
+
+    Plug in to get $a_T = \frac{22}{\sqrt{14}}$ and $a_N = \sqrt{\frac{28}{7}}$.
+
+    (c) Find the vector tangential and normal components at $t=1$.
+
+    $\vec{a}=a_T\vec{T}+a_n\vec{N}$.
+
+    $\vec{T}(t)=\frac{\vec{r'}(t)}{|\vec{r'}(t)|}$. So $\vec{T}(1)=\frac{\langle 1,2,3\rangle}{\sqrt{14}}$.
+
+    So $a_T \vec{T} = \frac{22}{\sqrt{14}}\frac{\langle 1,2,3\rangle}{\sqrt{14}}=\langle \frac{11}{7}, \frac{22}{7}, \frac{33}{7}\rangle$.
+
+    Now to find the normal one, we can either find $\vec{N}$ or we can use that $\vec{a}=a_T\vec{T}+a_N\vec{N}$.
+
+    We know that $\vec{a}(1)=\langle 0,2,6\rangle$ and we can substitute this to find $a_N \vec{N}$.
+
+    $\langle 0,2,6\rangle -\langle \frac{11}{7}, \frac{22}{7},\frac{33}{7}\rangle = a_N\vec{N}=\langle -\frac{11}{7}, -\frac{8}{7}, \frac{9}{7}\rangle$.
+
+    (d) Find the curvature of the path at the point $(1,1,1)$.
+
+    Remember $\kappa(t)=\frac{|\vec{r'}\times \vec{r''}|}{|\vec{r'}(t)|^3}$
+
+    Using what we previously found, $\vec{r'}(1)=\langle 1,2,3\rangle$ and $\vec{r''}(1)=\langle 0,2,6\rangle$.
+
+    The cross product of these gives $\langle 6,-6,2\rangle$.
+
+    $\kappa(1)=\frac{\sqrt{76}}{\sqrt{14}^3}=\frac{1}{14}\sqrt{\frac{38}{7}}$
+\end{example}
+
+\begin{example}
+    The position particle of a function is given by $\vec{r}(t)=\langle -5t^2, -t,t^2+t\rangle$. At what time is the speed at a minimum?
+
+    speed is $\| \vec{v}(t)\|$.
+
+    $\vec{v}(t)=\langle -10t, -1, 2t+1\rangle$
+
+    speed = $\sqrt{100t^2+1+4t^2+4t+1}=\sqrt{104t^2+4t+2}$
+
+    $\frac{d\text{speed}}{dt}=\frac{1}{2}(104t^2+4t+2)^{-1/2}(208t+4)$
+
+    $0=\frac{1}{2}(104t^2+4t+2)^{-1/2}(208t+4)$
+
+    The first factor is never $0$, the second factor is $0$ when $t=-\frac{1}{52}$ sec 
+
+    Now using the first derivative test, we see values before $-\frac{1}{52}$ are decreasing and after this point are positive, so $t=-\frac{1}{52}$ is a minimum.
+\end{example}
 
 \end{document}

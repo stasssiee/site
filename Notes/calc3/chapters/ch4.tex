@@ -1,293 +1,341 @@
 \documentclass[../calc3.tex]{subfiles}
 \graphicspath{{\subfix{../figures/}}}
 \begin{document}
-\chapter{Multiple Integration}
-\section{Double Integrals over Rectangular Regions}
+\chapter{Multiple Integrals}
+\section{Double Integrals over Rectangles}
+Recall that $\int_a^b f(x)dx$ gives the area under the curve from $x=a$ to $x=b$.
+
+Also, $\int_a^b f(x)dx=\lim_{x\to\infty}\sum_{k=1}^n f(x_k^i)\Delta x_k$ (Riemann sums)
+
+Now we have volume.
+
+Volume Problem: Given a function of $2$ variables that is continuous and non-negative on a region $R$ in the $xy$-plane, find the volume of the solid enclosed between the surface $z=f(x,y)$ and the $xy$-plane.
+
+Plan:
+\begin{enumerate}
+    \item Partition $R$ in rectangles.
+    \item Choose a point $(x_k^*, y_k^*)$ in each rectangle.
+    \item Map onto $z$.
+    \item Form parallelpiped.
+\end{enumerate}
+
+We can then approximate the volume using rectangular parallelpipeds.
+
+Volume $\approx$ area of rectangle $\times$ height $\rightarrow$ Volume $\approx \Delta A_k f(x_k^*, y_k^*)$.
+
+Volume $\approx \Delta A_k f(x_k^*, y_k^*)$.
+
+Volume $=\lim_{n\to\infty}\sum_{k=1}^n f(x_k^*, y_k^*)\Delta A_k$ (this is the formal definition for the volume problem using Riemann sums)
+
+If $f$ has both positive and negative values, then the volume is the difference in volumes between $R$ and the surface above and below the $xy$-plane.
+
 \begin{definition}
-    A function $f$ defined on a rectangular region $R$ in the $xy$-plane is integrable 
-    on $R$ if \[\lim_{\Delta \to 0} \sum^n_{k=1}f\left(x_k^*,y_k^*\right)\Delta A_k\] exists for all partitions 
-    of $R$ and for all choices of $\left(x_k^*,y_k^*\right)$ within those partitions.
-    The limit is the double integral of $f$ over $R$, which we write
-    \[\iint_R f(x,y)\mathrm{d}A=\lim_{\Delta \to 0}\sum_{k=1}^n f\left(x_k^*, y_k^*\right)\Delta A_k\]
+    If $f(x,y)\geq 0$, then the volume of the solid that lies above the rectangle $R$ and below the surface $z=f(x,y)$ is:
+    \[ V = \lim_{n\to\infty}\sum_{k=1}^{n}f(x_k^*, y_k^*)\Delta A_k = \lim_{m,n\to \infty}\sum_{i=1}^m\sum_{j=1}^nf(x_k^*,y_k^*)\Delta A_k \]
+    \[ = \iint_R f(x,y)dA \]
 \end{definition}
 
-We usually use Fubini's theorem.
-\begin{theorem}
-    Let $f$ be continuous on the rectangular region $R={(x,y): a\leq x\leq b, c\leq y\leq d}$.
-    The double integral of $f$ over $R$ may be evaluated by either of two iterated integrals:
-    \[\iint_R f(x,y)\mathrm{d}A=\int_c^d\int_a^b f(x,y)\mathrm{d}x\mathrm{d}y=\int_a^b\int_c^d f(x,y)\mathrm{d}y\mathrm{d}x\]
+\begin{example}
+    Estimate the volume of the solid that lies above the square $R=[0,2]\times [0,2]$ and below $z=16-x^2-2y^2$. Divide $R$ into $4$ equal squares and choose the sample point to be the upper right corner of each square.
+
+    So $V=\iint_R (16-x^2-2y^2)dA$.
+
+    This is $\lim_{n\to\infty}\sum_{k=1}^n f(x_k^*,y_k^*)\Delta A_k$. We will use approximately $4$ parallelpipeds.
+
+    We get $V\approx 1\cdot f(1,1)+1\cdot f(2,1)+1\cdot f(1,2)+1\cdot f(2,2)$.
+
+    This is equal to $V\approx 34$ u$^3$. This is an estimate.
+\end{example}
+
+\begin{example}
+    If $R=\{ (x,y)|-1\leq x\leq 1, -2\leq y\leq 2\}$, evaluate $\iint_R \sqrt{1-x^2}dA$.
+
+    The graph will look like half of a cylinder.
+
+    The volume of a cylinder is $\pi r^2 h$.
+
+    $V=\frac{1}{2}\pi r^2 h=\frac{1}{2}\pi (1)^2(4)$, so $\iint_R dA=2\pi$.
+\end{example}
+
+Midpoint Rule - This tells us to evaluate $\iint_R f(x,y)dA$ using Riemann sums and midpoints.
+
+Evaluating Double Integrals $\rightarrow$ uses iterated integration.
+\[ \int_c^d \int_a^b f(x,y)dx dy = \int_c^d \left[ \int_a^b f(x,y)dx\right]dy \]
+This integral can be $dxdy$ or $dydx$.
+
+\begin{example}
+    Integrate $\int_0^3 \int_1^2 x^2y dy dx$.
+
+    First integrate $\int_1^2 x^2ydy$.
+
+    This is $x^2\cdot \frac{1}{2}y^2$ from $y=1$ to $y=2$.
+
+    And then we have $\int_0^3 \left(\frac{1}{2}x^2\cdot 2^2-\frac{1}{2}x^2\cdot 1^2\right)dx$.
+
+    This is $\int_0^3 \frac{3}{2}x^2 dx = \frac{1}{2}x^3$ from $x=0$ to $x=3$, and the answer is $\frac{27}{2}$.
+\end{example}
+
+\begin{example}
+    Evaluate $\int_1^2 \int_0^3 x^2 ydxdy$.
+
+    First evaluate $\int_0^3 x^2y dx$ to get $y\cdot \frac{1}{3}x^3$ from $x=0$ to $x=3$.
+
+    Then we have $\int_1^2 9y dy$ and this is $\frac{9}{2}y^2$ from $y=1$ to $y=2$, so the result of the integral is $\frac{27}{2}$.
+\end{example}
+
+$\frac{27}{2}$ in both cases is the area underneath $f(x,y)=x^2y$ and above $R:[0,3]\times [1,2]$. Note that $dx$ and $dy$ are not always interchangable.
+
+\begin{theorem}[Fubini's Theorem]
+    Let $R$ be a rectangular region defined by $a\leq x\leq b$, $c\leq y\leq d$. If $f(x,y)$ is continuous on this rectangle, then:
+    \[ \iint_R f(x,y)dA = \int_c^d \int_a^b f(x,y)dxdy = \int_a^b \int_c^d f(x,y)dydx \]
 \end{theorem}
 
-\begin{definition}
-    The average value of an integrable function $f$ over a region $R$ is
-    \[\bar{f}=\frac{1}{\text{area of } R}\iint_R f(x,y)\mathrm{d}A\]
-\end{definition}
+\begin{example}
+    Evaluate $\iint_R (x-3y^2)dA$ with $R=[0,2]\times [1,2]$.
 
-The average height of $f(x,y)$ is $\frac{1}{Area(R)}$(Volume under $f(x,y$)).
+    The integral is $\int_0^2 \int_1^2 (x-3y^2)dydx$.
+
+    We start with the inner integral and get $xy-y^3$ from $y=1$ to $y=2$.
+
+    Then we evaluate $\int_0^2 (2x-8)-(1x-1)dx$ to get $\int_0^2 (x-7)dx$.
+
+    The result of this integral is $-12$.
+\end{example}
+
+A few properties:
+\begin{enumerate}
+    \item $\iint_R cf(x,y)dA = c\iint_R f(x,y)dA$
+    \item $\iint_R [f(x,y)\pm g(x,y)]dA = \iint_R f(x,y)dA \pm \iint_R g(x,y)dA$
+    \item $\iint_R f(x,y)dA = \iint_{R_1}f(x,y)dA + \iint_{R_2}f(x,y)dA$
+    \item $\iint_R g(x)h(y)dA = \int_a^b g(x)\int_c^d h(y)dy$ where $R=[a,b]\times [c,d]$.
+\end{enumerate}
+
+\begin{example}
+    Evaluate $\iint_R \sin x\cos y dA$ where $R=\left[0,\frac{\pi}{2}\right]\times [0,\pi]$.
+
+    We can use the fourth property above to get $\int_0^{\pi/2}\sin xdx\cdot \int_0^{\pi}\cos y dy$.
+
+    We get $\cos x$ from $0$ to $\pi/2$ and subtract $\sin y$ from $0$ to $\pi$ from this.
+
+    The answer is $0$.
+\end{example}
+
+\begin{example}
+    Find the volume of the solid that is bounded above by $f(x,y)=y\sin(xy)$ and below by $R=[1,2]\times [0,\pi]$.
+
+    $V=\int_0^{\pi}\int_1^2 y\sin(xy)dxdy=\int_1^2 \int_0^{\pi}y\sin(y)dydx$.
+
+    The first option is better.
+
+    So we start with $y\cdot -\frac{1}{y}\cos(xy)$ from $x=1$ to $x=2$ 
+
+    Then, $\int_0^{\pi}(-\cos 2y+\cos y)dy = 0$.
+\end{example}
+
+Average Value: $f_{avg}=\frac{1}{A(R)}\iint_R f(x,y)dA$
+
+\begin{example}
+    Find the average value of $f(x,y)=x^2y$ over $R$ with vertices $(-1,0)$, $(-1,5)$, $(1,5)$, and $(1,0)$.
+
+    The area of the rectangle is $A_R=10$.
+
+    Set up the integral to get $f_{avg}=\frac{1}{10}\int_{-1}^1 \int_0^5 x^2y dydx$/
+\end{example}
+
 \section{Double Integrals over General Regions}
-In order to do a double integral over a general integral:
-\begin{itemize}
-    \item Divide the plane into rectangles.
-    \item In each rectangle $R_k$ inside $R$, choose a point $(x_k^*, y_k^*)$.
-    \item Let $\Delta A_k = \text{area}(R_k)$, calculate $\sum_{k=1}^n f(x_k^*,y_k^*)\Delta A_k$
-    \item Take the limit as $\Delta \rightarrow 0$, where $\Delta$ is the maximum length of diagonal of $R_k$.
-\end{itemize}
+There are $2$ Types of regions:
 
-We get 
-\[\iint_R f(x,y)\mathrm{d}A = \lim_{\Delta \to 0}\sum_{k=1}^n f(x_k^*, y_k^*)\Delta A_k\]
+The biggest question is finding the limits of integration.
 
-Given the graph of a surface $z=f(x,y)$ for $(x,y)$ in a planar region $R$ where $f(x,y)\geq 0$ for all $(x,y)$
-in $R$, the volume of the solid bounded by the surface $z=f(x,y)$ and the set $R$ in the $xy$-plane is given by 
-\[\text{Volume} = \iint_R f(x,y)\mathrm{d}A\]
+So if we have $y$ in terms of $x$, then we use $\iint_D f(x,y)dA = \iint_{g_1(x)}^{g_2(x)}f(x,y)dydx$.
 
-If $R$ can be described as $a\leq x \leq b$ and $g(x)\leq y \leq h(x)$ then 
-\[\iint_R f(x,y)\mathrm{d}A = \int^a_b\int_{g(x)}^{h(x)}f(x,y)\mathrm{d}y\mathrm{d}x\]
+If we have $x$ in terms of $y$, then $\iint_D f(x,y)dA=\iint_{h_1(y)}^{h_2(y)} f(x,y)dxdy$
 
-If $R$ can be described as $g(y)\leq x \leq h(y)$ and $c\leq y \leq d$ then
-\[\iint_R f(x,y)\mathrm{d}A= \int_c^d\int_{g(y)}^{h(y)}f(x,y)\mathrm{d}x\mathrm{d}y\]
+\begin{example}
+    Evaluate $\iint_D (x+2y)dA$ where $D$ is the region bounded by $y=2x^2$ and $y=1+x^2$.
 
-To evaluate a $\mathrm{d}y\mathrm{d}x$ double integral of the form 
-\[\int_a^b\int_{g(x)}^{f(x)} f(x,y)\mathrm{d}y\mathrm{d}\]
-\begin{enumerate}
-    \item Integrate $f(x,y)$ with respect to $y$.
-    \item Substitute $y=h(x)$, $y=g(x)$ and subtract, resulting in a function of $x$ (call it $A(x)$).
-    \item Evaluate the integral of the resulting function 
-    \[\int_a^b A(x)\mathrm{d}x\]
-\end{enumerate}
+    We have both equations being $y=$ something, so we are integrating with respect to $y$ first in this case. Though the reason for this is mostly because we are integrating vertically.
 
-To evaluate a $\mathrm{d}x \mathrm{d}y$ double integral of the form 
-\[\int_c^d \int_{g(y)}^{h(y)} f(x,y)\mathrm{d}x\mathrm{d}\]
-\begin{enumerate}
-    \item Integrate $f(x,y)$ with respect to $x$.
-    \item Substitute $x=h(y)$, $x=g(y)$ and subtract, resulting in a function of $y$ (call it $A(y)$).
-    \item Evaluate the integral of the resulting function 
-    \[\int_c^d A(y)\mathrm{d}y\]
-\end{enumerate}
+    So the integration is $\int_{-1}^1 \int_{2x^2}^{1+x^2}(x+2y)dydx$.
 
-\begin{definition} 
-    Let $R$ be a region in the $xy$-plane. Then 
-    \[\text{area of }R = \iint_R \mathrm{d}A\]
-\end{definition}
+    We then get $xy+y^2$ with limits of integration $y=2x^2$ to $y=1+x^2$.
+
+    So this results in $\int_{-1}^1 [x(1+x^2)+(1+x^2)^2]-[x(2x^2)+(2x^2)^2]dx = \int_{-1}^1 (-3x^4-x^3+2x^2+x+1)dx = \frac{32}{15}$.
+\end{example}
+
+\begin{example}
+    Set up only! Evaluate $\iint_R xydA$ where $R$ is the region bounded by $y=-x+1, y=x+1$, and $y=3$.
+
+    Draw to see the region. We can see from the graph that integrating by $x$ first is probably the better idea, because $y$ would require $2$ double integrals.
+
+    So setting up the integral gives $\int_1^3 \int_{1-y}^{y-1}xy dxdy$. (Setting the equations in terms of $x=$)
+\end{example}
+
+\begin{example}
+    Find the volume of the solid that lies under $z=xy$ and above $D$ where $D$ is the region bounded by $y=x-1$ and $y^2=2x+6$.
+
+    By drawing this, we see we will go by $dx$ first.
+
+    Setting up the integral is $\int_{-2}^4 \int_{\frac{1}{2}y^2-3}^{y+1}xydx dy$.
+
+    Starting the integration, we get $\frac{1}{2}x^2y$ with the limits of the first integral.
+
+    This gives $\frac{1}{2}\int_{-2}^4 (y+1)^2\cdot y-\left(\frac{1}{2}y^2-3\right)^2\cdot y dy$.
+
+    Simplifying some more gives $\frac{1}{2}\int_{-2}^4 -\frac{1}{4}y^5+4y^3+2y^2-8y dy$ and this gives $36$ as an answer.
+\end{example}
+
+\begin{example}
+    $\int_0^1 \int_x^1 \sin(y^2)dy dx$
+
+    If we draw the region, we have $y=1$ and $y=x$.
+
+    We go from $x=0$ to $x=y$ and for the $y$ limits, we go from $0$ to $1$.
+
+    Therefore the integral is $\int_0^1 \int_0^y \sin(y^2)dxdy$.
+
+    Solving this integral gives $-\frac{1}{2}\cos(1)+\frac{1}{2}$.
+\end{example}
+
+\begin{example}
+    Use a double integral to find the area of the region enclosed between $y=x^3$ and $y=2x$ in the first quadrant.
+
+    Set up the integral $A=\int_0^{\sqrt{2}}\int_{x^3}^2x$ to get the area.
+\end{example}
+
+\ex Evaluate by reversing the order of integration: $\int_0^2 \int_{y/2}^1 e^{x^2}dxdy$.
 
 \section{Double Integrals in Polar Coordinates}
-A cartesian rectangle can be described as:
-\[R={(x,y) : a\leq x\leq b, c\leq y\leq d}\]
+Recall that polar coordinates are in form $(r,\theta)$ and rectangular coordinates are in $(x,y)$.
 
-A polar rectangle is:
-\[R={(r, \theta) : a\leq r\leq b, \alpha \leq \theta \leq \beta}\]
+In polar, for the unit circle, we can write $0\leq r\leq 1$ or $0\leq \theta \leq 2\pi$.
 
-Approximation to polar double integral:
-Given $f(x,y) = f(r\cos \theta, r\sin\theta)$
-
-If we let $\Delta A_k$ be the area of the $k$th polar rectangle, then the approximation is
-\[\sum^n_{k=1}f(r^*_k\cos\theta_k^*, r_k^*\sin\theta_k^*)\Delta A_k\]
-
-Which can be written as:
-\[\iint_R f(x,y)\mathrm{d}A = \lim_{\Delta \to 0}\sum^n_{k=1}f(r_k^*\cos\theta_k^*, r_k^*\sin\theta_k^*)\Delta A_k\]
-
-Over polar rectangles we have:
-\[\iint_R f(x,y)\mathrm{d}A = \int^{\beta}_{\alpha}\int^b_a f(r\cos\theta, r\sin\theta)r\mathrm{d}r\mathrm{d}\theta\] 
-\[R={(r,\theta) : a\leq r\leq b, \alpha\leq \theta\leq \beta}\]
-
-\begin{theorem}
-    Let $f$ be continuous on the region $R$ in the $xy$-plane expressed in polar coordinates as 
-    \[R = {(r,\theta): 0\leq g(\theta) \leq r  \leq h(\theta), \alpha \leq \theta \leq \beta}\]
-    where $0<\beta - \alpha \leq 2\pi$. Then 
-    \[\iint_R f(x,y)\mathrm{d}A = \int^{\beta}_{\alpha}\int^b_a f(r\cos\theta, r\sin\theta)r\mathrm{d}r\mathrm{d}\theta\] 
-
-\end{theorem}
-
-
-\section{Triple Integrals}
-Consider $f(x,y,z)$ defined on $D$.
+We have $3$ equations for converting: 
 \begin{itemize}
-    \item Divide region containing $D$ into rectangular boxes, numbered $k=1,2,\dots,n$.
-    \item Let $\Delta V_k$ be the volume of the $k$th box.
-    \item For each $k$, choose a point $(x^*_k, y^*_k, z^*_k)$ in the $k$th box.
-    
-    Approximation = $\sum^n_{k=1}f(x^*_k,y^*_k,z^*_k)\Delta V_k$.
-    \item Set $\Delta$ = maximum length of a diagonal of a box.
-\end{itemize}
-
-\[\iiint_D f(x,y,z)\mathrm{d}V=\lim_{\Delta \to 0}\sum^n_{k=1}f(x_k^*,y_k^*,z_k^*)\Delta V_k\]
-
-Two applications of triple integrals:
-
-1.
-\[\iiint_D 1\mathrm{d}V = \text{Volume}(D)\]
-
-2. If $\rho(x,y,z)$ represents the density of a solid at any point $(x,y,z)$ of a solid then 
-\[\iiint_D \rho(x,y,z)\mathrm{d}V = \text{mass}(D)\]
-
-Possible orders for integration:
-\begin{enumerate}
-    \item $\mathrm{d}x\mathrm{d}y\mathrm{d}z$
-    \item $\mathrm{d}x\mathrm{d}z\mathrm{d}y$
-    \item $\mathrm{d}y\mathrm{d}x\mathrm{d}z$
-    \item $\mathrm{d}y\mathrm{d}z\mathrm{d}x$
-    \item $\mathrm{d}z\mathrm{d}x\mathrm{d}y$
-    \item $\mathrm{d}z\mathrm{d}y\mathrm{d}x$
-\end{enumerate}
-
-Let's consider the $\mathrm{d}z\mathrm{d}y\mathrm{d}x$ order.
-\begin{theorem}
-    Let $f$ be continuous over the region 
-    \[D = {(x,y,z): a\leq x\leq b, g(x)\leq y\leq h(x), G(x,y)\leq z\leq H(x,y)}\],
-    where $g$, $h$, $G$, and $H$ are continuous functions. Then $f$ is integrable over $D$ and the 
-    triple integral is evaluated as the iterated integral 
-    \[\iiint_D f(x,y,z)\mathrm{d}V = \int^b_a \int^{h(x)}_{g(x)}\int^{H(x,y)}_{G(x,y)}f(x,y,z)\mathrm{d}z\mathrm{d}y\mathrm{d}x\]
-\end{theorem}
-
-\section{Triple Integrals in Cylindrical and Spherical Coordinates}
-A point $P$ in three-dimensional space can be described in cylindrical coordinates $P(r,\theta, z)$.
-\begin{itemize}
-    \item $P^*$ is the projection of $P$ into the $xy$-plane.
-    \item $(r,\theta)$ is the polar coordinates of $P^*$.
-    \item $(r,\theta,z)$ is the cylindrical coordinates of $P$.
-\end{itemize}
-
-We can transform from Rectangular to cylindrical:
-\[r^2=x^2+y^2 \qquad tan\theta = y/x \qquad z = z\] 
-To convert from cylindrical to rectangular: 
-\[x = r\cos\theta \qquad y = r\sin\theta \qquad z = z\]
-
-Approximate volume given a cylindrical point: $(r_k^*, \theta_k^*, z_k^*)$ and 
-rectangular point: $(x_k^*, y_k^*, z_k^*)$, the approximate volume is $\Delta V_k = r^*_k\Delta r\Delta \theta\Delta z$.
-\[\iiint_D f(x,y,z)\mathrm{d}V = \lim_{\Delta \to 0}\sum^n_{k+1}f(r_k^*\cos\theta_k^*, r_k^*\sin\theta_k^*, z_k^*)r_k^*\Delta r\Delta\theta \Delta z\]
-
-\begin{theorem}
-    Let $f$ be continuous over the region $D$, expressed in cylindrical coordinates as 
-    \[D={(r,\theta,z):0\leq g(\theta)\leq r\leq h(\theta), \alpha\leq\theta\leq\beta, G(x,y)\leq z\leq H(x,y)}\]
-    Then $f$ is integrable over $D$, and the triple integral of $f$ over $D$ is 
-    \[\iiint_D f(x,y,z)\mathrm{d}V = \int_{\alpha}^{\beta}\int_{g(\theta)}^{h(\theta)}\int_{G(r\cos\theta, r\sin\theta)}^{H(r\cos\theta, r\sin\theta)}f(r\cos\theta,r\sin\theta,z)\mathrm{d}zr\mathrm{d}r\mathrm{d}\theta\]
-\end{theorem}
-
-In a triple integral in spherical coordinates, the coordinate is described as $P(\rho,\phi,\theta)$.
-\begin{itemize}
-    \item $\rho$ is the distance from the origin to $P$.
-    \item $\phi$ is the angle between the positive $z$-axis and the line from the origin to $P$.
-    \item $\theta$ is the same angle as in cylindrical coordinates; measures rotation around the $z$-axis relative to $x$-axis.
-\end{itemize}
-
-Some relations:
-\begin{itemize}
-    \item $x^2+y^2=r^2$.
-    \item $\tan\theta = \frac{y}{x}$.
-    \item $x=r\cos\theta$.
-    \item $y=r\sin\theta$.
-    \item $x^2+y^2+z^2=\rho^2$.
-    \item $r=\rho\sin\phi$.
-    \item $z=\rho\cos\phi$.
-    \item $\tan\phi = \frac{r}{z}$.
-    \item $x=\rho\sin\phi\cos\theta$.
-    \item $y=\rho\sin\phi\sin\theta$.
-\end{itemize}
-
-Given the spherical coordinate $(\rho_k^*,\phi_k^*,\theta_k^*)$ and the rectangular coordinate $(x_k^*,y_k^*,z_k^*)$.
-
-The approximate volume of would be $\Delta V_k=\rho_p^{*2}\sin\phi_k^* \Delta\rho\Delta\phi\Delta\theta$.
-\[\iiint_D f(x,y,z)\mathrm{d}V = \lim_{\Delta\to 0}\sum^n_{k=1}f(\rho_k^*\sin\phi_k^*\cos\theta_k^*,\rho_k^*\sin\phi_k^*\sin\theta_k^*,\rho_k^*\cos\phi_k^*)\rho_k^{*2}\sin\phi_k^*\Delta\rho\Delta\phi\Delta\theta\]
-
-\begin{theorem}
-    Let $f$ be continuous over the region $D$, expressed in spherical coordinates as 
-    \[D={(\rho,\phi,\theta):0\leq g(\phi,\theta)\leq \rho\leq h(\phi,\theta),a\leq\phi\leq b,\alpha\leq \theta\leq \beta}\]
-    Then $f$ is integrable over $D$ and the triple integral of $f$ over $D$ is
-    \[\iiint_D f(x,y,z)\mathrm{d}V = \int_{\alpha}^{\beta}\int_a^b\int_{g(\phi,\theta)}^{h(\phi,\theta)}f(\rho\sin\phi\cos\theta,\rho\sin\phi\sin\theta,\rho\cos\phi)\rho^2\sin\phi\mathrm{d}\rho\mathrm{d}\phi\mathrm{d}\theta\]
-\end{theorem}
-
-\section{Integrals for Mass Calculations}
-If masses $m_1,m_2,\dots,m_n$ are arranged on the $x$-axis at coordinates $x_1,x_2,\dots,x_n$
-respectively the masses will be balanced about the point $\bar{x}$ if 
-\[\sum_{k=1}^n m_k(x_k-\bar{x})=0\implies \bar{x}=\frac{\sum^n_{k=1}m_k x_k}{\sum^n_{k=1}m_k}\]
-
-We can obtain the center of mass in 1 dimension as 
-\[\bar{x}=\frac{\int_a^b x\rho(x)\mathrm{d}x}{\int_a^b\rho(x)\mathrm{d}x}\]
-\pagebreak
-\begin{definition}
-    Let $\rho$ be a integrable density function on the interval $[a,b]$ (which represents a thin rod or wire). 
-    The center of mass is located on the point $\bar{x}=\frac{M}{m}$, where the total moment $M$ and mass $m$ are 
-    \[M=\int_a^b x\rho(x)\mathrm{d}x\qquad m = \int_a^b \rho(x)\mathrm{d}x\]
-\end{definition}
-
-\begin{definition}
-    Let $\rho$ be an integrable area density function defined over a closed bounded region $R$ in 
-    $\mathbb{R}^2$. The coordinates of the center of mass of the object represented by $R$ are 
-    \[\bar{x}=\frac{M_y}{m}=\frac{1}{m}\iint_R x\rho(x,y)\mathrm{d}A \qquad \bar{y}=\frac{M_x}{m}=\frac{1}{m}\iint_R y\rho(x,y)\mathrm{d}A\]
-    where $m = \iint_R \rho(x,y)\mathrm{d}A$ is the mass, and $M_y$ and $M_x$ are the moments with respect to the $y$-axis and $x$-axis, 
-    respectively. If $\rho$ is constant, the center of mass is called the centroid and is independent of the density.
-\end{definition}
-\[M_y = \iint_R x\rho(x,y)\mathrm{d}A \qquad M_x = \iint_R y\rho(x,y)\mathrm{d}A\]
-
-\begin{definition}
-    Let $\rho$ be an integrable density function on a closed bounded region $D$ in $\mathbb{R}^3$. The 
-    coordinates of the center of mass of the region are 
-    \begin{align*}
-        \bar{x}=\frac{M_{yz}}{m}=\frac{1}{m}\iiint_D x\rho(x,y,z)\mathrm{d}V \quad \bar{y}=\frac{M_{xz}}{m}=\frac{1}{m}\iiint_D y\rho(x,y,z)\mathrm{d}V \\
-        \bar{z}=\frac{M_{xy}}{m}=\frac{1}{m}\iiint_D z\rho(x,y,z)\mathrm{d}V
-    \end{align*}
-\end{definition}
-\[M_{yz}=\iiint_D x\rho(x,y,z)\mathrm{d}V \quad M_{xz}=\iiint_D y\rho(x,y,z)\mathrm{d}V \quad M_{xy}=\iiint z\rho(x,y,z)\mathrm{d}V\]
-
-
-\section{Change of Variables in Multiple Integrals}
-We have substitution in single integrals as:
-\[\int_a^b f(u(x))\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}x = \int^{u(b)}_{u(a)}f(u)\mathrm{d}u\]
-
-For double integrals, we could use polar coordiantes using the following we know:
-\begin{itemize}
+    \item $r^2=x^2+y^2$
     \item $x=r\cos\theta$
     \item $y=r\sin\theta$
-    \item $r^2=x^2+y^2$
-    \item $\tan\theta =\frac{y}{x}$.
-    \item $\mathrm{d}A\rightarrow r\mathrm{d}r\mathrm{d}\theta$
 \end{itemize}
-\pagebreak
-\begin{definition}
-    A transformation $T$ from a region $S$ to a region $R$ is one-to-one on $S$ if 
-    $T(P)=T(Q)$ only when $P=Q$, where $P$ and $Q$ are points in $S$.
-\end{definition}
 
-\begin{definition}
-    Given a transformation $T:x=g(u,v), y=h(u,v)$, where $g$ and $h$ are differentiable 
-    on a region of the $uv$-plane, the Jacobian determinant (or Jacobian) of $T$ is 
-    \begin{align*}
-        J(u,v)=\frac{\partial(x,y)}{\partial(u,v)}=
-        \begin{vmatrix}
-            \frac{\partial x}{\partial y} & \frac{\partial x}{\partial v}\\
-            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
-        \end{vmatrix}
-        = \frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}
-    \end{align*}
-\end{definition}
-\begin{theorem}
-    Let $T:x=g(u,v), y=h(u,v)$ be a transformation that maps a closed bounded region $S$ in the $uv$-plane 
-    to a region $R$ in the $xy$-plane. Assume $T$ is one-to-one on the interior of $S$ and $g$ and $h$ 
-    have continuous first partial derivatives there. If $f$ is continuous on $R$, then 
-    \[\iint_R f(x,y)\mathrm{d}A = \iint_S f(g(u,v),h(u,v)) \mid J(u,v) \mid \mathrm{d}A\]
-\end{theorem}
+To find the volume, the process is similar to the Riemann sum process for double integrals.
+\[ V = \lim_{n\to\infty}\sum_{k=1}^n f(r_k^*, \theta_k^*)\Delta A_k = \iint f(r,\theta)dA \]
 
-\begin{definition}
-    Given a transformation $T:x=g(u,v,w), y=h(u,v,w)$, and $z=p(u,v,w)$, where $g$, $h$, 
-    and $p$ are differentiable on a region of $uvw$-space, the Jacobian determinant (or Jacobian) of $T$ is 
-    \begin{align*}
-J(u,v,w)=\frac{\partial(x,y,z)}{\partial(u,v,w)} = 
-\begin{vmatrix}
-    \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w}\\
-    \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w}\\
-    \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
-\end{vmatrix}
-    \end{align*}
-\end{definition}
+In the above, $\Delta A_k$ represents the area of the polar rectangle. 
 
-We can express $J(u,v,w) = \frac{\partial x}{\partial u}\frac{\partial y}{\partial v}\frac{\partial z}{\partial w}+\frac{\partial x}{\partial v}\frac{\partial y}{\partial w}\frac{\partial z}{\partial u}+\frac{\partial x}{\partial w}\frac{\partial y}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial w}\frac{\partial y}{\partial u}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial u}\frac{\partial y}{\partial w}\frac{\partial z}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}\frac{\partial z}{\partial w}-\frac{\partial x}{\partial w}\frac{\partial y}{\partial v}\frac{\partial z}{\partial u}$
+Now we need to find the area of a polar rectangle.
 
-\begin{theorem}
-    Let $T:x=g(u,v,w), y=h(u,v,w)$, and $z=p(u,v,w)$ be a transformation that maps a closed 
-    bounded region $S$ in $uvw$-space to a region $D=T(S)$ in $xyz$-space. Assume $T$ is one-to-one 
-    on the interior of $S$ and $g$, $h$, and $p$ have continuous first partial derivatives there. 
-    If $f$ is continuous on $D$, then 
-    \[\iiint_D f(x,y,z)\mathrm{d}V = \iiint_S f(g(u,v,w),h(u,v,w),p(u,v,w,))\mid J(u,v,w)\mid \mathrm{d}V\]
-\end{theorem}
+First we know that the area of a sector is $\frac{1}{2}r^2\theta$ and that $\Delta A_k$ is the large sector minus the little sector.
 
+Therefore we have $\frac{1}{2}\left(r_k^*+\frac{1}{2}\Delta r_k\right)^2\Delta \theta_k - \frac{1}{2}\left(r_k^* - \frac{1}{2}\Delta r_k\right)^2\Delta \theta k$.
+
+And this simplifies to $r_k^* \Delta r_k \Delta \theta_k$, so $\Delta A_k = r_k^*\Delta r_k\Delta \theta_k$.
+
+So, $V=\iint_R f(r,\theta)dA=\lim_{n\to\infty}\sum_{k=1}^n f(r_k^*, \theta_k^*)r_k^* \Delta r_k\Delta \theta_k$.
+
+So we have 
+\[ V = \iint_R f(r,\theta)rdrd\theta\]
+
+\begin{example}
+    Find $\iint_R \sin\theta dA$ where $R$ is the region outside the circle $r=2$ and inside $r=2+2\cos\theta$ in the $1$st quadrant.
+
+    We see that the circle will be hit first, then the other polar curve.
+
+    So the integral is $\int_0^{\pi/2}\int_2^{2+2\cos\theta}\sin\theta\cdot rdrd\theta$.
+
+    Note the outer integral goes to $\frac{\pi}{2}$ because that is the first quadrant.
+
+    So the inner integral becomes $\sin\theta \cdot \frac{1}{2}r^2$ from the bounds $r=2$ to $r=2+2\cos\theta$.
+
+    We then integrate $\frac{1}{2}\int_0^{\pi/2}\sin\theta [(2+2\cos\theta)^2-2^2]d\theta$.
+
+    Solving this gives $8/3$.
+\end{example}
+
+\begin{example}
+    Find the volume of the solid bounded by $z=0$ and $z=1-x^2-y^2$.
+
+    The graph of $z=1-x^2-y^2$ will be a paraboloid.
+
+    So $R$ is a circle with radius $1$ when we draw this paraboloid.
+
+    We could integrate as $V=\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}}(1-x^2-y^2)dydx$, or we could convert to polar.
+
+    In polar, we know $R$ is a circle and then we can convert to polar to get $\int_0^{2\pi}\int_0^1 (1-r^2)\cdot r drd\theta$, which is equal to $V=\frac{\pi}{2}$.
+\end{example}
+
+Area is the same as before, recall this was $A=\iint_R 1\cdot dA$, and now it is $\iint_R r dr d\theta$.
+
+\begin{example}
+    Use a double integral to find the area enclosed by one loop of the four-leaf rose of $r=\cos2\theta$.
+
+    If you know how to draw this, then we can find the area $A=\int_{-\pi/4}^{\pi/4}\int_0^{\cos 2\theta}rdrd\theta$, and this integral is simple to solve, the answer is $\pi/8$.
+\end{example}
+
+\begin{example}
+    Find the volume of the solid that lies under $z=x^2+y^2$, above the $xy$-plane, and inside $x^2+y^2=2x$.
+
+    The graph $x^2+y^2=2x$ can be rearranged to complete the square. We have then $(x-1)^2+y^2=1$.
+
+    So if we were to convert $x^2+y^2$ to polar, we get $r^2$.
+
+    We have $r^2=2r\cos\theta$ and $r=2\cos\theta$.
+
+    The integral then we get $\int_{-\pi/2}^{\pi/2} \int_0^{2\cos\theta} (r^2)\cdot rdrd\theta$.
+
+    The integral is $V=\frac{3\pi}{2}$
+\end{example}
+
+\section{Surface Area}
+The formula for surface area is 
+\[ A(S)=\lim_{n\to 0}\sum_{k=1}^n \sqrt{(z_x)^2+(z_y)^2+1}\Delta A\]
+which becomes 
+\[ A(S)=\iint_R \sqrt{(z_x)^2+(z_y)^2+1}dA \]
+
+\begin{example}
+    Find the surface area of the part of the surface $z=x^2+2y$ that lies above the triangular region with vertices $(0,0), (1,0)$, and $(1,1)$.
+
+    $z=x^2+2y$, $z_x=2x$ and $z_y=2$.
+
+    So $A(S)=\int_0^1 \int_0^x \sqrt{(2x)^2+(2)^2+1} dydx$.
+
+    This integral gievs $\frac{1}{12}(27-5\sqrt{5})$.
+\end{example}
+
+\begin{example}
+    Find the surface area of the portion of $z=x^2+y^2$ below the plane $z=9$.
+
+    Paraboloid!
+
+    The integral is $A(S)=\iint_R \sqrt{(2x)^2+(2y)^2+1}dA$.
+
+    We might be able to see that simplifying this gives $4x^2+4y^2+1$ inside the square root, and we have an $x^2+y^2=9$ in the paraboloid.
+
+    We should use polar.
+
+    So we now have $\int_0^{2\pi}\int_0^3 \sqrt{4r^2+1}\cdot r dr d\theta$.
+
+    This gives you $\frac{\pi}{6}(37^{3/2}-1)$.
+\end{example}
+
+
+\begin{example}
+    Find the surface area of $z=\sqrt{4-x^2}$ above $R: [0,1]\times [0,4]$.
+
+    Setting up the integral gives $\iint_R \sqrt{\left(-\frac{x}{\sqrt{4-x^2}}\right)^2+0^2+1}$.
+
+    It doesn't really matter the way we integrate, so we get $\int_0^1 \int_0^4 \sqrt{\frac{x^2}{4-x^2}+\frac{4-x^2}{4-x^2}}dydx$.
+
+    This simplifies to $\int_0^1 \frac{8}{\sqrt{4-x^2}}dx$.
+
+    We notice that this becomes $8\sin^{-1}\left(\frac{x}{2}\right)$ with bounds $0$ to $1$, and this gives $\frac{4\pi}{3}$.
+\end{example}
+
+\section{Triple Integrals}
+
+\section{Triple Integrals in Cylindrical Coordinates}
+
+\section{Triple Integrals in Spherical Coordinates}
+
+\section{Change of Variables in Multiple Integrals}
 
 \end{document}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tower List</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  .item { padding: 5px 10px; margin: 2px 0; display: flex; align-items: center; border-radius: 4px; }
+  .item label { flex: 1; cursor: pointer; }
+  button { margin-right: 10px; padding: 5px 10px; }
+</style>
+</head>
+<body>
+
+<h2>Tower List</h2>
+<button id="sortBtn">Sort by Value</button>
+<button id="randomBtn">Randomize</button>
+<div id="list">Loading...</div>
+
+<script>
+// Color mapping function
+function getColor(num) {
+  if(num >= 1 && num < 2) return "green";
+  if(num >= 2 && num < 3) return "yellow";
+  if(num >= 3 && num < 4) return "orange";
+  if(num >= 4 && num < 5) return "red";
+  if(num >= 5 && num < 6) return "darkred";
+  if(num >= 6 && num < 7) return "grey";
+  if(num >= 7 && num < 8) return "hotpink";
+  if(num >= 8 && num < 9) return "blue";
+  if(num >= 9 && num < 10) return "steelblue";
+  if(num >= 10 && num < 11) return "cyan";
+  return "white";
+}
+
+// Load saved checkbox states
+let savedState = JSON.parse(localStorage.getItem("checkboxState") || "{}");
+
+// Container element
+const container = document.getElementById("list");
+
+// Items array (loaded from JSON)
+let items = [];
+
+// Render the list
+function renderList() {
+  container.innerHTML = "";
+  
+  items.forEach(item => {
+    const value = item.value || 0;
+    const div = document.createElement("div");
+    div.className = "item";
+    div.style.backgroundColor = getColor(value);
+    
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = savedState[item.text] || false;
+    checkbox.addEventListener("change", () => {
+      savedState[item.text] = checkbox.checked;
+      localStorage.setItem("checkboxState", JSON.stringify(savedState));
+    });
+    
+    const label = document.createElement("label");
+    label.textContent = `${item.text} [${value.toFixed(2)}]`;
+    
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    container.appendChild(div);
+  });
+}
+
+// Sort button
+document.getElementById("sortBtn").addEventListener("click", () => {
+  items.sort((a, b) => a.value - b.value);
+  renderList();
+});
+
+// Randomize button
+document.getElementById("randomBtn").addEventListener("click", () => {
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+  renderList();
+});
+
+// Load items from jtoh.json and sort by default
+fetch('jtoh.json')
+  .then(response => response.json())
+  .then(data => {
+    items = data;
+    items.sort((a, b) => a.value - b.value); // default sort
+    renderList();
+  })
+  .catch(err => {
+    container.textContent = "Failed to load jtoh.json";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
