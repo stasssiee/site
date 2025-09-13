@@ -1,18 +1,13 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.25)  26 AUG 2025 15:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.25)  31 AUG 2025 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/augus/Documents/GitHub/site/Notes/calc3/chapters/ch4.tex
-(c:/Users/augus/Documents/GitHub/site/Notes/calc3/chapters/ch4.tex
+**"c:/Users/augus/Documents/GitHub/site/other stuff/discrete/discrete.tex"
+(c:/Users/augus/Documents/GitHub/site/other stuff/discrete/discrete.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
-(C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/subfiles\subfiles.cls
-Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
-Preamble taken from file `../calc3.tex'
-(C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/import\import.sty
-Package: import 2020/04/01  v 6.2
-) (c:\Users\augus\Documents\GitHub\site\Notes\calc3\calc3.tex (C:\Program Files\MiKTeX\tex/latex/base\book.cls
+(C:\Program Files\MiKTeX\tex/latex/base\book.cls
 Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\bk10.clo
 File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
@@ -29,7 +24,7 @@ File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
-) (../Templates/jointPreamble.tex (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+) (../templates/jointPreamble.tex (C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -556,7 +551,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/asymptote\asymptote.sty
 Package: asymptote 2024/02/26 v1.38 Asymptote style file for LaTeX
- (c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pre)
+ (discrete.pre)
 \ASYbox=\box78
 \ASYdimen=\dimen335
 \c@asy=\count339
@@ -573,7 +568,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 ) (C:\Users\augus\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
-\openout5 = `ch4.pre'.
+\openout5 = `discrete.pre'.
 
 ) (C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
@@ -794,27 +789,29 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \c@theo=\count358
 ) (C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/subfiles\subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-))) (c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux)
-\openout1 = `ch4.aux'.
+ (C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/import\import.sty
+Package: import 2020/04/01  v 6.2
+)) (discrete.aux)
+\openout1 = `discrete.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -850,13 +847,13 @@ LaTeX Font Info:    ... okay on input line 3.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 3.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 3.
+LaTeX Info: Redefining \celsius on input line 10.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 10.
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 3.
-Package gensymb Info: Using \Omega for \ohm on input line 3.
+LaTeX Info: Redefining \ohm on input line 10.
+Package gensymb Info: Using \Omega for \ohm on input line 10.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -879,22 +876,20 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 3.
- (c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out) (c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out)
+Package hyperref Info: Link coloring OFF on input line 10.
+ (discrete.out) (discrete.out)
 \@outlinefile=\write6
-\openout6 = `ch4.out'.
+\openout6 = `discrete.out'.
 
-
-Chapter 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 6.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 11.
  (C:\Users\augus\AppData\Roaming\MiKTeX\tex/latex/esint\uesint.fd
 File: uesint.fd 
 )
@@ -902,49 +897,119 @@ File: uesint.fd
 [1
 
 
-{C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Package mdframed Info: Not enough space on this page on input line 58.
+{C:/Users/augus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (discrete.toc)
+\tf@toc=\write7
+\openout7 = `discrete.toc'.
+
+ (chapters/ch1.tex
 
 
-[2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 \chapter
+            {Speaking Mathematically} [1]
+Chapter 1.
+) (chapters/ch2.tex
 
-[3]
+[2
 
-[4]
-LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 206.
+]
+Chapter 2.
+) (chapters/ch3.tex
 
+[3
 
-[5]
-Package mdframed Info: Not enough space on this page on input line 286.
+]
+Chapter 3.
+) (chapters/ch4.tex
 
+[4
 
-[6]
-Package mdframed Info: Not enough space on this page on input line 286.
+]
+Chapter 4.
 
+Overfull \hbox (22.45001pt too wide) in paragraph at lines 4--4
+|[]\OT1/cmss/bx/n/24.88 Elementary Num-ber The-ory and Meth-
+ []
 
-[7]
+) (chapters/ch5.tex
 
-[8] (c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux)
+[5
+
+]
+Chapter 5.
+) (chapters/ch6.tex
+
+[6
+
+]
+Chapter 6.
+) (chapters/ch7.tex
+
+[7
+
+]
+Chapter 7.
+) (chapters/ch8.tex
+
+[8
+
+]
+Chapter 8.
+) (chapters/ch9.tex
+
+[9
+
+]
+Chapter 9.
+) (chapters/ch10.tex
+
+[10
+
+]
+Chapter 10.
+) (chapters/ch11.tex
+
+[11
+
+]
+Chapter 11.
+) (chapters/ch12.tex
+
+[12
+
+]
+Chapter 12.
+
+Overfull \hbox (10.69408pt too wide) in paragraph at lines 4--4
+|[]\OT1/cmss/bx/n/24.88 Regular Ex-pres-sions and Finite-State
+ []
+
+)
+
+[13
+
+] (discrete.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-07-19>
  ***********
-Package rerunfilecheck Info: File `ch4.out' has not changed.
-(rerunfilecheck)             Checksum: 6C79056C9527B19A5368B3722F3C6F8D;1941.
+Package rerunfilecheck Info: File `discrete.out' has not changed.
+(rerunfilecheck)             Checksum: 6F3FEDE475BFB6989B2F19C77174440C;2458.
  ) 
 Here is how much of TeX's memory you used:
- 25846 strings out of 468149
- 490965 string characters out of 5441149
- 920449 words of memory out of 5000000
- 53950 multiletter control sequences out of 15000+600000
- 632071 words of font info for 62 fonts, out of 8000000 for 9000
+ 25684 strings out of 468149
+ 485976 string characters out of 5441149
+ 900277 words of memory out of 5000000
+ 53747 multiletter control sequences out of 15000+600000
+ 637081 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 142i,10n,141p,1250b,987s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\augus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcss1000.pk> <C:\Users\augus\AppData\Local\MiKTeX\fonts/pk/ljfour/public/esint/dpi600\esint10.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pdf (8 pages, 174028 bytes).
+ 122i,6n,124p,1257b,505s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on discrete.pdf (14 pages, 85086 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

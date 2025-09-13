@@ -32,13 +32,13 @@ If $f$ has both positive and negative values, then the volume is the difference 
 \begin{definition}
     If $f(x,y)\geq 0$, then the volume of the solid that lies above the rectangle $R$ and below the surface $z=f(x,y)$ is:
     \[ V = \lim_{n\to\infty}\sum_{k=1}^{n}f(x_k^*, y_k^*)\Delta A_k = \lim_{m,n\to \infty}\sum_{i=1}^m\sum_{j=1}^nf(x_k^*,y_k^*)\Delta A_k \]
-    \[ = \iint_R f(x,y)dA \]
+    \[ = \iint\limits_{R} f(x,y)dA \]
 \end{definition}
 
 \begin{example}
     Estimate the volume of the solid that lies above the square $R=[0,2]\times [0,2]$ and below $z=16-x^2-2y^2$. Divide $R$ into $4$ equal squares and choose the sample point to be the upper right corner of each square.
 
-    So $V=\iint_R (16-x^2-2y^2)dA$.
+    So $V=\iint\limits_{R} (16-x^2-2y^2)dA$.
 
     This is $\lim_{n\to\infty}\sum_{k=1}^n f(x_k^*,y_k^*)\Delta A_k$. We will use approximately $4$ parallelpipeds.
 
@@ -48,16 +48,16 @@ If $f$ has both positive and negative values, then the volume is the difference 
 \end{example}
 
 \begin{example}
-    If $R=\{ (x,y)|-1\leq x\leq 1, -2\leq y\leq 2\}$, evaluate $\iint_R \sqrt{1-x^2}dA$.
+    If $R=\{ (x,y)|-1\leq x\leq 1, -2\leq y\leq 2\}$, evaluate $\iint\limits_{R} \sqrt{1-x^2}dA$.
 
     The graph will look like half of a cylinder.
 
     The volume of a cylinder is $\pi r^2 h$.
 
-    $V=\frac{1}{2}\pi r^2 h=\frac{1}{2}\pi (1)^2(4)$, so $\iint_R dA=2\pi$.
+    $V=\frac{1}{2}\pi r^2 h=\frac{1}{2}\pi (1)^2(4)$, so $\iint\limits_{R} dA=2\pi$.
 \end{example}
 
-Midpoint Rule - This tells us to evaluate $\iint_R f(x,y)dA$ using Riemann sums and midpoints.
+Midpoint Rule - This tells us to evaluate $\iint\limits_{R} f(x,y)dA$ using Riemann sums and midpoints.
 
 Evaluating Double Integrals $\rightarrow$ uses iterated integration.
 \[ \int_c^d \int_a^b f(x,y)dx dy = \int_c^d \left[ \int_a^b f(x,y)dx\right]dy \]
@@ -85,13 +85,14 @@ This integral can be $dxdy$ or $dydx$.
 
 $\frac{27}{2}$ in both cases is the area underneath $f(x,y)=x^2y$ and above $R:[0,3]\times [1,2]$. Note that $dx$ and $dy$ are not always interchangable.
 
+\pagebreak
 \begin{theorem}[Fubini's Theorem]
     Let $R$ be a rectangular region defined by $a\leq x\leq b$, $c\leq y\leq d$. If $f(x,y)$ is continuous on this rectangle, then:
-    \[ \iint_R f(x,y)dA = \int_c^d \int_a^b f(x,y)dxdy = \int_a^b \int_c^d f(x,y)dydx \]
+    \[ \iint\limits_{R} f(x,y)dA = \int_c^d \int_a^b f(x,y)dxdy = \int_a^b \int_c^d f(x,y)dydx \]
 \end{theorem}
 
 \begin{example}
-    Evaluate $\iint_R (x-3y^2)dA$ with $R=[0,2]\times [1,2]$.
+    Evaluate $\iint\limits_{R} (x-3y^2)dA$ with $R=[0,2]\times [1,2]$.
 
     The integral is $\int_0^2 \int_1^2 (x-3y^2)dydx$.
 
@@ -104,14 +105,14 @@ $\frac{27}{2}$ in both cases is the area underneath $f(x,y)=x^2y$ and above $R:[
 
 A few properties:
 \begin{enumerate}
-    \item $\iint_R cf(x,y)dA = c\iint_R f(x,y)dA$
-    \item $\iint_R [f(x,y)\pm g(x,y)]dA = \iint_R f(x,y)dA \pm \iint_R g(x,y)dA$
-    \item $\iint_R f(x,y)dA = \iint_{R_1}f(x,y)dA + \iint_{R_2}f(x,y)dA$
-    \item $\iint_R g(x)h(y)dA = \int_a^b g(x)\int_c^d h(y)dy$ where $R=[a,b]\times [c,d]$.
+    \item $\iint\limits_{R} cf(x,y)dA = c\iint\limits_{R} f(x,y)dA$
+    \item $\iint\limits_{R} [f(x,y)\pm g(x,y)]dA = \iint\limits_{R} f(x,y)dA \pm \iint\limits_{R} g(x,y)dA$
+    \item $\iint\limits_{R} f(x,y)dA = \iint_{R_1}f(x,y)dA + \iint_{R_2}f(x,y)dA$
+    \item $\iint\limits_{R} g(x)h(y)dA = \int_a^b g(x)\int_c^d h(y)dy$ where $R=[a,b]\times [c,d]$.
 \end{enumerate}
 
 \begin{example}
-    Evaluate $\iint_R \sin x\cos y dA$ where $R=\left[0,\frac{\pi}{2}\right]\times [0,\pi]$.
+    Evaluate $\iint\limits_{R} \sin x\cos y dA$ where $R=\left[0,\frac{\pi}{2}\right]\times [0,\pi]$.
 
     We can use the fourth property above to get $\int_0^{\pi/2}\sin xdx\cdot \int_0^{\pi}\cos y dy$.
 
@@ -132,8 +133,9 @@ A few properties:
     Then, $\int_0^{\pi}(-\cos 2y+\cos y)dy = 0$.
 \end{example}
 
-Average Value: $f_{avg}=\frac{1}{A(R)}\iint_R f(x,y)dA$
+Average Value: $f_{avg}=\frac{1}{A(R)}\iint\limits_{R} f(x,y)dA$
 
+\pagebreak
 \begin{example}
     Find the average value of $f(x,y)=x^2y$ over $R$ with vertices $(-1,0)$, $(-1,5)$, $(1,5)$, and $(1,0)$.
 
@@ -147,12 +149,12 @@ There are $2$ Types of regions:
 
 The biggest question is finding the limits of integration.
 
-So if we have $y$ in terms of $x$, then we use $\iint_D f(x,y)dA = \iint_{g_1(x)}^{g_2(x)}f(x,y)dydx$.
+So if we have $y$ in terms of $x$, then we use $\iint\limits_{D} f(x,y)dA = \iint_{g_1(x)}^{g_2(x)}f(x,y)dydx$.
 
-If we have $x$ in terms of $y$, then $\iint_D f(x,y)dA=\iint_{h_1(y)}^{h_2(y)} f(x,y)dxdy$
+If we have $x$ in terms of $y$, then $\iint\limits_{D} f(x,y)dA=\iint_{h_1(y)}^{h_2(y)} f(x,y)dxdy$
 
 \begin{example}
-    Evaluate $\iint_D (x+2y)dA$ where $D$ is the region bounded by $y=2x^2$ and $y=1+x^2$.
+    Evaluate $\iint\limits_{D} (x+2y)dA$ where $D$ is the region bounded by $y=2x^2$ and $y=1+x^2$.
 
     We have both equations being $y=$ something, so we are integrating with respect to $y$ first in this case. Though the reason for this is mostly because we are integrating vertically.
 
@@ -164,7 +166,7 @@ If we have $x$ in terms of $y$, then $\iint_D f(x,y)dA=\iint_{h_1(y)}^{h_2(y)} f
 \end{example}
 
 \begin{example}
-    Set up only! Evaluate $\iint_R xydA$ where $R$ is the region bounded by $y=-x+1, y=x+1$, and $y=3$.
+    Set up only! Evaluate $\iint\limits_{R} xydA$ where $R$ is the region bounded by $y=-x+1, y=x+1$, and $y=3$.
 
     Draw to see the region. We can see from the graph that integrating by $x$ first is probably the better idea, because $y$ would require $2$ double integrals.
 
@@ -185,6 +187,7 @@ If we have $x$ in terms of $y$, then $\iint_D f(x,y)dA=\iint_{h_1(y)}^{h_2(y)} f
     Simplifying some more gives $\frac{1}{2}\int_{-2}^4 -\frac{1}{4}y^5+4y^3+2y^2-8y dy$ and this gives $36$ as an answer.
 \end{example}
 
+\pagebreak
 \begin{example}
     $\int_0^1 \int_x^1 \sin(y^2)dy dx$
 
@@ -230,13 +233,14 @@ Therefore we have $\frac{1}{2}\left(r_k^*+\frac{1}{2}\Delta r_k\right)^2\Delta \
 
 And this simplifies to $r_k^* \Delta r_k \Delta \theta_k$, so $\Delta A_k = r_k^*\Delta r_k\Delta \theta_k$.
 
-So, $V=\iint_R f(r,\theta)dA=\lim_{n\to\infty}\sum_{k=1}^n f(r_k^*, \theta_k^*)r_k^* \Delta r_k\Delta \theta_k$.
+So, $V=\iint\limits_{R} f(r,\theta)dA=\lim_{n\to\infty}\sum_{k=1}^n f(r_k^*, \theta_k^*)r_k^* \Delta r_k\Delta \theta_k$.
 
 So we have 
-\[ V = \iint_R f(r,\theta)rdrd\theta\]
+\[ V = \iint\limits_{R} f(r,\theta)rdrd\theta\]
 
+\pagebreak
 \begin{example}
-    Find $\iint_R \sin\theta dA$ where $R$ is the region outside the circle $r=2$ and inside $r=2+2\cos\theta$ in the $1$st quadrant.
+    Find $\iint\limits_{R} \sin\theta dA$ where $R$ is the region outside the circle $r=2$ and inside $r=2+2\cos\theta$ in the $1$st quadrant.
 
     We see that the circle will be hit first, then the other polar curve.
 
@@ -263,7 +267,7 @@ So we have
     In polar, we know $R$ is a circle and then we can convert to polar to get $\int_0^{2\pi}\int_0^1 (1-r^2)\cdot r drd\theta$, which is equal to $V=\frac{\pi}{2}$.
 \end{example}
 
-Area is the same as before, recall this was $A=\iint_R 1\cdot dA$, and now it is $\iint_R r dr d\theta$.
+Area is the same as before, recall this was $A=\iint\limits_{R} 1\cdot dA$, and now it is $\iint\limits_{R} r dr d\theta$.
 
 \begin{example}
     Use a double integral to find the area enclosed by one loop of the four-leaf rose of $r=\cos2\theta$.
@@ -289,7 +293,7 @@ Area is the same as before, recall this was $A=\iint_R 1\cdot dA$, and now it is
 The formula for surface area is 
 \[ A(S)=\lim_{n\to 0}\sum_{k=1}^n \sqrt{(z_x)^2+(z_y)^2+1}\Delta A\]
 which becomes 
-\[ A(S)=\iint_R \sqrt{(z_x)^2+(z_y)^2+1}dA \]
+\[ A(S)=\iint\limits_{R} \sqrt{(z_x)^2+(z_y)^2+1}dA \]
 
 \begin{example}
     Find the surface area of the part of the surface $z=x^2+2y$ that lies above the triangular region with vertices $(0,0), (1,0)$, and $(1,1)$.
@@ -298,7 +302,7 @@ which becomes
 
     So $A(S)=\int_0^1 \int_0^x \sqrt{(2x)^2+(2)^2+1} dydx$.
 
-    This integral gievs $\frac{1}{12}(27-5\sqrt{5})$.
+    This integral gives $\frac{1}{12}(27-5\sqrt{5})$.
 \end{example}
 
 \begin{example}
@@ -306,7 +310,7 @@ which becomes
 
     Paraboloid!
 
-    The integral is $A(S)=\iint_R \sqrt{(2x)^2+(2y)^2+1}dA$.
+    The integral is $A(S)=\iint\limits_{R} \sqrt{(2x)^2+(2y)^2+1}dA$.
 
     We might be able to see that simplifying this gives $4x^2+4y^2+1$ inside the square root, and we have an $x^2+y^2=9$ in the paraboloid.
 
@@ -321,7 +325,7 @@ which becomes
 \begin{example}
     Find the surface area of $z=\sqrt{4-x^2}$ above $R: [0,1]\times [0,4]$.
 
-    Setting up the integral gives $\iint_R \sqrt{\left(-\frac{x}{\sqrt{4-x^2}}\right)^2+0^2+1}$.
+    Setting up the integral gives $\iint\limits_{R} \sqrt{\left(-\frac{x}{\sqrt{4-x^2}}\right)^2+0^2+1}$.
 
     It doesn't really matter the way we integrate, so we get $\int_0^1 \int_0^4 \sqrt{\frac{x^2}{4-x^2}+\frac{4-x^2}{4-x^2}}dydx$.
 
@@ -331,11 +335,378 @@ which becomes
 \end{example}
 
 \section{Triple Integrals}
+So far we have 
+\begin{itemize}
+    \item $D$ is closed (can be contained in a rectangle)
+    \item Taking limit as $n\rightarrow \infty$ gave us the volume under $z=f(x,y)$.
+\end{itemize}
+
+Now, triple integrals.
+\begin{itemize}
+    \item Closed solid $B$ (can be contained in a box).
+    \item Divide $B$ into $n$ sub-boxes.
+    \item Volume of each box is $\Delta V$ and a point in the box is $(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*)$.
+\end{itemize}
+
+Then $\lim_{n\to\infty}\sum_{k=1}^n f\left(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*\right)\Delta V = \iiint\limits_{B} f(x,y,z)dV$.
+
+This gives us hypervolume.
+\begin{itemize}
+    \item Same properties and evaluation as before (double integrals)
+    \item If $B$ is a box defined by $a\leq x\leq b$, $c\leq y\leq d$, $e\leq z\leq f$, then $\iiint\limits_{B} f(x,y,z)dV = \int_e^f \int_c^d \int_a^b f(x,y,z)dxdydz$.
+\end{itemize}
+
+\begin{example}
+    Evaluate $\iiint\limits_{G} xyz^2 dV$ where $G: \{ (x,y,z)|0\leq x\leq 1,-1\leq y\leq 2, 0\leq z\leq 3\}$.
+
+    Convention is to do $\int_0^1 \int_{-1}^2 \int_0^3 xyz^2 dz dy dx$.
+
+    Let us start with the $z$ part to get $\int_0^1 \int_{-1}^2 \frac{1}{3}xyz^3$ from $z=0$ to $z=3$.
+
+    Then we get $\int_0^1 \frac{9}{2}xy^2$ from $y=-1$ to $y=2$.
+
+    And then we get $\frac{9}{2}\int_0^1 3x dx = \frac{27}{4}$.
+\end{example}
+
+If the region $B$ is rectangular and the function is a product (such as $f(x,y,z)=g(x)\cdot h(y)\cdot j(z)$), we can split up the integral.
+
+The above integral will become: $\int_0^1 xdx \cdot \int_{-1}^2 y dy \cdot \int_0^3 z^2 dz$.
+
+Type I Solid: $E$ is a solid with upper surface $z=u_2(x,y)$ and lower surface $z=u_1(x,y)$. $D$ is the projection of $E$ onto the $xy$-plane.
+
+Then $\iiint\limits_{E} f(x,y,z)dV = \iint\limits_{D} \int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)dz dA$.
+
+To find limits of integration:
+\begin{enumerate}
+    \item Find upper and lower surfaces bounding $E$. These are limits for $z$.
+    \item Make a $2$-d sketch of the projection $D$ on $xy$-plane.
+    \item Treat like usual.
+\end{enumerate}
+
+\begin{example}
+    Evaluate $\iiint\limits_{T} zdV$ where $T$ is the tetrahedron bounded by $x=0$, $y=0$, $z=0$ and $x+y+z=1$.
+
+    This is a tetrahedral in the first octant and $x+y+z=1$ is a plane.
+
+    We have $z=1-x-y$, so $\int \int \int_0^{1-x-y}z\cdot dz dy dz$.
+
+    And from the other bounds we get $\int_0^1 \int_0^{1-x} \int_0^{1-x-y}z\cdot dz dy dx$.
+
+    The outer integral note should always have constants.
+
+    The answer of this integral becomes $\frac{1}{24}$.
+\end{example}
+
+Sometimes we have lateral surfaces bounding, not the top or bottom.
+
+Type II Solid:
+\[ \iiint\limits_{E} f(x,y,z)dV = \iint\limits_{D} \left[ \int_{u_1(y,z)}^{u_2(y,z)}f(x,y,z)dx\right]dA \]
+
+Type III Solid:
+\[ \iiint\limits_{E} f(x,y,z)dV = \iint\limits_{D} \left[ \int_{u_1(x,z)}^{u_2(x,z)}f(x,y,z)dy\right] dA \]
+
+\begin{example}
+    Evaluate $\iiint\limits_{R} \sqrt{x^2+z^2}dV$ where $E$ is bounded by $y=x^2+z^2$ and $y=4$.
+
+    $y=x^2+z^2$ is a paraboloid and $y=4$ is a plane.
+
+    We want to start integrating from $y$ since the paraboloid goes towards the plane always.
+
+    We project the figure now on the $xz$-plane and now get a circle with equation $x^2+z^2=4$.
+
+    So we can write the integral now as $\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} \int_{x^2+z^2}^4 \sqrt{x^2+z^2}dy dz dx$.
+
+    First we have the first part of the integral be equal to $\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}} (4-x^2-z^2)\sqrt{x^2+z^2}dzdx$.
+
+    In this we see that $r^2=x^2+z^2$.
+
+    When we switch to polar we end up getting $\int_{0}^{2\pi} \int_{0}^{2} (4-r^2)r\cdot r dr d\theta$.
+
+    This gives you $\frac{128\pi}{15}$.
+\end{example}
+
+Volume as a triple integral: $V=\iiint\limits_{E} 1\cdot dV$.
+
+\begin{example}
+    Setup an integral to find the volume of the wedge in the 1st octant that is cut from the solid cylinder $y^2+z^2\leq 1$ by the planes $y=x$ and $x=0$.
+
+    We start with $z$ then we can see $y=x$ from the projection.
+
+    So $V=\int_0^1 \int_0^x \int_0^{\sqrt{1-y^2}}1\cdot dz dx dy$.
+\end{example}
+
+Note it is not always the case that the order of integration can be changed without changing the bounds.
+
+\begin{example}
+    Find the volume of the solid enclosed between the paraboloids $z=5x^2+5y^2$ and $z=6-7x^2-y^2$.
+
+    To find projection $D$ we have $5x^2+5y^2=6-7x^2-y^2$. Solving gives us $y=\pm \sqrt{1-2x^2}$ (or a circle).
+
+    The integral becomes $V=\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}\int_{-\sqrt{1-2x^2}}^{\sqrt{1-2x^2}}\int_{5x^2+5y^2}^{6-7x^2-y^2}1\cdot dz dy dx$.
+\end{example}
 
 \section{Triple Integrals in Cylindrical Coordinates}
+Cylindrical coordinates are like polar, but in $3$-D.
+
+To convert cylindrical to rectangular, it is the same as polar. $x=r\cos\theta$, $y=r\sin\theta$, and the additional part is $z=z$.
+
+We also get $r^2=x^2+y^2$, $\tan\theta = \frac{y}{x}$ and $z=z$ once again to convert rectangular to cylindrical.
+
+\ex Plot $\left(2,\frac{2\pi}{3}, 1\right)$ and find rectangular coordinates.
+
+\pagebreak
+\begin{example}
+    Find cylindrical coordinates for $(3,-3,-7)$.
+
+    $r^2=3^2+(-3)^2$ gives $r=3\sqrt{2}$.
+
+    $\tan\theta = -1$, so $\theta = \frac{3\pi}{4}$ or $\frac{7\pi}{4}$.
+
+    We pick $\frac{7\pi}{4}$ for this, and then we get coordinates $(3\sqrt{2}, \frac{7\pi}{4}, -7)$.
+\end{example}
+
+\begin{example}
+    Describe the surface $z=r$.
+
+    We can rewrite this was $z=\sqrt{x^2+y^2}$ and therefore $z^2=x^2+y^2$, which describes a cone.
+\end{example}
+
+Recall from earlier: $\iiint\limits_{E} f(x,y,z)dV = \lim_{n\to\infty}\sum_{k=1}^n f\left(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*\right)\Delta V_k$.
+
+$\Delta V_k$ is the area of base times the height. From earlier, $\Delta V_k = r_k^* \Delta r_k \Delta \theta_k\cdot \Delta z_k$.
+
+So, $\iiint\limits_{E} f(x,y,z)dV = \iiint f(r,\theta,z)\cdot r dr d\theta dz$.
+
+To find limits of integration:
+\begin{enumerate}
+    \item Identify upper surface $z=g_2(r,\theta)$ and lower surface $z=g_1(r,\theta)$.
+    \item Make a $2$-D sketch of projection onto $xy$-plane to determine bounds for $r$ and $\theta$.
+\end{enumerate}
+
+
+\begin{example}
+    Evaluate $\iiint\limits_{G} dV$ where $G$ lies within $x^2+y^2=1$, below $z=4$, and above $z=1-x^2-y^2$.
+
+    We are finding a volume.
+
+    The graph gives a cylinder, with a hemisphere at the bottom removing a part of the cylinder (bad explanation but it's ok).
+
+    So the integral is $V=\int_{-1}^1 \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}} \int_{1-x^2-y^2}^4 1\cdot dz dy dx$.
+
+    As we can see, the projection on the $xy$-plane is a circle, so cylindrical coordinates are best.
+
+    Now we have $\int_0^{2\pi} \int_0^1 \int_{1-r^2}^4 1\cdot r\cdot dz dr d\theta$
+
+    Integrating this gives you $V=\frac{7}{2}\pi$.
+\end{example}
+
+\begin{example}
+    Convert from rectangular to cylindrical: $\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\int_{\sqrt{x^2+y^2}}^2 (x^2+y^2)dzdydx$.
+
+    $R$ is a circle with radius $r=2$, so the integral becomes $\int_0^{2\pi}\int_0^2 \int_r^2 r^2\cdot r dz dr d\theta$.
+
+    The integral evaluates to $\frac{16\pi}{5}$.
+\end{example}
+
+\pagebreak
+\begin{example}
+    Let $E$ be the region inside the sphere of radius $2$ centered at the origin and above the plane $z=1$. Find the volume of $E$.
+
+    THe equation of the sphere is $x^2+y^2+z^2=4$, so we have $z^2=4-r^2$.
+
+    The integral can be $V=\int_0^{2\pi} \int_0^{\sqrt{3}} \int_1^{\sqrt{4-r^2}} 1\cdot r dz dr d\theta$.
+
+    We have figure $D: x^2+y^2+z^2=4$ and $z=1$, so $x^2+y^2=3$.
+\end{example}
+
 
 \section{Triple Integrals in Spherical Coordinates}
+Spherical Coordinates: $(\rho, \theta, \phi)$, where $\rho$ is the distance from the origin to the point, $\theta$ represents the same as before (the angle on the $xy$-plane from the $x$-axis), and $\phi$ represents the angle between the positive $z$-axis and point.
+
+Bounds for $\rho,\theta$, and $\phi$:
+\begin{itemize}
+    \item $\rho\geq 0$
+    \item $0\leq \theta\leq 2\pi$
+    \item $0\leq \phi\leq \pi$
+\end{itemize}
+
+A few common graphs:
+\begin{itemize}
+    \item $\rho = c$ gives a sphere 
+    \item $\theta = c$ gives a ``half'' plane 
+    \item $\phi = c$ gives a cone ($0<c<\pi/2$ will give the top part)
+\end{itemize}
+
+Converting:
+\begin{itemize}
+    \item $x=\rho \sin\phi \cos\theta$
+    \item $y=\rho \sin\phi \sin\theta$
+    \item $z=\rho \cos\phi$
+\end{itemize}
+
+Also, $\rho^2 = x^2+y^2+z^2$.
+
+\begin{example}
+    Convert $\left(2,\frac{\pi}{4},\frac{\pi}{3}\right)$ to rectangular.
+
+    We know $x=\rho \sin\phi \cos\theta$, so $x=2\sin\frac{\pi}{3}\cos\frac{\pi}{4}=\sqrt{\frac{3}{2}}$.
+
+    $y=\rho\sin\phi\sin\theta$, so pluggin in gives $\sqrt{\frac{3}{2}}$.
+
+    $z=\rho\cos\phi = 2\cos\frac{\pi}{3}=1$.
+
+    The coordinates are $\left(\sqrt{\frac{3}{2}},\sqrt{\frac{3}{2}}, 1\right)$.
+\end{example}
+
+\pagebreak
+\begin{example}
+    Convert $(0,2\sqrt{3},-2)$ to spherical.
+
+    $\rho^2 = x^2+y^2+z^2$, so $\rho=4$.
+
+    $z=\rho\cos\phi$, and we can see that $\cos\phi = \frac{z}{\rho}$, so $\phi = \frac{2\pi}{3}$ or $\frac{4\pi}{3}$, but knowing the bounds for $\phi$ gives $\phi = \frac{2\pi}{3}$.
+
+    We know that $\cos\theta = \frac{x}{\rho\sin\phi}$, so $\cos\theta = 0$, and $\theta = \frac{\pi}{2}$ is the only $\theta$ that works in the $xy$-plane for this.
+
+    The point is $\left(4,\frac{\pi}{2},\frac{2\pi}{3}\right)$
+\end{example}
+
+Recall: $\iiint\limits_{E} f(x,y,z)dV = \lim_{n\to\infty}\sum_{k=1}^n f\left(x_{ijk}^*,y_{ijk}^*.z_{ijk}^*\right)\Delta V_k = \int_{\theta_1}^{\theta_2}\int_{\phi_1}^{\phi^2}\int_{\rho_1}^{\rho_2} f(\rho,\theta,\phi)\rho^2 \sin\phi d\rho d\phi d\theta$.
+
+\begin{example}
+    Evaluate $\iiint\limits_{B} e^{(x^2+y^2+z^2)^{\frac{3}{2}}}dz dy dx$ were $B$ is the unit sphere.
+
+    If try rectangular, we would find the limits of integration are messy.
+
+    So we use spherical.
+
+    The integral is $\int_0^{2\pi}\int_0^{\pi}\int_0^1 e^{(\rho^2)^{3/2}}\rho^2 \sin\phi d\rho d\phi d\theta$.
+
+    This is equal to $\int_0^{2\pi}\int_0^{\pi}\int_0^1 \rho^2 e^{\rho^3}\sin\phi d\rho d\phi d\theta$.
+
+    Integrating this fully gives $\frac{4\pi(e-1)}{3}$.
+\end{example}
+
+\begin{example}
+    Convert to spherical: $\int_{-2}^2 \int_{-\sqrt{4-x^2}}^{\sqrt{4-x^2}}\int_{0}^{\sqrt{4-x^2-y^2}}z^2 \sqrt{x^2+y^2+z^2}dzdydx$.
+
+    We can see that the whole inside part gives $(\rho\cos\phi)^2\cdot \rho \cdot \rho^2 \sin\phi d\rho d\phi d\theta$.
+
+    The most inner integrand is a hemisphere so bounds go from $0$ to $2$.
+
+    The second integrand is a circle so bounds go from $0$ to $\pi/2$.
+
+    The integral is $\int_0^{2\pi}\int_0^{\frac{\pi}{2}},\int_0^2 \rho^5 \cos^2\phi\sin\phi d\rho d\phi d\theta$.
+
+    The answer of this integral is $\frac{64}{9}\pi$.
+\end{example}
+
+
+\begin{example}
+    Find the volume of the ice cream cone bounded by $x^2+y^2+z^2=z$ and $z=\sqrt{x^2+y^2}$.
+
+    Remember $V=\iiint\limits_{E} 1\cdot dV$.
+
+    So the sphere equation can be rewritten as $x^2+y^2+\left(z-\frac{1}{2}\right)^2=\frac{1}{4}$.
+
+    So the center of the sphere is $\left(0,0,\frac{1}{2}\right)$ with $r=\frac{1}{2}$.
+
+    $\rho: x^2+y^2+z^2=z$, $\rho^2 = \rho\cos\phi$, $\rho=\cos\phi$.
+
+    $\phi: z=\sqrt{x^2+y^2}$, $\rho\cos\phi = \sqrt{\rho^2\sin^2\phi\cos^2\theta+\rho^2\sin^2\phi\sin^2\theta}$, so $\cos\phi = \sin\phi$, gives $\phi = \frac{\pi}{4}$.
+
+    So the integral becomes $V=\int_0^{2\pi}\int_0^{\pi/4}\int_0^{\cos\phi}1\cdot \rho^2 \sin\phi d\rho d\phi d\theta$.
+
+    Solving this integral gives $V=\frac{\pi}{8}$.
+\end{example}
+
+We can split a triple integral into 3 separate integrals when all the bounds are numbers, and functions are as products of functions.
+
 
 \section{Change of Variables in Multiple Integrals}
+\begin{example}
+    Let $T$ be the transformation from $uv$-plane to $xy$-plane defined by $x=\frac{1}{4}(u+v)$ and $y=\frac{1}{2}(u-v)$.
+
+    (a) Find $T(1,3)$.
+
+    $x=\frac{1}{4}(1+3)=1$ and doing the same gives $y=-1$, so $(1,-1)$.
+
+    (b) Sketch the image under $T$ bounded by $-2\leq u\leq 2$ and $-2\leq v\leq 2$.
+
+    The figure for $uv$-plane is a square centered at the origin with side lengths of $4$.
+
+    The plan to draw the image on the $xy$-plane is to sketch several $u$, $v$ curves and then you need to know $u$, $v$ in terms of $x$ and $y$.
+
+    $4x=u+v$ and $2y=u-v$, and this gives $4x+2y=2u$ and $u=2x+y$ as a result.
+
+    We can see $u=-2$ gives $y=-2x-2$, then $y=-2x-1$ when $u=-1$, and when $u=2$, $y=-2x+2$.
+    
+    Similarly, $v=2x-y$, and we see a pattern here as well.
+\end{example}
+
+In a way, it is easier to integrate over a different region like mapped above.
+
+\begin{definition}[Jacobian]
+    If $x=g(u,v)$ and $y=h(u,v)$, then the Jacobian of $x$ and $y$ with respect to $u$ and $v$ is: 
+    \[ \frac{\partial (x,y)}{\partial (u,v)}\begin{vmatrix}
+        \frac{\partial x}{\partial u}& \frac{\partial x}{\partial v} \\
+        \frac{\partial y}{\partial u}& \frac{\partial y}{\partial v}
+    \end{vmatrix} \]
+\end{definition}
+
+We use this to give us the extra factor when converting integrals.
+
+It is similar to converting in polar (or cylindrical), where you added $r$, or simliar to spherical when you added $\rho^2 \sin\phi$.
+
+So 
+\[ \iint\limits_{R} f(x,y)dA = \iint_S f(x(u,v),y(u,v))\left| \frac{\partial (x,y)}{\partial (u,v)}\right| du dv \]
+
+\begin{example}
+    Consider $x=r\cos\theta$ and $y=r\sin\theta$. Find the Jacobian.
+
+    The determinant of this will be $\begin{vmatrix}
+        \frac{\partial x}{\partial r} & \frac{\partial x}{\partial \theta}\\
+        \frac{\partial y}{\partial r} & \frac{\partial y}{\partial \theta}
+    \end{vmatrix} = \begin{vmatrix}
+        \cos\theta & -r\sin\theta \\ \sin\theta & r\cos\theta
+    \end{vmatrix} = r^2\cos^2\theta + r\sin^2\theta = r$
+\end{example}
+
+\pagebreak
+\begin{example}
+    Evaluate $\iint\limits_{R} 3xydA$ where $R$ is bounded by $x-2y=0$, $x-2y=-4$, $x+y=4$, and $x+y=1$.
+
+    We let $u=x-2y$, $v=x+y$, so $u=0,-4$ and $v=4,1$. The region of this is rectangular, much easier to solve than if you were to do it based on $y$.
+
+    For change of variables, first you need to find the Jacobian.
+
+    We need $x(u,v)$ and $y(u,v)$.
+
+    So we have $y=\frac{1}{3}(v-u)$ and $x=\frac{1}{3}(u+2v)$ from the values of $u$ and $v$.
+
+    The jacobian is then $\begin{vmatrix}
+        \frac{1}{3} & \frac{2}{3} \\ -\frac{1}{3} & \frac{1}{3}
+    \end{vmatrix} = \frac{1}{3}$.
+
+    Then we have to do change of variables in the integral.
+
+    So the integral is $\int_1^4 \int_{-4}^0 3\left(\frac{1}{3}(u+2v)\right)\left(\frac{1}{3}(v-u)\right)\cdot \left|\frac{1}{3}\right|du dv$.
+
+    This integral results in $\frac{164}{9}$.
+\end{example}
+
+Now for $3$ variables.
+
+\begin{example}
+    Find the Jacobian of $x=\rho\sin\phi \cos\theta$, $y=x=\rho\sin\phi\sin\theta$, and $z=\rho\cos\phi$.
+
+    The Jacobian becomes $\begin{vmatrix}
+        \sin\phi \cos\theta & \rho\cos\phi\cos\theta & -\rho\sin\phi\sin\theta \\
+        \sin\phi\sin\theta & \rho\cos\phi\sin\theta & \rho\sin\phi\cos\theta \\
+        \cos\phi & -\rho\sin\phi & 0
+    \end{vmatrix}$
+
+    From this, we get and doing some simplifications gives you the determinant of this, which is $\rho^2\sin\phi$.
+\end{example}
 
 \end{document}

@@ -1,0 +1,65 @@
+\documentclass[../discrete.tex]{subfiles}
+\graphicspath{{\subfix{../figures/}}}
+\begin{document}
+\chapter{Speaking Mathematically}
+This chapter will contain 1.1-1.4 from the textbook.
+
+The topics included are Variables, The Language of Sets, The Language of Relations and Functions, and The Language of Graphs.
+
+A variable is a placeholder to talk about something, it has unknown value.
+
+Universal Statement: a property that is true for all elements in a set.
+
+Conditional Statement: If one thing is true, then some other thing is true.
+
+Existential Statement: There is at least one thing for which a property is true.
+
+These can be combined.
+
+A set is a collection of elements.
+
+Notation, $x\in S$ can be said as $x$ is an element of $S$. $x\notin S$ is said as $x$ is not an element in $S$.
+
+Axiom of extension: a set is completely determined by what its elements are, not the order in which the elements are listed or if the elements are listed more than once.
+
+$\mathbb{R}$ is the set of all real numbers, $\mathbb{Z}$ is the set of all integers, $\mathbb{Q}$ is the set of all rational numbers. If the superscript has a $+$ or a $-$ or something similar, it would mean positive/negative. nonneg superscript includes $0$.
+
+The set of all integers is discrete, because they are not continuous like the real number line.
+
+Subset: $A\subseteq B$ iff every element in $A$ is an element in $B$, or if $x\in A$, then $x\in B$.
+
+$A\nsubseteq B$ means there is an element $x$ such that $x\in A$, but $x\notin B$.
+
+A proper subset is if every element in $A$ is in $B$ and there iat at least one element in $B$ that is not in $A$ given two sets $A$ and $B$.
+
+An ordered pair is a set $\{ \{a\}, \{a,b\}\}$. $a\neq b$ means that the sets are distinct so $a$ is the first element and $b$ is the second element. If $a=b$, then the set becomes $\{\{a\}\}$. Ordered pairs are written as $(a,b)$.
+
+$(a,b)=(c,d)$ if $a=c$ and $b=d$.
+
+An ordered $n$-tuple is $(x_1,x_2,\dots,x_n)$ where each of these are not necessarily distinct elements. In general, $x_1=y_1, x_2=y_2,\dots,x_n=y_n\implies (x_1,x_2,\dots,x_n)=(y_1,y_2,\dots,y_n)$.
+
+The Cartesian Product of sets $A_1\times A_2\times \dots \times A_n$ is the set of all $n$-tuples $(a_1,a_2,\dots,a_n)$ where $a_1\in A_1, a_2\in A_2, \dots a_n\in A_n$. 
+
+Basically, $A_1\times A_2 = \{ (a_1,a_2)|a_1\in A_1$ and $a_2\in A_2\}$, which can be generalized to set $A_n$.
+
+A string of length $n$ over set $A$ is an $n$-tuple without paranthesis or commas. The elements are called characters. A no character string is denoted as a null string ($\lambda$).
+
+A relation $R$ from $A$ to $B$ is a subset of $A\times B$. Given $(x,y)\in A\times B$, $x$ is related to $y$ by $R$ by relation $x R y$ iff $(x,y)\in R$. $A$ is the domain and $B$ is the codomain.
+
+In arrow diagrams, an arrow from $x$ to $y$ means $xRy$ or $(x,y)\in R$.
+
+A function $F$ from a set $A$ to set $B$ is a relationship with domain $A$ and codomain $B$ that will satisfy the two conditions:
+\begin{enumerate}
+    \item For every element $x$ in $A$, there is a $y$ in set $B$ such that $(x,y)\in F$ (basically all elements of $x$ are related to an element in $B$, not necessarily the other way around)
+    \item For all elements in $x$ in $A$ and $y$ and $z$ in $B$, if $(x,y)\in F$ and $(x,z)\in F$, then $y=z$. (Basically, $x$ cannot have two codomains, it is one-to-one.)
+\end{enumerate}
+
+An edge connects endpoints. A loop is an edge that connects one vertex to itself. Two edges are parallel if the two edges connect to the same vertices.
+
+Two edges that are incident on the same endpoint are called adjacent. A vertex with no edges is called isolated.
+
+A directed graph uses arrows as the edges, they go in a direction kind of. Instead of the edge being associated with a vertex $v$, it is associated with a ordered pair $(v,w)$ as a vertex.
+
+The degree of a vertex is the number of edges that are incident on $v$, with loops being counted twice.
+
+\end{document}

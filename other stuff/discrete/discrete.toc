@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {1}Speaking Mathematically}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}The Logic of Compound Statements}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}The Logic of Quantified Statements}{4}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Elementary Number Theory and Methods of Proof}{5}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Sequences, Mathematical Induction, and Recursion}{6}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Set Theory}{7}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Properties of Functions}{8}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Properties of Relations}{9}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Counting and Probability}{10}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Theory of Graphs and Trees}{11}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Analysis of Algorithm Efficiency}{12}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Regular Expressions and Finite-State Automata}{13}{chapter.12}%

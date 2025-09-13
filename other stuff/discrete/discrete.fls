@@ -1,22 +1,15 @@
-PWD c:\Users\augus\Documents\GitHub\site\Notes\calc3
+PWD c:\Users\augus\Documents\GitHub\site\other stuff\discrete
 INPUT C:\Users\augus\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.tex
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.log
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.cls
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.cls
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\import\import.sty
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\import\import.sty
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\..\calc3.tex
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\..\calc3.tex
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\calc3.tex
+INPUT c:\Users\augus\Documents\GitHub\site\other stuff\discrete\discrete.tex
+OUTPUT discrete.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\book.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\bk10.clo
 INPUT C:\Program Files\MiKTeX\tex\latex\base\bk10.clo
 INPUT C:\Program Files\MiKTeX\tex\latex\base\bk10.clo
-INPUT ..\Templates\jointPreamble.tex
-INPUT ..\Templates\jointPreamble.tex
-INPUT ..\Templates\jointPreamble.tex
+INPUT ..\templates\jointPreamble.tex
+INPUT ..\templates\jointPreamble.tex
+INPUT ..\templates\jointPreamble.tex
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
@@ -213,9 +206,9 @@ INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzl
 INPUT C:\Program Files\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\asymptote\asymptote.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\asymptote\asymptote.sty
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pre
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pre
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pre
+INPUT .\discrete.pre
+INPUT .\discrete.pre
+INPUT discrete.pre
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
@@ -229,7 +222,7 @@ INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\infwarerr\infwarerr.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\etexcmds\etexcmds.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\generic\etexcmds\etexcmds.sty
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pre
+OUTPUT discrete.pre
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\mdframed\mdframed.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\mdframed\mdframed.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
@@ -291,11 +284,13 @@ INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.sty
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\subfiles\subfiles.sty
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\import\import.sty
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\import\import.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss10.tfm
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux
+INPUT .\discrete.aux
+INPUT .\discrete.aux
+INPUT discrete.aux
+OUTPUT discrete.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -304,71 +299,153 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.pdf
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-OUTPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
+INPUT .\discrete.out
+INPUT .\discrete.out
+INPUT discrete.out
+INPUT discrete.out
+OUTPUT discrete.pdf
+INPUT .\discrete.out
+INPUT .\discrete.out
+OUTPUT discrete.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm7.tfm
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
+INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss17.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT .\discrete.toc
+INPUT .\discrete.toc
+INPUT discrete.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\euler\eurm5.tfm
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
-INPUT C:\Users\augus\AppData\Roaming\MiKTeX\tex\latex\esint\uesint.fd
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
 INPUT C:\Users\augus\AppData\Roaming\MiKTeX\fonts\tfm\public\esint\esint10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssbx10.tfm
-INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmssi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcss1000.tfm
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.aux
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT c:\Users\augus\Documents\GitHub\site\Notes\calc3\chapters\ch4.out
-INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcss1000.pk
-INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcss1000.pk
-INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
-INPUT C:\Users\augus\AppData\Local\MiKTeX\fonts\pk\ljfour\public\esint\dpi600\esint10.pk
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+OUTPUT discrete.toc
+INPUT .\chapters\ch1.tex
+INPUT .\chapters\ch1.tex
+INPUT chapters\ch1.tex
+INPUT .\chapters\ch1.tex
+INPUT .\chapters\ch1.tex
+INPUT chapters\ch1.tex
+INPUT .\chapters\ch2.tex
+INPUT .\chapters\ch2.tex
+INPUT chapters\ch2.tex
+INPUT .\chapters\ch2.tex
+INPUT .\chapters\ch2.tex
+INPUT chapters\ch2.tex
+INPUT .\chapters\ch3.tex
+INPUT .\chapters\ch3.tex
+INPUT chapters\ch3.tex
+INPUT .\chapters\ch3.tex
+INPUT .\chapters\ch3.tex
+INPUT chapters\ch3.tex
+INPUT .\chapters\ch4.tex
+INPUT .\chapters\ch4.tex
+INPUT chapters\ch4.tex
+INPUT .\chapters\ch4.tex
+INPUT .\chapters\ch4.tex
+INPUT chapters\ch4.tex
+INPUT .\chapters\ch5.tex
+INPUT .\chapters\ch5.tex
+INPUT chapters\ch5.tex
+INPUT .\chapters\ch5.tex
+INPUT .\chapters\ch5.tex
+INPUT chapters\ch5.tex
+INPUT .\chapters\ch6.tex
+INPUT .\chapters\ch6.tex
+INPUT chapters\ch6.tex
+INPUT .\chapters\ch6.tex
+INPUT .\chapters\ch6.tex
+INPUT chapters\ch6.tex
+INPUT .\chapters\ch7.tex
+INPUT .\chapters\ch7.tex
+INPUT chapters\ch7.tex
+INPUT .\chapters\ch7.tex
+INPUT .\chapters\ch7.tex
+INPUT chapters\ch7.tex
+INPUT .\chapters\ch8.tex
+INPUT .\chapters\ch8.tex
+INPUT chapters\ch8.tex
+INPUT .\chapters\ch8.tex
+INPUT .\chapters\ch8.tex
+INPUT chapters\ch8.tex
+INPUT .\chapters\ch9.tex
+INPUT .\chapters\ch9.tex
+INPUT chapters\ch9.tex
+INPUT .\chapters\ch9.tex
+INPUT .\chapters\ch9.tex
+INPUT chapters\ch9.tex
+INPUT .\chapters\ch10.tex
+INPUT .\chapters\ch10.tex
+INPUT chapters\ch10.tex
+INPUT .\chapters\ch10.tex
+INPUT .\chapters\ch10.tex
+INPUT chapters\ch10.tex
+INPUT .\chapters\ch11.tex
+INPUT .\chapters\ch11.tex
+INPUT chapters\ch11.tex
+INPUT .\chapters\ch11.tex
+INPUT .\chapters\ch11.tex
+INPUT chapters\ch11.tex
+INPUT .\chapters\ch12.tex
+INPUT .\chapters\ch12.tex
+INPUT chapters\ch12.tex
+INPUT .\chapters\ch12.tex
+INPUT .\chapters\ch12.tex
+INPUT chapters\ch12.tex
+INPUT discrete.aux
+INPUT .\discrete.out
+INPUT .\discrete.out
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr5.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmss17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
