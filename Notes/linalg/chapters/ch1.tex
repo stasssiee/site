@@ -104,374 +104,270 @@ Two fundamental equations about a linear system are as follos:
 \end{example}
 
 \section{Row Reduction and Echelon Forms}
-Leading entry of a row: the first (counting from left to right) non-zero entry (in a nonzero row)
+In the definitions that follow, a nonzero row or column in a matrix means a row or column that contains at least one nonzero entry; a leading entry of a row refers to the leftmost nonzero entry (in a nonzero row).
 
-Echelon Form: upper right-hand stair-case, triangle 
+A rectangular matrix is in echelon form (or row echelon form) if it has the following three properties:
 \begin{enumerate}
-    \item all rows that consist entirely of zeros are grouped together at the bottom of the matrix 
-    \item the first (counting from left to right) non-zero entry in the $(i+1)$st row must appear in a column to the right of the first non-zero entry in the $i$th row.
-    \item all entries in a column below a leading entry are zeros 
+    \item All nonzero rows are above any rows of all zeros.
+    \item Each leading entry of a row is in a column to the right of the leading entry of the row above it.
+    \item All entries in a column below a leading entry are zeros.
 \end{enumerate}
 
-Reduced Echelon Form: an echelon Form matrix that also has the following properties:
+If a matrix in echelon form satisfies the following additional conditions, then it is in reduced echelon form (or reduced row echelon form):
 \begin{enumerate}
-    \item the leading entry in each nonzero row is 1 
-    \item each leading one is the only nonzero entry in its column
+    \item The leading entry in each nonzero row is $1$.
+    \item Each leading $1$ is the only nonzero entry in its column.
 \end{enumerate}
 
-A pivot point: a location in a matrix $A$ that corresponds to a leading 1 in a reduced echelon form of $A$. A pivot column is a column of $A$ that contains a pivot position.
+An echelon matrix (respectively, reduced echelon matrix) is one that is in echelon form (respectively, reduced echelon form.)
 
-Steps to solving a system of linear equations:
-\begin{enumerate}
-    \item begin with the leftmost nonzero column. This is the pivot column, the pivot position is at the top.
-    \item select a non zero entry in the pivot column as a pivot. If necessary, interchange rows to move this entry into the pivot position.
-    \item Use row replacement operations to create zeros in all positions below the pivot.
-    \item Cover (or ignore) the row containing the pivot position and cover all rows (if any) above it. Apply previous steps to the sub matrix that remains. Repeat until there are no more nonzero rows to modify.
-    \item Beginning with the rightomst pivot, create zeros above each pivot. Make each pivot equal to 1 by scaling.
-\end{enumerate}
+Any nonzero matrix may be row reduced (i.e., transformed by elementary row operations) into more than one matrix in echelon form, using different sequences of row operations. However, the reduced echelon form one obtains from a matrix is unique.
+
+\begin{theorem}[Uniqueness of the Reduced Echelon Form]
+    Each matrix is row equivalent to one and only one reduced echelon matrix.
+\end{theorem}
+
+If a matrix $A$ is row equivalent to an echelon matrix $U$, we call $U$ an echelon form (or row echelon form) of $A$; if $U$ is in reduced echelon form, we call $U$ the reduced echelon form of $A$.
+
+A pivot position in a matrix $A$ is a location in $A$ that corresponds to a leading $1$ in the reduced echelon form of $A$. A pivot column is a column of $A$ that contains a pivot position.
 
 \begin{example}
-    Determine the existence and uniqueness of the solution to 
+    Row reduce the matrix $A$ below to echelon form, and locate the pivot columns of $A$.
+    \[ \begin{bmatrix}
+        0 & -3 & -6 & 4 & 9\\
+        -1 & -2 & -1 & 3 & 1\\
+        -2 & -3 & 0 & 3 &-1\\
+        1&4&5&-9&-7
+    \end{bmatrix} \]
 
-    \begin{align*}
-    3x_2-6x_3+6x_4+4x_5=-5\\ 
-    3x_1-7x_2+8x_3-5x_4+8x_5 = 9\\
-    3x_1-9x_2+12x_3-9x_4+6x_5=15
-    \end{align*}
+    The following row operations will give the matrix:
+    \begin{itemize}
+        \item $R_1 \leftrightarrow R_4$
+        \item $R_1 + R_2 \rightarrow R_2$ and $2R_1+R_3\rightarrow R_3$
+        \item $\frac{1}{2}R_2\rightarrow R_2$ and $\frac{1}{5}R_3 \rightarrow R_3$
+        \item $-R_2+R_3\rightarrow R_3$ and $3R_2+R_4\rightarrow R_4$
+        \item $R_3\leftrightarrow R_4$
+    \end{itemize}
 
-    We can find that $x_5=4$ , and $x_3,x_4$ are of infinite number of solutions. 
-\end{example}
-
-\begin{example}
-    Find the general solution of the linear system whose augmented matrix has been reduced to 
-    $\begin{bmatrix}
-        1 & 6 & 2 & -5 & -2 & -4 \\
-        0 & 0 & 2 & -8 & -1 & 3 \\
-        0 & 0 & 0 & 0& 1 & 7
+    The resulting matrix is $\begin{bmatrix}
+        1 & 4 & 5 & -9 & -7\\
+        0 & 1 & 2 & -3 & -3\\
+        0 & 0 & 0 & -8 & 0\\
+        0 & 0 & 0 & 0 & 0
     \end{bmatrix}$
-
-    We have that $x_5=7$, $x_3=1/2(3+8x_4+7)$ and $x_1=-4-6x_2-2(1/2)(3+8x_4+7)+14$
 \end{example}
 
-\begin{theorem}[Existence and Uniqueness]
-    A linear system is consistent if and only if the right most column of the augmented matrix is not a pivot column, that is if and only if an echelon form of the augmented matrix 
-    has no row of the form $[0,\dots, 0 b]$ with $b$ nonzero. If the system if consistent in the solution contains either a unique solution when there are no free variables or infinitely many solutions when there is at least one free variable.
+Row Reduction Algorithm:
+
+Step 1: Begin with the leftmost nonzero column. This is a pivot column. The pivot position is at the top.
+
+Step 2: Select a nonzero entry in the pivot column as a pivot. If necessary, interchange rows to move this entry into the pivot position.
+
+Step 3: Use row replacement operations to create zeros in all positions below the pivot.
+
+Step 4: Cover (or ignore) the row containing the pivot position and cover all rows, if any, above it. Apply steps 1-3 to the submatrix that remains. Repeat the process until there are no more nonzero rows to modify. 
+
+Step 5: Beginning with the rightmost pivot and working upward and to the left, create zeros above each pivot. If a pivot is not $1$, make it $1$ by a scaling operation.
+
+The combination of steps 1-4 is called the forward phase of the row reducing algorithm. Step 5, which produces the unique reduced echelon form, is called the backward phase.
+
+\begin{example}
+    Apply elementary row operations to transform the following matrix first into echelon form and then into reduced echelon form.
+
+    Do the following row operations:
+    \begin{itemize}
+        \item $R_1\leftrightarrow R_3$
+        \item $-R_1+R_2\rightarrow R_2$
+        \item $\frac{1}{2}R_2\rightarrow R_2$
+        \item $-3R_2+R_3\rightarrow R_3$
+        \item $-6R_3+R_1\rightarrow R_1$ and $-R_3+R_2\rightarrow R_2$
+        \item $9R_2+R_1\rightarrow R_1$
+        \item $\frac{1}{3}R_1\rightarrow R_1$
+    \end{itemize}
+    
+    The matrix that results is $\begin{bmatrix}
+        1&0&-2&3&0&-24\\
+        0&1&-2&2&0&-7\\
+        0&0&0&0&1&4
+    \end{bmatrix}$
+\end{example}
+
+The row reduction algorithm leads to an explicit description of the solution set of a linear system when the algorithm is applied to the augmented matrix of the system.
+
+Suppose, for example, the augmented matrix of a linear system has been changed into the equivalent reduced echelon form.
+\[ \begin{bmatrix}
+    1&0&-5&1\\
+    0&1&1&4\\
+    0&0&0&0
+\end{bmatrix}\]
+
+The variables $x_1$ and $x_2$ corresponding to pivot columns in the matrix are called basic variables. The other variable, $x_3$ is called a free variable.
+
+\begin{theorem}[Existence and Uniqueness Theorem]
+    A linear system is consistent if and only if the rightmost column of the augmented matrix is not a pivot column - i.e., if and only if an echelon form of the augmented matrix has no row of the form 
+    \begin{center}
+        $\begin{bmatrix}
+            0&\dots & 0 & b
+        \end{bmatrix}$ with $b$ nonzero.
+    \end{center}
+    If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
 \end{theorem}
 
 \section{Vector Equations}
-Vectors in $\textbf{R}^2$: a matrix with only 1 column is called a vector. The set of all vectors with 2 entries is $\textbf{R}^2$
+Vectors in $\mathbb{R}^2$:
+\begin{itemize}
+    \item A matrix with only one column is called a column vector, or simply a vector.
+    \item An example of a vector with two entries is
+    \[ W = \begin{bmatrix}
+        w_1\\w_2
+    \end{bmatrix}\]
+    where $w_1$ and $w_2$ are any real numbers.
+    \item The set of all vectors with two entries is denoted by $\mathbb{R}^2$ (read ``$r$-two'')
+\end{itemize}
 
-$\vec{u}=\begin{bmatrix}3\\ -1\end{bmatrix}$ for example.
-
-The vectors are odered pairs of real numbers:
-
-$\vec{u}_1=\begin{bmatrix}
-    3\\-1
-\end{bmatrix}=(3,-1)\neq (-1,3)=\begin{bmatrix}
-    -1\\3
-\end{bmatrix}$
-
-Vector addition: $(x_1,y_1)+(x_2,y_2)=(x_1+x_2,y_1+y_2)$
-
-Geometric interpretation: parallelogram law.
-
-$(2,4)+(3,1)=(2+3,4+1)=(5,5)$. We can create a parallelogram (google for review).
-
-Let's say we subtract, $-a$ has the same magnitude as $a$ but points in the opposite direction in this case. $(1,3)-(2,1)=(-1,2)$. Drawing the line from the origin to the tip of the vectors give you what you get algebraically.
-
-Vector multiplication: scalar multiplication: $a(x,y)=(ax,ay)$ where $a$ is a scalar.
-
-Geometric interpretation: $a(x,y,z)$ points in the same direction as $(x,y,z)$ but is scaled by a factor of $a$.
+\begin{itemize}
+    \item The $\mathbb{R}$ stands for the real numbers that appear as entries in the vector, and the exponent $2$ indicates that each vector contains two entries.
+    \item Two vectors in $\mathbb{R}^2$ are equal if and only f their corresponding entries are equal.
+    \item Given two vectors $\vec{u}$ and $\vec{v}$ in $\mathbb{R}^2$, their sum is the vector $\vec{u}+\vec{v}$ obtained by adding corresponding entries of $\vec{u}$ and $\vec{v}$.
+    \item Given a vector $\vec{u}$ and a real number $c$, the scalar multiple of $\vec{u}$ by $c$ is the vector $c\vec{u}$ obtained by multiplying each entry in $\vec{u}$ by $c$.
+\end{itemize}
 
 \begin{example}
-    Let $\vec{u}=\begin{bmatrix}
-        1\\ -2
-    \end{bmatrix}$ and $\vec{v} = \begin{bmatrix}
+    Given $u=\begin{bmatrix}
+        1\\-2
+    \end{bmatrix}$ and $v=\begin{bmatrix}
         2\\-5
-    \end{bmatrix}$ Find $4\vec{u}$, $-3\vec{v}$ and $4\vec{u}+(-3)\vec{v}$/
+    \end{bmatrix}$, find 
 
-    $4\vec{u}=(4,-8)$, $-3\vec{v}=(-6,15)$ and $4\vec{u}+(-3)\vec{v}=(-2,7)$
+    (a) $4\vec{u}$
+
+    $4\vec{u}=4\begin{bmatrix}
+        1\\-2
+    \end{bmatrix}=\begin{bmatrix}
+        4\\-8
+    \end{bmatrix}$
+
+    (b) $(-3)\vec{v}$
+
+    $(-3)\begin{bmatrix}
+        2\\-5
+    \end{bmatrix}=\begin{bmatrix}
+        -6\\15
+    \end{bmatrix}$
+
+    (c) $4\vec{u}+(-3)\vec{v}$
+
+    $\begin{bmatrix}
+        4\\-8
+    \end{bmatrix}+\begin{bmatrix}
+        -6\\15
+    \end{bmatrix}=\begin{bmatrix}
+        -2&7
+    \end{bmatrix}$
 \end{example}
 
-Vectors start at the origin and have magnitude and direction.
-
-Representing vectors in $\textbf{R}^3$. We add the $z$-axis.
-
-Vectors in $\textbf{R}^n$ we have that $\vec{u}=\begin{bmatrix}
-    u_1\\ u_2 \\ \vdots \\u_n 
-\end{bmatrix}=(u_1,u_2,\dots,u_n)$ where $u_1,u_2,\dots \in \mathbb{R}$.
-
-The $\vec{0}=\begin{bmatrix}
-    0\\0\\ \vdots\\0
-\end{bmatrix}$ is the zero vector.
-
-Algebratic Properties of $\textbf{R}^n$: for all $\textbf{u}, \textbf{v}, \textbf{w}$ in $\textbf{R}^n$ and all scalars $c$ and $d$:
 \begin{itemize}
-    \item $\textbf{u}+\textbf{v}=\textbf{v}+\textbf{u}$
-    \item $(\textbf{u}+\textbf{v})+\textbf{w}=\textbf{u}+(\textbf{v}+\textbf{w})$
-    \item $\textbf{u}+0=0+\textbf{u}=\textbf{u}$
-    \item $\textbf{u}+(-\textbf{u})=0$
-    \item $c(\textbf{u}+\textbf{v})=c\textbf{u}+c\textbf{v}$
-    \item $(c+d)\textbf{u}=c\textbf{u}+d\textbf{u}$
-    \item $c(d\textbf{u})=(cd)\textbf{u}$
-    \item $1\textbf{u}=\textbf{u}$
+    \item Consider a rectangular coordinate system in the plane. Because each point in the plane is determined by an ordered pair of numbers, we can identify a geometric point $(a,b)$ with the column vector $\begin{bmatrix}
+        a\\b
+    \end{bmatrix}$
+    \item So we may regard $\mathbb{R}^2$ as the set of all points in the plane.
 \end{itemize}
 
-Linear Combinations: given vectors $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p$ in $\textbf{R}^n$ and scalars 
-$c_1,c_2,\dots, c_p$, the vector $\textbf{y}=c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_p\textbf{v}_p$ is called a linear combination of 
-$\textbf{v}_1,\textbf{v}_2,\dots \textbf{v}_p$ with weights $c_1,c_2,\dots, c_p$.
+If $\vec{u}$ and $\vec{v}$ in $\mathbb{R}^2$ are represented as points in the plane, then $\vec{u}+\vec{v}$ corresponds to the fourth vertex of the parallelogram whose other vertices are $\vec{u}, \vec{0}$ and $\vec{v}$.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{1.1.PNG}
+\end{center}
 
-For example, if we have $3^{1/2}\textbf{v}_1+\textbf{v}_2$ this can be written as $\vec{y}=\sqrt{3}\vec{v_1}+\vec{v_2}$ with $c_1=\sqrt{3}$ and $c_2=1$.
+\begin{itemize}
+    \item Vectors in $\mathbb{R}^3$ are $3\times 1$ column matrices with three entries.
+    \item They are represented geometrically by points in a three-dimensional coordinate space, with arrows from the origin sometimes included for visual clarity.
+    \item If $n$ is a positive integer, $\mathbb{R}^n$ (read ``$r$-$n$'') denotes the collection of all lists (or ordered $n$-tuples) of $n$ real numbers, usually written as $n\times 1$ column matrices, such as 
+\end{itemize}
+\[ u = \begin{bmatrix}
+    u_1 \\ u_2 \\ \vdots \\ u_n
+\end{bmatrix}\]
+
+The vector whose entries are all zero is called the zero vector and is denoted by $\vec{0}$.
+
+For all $\vec{u}$, $\vec{v}$, $\vec{w}$ in $\mathbb{R}^n$ and all scalars $c$ and $d$:
+\begin{enumerate}
+    \item $\vec{u}+\vec{v}=\vec{v}+\vec{u}$
+    \item $(\vec{u}+\vec{v})+\vec{w}=\vec{u}+(\vec{v}+\vec{w})$
+    \item $\vec{u}+\vec{0}=\vec{0}+\vec{u}=\vec{u}$
+    \item $\vec{u}+(-\vec{u})=-\vec{u}+\vec{u}=\vec{0}$, where $-\vec{u}$ denotes $(-1)\vec{u}$
+    \item $c(\vec{u}+\vec{v})=c\vec{u}+c\vec{v}$
+    \item $(c+d)\vec{u}=c\vec{u}+d\vec{u}$
+    \item $c(d\vec{u})=(cd)(\vec{u})$
+    \item $1\vec{u}=\vec{u}$
+\end{enumerate}
+
+Given vectors $\vec{v_1}, \vec{v_2},\dots,\vec{v_p}$ in $\mathbb{R}^n$ and given scalars $c_1, c_2,\dots,c_p$, the vector $\vec{y}$ is defined by 
+\[ \vec{y}=c_1\vec{v_1}+\dots +c_p\vec{v_p}\]
+is called a linear combination of $\vec{v_1},\dots,\vec{v_p}$ with weights $c_1,\dots,c_p$.
+
+The weights in a linear combination can be any real numbers, including zero.
 
 \begin{example}
-    If $\vec{a_1}=(1,-2,-5), \vec{a_2}=(2,5,6)$, and $\vec{a_3}=(7,4,-3)$ then determine if $\vec{b}$ can be written as a linear combination of $\vec{a_1}$ and $\vec{a_2}$. That is determine if there exists weights $x_1,x_2$ such that $x_1\vec{a_1}+x_2\vec{a_2}=\vec{b}$.
+    Let $a_1=\begin{bmatrix}
+        1\\-2\\-5
+    \end{bmatrix}, a_2=\begin{bmatrix}
+        2\\5\\6
+    \end{bmatrix}$ and $b=\begin{bmatrix}
+        7\\4\\-3
+    \end{bmatrix}$. Determine whether $\vec{b}$ can be generated (or written) as a linear combination of $\vec{a_1}$ and $\vec{a_2}$. That is, determine whether weights $x_1$ and $x_2$ exist such that 
+    \[ x_1a_1 + x_2a_2 = b \]
 
-    Using elementary row operations, we can determine that $x_1=3$, $x_2=2$ which is the linear combination of $\vec{a_1}$ and $\vec{a_2}$.
+    Using matrix operations, we get that $x_1\begin{bmatrix}
+        -1\\-2\\-5
+    \end{bmatrix}+x_2\begin{bmatrix}
+        2\\5\\6
+    \end{bmatrix}=\begin{bmatrix}
+        7\\4\\-3
+    \end{bmatrix}$
 
-\end{example}
+    This is written as $\begin{bmatrix}
+        x_1\\-2x_1\\-5x_1
+    \end{bmatrix}+\begin{bmatrix}
+        2x_2\\5x_2\\6x_2
+    \end{bmatrix}=\begin{bmatrix}
+        7\\4\\3
+    \end{bmatrix}$.
 
-A vector equation $x_1\textbf{a}_1+x_2\textbf{a}_2+\dots x_n\textbf{x}_n=\textbf{b}$ has the same solution set as the linear system with augmented matrix 
-$[\textbf{a}_1 \textbf{a}_2 \dots \textbf{a}_n \textbf{b}]$. In particular $\textbf{b}$ can be generated by a linear combination of $\textbf{a}_1,\textbf{a}_2,\dots\textbf{a}_n$ if and only if there exists a solution to the linear system corresponding to the matrix $[\textbf{a}_1 \textbf{a}_2 \dots \textbf{a}_n \textbf{b}]$
+    This can be written as a system of equations.
 
-Span: if $\textbf{v}_1,\textbf{v}_2,\dots \textbf{v}_p$ are in $\textbf{R}^n$ then the set of all linear combinations of $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p$ is denoted Span$\{\textbf{v}_1,\textbf{v}_2\dots\textbf{v}_p\}$ and is called the subset of 
-$\textbf{R}^n$ spanned by $\textbf{v}_1,\textbf{v}_2,\dots \textbf{v}_p$. That is, Span$\{\textbf{v}_1,\textbf{v}_2\dots\textbf{v}_n\}$ is the collection of all vectors 
-that can be written in the form: $c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_p\textbf{v}_p$ with $c_1,c_2,\dots,c_p$ scalars.
-
-Asking if a vector $\textbf{b}$ is in Span$\{\textbf{v}_1,\textbf{v}_2\dots\textbf{v}_p\}$ amounts to asking whether the vector equation $x_1\textbf{v}_1+x_2\textbf{v}_2+\dots +x_n\textbf{v}_p=\textbf{b}$ has a solution,
-or equivalently whether the linear system with augmented matrix $[\textbf{v}_1 \textbf{v}_2 \textbf{v}_p \textbf{b}]$ has a solution.
-
-Note Span$\{\textbf{v}_1,\textbf{v}_2\dots\textbf{v}_p\}$ contains every scalar multiple of $\textbf{v}_1$. 
-
-The span of a single vector is a line. The span of 2 linearly independent vectors is a plane (not scalar multiples of each other). 
-
-\section{The Matrix Equation Ax = b}
-The Matrix Equation: if $A$ is an $m\times n$ matrix with columns, $\textbf{a}_1,\textbf{a}_2,\dots,\textbf{a}_n$ and if $\textbf{x}$ is in $\textbf{R}^n$, then the product of $A$ 
-and $\textbf{x}$ denoted $A\textbf{x}$ is the linear combination of the columns of $A$ using the corresponding entries in $\textbf{x}$ as weights.
-
-Note: $\textbf{A}x$ is defined only if the number of columns of $A$ equals the numbers of entries in $x$.
-
-For example: $\begin{bmatrix}
-    1 & 2 & -1 \\
-    0 & -5 & 3
-\end{bmatrix} \begin{bmatrix}
-    4 \\ 3 \\ 7
-\end{bmatrix} = 4(1,0)+3(2,-5)+7(-1,3)=(3,6)$
-
-\begin{theorem}[Matrix Equation, Vector Equation, System of Linear Equations]
-    If $A$ is an $m\times n$ matrix, with columns, $\textbf{a}_1,\textbf{a}_2,\dots,\textbf{a}_n$ and if $\textbf{b}$ is in $\textbf{R}^m$, the matrix equation 
-    $A\textbf{x}=\textbf{b}$ has the same solution as the vector equation $x_1\textbf{a}_1+x_2\textbf{a}_2+\dots+x_n\textbf{a}_n=\textbf{b}$ which in turn has the same solution 
-    as the system of linear equations represented by the augmented matrix $[\textbf{a}_1 \textbf{a}_2\dots \textbf{a}_n \textbf{b}]$.
-\end{theorem}
-
-Existence of Solutions: the equation $A\textbf{x}=\textbf{b}$ has a solution if and only if $\textbf{b}$ is a linear combination of the columns of $A$.
-
-\begin{example}
-    Is $A=\begin{bmatrix}
-        1 & 3 & 4 \\ 
-        -4 & 2 & -6 \\ 
-        -3 & -2 & 7
-    \end{bmatrix} \vec{b}=\begin{bmatrix}
-        b_1 \\ b_2 \\ b_3
-    \end{bmatrix}$ Is the equation $A\vec{x}=\vec{b}$ consistent for all $\vec{b}$. Using rref, we get that $0=-2b_1+b_2-2b_3$, so it is not consistent for every $\vec{b}$. It is only consistent if $b_2=2b_1+2b_3$.
-
-So let $\vec{b}=(1,4,1)$ and then do rref again and we get that $x_3$ is free, $x_2=1/7(4-5x_3)$ and $x_1=1-3(x_2)-4x_3$ and this basically gives us $(1,4,1)$ too.
-\end{example}
-
-\begin{theorem}[Existence of soultion for $A\textbf{x}=\textbf{b}$]
-    Let $A$ be an $m\times n$ matrix. Then the following statements are logically equivalent. That is, for a particular $A$, they are all true statements or they are all false:
-    \begin{enumerate}
-        \item for each $\textbf{b}$ in $\textbf{R}^m$, the equation $A\textbf{x}=\textbf{b}$ has a solution 
-        \item each $\textbf{b}$ in $\textbf{R}^m$ is a linear combination of the columns of $A$
-        \item The columns of $A$ span $\textbf{R}^m$
-        \item $A$ has a pivot position in every row. Note: $A$ is a coefficient matrix, not an augmented matrix.
-    \end{enumerate}
-\end{theorem}
-
-Computation of $A\textbf{x}$ - an efficient method (matrix multiplication): if the product $A\textbf{x}$ is defined, then the $i$th entry in $A\textbf{x}$ is the sum of the products of the corresponding entries from row $i$ of $A$ and from vector $\textbf{x}$.
-
-The above is trivial.
-
-Properties of the Matrix-Vector Product $A\textbf{x}$
-\begin{theorem}
-    if $A$ is an $m\times n$ matrix, $\textbf{u}$ and $\textbf{v}$ are vectors in $\textbf{R}^n$, and $c$ is a scalar, then : 
-    \begin{enumerate}
-        \item $A(\textbf{u}+\textbf{v})$
-        \item $A(c\textbf{u})=c(A\textbf{u})$
-    \end{enumerate}
-\end{theorem}
-
-Algebraic Properties of $\textbf{R}^n$: for all $\textbf{u},\textbf{v},\textbf{w}$ in $\textbf{R}^n$ and all scalars $c$ and $d$. (This was from an above topic)
-
-
-
-\section{Solution Sets of Linear Systems}
-Parametric Vector Form of Solutions:
-\begin{itemize}
-    \item Parametric Vector Form of a Plane: a plane can be expressed in explicit form, such as $10x_1-3x_2-2x_3=0$ or implicit form: $\textbf{x}=s\textbf{u}+t\textbf{v}$, for $s$ and $t$ scalars.
-    \item Parametric Form of a Line containing point $\textbf{p}$ in direction of $\textbf{v}: l(t)=\textbf{p}+t\textbf{v}$
-\end{itemize}
-
-The parametric equation of a plane in $\textbf{R}^2: \textbf{x}=a\textbf{v}+b\textbf{s}$.
-
-The span of 2 non-colinear vectors is a plane. Span$\{\textbf{v},\textbf{s}\} = $ the $\textbf{R}^2$ plane.
-
-In $\textbf{R}^3$, the Span is still a plane, just in $\textbf{R}^3$.
-
-The parametric equation of a line in $\textbf{R}^2: \textbf{l}=\textbf{p}+t\textbf{v}$.
-
-Homogeneous Linear Equation - $A\textbf{x}=0$.
-
-The homogeneous equation always has at least 1 solution, $\textbf{x}=0$ (the trivial solution).
-
-Recall that a system of linear equation either has infinitely many solutions, no solution, or a unique solution.
-
-The question is whether there exists a nontrivial solution (in which case there are infinitely many solutions). 
-\begin{itemize}
-    \item The homogeneous equation $A\textbf{x}=0$ has nontrivial solution if and only if the equation has at least 1 free variable 
-\end{itemize}
-Description of solutions: if the solutions consists of:
-\begin{itemize}
-    \item the 0 vector: Span$\{0\}$
-    \item 1 free variable: Span$\{\textbf{v}\}$, the solutions are a line through the origin 
-    \item 2 free variables, Span$\{\textbf{v}_1,\textbf{v}_2\}$ is a plane through the origin
-\end{itemize}
-\begin{example}
-    Determine if the following system has a nontrivial solution. Then describe the solution set 
     \begin{align*}
-    3x_1+5x_2-4x_3=0\\
-    -3x_1-2x_2+4x_3=0\\
-    6x_1+x_2-8x_3=0
+        x_1+2x_2=7\\
+        -2x_1+5x_2=4\\
+        -5x_1+6x_2=-3
     \end{align*}
 
-    $x_3$ is free. And everything is in the form $(4/3, 0, 1)$.
+    Using the following row operations:
+    \begin{itemize}
+        \item $2R_1+R_2 \rightarrow R_2$ and $5R_1+R_3\rightarrow R_3$
+        \item $\frac{1}{9}R_2 \rightarrow R_2$ and $\frac{1}{12}R_3\rightarrow R_3$
+        \item $-2R_2 + R_1 \rightarrow R_1$ and $-R_2+R_3 \rightarrow R_3$
+    \end{itemize}
+
+    We get $x_1=3$ and $x_2=2$.
+
+    So we can write $b=3a_1+2a_2$.
 \end{example}
 
-Nonhomogeneous Equation: $A\textbf{x}=\textbf{b}$.
-
-For example, in the previous example when we let $x_3=0$ we get $(-1,2,0)$. 
-
-\begin{theorem}
-    Suppose the equation $A\textbf{x}=\textbf{b}$ is consistent for some given $\textbf{b}$ and let $\textbf{p}$ be a solution. Then the solution set of 
-    $A\textbf{x}=\textbf{b}$ is the set of all vectors of the Form $\textbf{w}=\textbf{p}+\textbf{v}_h$ where $\textbf{v}_h$ is any solution of the homogeneous equation $A\textbf{x}=0$.
-\end{theorem}
-
-\section{Applications of Linear Systems}
-There are three examples here: economics, chemical equations and network flow.
-
-Start with economics. There exist equilibrium prices that can be assigned to the total outputs of the various sectors in an economy in such a way that the income of each sector exactly balances its expenses.
-
-You can use row operations to find an equilibrium price.
-
-Other examples run similarly (sorry for bad note taking today I'm sick)
-
-\section{Linear Independence}
-Linear Independence: an indexed set of vectors $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ in $\textbf{R}^n$ is said to be 
-\begin{itemize}
-    \item linearly independent if the vector equation $x_1\textbf{v}_1+x_2\textbf{v}_2+\dots+x_p\textbf{v}_p=0$ has only the trivial solution 
-    \item linearly dependent if there exists weights $c_1,c_2,\dots,c_p$ not all zero such that $c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_p\textbf{v}_p=0$
-\end{itemize}
-
-I'm too lazy to write matrices so much.
-
-Linear Independence of Matrix Columns: the columns of matrix $A$ are linearly independent if and only if the equation $A\textbf{x}=0$ has only the trivial solution.
-
-Sets of One or Two Vectors 
-\begin{itemize}
-    \item A set with 1 vector is linearly independent iff $\textbf{v}$ is not the 0 vector because $x_1\textbf{v}=0$ has only the trivial solution 
-    \item the zero vector, $\textbf{0}$ is linearly dependent because $x_1\textbf{0}=\textbf{0}$ has many nontrivial solutions 
-    \item two vector $\{\textbf{v}_1,\textbf{v}_2\}$ are linearly dependent iff at least one of the vectors is a multiple of the other 
-\end{itemize}
-
-\begin{theorem}
-    Characterization of Linearly Dependent Sets: An indexed set $S=\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ of 2 or more vectors is linearly dependent if and only if at least 
-    one of the vectors in $S$ is a linear combination of the others. In fact, if $S$ is linearly dependent and $\textbf{v}_1$ is not $\textbf{0}$, then some $\textbf{v}_j$ with $j>1$ is a linear combination 
-    of the preceding vectors $\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_{j-1}$.
-
-    Note: the theorem does not say every vector in a linearly dependent set is a linear combination of preceding vectors 
-\end{theorem}
-
-\begin{theorem}
-    If a set contains more vectors than there are entries in each vector, then the set is linearly dependent. That is, any set $\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ in $\textbf{R}^n$ is linearly dependent if $p>n$.
-\end{theorem}
-
-\begin{theorem}
-    If a set $S=\{\textbf{v}_1,\textbf{v}_2,\dots,\textbf{v}_p\}$ in $\textbf{R}^n$ contains the zero vector, then the set is linearly dependent.
-\end{theorem}
-
-\section{Introduction to Linear Transformations}
-Linear Transformations: we can view $A\textbf{x}=\textbf{b}$ as a mapping: the $m\times n$ matrix $A$ is the transform, $A:\textbf{R}^n\rightarrow \textbf{R}^m$.
-
-From this point of view, solving the equation $A\textbf{x}=\textbf{b}$ amounts to finding all the vectors $\textbf{x}$ in $\textbf{R}^n$ that are transformed to $\textbf{b}$ in $\textbf{R}^m$. The correspondence from $\textbf{x}$ to $A\textbf{x}$ is a function from one set of vectors to another.
 \begin{definition}
-    A transform (or function or mapping) $T$ from $\textbf{R}^n$ to $\textbf{R}^m$ is a rule that assigns to each vector $\textbf{x}$ in $\textbf{R}^n$ a vector $T(x)$ in $\textbf{R}^m$. The set $\textbf{R}^n$ is called the domain of $T$, and 
-    $\textbf{R}^m$ is called the codomain. The notion $T:\textbf{R}^n \rightarrow \textbf{R}^m$ indicates that the domain of $T$ is $\textbf{R}^n$ and the codomain is $\textbf{R}^m$. For $\textbf{x}$ in $\textbf{R}^nT(\textbf{x})$ in $\textbf{R}^m$ is called the image of $\textbf{x}$. The set of all images $T(\textbf{x})$ is called the range of $T$.
+    If $\vec{v_1},\dots,\vec{v_p}$ are in $\mathbb{R}^n$, then the set of all linear combinations of $\vec{v_1},\dots,\vec{v_p}$ is denoted by Span$\{\vec{v_1},\dots,\vec{v_p}\}$ and is called the subset of $\mathbb{R}^n$ spanned (or generated) by $\vec{v_1},\dots,\vec{v_p}$. That is, Span$\{\vec{v_1},\dots,\vec{v_p}\}$ is the collection of all vectors that can be written in the form 
+    \[ c_1 v_1+c_2 v_2+\dots+c_p v_p\]
+    with $c_1,\dots, c_p$ scalars.
 \end{definition}
 
-Matrix Transformations: $T(\textbf{x})$ is computed as $A\textbf{x}$ where $A$ is an $m\times n$ matrix. Note: the domain of $T$ is $\textbf{R}^n$ and the codomain of $T$ is $\textbf{R}^m$. The range of $T$ is the set of all linear combinations of the columns of $A$.
+Let $\vec{v}$ be a nonzero vector in $\mathbb{R}^3$. Then Span$\{\vec{v}\}$ is the set of all scalar multiples of $\vec{v}$, which is the set of points on the line in $\mathbb{R}^3$ through $\vec{v}$ and $\vec{0}$.
 
-Linear Transformations: a transformation (or mapping) $T$ is linear if 
-\begin{enumerate}
-    \item $T(\textbf{u}+\textbf{v}) = T(\textbf{u})+T(\textbf{v})$ for all $\textbf{u}$ and $\textbf{v}$ in the domain of $T$
-    \item $T(c\textbf{u})=cT(\textbf{u})$ for all scalars $c$ and all $\textbf{u}$ in the domain of $T$.
-\end{enumerate}
-\begin{itemize}
-    \item every matrix transformation is a linear transformation: $A(\textbf{u}+\textbf{v})=A(\textbf{u})+A\textbf{v}$ and $A(c\textbf{u})=cA(\textbf{u})$
-    \item linear transformations preserve the operations of vector addition and scalar multiplication
-\end{itemize}
+If $\vec{u}$ and $\vec{v}$ are nonzero vectors in $\mathbb{R}^3$, with $\vec{v}$ not a multiple of $\vec{u}$, then Span$\{\vec{u},\vec{v}\}$ is the plane in $\mathbb{R}^3$ that contains $\vec{u},\vec{v}$, and $\vec{0}$. In particular, Span$\{\vec{u},\vec{v}\}$ contains the line in $\mathbb{R}^3$ through $\vec{u}$ and $\vec{0}$ and the line through $\vec{v}$ and $\vec{0}$.
 
-If $T$ is a linear transformation, then 
-\begin{enumerate}
-    \item $T(\textbf{0})=\textbf{0}$
-    \item $T(c\textbf{u}+d\textbf{v})=cT(\textbf{u})+dT(\textbf{v})$ for all scalars $c,d$ and all vectors $\textbf{u},\textbf{v}$ in the domain of $T$. The generalization $T(c_1\textbf{v}_1+c_2\textbf{v}_2+\dots+c_p\textbf{v}_p)=c_1T(\textbf{v}_1)+c_2T(\textbf{v}_2)+\dots+c_pT(\textbf{v}_p)$ is known in engineering as the superposition principle: whenever an input is expressed as a linear combination of signals the systems response is the same linear combination of the responses to the individual signals.
-\end{enumerate}
-
-
-
-
-
+\section{The Matrix Equation Ax = b}
+\section{Solution Sets of Linear Systems}
+\section{Applications of Linear Systems}
+\section{Linear Independence}
+\section{Introduction to Linear Transformations}
 \section{The Matrix of a Linear Transformation}
-Goal: given a geometric desciprtion of a transformation, $T$, we want to find a ``formula'' for $T$
-\begin{itemize}
-    \item Every linear transformation from $\textbf{R}^n$ to $\textbf{R}^m$ can be represented by a matrix transformation $A(\textbf{x})$.
-    \item The key to finding matrix $A$ is to that $T$ is completely determined by what it does to the columns of the $n\times n$ identiy matrix, $I_n$.
-\end{itemize}
-
-\begin{theorem}
-    Standard Matrix for a Linear Transformation: let $T:\textbf{R}^n\rightarrow \textbf{R}^m$ be a linear transformation. Then there exists a unique matrix $A$ such that 
-    $T(\textbf{x})=A\textbf{x}$ for all $\textbf{x}$ in $\textbf{R}^n$. And, $A$ is the $m\times n$ matrix whose jth column is the vector $T(\textbf{e}_j)$ where $\textbf{e}_j$ is jth column 
-    of the identity matrix in $\textbf{R}^n$. $A=[T(\textbf{e}_1)T(\textbf{e}_2)\dots T(\textbf{e}_n)]$. $A$ is caleld the standard matrix for the linear transformation $T$.
-\end{theorem}
-
-Onto/Existence: a mapping $T:\textbf{R}^n\rightarrow \textbf{R}^m$ is said to be onto $\textbf{R}^m$ if each $\textbf{b}$ in $\textbf{R}^m$ is the image of at least 1 $\textbf{x}$ in $\textbf{R}^n$.
-\begin{itemize}
-    \item $T$ is onto $\textbf{R}^m$ when the range of $T$ is all of the codomain $\textbf{R}^m$; for each $\textbf{b}$ in $\textbf{R}^m$, there exists at least one solution of $T(\textbf{x})=\textbf{b}$. The mapping $T$ is not onto when there is some $\textbf{b}$ in $\textbf{R}^m$ for which $T(\textbf{x})=\textbf{b}$ has no solution.
-\end{itemize}
-$T$ is one-to-one if for each $\textbf{b}$ in $\textbf{R}^n$, the equation $T(\textbf{x})=\textbf{b}$ has either unique solution or no solution. The mapping is not one-to-one when some $\textbf{b}$ in $\textbf{R}^m$ is the image of more than one vector in $\textbf{R}^n$.
-\begin{theorem}
-    Let $T:\textbf{R}^n\rightarrow \textbf{R}^m$ be a linear transformation, then $T$ is one-to-one iff $T(\textbf{x})=\textbf{0}$ has only the trivial solution.
-\end{theorem}
-
-\begin{theorem}
-    Let $T:\textbf{R}^n\rightarrow \textbf{R}^m$ be a linear transformation and let $A$ be the standard matrix for $T$. Then:
-    \begin{enumerate}
-        \item $T$ maps $\textbf{R}^n$ onto $\textbf{R}^m$ iff the columns of $A$ span $\textbf{R}^m$
-        \item $T$ is one-to-one iff the columns of $A$ are linearly independent
-    \end{enumerate}
-\end{theorem}
-
-
-
-
-
 \section{Linear Models in Business, Science, and Engineering}
-Linear Equations can be done in electrical networks.
-
-Current flow in a simple electrical network can be described by a system of linear equations. Consider Ohm's Law, $V=IR$, which describes the current which passes through a resistor.
-The algebraic sum of $IR$ voltage drops in one direction around a loop equals the algebraic of the voltage sources in the same direction around the loop.
-
-The model for current flow is linear since the voltage drop across a resistor is proportional to the current flowing through it, and the sum of the voltage drops in a loop equals the sum of the voltage sources in the loop.
-
-For difference equations, if there is a matrix $A$ such that $\textbf{x}_1=A\textbf{x}_0,x_2=A\textbf{x}_1$, and in general $\textbf{x}_{k+1}=A\textbf{x}_k$ for $k=0,1,2,\dots$. then this is called a linear difference equation (or recurrence relation).
-
-Ok whatever just use logic.
 \end{document}
